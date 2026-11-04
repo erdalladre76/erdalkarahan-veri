@@ -3070,7 +3070,7 @@ function shareText(title,t){openShare(title,t);}
   function pageTitle(sec){var h=$('.sec-head h2',sec),e=$('.sec-head .eyebrow',sec);return clean((e?tx(e)+': ':'')+(h?tx(h):'')).replace(/\.$/,'');}
   var ITEM='article.pcard[id], details.sc-item[id], details.hp-a[id], .hp-g[id^="ceza-"], details.news-item, #meslek-kodlari, #vergi-takvimi';
   function decorate(){
-    $$('section[data-view]').forEach(function(sec){if(sec.dataset.view==='home')return;var sh=$('.sec-head',sec);if(sh&&!$(':scope > .xact',sh)){var b=bar('pg');b.dataset.sec=sec.id;sh.appendChild(b);}});
+    $$('section[data-view]').forEach(function(sec){if(sec.dataset.view==='home')return;var sh=$('.sec-head',sec);if(sh&&!$(':scope > .xact',sh)){var b=bar('pg');$$('[data-x=dl],[data-x=pr]',b).forEach(function(x){x.remove();});b.dataset.sec=sec.id;sh.appendChild(b);}});
     $$(ITEM).forEach(function(el){if(el.dataset.xd)return;el.dataset.xd=1;var b=bar('it');var host=el.matches('details')?(el.querySelector(':scope > div')||el):el;host.appendChild(b);});
   }
   document.addEventListener('click',function(e){var b=e.target.closest('.xact button[data-x]');if(!b)return;e.preventDefault();e.stopPropagation();var x=b.closest('.xact');
