@@ -1257,6 +1257,8 @@ section[data-view],[id^="h-"],[id^="d-"],[id^="x-"],[id^="p-"]{scroll-margin-top
 /* Google girişi kurulmadıysa: Google düğmeleri gizli, giriş düğmeleri e-posta formuna götürür */
 .no-auth .gbtn,.no-auth #uye-ol p.or,.no-auth .hero-ctas [data-open-login]{display:none!important}
 @media (max-width:640px){.tbar .tb-tk{border:0!important;height:30px!important;padding:0 2px!important;background:transparent!important}.tb-tk-more{display:none!important}.tb-tk-in .pg{justify-content:flex-start!important}footer.site-foot{padding-bottom:180px!important}}
+@media (max-width:640px){.tbar{width:100%!important;left:0!important;right:0!important;transform:none!important}}
+.app-help.flash{animation:ahflash 1.4s ease}@keyframes ahflash{0%,60%{box-shadow:0 0 0 3px var(--glow)}100%{box-shadow:0 0 0 0 transparent}}
 /* alt bar v2: geniş, iki satır tarih, kayan piyasa şeridi */
 .tbar{width:min(1560px,calc(100% - 24px))!important}
 @media (min-width:901px){.tbar{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important}.tbar .tb-info{padding-left:8px}}
@@ -2839,7 +2841,12 @@ remoteJSON('oranlar.json').catch(function(){return fetch('oranlar.json',{cache:'
 (function(){
   var deferred=null,btns=$$('[data-install]');
   window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();deferred=e;btns.forEach(function(b){b.hidden=false;});});
-  btns.forEach(function(b){b.addEventListener('click',function(){if(deferred){deferred.prompt();deferred.userChoice.finally(function(){deferred=null;});}else{$('#app-help').hidden=false;$('#app-help').scrollIntoView({behavior:'smooth',block:'center'});}});});
+  btns.forEach(function(b){b.addEventListener('click',function(){if(deferred){deferred.prompt();deferred.userChoice.finally(function(){deferred=null;});}else{var h=$('#app-help');h.hidden=false;h.scrollIntoView({behavior:'smooth',block:'center'});h.classList.remove('flash');void h.offsetWidth;h.classList.add('flash');
+      var sa=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone;
+      if(sa)toast('Uygulama zaten yüklü');
+      else if(location.protocol!=='https:'&&/erdalkarahan\.com$/.test(location.hostname)){toast('Güvenli sayfaya geçiliyor…');setTimeout(function(){location.href='https://'+location.host+location.pathname+'#app-help';},900);}
+      else toast(ios?'Safari’de Paylaş ▸ Ana Ekrana Ekle':'Chrome menüsü ⋮ ▸ Ana ekrana ekle');}});});
+  if(location.hash==='#app-help'){var ah=$('#app-help');if(ah){ah.hidden=false;setTimeout(function(){ah.scrollIntoView({block:'center'});},600);}}
   var ios=/iphone|ipad|ipod/i.test(navigator.userAgent);if(ios){btns.forEach(function(b){b.hidden=false;});}
   if('serviceWorker' in navigator&&location.protocol==='https:'&&/erdalkarahan\.com$/.test(location.hostname)){navigator.serviceWorker.register('sw.js').catch(function(){});}
 })();
