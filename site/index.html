@@ -1288,14 +1288,15 @@ section[data-view],[id^="h-"],[id^="d-"],[id^="x-"],[id^="p-"]{scroll-margin-top
 @media (prefers-reduced-motion:reduce){.tbar .tb-tk-in .pg{transition:none}}
 .gidx{padding:6px 2px}.gidx-l{color:var(--ink-2);margin:0 0 14px}.gidx h4{font:700 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--stamp);margin:18px 0 8px}
 .gidx-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
-.gidx-g button{display:grid;grid-template-columns:auto 1fr;align-items:center;column-gap:10px;row-gap:2px;text-align:left;padding:12px 14px;border:1px solid var(--rule);border-radius:14px;background:var(--sheet);color:var(--ink);cursor:pointer;font:inherit}
-.gidx-g button:hover{border-color:var(--glow);box-shadow:0 6px 18px -10px rgba(91,63,168,.5)}
+.gidx-g button,.gidx-g a.gidx-x{text-decoration:none;display:grid;grid-template-columns:auto 1fr;align-items:center;column-gap:10px;row-gap:2px;text-align:left;padding:12px 14px;border:1px solid var(--rule);border-radius:14px;background:var(--sheet);color:var(--ink);cursor:pointer;font:inherit}
+.gidx-g a.gidx-x:hover,.gidx-g button:hover{border-color:var(--glow);box-shadow:0 6px 18px -10px rgba(91,63,168,.5)}
 .gidx-g .ti{grid-row:span 2;display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:color-mix(in srgb,#5B3FA8 12%,transparent);color:#5B3FA8;font:700 12px var(--f-mono)}
 .gidx-g b{font-size:14.5px}.gidx-g small{font-size:12.5px;color:var(--ink-2);line-height:1.35}
 .result .row.long{flex-wrap:wrap;align-items:flex-start;gap:6px 12px}.result .row.long span{flex:1 0 100%}
 .result .row.long b{flex:1 1 auto;min-width:0;white-space:normal!important;overflow-wrap:anywhere;word-break:break-word;font-size:17px!important;line-height:1.4;text-align:left}
 .result .rcopy{flex:none;align-self:center;border:1px solid rgba(237,241,249,.25);background:transparent;color:inherit;border-radius:999px;padding:5px 12px;font:600 12px var(--f-body);cursor:pointer}.result .rcopy:hover{border-color:var(--glow)}
 .tbar #fab-calc:hover,.tbar #fab-calc:focus-visible{background:rgba(182,163,247,.18)!important;color:#fff!important}
+.gidx-n{font:500 11px var(--f-body);letter-spacing:0;text-transform:none;color:var(--ink-2)}.gidx-g a.gidx-x .ti{background:color-mix(in srgb,#0E7C86 14%,transparent);color:#0E7C86}
 /* alt bar v2: geniş, iki satır tarih, kayan piyasa şeridi */
 @media (min-width:641px){.tbar{width:min(1560px,calc(100% - 24px))!important}}
 @media (min-width:901px){.tbar{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important}.tbar .tb-info{padding-left:8px}}
@@ -2140,7 +2141,7 @@ function gshell(root,items,render,firstKey){
   function index(){tabs.forEach(function(t){t.setAttribute('aria-selected','false');});gns.forEach(function(g){g.classList.remove('cur');});sel.value='';
     var noun=(root.closest('section')||{dataset:{}}).dataset.view==='dilekceler'?'dilekçe':'hesaplama';
     gcur.innerHTML='<span>Başlarken</span><b>Bir '+noun+' seçin</b>';
-    pane.innerHTML='<div class="gidx"><p class="gidx-l">Yukarıdaki başlıklardan ya da aşağıdaki listeden istediğiniz '+noun+'yı seçin.</p>'+groups.map(function(g){return '<h4>'+esc(g)+'</h4><div class="gidx-g">'+gsort(items.filter(function(it){return it.g===g;})).map(function(it){return '<button type="button" data-k="'+it.key+'">'+(it.abbr?'<span class="ti">'+esc(it.abbr)+'</span>':'')+'<b>'+esc(it.title)+'</b>'+(it.lead?'<small>'+esc(it.lead)+'</small>':'')+'</button>';}).join('')+'</div>';}).join('')+'</div>';
+    pane.innerHTML='<div class="gidx"><p class="gidx-l">Yukarıdaki başlıklardan ya da aşağıdaki listeden istediğiniz '+noun+'yı seçin.</p>'+groups.map(function(g){return '<h4>'+esc(g)+'</h4><div class="gidx-g">'+gsort(items.filter(function(it){return it.g===g;})).map(function(it){return '<button type="button" data-k="'+it.key+'">'+(it.abbr?'<span class="ti">'+esc(it.abbr)+'</span>':'')+'<b>'+esc(it.title)+'</b>'+(it.lead?'<small>'+esc(it.lead)+'</small>':'')+'</button>';}).join('')+'</div>';}).join('')+(noun==='hesaplama'&&window.GIB_TOOLS?'<h4>GİB’in resmî hesaplama araçları <span class="gidx-n">— GİB sitesinde açılır</span></h4><div class="gidx-g">'+GIB_TOOLS.map(function(t){return '<a class="gidx-x" href="'+t[2]+'" target="_blank" rel="noopener"><span class="ti">'+esc(t[3])+'</span><b>'+esc(t[0])+' ↗</b><small>'+esc(t[1])+'</small></a>';}).join('')+'</div>':'')+'</div>';
     $$('.gidx button',pane).forEach(function(b){b.onclick=function(){select(b.dataset.k);try{history.replaceState(null,'',location.pathname+location.search+'#'+(noun==='dilekçe'?'d-':'h-')+b.dataset.k);}catch(e){}var pw=$('.pane-wrap',root);setTimeout(function(){pw.scrollIntoView({behavior:'smooth',block:'start'});},30);};});}
   if(firstKey)select(firstKey);else index();
   return {select:select,index:index,has:function(k){return !!map[k];}};
@@ -2457,6 +2458,13 @@ function swatches(holder,box,key){var saved=null;try{saved=localStorage.getItem(
   function set(c){box.dataset.c=c;$$('button',holder).forEach(function(b){b.setAttribute('aria-pressed',b.dataset.c===c);});try{localStorage.setItem('ek-calc-'+key,c);}catch(e){}}
   $$('button',holder).forEach(function(b){b.addEventListener('click',function(){set(b.dataset.c);});});
   set(saved||(key==='home'?'acik':'mor'));}
+var GIB_TOOLS=[['Motorlu Taşıtlar Vergisi (MTV) Hesaplama','Aracın türü, yaşı ve motor hacmine göre yıllık MTV.','https://dijital.gib.gov.tr/hesaplamalar/MTVHesaplama','MTV'],
+ ['Kasko Değeri Listeleri','GİB’in yayımladığı taşıt kasko değer listeleri.','https://www.gib.gov.tr/yardim-kaynaklar/yararli-bilgiler/kasko-deger-listesi','KD'],
+ ['Gecikme Zammı ve Faizi Hesaplama','Amme alacağı için gecikme zammı ve gecikme faizi.','https://dijital.gib.gov.tr/hesaplamalar/GecikmeZamVeFaizHesaplama','GZF'],
+ ['Gecikme Zammı ve Faizi Yİ-ÜFE Hesaplama','Yİ-ÜFE aylık değişim oranlarıyla hesaplama.','https://dijital.gib.gov.tr/hesaplamalar/GecikmeZamVeFaizHasaplama-yi','ÜFE'],
+ ['7440 Gecikme Zammı ve Faizi Yİ-ÜFE Hesaplama','7440 sayılı Kanun yapılandırması kapsamında.','https://dijital.gib.gov.tr/hesaplamalar/GecikmeZamVeFaizHesaplama_7440','7440'],
+ ['Gelir Vergisi Hesaplama (GİB)','GİB’in resmî gelir vergisi hesaplama aracı.','https://dijital.gib.gov.tr/hesaplamalar/GelirVergisiHesaplama','GV'],
+ ['Serbest Meslek Makbuzu Hesaplama (GİB)','GİB’in resmî e-SMM hesaplama aracı.','https://dijital.gib.gov.tr/hesaplamalar/SmmMeslekMakbuzuHesaplama','SMM']];
 var TOOLSHELL=gshell($('#tools'),TOOLS,renderTool,null);
 
 
@@ -3039,6 +3047,7 @@ var PRATIK=[
 /* ---------- site içi arama (araç çubuğu, maskot) ---------- */
 var SEARCH_IDX=(function(){
   var X=[];
+  (window.GIB_TOOLS||[]).forEach(function(t){X.push({t:t[0],g:'GİB hesaplama aracı',h:t[2],ext:true,kw:'gib '+t[1]});});
   TOOLS.forEach(function(t){X.push({t:t.title,g:'Hesaplama · '+t.g,h:'#h-'+t.key});});
   DOCS.forEach(function(d){X.push({t:d.title,g:'Dilekçe · '+d.g,h:'#d-'+d.key});});
   XLS.forEach(function(x){X.push({t:x.title,g:'Excel · '+x.g,h:'#x-'+x.key});});
