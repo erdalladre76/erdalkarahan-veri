@@ -18,6 +18,41 @@
      "https://hazirbeyan.gib.gov.tr"
     ],
     [
+     "Vergi Kimlik No Sorgulama",
+     "Dijital VD ▸ giriş ▸ Sorgulamalar",
+     "https://dijital.gib.gov.tr/"
+    ],
+    [
+     "Vergi Borcu Sorgulama ve Ödeme",
+     "Dijital VD ▸ giriş ▸ Borç Bilgileri",
+     "https://dijital.gib.gov.tr/"
+    ],
+    [
+     "MTV ve Trafik Cezası Sorgulama / Ödeme",
+     "Plaka ile, giriş gerekmez",
+     "https://dijital.gib.gov.tr/hizliOdemeler/MTVTPCOdeme"
+    ],
+    [
+     "MTV Hesaplama",
+     "GİB hesaplama aracı",
+     "https://dijital.gib.gov.tr/hesaplamalar/MTVHesaplama"
+    ],
+    [
+     "Gecikme Zammı ve Faizi Hesaplama",
+     "GİB hesaplama aracı",
+     "https://dijital.gib.gov.tr/hesaplamalar/GecikmeZamVeFaizHesaplama"
+    ],
+    [
+     "Mükellefiyet / Borç Durum Yazısı Doğrulama",
+     "Belge doğrulama",
+     "https://dijital.gib.gov.tr/dogrulamalar/mukellefiyetDogrulama"
+    ],
+    [
+     "e-Belge Doğrulama",
+     "e-Fatura, e-Arşiv, e-SMM doğrulama",
+     "https://dijital.gib.gov.tr/dogrulamalar/eBelgeDogrulama"
+    ],
+    [
      "e-Beyanname",
      "Beyanname gönderimi",
      "https://ebeyanname.gib.gov.tr"
