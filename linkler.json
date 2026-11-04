@@ -100,6 +100,103 @@
    ]
   },
   {
+   "g": "GİB Hızlı Ödemeler",
+   "ic": "i-gov",
+   "c": "#0E7C86",
+   "items": [
+    [
+     "MTV ve Trafik Para Cezası Ödeme",
+     "Şifresiz ödeme · GİB",
+     "https://dijital.gib.gov.tr/hizliOdemeler/MTVTPCOdeme"
+    ],
+    [
+     "Tapu Harcı Ödeme",
+     "Şifresiz ödeme · GİB",
+     "https://dijital.gib.gov.tr/hizliOdemeler/tapuHarciOdeme"
+    ],
+    [
+     "Cep Telefonu Harcı Ödeme",
+     "Şifresiz ödeme · GİB",
+     "https://dijital.gib.gov.tr/hizliOdemeler/cepTelefonuHarciOdeme"
+    ],
+    [
+     "Pasaport Harcı Ödeme",
+     "Şifresiz ödeme · GİB",
+     "https://dijital.gib.gov.tr/hizliOdemeler/pasaportHarciOdeme"
+    ],
+    [
+     "Sürücü Belgesi Harcı Ödeme",
+     "Şifresiz ödeme · GİB",
+     "https://dijital.gib.gov.tr/hizliOdemeler/surucuBelgesiHarciOdeme"
+    ],
+    [
+     "Yurt Dışına Çıkış Harcı Ödeme",
+     "Şifresiz ödeme · GİB",
+     "https://dijital.gib.gov.tr/hizliOdemeler/yurtDisinaCikisHarciOdeme"
+    ],
+    [
+     "Pasaport Değerli Kağıt Bedeli Ödeme",
+     "Şifresiz ödeme · GİB",
+     "https://dijital.gib.gov.tr/hizliOdemeler/pasaportDegerliKagitBedeliOdeme"
+    ],
+    [
+     "Sürücü Belgesi Değerli Kağıt Bedeli Ödeme",
+     "Şifresiz ödeme · GİB",
+     "https://dijital.gib.gov.tr/hizliOdemeler/surucuBelgesiDegerliKagitBedeliOdeme"
+    ],
+    [
+     "T.C. Kimlik Kartı Bedeli Ödeme",
+     "Şifresiz ödeme · GİB",
+     "https://dijital.gib.gov.tr/hizliOdemeler/tcKimlikKartiBedeliOdeme"
+    ],
+    [
+     "Göç İdaresi İkamet Tezkeresi Harç Ödeme",
+     "Şifresiz ödeme · GİB",
+     "https://dijital.gib.gov.tr/hizliOdemeler/gocIdaresiIkametTezkeresiHarciOdeme"
+    ],
+    [
+     "Ödeme Plan No ile Yapılandırma Ödemesi",
+     "Şifresiz ödeme · GİB",
+     "https://dijital.gib.gov.tr/hizliOdemeler/odemePlanNumarasiYapilandirmaOdeme"
+    ],
+    [
+     "Belge Numarası ile Ödeme",
+     "Şifresiz ödeme · GİB",
+     "https://dijital.gib.gov.tr/hizliOdemeler/belgeNumarasiIleOdeme"
+    ],
+    [
+     "Referans Numarası ile Ödeme",
+     "Şifresiz ödeme · GİB",
+     "https://dijital.gib.gov.tr/hizliOdemeler/referansNumarasiIleOdeme"
+    ],
+    [
+     "Yabancı Plaka / Pasaport Numarası ile Ödeme",
+     "Şifresiz ödeme · GİB",
+     "https://dijital.gib.gov.tr/hizliOdemeler/yabanciAracOdemeleri"
+    ],
+    [
+     "Mavi Kart Değerli Kağıt Bedeli Ödeme",
+     "Şifresiz ödeme · GİB",
+     "https://dijital.gib.gov.tr/hizliOdemeler/maviKartDegerliKagitBedeliOdeme"
+    ],
+    [
+     "Diğer Harç ve Değerli Kağıt Ödemeleri",
+     "Şifresiz ödeme · GİB",
+     "https://dijital.gib.gov.tr/hizliOdemeler/digerHarcOdemeleri"
+    ],
+    [
+     "İdari Para Cezası Ödemeleri",
+     "Şifresiz ödeme · GİB",
+     "https://dijital.gib.gov.tr/hizliOdemeler/idariParaCezasiOdemeleri"
+    ],
+    [
+     "Adli Para Cezası Ödemeleri",
+     "Şifresiz ödeme · GİB",
+     "https://dijital.gib.gov.tr/hizliOdemeler/adliParaCezasiOdemeleri"
+    ]
+   ]
+  },
+  {
    "g": "SGK",
    "ic": "i-people",
    "c": "#0E9F8E",
@@ -264,9 +361,14 @@
      "https://verbis.kvkk.gov.tr"
     ],
     [
-     "Kasko Değer Listesi",
-     "Türkiye Sigorta Birliği (TSB)",
+     "Kasko Değer Listesi (TSB)",
+     "Türkiye Sigorta Birliği",
      "https://www.tsb.org.tr/tr/kasko-deger-listesi"
+    ],
+    [
+     "Kasko Değeri Listeleri (GİB)",
+     "Vergi uygulamaları için",
+     "https://www.gib.gov.tr/yardim-kaynaklar/yararli-bilgiler/kasko-deger-listesi"
     ]
    ]
   },
