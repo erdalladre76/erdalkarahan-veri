@@ -2,7 +2,7 @@
 import json, urllib.request, datetime
 S = {"BIST": "XU100.IS", "XAU": "GC=F", "BRENT": "BZ=F", "USDTRY": "TRY=X", "BTC": "BTC-USD"}
 def q(sym):
-    u = f"https://query1.finance.yahoo.com/v8/finance/chart/{sym}?interval=1d&range=5d"
+    u = f"https://query1.finance.yahoo.com/v8/finance/chart/{sym}?interval=1d&range=1d"
     r = urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"})
     m = json.load(urllib.request.urlopen(r, timeout=20))["chart"]["result"][0]["meta"]
     return m["regularMarketPrice"], m.get("chartPreviousClose") or m.get("previousClose")
