@@ -83,6 +83,31 @@
      "https://www.edefter.gov.tr"
     ],
     [
+     "Defter-Beyan Sistemi",
+     "Serbest meslek ve işletme defteri",
+     "https://defterbeyan.gov.tr/tr"
+    ],
+    [
+     "İnternet / İnteraktif Vergi Dairesi",
+     "Artık Dijital Vergi Dairesi içinde",
+     "https://dijital.gib.gov.tr/"
+    ],
+    [
+     "Vergi Levhası İndir",
+     "Dijital VD ▸ giriş ▸ Vergi Levhası",
+     "https://dijital.gib.gov.tr/"
+    ],
+    [
+     "POS Satış Raporu",
+     "Dijital VD ▸ giriş ▸ Sorgulamalar",
+     "https://dijital.gib.gov.tr/"
+    ],
+    [
+     "e-Defter / e-Fatura Başvurusu",
+     "Dijital VD ▸ giriş ▸ e-Belge başvuruları",
+     "https://dijital.gib.gov.tr/"
+    ],
+    [
      "GİB Mevzuat",
      "Kanun, tebliğ, özelge",
      "https://www.gib.gov.tr/mevzuat"
@@ -254,6 +279,41 @@
      "https://uyg.sgk.gov.tr/stw/eDevletGiris"
     ],
     [
+     "Toplu İşe Giriş / İşten Ayrılış",
+     "Sigortalı tescil (toplu bildirge)",
+     "https://uyg.sgk.gov.tr/SigortaliTescil/amp/loginldap"
+    ],
+    [
+     "e-Vizite Sorgulama",
+     "İstirahat raporu sorgulama",
+     "https://uyg.sgk.gov.tr/vizite/welcome.do"
+    ],
+    [
+     "Ne Zaman Emekli Olabilirim (4A)",
+     "SGK hesaplama",
+     "https://uyg.sgk.gov.tr/nezaman/"
+    ],
+    [
+     "Ne Zaman Emekli Olabilirim (4B)",
+     "SGK hesaplama",
+     "https://uyg.sgk.gov.tr/EMEKTARWEB/hakKazanma.do"
+    ],
+    [
+     "Ne Zaman Emekli Olabilirim (4C)",
+     "SGK hesaplama",
+     "https://uyg.sgk.gov.tr/HizmetHesabi4c/"
+    ],
+    [
+     "4A Aylık (Emekli Maaşı) Hesaplama",
+     "SGK hesaplama",
+     "https://uyg.sgk.gov.tr/AylikHesap/"
+    ],
+    [
+     "4B Aylık (Emekli Maaşı) Hesaplama",
+     "SGK hesaplama",
+     "https://uyg.sgk.gov.tr/WS_EMEKTAR_AYLIKGELIRHESAPLAMA4B/AylikHesaplaAction.do?dispatcherMethod=aylikHesaplaSayfa"
+    ],
+    [
      "e-Borcu Yoktur Belgesi Kontrol",
      "Belge sorgulama",
      "https://uyg.sgk.gov.tr/IsverenSistemi/IsverenBilgilendirme"
@@ -361,6 +421,11 @@
      "KOSGEB",
      "KOBİ destekleri",
      "https://www.kosgeb.gov.tr"
+    ],
+    [
+     "Türkiye Noterler Birliği",
+     "Noter arama ve e-hizmetler",
+     "https://www.tnb.org.tr"
     ]
    ]
   },
