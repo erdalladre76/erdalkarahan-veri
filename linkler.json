@@ -231,17 +231,72 @@
     [
      "e-Bildirge",
      "Aylık prim ve hizmet belgesi",
-     "https://ebildirge.sgk.gov.tr"
+     "https://ebildirge.sgk.gov.tr/WPEB/amp/loginldap"
+    ],
+    [
+     "e-Bildirge V2",
+     "Yeni e-Bildirge uygulaması",
+     "https://ebildirge.sgk.gov.tr/EBildirgeV2"
     ],
     [
      "SGK İşveren Sistemi",
-     "İşe giriş, işten çıkış, borç sorgu",
+     "İlişiksizlik, e-borcu yoktur, işveren işlemleri",
      "https://uyg.sgk.gov.tr/IsverenSistemi"
     ],
     [
-     "Vizite",
-     "Rapor ve istirahat bildirimi",
+     "4A İşe Giriş / İşten Ayrılış Bildirgesi",
+     "Sigortalı tescil",
+     "https://uyg.sgk.gov.tr/SigortaliTescil/amp/loginldap"
+    ],
+    [
+     "İşyeri Bildirgesi",
+     "4-a sigortalı çalıştıran işyerleri",
+     "https://uyg.sgk.gov.tr/stw/eDevletGiris"
+    ],
+    [
+     "e-Borcu Yoktur Belgesi Kontrol",
+     "Belge sorgulama",
+     "https://uyg.sgk.gov.tr/IsverenSistemi/IsverenBilgilendirme"
+    ],
+    [
+     "SGK Gecikme Zammı Hesaplama",
+     "İşveren prim borcu gecikme zammı",
+     "https://uyg.sgk.gov.tr/geczam/"
+    ],
+    [
+     "Vizite / Çalışılmadığına Dair Bildirim",
+     "İstirahat ve çalışılmadı bildirimi (4A)",
      "https://uyg.sgk.gov.tr/vizite/welcome.do"
+    ],
+    [
+     "İş Kazası / Meslek Hastalığı e-Bildirim",
+     "İşveren bildirim formu",
+     "https://uyg.sgk.gov.tr/IsvBildirimFormu/welcome.do"
+    ],
+    [
+     "e-Kesinti Programı",
+     "Kesinti işlemleri",
+     "https://uyg.sgk.gov.tr/TAKEP/Welcome.do"
+    ],
+    [
+     "Kart ile Prim Ödeme",
+     "e-Devlet ile giriş",
+     "https://e.sgk.gov.tr/Uygulamalar/Detay/Kart-ile-Prim-Odeme-2026-10-27-04-15-17"
+    ],
+    [
+     "e-SGK Şifre",
+     "İşveren şifre işlemleri",
+     "https://esgkuyg.sgk.gov.tr/ESGKSifre/"
+    ],
+    [
+     "GESAK",
+     "Geçici 20. madde sandıkları",
+     "https://net.sgk.gov.tr/Gesak/"
+    ],
+    [
+     "SGK İşveren Uygulamaları (tümü)",
+     "e-SGK uygulama portalı",
+     "https://e.sgk.gov.tr/Uygulamalar/Isveren"
     ],
     [
      "SGK Duyurular",
