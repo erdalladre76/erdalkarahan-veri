@@ -1,5 +1,5 @@
 /* SMMM Erdal Karahan - çevrimdışı çalışma için hizmet çalışanı */
-var CACHE = 'ek-v5';
+var CACHE = 'ek-v6';
 var CORE = ['./', './index.html', './manifest.webmanifest', './oranlar.json', './app-icons/icon-192.png', './app-icons/icon-512.png', './app-icons/favicon.svg', './img/buro-640.webp', './img/buro-640.jpg', './img/ismmmo.png'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(CORE); }).then(function () { return self.skipWaiting(); }));
