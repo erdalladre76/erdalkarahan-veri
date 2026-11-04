@@ -184,6 +184,16 @@
      "https://www.turkiye.gov.tr"
     ],
     [
+     "Adres (UAVT) Kodu Sorgulama",
+     "NVİ Adres Kayıt Sistemi",
+     "https://adres.nvi.gov.tr/"
+    ],
+    [
+     "Posta Kodu Sorgulama",
+     "PTT",
+     "https://postakodu.ptt.gov.tr"
+    ],
+    [
      "Resmî Gazete",
      "Günlük yayınlar",
      "https://www.resmigazete.gov.tr"
