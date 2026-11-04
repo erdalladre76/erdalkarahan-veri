@@ -1276,6 +1276,8 @@ section[data-view],[id^="h-"],[id^="d-"],[id^="x-"],[id^="p-"]{scroll-margin-top
 .sh-fmt b{display:inline-grid;place-items:center;min-width:30px;height:26px;padding:0 4px;border-radius:6px;color:#fff;font-size:11px;font-weight:800}
 .sh-hint{font-size:12.5px;color:var(--ink-2);margin:8px 0 0;line-height:1.45}.sh-hint:empty{display:none}
 .sh-filemode .sh-text,.sh-filemode label[for=sh-text]{display:none}
+.tbar .tb-calc span{white-space:normal;text-align:center;line-height:1.1;max-width:62px}@media (max-width:640px){.tbar .tb-calc span{font-size:9.5px}}
+@media (min-width:641px){.tbar .tb-btns>a:not(.tb-home),.tbar .tb-btns>button{width:74px;min-width:74px;padding-inline:2px}}
 /* alt bar v2: geniş, iki satır tarih, kayan piyasa şeridi */
 @media (min-width:641px){.tbar{width:min(1560px,calc(100% - 24px))!important}}
 @media (min-width:901px){.tbar{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important}.tbar .tb-info{padding-left:8px}}
@@ -2004,12 +2006,12 @@ section[data-view],[id^="h-"],[id^="d-"],[id^="x-"],[id^="p-"]{scroll-margin-top
   <div class="tb-fx" id="tb-fx" aria-label="Tarih ve döviz kurları"></div>
   <div class="tb-btns">
     <button type="button" data-open-search><svg><use href="#i-search"/></svg><span>Ara</span></button>
-    <button type="button" id="fab-calc"><svg><use href="#i-calc"/></svg><span>Hesap</span></button>
     <a href="#dilekceler"><svg><use href="#i-word"/></svg><span>Dilekçe</span></a>
+    <a href="#tablolar"><svg><use href="#i-table"/></svg><span>Excel</span></a>
     <a href="#anasayfa" class="tb-home"><svg><use href="#i-home"/></svg><span>Ana Sayfa</span></a>
     <a href="#pratik"><svg><use href="#i-book2"/></svg><span>Pratik</span></a>
     <a href="#iletisim"><svg><use href="#i-phone"/></svg><span>İletişim</span></a>
-    <a href="#tablolar"><svg><use href="#i-table"/></svg><span>Excel</span></a>
+    <button type="button" id="fab-calc" class="tb-calc"><svg><use href="#i-calc"/></svg><span>Hesap Makinesi</span></button>
   </div>
   <div class="tb-info" aria-live="off"><button type="button" class="tb-wx" id="tb-wx" aria-haspopup="dialog" aria-label="Hava durumu ayrıntıları">⛅ <span class="wx-l">Kadıköy</span></button><button type="button" class="tb-time" id="tb-cal-btn2" aria-haspopup="dialog" aria-label="Takvimi aç"><b id="tb-clock">--:--</b><i id="tb-date"></i></button></div>
 </nav>
