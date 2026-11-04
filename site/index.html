@@ -1269,6 +1269,13 @@ section[data-view],[id^="h-"],[id^="d-"],[id^="x-"],[id^="p-"]{scroll-margin-top
 #share-modal .sh-card{box-sizing:border-box;max-width:calc(100vw - 24px);min-width:0;max-height:calc(100vh - 32px);overflow-y:auto}
 #share-modal h3{padding-right:36px}#share-modal .sh-grid,#share-modal .sh-fb{min-width:0}#share-modal .sh-fb button,#share-modal .sh{min-width:0}
 @media (max-width:480px){#share-modal .sh-card{padding:20px 16px}#share-modal .sh-grid{gap:4px}#share-modal .sh{font-size:11.5px}#share-modal .sh-fb{gap:6px}#share-modal .sh-fb button{flex-direction:column;gap:4px;padding:10px 4px;font-size:13px}#share-modal h3{font-size:20px}}
+.sh-q{font-weight:700;font-size:14px;margin:4px 0 8px;color:var(--ink)}
+.sh-fmt{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.sh-fmt button{display:flex;flex-direction:column;align-items:center;gap:5px;padding:10px 4px;border:2px solid var(--rule);border-radius:12px;background:var(--sheet);color:var(--ink);font:600 12px/1.2 var(--f-body);cursor:pointer;text-align:center}
+.sh-fmt button[aria-checked=true]{border-color:#5B3FA8;background:color-mix(in srgb,#5B3FA8 10%,var(--sheet));box-shadow:0 0 0 2px color-mix(in srgb,#5B3FA8 25%,transparent)}
+.sh-fmt b{display:inline-grid;place-items:center;min-width:30px;height:26px;padding:0 4px;border-radius:6px;color:#fff;font-size:11px;font-weight:800}
+.sh-hint{font-size:12.5px;color:var(--ink-2);margin:8px 0 0;line-height:1.45}.sh-hint:empty{display:none}
+.sh-filemode .sh-text,.sh-filemode label[for=sh-text]{display:none}
 /* alt bar v2: geniş, iki satır tarih, kayan piyasa şeridi */
 @media (min-width:641px){.tbar{width:min(1560px,calc(100% - 24px))!important}}
 @media (min-width:901px){.tbar{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important}.tbar .tb-info{padding-left:8px}}
@@ -2829,11 +2836,11 @@ window.renderBelgeler=function(){var el=$('#belge-list');if(!el)return;
     save(file);return Promise.resolve();}
   function save(file){var u=URL.createObjectURL(file),a=document.createElement('a');a.href=u;a.download=file.name;document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(u);a.remove();},1500);
     toast(file.name+' indirildi — WhatsApp’ta ataç ▸ Belge ile gönderebilirsiniz');}
-  function readyBtn(file,title){var w=$('#sh-files');if(!w)return save(file);var b=document.createElement('button');b.type='button';b.className='btn btn-ink btn-sm sh-ready';b.textContent=file.name+' hazır — Gönder';b.onclick=function(){b.remove();deliver(file,title);};w.appendChild(b);}
-  window.shareFile=function(kind,title,ctx){var base=slug(title)+'-erdalkarahan';
-    if(kind==='word')return deliver(new File([wordBlob(title,ctx)],base+'.doc',{type:'application/msword'}),title);
-    if(kind==='excel')return deliver(new File([xlsBlob(title,ctx)],base+'.xls',{type:'application/vnd.ms-excel'}),title);
-    toast('PDF hazırlanıyor…');return pdfBlob(title,ctx).then(function(b){return deliver(new File([b],base+'.pdf',{type:'application/pdf'}),title);}).catch(function(){toast('PDF oluşturulamadı; Yazdır ▸ PDF olarak kaydet’i kullanın');});};
+  function readyBtn(file,title){var w=$('#sh-step');if(!w||$('#share-modal').hidden)return save(file);var b=document.createElement('button');b.type='button';b.className='btn btn-ink btn-sm sh-ready';b.textContent=file.name+' hazır — Gönder';b.onclick=function(){b.remove();deliver(file,title);};w.appendChild(b);}
+  window.shareFile=function(kind,title,ctx,dl){var base=slug(title)+'-erdalkarahan';function go(f){return dl?(save(f),Promise.resolve()):deliver(f,title);}
+    if(kind==='word')return go(new File([wordBlob(title,ctx)],base+'.doc',{type:'application/msword'}));
+    if(kind==='excel')return go(new File([xlsBlob(title,ctx)],base+'.xls',{type:'application/vnd.ms-excel'}));
+    toast('PDF hazırlanıyor…');return pdfBlob(title,ctx).then(function(b){return go(new File([b],base+'.pdf',{type:'application/pdf'}));}).catch(function(){toast('PDF oluşturulamadı; Yazdır ▸ PDF olarak kaydet’i kullanın');});};
   window.fileShareBar=function(title,ctx){var w=document.createElement('div');w.className='sh-files';w.id='sh-files';
     w.innerHTML='<span class="lbl-sm">Dosya olarak gönder</span><div class="sh-fb"><button type="button" data-k="pdf"><b style="background:#D93F3F">PDF</b>PDF</button><button type="button" data-k="word"><b style="background:#2B579A">W</b>Word</button><button type="button" data-k="excel"><b style="background:#217346">X</b>Excel</button></div>';
     $$('button[data-k]',w).forEach(function(b){b.onclick=function(){shareFile(b.dataset.k,title,ctx);};});return w;};
@@ -2841,15 +2848,29 @@ window.renderBelgeler=function(){var el=$('#belge-list');if(!el)return;
 
 /* ---------- paylaşım menüsü (WhatsApp, e-posta, SMS…) ---------- */
 function openShare(title,text,url,ctx){
-  url=url||SITE_URL;var m=$('#share-modal'),full=text+(url&&text.indexOf(url)<0?'\n'+url:'');var ofs=$('#sh-files');if(ofs)ofs.remove();if(ctx&&window.fileShareBar){$('#sh-grid').before(fileShareBar(title,ctx));}
-  var e=encodeURIComponent;
-  var L=[['WhatsApp','#25D366','i-wa','https://wa.me/?text='+e(full)],['E-posta','#5B3FA8','i-mail','mailto:?subject='+e(title)+'&body='+e(full)],['SMS','#2F4FA8','i-chat','sms:?&body='+e(full)],['Telegram','#2AABEE','i-share','https://t.me/share/url?url='+e(url)+'&text='+e(text)],['X (Twitter)','#121C33','i-share','https://twitter.com/intent/tweet?text='+e(full)],['LinkedIn','#0A66C2','i-share','https://www.linkedin.com/sharing/share-offsite/?url='+e(url)],['Facebook','#1877F2','i-share','https://www.facebook.com/sharer/sharer.php?u='+e(url)]];
+  url=url||SITE_URL;var m=$('#share-modal'),full=text+(url&&text.indexOf(url)<0?'\n'+url:''),e=encodeURIComponent;
+  var mode=ctx?'pdf':'link';
+  var LINK=[['WhatsApp','#25D366','i-wa','https://wa.me/?text='+e(full)],['E-posta','#5B3FA8','i-mail','mailto:?subject='+e(title)+'&body='+e(full)],['SMS','#2F4FA8','i-chat','sms:?&body='+e(full)],['Telegram','#2AABEE','i-share','https://t.me/share/url?url='+e(url)+'&text='+e(text)],['X (Twitter)','#121C33','i-share','https://twitter.com/intent/tweet?text='+e(full)],['LinkedIn','#0A66C2','i-share','https://www.linkedin.com/sharing/share-offsite/?url='+e(url)],['Facebook','#1877F2','i-share','https://www.facebook.com/sharer/sharer.php?u='+e(url)]];
+  var FILE=[['WhatsApp','#25D366','i-wa'],['E-posta','#5B3FA8','i-mail'],['Telegram','#2AABEE','i-share'],['Diğer','#0E9F8E','i-share'],['İndir','#4B5872','i-down']];
+  var NAMES={pdf:'PDF',word:'Word',excel:'Excel'};
   $('#sh-title').textContent=title;
-  $('#sh-grid').innerHTML=L.map(function(x){return '<a class="sh" href="'+x[3]+'" target="_blank" rel="noopener"><span style="background:'+x[1]+'"><svg><use href="#'+x[2]+'"/></svg></span>'+x[0]+'</a>';}).join('')+'<button type="button" class="sh" id="sh-copy"><span style="background:#4B5872"><svg><use href="#i-copy"/></svg></span>Kopyala</button>'+(navigator.share?'<button type="button" class="sh" id="sh-native"><span style="background:#0E9F8E"><svg><use href="#i-share"/></svg></span>Diğer</button>':'');
-  $('#sh-text').value=full;
-  $('#sh-copy').onclick=function(){copyText(full,'Kopyalandı');};
-  var n=$('#sh-native');if(n)n.onclick=function(){navigator.share({title:title,text:text,url:url}).catch(function(){});};
-  m.hidden=false;
+  var st=$('#sh-step');if(!st){st=document.createElement('div');st.id='sh-step';$('#sh-grid').before(st);}
+  var hint=$('#sh-hint');if(!hint){hint=document.createElement('p');hint.id='sh-hint';hint.className='sh-hint';$('#sh-grid').after(hint);}
+  function icon(x){return '<span style="background:'+x[1]+'"><svg><use href="#'+x[2]+'"/></svg></span>'+x[0];}
+  function draw(){
+    st.innerHTML=ctx?'<p class="sh-q">1. Ne gönderilsin?</p><div class="sh-fmt" role="radiogroup">'+[['pdf','PDF','#D93F3F','PDF dosyası'],['word','W','#2B579A','Word dosyası'],['excel','X','#217346','Excel dosyası'],['link','🔗','#5B3FA8','Sadece bağlantı']].map(function(f){return '<button type="button" role="radio" aria-checked="'+(mode===f[0])+'" data-m="'+f[0]+'"><b style="background:'+f[2]+'">'+f[1]+'</b>'+f[3]+'</button>';}).join('')+'</div><p class="sh-q">2. Nereye göndereceksiniz?</p>':'';
+    $$('[data-m]',st).forEach(function(b){b.onclick=function(){mode=b.dataset.m;draw();};});
+    var file=mode!=='link';
+    if(file){$('#sh-grid').innerHTML=FILE.map(function(x,i){return '<button type="button" class="sh" data-f="'+i+'">'+icon(x)+'</button>';}).join('');
+      $$('#sh-grid [data-f]').forEach(function(b){b.onclick=function(){var dl=b.dataset.f==='4';shareFile(mode,title,ctx,dl);};});
+      hint.textContent=NAMES[mode]+' dosyası hazırlanır; telefonun paylaşım listesinden WhatsApp’ı ve kişiyi seçmeniz yeterli.';
+    }else{$('#sh-grid').innerHTML=LINK.map(function(x){return '<a class="sh" href="'+x[3]+'" target="_blank" rel="noopener">'+icon(x)+'</a>';}).join('')+'<button type="button" class="sh" id="sh-copy">'+icon(['Kopyala','#4B5872','i-copy'])+'</button>'+(navigator.share?'<button type="button" class="sh" id="sh-native">'+icon(['Diğer','#0E9F8E','i-share'])+'</button>':'');
+      $('#sh-copy').onclick=function(){copyText(full,'Kopyalandı');};
+      var n=$('#sh-native');if(n)n.onclick=function(){navigator.share({title:title,text:text,url:url}).catch(function(){});};
+      hint.textContent=ctx?'Kişiye sayfanın bağlantısı ve sonuç metni gider.':'';}
+    $('#sh-text').closest('.sh-card').classList.toggle('sh-filemode',file);
+  }
+  $('#sh-text').value=full;draw();m.hidden=false;
 }
 function shareText(title,t){openShare(title,t);}
 (function(){var m=$('#share-modal');$('#sh-x').onclick=function(){m.hidden=true;};m.addEventListener('click',function(e){if(e.target===m)m.hidden=true;});document.addEventListener('keydown',function(e){if(e.key==='Escape')m.hidden=true;});
