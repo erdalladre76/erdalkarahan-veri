@@ -3044,7 +3044,7 @@ function openShare(title,text,url,ctx){
       hint.textContent=ctx?'Kişiye sayfanın bağlantısı ve sonuç metni gider.':'';}
     $('#sh-text').closest('.sh-card').classList.toggle('sh-filemode',file);
   }
-  $('#sh-text').value=full;draw();m.hidden=false;if(ctx&&window.prepFile)setTimeout(function(){prepFile('pdf',title,ctx);},50);
+  $('#sh-text').value=full;draw();m.hidden=false;if(ctx&&window.prepFile&&!matchMedia('(hover:none)').matches)setTimeout(function(){prepFile('pdf',title,ctx);},400);
 }
 function shareText(title,t){openShare(title,t);}
 (function(){var m=$('#share-modal');$('#sh-x').onclick=function(){m.hidden=true;};m.addEventListener('click',function(e){if(e.target===m)m.hidden=true;});document.addEventListener('keydown',function(e){if(e.key==='Escape')m.hidden=true;});
