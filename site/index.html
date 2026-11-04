@@ -2191,8 +2191,15 @@ var TOOLS=[
   fields:[F('m','Ne hesaplansın?',{type:'seg',opts:[['a','A’nın %B’si'],['b','A, B’nin yüzde kaçı'],['c','A’dan B’ye değişim']],val:'a'}),F('a','A',{val:'2.500'}),F('b','B',{val:'18'})],
   calc:function(v){var a=num(v.a),b=num(v.b);if(isNaN(a)||isNaN(b))return null;if(v.m==='a')return{rows:[['Sonuç',NI.format(a*b/100),1]]};if(v.m==='b')return b?{rows:[['Oran','%'+NI.format(a/b*100),1]]}:null;return a?{rows:[['Fark',NI.format(b-a)],['Değişim oranı','%'+NI.format((b-a)/a*100),1]]}:null;}},
  {g:'Genel',key:'yazi',title:'Sayıyı yazıya çevir',abbr:'Aa',lead:'Fatura, çek ve sözleşmeler için tutarı yazıyla yazın.',
-  fields:[F('a','Tutar',{val:'12.450,75',sfx:'₺'})],
-  calc:function(v){var a=num(v.a);if(isNaN(a)||a<0||a>=1e15)return null;var tl_=Math.floor(a+1e-9),kr=Math.round((a-tl_)*100);if(kr===100){tl_++;kr=0;}var s='Yalnız '+yazi(tl_)+' Türk Lirası'+(kr?' '+yazi(kr)+' Kuruş':'');return{rows:[['Rakamla',tl(a)],['Yazıyla',s,1]]};}},
+  fields:[F('a','Tutar',{val:'12.450,75',sfx:'₺'}),F('f','Yazım biçimi',{type:'seg',opts:[['buyuk','BÜYÜK HARF'],['bas','Kelime Başları Büyük'],['kucuk','Küçük harf']],val:'buyuk'})],
+  calc:function(v){var a=num(v.a);if(isNaN(a)||a<0||a>=1e15)return null;var tl_=Math.floor(a+1e-9),kr=Math.round((a-tl_)*100);if(kr===100){tl_++;kr=0;}
+    function tok(n){var B=['','bir','iki','üç','dört','beş','altı','yedi','sekiz','dokuz'],O=['','on','yirmi','otuz','kırk','elli','altmış','yetmiş','seksen','doksan'],K=['','bin','milyon','milyar','trilyon'],T=[];if(n===0)return ['sıfır'];var gs=[];while(n>0){gs.push(n%1000);n=Math.floor(n/1000);}
+      for(var i=gs.length-1;i>=0;i--){var g=gs[i];if(!g)continue;var h=Math.floor(g/100),t=Math.floor(g%100/10),o=g%10;if(!(i===1&&g===1)){if(h>1)T.push(B[h]);if(h)T.push('yüz');if(t)T.push(O[t]);if(o)T.push(B[o]);}if(i)T.push(K[i]);}return T;}
+    function cap(w){return w.charAt(0).toLocaleUpperCase('tr-TR')+w.slice(1);}
+    var f=v.f||'buyuk',w=function(n){var T=tok(n);return f==='bas'?T.map(cap).join(''):T.join('');};
+    var s='Yalnız '+w(tl_)+' Türk Lirası'+(kr?' '+w(kr)+' Kuruş':'');
+    if(f==='buyuk')s=s.toLocaleUpperCase('tr-TR');else if(f==='kucuk')s='Yalnız '+w(tl_)+' Türk Lirası'+(kr?' '+w(kr)+' kuruş':'');
+    return{rows:[['Rakamla',tl(a)],['Yazıyla',s,1]],note:'Çek ve faturada en yaygın kullanım BÜYÜK HARF yazımdır. Yazının yanındaki “Kopyala” ile yalnızca bu satırı kopyalayabilirsiniz.'};}},
  /* VERGİ */
  {g:'Vergi',key:'kdv',title:'KDV hesaplama',abbr:'KDV',lead:'KDV hariç tutardan dahile ya da dahil tutardan hariç tutara ulaşın.',
   fields:[F('a','Tutar',{val:'10.000',sfx:'₺'}),F('r','KDV oranı',{type:'seg',opts:[['1','%1'],['10','%10'],['20','%20']],val:'20'}),F('m','Girilen tutar',{type:'seg',opts:[['haric','KDV hariç'],['dahil','KDV dahil']],val:'haric'})],
