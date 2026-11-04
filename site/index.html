@@ -1282,6 +1282,10 @@ section[data-view],[id^="h-"],[id^="d-"],[id^="x-"],[id^="p-"]{scroll-margin-top
 #hero-photo.ph-wait{background:linear-gradient(110deg,#1b2540 30%,#25304f 50%,#1b2540 70%);background-size:200% 100%;animation:phw 1.2s linear infinite;border-radius:20px}#hero-photo.ph-wait img{opacity:0}@keyframes phw{to{background-position:-200% 0}}
 #sh-grid .sh.busy{opacity:.5;pointer-events:none}#sh-grid .sh.busy span{animation:shp 1s ease-in-out infinite}@keyframes shp{50%{transform:scale(.9)}}
 .tbar .tb-fx .tb-dt,.tbar .tb-tk{border-color:transparent!important;background:transparent!important}.tbar .tb-fx .tb-dt:hover,.tbar .tb-tk:hover{background:rgba(182,163,247,.12)!important}.tbar .tb-tk{padding:0 6px!important}
+.tbar .tb-tk-in{display:grid!important;flex-direction:initial!important;transform:none!important;transition:none!important;height:100%}
+.tbar .tb-tk-in .pg{grid-area:1/1;opacity:0;transform:translateY(6px);transition:opacity .3s ease,transform .3s ease;pointer-events:none;height:100%}
+.tbar .tb-tk-in .pg.on{opacity:1;transform:none;transition-delay:.3s}
+@media (prefers-reduced-motion:reduce){.tbar .tb-tk-in .pg{transition:none}}
 /* alt bar v2: geniş, iki satır tarih, kayan piyasa şeridi */
 @media (min-width:641px){.tbar{width:min(1560px,calc(100% - 24px))!important}}
 @media (min-width:901px){.tbar{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important}.tbar .tb-info{padding-left:8px}}
@@ -3672,9 +3676,9 @@ window.newsTicker=(function(){
     if(P.BTC)h.push(tk('BTC $',P.BTC.v,ch(P.BTC),NF0));
     if(!h.length){fxNone();return;}
     TK=h;var per=innerWidth<1500?1:2,pg=[];for(var k=0;k<h.length;k+=per)pg.push(h.slice(k,k+per).map(function(x){return x.h;}).join(''));
-    $('#tb-fx').innerHTML=tbDate()+'<button type="button" class="tb-tk" id="tb-tk" aria-haspopup="dialog" aria-label="Döviz ve piyasa verilerinin tamamını göster"><span class="tb-tk-in">'+pg.map(function(x){return '<span class="pg">'+x+'</span>';}).join('')+(pg.length>1?'<span class="pg" aria-hidden="true">'+pg[0]+'</span>':'')+'</span><svg class="tb-tk-more" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>';
-    TKi=0;clearInterval(TKt);if(pg.length>1)TKt=setInterval(function(){var i=$('#tb-fx .tb-tk-in');if(!i||document.hidden)return;if(window.matchMedia('(prefers-reduced-motion:reduce)').matches){TKi=(TKi+1)%pg.length;i.style.transition='none';}else{TKi++;i.style.transition='';}
-      i.style.transform='translateY(-'+(TKi*100)+'%)';if(TKi===pg.length){setTimeout(function(){i.style.transition='none';i.style.transform='translateY(0)';TKi=0;},620);}},3800);}
+    $('#tb-fx').innerHTML=tbDate()+'<button type="button" class="tb-tk" id="tb-tk" aria-haspopup="dialog" aria-label="Döviz ve piyasa verilerinin tamamını göster"><span class="tb-tk-in">'+pg.map(function(x){return '<span class="pg">'+x+'</span>';}).join('')+'</span><svg class="tb-tk-more" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>';
+    TKi=0;clearInterval(TKt);var P$=$$('#tb-fx .tb-tk-in .pg');P$.forEach(function(x,k){x.classList.toggle('on',k===0);});
+    if(pg.length>1)TKt=setInterval(function(){if(document.hidden)return;var L=$$('#tb-fx .tb-tk-in .pg:not([aria-hidden])');if(!L.length)return;TKi=(TKi+1)%L.length;L.forEach(function(x,k){x.classList.toggle('on',k===TKi);});},3800);}
   window.addEventListener('resize',function(){clearTimeout(window.__tkT);window.__tkT=setTimeout(fx,300);});
   var pop=null;
   function piyPop(btn){if(pop&&!pop.hidden){pop.hidden=true;return;}if(!pop){pop=document.createElement('div');pop.className='tb-cal piy-pop';pop.setAttribute('role','dialog');pop.setAttribute('aria-label','Döviz ve piyasalar');document.body.appendChild(pop);
