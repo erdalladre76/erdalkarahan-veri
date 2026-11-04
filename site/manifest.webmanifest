@@ -1,0 +1,25 @@
+{
+  "name": "SMMM Erdal Karahan",
+  "short_name": "E. Karahan",
+  "description": "Mali müşavirlik, hesaplama araçları, dilekçe örnekleri ve Excel tabloları.",
+  "lang": "tr",
+  "dir": "ltr",
+  "start_url": "./#anasayfa",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0D1528",
+  "theme_color": "#0D1528",
+  "categories": ["finance", "business", "productivity"],
+  "icons": [
+    {"src": "app-icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "app-icons/icon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "app-icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ],
+  "shortcuts": [
+    {"name": "Hesaplamalar", "url": "./#hesaplamalar", "icons": [{"src": "app-icons/icon-192.png", "sizes": "192x192"}]},
+    {"name": "Dilekçeler", "url": "./#dilekceler", "icons": [{"src": "app-icons/icon-192.png", "sizes": "192x192"}]},
+    {"name": "Pratik bilgiler", "url": "./#pratik", "icons": [{"src": "app-icons/icon-192.png", "sizes": "192x192"}]},
+    {"name": "İletişim", "url": "./#iletisim", "icons": [{"src": "app-icons/icon-192.png", "sizes": "192x192"}]}
+  ]
+}
