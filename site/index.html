@@ -1314,6 +1314,7 @@ section[data-view],[id^="h-"],[id^="d-"],[id^="x-"],[id^="p-"]{scroll-margin-top
 .m-card>.m-x,.m-card .m-x{position:absolute!important;top:14px!important;right:14px!important;width:44px!important;height:44px!important;display:grid!important;place-items:center!important;border-radius:50%!important;background:color-mix(in srgb,var(--ink) 8%,transparent)!important;color:var(--ink)!important;font-size:26px!important;line-height:1!important;border:0!important;cursor:pointer;z-index:3;padding:0!important}
 .m-card .m-x:hover,.m-card .m-x:focus-visible{background:color-mix(in srgb,#5B3FA8 18%,transparent)!important;color:#5B3FA8!important}
 #share-modal h3,#prof-modal h3{padding-right:56px!important}
+#dl-wait{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;padding:16px;background:rgba(10,14,30,.55)}#dl-wait[hidden]{display:none}#dl-wait .dw-c{width:min(380px,100%);background:var(--sheet);color:var(--ink);border-radius:20px;padding:26px 22px;text-align:center;display:grid;gap:10px;justify-items:center;box-shadow:0 30px 80px -20px rgba(0,0,0,.5)}#dl-wait b{font-size:18px}#dl-wait p{margin:0;font-size:15px;line-height:1.5;opacity:.85}#dl-wait small{font-size:12.5px;opacity:.7;line-height:1.45}#dl-wait .dw-n{display:block;font-weight:600;word-break:break-all;margin-bottom:6px;opacity:1}#dl-wait .dw-b{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:6px}#dl-wait .dw-b .btn{min-height:46px;padding:0 20px}.dw-sp{width:44px;height:44px;border-radius:50%;border:4px solid color-mix(in srgb,var(--ink) 15%,transparent);border-top-color:var(--stamp,#6b4fd8);animation:dwSp .8s linear infinite}@keyframes dwSp{to{transform:rotate(360deg)}}.dw-ok{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#1f9d55;color:#fff;font-size:26px;font-weight:700}
 @media (max-width:640px){#dl-pop{left:12px!important;right:12px!important;top:auto!important;bottom:calc(env(safe-area-inset-bottom) + 150px)!important;min-width:0!important}#dl-pop button{min-height:52px;font-size:16px}}#dl-pop{position:fixed;z-index:9999;min-width:210px;padding:8px;border-radius:14px;background:var(--sheet);color:var(--ink);border:1px solid color-mix(in srgb,var(--ink) 14%,transparent);box-shadow:0 14px 40px rgba(0,0,0,.25);display:grid;gap:2px}#dl-pop>span{font-size:12px;opacity:.65;padding:4px 10px 6px}#dl-pop button{display:flex;align-items:center;gap:10px;padding:10px;border:0;border-radius:10px;background:transparent;color:inherit;font:inherit;font-size:14px;text-align:left;cursor:pointer;min-height:44px}#dl-pop button:hover,#dl-pop button:focus-visible{background:color-mix(in srgb,var(--ink) 8%,transparent)}#dl-pop b{display:grid;place-items:center;width:30px;height:30px;border-radius:7px;color:#fff;font-size:11px}
 /* alt bar v2: geniş, iki satır tarih, kayan piyasa şeridi */
 @media (min-width:641px){.tbar{width:min(1560px,calc(100% - 24px))!important}}
@@ -2855,7 +2856,7 @@ window.renderBelgeler=function(){var el=$('#belge-list');if(!el)return;
 
 /* ---------- gerçek Word (.docx) ve Excel (.xlsx) dosyaları ---------- */
 (function(){
-  var zipP=null;function zip(){if(window.JSZip)return Promise.resolve(window.JSZip);if(zipP)return zipP;zipP=new Promise(function(res,rej){var s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js';s.onload=function(){res(window.JSZip);};s.onerror=function(){zipP=null;rej();};document.head.appendChild(s);});return zipP;}
+  var zipP=null;function zip(){if(window.JSZip)return Promise.resolve(window.JSZip);if(zipP)return zipP;zipP=new Promise(function(res,rej){var s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js';s.onload=function(){res(window.JSZip);};s.onerror=function(){zipP=null;rej();};document.head.appendChild(s);});return zipP;}window.ekZipLoad=zip;
   window.ekZip=zip;
   function x(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
   /* içerikten basit belge modeli: başlık, paragraf, anahtar-değer satırları, tablo */
@@ -2976,14 +2977,14 @@ window.renderBelgeler=function(){var el=$('#belge-list');if(!el)return;
       '</table></body></html>';
     return new Blob(['﻿'+h],{type:'application/vnd.ms-excel'});}
   var libs=null;function loadLibs(){if(libs)return libs;function ld(s){return new Promise(function(res,rej){var e=document.createElement('script');e.src=s;e.onload=res;e.onerror=rej;document.head.appendChild(e);});}
-    libs=ld('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js').then(function(){return ld('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');});libs.catch(function(){libs=null;});return libs;}
+    libs=Promise.all([ld('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js'),ld('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js')]);libs.catch(function(){libs=null;});return libs;}
   function pdfBlob(title,ctx){return loadLibs().then(function(){var h=head(title),box=document.createElement('div');
       box.style.cssText='position:fixed;left:-10000px;top:0;width:794px;padding:40px 48px;background:#fff;color:#111;font:14px/1.55 Arial,Helvetica,sans-serif';
       box.innerHTML=(ctx.noHead?'':h.h)+'<div class="pdf-b"></div>'+h.f;var b=box.querySelector('.pdf-b');
       if(ctx.html!=null)b.innerHTML=ctx.html;else if(ctx.el)b.appendChild(cleanClone(ctx.el));
       var st=document.createElement('style');st.textContent='.pdf-b *{color:#111!important;background:transparent!important;box-shadow:none!important;-webkit-mask-image:none!important;mask-image:none!important;max-height:none!important;overflow:visible!important}.pdf-b .row{display:flex;justify-content:space-between;gap:16px;border-bottom:1px dotted #bbb;padding:5px 0}.pdf-b .big b{font-size:17px}.pdf-b table{border-collapse:collapse;width:100%;font-size:12px}.pdf-b td,.pdf-b th{border:1px solid #bbb;padding:4px 6px}.pdf-b th{background:#ECE7F8!important}.pdf-b img{max-width:100%}.pdf-b .pp-sig td{border:0!important;border-top:1px solid #999!important;padding-top:8px}.pdf-b .pp-sig{border-spacing:30px 0;border-collapse:separate}';box.appendChild(st);
       document.body.appendChild(box);
-      return html2canvas(box,{scale:1.6,backgroundColor:'#ffffff',useCORS:true,logging:false}).then(function(cv){box.remove();
+      return html2canvas(box,{scale:(MOB?1.25:1.6),backgroundColor:'#ffffff',useCORS:true,logging:false}).then(function(cv){box.remove();
         var pdf=new window.jspdf.jsPDF({unit:'pt',format:'a4'}),W=pdf.internal.pageSize.getWidth(),H=pdf.internal.pageSize.getHeight(),pxH=Math.floor(cv.width*H/W),y=0;
         while(y<cv.height){var s=document.createElement('canvas');s.width=cv.width;s.height=Math.min(pxH,cv.height-y);s.getContext('2d').drawImage(cv,0,y,cv.width,s.height,0,0,cv.width,s.height);
           if(y>0)pdf.addPage();pdf.addImage(s.toDataURL('image/jpeg',0.92),'JPEG',0,0,W,s.height*W/cv.width);y+=pxH;}
@@ -2991,8 +2992,23 @@ window.renderBelgeler=function(){var el=$('#belge-list');if(!el)return;
   function deliver(file,title){var data={files:[file],title:title,text:title+' — erdalkarahan.com'};
     if(navigator.canShare&&navigator.canShare({files:[file]})){return navigator.share(data).then(function(){toast('Paylaşıldı');},function(e){if(e&&e.name==='AbortError')return;if(e&&e.name==='NotAllowedError'&&/\.pdf$/.test(file.name)&&!file.__retried){file.__retried=1;readyBtn(file,title);return;}save(file);});}
     save(file);return Promise.resolve();}
-  var lastSave={};function save(file){var now=Date.now();if(lastSave[file.name]&&now-lastSave[file.name]<4000)return;lastSave[file.name]=now;var u=URL.createObjectURL(file),a=document.createElement('a');a.href=u;a.download=file.name;document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(u);a.remove();},1500);
-    toast(file.name+' indirildi — WhatsApp’ta ataç ▸ Belge ile gönderebilirsiniz');}
+  var MOB=matchMedia('(hover:none)').matches;
+  function blobSave(file){var u=URL.createObjectURL(file),a=document.createElement('a');a.href=u;a.download=file.name;document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(u);a.remove();},4000);}
+  function srvSave(file){return new Promise(function(res,rej){var fr=new FileReader();fr.onload=function(){try{var b64=String(fr.result).split(',')[1],ifr=document.getElementById('dl-frame');if(!ifr){ifr=document.createElement('iframe');ifr.name=ifr.id='dl-frame';ifr.style.display='none';document.body.appendChild(ifr);}
+    var f=document.createElement('form');f.method='POST';f.action='/indir.php';f.target='dl-frame';f.style.display='none';[['n',file.name],['d',b64]].forEach(function(kv){var i=document.createElement('input');i.type='hidden';i.name=kv[0];i.value=kv[1];f.appendChild(i);});document.body.appendChild(f);f.submit();setTimeout(function(){f.remove();},3000);res();}catch(e){rej(e);}};fr.onerror=rej;fr.readAsDataURL(file);});}
+  var lastSave={};function save(file){var now=Date.now();if(lastSave[file.name]&&now-lastSave[file.name]<4000)return;lastSave[file.name]=now;
+    if(MOB&&/^https?:/.test(location.protocol)&&/erdalkarahan\.com$/.test(location.hostname))srvSave(file).catch(function(){blobSave(file);});else blobSave(file);
+    dlWait('done',file);}
+  /* bekleme / tamamlandı penceresi */
+  function dlWait(state,file){var w=document.getElementById('dl-wait');if(!w){w=document.createElement('div');w.id='dl-wait';w.setAttribute('role','alertdialog');w.setAttribute('aria-live','polite');document.body.appendChild(w);w.addEventListener('click',function(e){if(e.target===w||e.target.closest('[data-w=ok]'))w.hidden=true;});}
+    if(state==='off'){w.hidden=true;return;}w.hidden=false;
+    if(state==='wait'){w.innerHTML='<div class="dw-c"><span class="dw-sp" aria-hidden="true"></span><b>Dosyanız hazırlanıyor</b><p>Lütfen bekleyin, birkaç saniye sürebilir…</p></div>';return;}
+    if(state==='err'){w.innerHTML='<div class="dw-c"><b>Dosya oluşturulamadı</b><p>İnternet bağlantınızı kontrol edip tekrar deneyin. Olmazsa Yazdır ▸ PDF olarak kaydet’i kullanabilirsiniz.</p><button type="button" class="btn btn-ink btn-sm" data-w="ok">Tamam</button></div>';return;}
+    var canSh=!!(navigator.canShare&&navigator.canShare({files:[file]}));
+    w.innerHTML='<div class="dw-c"><span class="dw-ok" aria-hidden="true">✓</span><b>Dosyanız indirildi</b><p><span class="dw-n">'+esc(file.name)+'</span>'+(MOB?'Telefonun bildirim çubuğundan ya da <b>Dosyalarım ▸ İndirilenler</b> klasöründen açabilirsiniz.':'Tarayıcının <b>İndirilenler</b> klasöründe.')+'</p><div class="dw-b">'+(canSh?'<button type="button" class="btn btn-line btn-sm" data-w="sh">Aç / Gönder</button>':'')+'<button type="button" class="btn btn-ink btn-sm" data-w="ok">Tamam</button></div>'+(MOB&&canSh?'<small>İnmediyse “Aç / Gönder” ile dosyayı doğrudan WhatsApp, e-posta veya Drive’a kaydedebilirsiniz.</small>':'')+'</div>';
+    var sb=w.querySelector('[data-w=sh]');if(sb)sb.onclick=function(){navigator.share({files:[file],title:file.name}).catch(function(){});};}
+  window.dlWait=dlWait;
+  window.ekPreload=function(){loadLibs().catch(function(){});if(window.ekZipLoad)ekZipLoad().catch(function(){});};
   function readyBtn(file,title){var w=$('#sh-step');if(!w||$('#share-modal').hidden)return save(file);$$('.sh-ready').forEach(function(x){x.remove();});var b=document.createElement('button');b.type='button';b.className='btn btn-ink btn-sm sh-ready';b.textContent='PDF hazır — Gönder';b.onclick=function(){b.remove();deliver(file,title);};w.appendChild(b);toast('PDF hazır, Gönder’e dokunun');}
   function makeFile(kind,title,ctx){ctx.__f=ctx.__f||{};if(ctx.__f[kind])return ctx.__f[kind];var base=slug(title)+'-erdalkarahan',pr;
     if(kind==='word')pr=window.ekDocx(title,ctx).then(function(b){return new File([b],base+'.docx',{type:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});},function(){return new File([wordBlob(title,ctx)],base+'.doc',{type:'application/msword'});});
@@ -3002,12 +3018,12 @@ window.renderBelgeler=function(){var el=$('#belge-list');if(!el)return;
     ctx.__f[kind]=pr;return pr;}
   window.prepFile=function(kind,title,ctx){if(ctx)makeFile(kind,title,ctx).catch(function(){});};
   var busy=false;
-  window.shareFile=function(kind,title,ctx,dl,btn){if(busy)return Promise.resolve();
+  window.shareFile=function(kind,title,ctx,dl,btn){if(busy){if(dl)dlWait('wait');return Promise.resolve();}
     var ready=ctx.__ready&&ctx.__ready[kind];
     if(ready){return dl?(save(ready),Promise.resolve()):deliver(ready,title);}
-    busy=true;if(btn)btn.classList.add('busy');if(kind==='pdf')toast('PDF hazırlanıyor…');
-    return makeFile(kind,title,ctx).then(function(f){busy=false;if(btn)btn.classList.remove('busy');return dl?save(f):deliver(f,title);},
-      function(){busy=false;if(btn)btn.classList.remove('busy');toast('Dosya oluşturulamadı; Yazdır ▸ PDF olarak kaydet’i kullanın');});};
+    busy=true;if(btn)btn.classList.add('busy');if(dl)dlWait('wait');else if(kind==='pdf')toast('PDF hazırlanıyor…');
+    return new Promise(function(r){setTimeout(r,60);}).then(function(){return makeFile(kind,title,ctx);}).then(function(f){busy=false;if(btn)btn.classList.remove('busy');return dl?save(f):deliver(f,title);},
+      function(){busy=false;if(btn)btn.classList.remove('busy');if(dl)dlWait('err');else toast('Dosya oluşturulamadı; Yazdır ▸ PDF olarak kaydet’i kullanın');});};
   window.fileShareBar=function(title,ctx){var w=document.createElement('div');w.className='sh-files';w.id='sh-files';
     w.innerHTML='<span class="lbl-sm">Dosya olarak gönder</span><div class="sh-fb"><button type="button" data-k="pdf"><b style="background:#D93F3F">PDF</b>PDF</button><button type="button" data-k="word"><b style="background:#2B579A">W</b>Word</button><button type="button" data-k="excel"><b style="background:#217346">X</b>Excel</button></div>';
     $$('button[data-k]',w).forEach(function(b){b.onclick=function(){shareFile(b.dataset.k,title,ctx);};});return w;};
@@ -3017,8 +3033,8 @@ window.renderBelgeler=function(){var el=$('#belge-list');if(!el)return;
 function dlMenu(btn,title,ctx){var old=document.getElementById('dl-pop');if(old){old.remove();if(old.__b===btn)return;}
   var m=document.createElement('div');m.id='dl-pop';m.__b=btn;m.setAttribute('role','menu');
   m.innerHTML='<span>Hangi biçimde indirilsin?</span>'+[['pdf','PDF','#D93F3F','PDF'],['word','Word (.docx)','#2B579A','W'],['excel','Excel (.xlsx)','#217346','X']].map(function(k){return '<button type="button" role="menuitem" data-k="'+k[0]+'"><b style="background:'+k[2]+'">'+k[3]+'</b>'+k[1]+'</button>';}).join('');
-  document.body.appendChild(m);var r=btn.getBoundingClientRect(),W=m.offsetWidth,H=m.offsetHeight,x=Math.max(8,Math.min(r.left,innerWidth-W-8)),y=r.bottom+6;if(y+H>innerHeight-8)y=Math.max(8,r.top-H-6);m.style.left=x+'px';m.style.top=y+'px';
-  $$('button',m).forEach(function(b){b.onclick=function(){m.remove();toast((b.dataset.k==='pdf'?'PDF':b.dataset.k==='word'?'Word':'Excel')+' dosyası hazırlanıyor…');window.shareFile&&shareFile(b.dataset.k,title,ctx,true,btn);};});
+  document.body.appendChild(m);window.ekPreload&&ekPreload();var r=btn.getBoundingClientRect(),W=m.offsetWidth,H=m.offsetHeight,x=Math.max(8,Math.min(r.left,innerWidth-W-8)),y=r.bottom+6;if(y+H>innerHeight-8)y=Math.max(8,r.top-H-6);m.style.left=x+'px';m.style.top=y+'px';
+  $$('button',m).forEach(function(b){b.onclick=function(){m.remove();window.shareFile&&shareFile(b.dataset.k,title,ctx,true,btn);};});
   setTimeout(function(){function off(e){if(!m.contains(e.target)&&e.target!==btn){m.remove();document.removeEventListener('pointerdown',off,true);document.removeEventListener('keydown',esc1,true);}}function esc1(e){if(e.key==='Escape'){m.remove();document.removeEventListener('pointerdown',off,true);document.removeEventListener('keydown',esc1,true);}}document.addEventListener('pointerdown',off,true);document.addEventListener('keydown',esc1,true);},0);}
 /* ---------- paylaşım menüsü (WhatsApp, e-posta, SMS…) ---------- */
 function openShare(title,text,url,ctx){
