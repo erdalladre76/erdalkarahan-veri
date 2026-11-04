@@ -1,0 +1,905 @@
+{
+ "guncelleme": "2026-11-04",
+ "aciklama": "Kurumlar (p:1 olmayan gruplar), Resmî Programlar (p:1 gruplar) ve Belge Örnekleri sayfalarının linkleri. Her öğe [Ad, Açıklama, URL]. Yalnızca resmî kurum adresleri.",
+ "kurumlar": [
+  {
+   "g": "Vergi",
+   "ic": "i-gov",
+   "c": "#2F4FA8",
+   "items": [
+    [
+     "Dijital Vergi Dairesi",
+     "Gelir İdaresi Başkanlığı",
+     "https://dijital.gib.gov.tr"
+    ],
+    [
+     "e-Beyanname",
+     "Beyanname gönderimi",
+     "https://ebeyanname.gib.gov.tr"
+    ],
+    [
+     "e-Arşiv Portal",
+     "e-Arşiv fatura düzenleme",
+     "https://earsivportal.efatura.gov.tr"
+    ],
+    [
+     "e-Belge (e-Fatura)",
+     "GİB e-belge uygulamaları",
+     "https://ebelge.gib.gov.tr"
+    ],
+    [
+     "e-Fatura Portalı",
+     "Mali mühür / e-imza ile giriş",
+     "https://portal.efatura.gov.tr/efatura/login.jsp"
+    ],
+    [
+     "e-Fatura İptal / İtiraz Portalı",
+     "İptal ve itiraz talepleri",
+     "https://ebelgebasvuru.gib.gov.tr/iptal-itiraz/sertifika-giris"
+    ],
+    [
+     "e-Fatura Kayıtlı Kullanıcılar",
+     "VKN/TCKN ile e-Fatura mükellefi sorgusu",
+     "https://ebelge.gib.gov.tr/efaturakayitlikullanicilar.html"
+    ],
+    [
+     "e-Defter Uygulaması",
+     "Akıllı kart / mali mühür ile giriş",
+     "https://edefter.gib.gov.tr/"
+    ],
+    [
+     "e-Defter",
+     "Elektronik defter",
+     "https://www.edefter.gov.tr"
+    ],
+    [
+     "GİB Mevzuat",
+     "Kanun, tebliğ, özelge",
+     "https://www.gib.gov.tr/mevzuat"
+    ]
+   ]
+  },
+  {
+   "g": "SGK",
+   "ic": "i-people",
+   "c": "#0E9F8E",
+   "items": [
+    [
+     "e-Bildirge",
+     "Aylık prim ve hizmet belgesi",
+     "https://ebildirge.sgk.gov.tr"
+    ],
+    [
+     "SGK İşveren Sistemi",
+     "İşe giriş, işten çıkış, borç sorgu",
+     "https://uyg.sgk.gov.tr/IsverenSistemi"
+    ],
+    [
+     "Vizite",
+     "Rapor ve istirahat bildirimi",
+     "https://uyg.sgk.gov.tr/vizite/welcome.do"
+    ],
+    [
+     "SGK Duyurular",
+     "Genelge ve duyurular",
+     "https://www.sgk.gov.tr/Duyuru"
+    ]
+   ]
+  },
+  {
+   "g": "Tebligat",
+   "ic": "i-mail",
+   "c": "#C2414A",
+   "items": [
+    [
+     "UETS e-Tebligat",
+     "PTT Ulusal Elektronik Tebligat (e-Devlet)",
+     "https://www.turkiye.gov.tr/arama?aranan=elektronik+tebligat"
+    ],
+    [
+     "PTT KEP",
+     "Kayıtlı elektronik posta",
+     "https://www.pttkep.gov.tr"
+    ],
+    [
+     "GİB e-Tebligat",
+     "Dijital Vergi Dairesi üzerinden",
+     "https://dijital.gib.gov.tr"
+    ]
+   ]
+  },
+  {
+   "g": "Ticaret",
+   "ic": "i-store",
+   "c": "#E07A1F",
+   "items": [
+    [
+     "MERSİS",
+     "Merkezi Sicil Kayıt Sistemi",
+     "https://mersis.ticaret.gov.tr"
+    ],
+    [
+     "Ticaret Sicil Gazetesi",
+     "Şirket ilanları",
+     "https://www.ticaretsicil.gov.tr"
+    ],
+    [
+     "İTO",
+     "İstanbul Ticaret Odası",
+     "https://www.ito.org.tr"
+    ],
+    [
+     "TOBB",
+     "Türkiye Odalar ve Borsalar Birliği",
+     "https://www.tobb.org.tr"
+    ],
+    [
+     "ETBİS",
+     "Elektronik Ticaret Bilgi Sistemi",
+     "https://etbis.ticaret.gov.tr"
+    ],
+    [
+     "KOSGEB",
+     "KOBİ destekleri",
+     "https://www.kosgeb.gov.tr"
+    ]
+   ]
+  },
+  {
+   "g": "Meslek kuruluşları",
+   "ic": "i-badge",
+   "c": "#5B3FA8",
+   "items": [
+    [
+     "TÜRMOB",
+     "Türkiye Serbest Muhasebeci Mali Müşavirler ve Yeminli Mali Müşavirler Odaları Birliği",
+     "https://www.turmob.org.tr"
+    ],
+    [
+     "İSMMMO",
+     "İstanbul Serbest Muhasebeci Mali Müşavirler Odası",
+     "https://www.ismmmo.org.tr",
+     "img/ismmmo.png"
+    ],
+    [
+     "TESMER",
+     "Temel Eğitim ve Staj Merkezi",
+     "https://www.tesmer.org.tr"
+    ]
+   ]
+  },
+  {
+   "g": "Diğer kamu",
+   "ic": "i-gov",
+   "c": "#121C33",
+   "items": [
+    [
+     "e-Devlet",
+     "Tüm kamu hizmetleri",
+     "https://www.turkiye.gov.tr"
+    ],
+    [
+     "Resmî Gazete",
+     "Günlük yayınlar",
+     "https://www.resmigazete.gov.tr"
+    ],
+    [
+     "Hazine ve Maliye Bakanlığı",
+     "Bütçe ve maliye",
+     "https://www.hmb.gov.tr"
+    ],
+    [
+     "TCMB",
+     "Kurlar ve faiz",
+     "https://www.tcmb.gov.tr"
+    ],
+    [
+     "TÜİK",
+     "Enflasyon ve istatistik",
+     "https://www.tuik.gov.tr"
+    ],
+    [
+     "İŞKUR",
+     "İstihdam ve teşvikler",
+     "https://www.iskur.gov.tr"
+    ],
+    [
+     "KVKK",
+     "Kişisel Verileri Koruma Kurumu",
+     "https://www.kvkk.gov.tr"
+    ],
+    [
+     "VERBİS",
+     "Veri sorumluları sicili",
+     "https://verbis.kvkk.gov.tr"
+    ]
+   ]
+  },
+  {
+   "g": "Programlar ve indirmeler",
+   "p": 1,
+   "ic": "i-gov",
+   "c": "#2F6FD0",
+   "items": [
+    [
+     "BDP – Beyanname Düzenleme Programı",
+     "GİB · Windows kurulum dosyası (ebyn.exe)",
+     "https://ebeyanname.gib.gov.tr/ebyn.exe"
+    ],
+    [
+     "BDP Yardım",
+     "GİB · BDP kullanım kılavuzu kurulumu",
+     "https://ebeyanname.gib.gov.tr/ebyn_yardim.exe"
+    ],
+    [
+     "İcra Daireleri İçin BDP",
+     "GİB · icra kesinti bildirimi programı",
+     "https://ebeyanname.gib.gov.tr/ebyn_ICRA.exe"
+    ],
+    [
+     "GİB Gerekli Programlar",
+     "Tüm e-Beyanname programlarının resmî sayfası",
+     "https://dijital.gib.gov.tr/gerekliProgramlar"
+    ],
+    [
+     "e-Fatura Görüntüleyici",
+     "GİB e-Belge · XML faturayı okunur hâle getirir (Java 17)",
+     "https://ebelge.gib.gov.tr/EFaturaGoruntuleyici/Windows/Java17/EFaturaGoruntuleyici.jnlp"
+    ],
+    [
+     "e-Defter Görüntüleyici",
+     "GİB e-Defter · defter dosyalarını görüntüler",
+     "https://www.edefter.gov.tr/eDefterGoruntuleyici/eDefterGoruntuleyici.jnlp"
+    ],
+    [
+     "e-Defter Saklama Bildirim Programı",
+     "GİB · e-Defter saklama bildirimi (Windows)",
+     "https://deftersaklama.gib.gov.tr/download/e-DefterBildirimV2.4_Prod.exe"
+    ],
+    [
+     "e-Defter Paketi ve Kılavuzlar",
+     "GİB e-Defter sitesi",
+     "https://www.edefter.gov.tr/anasayfa.html"
+    ],
+    [
+     "e-Beyanname Hazırlama Kılavuzu",
+     "BDP ve e-Beyanname kullanım kılavuzu",
+     "https://ebeyanname.gib.gov.tr/ebeyannameHazirlamaKilavuzu.html"
+    ],
+    [
+     "GİB Mobil (Android)",
+     "Gelir İdaresi’nin resmî uygulaması · Google Play",
+     "https://play.google.com/store/apps/details?id=gov.gib.GibTvdMobil.temassizmobil"
+    ],
+    [
+     "GİB Mobil (iPhone)",
+     "Gelir İdaresi’nin resmî uygulaması · App Store",
+     "https://apps.apple.com/tr/app/gi-b/id1351972062"
+    ],
+    [
+     "GİB Duyuruları",
+     "BDP güncelleme ve sistem duyuruları",
+     "https://dijital.gib.gov.tr/duyurular"
+    ]
+   ]
+  },
+  {
+   "g": "e-imza ve mali mühür",
+   "p": 1,
+   "ic": "i-badge",
+   "c": "#0E7C5A",
+   "items": [
+    [
+     "GİB e-imza Aracı",
+     "Java gerektirmeyen imzalama aracı · portal girişleri için",
+     "https://ebelge.gib.gov.tr/EFaturaWebSocketWin/GibeImzaAraciKurulum.zip"
+    ],
+    [
+     "İmzalama Aracı Kılavuzu",
+     "GİB e-Belge · kurulum ve kullanım",
+     "https://ebelge.gib.gov.tr/dosyalar/kilavuzlar/Imzalama_Araci_Kullanim_Kilavuzu.pdf"
+    ],
+    [
+     "e-imza / Mali Mühür Sürücüleri",
+     "Kamu SM (TÜBİTAK) kart ve kart okuyucu sürücüleri",
+     "https://kamusm.bilgem.tubitak.gov.tr/islemler/surucu_yukleme_servisi/"
+    ],
+    [
+     "Kamu SM Kök Sertifikaları",
+     "Kök ve alt kök sertifikalar, iptal listeleri",
+     "https://sertifikalar.kamusm.gov.tr/"
+    ],
+    [
+     "Kamu SM Çevrim İçi İşlemler",
+     "Mali mühür başvurusu, kart okuyucu, borç sorgulama",
+     "https://onlineislemler.kamusm.gov.tr/"
+    ],
+    [
+     "Java",
+     "Oracle · bazı görüntüleyiciler ve imza uygulamaları için",
+     "https://www.java.com/tr/download/"
+    ]
+   ]
+  }
+ ],
+ "belgeler": [
+  {
+   "g": "Mali müşavir (SMMM) rapor örnekleri",
+   "c": "#5B3FA8",
+   "ic": "i-badge",
+   "src": "İSMMMO",
+   "items": [
+    [
+     "Sermayenin Ödendiğinin Tespitine Ait SMMM Raporu",
+     "Sermaye artırımında önceki sermayenin ödendiği",
+     "https://archive.ismmmo.org.tr/TicariSicilVeRaporlar/SermayeninOdendigininTespitineAitRapor.doc"
+    ],
+    [
+     "Geçmiş Yıl Kârlarının Tespitine Ait SMMM Raporu",
+     "İç kaynaktan sermaye artırımı (570 hesap)",
+     "https://archive.ismmmo.org.tr/TicariSicilVeRaporlar/Da%C4%9F%C4%B1t%C4%B1lmayyan%20ge%C3%A7mi%C5%9F%20y%C4%B1l%20kar%C4%B1%20tespiti%20raporu.docx"
+    ],
+    [
+     "502 Hesabın Sermayeye Eklenmesine Ait SMMM Raporu",
+     "Sermaye düzeltmesi olumlu farkları",
+     "https://archive.ismmmo.org.tr/TicariSicilVeRaporlar/SermayeDuzeltmesiOlumluFarklarininSermayeyeEklenmesi.doc"
+    ],
+    [
+     "Ortak Alacaklarının Tespitine Ait SMMM Raporu",
+     "Ortağın şirketten alacağının sermayeye eklenmesi",
+     "https://archive.ismmmo.org.tr/TicariSicilVeRaporlar/Ortak%20alacaklar%C4%B1n%C4%B1n%20tespiti%20raporu(sermyeye%20eklenecek%20olan).docx"
+    ],
+    [
+     "Sermaye Azaltımında SMMM Raporu",
+     "Alacaklıların haklarının korunduğunun tespiti",
+     "https://archive.ismmmo.org.tr/TicariSicilVeRaporlar/Sermaye%20azalt%C4%B1m%C4%B1nda%20d%C3%BCzenlenen%20SMMM%20raporu.doc"
+    ],
+    [
+     "Sermaye Azaltımında Yönetim Kurulu / Müdürler Kurulu Raporu",
+     "Yönetim organının azaltım raporu",
+     "https://archive.ismmmo.org.tr/TicariSicilVeRaporlar/m%C3%BCd%C3%BCrler%20ve%20YK%20sermaye%20azalt%C4%B1m%20raporu%20%C3%B6rn.docx"
+    ],
+    [
+     "Tasfiyeden Dönüşte SMMM Raporu",
+     "Dağıtıma başlanmadığı ve sermayenin korunduğu",
+     "https://archive.ismmmo.org.tr/TicariSicilVeRaporlar/Tasfiye%20memurunun%20tasfiyeden%20%C3%A7%C4%B1k%C4%B1%C5%9F%20raporu.docx"
+    ],
+    [
+     "Tasfiyeden Dönüşte Tasfiye Memuru Raporu",
+     "Tasfiye memuru / memurları raporu",
+     "https://archive.ismmmo.org.tr/TicariSicilVeRaporlar/Tasfiyeden%20D%C3%B6n%C3%BC%C5%9Fe%20ait%20Tasfiye%20memuru%20memurlar%C4%B1%20rapor%20%C3%B6rne%C4%9Fi.doc"
+    ],
+    [
+     "Şirketin Faal Olduğuna İlişkin SMMM Raporu",
+     "Süresi dolan şirketin faaliyeti",
+     "https://archive.ismmmo.org.tr/TicariSicilVeRaporlar/SuresiDolansirketinFaalOldugunaIliskin%20smmm%20RAPOR.doc"
+    ],
+    [
+     "KOBİ Tespitine Ait SMMM Raporu",
+     "KOBİ tanımına uygunluk",
+     "https://archive.ismmmo.org.tr/TicariSicilVeRaporlar/KOB%C4%B0%20TANIMINA%20UYGUN%20RAPOR.doc"
+    ],
+    [
+     "Tür Değişikliği SMMM Raporu",
+     "Öz varlık tespiti (şirketler)",
+     "https://archive.ismmmo.org.tr/TicariSicilVeRaporlar/ekler/turdegisikligi/ek3.doc"
+    ],
+    [
+     "Şahıs İşletmesinin Tür Değişikliği SMMM Raporu",
+     "Ferdî işletmenin şirkete dönüşmesi",
+     "https://archive.ismmmo.org.tr/TicariSicilVeRaporlar/Fert%20firma%20T%C3%BCr%20De%C4%9Fi%C5%9Fikli%C4%9Fi%20SMMM%20Raporu.doc"
+    ],
+    [
+     "Normal Birleşme SMMM Raporu",
+     "Birleşmede öz varlık tespiti",
+     "https://archive.ismmmo.org.tr/TicariSicilVeRaporlar/ekler/birlesme/ek3.doc"
+    ],
+    [
+     "Kolay Birleşme SMMM Raporu",
+     "Kolaylaştırılmış birleşme",
+     "https://archive.ismmmo.org.tr/docs/16042013/birlesme/ekler/grup2/ek6.doc"
+    ],
+    [
+     "Tam Bölünme SMMM Raporu",
+     "Bölünmede öz varlık tespiti",
+     "https://archive.ismmmo.org.tr/TicariSicilVeRaporlar/ekler/bolunme/ek5.doc"
+    ],
+    [
+     "Kısmi Bölünme SMMM Raporu",
+     "Kısmi bölünmede öz varlık tespiti",
+     "https://archive.ismmmo.org.tr/TicariSicilVeRaporlar/ekler/bolunme/ek5-1.doc"
+    ],
+    [
+     "Ticaret Sicili Güncel Uygulama Bilgileri",
+     "İSMMMO bilgi notu",
+     "https://archive.ismmmo.org.tr/TicariSicilVeRaporlar/Ticaret%20sicili%20uygulama%20Bilgileri.docx"
+    ],
+    [
+     "Ticaret Sicilinde En Çok Karşılaşılan İade Nedenleri",
+     "Başvuru öncesi kontrol listesi",
+     "https://archive.ismmmo.org.tr/TicariSicilVeRaporlar/Ticaret%20sicil%20i%C5%9Flemlerinde%20kar%C5%9F%C4%B1la%C5%9F%C4%B1lan%20iade%20nedenleri.docx"
+    ],
+    [
+     "İSMMMO Rapor Örnekleri Sayfası",
+     "Tüm örneklerin resmî kaynak sayfası",
+     "https://ismmmo.org.tr/Mevzuat/Sermayenin-Odendiginin-Tespit-Raporu-ve-Diger-Tespit-Raporlari--3264"
+    ]
+   ]
+  },
+  {
+   "g": "Limited şirket belge örnekleri",
+   "c": "#E07A1F",
+   "ic": "i-store",
+   "src": "İTO",
+   "items": [
+    [
+     "Ortaklar Kurulu (Genel Kurul) Kararı",
+     "Olağan / genel karar örneği",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/limited_sirket_ortaklar_kurulu.doc"
+    ],
+    [
+     "Sermaye Artırımı Kararı",
+     "Limited şirket",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/ltd_sermaye_arttirim.doc"
+    ],
+    [
+     "Sermaye Azaltımı Belgeleri (EK-1)",
+     "Alacaklılara çağrı ve beyan",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/6102_sermaye_azaltimi.doc"
+    ],
+    [
+     "Adres Değişikliği Kararı",
+     "Limited şirket",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/ltd_adres_degisiklik_karari.doc"
+    ],
+    [
+     "Merkez Nakli Kararı",
+     "Başka ile taşınma",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/ltd_merkez_nakli.docx"
+    ],
+    [
+     "Şube Açılışı Kararı",
+     "Limited şirket",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/ltd_sube_acilisi.doc"
+    ],
+    [
+     "Ek İşyerinin Şubeye Dönüşümü Kararı",
+     "Yetkili organ kararı",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/ek_isyeri_sube_donusum_karari.doc"
+    ],
+    [
+     "Pay (Hisse) Devri Kararı",
+     "Ortaklar kurulu onayı",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/ltd_hisse_devri_karar.doc"
+    ],
+    [
+     "Ortak Ad Soyad Değişikliği Kararı",
+     "Limited şirket",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/ltd_ad_soyad_degisiklik_karar.doc"
+    ],
+    [
+     "Müdür Atama Kararı (Gerçek Kişi)",
+     "Limited şirket",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/ltd_mudur_atama_karari.doc"
+    ],
+    [
+     "Müdür Atama Kararı (Tüzel Kişi)",
+     "Temsil ve ilzam",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/ltd_tuzel_temsil_ilzam_karari.doc"
+    ],
+    [
+     "Müdür İstifası Kararı",
+     "Limited şirket",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/ltd_mudur_istifasi.doc"
+    ],
+    [
+     "Görev Kabul Beyanı (Müdür)",
+     "Ortak olmayan müdürler için",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/ltd_kurulus_gorev_kabul.doc"
+    ],
+    [
+     "İç Yönerge Kabul Kararı",
+     "Müdürler kurulu kararı",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/ltd_ic_yonerge_kabul_karari_doc.doc"
+    ],
+    [
+     "Sınırlı Yetkili Atama Kararı",
+     "İç yönergeye göre",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/sinirli_yetkili_atama_karar_ornegi.doc"
+    ],
+    [
+     "Tasfiyeye Giriş Kararı",
+     "Limited şirket",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/ltd_tasfiyeye_giris.doc"
+    ],
+    [
+     "Tasfiyeden Dönüş Kararı",
+     "Limited şirket",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/ltd_tasfiyeden_donus.doc"
+    ],
+    [
+     "Tasfiye Sonu Kararı",
+     "Limited şirket",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/ltd_tasfiye_sonu.doc"
+    ],
+    [
+     "Limited Şirket Toplantı ve Karar Nisapları",
+     "İTO bilgi notu",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/ltd_nisap.pdf"
+    ]
+   ]
+  },
+  {
+   "g": "Anonim şirket belge örnekleri",
+   "c": "#2F4FA8",
+   "ic": "i-gov",
+   "src": "İTO",
+   "items": [
+    [
+     "Genel Kurul Toplantı Tutanağı",
+     "Anonim şirket",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/as_genel_kurul_toplanti_tutanagi.docx"
+    ],
+    [
+     "Hazır Bulunanlar Listesi (Hazirun Cetveli)",
+     "Anonim şirket",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/as_hazirun_cetveli.doc"
+    ],
+    [
+     "Sermaye Artırım Beyanı (TTK 457)",
+     "Yönetim kurulu beyanı",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/sermaye_beyan.doc"
+    ],
+    [
+     "İştirak Taahhütnamesi",
+     "Sermaye artırımında taahhüt",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/istirak_taahhutnamesi.doc"
+    ],
+    [
+     "Adres Değişikliği Kararı",
+     "Yönetim kurulu kararı",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/as_adres_degisikligi.doc"
+    ],
+    [
+     "Şube Açılış Kararı",
+     "Yönetim kurulu kararı",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/as_sube_karar.doc"
+    ],
+    [
+     "Yönetim Kurulu Üyesi İstifa ve Yeni Atama",
+     "Gerçek kişi üye",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/as_istifa_yeni_atama.doc"
+    ],
+    [
+     "Tüzel Kişi Üye Temsil ve İlzam Kararı",
+     "Tüzel kişi yönetim kurulu üyesi",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/as_tuzel_temsil_ilzam.doc"
+    ],
+    [
+     "Görev Dağılımı ve Temsil Kararı (Gerçek Kişi)",
+     "Yönetim kurulu",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/gercek_kisi_yk_gorev_dagilimi_temsil_karar_ornegi.doc"
+    ],
+    [
+     "Görev Dağılımı ve Temsil Kararı (Tüzel Kişi)",
+     "Yönetim kurulu",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/tuzel_kisi_yk_gorev_dagilimi_temsil_karar_ornegi.doc"
+    ],
+    [
+     "Görev Kabul Beyanı (Yönetim Kurulu Üyesi)",
+     "Pay sahibi olmayan üyeler",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/as_gorev_kabul_beyani.doc"
+    ],
+    [
+     "Genel Kurulda Seçilen Üye Görev Kabul",
+     "Pay sahibi olmayan üyeler",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/gorev_kabul_genel_kurul.doc"
+    ],
+    [
+     "İç Yönerge Kabul Kararı",
+     "Yönetim kurulu kararı",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/as_ic_yonerge_kabul_karari.doc"
+    ],
+    [
+     "Sınırlı Yetkili Atama Kararı",
+     "İç yönergeye göre",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/as_sinirli_yetkili_atama_karar_ornegi.doc"
+    ],
+    [
+     "Tek Pay Sahipliğine Giriş Kararı",
+     "Yönetim kurulu kararı",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/tek_pay_giris.doc"
+    ],
+    [
+     "Tek Pay Sahibi Değişikliği Kararı",
+     "Yönetim kurulu kararı",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/as_tek_pay_yon_kur_karar.doc"
+    ],
+    [
+     "Çok Pay Sahipliğine Geçiş Kararı",
+     "Yönetim kurulu kararı",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/as_cok_pay_karari.doc"
+    ],
+    [
+     "TTK 198 Bildirim Dilekçesi",
+     "Şirketin kendi paylarını iktisabı",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/198_bildirim_dilekcesi.doc"
+    ],
+    [
+     "TTK 198 Yönetim Kurulu Kararı",
+     "Kendi paylarını iktisap",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/198_yk_karari.doc"
+    ],
+    [
+     "Denetçi Beyanı Örneği",
+     "Bağımsız denetçi seçimi",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/denetci_beyan_ornegi.doc"
+    ],
+    [
+     "Bağımsız Denetçi Kararı",
+     "Yönetim kurulu kararı",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/bagimsiz_denetci_karar_ornegi.doc"
+    ],
+    [
+     "Tasfiyeye Giriş Toplantı Kararı",
+     "Genel kurul kararı",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/tasfiye_giris_toplanti.doc"
+    ],
+    [
+     "Tasfiye Sonu Kararı",
+     "Genel kurul kararı",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/as_tasfiye_sonu_karar.docx"
+    ],
+    [
+     "Bakanlık İznine Tabi Şirketler",
+     "İTO bilgi notu",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/bakanlik_iznine_tabi_sirketler.pdf"
+    ],
+    [
+     "Bakanlık Temsilcisi Gereken Toplantılar",
+     "İTO bilgi notu",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/bakanlik_temsilcisi_bulunmasi_gereken_toplantilar.pdf"
+    ],
+    [
+     "Tek Pay Sahipli AŞ Genel Kurulları",
+     "İTO bilgi notu",
+     "https://ito.org.tr/documents/Ticaret-Sicil/onemli_bilgiler_ve_duyurular/uygulama_degisiklikleri/tek_pay_sahipli_anonim_sirket_genel_kurullari_hakkinda.pdf"
+    ],
+    [
+     "Anonim Şirket Toplantı ve Karar Nisapları",
+     "İTO bilgi notu",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/as_nisap.pdf"
+    ]
+   ]
+  },
+  {
+   "g": "Tür değişikliği, birleşme ve bölünme",
+   "c": "#0E9F8E",
+   "ic": "i-people",
+   "src": "İTO",
+   "items": [
+    [
+     "Tür Değişikliği Dilekçesi",
+     "Nevi değişikliği",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/nevi_degisiklik_dilekcesi.doc"
+    ],
+    [
+     "Tür Değiştirme Planı",
+     "Şirketler",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/tur_plani.doc"
+    ],
+    [
+     "Tür Değiştirme Raporu",
+     "Şirketler",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/tur_rapor.doc"
+    ],
+    [
+     "Tür Değişikliği Kararı",
+     "Noter onaylı karar",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/tur_karar.doc"
+    ],
+    [
+     "Tür Değiştirme Planı (Şahıs İşletmesi)",
+     "Gerçek kişi ticari işletme",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/tur_degisiklik_plan_gercek_kisi.doc"
+    ],
+    [
+     "Tür Değiştirme Raporu (Şahıs İşletmesi)",
+     "Gerçek kişi ticari işletme",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/tur_degisiklik_rapor_gercek_kisi.doc"
+    ],
+    [
+     "Şahıs İşletmesinden AŞ’ye Esas Sözleşme",
+     "Örnek esas sözleşme",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/gercek_kisi_nevi_deg_ornek1.doc"
+    ],
+    [
+     "Şahıs İşletmesinden Limitede Şirket Sözleşmesi",
+     "Örnek şirket sözleşmesi",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/gercek_kisi_nevi_deg_ornek2.docx"
+    ],
+    [
+     "Şube Bilgi Beyanı (Tür Değişikliği)",
+     "Şubeler için",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/tur_sube_bildirimi.docx"
+    ],
+    [
+     "Birleşme: Genel Kurul Öncesi İlan (EK-1)",
+     "Genel kuruldan 33 gün önce",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/6102_birlesme_ek1.doc"
+    ],
+    [
+     "Şube Bilgi Beyanı (Birleşme)",
+     "Şubeler için",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/birlesme_sube_bildirimi.docx"
+    ],
+    [
+     "Bölünme: İnceleme Hakkı İlanı (EK-1)",
+     "Genel kuruldan iki ay önce",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/6102_bolunme_ek1.doc"
+    ],
+    [
+     "Bölünme: Alacaklılara Çağrı (EK-2)",
+     "Alacak bildirimi ve teminat",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/6102_bolunme_ek2.doc"
+    ],
+    [
+     "Tapu, Gemi ve Fikrî Mülkiyet Beyanı (1)",
+     "Sicillerde kayıtlı varlıklar",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/beyan_ornegi.doc"
+    ],
+    [
+     "Tapu, Gemi ve Fikrî Mülkiyet Beyanı (2)",
+     "Sicillerde kayıtlı varlıklar",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/beyan_ornegi_2.doc"
+    ]
+   ]
+  },
+  {
+   "g": "Ortak dilekçe ve formlar",
+   "c": "#C2414A",
+   "ic": "i-mail",
+   "src": "İTO",
+   "items": [
+    [
+     "Şirket Genel Dilekçesi",
+     "Ticaret sicili tescil dilekçesi",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/sirket_genel_dilekce.doc"
+    ],
+    [
+     "Oda Kayıt Dilekçesi",
+     "Kuruluş ve şube",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/oda_kayit_dilekce_ornegi.doc"
+    ],
+    [
+     "Tüzel Kişi Oda Kayıt Beyannamesi",
+     "İTO formu",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/tuzel_kisi_oda_kayit_beyannamesi.pdf"
+    ],
+    [
+     "Kuruluş Bildirim Formu",
+     "Kuruluş, tür değişikliği, merkez nakli",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/kurulus_bildirim_formu.docx"
+    ],
+    [
+     "Tüzel Kişi Adına Gerçek Kişi Atama",
+     "Yetkili organ kararı",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/gercek_kisi_atama_dilekcesi.docx"
+    ],
+    [
+     "Tasfiye Memuru Görev Kabul Beyanı",
+     "Dışarıdan atanan tasfiye memuru",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/tasfiye_memuru_gorev_kabul2.doc"
+    ],
+    [
+     "Tasfiye Sonu Kati Bilançosu",
+     "Örnek bilanço",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/tarihli_tasfiye_sonu_kati_bilanco.doc"
+    ],
+    [
+     "Belediye Adres Değişikliği Dilekçesi",
+     "Numarataj değişikliği",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/belediye_adres_degisikligi_dilekce.docx"
+    ],
+    [
+     "Belediye Adres Değişikliği Yazısı",
+     "Belediyeden alınacak yazı örneği",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/belediye_adres_degisikligi_yazisi1.doc"
+    ],
+    [
+     "İmza Beyannamesi Uygulaması",
+     "İTO bilgi notu",
+     "https://ito.org.tr/documents/Ticaret-Sicil/onemli_bilgiler_ve_duyurular/uygulama_degisiklikleri/imza_beyannamesi032022.pdf"
+    ],
+    [
+     "Temsil İç Yönergesi Hususları",
+     "İTO bilgi notu",
+     "https://ito.org.tr/documents/Ticaret-Sicil/onemli_bilgiler_ve_duyurular/uygulama_degisiklikleri/temsil_ic_yonergesi.pdf"
+    ],
+    [
+     "Yeni İç Yönergeye Göre Yetkili Atama",
+     "İTO bilgi notu",
+     "https://ito.org.tr/documents/Ticaret-Sicil/dilekceler-belgeler/yeni_ic_yonergeye_gore_yetkili_atama_usulu_hk.pdf"
+    ],
+    [
+     "Ticaret Unvanıyla İlgili Hatırlatma",
+     "İTO bilgi notu",
+     "https://ito.org.tr/documents/Ticaret-Sicil/onemli_bilgiler_ve_duyurular/unvan_hatirlatma.pdf"
+    ],
+    [
+     "Ticaret Sicili Harçları ve Hizmet Bedelleri",
+     "TTSG ilan ücretleri dahil",
+     "https://ito.org.tr/documents/Ticaret-Sicil/onemli_bilgiler_ve_duyurular/harc.pdf"
+    ]
+   ]
+  },
+  {
+   "g": "Resmî belgeler: nereden alınır",
+   "c": "#121C33",
+   "ic": "i-gov",
+   "src": "",
+   "items": [
+    [
+     "MERSİS",
+     "Tescil başvurusu, karar ve e-imza modülleri",
+     "https://mersis.ticaret.gov.tr"
+    ],
+    [
+     "İTO Ticaret Sicili Randevu",
+     "Başvuru randevusu",
+     "https://randevu.ito.org.tr/"
+    ],
+    [
+     "Faaliyet Belgesi (e-İmzalı)",
+     "İTO e-portal",
+     "https://eportal.ito.org.tr/faaliyet-belgesi-sorgulama-eimzali"
+    ],
+    [
+     "Sicil Tasdiknamesi",
+     "İTO ticaret sicil belgeleri",
+     "https://ito.org.tr/tr/hizmetler/ticaret-sicili-islemleri/ticaret-sicil-belgeleri/sicil-tasdiknamesi"
+    ],
+    [
+     "Yetki Belgesi",
+     "İTO ticaret sicil belgeleri",
+     "https://ito.org.tr/tr/hizmetler/ticaret-sicili-islemleri/ticaret-sicil-belgeleri/yetki-belgesi"
+    ],
+    [
+     "Ortaklık Durum Belgesi",
+     "İTO ticaret sicil belgeleri",
+     "https://ito.org.tr/tr/hizmetler/ticaret-sicili-islemleri/ticaret-sicil-belgeleri/ortaklik-durum-belgesi"
+    ],
+    [
+     "Sicil Kayıtları Sureti",
+     "İTO ticaret sicil belgeleri",
+     "https://ito.org.tr/tr/hizmetler/ticaret-sicili-islemleri/ticaret-sicil-belgeleri/sicil-kayitlari-sureti"
+    ],
+    [
+     "Merkez Nakli Belgesi",
+     "İTO ticaret sicil belgeleri",
+     "https://ito.org.tr/tr/hizmetler/ticaret-sicili-islemleri/ticaret-sicil-belgeleri/merkez-nakli-belgesi"
+    ],
+    [
+     "Ticaret Sicili Gazetesi",
+     "İlan sorgulama",
+     "https://www.ticaretsicil.gov.tr"
+    ],
+    [
+     "Vergi Levhası",
+     "Dijital Vergi Dairesi",
+     "https://dijital.gib.gov.tr/"
+    ],
+    [
+     "Adres (UAVT) Sorgulama",
+     "NVİ Adres Kayıt Sistemi",
+     "https://adres.nvi.gov.tr/"
+    ],
+    [
+     "e-Devlet",
+     "Mirasçılık, tapu, araç ve diğer belgeler",
+     "https://www.turkiye.gov.tr"
+    ]
+   ]
+  }
+ ]
+}

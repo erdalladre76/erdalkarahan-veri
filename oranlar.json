@@ -1,0 +1,108 @@
+{
+ "guncelleme": "2026-11-03",
+ "aciklama": "Resmî oran ve tutarlar değiştiğinde yalnızca bu dosyayı (ve gerekirse cezalar.json, beyan_vergi.json, sgk_formlar.json, yazilar.json) güncelleyin; site yeni değerleri otomatik kullanır.",
+ "kidemTavan": [
+  {
+   "bas": "2026-07-01",
+   "bit": "2026-12-31",
+   "tutar": 73729.87
+  }
+ ],
+ "gz": [
+  {
+   "bas": "2024-05-21",
+   "oran": 4.5
+  },
+  {
+   "bas": "2025-11-13",
+   "oran": 3.7
+  }
+ ],
+ "kira": [
+  {
+   "ay": "2026-09",
+   "oran": 31.79
+  },
+  {
+   "ay": "2026-10",
+   "oran": 31.49
+  },
+  {
+   "ay": "2026-11",
+   "oran": 31.23
+  }
+ ],
+ "alanlar": {
+  "P26": "2026 bordro parametreleri: asg=brüt asgari ücret, sgkI=SGK işçi payı, issI=işsizlik işçi payı, dv=damga vergisi oranı, tavanX=SGK tavan katsayısı, dil=gelir vergisi dilimleri [[üst sınır (null=sınırsız), oran]]",
+  "sgkGz": "SGK aylık gecikme zammı oranları (%), anahtar YYYY-AA",
+  "kidemTavan": "kıdem tazminatı tavanı dönemleri",
+  "gz": "6183 gecikme zammı (aylık %) yürürlük tarihleriyle",
+  "kira": "kira artış oranı (12 aylık TÜFE ortalaması), ay = kira döneminin başladığı ay",
+  "pratik": "Pratik bilgiler kartlarını anahtarına göre günceller: {anahtar:{t,rows:[[etiket,değer]],note}}; null verilirse kart kaldırılır; yeni anahtar eklenirse kart eklenir"
+ },
+ "P26": {
+  "asg": 33030,
+  "sgkI": 0.14,
+  "issI": 0.01,
+  "dv": 0.00759,
+  "tavanX": 9,
+  "dil": [
+   [
+    190000,
+    0.15
+   ],
+   [
+    400000,
+    0.2
+   ],
+   [
+    1500000,
+    0.27
+   ],
+   [
+    5300000,
+    0.35
+   ],
+   [
+    null,
+    0.4
+   ]
+  ]
+ },
+ "sgkGz": {
+  "2024-01": 2.93,
+  "2024-02": 3.0,
+  "2024-03": 3.34,
+  "2024-04": 3.4,
+  "2024-05": 3.47,
+  "2024-06": 3.43,
+  "2024-07": 3.36,
+  "2024-08": 3.1,
+  "2024-09": 3.2,
+  "2024-10": 3.31,
+  "2024-11": 3.32,
+  "2024-12": 3.16,
+  "2025-01": 3.08,
+  "2025-02": 3.04,
+  "2025-04": 3.42,
+  "2025-05": 3.42,
+  "2025-06": 3.25,
+  "2025-07": 3.09,
+  "2025-08": 2.87,
+  "2025-09": 2.87,
+  "2025-10": 2.86,
+  "2025-11": 2.91,
+  "2025-12": 2.83,
+  "2026-01": 2.64,
+  "2026-02": 2.55,
+  "2026-03": 2.74,
+  "2026-04": 3.01,
+  "2026-05": 3.0,
+  "2026-06": 2.99,
+  "2026-07": 2.93,
+  "2026-08": 2.91,
+  "2026-09": 2.91,
+  "2026-10": 2.91
+ },
+ "pratik": {}
+}

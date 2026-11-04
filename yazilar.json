@@ -1,0 +1,835 @@
+{
+ "yazilar": [
+  {
+   "slug": "istanbulda-kdv-beyannamesi-yeni-e-beyan-ekim-2026",
+   "baslik": "İstanbul’da KDV Beyannamesi Yeni e-Beyan’a Taşınıyor: Ekim 2026 Dönemi İçin Hazırlık Listesi",
+   "ozet": "Gelir İdaresi’nin 14 Ekim 2026 tarihli duyurusuyla İstanbul’daki KDV beyannameleri Ekim/2026 döneminden itibaren yeni e-Beyan sisteminden alınacak. Geçişin kapsamını, eski sistemde kalan işlemleri ve beyan öncesi yapılması gereken kontrolleri ele alıyoruz.",
+   "tarih": "2026-11-03",
+   "etiketler": [
+    "KDV",
+    "e-Beyan",
+    "Dijital Vergi Dairesi",
+    "Beyanname"
+   ],
+   "bolumler": [
+    {
+     "baslik": "GİRİŞ",
+     "paragraflar": [
+      "Her ayın son haftası meslek mensuplarımız için aynı ritimle geçer: e-fatura ve e-arşiv kontrolleri, indirilecek KDV listeleri, tevkifat ve iade tabloları, ardından beyanname gönderimi. Bu ritim İstanbul’da Kasım 2026 itibarıyla bir değişiklik yaşıyor. Yıllardır alıştığımız e-Beyanname ekranı yerine, KDV beyannameleri artık Dijital Vergi Dairesi üzerinden erişilen yeni e-Beyan uygulamasında hazırlanacak ve gönderilecek.",
+      "Değişiklik yalnızca bir arayüz değişikliği gibi görünse de uygulamada yetki, yazılım entegrasyonu, düzeltme beyannameleri ve son gün yoğunluğu açısından dikkat edilmesi gereken noktalar barındırıyor. Bu yazıda geçişin çerçevesini ve Ekim 2026 dönemi beyanından önce yapılmasında yarar gördüğümüz kontrolleri paylaşıyoruz."
+     ]
+    },
+    {
+     "baslik": "OLAY: KADEMELİ GEÇİŞ İSTANBUL’A ULAŞTI",
+     "paragraflar": [
+      "Gelir İdaresi Başkanlığı, elektronik beyanname uygulamasını açık kaynak kodlu yeni bir yazılımla yenileme çalışması kapsamında e-Beyan uygulamasını geliştirmiş ve bunu KDV beyannameleriyle başlatmıştır. Kapsamda KDV1, KDV2, KDV2B, KDV4 ve KDV9015 beyannameleri yer almaktadır.",
+      "Uygulama 2025/Ağustos döneminden itibaren Eskişehir ve Kırşehir’de pilot olarak başlamış, ardından il il genişletilmiştir. 2026 yılı içinde İzmir, Adana, Antalya, Bursa gibi büyük iller de dahil olmak üzere geçiş kademeli olarak sürmüştür.",
+      "İdarenin 14 Ekim 2026 tarihinde yayımladığı duyuruya göre söz konusu beyannameler İstanbul hariç bütün illerde zaten yeni e-Beyan sisteminden alınmaktadır. İstanbul’da ise geçiş 1 Kasım 2026 tarihinden, yani Ekim/2026 vergilendirme döneminden itibaren uygulanacaktır. Başka bir ifadeyle Kadıköy’deki bir mükellefimizin Kasım ayında vereceği Ekim 2026 dönemi KDV beyannamesi, yeni sistem üzerinden verilecek ilk beyanname olacaktır."
+     ]
+    },
+    {
+     "baslik": "İDARENİN DUYURUSU NE DİYOR?",
+     "paragraflar": [
+      "Duyurulardan çıkan ve uygulamayı doğrudan etkileyen başlıkları şöyle özetleyebiliriz:"
+     ],
+     "liste": [
+      "Erişim: Beyannameler Dijital Vergi Dairesi üzerinden e-Beyan uygulamasına girilerek, “+ Yeni Beyanname” seçeneği ile ilgili beyanname türü (0015-KDV1, 4017-KDV2, 4018-KDV2B, 0016-KDV4, 9015-KDV9015) seçilerek hazırlanmaktadır.",
+      "Geçmiş dönemler: Geçiş tarihinden önceki dönemlere ait ilk kez verilecek beyannameler ile bu dönemlere ilişkin düzeltme beyannameleri e-Beyanname (BDP) sisteminden alınmaya devam edecektir.",
+      "Meslek mensupları: Muhasebe yazılımı e-Beyan ile entegre edilmiş meslek mensupları, web servis entegrasyonu yoluyla beyanname gönderebilmektedir. İdare, entegrasyon bilgilerinin talep eden yazılım firmalarıyla paylaşıldığını belirtmiştir.",
+      "Yardım dokümanları: Uygulamanın sağ üst köşesindeki kullanıcı menüsünde “Yardım → e-Beyanname Dokümanlar → Hemen Başla” yolu ile her beyanname sayfasına ilişkin kılavuzlara ulaşılabilmektedir."
+     ]
+    },
+    {
+     "baslik": "DEĞERLENDİRME",
+     "paragraflar": [
+      "Geçişin en kritik yanı, aynı mükellef için bir süre iki ayrı kanalın birlikte kullanılacak olmasıdır. Ekim 2026 ve sonrası dönemler yeni e-Beyan’dan verilirken, örneğin Eylül 2026 dönemine ilişkin bir düzeltme beyannamesi eski BDP sisteminden verilecektir. Büro içinde hangi işlemin hangi kanaldan yapılacağının netleşmemesi, özellikle son gün yoğunluğunda hatalı denemelere ve zaman kaybına yol açabilir.",
+      "İkinci önemli konu yazılım entegrasyonudur. Beyannameyi muhasebe programından doğrudan gönderen bürolarda, programın e-Beyan web servis entegrasyonunu tamamlayıp tamamlamadığı mutlaka kontrol edilmelidir. Entegrasyon yoksa beyannamenin portal üzerinden elle hazırlanması gerekecektir. Bu da çok sayıda mükellefi olan bürolarda iş yükünü belirgin biçimde artırır.",
+      "Üçüncüsü süre meselesidir. KDV beyannamesi, vergilendirme dönemini izleyen ayın 28’inci günü akşamına kadar verilmektedir. Ekim 2026 dönemi için bu tarih 28 Kasım 2026’ya, yani bir cumartesiye denk gelmektedir. Sürenin hesabında Vergi Usul Kanunu’nun süreye ilişkin hükümleri ve idarenin olası duyuruları ayrıca takip edilmelidir. Ancak yeni bir sistemin ilk ayında son güne kalmamanın her zaman en güvenli yol olduğunu hatırlatmak isteriz.",
+      "Son olarak, beyannamenin gönderildiği kanal değişse de defter ile beyanname arasındaki mutabakat ihtiyacı değişmez. Yeni ekranlarda tutarların doğru alanlara girildiğini, devreden KDV ve tevkifat tutarlarının bir önceki dönemle uyumlu olduğunu kontrol etmek, ilk beyan döneminde her zamankinden daha önemlidir."
+     ]
+    },
+    {
+     "baslik": "UYGULAMADA NE YAPMALI?",
+     "paragraflar": [
+      "Ekim 2026 dönemi beyanından önce büro içinde aşağıdaki kontrol listesini tamamlamanızı öneriyoruz:"
+     ],
+     "liste": [
+      "Muhasebe yazılımı firmasından e-Beyan entegrasyonunun durumu ve kullanım adımları yazılı olarak teyit edilmeli.",
+      "Dijital Vergi Dairesi’ne giriş bilgileri ve meslek mensubu yetkileri, yoğun günlerden önce birkaç mükellef üzerinde denenmeli.",
+      "Eylül 2026 ve önceki dönemlere ait bekleyen düzeltme beyannameleri listelenmeli; bunların BDP sisteminden verileceği ekibe duyurulmalı.",
+      "İlk dönemde en az birkaç mükellefin beyannamesi taslak olarak erken hazırlanmalı, alanların eşleştirmesi ve kontrol toplamları gözden geçirilmeli.",
+      "Devreden KDV, tevkifat (KDV2 ile bağlantılı) ve iade talepli işlemler için önceki dönem beyannameleriyle tutar karşılaştırması yapılmalı.",
+      "Tahakkuk fişleri ve beyanname örneklerinin yeni sistemden nasıl alındığı ve arşivlendiği belirlenmeli."
+     ]
+    },
+    {
+     "baslik": "ÖRNEK: BEYANNAME İLE DEFTERİN MUTABAKATI",
+     "paragraflar": [
+      "Kanal değişse de dönem sonu kaydı aynıdır. Ekim 2026 döneminde hesaplanan KDV’nin 180.000 TL, indirilecek KDV’nin 130.000 TL olduğu ve önceki dönemden devreden KDV bulunmadığı bir işletmeyi düşünelim. Ödenecek KDV 50.000 TL’dir. Dönem sonunda yapılacak mahsup kaydı şöyledir:"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "391 Hesaplanan KDV",
+       "180.000,00",
+       ""
+      ],
+      [
+       "191 İndirilecek KDV",
+       "",
+       "130.000,00"
+      ],
+      [
+       "360 Ödenecek Vergi ve Fonlar",
+       "",
+       "50.000,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "BÜRO İŞ AKIŞI İÇİN ÖNERİ: KANAL TABLOSU",
+     "paragraflar": [
+      "Geçiş ayında en sık yaşanacak karışıklık, hangi beyannamenin hangi sistemden verileceği konusunda olacaktır. Bunun için büroda basit bir kanal tablosu oluşturulmasını öneriyoruz. Tabloda her mükellef için beyanname türü, dönem, beyannamenin ilk kez mi yoksa düzeltme olarak mı verileceği ve buna göre kullanılacak kanal (e-Beyan veya BDP) yer almalıdır. Ekim 2026 ve sonrası dönemlere ait beyannameler yeni sistemde, geçiş öncesi dönemlere ait ilk beyanlar ve düzeltmeler ise eski sistemde gösterilmelidir.",
+      "Tablo, aynı zamanda gönderim sonrası kontrol için de kullanılabilir: Tahakkukun oluştuğu, ödeme tutarının defterle uyumlu olduğu ve beyanname örneğinin dosyaya alındığı ayrı sütunlarda işaretlenirse, yoğun dönemde gözden kaçan işlem kalmaz. Özellikle birden fazla personelin beyanname gönderdiği bürolarda bu tür bir ortak liste, yeni sistemin ilk aylarında hata riskini belirgin şekilde azaltacaktır.",
+      "Mükelleflerimize de geçiş hakkında kısa bir bilgilendirme yapılması yerinde olur. Kendi beyannamesini kendisi veren mükelleflerin Dijital Vergi Dairesi giriş bilgilerini güncel tutmaları ve yeni ekranlarla ilk kez son gün karşılaşmamaları gerekir."
+     ]
+    },
+    {
+     "baslik": "SONUÇ",
+     "paragraflar": [
+      "İstanbul’daki mükellefler ve meslek mensupları için Ekim 2026 dönemi KDV beyannamesi, yeni e-Beyan sistemindeki ilk deneyim olacak. Önceki dönemlere ait ilk beyan ve düzeltmelerin BDP’de kalması, bir süre iki sistemi birlikte yönetmeyi gerektiriyor. Yazılım entegrasyonunu erkenden teyit etmek, birkaç beyannameyi son günden önce deneme amaçlı hazırlamak ve defter-beyanname mutabakatını titizlikle yapmak, geçiş ayını sorunsuz atlatmanın anahtarıdır.",
+      "Somut olayda mevzuat ve idarenin güncel duyuruları ayrıca değerlendirilmelidir."
+     ]
+    }
+   ],
+   "kaynaklar": [
+    "https://www.alomaliye.com/2026/10/14/kdv-beyannamelerine-iliskin-onemli-duyuru-kdv1-kdv2-kdv2b-kdv4-kdv9015/",
+    "https://www.alomaliye.com/2026/03/16/kdv-beyannamelerine-iliskin-onemli-duyuru-3/",
+    "https://www.alomaliye.com/2026/06/18/kdv-beyannamelerine-iliskin-onemli-duyuru-4/",
+    "https://kpmg.com/us/en/taxnewsflash/news/2026/03/turkiye-pilot-electronic-vat-returns-expanded.html"
+   ],
+   "dogrulanmadi": [
+    "28 Kasım 2026’nın cumartesiye denk gelmesi nedeniyle sürenin izleyen iş gününe uzayıp uzamayacağı kesin olarak belirtilmedi; metinde genel ifade kullanıldı.",
+    "Yeni e-Beyan’da e-belge verilerinin beyannameye otomatik aktarılıp aktarılmadığı duyurularda yer almadığından bu konuya değinilmedi.",
+    "Duyurular GİB’in kendi sitesinden değil alomaliye.com ve KPMG yansımalarından okundu."
+   ]
+  },
+  {
+   "slug": "asgari-sermaye-uyum-suresi-31-aralik-2027-uzatildi",
+   "baslik": "Asgari Sermayede Süre 31.12.2027’ye Uzadı: Bir Yıl Kazandık, Ama Takvim Hâlâ İşliyor",
+   "ozet": "17 Ekim 2026 tarihli Resmî Gazete’de yayımlanan Tebliğ ile anonim ve limited şirketlerin sermayelerini yeni asgari tutarlara yükseltme süresi 31 Aralık 2027’ye uzatıldı. Uzatmanın anlamını, infisah riskini ve sermaye artırımının muhasebe kayıtlarını ele alıyoruz.",
+   "tarih": "2026-11-01",
+   "etiketler": [
+    "Ticaret Hukuku",
+    "TTK",
+    "Sermaye Artırımı",
+    "Şirketler"
+   ],
+   "bolumler": [
+    {
+     "baslik": "GİRİŞ",
+     "paragraflar": [
+      "Son iki yıldır küçük şirket ortaklarıyla yaptığımız görüşmelerin vazgeçilmez gündem maddelerinden biri asgari sermaye konusuydu. 10.000 TL sermayeli bir limited şirketin ya da 50.000 TL sermayeli bir anonim şirketin 31 Aralık 2026’ya kadar sermayesini artırmaması hâlinde ne olacağı sorusu, pek çok büroda yıl sonu planlamasının ana başlıklarından birine dönüşmüştü.",
+      "Ticaret Bakanlığı, 17 Ekim 2026 tarihli ve 33403 sayılı Resmî Gazete’de yayımlanan “Anonim ve Limited Şirketlerin Sermayelerini Yeni Asgari Tutarlara Yükseltme Süresinin Uzatılmasına İlişkin Tebliğ” ile bu süreyi 31 Aralık 2027’ye uzattı. Bu yazıda uzatmanın ne anlama geldiğini, neyi değiştirmediğini ve uygulamada nasıl bir yol izlenebileceğini değerlendiriyoruz."
+     ]
+    },
+    {
+     "baslik": "OLAY: TUTARLAR AYNI, SÜRE UZADI",
+     "paragraflar": [
+      "Türk Ticaret Kanunu’nun 332 ve 580’inci maddelerinde yer alan asgari sermaye tutarları, 24.11.2023 tarihli Resmî Gazete’de yayımlanan 7887 sayılı Cumhurbaşkanı Kararı ile 01.01.2024 tarihinden itibaren yükseltilmişti. Buna göre:"
+     ],
+     "liste": [
+      "Anonim şirketlerde asgari esas sermaye 50.000 TL’den 250.000 TL’ye,",
+      "Limited şirketlerde asgari esas sermaye 10.000 TL’den 50.000 TL’ye,",
+      "Kayıtlı sermaye sistemini kabul etmiş halka açık olmayan anonim şirketlerde başlangıç sermayesi 100.000 TL’den 500.000 TL’ye yükseltilmiştir."
+     ]
+    },
+    {
+     "baslik": "KANUNİ ÇERÇEVE: TTK GEÇİCİ 15. MADDE",
+     "paragraflar": [
+      "Mevcut şirketlerin bu tutarlara uyumu için 29.05.2024 tarihli Resmî Gazete’de yayımlanan 7511 sayılı Kanun ile TTK’ya geçici 15’inci madde eklenmiş ve şirketlere 31.12.2026’ya kadar süre tanınmıştı. Maddeye göre süresi içinde sermayesini artırmayan anonim ve limited şirketler “infisah etmiş sayılır”; kayıtlı sermaye sistemindeki halka açık olmayan anonim şirketler ise öngörülen tutara ulaşmazlarsa kayıtlı sermaye sisteminden çıkmış sayılır.",
+      "Aynı madde, sermaye artırımı amacıyla yapılacak genel kurul toplantılarında toplantı nisabı aranmayacağını, kararların toplantıda mevcut oyların çoğunluğuyla alınacağını ve imtiyazların bu kararlara karşı kullanılamayacağını düzenlemektedir. Ayrıca Bakanlığa bu süreyi bir yıllık dönemler hâlinde en fazla iki defa uzatma yetkisi verilmiştir.",
+      "17 Ekim 2026 tarihli Tebliğ, bu yetkinin ilk kullanımıdır. Tebliğ yeni bir tutar belirlememiş, yalnızca uyum süresini 31.12.2027’ye uzatmıştır."
+     ]
+    },
+    {
+     "baslik": "DEĞERLENDİRME",
+     "paragraflar": [
+      "Uzatmayı doğru okumak gerekiyor. Birincisi, yükümlülük ortadan kalkmamıştır; yalnızca son tarih bir yıl ötelenmiştir. Sermayesi 250.000 TL’nin altında olan bir anonim şirket ya da 50.000 TL’nin altında olan bir limited şirket için artırım ihtiyacı aynen devam etmektedir. Sermayesi zaten bu tutarların üzerinde olan şirketlerin ise Tebliğ nedeniyle yapması gereken bir işlem yoktur.",
+      "İkincisi, kanun Bakanlığa bir uzatma hakkı daha tanımakla birlikte, bu hakkın kullanılıp kullanılmayacağı belirsizdir. Planlamayı “nasılsa yine uzar” varsayımına dayandırmak, yaptırımı infisah olan bir konuda kabul edilebilir bir risk değildir.",
+      "Üçüncüsü, kazanılan bir yıl aslında finansman planlaması için bir fırsattır. Artırımın tamamının nakit olarak yapılması zorunlu değildir; şirketin bilançosundaki iç kaynaklar ve ortakların şirketten olan alacakları da uygun usulle sermayeye dönüştürülebilir. 2026 yıl sonu bilançosu kesinleştiğinde, hangi kaynağın kullanılabileceği çok daha net görülecektir."
+     ]
+    },
+    {
+     "baslik": "UYGULAMADA NE YAPMALI?",
+     "paragraflar": [
+      "Örnek üzerinden ilerleyelim. Sermayesi 10.000 TL olan bir limited şirketin sermayesini 50.000 TL’ye çıkarması, yani 40.000 TL artırım yapması gerekiyor. Ortakların 15.000 TL’yi nakden ödemeye, 15.000 TL’yi şirketten olan cari hesap alacaklarından mahsup etmeye ve 10.000 TL’yi geçmiş yıl kârlarından karşılamaya karar verdiğini varsayalım.",
+      "Artırım kararı ve taahhüt aşamasında nakit ve alacak mahsubu kısmı için:"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "501 Ödenmemiş Sermaye (-)",
+       "30.000,00",
+       ""
+      ],
+      [
+       "500 Sermaye",
+       "",
+       "30.000,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "NAKİT ÖDEME VE ALACAK MAHSUBU",
+     "paragraflar": [
+      "Ortakların nakit taahhüdünü banka hesabına yatırması ve cari hesap alacaklarının mahsubu ile:"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "102 Bankalar",
+       "15.000,00",
+       ""
+      ],
+      [
+       "331 Ortaklara Borçlar",
+       "15.000,00",
+       ""
+      ],
+      [
+       "501 Ödenmemiş Sermaye (-)",
+       "",
+       "30.000,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "İÇ KAYNAKTAN ARTIRIM",
+     "paragraflar": [
+      "Geçmiş yıl kârlarından karşılanan kısım için ise ortaklardan ayrıca ödeme istenmez; kayıt doğrudan özkaynak hesapları arasında yapılır:"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "570 Geçmiş Yıllar Kârları",
+       "10.000,00",
+       ""
+      ],
+      [
+       "500 Sermaye",
+       "",
+       "10.000,00"
+      ]
+     ],
+     "liste": [
+      "Ortak alacağının sermayeye eklenmesinde alacağın varlığı ve tutarının belgelenmesi gerekir; ticaret sicili müdürlüğünün bu tür artırımlarda istediği rapor ve belgeler artırım öncesinde teyit edilmelidir.",
+      "Geçmiş yıl kârlarının sermayeye eklenmesinin vergisel sonuçları (kâr dağıtımı sayılıp sayılmayacağı, stopaj) somut olayda ayrıca değerlendirilmelidir.",
+      "Yeniden değerleme fonları gibi diğer iç kaynakların sermayeye eklenmesinde ilgili vergi kanunu hükümleri ayrıca dikkate alınmalıdır.",
+      "Genel kurul, tescil ve ilan adımları son aylara bırakılmamalı; sicil yoğunluğu ve olası eksik evrak süreci uzatabilir.",
+      "Kayıtlı sermaye sistemindeki anonim şirketler, hem başlangıç hem de çıkarılmış sermaye yönünden durumlarını ayrıca kontrol etmelidir."
+     ]
+    },
+    {
+     "baslik": "ZAMANLAMA ÖNERİSİ: OLAĞAN GENEL KURULU FIRSATA ÇEVİRMEK",
+     "paragraflar": [
+      "Sermaye artırımı esas sözleşme değişikliği gerektirdiğinden genel kurul kararı, tescil ve ilan adımlarını içerir. Pratik bir öneri olarak, 2026 hesap dönemine ilişkin olağan genel kurul toplantısının, hesap döneminin sona ermesinden itibaren üç ay içinde yapılması gerektiğini hatırlatıp, sermaye artırımının aynı toplantının gündemine alınmasını öneriyoruz. Böylece 2026 kârının veya geçmiş yıl kârlarının sermayeye eklenmesi kararı, bilanço onayıyla birlikte tek toplantıda alınabilir ve ayrıca bir olağanüstü toplantı maliyetine katlanılmaz.",
+      "Ortak sayısı fazla olan veya ortaklar arasında uyuşmazlık bulunan şirketlerde, geçici 15’inci maddedeki toplantı nisabı aranmaması ve imtiyazların kullanılamaması kuralları önem kazanır. Bu hükümler, azınlıkta kalan bir ortağın katılmaması nedeniyle sermaye artırımının gecikmesini engellemeye yöneliktir. Bununla birlikte rüçhan hakları, ortakların taahhüt oranları ve nakit taahhütlerin ödenme takvimi önceden konuşulmalı, karar metni buna göre hazırlanmalıdır.",
+      "Faaliyetsiz durumdaki ve sermaye artırımı yapılmasında ekonomik anlam görülmeyen şirketler için ise tasfiye seçeneğinin, uyum süresi beklenmeden ortaklarla birlikte değerlendirilmesi daha sağlıklı olabilir."
+     ]
+    },
+    {
+     "baslik": "SONUÇ",
+     "paragraflar": [
+      "17 Ekim 2026 tarihli Tebliğ ile asgari sermayeye uyum süresi 31.12.2027’ye uzatıldı; tutarlar ve infisah yaptırımı ise yerinde duruyor. Meslek mensuplarımızın bu süreyi bir erteleme değil, planlama fırsatı olarak değerlendirmesini öneriyoruz: 2026 yıl sonu bilançosu kesinleşir kesinleşmez sermaye eksiği olan şirketlerin listesi çıkarılmalı, artırımın nakit, ortak alacağı ve iç kaynak kombinasyonu belirlenmeli ve 2027’nin ilk yarısında süreç tamamlanmalıdır.",
+      "Somut olayda mevzuat ve güncel idari düzenlemeler ayrıca değerlendirilmelidir."
+     ]
+    }
+   ],
+   "kaynaklar": [
+    "https://www.alomaliye.com/2026/10/17/sirketlere-sermaye-artirimi-icin-2027ye-kadar-sure/",
+    "https://www.gazetevatan.com/gundem/binlerce-sirketi-ilgilendiren-karar-sermaye-artirimi-icin-sure-uzatildi-2418364",
+    "https://kpmgvergi.com/yayinlar/mali-bultenler/vergi/anonim-ve-limited-sirketlerde-asgari-sermaye-tutarina-uyum-suresi-31-aralik-2026da-sona-eriyor/4518"
+   ],
+   "dogrulanmadi": [
+    "Tebliğ metni doğrudan Resmî Gazete’den değil, alomaliye.com ve gazetevatan.com yansımalarından okundu (RG 17.10.2026, sayı 33403 iki kaynakta da aynı).",
+    "Ortak alacağı mahsubunda ticaret sicilinin istediği rapor türü (YMM/SMMM raporu vb.) doğrulanmadığından genel ifade kullanıldı.",
+    "Geçmiş yıl kârlarının sermayeye eklenmesinin stopaj sonucu bilinçli olarak genel bırakıldı.",
+    "Olağan genel kurulun hesap dönemi sonundan itibaren üç ay içinde yapılması kuralı (TTK md. 409) bu çalışmada ayrı bir kaynaktan okunmadı; genel bilgi olarak kullanıldı."
+   ]
+  },
+  {
+   "slug": "sgk-2026-22-genelgesi-trafik-tutanagi-fiili-calisma-tespiti",
+   "baslik": "Trafik Cezası Tutanağı ve Zabıt Kâğıdı ile Sigortalılık: SGK 2026/22 Sayılı Genelge Ne Değiştirdi?",
+   "ozet": "SGK’nın 19.10.2026 tarihli 2026/22 sayılı Genelgesi, kamu görevlilerinin tutanaklarına dayanan kayıt dışı istihdam tespitlerinde hizmet süresinin nasıl kazandırılacağını yeniden düzenledi. İş bitiminden sonraki bildirimlere ilişkin 24.09.2026 tarihli genel yazıyla birlikte işverenlere etkisini değerlendiriyoruz.",
+   "tarih": "2026-10-29",
+   "etiketler": [
+    "SGK",
+    "Kayıt Dışı İstihdam",
+    "Denetim",
+    "İnşaat"
+   ],
+   "bolumler": [
+    {
+     "baslik": "GİRİŞ",
+     "paragraflar": [
+      "Müşterilerimizden sık duyduğumuz bir şikâyet vardır: “Şoförümüz trafik cezası yedi, birkaç ay sonra SGK’dan yazı geldi.” Ya da zabıta denetiminde düzenlenen bir tutanakta adı geçen bir kişi için işverenden işe giriş bildirgesi istenir. Kamu görevlilerinin düzenlediği tutanaklar, uzun zamandır kayıt dışı istihdam tespitinin önemli dayanaklarından biridir.",
+      "Sosyal Güvenlik Kurumu, 19.10.2026 tarihli 2026/22 sayılı Genelgesi ile bu tutanaklara dayalı tespitlerde nasıl işlem yapılacağını yeniden düzenledi. Aynı dönemde, geçici işyerlerinde iş bitiminden sonra yapılan bildirimlere ilişkin bir genel yazı da yayımlandı. İki düzenleme birlikte okunduğunda, özellikle araçla çalışan işletmeler ile inşaat ve ihale işi yapan işverenler için önemli sonuçlar doğuyor."
+     ]
+    },
+    {
+     "baslik": "OLAY: 2015/25 SAYILI GENELGEDE DEĞİŞİKLİK",
+     "paragraflar": [
+      "2026/22 sayılı Genelge, 2015/25 sayılı Genelgenin (4/a) sigortalıları yönünden yapılacak işlemlere ilişkin bölümünü değiştirmektedir. Değişiklik iki ana başlıkta toplanmaktadır: yüze karşı tebliğ edilen trafik ceza tutanaklarına dayalı tespitler ve kolluk, zabıta, doktor, veteriner, mühendis gibi görevlilerce düzenlenen tutanaklara dayalı tespitler."
+     ]
+    },
+    {
+     "baslik": "İDARENİN YAKLAŞIMI",
+     "paragraflar": [
+      "Trafik ceza tutanakları bakımından Genelge, “Yüze karşı tebliğ edilen trafik ceza tutanakları esas alınarak yapılan tespitler” için tespite yarar bilgi ve belgelerin KADİM servislerince inceleneceğini, Genelgede belirtilen durum dışında kalan kayıtların ise sosyal güvenlik denetmenleri servisine gönderileceğini öngörmektedir. Uygulamaya ilişkin yorumlarda da, önceki dönemde tutanak tarihi itibarıyla doğrudan bir günlük hizmet kazandırılması yerine, çalışmanın varlığı ve niteliğinin denetmen incelemesiyle ortaya konulacağı vurgulanmaktadır.",
+      "Diğer kamu görevlilerinin tutanakları bakımından ise fiili çalışmanın tespit edildiği her tutanak için sigortalıya “tutanağın düzenlendiği tarih itibarıyla 1 gün hizmet” kazandırılacaktır. Aynı işyerinde birden fazla tespit varsa:"
+     ],
+     "liste": [
+      "En eski tespit tarihi işe giriş tarihi kabul edilir.",
+      "Aynı ay ve izleyen aylarda tespit edilen her gün için 1 gün hizmet kazandırılır ve çalışma kısmi süreli olarak değerlendirilir.",
+      "Tespit bulunmayan bir aydan sonra gelen ilk tespit yeni bir işe giriş sayılır; önceki ilişki son hizmet kazandırılan gün itibarıyla sona erer.",
+      "Tespitler arasında çalışmanın kesintisiz sürdüğü iddia edilirse konu denetime sevk edilir."
+     ]
+    },
+    {
+     "baslik": "ÖRNEKLER ÜZERİNDEN",
+     "paragraflar": [
+      "Genelgedeki örneklerden hareketle şöyle bir tablo düşünelim: Bir işyerinde aynı kişi hakkında Mart, Nisan, Mayıs ve Haziran aylarında birer tespit yapılmış olsun. Bu durumda Mart ayında bir işe giriş, son tespit gününde bir işten ayrılış bildirgesi düzenlenir ve her tespit günü için bir gün hizmet kazandırılır.",
+      "Aynı örnekte Mayıs ayında hiç tespit bulunmasaydı, Nisan’daki son tespit günü itibarıyla ilk ilişki sona erecek, Haziran’daki ilk tespit yeni bir işe giriş olarak değerlendirilecekti. Önceki uygulamadaki gibi ilk ve son tespit arasının tamamen sürekli çalışma sayılması yaklaşımından uzaklaşıldığını görüyoruz."
+     ]
+    },
+    {
+     "baslik": "İŞ BİTİMİNDEN SONRAKİ BİLDİRİMLER: 6 AY KURALI",
+     "paragraflar": [
+      "SGK Sigorta Primleri Genel Müdürlüğünün 24.09.2026 tarihli genel yazısı ise geçici nitelikteki işyeri dosyalarını, yani ihaleli işler ve özel nitelikteki inşaatları ilgilendirmektedir. Buna göre işin 24.09.2026 tarihinden sonra bitmiş olması ve iş bitim tarihini izleyen altıncı ayın sonundan itibaren hâlâ sigortalı bildirimi bulunması hâlinde, ihbar veya şikâyet olmasa da dosya denetime sevk edilecektir.",
+      "Yazıda iş bitiminden sonra güvenlik, temizlik, garanti, muhafaza gibi işler nedeniyle bildirimlerin bir süre devam etmesinin olağan olduğu kabul edilmekte, denetime sevkin bildirimlerin iptal edileceği anlamına gelmediği belirtilmektedir. Hatırlatmak gerekirse Sosyal Sigorta İşlemleri Yönetmeliğinin 112’nci maddesine göre iş bitiminden sonra bildirilen kazanç ve gün sayıları asgari işçilik araştırmasında dikkate alınmamaktadır."
+     ]
+    },
+    {
+     "baslik": "DEĞERLENDİRME",
+     "paragraflar": [
+      "Genelge, tek bir tutanaktan geriye dönük ve uzun süreli bir sigortalılık ilişkisi kurulmasının önüne geçen, tespit edilen gün kadar hizmet esasını getiren bir yaklaşım benimsemektedir. Bu, işveren açısından ölçülü bir yaklaşım gibi görünse de, her tutanağın bir işe giriş, bir hizmet günü ve buna bağlı yaptırım sürecini başlatabileceği gerçeğini değiştirmez.",
+      "Trafik tutanaklarında denetmen incelemesinin devreye girmesi ise sürecin daha ayrıntılı hâle gelmesi demektir. Denetmen, kişinin iş sözleşmesine dayalı çalışıp çalışmadığını araştıracak; araç kimin adına kayıtlıysa onun işyeri kayıtları, görev dağılımı ve ödeme belgeleri incelemeye konu olabilecektir.",
+      "İnşaat tarafında ise iş bitiminden aylar sonra devam eden bildirimler artık otomatik olarak incelemeye düşecektir. Bekçilik veya garanti işleri gibi gerçek ihtiyaçlar için devam eden bildirimlerin belgelerle desteklenmesi önem kazanmaktadır.",
+      "Konaklama ve yeme-içme işletmeleri açısından da durum benzerdir. Zabıta veya kolluk denetiminde düzenlenen bir tutanakta adı geçen ve bildirimi yapılmamış bir çalışan için, Genelgedeki kurala göre tutanak tarihi itibarıyla bir gün hizmet kazandırılacak; aynı işyerinde sonraki aylarda yeni tutanaklar varsa her tespit günü ayrıca dikkate alınacaktır. Sezon başında kısa süreli deneme çalışmaları veya yoğun günlerde çağrılan yardımcı personel, bu tür tespitlerin en sık yaşandığı alanlardır. Bir günlük tespitin de olsa işe giriş bildirgesi, prim ve yaptırım süreçlerini başlatabileceği unutulmamalıdır."
+     ]
+    },
+    {
+     "baslik": "UYGULAMADA NE YAPMALI?",
+     "liste": [
+      "Araç kullanan personel (şoför, kurye, satış temsilcisi) için işe giriş bildirgeleri, kural olarak çalışmaya başlatılmadan önce verilmeli; araç kullanım yetkileri yazılı hâle getirilmeli.",
+      "İşletme adına kayıtlı araçların kimler tarafından kullanıldığına dair basit bir kayıt tutulmalı; sigortalı olmayan kişilere araç verilmemelidir.",
+      "Sezonluk çalışmanın yoğun olduğu otel ve restoran işletmelerinde deneme veya yardımcı statüde dahi olsa bildirimsiz çalışmaya izin verilmemelidir.",
+      "Geçici işyerlerinde iş bitim tarihi doğru bildirilmeli; iş bitiminden sonra devam eden bildirimlerin gerekçesi (bekçilik, garanti, muhafaza) sözleşme ve görev yazılarıyla belgelenmelidir.",
+      "SGK’dan gelen tespit yazılarına itiraz süreleri kaçırılmamalı; kesintisiz çalışma iddiası veya tespitlere itiraz gerekiyorsa belgeler önceden derlenmelidir."
+     ],
+     "paragraflar": [
+      "Tespit sonucunda idari para cezası tebliğ edilmesi hâlinde muhasebe kaydı ayrıca önem taşır. Örneğin işletmeye 30.000 TL idari para cezası tebliğ edildiğini varsayalım:"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "689 Diğer Olağandışı Gider ve Zararlar",
+       "30.000,00",
+       ""
+      ],
+      [
+       "361 Ödenecek Sosyal Güvenlik Kesintileri",
+       "",
+       "30.000,00"
+      ],
+      [
+       "361 Ödenecek Sosyal Güvenlik Kesintileri",
+       "30.000,00",
+       ""
+      ],
+      [
+       "102 Bankalar",
+       "",
+       "30.000,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "SONUÇ",
+     "paragraflar": [
+      "Para cezaları, gelir ve kurumlar vergisi matrahının tespitinde kanunen kabul edilmeyen gider olarak dikkate alınmalıdır. Ancak asıl hedef, cezanın doğru kaydedilmesi değil, hiç doğmamasıdır. 2026/22 sayılı Genelge ile tutanağa dayalı tespitlerde gün esaslı ve denetim ağırlıklı bir yapıya geçildi; 24.09.2026 tarihli genel yazı ile de geçici işyerlerinde iş bitimi sonrası bildirimler sistematik denetim kapsamına alındı. İşverenlerin araç kullanımı, sezonluk çalışma ve iş bitim süreçlerini belgeye dayalı yönetmesi bu dönemde her zamankinden önemlidir.",
+      "Somut olayda mevzuat ve SGK’nın güncel düzenlemeleri ayrıca değerlendirilmelidir."
+     ]
+    }
+   ],
+   "kaynaklar": [
+    "https://www.alomaliye.com/2026/10/22/sgk-genelgesi-2026-22/",
+    "https://www.muhasebetr.com/ulusalbasin/haber_oku.php?haber_id=35296",
+    "https://www.alomaliye.com/2026/10/26/sgkdan-is-bitimi-sonrasi-6-aylik-denetim-kurali/"
+   ],
+   "dogrulanmadi": [
+    "Trafik tutanaklarında hangi kayıtların denetmene gönderilmeyip KADİM’de sonuçlandırılacağı (Genelgedeki ‘aynı işyeri’ istisnası) iki ikincil kaynakta farklı özetlendi; metinde istisna genel ifadeyle anıldı.",
+    "Genelge metni SGK sitesinden değil alomaliye.com yansımasından okundu.",
+    "İdari para cezası tutarı (30.000 TL) tamamen varsayımsaldır; 5510 sayılı Kanun md. 102’deki ceza tutarları doğrulanmadığı için yazılmadı.",
+    "İşe giriş bildirgesinin süresi ‘kural olarak çalışmaya başlatılmadan önce’ şeklinde genel ifade edildi; sektörel istisnalar ayrıntılandırılmadı."
+   ]
+  },
+  {
+   "slug": "enflasyon-duzeltmesi-yok-298c-yeniden-degerleme-2026-yil-sonu",
+   "baslik": "Enflasyon Düzeltmesi Yok, Duran Varlıklar Ne Olacak? 2026 Yıl Sonunda 298/Ç Yeniden Değerleme Kararı",
+   "ozet": "7571 sayılı Kanun ile 2025-2027 hesap dönemlerinde enflasyon düzeltmesi yapılmayacak. Bu dönemlerde açılan VUK mükerrer 298/Ç yeniden değerleme imkânının 2026 yıl sonunda nasıl kullanılabileceğini örnek kayıtlarla ele alıyoruz.",
+   "tarih": "2026-10-27",
+   "etiketler": [
+    "VUK",
+    "Yeniden Değerleme",
+    "Enflasyon Düzeltmesi",
+    "Yıl Sonu"
+   ],
+   "bolumler": [
+    {
+     "baslik": "GİRİŞ",
+     "paragraflar": [
+      "Yıl sonuna yaklaşırken bilanço esasına göre defter tutan mükelleflerimizin masasında yine aynı soru var: Enflasyon düzeltmesi yapılmayacağına göre, değeri tarihi maliyetinde kalan makine, bina ve taşıtlar için ne yapılabilir? Amortismanlar eski bedeller üzerinden ayrılmaya devam ettikçe vergi matrahı gerçek ekonomik durumdan daha yüksek çıkmaktadır.",
+      "Bu sorunun yasal cevabı Vergi Usul Kanunu’nun mükerrer 298’inci maddesinin (Ç) fıkrasında yer alıyor. Bu yazıda 2026 yıl sonunda bu imkânın kullanılıp kullanılmaması kararını, örnek hesaplama ve yevmiye kayıtlarıyla değerlendiriyoruz."
+     ]
+    },
+    {
+     "baslik": "OLAY: 2025-2027 DÖNEMİNDE ENFLASYON DÜZELTMESİ UYGULANMAYACAK",
+     "paragraflar": [
+      "25.12.2025 tarihli Resmî Gazete’de yayımlanan 7571 sayılı Kanun ile VUK’a eklenen geçici 37’nci madde uyarınca, enflasyon düzeltmesi şartları oluşsa dahi 2025, 2026 ve 2027 hesap dönemlerinde (geçici vergi dönemleri dahil) mali tablolar enflasyon düzeltmesine tabi tutulmayacaktır. Özel hesap dönemine tabi olanlar için bu kapsam 2026, 2027 ve 2028 yıllarında biten hesap dönemleridir. Cumhurbaşkanına bu süreyi üç hesap dönemine kadar uzatma yetkisi verilmiştir.",
+      "Düzenlemenin uygulamamız açısından en önemli cümlesi şudur: Bu dönemler, mükerrer 298/Ç uygulaması bakımından enflasyon düzeltmesi şartlarının oluşmadığı dönemler olarak dikkate alınacaktır. Dolayısıyla 2026 yılında da 298/Ç kapsamında yeniden değerleme yapılması mümkündür. Kıymetli maden alım satımı ve imalatı ile iştigal eden ve kanunda ayrıca düzenlenen mükellefler bu genel kuralın dışında tutulmuştur."
+     ]
+    },
+    {
+     "baslik": "298/Ç NASIL İŞLER?",
+     "liste": [
+      "Kimler yararlanır: Bilanço esasına göre defter tutan tam mükellef gelir vergisi mükellefleri (kollektif ve adi komandit şirketler dahil) ile kurumlar vergisi mükellefleri. Yabancı para cinsinden defter tutanlar kapsam dışıdır.",
+      "Neler değerlenir: Bilançoda kayıtlı amortismana tabi iktisadi kıymetler ve bunlara ait birikmiş amortismanlar. Satış-geri kiralama veya kira sertifikası ihracına konu kıymetler, bu durumları devam ettiği sürece kapsam dışıdır.",
+      "Hangi oran: Yıllık değerlemede, önceki yılın Ekim ayına göre cari yılın Ekim ayındaki Yİ-ÜFE değişimi esas alınır ve Bakanlıkça ilan edilir. 2025 yılı için bu oran 585 sıra no.lu VUK Genel Tebliği ile %25,49 olarak belirlenmişti. Geçici vergi dönemlerinde ise ilgili dönemlerin Yİ-ÜFE değişimleri kullanılabilir.",
+      "Vergi: Ortaya çıkan değer artışı pasifte özel bir fon hesabında gösterilir ve üzerinden vergi ödenmez. Fon sermayeye eklenebilir; ancak başka bir hesaba nakledilir veya işletmeden çekilirse, nakil ya da çekilme döneminde vergiye tabi tutulur.",
+      "Sınırlamalar: Dönem içinde aktife giren kıymetler o dönemde değerlenemez; geçmiş yıllarda yapılmayan değerleme sonradan telafi edilemez."
+     ]
+    },
+    {
+     "baslik": "ÖRNEK UYGULAMA",
+     "paragraflar": [
+      "Bir üretim işletmesinin 2022 yılında 2.000.000 TL’ye aldığı ve %10 oranında (10 yıl) amortismana tabi tuttuğu bir makinesi olduğunu düşünelim. 2026 yılı değerleme öncesi birikmiş amortismanın 800.000 TL, net değerin 1.200.000 TL olduğunu varsayalım. 2026 yılı yeniden değerleme oranı henüz ilan edilmediğinden, örnek amacıyla oranı %24 kabul ediyoruz:",
+      "Yeniden değerlenmiş maliyet: 2.000.000 × 1,24 = 2.480.000 TL. Yeniden değerlenmiş birikmiş amortisman: 800.000 × 1,24 = 992.000 TL. Yeni net değer: 1.488.000 TL. Değer artışı: 1.488.000 − 1.200.000 = 288.000 TL."
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "253 Tesis, Makine ve Cihazlar",
+       "480.000,00",
+       ""
+      ],
+      [
+       "257 Birikmiş Amortismanlar (-)",
+       "",
+       "192.000,00"
+      ],
+      [
+       "522 MDV Yeniden Değerleme Artışları",
+       "",
+       "288.000,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "ÖRNEK DEVAM: SONRAKİ DÖNEM AMORTİSMANI",
+     "paragraflar": [
+      "Değerlemeden sonraki ilk tam yılda amortisman, değerlenmiş maliyet üzerinden ayrılır. Örneğimizde 2027 yılı için yapılacak kayıt şöyledir. Değerleme yapılmasaydı aynı kayıt 200.000 TL olacaktı:"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "730 Genel Üretim Giderleri",
+       "248.000,00",
+       ""
+      ],
+      [
+       "257 Birikmiş Amortismanlar (-)",
+       "",
+       "248.000,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "DEĞERLENDİRME",
+     "paragraflar": [
+      "Değerlemenin vergisel faydası, sonraki dönemlerde amortismanın değerlenmiş tutarlar üzerinden ayrılmasıyla ortaya çıkar. Örneğimizde değerleme yapılmasaydı yıllık amortisman 200.000 TL olacaktı; değerleme sonrasında ise 2.480.000 × %10 = 248.000 TL olarak hesaplanır. Yıllık 48.000 TL ek amortisman, vergi matrahını aynı tutarda azaltır.",
+      "Kararı verirken şu sorular sorulmalıdır: Kıymetin kalan faydalı ömrü ne kadar? Yakın zamanda satılması planlanıyor mu? Fon ilerde sermayeye eklenecek mi, yoksa başka bir hesaba aktarılma ihtimali var mı? Kalan ömrü kısa olan ya da tamamen itfa edilmiş kıymetlerde değerlemenin etkisi sınırlıdır. Buna karşılık uzun ömürlü ve yüksek tutarlı kıymetlerde etkisi belirgindir.",
+      "Bir başka pratik bağlantıya da dikkat çekmek isteriz: Fonun sermayeye eklenmesi vergiye tabi değildir. Bu nedenle sermayesini yeni asgari tutarlara yükseltmesi gereken şirketlerde, 298/Ç fonu bir iç kaynak olarak değerlendirilebilir.",
+      "Değerlenen kıymetin satılması, başka bir kıymetle değiştirilmesi, işletmeden çekilmesi veya ilgili işletmenin tasfiyesi hâlinde ise fon tutarları amortismanlarla aynı şekilde işleme tabi tutulur. Bu nedenle satış kârı hesaplamalarında değerlenmiş tutarlar ve fon ayrıca izlenmelidir.",
+      "Zamanlama açısından da bir tercih söz konusudur. Değerleme geçici vergi dönemlerinde yapılırsa ek amortisman etkisi geçici vergi matrahına daha erken yansır; yıl sonuna bırakılırsa ilan edilecek yıllık oran kullanılır. Her iki durumda da yapılan değerleme ve oluşan fon, kıymet bazında ayrı ayrı izlenmeli ve sonraki dönemlerde amortisman tablolarında bu ayrım korunmalıdır."
+     ]
+    },
+    {
+     "baslik": "UYGULAMADA NE YAPMALI?",
+     "liste": [
+      "Kasım ayında ilan edilecek 2026 yılı yeniden değerleme oranı takip edilmeli; geçici vergi dönemlerinde değerleme yapılacaksa ilgili dönem oranları kullanılmalı.",
+      "Duran varlık listesi kıymet bazında hazırlanmalı; 2026’da aktife girenler, satış-geri kiralamaya konu olanlar ve tamamen itfa edilmiş olanlar ayrılmalı.",
+      "Amortisman ayrılmayan yıllar varsa, hesaplamada amortismanın ayrılmış kabul edileceği göz önünde bulundurulmalı.",
+      "Maliyete eklenmiş kur farkı ve kredi faizlerinin değerleme dışında tutulması gerektiği unutulmamalı.",
+      "Değerleme ve fon, amortisman kayıtlarında kıymet bazında ayrı ayrı izlenmeli; karar ve hesaplama tabloları dosyada saklanmalı."
+     ]
+    },
+    {
+     "baslik": "SONUÇ",
+     "paragraflar": [
+      "Enflasyon düzeltmesinin üç yıl süreyle uygulanmayacak olması, bilanço değerlerinin gerçeklikten uzaklaşması riskini taşıyor. Mükerrer 298/Ç bu boşluğu kısmen dolduran, isteğe bağlı ve vergisiz bir araçtır. 2026 yıl sonunda değerleme yapıp yapmama kararı, kıymet bazında yapılacak basit bir fayda-maliyet analiziyle verilmelidir.",
+      "Meslek mensuplarımızın, değerleme kararını yalnızca vergi tasarrufu açısından değil, bilançonun kredi kuruluşları ve ortaklar nezdindeki görünümü açısından da değerlendirmesinde yarar görüyoruz. Tarihi maliyetle taşınan duran varlıklar özkaynakları olduğundan düşük gösterir; 298/Ç ile oluşan fon ise bu tabloyu, vergi yükü doğurmadan kısmen düzeltir.",
+      "Somut olayda mevzuat ve güncel tebliğler ayrıca değerlendirilmelidir."
+     ]
+    }
+   ],
+   "kaynaklar": [
+    "https://www.pwc.com.tr/tr/hizmetlerimiz/vergi/bultenler/2025/enflasyon-duzeltmesi-uygulamasini-erteleyen-7571-sayili-kanun.html",
+    "https://kpmgvergi.com/yayinlar/mali-bultenler/vergi/enflasyon-duzeltmesinin-sartlari-olussa-dahi-2025-2026-ve-2027-yillarinda-uygulanmayacagina-iliskin-yasal-duzenleme-resmi-gazete-de-yayimlandi/3343",
+    "https://www.ekonomigazetesi.com/kose-yazisi/2025-yilinda-yeniden-degerleme-imkani-69917",
+    "https://www.bloomberght.com/yeniden-degerleme-orani-yuzde-25-49-oldu-3760636"
+   ],
+   "dogrulanmadi": [
+    "2026 yılı yeniden değerleme oranı yazı tarihi itibarıyla ilan edilmediğinden örnekte %24 varsayımsal oran kullanıldı.",
+    "Fon hesabı için 522 MDV Yeniden Değerleme Artışları kodu Tekdüzen Hesap Planı uygulamasına dayanır; kanun yalnızca ‘özel fon hesabı’ ifadesini kullanır.",
+    "Geçici vergi dönemlerinde kullanılacak oranların hangi aylardan itibaren hesaplandığı ayrıntısı genel ifade edildi.",
+    "Kıymetli maden istisnasının (mük. 298/A-9 kapsamı) tam sınırları ikincil kaynaklardan özetlendi."
+   ]
+  },
+  {
+   "slug": "2026-binek-otomobil-gider-amortisman-kiralama-sinirlari",
+   "baslik": "2026’da Şirket Aracı: 46.000 TL Kira, 1.380.000 TL Amortisman Sınırı ve %70 Kuralıyla Örnekli Hesap",
+   "ozet": "Binek otomobillerde 2026 yılında uygulanan kira, ÖTV-KDV ve amortisman sınırlarını; kıst amortisman ve gider kısıtlamasını yevmiye kayıtlarıyla birlikte örnek üzerinden anlatıyoruz.",
+   "tarih": "2026-10-24",
+   "etiketler": [
+    "Gelir Vergisi",
+    "Kurumlar Vergisi",
+    "Binek Otomobil",
+    "KKEG",
+    "Amortisman"
+   ],
+   "bolumler": [
+    {
+     "baslik": "GİRİŞ",
+     "paragraflar": [
+      "“Aracı şirket üzerine alalım mı, kiralayalım mı?” sorusu, her yıl sonu yaklaşırken müşterilerimizin en çok sorduğu sorulardan biridir. Cevap, rakamlara bakılmadan verilemez; çünkü binek otomobillerde kira, amortisman ve satın alma sırasında ödenen vergiler için her yıl güncellenen sınırlar ve cari giderlerde %70 kuralı uygulanmaktadır.",
+      "Bu yazıda 2026 yılı tutarlarını hatırlatıp, bir satın alma ve bir kiralama örneğini yevmiye kayıtları ve kanunen kabul edilmeyen gider (KKEG) hesaplarıyla birlikte ele alıyoruz."
+     ]
+    },
+    {
+     "baslik": "OLAY: 2026 YILI SINIRLARI",
+     "paragraflar": [
+      "Gelir Vergisi Kanunu’nun 40/1 maddesinin (1), (5) ve (7) numaralı bentlerinde 7194 sayılı Kanun ile 01.01.2020’den itibaren yapılan değişikliklerle binek otomobil giderlerine sınırlamalar getirilmiştir; serbest meslek kazancı için benzer hükümler 68’inci maddede yer almaktadır. Kurumlar vergisi mükellefleri de ticari kazanca ilişkin bu hükümlere tabidir. Uygulama esasları 311 seri no.lu Gelir Vergisi Genel Tebliği’nde açıklanmıştır. 2026 yılı için tutarlar şöyledir (parantez içinde 2025 tutarları):"
+     ],
+     "liste": [
+      "Kiralama: Aylık kira bedelinin (KDV hariç) 46.000 TL’ye kadarlık kısmı gider yazılabilir (37.000 TL).",
+      "ÖTV ve KDV: İktisap sırasında ödenen ÖTV ve KDV’nin doğrudan gider yazılması tercih edilirse toplamın 1.200.000 TL’ye kadarlık kısmı gider yazılabilir (990.000 TL).",
+      "Amortisman (ÖTV ve KDV hariç ilk iktisap): Bedelin 1.380.000 TL’yi aşan kısmına isabet eden amortisman gider yazılamaz (1.100.000 TL).",
+      "Amortisman (ÖTV ve KDV maliyete eklenmiş veya ikinci el iktisap): Sınır 2.600.000 TL’dir (2.100.000 TL).",
+      "Cari giderler: Yakıt, bakım, onarım, sigorta gibi giderlerin %70’i gider yazılabilir; %30’u KKEG’dir."
+     ]
+    },
+    {
+     "baslik": "İDARENİN GÖRÜŞÜ VE TEMEL KURALLAR",
+     "paragraflar": [
+      "Gelir İdaresi Başkanlığının binek otomobillere ilişkin rehberinde öne çıkan kurallar uygulamada şu sonuçları doğurmaktadır: Binek otomobil alımında ödenen KDV, otomobil kiralama veya satışı faaliyetinde bulunmayan işletmelerde indirim konusu yapılamaz ve maliyet ya da gider olarak dikkate alınır. Kiralama sınırını aşan kısma isabet eden KDV ise rehberdeki ifadeyle hem gider olarak dikkate alınmaz hem de hesaplanan KDV’den indirilemez.",
+      "Binek otomobillerde iktisap yılında kıst amortisman uygulanır; aracın alındığı ay tam ay sayılır. İlk yılda ayrılamayan amortisman payı, faydalı ömrün son yılında ayrıca gider yazılır. Faaliyeti kısmen veya tamamen binek otomobil kiralama ya da işletme olanlar, bu amaçla kullanılan araçlar bakımından kısıtlamalara tabi değildir."
+     ]
+    },
+    {
+     "baslik": "ÖRNEK 1: SATIN ALMA",
+     "paragraflar": [
+      "Bir şirketin Mart 2026’da ÖTV ve KDV hariç bedeli 1.500.000 TL olan sıfır bir binek otomobil aldığını, faturada 900.000 TL ÖTV (varsayımsal) ve (1.500.000 + 900.000) × %20 = 480.000 TL KDV bulunduğunu varsayalım. ÖTV ve KDV toplamı 1.380.000 TL’dir ve şirket bunları doğrudan gider yazmayı tercih etmektedir."
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "254 Taşıtlar",
+       "1.500.000,00",
+       ""
+      ],
+      [
+       "770 Genel Yönetim Giderleri (ÖTV+KDV)",
+       "1.380.000,00",
+       ""
+      ],
+      [
+       "320 Satıcılar",
+       "",
+       "2.880.000,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "ÖRNEK 1 DEVAM: KKEG VE AMORTİSMAN",
+     "paragraflar": [
+      "ÖTV ve KDV toplamının 1.200.000 TL’si gider yazılabilir; 180.000 TL KKEG’dir. Amortisman bakımından ise bedelin 1.380.000 TL’yi aşan 120.000 TL’lik kısmına isabet eden amortisman gider yazılamaz.",
+      "Faydalı ömrün 5 yıl (%20) olduğu varsayımıyla yıllık amortisman 300.000 TL, gider yazılabilecek kısım 1.380.000 × %20 = 276.000 TL’dir. Mart ayı dahil 10 ay için 2026 kıst amortismanı 300.000 × 10/12 = 250.000 TL; bunun gider yazılabilecek kısmı 276.000 × 10/12 = 230.000 TL olup 20.000 TL KKEG’dir. Ayrılamayan iki aylık pay son yılda dikkate alınır."
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "770 Genel Yönetim Giderleri",
+       "250.000,00",
+       ""
+      ],
+      [
+       "257 Birikmiş Amortismanlar (-)",
+       "",
+       "250.000,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "ÖRNEK 1 ALTERNATİF: ÖTV VE KDV MALİYETE EKLENİRSE",
+     "paragraflar": [
+      "Şirket ÖTV ve KDV’yi gider yazmak yerine maliyete eklemeyi tercih ederse aracın amortismana esas bedeli 2.880.000 TL olur. Bu durumda uygulanacak sınır 2.600.000 TL’dir; aşan 280.000 TL’ye isabet eden amortisman gider yazılamaz.",
+      "Yıllık amortisman 2.880.000 × %20 = 576.000 TL, gider yazılabilecek kısım 2.600.000 × %20 = 520.000 TL’dir. Mart ayı dahil 10 ay için 2026 kıst amortismanı 480.000 TL olup bunun 433.333,33 TL’si gider yazılabilir, 46.666,67 TL’si KKEG’dir. ÖTV ve KDV’nin gider yazılması seçeneğinde ise ilk yılda 1.200.000 TL tutarında gider tek seferde dikkate alınabilmektedir. İki seçenek arasındaki tercih, işletmenin ilk yıl kârlılığına ve vergi planlamasına göre yapılmalıdır.",
+      "Serbest meslek kazancı elde eden mükellefler bakımından GVK’nın 68’inci maddesinde benzer sınırlamalar bulunduğu, ancak uygulamanın ayrıntıları bakımından serbest meslek kazancının kendine özgü hükümlerinin ayrıca dikkate alınması gerektiği hatırlatılmalıdır."
+     ]
+    },
+    {
+     "baslik": "ÖRNEK 2: KİRALAMA",
+     "paragraflar": [
+      "Aynı şirketin bir başka binek otomobili aylık 55.000 TL + %20 KDV (11.000 TL) bedelle kiraladığını düşünelim. 46.000 TL’yi aşan 9.000 TL KKEG’dir. Bu kısma isabet eden 1.800 TL KDV indirilemez ve gider olarak da dikkate alınmaz; indirilebilecek KDV 9.200 TL’dir."
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "770 Genel Yönetim Giderleri",
+       "55.000,00",
+       ""
+      ],
+      [
+       "689 Diğer Olağandışı Gider ve Zararlar (KKEG KDV)",
+       "1.800,00",
+       ""
+      ],
+      [
+       "191 İndirilecek KDV",
+       "9.200,00",
+       ""
+      ],
+      [
+       "320 Satıcılar",
+       "",
+       "66.000,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "DEĞERLENDİRME VE UYGULAMADA NE YAPMALI?",
+     "paragraflar": [
+      "Örnek 2’de aylık KKEG 9.000 + 1.800 = 10.800 TL olup yıllık 129.600 TL’ye ulaşır. Buna aracın yakıt, bakım ve sigorta giderlerinin %30’u da eklenir. Satın almada ise ilk yıl ÖTV-KDV’den doğan 180.000 TL ve amortismandan doğan 20.000 TL KKEG oluşmaktadır. Hangi yolun avantajlı olduğu; araç bedeline, kullanım süresine, finansman maliyetine ve ikinci el değerine göre değişir.",
+      "Uygulamada şu noktaları öneriyoruz:"
+     ],
+     "liste": [
+      "KKEG tutarları gider hesaplarından ayrı bir alt hesapta veya yardımcı tabloda aylık izlenmeli; geçici vergi dönemlerinde de dikkate alınmalı.",
+      "Günlük kiralamalarda aylık sınırın, ilgili ayın gün sayısına bölünerek uygulanacağı unutulmamalı.",
+      "Binek otomobil tanımına girmeyen (örneğin kamyonet sınıfındaki) araçların kısıtlamaya tabi olmadığı, ruhsat ve araç sınıfı kontrol edilerek belirlenmeli.",
+      "Cari giderlerin %30’luk KKEG kısmına ilişkin KDV indirimi konusunda idarenin güncel görüşü ayrıca takip edilmeli.",
+      "2027 yılında sınırların yeniden güncelleneceği dikkate alınarak araç alım zamanlaması planlanmalı."
+     ]
+    },
+    {
+     "baslik": "SONUÇ",
+     "paragraflar": [
+      "2026 yılında binek otomobil sınırları kirada 46.000 TL, ÖTV-KDV giderinde 1.200.000 TL, amortismanda ise 1.380.000 TL ve 2.600.000 TL olarak uygulanmaktadır. Rakamların yükselmesine rağmen kısıtlama mantığı aynıdır: Sınırı aşan her lira KKEG’dir. Doğru kayıt ve düzenli KKEG takibi, hem beyan döneminde sürprizleri hem de olası incelemelerde eleştirileri önler.",
+      "Somut olayda mevzuat ve güncel özelgeler ayrıca değerlendirilmelidir."
+     ]
+    }
+   ],
+   "kaynaklar": [
+    "https://www.ekonomigazetesi.com/kose-yazisi/binek-otomobillerin-2026-giderleri-ve-amortismanlari-70546",
+    "https://www.muhasebenews.com/?p=169288",
+    "https://www.alomaliye.com/wp-content/uploads/2025/07/2025-binek-oto-rehber.pdf"
+   ],
+   "dogrulanmadi": [
+    "2026 tutarları iki ikincil kaynakta (Ekonomi Gazetesi köşe yazısı, muhasebenews) aynı verildi; dayanak Gelir Vergisi Genel Tebliği’nin sıra numarası ve RG tarihi doğrulanamadığı için yazılmadı.",
+    "Örnekteki ÖTV tutarı varsayımsaldır; ÖTV oranları matraha göre değiştiğinden hesaplanmadı.",
+    "Cari giderlerin %30 KKEG kısmına ait KDV’nin indirilip indirilemeyeceği GİB rehberinde açıkça yer almadığından metinde kesin hüküm verilmedi.",
+    "GİB rehberi 2025 tarihli (Temmuz 2025) sürümden okundu; kurallar 2026 için de geçerli kabul edildi."
+   ]
+  },
+  {
+   "slug": "yemek-bedeli-istisnasi-300-tl-gelir-vergisi-sgk-2026",
+   "baslik": "Yemek Bedelinde Vergi ile Prim Aynı Çizgide: 300 TL Sınırı Bordroya Nasıl Yansıyor?",
+   "ozet": "7577 sayılı Kanun ile 17.04.2026’dan itibaren SGK prim istisnası da günlük 300 TL’ye çıkarıldı ve gelir vergisi istisnasıyla eşitlendi. SGK’nın 2026/12 sayılı Genelgesi ışığında uygulamayı örnek bordro ve kayıtlarla değerlendiriyoruz.",
+   "tarih": "2026-10-21",
+   "etiketler": [
+    "Bordro",
+    "SGK",
+    "Gelir Vergisi",
+    "Yemek Bedeli",
+    "Ücret"
+   ],
+   "bolumler": [
+    {
+     "baslik": "GİRİŞ",
+     "paragraflar": [
+      "Bordro hazırlayan meslek mensuplarımızın uzun süre en çok zorlandığı kalemlerden biri yemek yardımıydı. Aynı yemek bedeli için gelir vergisinde bir tutar, SGK prim matrahında başka bir hesap yapılması; nakit, kart ve işyerinde yemek ayrımları derken tek bir kalem bordroda birkaç satıra dönüşüyordu.",
+      "2026 yılında bu tablo önemli ölçüde sadeleşti. Gelir vergisinde günlük istisna 300 TL’ye yükseltilirken, 7577 sayılı Kanun ile SGK prim istisnası da aynı tutara çekildi. Bu yazıda yeni düzenlemeyi, SGK Genelgesindeki ayrımları ve bordroya etkisini örnekle ele alıyoruz. Yıl sonu kontrolleri öncesinde 2026 bordrolarının bu açıdan gözden geçirilmesinde yarar görüyoruz."
+     ]
+    },
+    {
+     "baslik": "OLAY: İKİ AYRI DÜZENLEME, TEK TUTAR",
+     "paragraflar": [
+      "Gelir vergisi tarafında, Gelir Vergisi Kanunu’nun 23/8’inci maddesi uyarınca işyerinde veya müştemilatında yemek verilmeyen durumlarda çalışılan günlere ait günlük yemek bedelinin belirli tutara kadarki kısmı istisnadır. 7420 sayılı Kanun ile yapılan değişiklikten bu yana ödemenin yemek hizmeti sunan işletmeye yapılması şartı kaldırılmış, nakden yapılan ödemeler de istisna kapsamına alınmıştır. 2026 yılı için günlük tutar 300 TL’dir (2025: 240 TL).",
+      "SGK tarafında ise 17.04.2026 tarihli ve 33227 sayılı Resmî Gazete’de yayımlanan 7577 sayılı Kanun ile 5510 sayılı Kanun’un 80’inci maddesinin birinci fıkrasının (b) bendine yeni bir alt bent eklenmiştir. Buna göre işyerinde veya müştemilatında yemek verilmeyen durumlarda çalışılan günler için bir günlük yemek bedelinin 300 TL’yi aşmayan kısmı prime esas kazanca dahil edilmeyecektir. Tutar her yıl VUK uyarınca belirlenen yeniden değerleme oranında güncellenecek, hesaplanan tutarın %5’ini aşmayan kesirler dikkate alınmayacaktır. Düzenleme yayımı tarihinde yürürlüğe girmiştir."
+     ]
+    },
+    {
+     "baslik": "İDARENİN GÖRÜŞÜ: SGK 2026/12 SAYILI GENELGE",
+     "paragraflar": [
+      "SGK, 07.05.2026 tarihli 2026/12 sayılı Genelgesi ile uygulamanın ayrıntılarını açıklamıştır. Genelgeden çıkan temel sonuçlar şunlardır:"
+     ],
+     "liste": [
+      "İşyerinde yemek verilmesi: İşverenin kendi mutfağında hazırlanan ya da dışarıdan hazır yemek olarak alınıp işyerinde verilen yemeğin tamamı, tutar sınırı olmaksızın prime esas kazanca dahil edilmez.",
+      "İşyeri dışında sağlanan yemek: Lokanta veya yemek şirketi aracılığıyla sağlanan yemek, nakit ödeme, yemek kartı, kupon veya fiş gibi yöntemlerle verilen yardımlarda, sigortalı başına çalışılan gün için 300 TL’ye kadarki kısım istisnadır; aşan kısım prime esas kazanca dahil edilir.",
+      "Kart kullanım yeri: Yemek kartıyla sağlanan yardımda kartın market alışverişinde de kullanılabilmesi, günlük sınıra kadar istisnadan yararlanılmasına engel değildir.",
+      "Çifte yararlanma yok: Her çalışma gününde işyerinde yemek verilen bir sigortalıya ayrıca başka bir yemek yardımı da sağlanıyorsa yalnızca işyerinde verilen yemek istisnadır; ilave yardımın tamamı prime esas kazanca dahil edilir."
+     ]
+    },
+    {
+     "baslik": "DEĞERLENDİRME",
+     "paragraflar": [
+      "Düzenlemenin en önemli pratik sonucu, işyerinde yemek verilmeyen hâllerde gelir vergisi ve SGK istisnalarının artık aynı tutarda buluşmasıdır. Böylece istisnayı aşan kısım hem gelir vergisi hem de SGK bakımından aynı tutar üzerinden hesaplanabilmektedir.",
+      "Dikkat edilmesi gereken üç nokta var: Birincisi, her iki istisna da “çalışılan günler” ile sınırlıdır; izin, rapor gibi fiilen çalışılmayan günler için ödenen yemek bedeli istisnadan yararlanmaz. İkincisi, yemek kartı ödemelerinde 300 TL’lik tutar KDV hariç tutar olarak dikkate alınmaktadır. Üçüncüsü, istisna 17.04.2026’dan itibaren yürürlükte olduğundan Nisan 2026 bordrosunda yürürlük tarihi öncesi ve sonrası günlerin ayrı değerlendirilmesi gerekebilir; bu ay için yapılan hesaplamaların geriye dönük kontrolü önerilir."
+     ]
+    },
+    {
+     "baslik": "UYGULAMADA NE YAPMALI? ÖRNEK BORDRO",
+     "paragraflar": [
+      "İşyerinde yemek verilmeyen bir işletmede bir çalışanın Ekim 2026’da 22 gün fiilen çalıştığını ve kendisine günlük 400 TL nakdi yemek bedelinin ücretle birlikte bankadan ödendiğini varsayalım. Hesaplamayı yalnızca yemek kalemi için yapıyoruz; çalışanın %15 gelir vergisi diliminde olduğunu kabul ediyor, damga vergisi ve asgari ücret istisnası etkilerini sadelik için dikkate almıyoruz.",
+      "Toplam yemek bedeli: 22 × 400 = 8.800 TL. İstisna tutarı: 22 × 300 = 6.600 TL. Gelir vergisi ve SGK açısından vergiye ve prime tabi kısım: 2.200 TL. SGK işçi payı ve işsizlik sigortası işçi payı (%14 + %1): 330 TL. Gelir vergisi matrahı: 2.200 − 330 = 1.870 TL. Gelir vergisi (%15): 280,50 TL. Çalışana net ödenecek: 8.800 − 330 − 280,50 = 8.189,50 TL."
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "770 Genel Yönetim Giderleri (Yemek Bedeli)",
+       "8.800,00",
+       ""
+      ],
+      [
+       "335 Personele Borçlar",
+       "",
+       "8.189,50"
+      ],
+      [
+       "360 Ödenecek Vergi ve Fonlar",
+       "",
+       "280,50"
+      ],
+      [
+       "361 Ödenecek Sosyal Güvenlik Kesintileri",
+       "",
+       "330,00"
+      ]
+     ],
+     "liste": [
+      "2.200 TL’lik prime tabi kısım üzerinden işveren payları ayrıca hesaplanıp 770 / 361 hesapları ile kaydedilmelidir.",
+      "Puantaj ile bordrodaki yemek günleri birebir eşleşmeli; izinli ve raporlu günler istisna hesabına katılmamalıdır.",
+      "Hem işyerinde yemek verilip hem de ayrıca kart yüklenen personel varsa, kart yüklemelerinin tamamının prime esas kazanca dahil edildiği kontrol edilmelidir.",
+      "Bordro yazılımındaki SGK istisna parametresinin 17.04.2026 itibarıyla 300 TL’ye güncellendiği teyit edilmelidir."
+     ]
+    },
+    {
+     "baslik": "KARŞILAŞTIRMA: YEMEK KARTI KULLANILIRSA",
+     "paragraflar": [
+      "Aynı işletmenin nakit ödeme yerine personele yemek kartı yüklediğini düşünelim. Günlük yükleme KDV hariç 300 TL ile sınırlı tutulursa, 22 günlük 6.600 TL’lik yükleme hem gelir vergisi hem de SGK bakımından istisna kapsamında kalır ve bordroda vergi ya da prim kesintisi doğmaz. Günlük yükleme 350 TL’ye çıkarılırsa, aşan 50 TL × 22 gün = 1.100 TL hem gelir vergisine hem de prime tabi tutulur.",
+      "Uygulamada kart yüklemelerinin aylık toplu yapılması, puantajla eşleştirmeyi güçleştirebilir. Bu nedenle yükleme tutarının, ilgili ayda fiilen çalışılan gün sayısı esas alınarak hesaplanması ve izin ya da rapor nedeniyle çalışılmayan günlere ait yüklemelerin istisna hesabından çıkarılması gerekir. Ay içinde işe giren veya işten ayrılan personelde de aynı kontrol yapılmalıdır."
+     ]
+    },
+    {
+     "baslik": "ÖDEME KAYDI",
+     "paragraflar": [
+      "Net tutarın banka aracılığıyla ödenmesi ile:"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "335 Personele Borçlar",
+       "8.189,50",
+       ""
+      ],
+      [
+       "102 Bankalar",
+       "",
+       "8.189,50"
+      ]
+     ]
+    },
+    {
+     "baslik": "SONUÇ",
+     "paragraflar": [
+      "2026 yılında yemek bedeli istisnası gelir vergisinde ve SGK’da günlük 300 TL’de birleşti. İşyerinde verilen yemekte prim istisnası sınırsız, işyeri dışında sağlanan yemekte ise 300 TL ile sınırlı. Fiilen çalışılan gün şartı, yürürlük tarihine göre Nisan ayı ayrımı ve çifte yararlanma yasağı, bordro kontrollerinde öncelikle bakılması gereken üç başlıktır. Yıl sonu kapanışından önce 2026 bordrolarının bu kriterlerle gözden geçirilmesi, olası düzeltme ihtiyaçlarını erkenden ortaya çıkaracaktır.",
+      "Somut olayda mevzuat ve güncel idari düzenlemeler ayrıca değerlendirilmelidir."
+     ]
+    }
+   ],
+   "kaynaklar": [
+    "https://cottgroup.com/tr/mevzuat/item/7577-sayili-bazi-kanunlarda-degisiklik-yapilmasina-dair-kanun-yayimlandi",
+    "https://kpmgvergi.com/yayinlar/mali-bultenler/sosyal-guvenlik/yemek-bedeli-konulu-202612-sayili-sosyal-guvenlik-kurumu-genelgesi/4493",
+    "https://www.forbes.com.tr/ekonomi/2026-yili-gelir-vergisi-tarifesi-ve-istisna-tutarlari-belirlendi",
+    "https://www.muhasebetr.com/vergiden-mustesna-yemek-bedeli/",
+    "https://www.ey.com/tr_tr/insights/tax/vergisiz-yemek-bedelinde-ne-degisti"
+   ],
+   "dogrulanmadi": [
+    "2026 gelir vergisi yemek istisnasını belirleyen Gelir Vergisi Genel Tebliği’nin sıra numarası kaynaklarda tutarsız (329/332) olduğundan yazılmadı.",
+    "Nakden ödenen yemek bedelinin gelir vergisi istisnası için bankadan ödeme şartı EY yazısında taslak tebliğe atıfla anıldı; nihai tebliğ hükmü doğrulanmadı, metinde ‘bankadan ödendiği’ varsayımı kullanıldı.",
+    "Nisan 2026 bordrosunda gün bazında ayrıştırmanın SGK Genelgesinde nasıl düzenlendiği doğrulanmadı; ‘gerekebilir’ şeklinde ihtiyatlı ifade kullanıldı.",
+    "Yemek kartında 300 TL’nin KDV hariç tutar olduğu bilgisi tek kaynaktan (muhasebetr) alındı.",
+    "7577 sayılı Kanunda tutarın değiştirilmesine ilişkin yetki (Kurum/Cumhurbaşkanı) netleştirilemediği için metne alınmadı."
+   ]
+  }
+ ]
+}

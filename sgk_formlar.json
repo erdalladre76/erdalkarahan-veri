@@ -1,0 +1,3003 @@
+{
+ "meta": {
+  "baslik": "SGK Form ve Bildirgeleri Kataloğu – İşveren ve Sigortalı",
+  "guncelleme": "2026-11-03",
+  "dil": "tr",
+  "asgari_ucret_2026_brut_aylik": 33030.0,
+  "asgari_ucret_2026_brut_gunluk": 1101.0,
+  "pek_2026": {
+   "alt_aylik": 33030.0,
+   "ust_aylik": 297270.0,
+   "alt_gunluk": 1101.0,
+   "ust_gunluk": 9909.0,
+   "not": "Üst sınır 2026'dan itibaren asgari ücretin 9 katı (önceden 7,5 kat)."
+  },
+  "prim_oranlari_4a_2026": {
+   "isci": "MYÖ %9 + GSS %5 + İşsizlik %1 = %15",
+   "isveren": "MYÖ %12 + GSS %7,5 + KVSK %2,25 + İşsizlik %2 = %23,75",
+   "indirim_05510": "İmalat 5 puan, diğer sektörler 2 puan (2026)",
+   "sgdp": "İşçi %7,5, işveren %22,5 (KVSK %2,25 dahil toplam %32,25)",
+   "asgari_ucret_destegi": "Prim günü x 42,33 TL (5510 geçici md.112)"
+  },
+  "istisnalar_2026": {
+   "yemek_gunluk": 158.0,
+   "cocuk_zammi_aylik": 660.6,
+   "aile_zammi_aylik": 3303.0
+  },
+  "odenekler_2026": {
+   "emzirme": 1621.0,
+   "cenaze": 6398.0
+  },
+  "borclanma_gunluk_2026": {
+   "dogum_%32": [
+    352.32,
+    3170.88
+   ],
+   "askerlik_ve_diger_md41_%45": [
+    495.45,
+    4459.05
+   ],
+   "yurtdisi_%45": [
+    495.45,
+    4459.05
+   ]
+  },
+  "idari_para_cezasi_kurallari": "5510 md.102 tutarları, fiilin işlendiği tarihteki brüt asgari ücrete göre hesaplanır. Bildirgenin süresinden sonra, denetim/tespit olmadan 30 gün içinde kendiliğinden verilmesi ve cezanın tebliğden itibaren 15 gün içinde ödenmesi halinde ceza 1/4 oranında uygulanır. Tebliğden itibaren 15 gün içinde ödemede 1/4 peşin ödeme indirimi uygulanır. İtiraz: tebliğden itibaren 15 gün içinde Kuruma; ret halinde 30 gün içinde idare mahkemesine.",
+  "idari_para_cezalari_2026": [
+   [
+    "İşyeri bildirgesi süresinde verilmemesi – bilanço esası (md.102/1-a)",
+    "3 x asgari ücret",
+    "99.090,00 TL"
+   ],
+   [
+    "İşyeri bildirgesi – işletme esası / diğer defter",
+    "2 x asgari ücret",
+    "66.060,00 TL"
+   ],
+   [
+    "İşyeri bildirgesi – defter tutmayan",
+    "1 x asgari ücret",
+    "33.030,00 TL"
+   ],
+   [
+    "İşe giriş bildirgesi süresinde verilmemesi (her sigortalı) (md.102/1-b)",
+    "1 x asgari ücret",
+    "33.030,00 TL"
+   ],
+   [
+    "İşe giriş – denetim/kamu idaresi tespiti (her sigortalı)",
+    "2 x asgari ücret",
+    "66.060,00 TL"
+   ],
+   [
+    "İşe giriş – 1 yıl içinde tekrar tespit (her sigortalı)",
+    "5 x asgari ücret",
+    "165.150,00 TL"
+   ],
+   [
+    "Asıl MUHSGK (SGK hizmet bilgileri) süresinde verilmemesi (her sigortalı; belge başına üst sınır 2 x AÜ)",
+    "1/5 x asgari ücret",
+    "6.606,00 TL"
+   ],
+   [
+    "Ek MUHSGK / e-BildirgeV2 ek bildirim (her sigortalı; üst sınır 2 x AÜ)",
+    "1/8 x asgari ücret",
+    "4.128,75 TL"
+   ],
+   [
+    "30 günden az çalışma bilgisinin belgesiz/geçersiz bildirimi (her sigortalı)",
+    "1/2 x asgari ücret",
+    "16.515,00 TL"
+   ],
+   [
+    "Denetimle tespit edilen eksik bildirim (her ay)",
+    "2 x asgari ücret",
+    "66.060,00 TL"
+   ],
+   [
+    "İşten ayrılış (4/a sigortalılığın sona ermesi) bildiriminin süresinde yapılmaması (her sigortalı)",
+    "1/10 x asgari ücret",
+    "3.303,00 TL"
+   ],
+   [
+    "Meslek kodunun gerçeğe aykırı bildirimi (her sigortalı; işyeri başına üst sınır 1 x AÜ)",
+    "1/10 x asgari ücret",
+    "3.303,00 TL"
+   ],
+   [
+    "Defter/belgelerin 15 gün içinde ibraz edilmemesi – bilanço esası",
+    "12 x asgari ücret",
+    "396.360,00 TL"
+   ],
+   [
+    "Defter/belge ibraz etmeme – diğer defter",
+    "6 x asgari ücret",
+    "198.180,00 TL"
+   ],
+   [
+    "Defter/belge ibraz etmeme – defter tutmayan",
+    "3 x asgari ücret",
+    "99.090,00 TL"
+   ],
+   [
+    "Denetimi engelleme",
+    "5 x asgari ücret",
+    "165.150,00 TL"
+   ],
+   [
+    "Denetimi cebir/tehditle engelleme",
+    "10 x asgari ücret",
+    "330.300,00 TL"
+   ]
+  ],
+  "resmi_form_sayfasi": "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/",
+  "isveren_uygulamalari": "https://e.sgk.gov.tr/Uygulamalar/Isveren",
+  "vatandas_uygulamalari": "https://e.sgk.gov.tr/Uygulamalar/Vatandas",
+  "mevzuat": "https://kms.kaysis.gov.tr/Home/Kurum/22620739",
+  "not": "Formların kendisi kopyalanmamıştır; yalnızca resmi sayfa bağlantıları verilmiştir. SGK Form ve Dilekçeler sayfasındaki 'Ek-xxx' numaraları sitedeki listeleme numarasıdır; Sosyal Sigorta İşlemleri Yönetmeliği ek numaralarıyla birebir aynı olmayabilir.",
+  "form_sayisi": 37,
+  "kaynaklar_genel": [
+   "https://cottgroup.com/tr/mevzuat/item/2026-yilina-ait-prime-esas-kazanclarin-alt-ve-ust-sinirlari-ile-guncel-tutarlarin-aciklandigi-genelge-yayimlandi",
+   "https://www.alomaliye.com/2026/07/29/sgk-primleri-rehberi-2026/",
+   "https://www.alomaliye.com/2026/01/02/2026-yili-5510-sayili-kanun-idari-para-cezalari/",
+   "https://cottgroup.com/tr/blog/calisma-hayati/item/2026-sgk-idari-para-cezalari",
+   "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/",
+   "https://e.sgk.gov.tr/Uygulamalar/Isveren"
+  ]
+ },
+ "formlar": [
+  {
+   "k": "isyeri-bildirgesi",
+   "ad": "İşyeri Bildirgesi (4/a – işyeri tescili)",
+   "taraf": "isveren",
+   "kod": "SSİY Ek-6 (SGK Form ve Dilekçeler listesinde: Ek-072 4-1/a İşyeri Bildirgesi)",
+   "kisa": "İlk kez 4/a sigortalı çalıştıracak işverenin işyerini SGK'ya tescil ettirdiği bildirge. Sonucunda 26 haneli işyeri sicil numarası verilir.",
+   "kim": "4/a kapsamında sigortalı çalıştıracak gerçek/tüzel kişi işverenler; alt işverenler; adi ortaklıklar; ihale ile iş üstlenenler; inşaat işi yapan müteahhit veya arsa sahipleri; işyerini devralan işveren; mirasçılar.",
+   "ne_zaman": "En geç sigortalı çalıştırmaya başlanan tarihte (5510 md.11). Devir/intikalde devir tarihini izleyen 10 gün içinde; gerçek kişi işverenin ölümünde mirasçılar ölüm tarihinden itibaren en geç 3 ay içinde; başka ile nakilde nakil tarihinden itibaren 10 gün içinde; TTK'ya göre tür değişikliği/birleşmede tescil ilan tarihinden itibaren 10 gün içinde; adi ortaklığa yeni ortak girişinde 10 gün içinde.",
+   "nereden": [
+    [
+     "e-Devlet: 'İşyeri Bildirgesi (4-a'lı Sigortalı Çalıştırılanlar Yönünden)'",
+     "https://uyg.sgk.gov.tr/stw/eDevletGiris"
+    ],
+    [
+     "SGK uygulama sayfası",
+     "https://e.sgk.gov.tr/Uygulamalar/Detay/Isyeri-Bildirgesi-2026-10-27-04-20-49"
+    ],
+    [
+     "Resmi form sayfası (Ek-072)",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "İşveren bilgileri",
+     "Gerçek kişide T.C. kimlik no; tüzel kişide vergi kimlik no, MERSİS no, unvan. Unvan ticaret sicil kaydıyla birebir aynı yazılmalı."
+    ],
+    [
+     "İşveren türü / statüsü",
+     "Özel sektör, kamu, alt işveren, adi ortaklık, yabancı işveren vb. Doğru statü seçilmezse teşvik ve kanun numarası uygulamaları hatalı kurulur."
+    ],
+    [
+     "Faaliyet (işkolu) kodu – NACE",
+     "İşyerinde fiilen yapılan ana işe göre 6 haneli NACE kodu. Prim oranı (kısa vadeli sigorta kolu primi işyeri için %2,25 sabit) ve tehlike sınıfı bu koda bağlıdır; vergi kaydındaki NACE ile uyumlu olmalı."
+    ],
+    [
+     "İşyeri adresi",
+     "Adres kayıt sistemine (UAVT) göre seçilir. İşyerinin bağlı olacağı SGM/il müdürlüğü adrese göre belirlenir."
+    ],
+    [
+     "İşe başlama / sigortalı çalıştırmaya başlama tarihi",
+     "İlk sigortalının fiilen çalışmaya başladığı tarih. Bu tarih bildirim süresinin başlangıcıdır."
+    ],
+    [
+     "İşçi sayısı (tahmini)",
+     "Bildirim tarihindeki/çalıştırılacak sigortalı sayısı."
+    ],
+    [
+     "Ortaklar / yetkililer",
+     "Tüzel kişide şirket yetkilileri ve ortaklar; adi ortaklıkta tüm ortakların T.C. kimlik numaraları ve hisse oranları."
+    ],
+    [
+     "Alt işveren bilgileri (varsa)",
+     "Asıl işverenin işyeri sicil numarası, alt işverenlik sözleşmesi tarihi, işin konusu ve süresi."
+    ],
+    [
+     "İnşaat / ihale bilgileri (varsa)",
+     "Yapı ruhsatı tarih-no, ada/parsel, inşaat alanı (m²), ihale makamı, sözleşme bedeli, iş başlama-bitiş tarihleri. Asgari işçilik incelemesi bu verilerle yapılır."
+    ],
+    [
+     "Ekler",
+     "e-Devlet'te PDF/JPEG olarak en fazla 10 dosya, her biri en fazla 10 MB eklenebilir; eklenemeyenler ünitesine elden veya posta ile verilir."
+    ]
+   ],
+   "adimlar": [
+    "Vergi kaydının (vergi dairesi / MERSİS) tamamlandığını ve NACE kodunu kontrol edin.",
+    "e-Devlet'e işveren (gerçek kişi) veya şirket yetkilisi olarak giriş yapın; 'İşyeri Bildirgesi (4-a'lı Sigortalı Çalıştırılanlar Yönünden)' hizmetini açın.",
+    "İşveren türünü ve işyeri türünü (merkez, şube, inşaat, alt işveren, ihale) seçin.",
+    "Adres bilgisini UAVT üzerinden seçin; işyerinin bağlı olacağı üniteyi kontrol edin.",
+    "NACE faaliyet kodunu ve sigortalı çalıştırmaya başlama tarihini girin.",
+    "Ortak/yetkili bilgilerini ve varsa alt işveren/ihale/inşaat bilgilerini doldurun.",
+    "Gerekli ekleri (alt işverenlik sözleşmesi, noter onaylı adi ortaklık sözleşmesi, ihale sözleşmesi, inşaat sözleşmesi vb.) taratıp yükleyin.",
+    "Bildirgeyi onaylayıp gönderin; ünite onaylayana kadar değişiklik yapılabilir, onaydan sonra yalnızca görüntülenir.",
+    "Ünite onayından sonra işyeri sicil numarasını alın.",
+    "İşyeri sicil numarası ile e-Bildirge kullanıcı/şifre işlemlerini yapın (ayrı karttaki 'e-Bildirge şifresi' adımlarına bakın).",
+    "Sigortalıların işe giriş bildirgelerini süresinde verin; işyeri bildirgesi ilk işe giriş bildiriminden önce/aynı anda tamamlanmalıdır."
+   ],
+   "belgeler": [
+    "Vergi levhası / vergi kaydı (Kurumca elektronik erişilebilenler istenmez)",
+    "Ticaret sicil gazetesi (elektronik erişim varsa istenmez)",
+    "İmza sirküleri (yetkili için)",
+    "Alt işverenlik sözleşmesi örneği (alt işverenler)",
+    "Noter onaylı adi ortaklık sözleşmesi",
+    "İhale makamı sözleşmesi veya işin üstlenildiğini gösteren yazı",
+    "Yapı ruhsatı, arsa sahibi–müteahhit inşaat sözleşmesi (inşaatlarda)"
+   ],
+   "ceza": "5510 md.102/1-a: Süresinde verilmezse bilanço esasına göre defter tutanlara asgari ücretin 3 katı (99.090,00 TL), diğer defterleri tutanlara 2 katı (66.060,00 TL), defter tutmakla yükümlü olmayanlara 1 katı (33.030,00 TL). 2026 brüt asgari ücreti 33.030,00 TL esas alınmıştır. Denetim veya resmi tespit olmadan, süresinin bitiminden itibaren 30 gün içinde kendiliğinden verilir ve ceza tebliğden itibaren 15 gün içinde ödenirse ceza 1/4 oranında uygulanır (24.772,50 TL / 16.515,00 TL / 8.257,50 TL). İdari para cezasına tebliğden itibaren 15 gün içinde SGK'ya (il müdürlüğü / SGM) itiraz edilebilir; itiraz tahsilatı durdurur. İtirazın reddi halinde, ret kararının tebliğinden itibaren 30 gün içinde idare mahkemesinde dava açılabilir. Ceza tebliğden itibaren 15 gün içinde ödenirse 1/4 indirim uygulanır (3/4'ü tahsil edilir); peşin ödeme itiraz/dava hakkını ortadan kaldırmaz.",
+   "ipucu": [
+    "İşyeri bildirgesini ilk sigortalının işe başladığı günden sonraya bırakmak; ceza işe başlama tarihine göre kesinleşir.",
+    "NACE kodunu vergi kaydından farklı veya fiili işe uymayan seçmek; tehlike sınıfı, İSG yükümlülükleri ve teşvik uygunluğu etkilenir.",
+    "Şube açılışında merkez dosyasıyla çalıştırmaya devam etmek; her ayrı işyeri için ayrı bildirge gerekir.",
+    "Alt işverenlik sözleşmesini muvazaa riski taşıyacak şekilde (asıl işin bölünmesi, aynı işçilerin devri) düzenlemek; Kurum alt işverenliği geçersiz sayabilir."
+   ],
+   "kaynak": [
+    "https://e.sgk.gov.tr/Uygulamalar/Detay/Isyeri-Bildirgesi-2026-10-27-04-20-49",
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/",
+    "https://www.alomaliye.com/2026/05/29/sgk-isyeri-isveren-ve-isyerinin-bildirimi-2026/",
+    "https://www.alomaliye.com/2026/01/02/2026-yili-5510-sayili-kanun-idari-para-cezalari/",
+    "https://cottgroup.com/tr/blog/calisma-hayati/item/2026-sgk-idari-para-cezalari"
+   ]
+  },
+  {
+   "k": "ise-giris-bildirgesi",
+   "ad": "Sigortalı İşe Giriş Bildirgesi (4/a)",
+   "taraf": "isveren",
+   "kod": "SSİY Ek-4 / Form listesinde SGK-004 (4/1-a-b); 4/c için Ek-005",
+   "kisa": "İşe alınan her sigortalının, çalışmaya başlamadan önce SGK'ya bildirildiği bildirge. Sigortalılık bu bildirimle tescil edilir.",
+   "kim": "4/a sigortalı çalıştıran tüm işverenler, aracı (SMMM) veya e-Bildirge kullanıcıları; emekli olup çalışanlar için de (SGDP) verilir.",
+   "ne_zaman": "Genel kural: sigortalının çalışmaya başladığı tarihten en geç bir gün önce (5510 md.8). İstisnalar: inşaat, balıkçılık ve tarım işyerlerinde çalışmaya başladığı gün (çalışmaya başlamadan önce); ilk defa sigortalı çalıştırılacak işyerlerinde işyeri bildirgesinin verildiği tarihten itibaren 1 ay içinde çalışmaya başlayanlar için çalışmaya başladığı gün (Kurumca tespitten önce); yabancı ülkelere götürülen sigortalılar için yurt dışına gidişten önce; kamu idarelerinde göreve başladığı tarihten itibaren 1 ay içinde. Hafta sonu/tatil fark etmeksizin süre geçerlidir.",
+   "nereden": [
+    [
+     "e-SGK: 4a Sigortalı İşe Giriş ve İşten Ayrılış Bildirgesi",
+     "https://e.sgk.gov.tr/Uygulamalar/Detay/4a-Sigortali-Ise-Giris-ve-Isten-Ayrilis-Bildirgesi-2024-10-02-10-08-51"
+    ],
+    [
+     "e-SGK işveren uygulamaları",
+     "https://e.sgk.gov.tr/Uygulamalar/Isveren"
+    ],
+    [
+     "Resmi form sayfası (SGK-004)",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "İşyeri sicil numarası",
+     "26 haneli sicil no; uygulamaya girişte işyeri kodu ve şifreyle otomatik gelir."
+    ],
+    [
+     "T.C. kimlik no / yabancı kimlik no",
+     "MERNİS'ten ad-soyad, doğum tarihi otomatik gelir; yabancılarda 99 ile başlayan YKN ve çalışma izni bilgisi."
+    ],
+    [
+     "Sigortalılık türü",
+     "Tüm sigorta kolları (4/a) / SGDP (emekli çalışan) / kısmi süreli / çırak-stajyer vb. Emekli sigortalı için SGDP seçilmezse yanlış belge türünden prim tahakkuk eder."
+    ],
+    [
+     "Giriş tarihi",
+     "Fiilen çalışmaya başlanacak tarih. Bildirim bu tarihten en az 1 gün önce yapılmalıdır."
+    ],
+    [
+     "Meslek kodu (ISCO-08)",
+     "Sigortalının fiilen yaptığı işe göre meslek kodu; gerçeğe aykırı bildirim ayrıca cezalıdır."
+    ],
+    [
+     "Görev kodu",
+     "02: İşçi, 01: İşveren (vekili), 03: 4/c kapsamına girenler gibi kodlar; özel sektör işçisi için 02."
+    ],
+    [
+     "ÇSGB işkolu kodu",
+     "İşyerinin işkolu (6356 sayılı Kanun) kodu."
+    ],
+    [
+     "Kısmi süreli çalışma bilgisi",
+     "Kısmi süreli ise kutucuk işaretlenir; ayda çalışılacak gün/saat bilgisi."
+    ],
+    [
+     "Öğrenim durumu, mezuniyet bölümü/yılı",
+     "Mesleki belge veya diploma ile verilen teşviklerde (06111 – genç/kadın/mesleki belge) kontrol edilir."
+    ],
+    [
+     "Engellilik / eski hükümlü / terör mağduru durumu",
+     "İlgili kontenjan ve teşvik (4857 md.30, 14857) için."
+    ],
+    [
+     "Geçici iş ilişkisi / ek bilgi",
+     "Uygulamada geçici iş ilişkisi kurulan işveren bilgisi istenebilir."
+    ]
+   ],
+   "adimlar": [
+    "Sigortalıdan kimlik, varsa diploma/mesleki belge ve emeklilik durumunu öğrenin; emekli ise SGDP seçeceğinizi not edin.",
+    "Yabancı uyruklu ise çalışma izni/muafiyetinin geçerli olduğunu kontrol edin.",
+    "e-SGK'da '4a Sigortalı İşe Giriş ve İşten Ayrılış Bildirgesi' uygulamasına işyeri kullanıcı kodu, sistem şifresi ve işyeri şifresiyle girin.",
+    "'İşe Giriş Kaydı' menüsünden T.C. kimlik numarasını girip kişi bilgilerini doğrulayın.",
+    "Sigortalılık türünü, giriş tarihini, meslek kodunu, görev kodunu ve işkolu kodunu girin.",
+    "Kısmi süreli, engelli, eski hükümlü gibi özel durumları işaretleyin.",
+    "Bildirgeyi kaydedip onaylayın; sistem 'işe giriş bildirgesi kaydedildi' bilgisini verir.",
+    "Bildirge çıktısını (PDF) alın, sigortalının özlük dosyasına koyun; bir örneği sigortalıya verin.",
+    "İŞKUR teşvik/kayıt şartı olan teşviklerde sigortalının İŞKUR kaydını ve teşvik uygunluğunu e-Bildirge 'Tescil ve Hizmet' menüsünden kontrol edin.",
+    "İlk ay MUHSGK'da sigortalının gün ve kazancını giriş tarihinden itibaren bildirin."
+   ],
+   "belgeler": [
+    "Nüfus cüzdanı/kimlik kartı fotokopisi",
+    "Yabancılar için çalışma izni",
+    "Varsa diploma, ustalık/kalfalık veya mesleki yeterlilik belgesi",
+    "Engelli ise sağlık kurulu raporu",
+    "Emekli ise emeklilik belgesi (SGDP için)",
+    "İş sözleşmesi (işyerinde saklanır)"
+   ],
+   "ceza": "5510 md.102/1-b: Süresinde veya Kurumca belirlenen şekilde verilmezse her sigortalı için asgari ücret tutarında (33.030,00 TL). Bildirilmediğinin Kurumun denetim/kontrol elemanlarınca veya kamu idarelerinin tespitiyle ortaya çıkması halinde her sigortalı için asgari ücretin 2 katı (66.060,00 TL); aynı tespit bir yıl içinde tekrarlanırsa 5 katı (165.150,00 TL). Denetimden önce, süresinin bitiminden itibaren 30 gün içinde kendiliğinden verilip ceza 15 gün içinde ödenirse 1/4 oranında (8.257,50 TL) uygulanır. Ayrıca kayıt dışı tespit halinde 5510 md.81/1-ı (2/5 puan) indirimi ve teşviklerden yararlanma imkânı yitirilebilir. İdari para cezasına tebliğden itibaren 15 gün içinde SGK'ya (il müdürlüğü / SGM) itiraz edilebilir; itiraz tahsilatı durdurur. İtirazın reddi halinde, ret kararının tebliğinden itibaren 30 gün içinde idare mahkemesinde dava açılabilir. Ceza tebliğden itibaren 15 gün içinde ödenirse 1/4 indirim uygulanır (3/4'ü tahsil edilir); peşin ödeme itiraz/dava hakkını ortadan kaldırmaz.",
+   "ipucu": [
+    "'Bugün başladı, bugün bildiririm' yaklaşımı genel kuralda cezaya yol açar; bildirim en geç bir gün önce yapılmalı.",
+    "Emekli çalışanı 'tüm sigorta kolları' ile bildirmek (SGDP yerine).",
+    "Meslek kodunu rastgele seçmek; meslek kodu gerçeğe aykırı bildirildiğinde her sigortalı için asgari ücretin 1/10'u (3.303,00 TL) ceza vardır.",
+    "Deneme süresi de sigortalılık süresidir; 'deneme sonrası bildiririm' uygulaması kayıt dışı istihdamdır.",
+    "Aynı gün iptal: yanlış girilen işe giriş, aynı gün içinde iptal edilebilir; sonraki günlerde düzeltme için SGM'ye dilekçe gerekir."
+   ],
+   "kaynak": [
+    "https://e.sgk.gov.tr/Uygulamalar/Detay/4a-Sigortali-Ise-Giris-ve-Isten-Ayrilis-Bildirgesi-2024-10-02-10-08-51",
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/",
+    "https://www.alomaliye.com/2026/01/02/2026-yili-5510-sayili-kanun-idari-para-cezalari/",
+    "https://cottgroup.com/tr/blog/calisma-hayati/item/2026-sgk-idari-para-cezalari"
+   ]
+  },
+  {
+   "k": "isten-ayrilis-bildirgesi",
+   "ad": "Sigortalı İşten Ayrılış Bildirgesi (4/a)",
+   "taraf": "isveren",
+   "kod": "SGK Form ve Dilekçeler listesinde SGK-005 Sigortalı İşten Ayrılış Bildirgesi (açıklamaları Ek-007); uygulamada elektronik",
+   "kisa": "İş sözleşmesi sona eren sigortalının ayrılış tarihi, ayrılış nedeni (işten çıkış kodu) ve son dönem kazancının bildirildiği bildirge.",
+   "kim": "4/a sigortalı çalıştıran tüm işverenler.",
+   "ne_zaman": "Sigortalının işten ayrıldığı tarihten itibaren 10 gün içinde (5510 md.9). Ayrılış tarihi, sigortalının fiilen çalıştığı son gündür; ayrılış bildirgesinin süresi bu tarihi izleyen günden başlar. Ayrılışın ait olduğu ayın MUHSGK'sı ayrılış bildirgesinden önce verilmişse, ayrılış bildirgesi aynı zamanda belge veriliş süresinde verilmelidir.",
+   "nereden": [
+    [
+     "e-SGK: 4a Sigortalı İşe Giriş ve İşten Ayrılış Bildirgesi",
+     "https://e.sgk.gov.tr/Uygulamalar/Detay/4a-Sigortali-Ise-Giris-ve-Isten-Ayrilis-Bildirgesi-2024-10-02-10-08-51"
+    ],
+    [
+     "Resmi form sayfası (SGK-005, Ek-007 açıklama)",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "T.C. kimlik no",
+     "Ayrılan sigortalının kimlik numarası; aktif işe girişi olmalı."
+    ],
+    [
+     "İşten ayrılış tarihi",
+     "Fiilen çalışılan son gün (ihbar süresi kullanıldıysa ihbar süresinin son günü; ihbar tazminatı ödenip derhal çıkışta son çalışılan gün)."
+    ],
+    [
+     "İşten ayrılış nedeni (kod)",
+     "Ek 'isten_cikis' kod tablosundan seçilir (örn. 03 istifa, 04 işverence haklı neden bildirilmeden fesih, 05 belirli süreli sözleşmenin sona ermesi). Kod işsizlik ödeneği hakkını doğrudan etkiler."
+    ],
+    [
+     "Meslek kodu",
+     "Çalışma süresindeki meslek kodu."
+    ],
+    [
+     "Bulunduğumuz dönem bilgileri",
+     "Ayrılışın olduğu ay için prime esas kazanç, gün sayısı, eksik gün sayısı ve eksik gün nedeni."
+    ],
+    [
+     "Önceki dönem bilgileri",
+     "Ayrılış ayından önceki ayın MUHSGK'sı henüz verilmemişse, o döneme ait gün ve kazanç."
+    ],
+    [
+     "Eksik gün nedeni",
+     "Ay içinde 30 günden az çalışma varsa kod (örn. 16: fesih tarihinde çalışmamış, 01: istirahat)."
+    ]
+   ],
+   "adimlar": [
+    "Fesih türünü ve hukuki dayanağını (4857 md.17, 24, 25 vb.) belirleyin; fesih bildirimi yazılı olsun.",
+    "Ayrılış tarihini (son çalışılan gün) netleştirin; kullanılmayan yıllık izin ücreti, kıdem/ihbar tazminatı hesaplarını yapın.",
+    "Fesih nedenine uygun işten çıkış kodunu seçin; 42–50 kodlarında (4857 md.25/II alt bentleri) olay tutanakları ve savunma belgelerini hazırlayın.",
+    "e-SGK '4a Sigortalı İşe Giriş ve İşten Ayrılış Bildirgesi' uygulamasında 'İşten Ayrılış Kaydı' menüsünü açın.",
+    "T.C. kimlik no, ayrılış tarihi ve nedenini girin.",
+    "Bulunduğumuz dönem ve (gerekirse) önceki dönem kazanç/gün bilgilerini girin.",
+    "Bildirgeyi onaylayın; çıktısını alıp sigortalıya bir örneğini verin (işsizlik ödeneği başvurusunda İŞKUR elektronik olarak görür).",
+    "Ayrılış ayına ait muhtasar ve prim hizmet beyannamesinde gün/kazancı ayrılış bildirgesiyle tutarlı bildirin.",
+    "Hatalı kod veya tarih girildiyse SGM'ye dilekçe ile düzeltme talep edin (sistem üzerinden belirli süre içinde iptal mümkündür)."
+   ],
+   "belgeler": [
+    "Fesih bildirimi / istifa dilekçesi",
+    "Varsa ihbar süresine ilişkin yazı",
+    "42–50 kodlarında tutanak, savunma istem yazısı ve savunma",
+    "İbraname/ödeme belgeleri (işyerinde saklanır)"
+   ],
+   "ceza": "5510 md.102'ye göre süresinde verilmeyen her işten ayrılış bildirimi için her sigortalı başına asgari ücretin 1/10'u (3.303,00 TL). Süresinden sonra 30 gün içinde kendiliğinden verilip ceza 15 gün içinde ödenirse 1/4 oranında uygulanır (825,75 TL). İdari para cezasına tebliğden itibaren 15 gün içinde SGK'ya (il müdürlüğü / SGM) itiraz edilebilir; itiraz tahsilatı durdurur. İtirazın reddi halinde, ret kararının tebliğinden itibaren 30 gün içinde idare mahkemesinde dava açılabilir. Ceza tebliğden itibaren 15 gün içinde ödenirse 1/4 indirim uygulanır (3/4'ü tahsil edilir); peşin ödeme itiraz/dava hakkını ortadan kaldırmaz.",
+   "ipucu": [
+    "Kod seçimi işsizlik ödeneğini belirler: istifa (03) veya 42–50 kodlarıyla bildirilen sigortalı işsizlik ödeneği alamaz; gerçeğe aykırı kod işçinin dava açmasına ve SGK'nın işsizlik ödeneğini geri istemesine yol açabilir.",
+    "19 (mevsim bitimi), 20 (kampanya bitimi) ve 30 (vize süresi bitimi) kodları sözleşmeyi askıya alır; işçi geri dönmeyecekse 04 kullanılmalıdır.",
+    "Ayrılış tarihini ayın son günü yerine fiilen çalışılan son gün olarak girin; arada kalan günler MUHSGK'da eksik gün (16) olarak görünür."
+   ],
+   "kaynak": [
+    "https://e.sgk.gov.tr/Uygulamalar/Detay/4a-Sigortali-Ise-Giris-ve-Isten-Ayrilis-Bildirgesi-2024-10-02-10-08-51",
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/",
+    "https://www.muhasebetr.com/sgk-isten-cikis-kodlari/",
+    "https://multinet.com.tr/blog/insan-kaynaklari/isten-cikis-kodlari",
+    "https://www.alomaliye.com/2026/01/02/2026-yili-5510-sayili-kanun-idari-para-cezalari/"
+   ]
+  },
+  {
+   "k": "muhtasar-prim-hizmet-beyannamesi",
+   "ad": "Muhtasar ve Prim Hizmet Beyannamesi (MUHSGK) – SGK Hizmet Bilgileri",
+   "taraf": "isveren",
+   "kod": "Muhtasar ve Prim Hizmet Beyannamesi (GİB e-Beyanname) – SGK Hizmet Bilgileri bölümü; geçmiş dönem bildirimleri ve genel bütçeli kamu idareleri için e-BildirgeV2",
+   "kisa": "4/a sigortalıların aylık gün, prime esas kazanç, eksik gün, belge türü ve kanun numarası (teşvik) bilgilerinin bildirildiği aylık beyanname. Özel sektörde ayrı aylık prim ve hizmet belgesi verilmez; SGK bildirimi muhtasar beyannameyle birlikte (MUHSGK) GİB üzerinden yapılır.",
+   "kim": "4/a sigortalı çalıştıran tüm işverenler (muhtasar yükümlüsü olmayanlar da MUHSGK verir). Genel bütçeli kamu idareleri ve geçmiş dönem bildirimleri e-BildirgeV2 üzerinden yapılır.",
+   "ne_zaman": "Hizmetin ait olduğu ayı izleyen ayın 26. günü sonuna kadar (Kurumca ilan edilen sürelere göre; tatile denk gelirse ilk iş günü). Primler hizmetin ait olduğu ayı izleyen ayın sonuna kadar ödenir. Ek/iptal belgeler: Kurumca belirlenen sürelerde; geçmiş dönem ek belgeler SGM onayına tabidir.",
+   "nereden": [
+    [
+     "GİB İnternet Vergi Dairesi / e-Beyanname (MUHSGK)",
+     "https://ebeyanname.gib.gov.tr/"
+    ],
+    [
+     "e-BildirgeV2",
+     "https://ebildirge.sgk.gov.tr/EBildirgeV2"
+    ],
+    [
+     "e-BildirgeV2 tanıtım ve kılavuz",
+     "https://e.sgk.gov.tr/Uygulamalar/Detay/E-BildirgeV2-2026-04-21-09-12-18"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Belge türü",
+     "Sigortalının tabi olduğu sigorta kolları. En sık: 01 (tüm sigorta kolları), 02 (SGDP – emekli çalışan), 07 (çırak/mesleki eğitim öğrencisi), 13 (işsizlik sigortası kesilmeyenler), 22 (stajyer). Tam liste 'belge_turleri' tablosunda."
+    ],
+    [
+     "Kanun numarası (teşvik)",
+     "Teşviksiz: 00000; genel 5510 md.81/1-ı indirimi: 05510 (imalat dışı sektörlerde 2026'da 2 puan, imalatta 5 puan); 4447 geçici 10 (genç/kadın/mesleki belge): 06111; engelli: 14857 (4857 md.30 kapsamı, 5510 md.81/1-ı ile birlikte); diğerleri teşvik sorgulama ekranında görünür. Bir sigortalı için aynı ayda tek kanun numarası (en avantajlı olan) seçilir."
+    ],
+    [
+     "Prim günü",
+     "Ay içinde çalışılan ve ücretli izin, hafta tatili, genel tatil dahil ücret ödenen gün sayısı; ay 28/29/31 çekse de tam ayda 30 gün."
+    ],
+    [
+     "Prime esas kazanç (hak edilen ücret, prim/ikramiye)",
+     "Brüt ücret + prim, ikramiye ve benzeri ödemeler; PEK alt sınırı 2026 günlük 1.101,00 TL (aylık 33.030,00 TL), üst sınırı günlük 9.909,00 TL (aylık 297.270,00 TL). Yemek parasının günlük 158,00 TL'si, çocuk zammının 660,60 TL/ay'ı, aile zammının 3.303,00 TL/ay'ı istisnadır."
+    ],
+    [
+     "Eksik gün sayısı ve nedeni",
+     "30 günden az bildirilen sigortalılar için 'eksik_gun' tablosundaki kod. Birden fazla neden varsa 12 (birden fazla neden) seçilir. Belgeler işyerinde saklanır, istendiğinde ibraz edilir."
+    ],
+    [
+     "Giriş/çıkış günü",
+     "Ay içinde işe giren/çıkan sigortalı için tarih; işe giriş/işten ayrılış bildirgeleriyle tutarlı olmalı."
+    ],
+    [
+     "Meslek kodu",
+     "ISCO-08 meslek kodu."
+    ],
+    [
+     "Tahakkuk nedeni / hizmet dönemi",
+     "A: Asıl, E: Ek, İ: İptal. Ek belgede bildirilmemiş kazanç veya gün; iptalde hatalı belgenin tamamı/ilgili sigortalı. Geçmiş döneme ait ücret farkları ayrıca hizmet dönemi ile belirtilir."
+    ],
+    [
+     "Kısmi süreli / puantaj bilgisi",
+     "Kısmi süreli çalışanlarda eksik gün nedeni 06; puantajla çalışmada 07."
+    ]
+   ],
+   "adimlar": [
+    "Ay sonunda puantajı kapatın: çalışılan gün, rapor, ücretsiz izin, devamsızlık, giriş/çıkış tarihlerini kesinleştirin.",
+    "Bordroyu hazırlayın; PEK alt/üst sınırlarını, istisnaları (yemek, çocuk, aile zammı) ve SGDP'li sigortalıları ayrı işaretleyin.",
+    "e-Bildirge 'Tescil ve Hizmet > Teşvik Tanımlama/Sorgulama' ekranlarından her sigortalı için uygun kanun numarasını sorgulayın (6111, engelli vb. ve 05510).",
+    "Eksik günü olan her sigortalı için doğru eksik gün kodunu belirleyin (rapor için e-Vizite'de çalışmadığına dair bildirimi yapın).",
+    "Bordro programından MUHSGK XML/ekran verilerini oluşturun veya GİB e-Beyanname'de 'SGK Hizmet Bilgileri' bölümünü doldurun.",
+    "Belge türü ve kanun numarası bazında satırları kontrol edin; aynı sigortalı için mükerrer satır olmasın.",
+    "Beyannameyi ayın 26'sına kadar gönderin; GİB onayından sonra SGK tahakkuku e-Bildirge'de oluşur.",
+    "e-Bildirge'den tahakkuk fişini ve hizmet listesini indirip kontrol edin; teşvik tutarları tahakkuktan düşülmüş olmalı.",
+    "Primi ertesi ayın son gününe kadar banka (e-Ödeme) veya 'Kart ile Prim Ödeme' ile ödeyin; teşviklerden yararlanmak için süresinde ödeme ve borçsuzluk şarttır.",
+    "Hata varsa ek veya iptal bildirimini süresinde yapın; geçmiş dönem bildirimleri e-BildirgeV2 ile verilip SGM onayına düşer."
+   ],
+   "belgeler": [
+    "Ücret bordrosu ve puantaj",
+    "İstirahat raporları (e-Vizite)",
+    "Ücretsiz izin talep dilekçeleri",
+    "Devamsızlık tutanakları",
+    "Kısmi süreli iş sözleşmeleri",
+    "Teşvik dayanağı belgeler (İŞKUR kaydı, diploma, engelli raporu)"
+   ],
+   "ceza": "5510 md.102/1-c: Asıl belgenin süresinde verilmemesi halinde, belgede kayıtlı/kayıtlı olması gereken her sigortalı için asgari ücretin 1/5'i (6.606,00 TL); ek belgede her sigortalı için 1/8'i (4.128,75 TL); her iki halde bir belge için asgari ücretin 2 katını (66.060,00 TL) geçemez. Ek belgelerin Kurum denetimi/tespiti sonucu verilmesi veya denetimle eksik bildirim tespiti halinde tespit edilen her ay için 2 katı (66.060,00 TL) ceza uygulanabilir. 30 günden az çalışma (eksik gün) bilgisinin hiç veya geçersiz belgeyle bildirilmesi: sigortalı başına 1/2 (16.515,00 TL). 30 gün içinde kendiliğinden verme indiriminin bu bende uygulanma kapsamı için 'unverified' listesine bakınız. Teşvikli belgelerin süresinde verilmemesi veya prim borcu nedeniyle teşvik geri alınabilir; ayrıca 6183'e göre gecikme cezası ve zammı işler. İdari para cezasına tebliğden itibaren 15 gün içinde SGK'ya (il müdürlüğü / SGM) itiraz edilebilir; itiraz tahsilatı durdurur. İtirazın reddi halinde, ret kararının tebliğinden itibaren 30 gün içinde idare mahkemesinde dava açılabilir. Ceza tebliğden itibaren 15 gün içinde ödenirse 1/4 indirim uygulanır (3/4'ü tahsil edilir); peşin ödeme itiraz/dava hakkını ortadan kaldırmaz.",
+   "ipucu": [
+    "Emekli çalışanı belge türü 01 ile bildirmek; geriye dönük düzeltme ek/iptal belge ve cezaya yol açar.",
+    "Eksik gün kodunu 13 (diğer) ile geçiştirmek; denetimde eksik gün nedeni belgelendirilemezse prim farkı tahakkuk eder.",
+    "Teşvik kanun numarasını işe giriş ayında seçmeyi unutmak; geçmiş aylar için teşvik talebi sınırlı ve ek belge gerektirir.",
+    "Ay içinde işe giriş/çıkış tarihleriyle prim gününün tutmaması.",
+    "PEK alt sınırının altında kazanç bildirmek; kısmi süreli değilse en az asgari ücret üzerinden bildirim yapılır."
+   ],
+   "kaynak": [
+    "https://e.sgk.gov.tr/Uygulamalar/Detay/E-BildirgeV2-2026-04-21-09-12-18",
+    "https://cottgroup.com/tr/mevzuat/item/2026-yilina-ait-prime-esas-kazanclarin-alt-ve-ust-sinirlari-ile-guncel-tutarlarin-aciklandigi-genelge-yayimlandi",
+    "https://www.alomaliye.com/2026/07/29/sgk-primleri-rehberi-2026/",
+    "https://www.alomaliye.com/2026/01/02/2026-yili-5510-sayili-kanun-idari-para-cezalari/",
+    "https://cottgroup.com/tr/blog/calisma-hayati/item/2026-sgk-idari-para-cezalari",
+    "https://www.alomaliye.com/2026/08/10/genc-kadin-ve-mesleki-belge-sahibi-olanlarin-istihdamina-yonelik-tesvik-2026/"
+   ]
+  },
+  {
+   "k": "is-kazasi-meslek-hastaligi-bildirimi",
+   "ad": "İş Kazası ve Meslek Hastalığı Bildirimi (E-Bildirim)",
+   "taraf": "isveren",
+   "kod": "SSİY Ek-032 İş Kazası ve Meslek Hastalığı Bildirim Formu (sağlık hizmet sunucuları için Ek-082)",
+   "kisa": "İşyerinde veya işveren adına görevliyken meydana gelen iş kazasının ya da tespit edilen meslek hastalığının SGK'ya elektronik bildirimi.",
+   "kim": "4/a sigortalı çalıştıran işveren (işveren vekili/İSG profesyoneli işveren adına girebilir); 4/b sigortalı kendisi; sağlık hizmet sunucuları ayrıca.",
+   "ne_zaman": "İş kazası: yetkili kolluk kuvvetlerine derhal; SGK'ya kazadan sonraki 3 iş günü içinde (5510 md.13, 6331 md.14). İşverenin kontrolü dışındaki yerde meydana gelen kazalarda 3 iş günü kazanın öğrenildiği tarihten başlar. Meslek hastalığı: işverence öğrenildiği veya kendisine bildirildiği tarihten itibaren 3 iş günü içinde (5510 md.14, 6331 md.14). 4/b sigortalılar kendisi bildirir (5510 md.13'e göre kazadan sonraki 1 ay içinde). Sağlık hizmet sunucuları kendilerine intikal eden olayları en geç 10 gün içinde bildirir.",
+   "nereden": [
+    [
+     "e-SGK: İş Kazası Meslek Hastalığı E-Bildirim",
+     "https://e.sgk.gov.tr/Uygulamalar/Detay/Is-Kazasi-Meslek-Hastaligi-E-Bildirim-2025-02-10-09-10-23"
+    ],
+    [
+     "Resmi form sayfası (Ek-032)",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "İşyeri bilgileri",
+     "İşyeri sicil no, NACE, tehlike sınıfı, işyeri adresi (otomatik)."
+    ],
+    [
+     "Kazalı bilgileri",
+     "T.C. kimlik no, işe giriş tarihi, meslek, görevi, kazadan önceki işi."
+    ],
+    [
+     "Kaza tarihi ve saati",
+     "Kazanın gerçekleştiği gün/saat; işe başlama saati ile birlikte."
+    ],
+    [
+     "Kazanın yeri",
+     "İşyeri içi, işyeri dışı (görevli), servis aracı vb. 5510 md.13'teki hallerden hangisi olduğu (işyerinde bulunduğu sırada, işveren tarafından yürütülen iş nedeniyle, görevli olarak başka yere gönderilme, emzirme süresi, işverence sağlanan taşıtla gidiş-geliş)."
+    ],
+    [
+     "Kazanın oluş şekli",
+     "Kısa ve olgusal anlatım; ESAW sınıflamasına uygun seçimler: çalışma ortamı, iş süreci, özel faaliyet, sapma, yaralanmaya neden olan temas şekli, yaralanan vücut bölgesi, yaralanma türü."
+    ],
+    [
+     "Tanıklar",
+     "Ad-soyad, T.C. kimlik no; tanık ifadeleri işyerinde saklanır."
+    ],
+    [
+     "Kazanın sonucu",
+     "Ölüm/yaralanma, iş göremezlik durumu, sevk edilen sağlık kuruluşu."
+    ],
+    [
+     "Meslek hastalığı bilgileri",
+     "Hastalığın teşhis tarihi, teşhisi koyan sağlık kurulu/hastane, maruziyet süresi ve etkenler."
+    ]
+   ],
+   "adimlar": [
+    "İlk yardımı sağlayın ve kazalıyı sağlık kuruluşuna sevk edin (kurum içi hekim/112).",
+    "Kazayı derhal yetkili kolluk kuvvetine (polis/jandarma) bildirin.",
+    "Olay yeri tespit tutanağı, fotoğraf ve tanık ifadelerini alın; varsa kamera kaydını muhafaza edin.",
+    "İSG uzmanı ve işyeri hekimiyle kök neden analizini başlatın.",
+    "e-SGK 'İş Kazası Meslek Hastalığı E-Bildirim' uygulamasına işyeri kullanıcı bilgileriyle girin.",
+    "Kazalının T.C. kimlik numarasını girip kaza tarih-saat ve yer bilgilerini doldurun.",
+    "ESAW alanlarını (sapma, temas şekli, yaralanma türü, vücut bölgesi) olaya uygun seçin.",
+    "Tanık bilgilerini ve kazanın oluş şeklini yazın; formu onaylayıp gönderin.",
+    "Bildirim çıktısını ve onay numarasını saklayın; kazalının istirahat raporu e-Vizite'ye 'iş kazası' vakasıyla düşer.",
+    "Rapor bitiminde e-Vizite'de çalışmadığına dair bildirimi 'iş kazası' vakası ile yapın.",
+    "Ölümlü/ağır kazalarda Çalışma ve İş Kurumu/İş Teftiş incelemesine hazırlık için tüm belgeleri dosyalayın."
+   ],
+   "belgeler": [
+    "Olay yeri tespit tutanağı",
+    "Tanık ifadeleri",
+    "Kolluk bildirim tutanağı",
+    "Sağlık kuruluşu raporu",
+    "İSG eğitim kayıtları, risk değerlendirmesi (denetimde istenir)",
+    "Meslek hastalığında sağlık kurulu raporu"
+   ],
+   "ceza": "Süresinde bildirim yapılmazsa 6331 sayılı Kanun md.26 uyarınca idari para cezası uygulanır; 2026 tutarları işyerinin tehlike sınıfı ve çalışan sayısına göre: Az tehlikeli <10 ve 10–49 çalışan 44.443 TL, 50+ 66.664 TL; Tehlikeli <10: 55.553 TL, 10–49: 66.664 TL, 50+: 88.886 TL; Çok tehlikeli <10: 66.664 TL, 10–49: 88.886 TL, 50+: 133.329 TL (PwC, 2026). Sağlık hizmet sunucusu 10 günlük süreye uymazsa 44.443 TL. Ayrıca 5510 md.23 uyarınca bildirim tarihine kadar SGK'nın ödediği geçici iş göremezlik ödeneği işverenden tahsil edilir; kusur/kasıt halinde md.21 rücu uygulanır. Bildirim yükümlülüğünün ihlali 5510 md.81/1-ı prim indirimini de etkileyebilir.",
+   "ipucu": [
+    "3 iş günü kazadan sonraki günden başlar; kaza günü sayılmaz, cumartesi iş günü sayılmaz (resmi tatiller hariç tutulur).",
+    "'Hafif yaralanma, rapor almadı' diye bildirim yapmamak: rapor alınmasa da iş kazası bildirilir.",
+    "Servis aracıyla işe gelirken olan trafik kazası iş kazasıdır; kendi aracıyla gidiş-gelişteki kaza (işveren taşıtı değilse) iş kazası sayılmayabilir.",
+    "ESAW alanlarını 'diğer' ile doldurmak istatistikleri ve denetim incelemesini zorlaştırır."
+   ],
+   "kaynak": [
+    "https://e.sgk.gov.tr/Uygulamalar/Detay/Is-Kazasi-Meslek-Hastaligi-E-Bildirim-2025-02-10-09-10-23",
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/",
+    "https://www.pwc.com.tr/tr/medya/kose-yazilari/celal-ozcan/is-kazasi-sigortasi-ve-2026-yili-idari-para-cezasi-tutarlari.html",
+    "https://www.alomaliye.com/2026/01/08/is-kazasi-idari-para-cezasi-ve-bildirim-yukumlulugu/"
+   ]
+  },
+  {
+   "k": "vizite-calismadigina-dair-bildirim",
+   "ad": "E-Vizite: Rapor Onayı / Çalışılmadığına Dair Bildirim",
+   "taraf": "isveren",
+   "kod": "SGK Form ve Dilekçeler: Ek-031 Çalışılmadığına Dair Bildirim (uygulamada E-Vizite üzerinden elektronik)",
+   "kisa": "İstirahat raporu alan sigortalının rapor süresinde çalışmadığının işverence SGK'ya bildirilmesi. Geçici iş göremezlik ödeneği bu bildirime göre ödenir.",
+   "kim": "4/a sigortalı çalıştıran işverenler veya yetkilendirdikleri kullanıcılar (ana e-Bildirge kullanıcısı aynı işyeri için alt kullanıcı yetkilendirebilir).",
+   "ne_zaman": "Raporun sona erdiği aya ait muhtasar ve prim hizmet beyannamesinin verilme süresinin sonuna kadar (SSİY md.40/9) – pratikte izleyen ayın 26'sı.",
+   "nereden": [
+    [
+     "E-Vizite uygulaması",
+     "https://uyg.sgk.gov.tr/vizite/welcome.do"
+    ],
+    [
+     "Uygulama sayfası (Çalışılmadığına Dair Bildirim Girişi 4A)",
+     "https://e.sgk.gov.tr/Uygulamalar/Detay/Calisilmadigina-Dair-Bildirim-Girisi-4A-2025-12-19-11-26-07"
+    ],
+    [
+     "Resmi form (Ek-031)",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Vaka türü",
+     "Hastalık, iş kazası, meslek hastalığı, analık. Rapordaki vaka ile uyumlu seçilmeli."
+    ],
+    [
+     "Rapor bilgileri",
+     "Rapor başlangıç–bitiş tarihleri, rapor no, sağlık kuruluşu (sistemden gelir)."
+    ],
+    [
+     "Çalıştı / Çalışmadı",
+     "Sigortalı rapor süresince çalışmadıysa 'Çalışmamıştır' seçilip onaylanır."
+    ],
+    [
+     "Ücret ödemesi (varsa)",
+     "Rapor süresine ait ücret ödenip ödenmediği/prime esas kazanç bilgisi; ödenen ücret ödenekten mahsup edilebilir."
+    ],
+    [
+     "Personelim değildir",
+     "Ayrılmış veya başka işyerine ait raporlar listeden bu seçenekle çıkarılır."
+    ]
+   ],
+   "adimlar": [
+    "E-Vizite'ye işyeri kullanıcı kodu, sistem şifresi ve işyeri şifresiyle girin (SMS doğrulaması istenebilir).",
+    "'Rapor Arama' veya 'Onaylanmamış Raporlar' menüsünden dönemi seçin.",
+    "Raporun vaka türünü ve tarihlerini kontrol edin.",
+    "Sigortalının rapor süresince çalışıp çalışmadığını puantajdan teyit edin.",
+    "'Çalışmamıştır' seçerek bildirimi onaylayın; ücret ödendiyse ilgili alanı doldurun.",
+    "Ayrılmış personele ait raporları 'Personelim Değildir' ile çıkarın.",
+    "Onaylanan raporların gün sayısını MUHSGK'de eksik gün 01 (istirahat) olarak bildirin.",
+    "Onaylanmış rapor listesinin çıktısını puantaj dosyasında saklayın."
+   ],
+   "belgeler": [
+    "İstirahat raporu (sistemde)",
+    "Puantaj kayıtları"
+   ],
+   "ceza": "Kaynaklara göre bildirim hiç yapılmazsa sigortalı başına asgari ücretin 1/2'si (16.515,00 TL); süresinden sonra veya elektronik ortam dışında yapılırsa 1/10'u (3.303,00 TL) idari para cezası uygulanır (5510 md.102; ayrıntı 'unverified' listesinde). Bildirim yapılmazsa sigortalının ödeneği gecikir.",
+   "ipucu": [
+    "Rapor ayı ile rapor bitiş ayını karıştırmak: süre raporun bittiği ayın beyanname süresine göre işler.",
+    "Rapor süresinde ücret ödenmişse bunu bildirmemek ödenekte mükerrer ödemeye yol açar.",
+    "İlk 2 gün (hastalıkta) SGK ödemez; toplu iş sözleşmesi/iç yönetmelikle işveren ödeyebilir, bu ödeme PEK'e dahil edilir.",
+    "Vaka türünü iş kazası yerine hastalık seçmek ödenek oranını ve iş kazası bildirim takibini bozar."
+   ],
+   "kaynak": [
+    "https://e.sgk.gov.tr/Uygulamalar/Detay/Calisilmadigina-Dair-Bildirim-Girisi-4A-2025-12-19-11-26-07",
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/",
+    "https://kolayik.com/blog/calismadigina-dair-bildirim"
+   ]
+  },
+  {
+   "k": "isyeri-devir-nakil-kapanis",
+   "ad": "İşyeri Devri, Nakli, Unvan/Tür Değişikliği ve Kapanış (Kanun Kapsamından Çıkış) Bildirimi",
+   "taraf": "isveren",
+   "kod": "İşyeri Bildirgesi (Ek-072) ile veya yazılı dilekçe",
+   "kisa": "Mevcut işyeri dosyasındaki işveren, adres, unvan/tür değişikliklerinin ve faaliyetin sona ermesinin SGK'ya bildirilmesi.",
+   "kim": "İşyerini devralan yeni işveren, mirasçılar, adres değiştiren işveren, birleşen/tür değiştiren şirketler, faaliyeti sona eren işveren.",
+   "ne_zaman": "Devir: devir tarihini izleyen 10 gün; mirasçılar: ölümden itibaren en geç 3 ay; başka ile nakil: nakil tarihinden itibaren 10 gün (yeni üniteye bildirge); aynı ilde başka ünite alanına nakil: 10 gün içinde eski ve yeni üniteye yazılı bildirim; aynı ünite alanında adres değişikliği: 10 gün içinde yazıyla; tür değişikliği/birleşme: ticaret sicili tescil ilanından itibaren 10 gün; işletme adı değişikliği: bildirge gerekmez, ticaret sicil gazetesiyle yazılı bildirim. Kapanış: sigortalı çalıştırılmayan işyeri için son sigortalının ayrılışı ve son MUHSGK'nın verilmesinin ardından dilekçe ile kanun kapsamından çıkış talebi.",
+   "nereden": [
+    [
+     "e-Devlet İşyeri Bildirgesi",
+     "https://uyg.sgk.gov.tr/stw/eDevletGiris"
+    ],
+    [
+     "SGK il müdürlüğü / SGM (yazılı bildirim)",
+     "https://www.sgk.gov.tr/il-mudurlukleri"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Eski ve yeni işveren bilgileri",
+     "Devirde devreden ve devralanın kimlik/vergi numaraları, devir tarihi."
+    ],
+    [
+     "Devir türü",
+     "İşyerinin tamamen devri, kısmi devir, intikal (miras), birleşme, tür değişikliği."
+    ],
+    [
+     "Yeni adres",
+     "Nakilde yeni adres ve bağlı olacağı ünite."
+    ],
+    [
+     "Kapanış tarihi ve nedeni",
+     "Son sigortalının ayrılış tarihi, faaliyetin sona erme tarihi, vergi kaydının terkin tarihi."
+    ]
+   ],
+   "adimlar": [
+    "Değişikliğin türünü belirleyin (devir, intikal, nakil, tür değişikliği, kapanış).",
+    "Devir/intikalde yeni işveren adına işyeri bildirgesi verin; yeni dosya açılmaz, eski sicil numarası devam eder.",
+    "İl dışı nakilde yeni üniteye işyeri bildirgesi verin; il içi ünite değişikliğinde iki üniteye dilekçe verin.",
+    "Tür değişikliği/birleşmede ticaret sicil gazetesini ekleyerek bildirim yapın.",
+    "Devirde sigortalıların hizmetleri devralan işveren dosyasında devam eder; ayrılış/giriş bildirgesi verilmez (işverenler arası devir 4857 md.6).",
+    "Kapanışta tüm sigortalıların işten ayrılış bildirgelerini ve son ayın MUHSGK'sini verin.",
+    "Kapanış için prim borcu, gecikme ve İPC borçlarını kapatın; e-Borcu Yoktur/ilişiksizlik kontrolü yapın.",
+    "Kanun kapsamından çıkış için ünitesine dilekçe ve vergi terkin belgesini verin."
+   ],
+   "belgeler": [
+    "Devir sözleşmesi",
+    "Ticaret sicil gazetesi",
+    "Veraset ilamı (intikalde)",
+    "Vergi levhası / terkin yazısı",
+    "Yeni adres belgeleri"
+   ],
+   "ceza": "Devir/intikal ve nakil bildirimleri de 5510 md.11 kapsamındaki işyeri bildirgesi yükümlülüğüdür; süresinde yapılmazsa işyeri bildirgesi cezası uygulanır: bilanço esası 99.090,00 TL, işletme esası 66.060,00 TL, defter tutmayan 33.030,00 TL. 30 gün içinde kendiliğinden bildirim ve 15 gün içinde ödeme halinde 1/4. Devralan işveren devredenin prim borçlarından müteselsilen sorumludur (5510 md.88).",
+   "ipucu": [
+    "Devirde yeni işveren adına yeni işyeri dosyası açtırıp sigortalıları çıkış-giriş yapmak; teşvik ve kıdem sürekliliği bozulur, gereksiz ceza riski doğar.",
+    "Kapanışta vergi kaydını terk ettirip SGK dosyasını açık bırakmak; borç ve bildirim yükümlülükleri devam edebilir.",
+    "Adres değişikliğini yalnızca vergi dairesine bildirmek."
+   ],
+   "kaynak": [
+    "https://www.alomaliye.com/2026/05/29/sgk-isyeri-isveren-ve-isyerinin-bildirimi-2026/",
+    "https://e.sgk.gov.tr/Uygulamalar/Detay/Isyeri-Bildirgesi-2026-10-27-04-20-49",
+    "https://www.alomaliye.com/2026/01/02/2026-yili-5510-sayili-kanun-idari-para-cezalari/"
+   ]
+  },
+  {
+   "k": "alt-isveren-bildirimi",
+   "ad": "Alt İşveren (Taşeron) Tescili ve Bildirimi",
+   "taraf": "isveren",
+   "kod": "İşyeri Bildirgesi (Ek-072) + alt işverenlik sözleşmesi",
+   "kisa": "Asıl işverenden iş alan alt işverenin, asıl işverenin işyeri sicil numarasına bağlı alt işveren numarasıyla tescil edilmesi.",
+   "kim": "Asıl işverenin işyerinde, mal veya hizmet üretiminin yardımcı işlerinde ya da işletmenin ve işin gereği teknolojik nedenlerle uzmanlık gerektiren asıl işin bir bölümünde iş alan alt işverenler (4857 md.2, 5510 md.12).",
+   "ne_zaman": "Alt işveren, sigortalı çalıştırmaya başladığı tarihte (en geç) işyeri bildirgesini verir; sözleşme örneği yükümlülüklerin başlamasından önce Kuruma sunulur. İhale işlerinde ihale sözleşmesi alt işverenliği yasaklıyorsa tescilden sonra ihale makamına bilgi verilir.",
+   "nereden": [
+    [
+     "e-Devlet İşyeri Bildirgesi",
+     "https://uyg.sgk.gov.tr/stw/eDevletGiris"
+    ],
+    [
+     "SGK form sayfası",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Asıl işveren sicil numarası",
+     "Alt işveren dosyası asıl işverenin sicil numarasına bağlanır (sicilde alt işveren hanesi)."
+    ],
+    [
+     "Alt işveren sözleşme tarihi ve süresi",
+     "Sözleşmedeki başlangıç ve bitiş tarihleri."
+    ],
+    [
+     "İşin konusu",
+     "Yardımcı iş mi, asıl işin bir bölümü mü; teknolojik uzmanlık gerekçesi."
+    ],
+    [
+     "Alt işverenin kendi bilgileri",
+     "Vergi no, unvan, adres, NACE."
+    ]
+   ],
+   "adimlar": [
+    "Alt işverenlik sözleşmesini yazılı yapın; işin tanımı, yeri, süresi, işçi sayısını açıkça belirtin.",
+    "Asıl işin bölümü alınıyorsa teknolojik uzmanlık gerekçesini sözleşmede ve ekli belgelerde gösterin.",
+    "Alt işveren e-Devlet'ten işyeri bildirgesini 'alt işveren' türünde doldurur, asıl işverenin sicil numarasını girer.",
+    "Alt işverenlik sözleşmesi ve ekleri yüklenir (gerektiğinde noter onaylı örnek veya aslı ünitesine sunulur).",
+    "Ünite inceleme yapar; muvazaa şüphesinde müfettiş incelemesine sevk edebilir.",
+    "Onaydan sonra alt işveren numarası oluşur; alt işverenin işçileri bu dosyadan işe giriş yapılır.",
+    "Ayrıca Alt İşverenlik Yönetmeliği uyarınca Çalışma ve Sosyal Güvenlik Bakanlığı'na (bölge müdürlüğü) bildirim yükümlülüğü gözetilir.",
+    "Asıl işveren, alt işverenin prim borçlarından müteselsilen sorumlu olduğundan aylık bordro/ödeme kontrollerini yapar.",
+    "Sözleşme sona erince alt işveren işçilerinin ayrılışlarını verir ve dosyayı kapattırır."
+   ],
+   "belgeler": [
+    "Alt işverenlik sözleşmesi",
+    "İş yeri ve iş tanımına ilişkin ekler",
+    "Teknolojik uzmanlık belgeleri (asıl işin bölümünde)",
+    "İmza sirküleri, vergi levhası",
+    "İhale işlerinde ihale sözleşmesi"
+   ],
+   "ceza": "Süresinde verilmeyen işyeri bildirgesi için md.102/1-a cezaları (99.090,00 TL / 66.060,00 TL / 33.030,00 TL). Kurum muvazaa tespit ederse alt işveren işçileri başlangıçtan itibaren asıl işverenin işçisi sayılır; teşvikler geri alınabilir.",
+   "ipucu": [
+    "Asıl işin bölümünü 'teknolojik uzmanlık' gerekçesi olmadan devretmek muvazaa sayılır.",
+    "Asıl işverenin eski işçilerini alt işverene geçirip çalıştırmak hakların kısıtlanması sayılarak muvazaa karinesi oluşturur.",
+    "Alt işveren dosyasının asıl işverenin farklı bir işyeri dosyasına bağlanması."
+   ],
+   "kaynak": [
+    "https://www.alomaliye.com/2026/05/29/sgk-isyeri-isveren-ve-isyerinin-bildirimi-2026/",
+    "https://www.alomaliye.com/2024/10/04/alt-isverenlik-bildirimi-sgk-genel-yazi/",
+    "https://e.sgk.gov.tr/Uygulamalar/Detay/Isyeri-Bildirgesi-2026-10-27-04-20-49"
+   ]
+  },
+  {
+   "k": "gecici-is-iliskisi",
+   "ad": "Geçici İş İlişkisi Bildirimi",
+   "taraf": "isveren",
+   "kod": "Ayrı resmi form numarası tespit edilemedi (e-Bildirge / işe giriş uygulamasında işlem)",
+   "kisa": "İşçinin özel istihdam bürosu aracılığıyla veya holding/şirketler topluluğu içinde başka işverene geçici olarak devri (4857 md.7). SGK açısından sigortalılık devreden (asıl) işveren dosyasında devam eder.",
+   "kim": "Geçici işçi sağlayan özel istihdam bürosu veya holding içindeki devreden işveren; geçici iş ilişkisi kurulan (işçiyi kullanan) işveren.",
+   "ne_zaman": "Geçici iş ilişkisi başlamadan önce; işe giriş bildirgesi geçici işçi sağlayan/devreden işveren tarafından genel süre kuralına göre (bir gün önce) verilir.",
+   "nereden": [
+    [
+     "e-SGK işveren uygulamaları",
+     "https://e.sgk.gov.tr/Uygulamalar/Isveren"
+    ],
+    [
+     "İŞKUR – özel istihdam büroları",
+     "https://www.iskur.gov.tr/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Geçici iş ilişkisi kurulan işveren",
+     "Vergi no / işyeri sicil numarası."
+    ],
+    [
+     "Başlangıç–bitiş tarihi",
+     "4857 md.7'deki azami sürelere uygun (özel istihdam bürosu için genelde 4 ay, holding içi en fazla 6 ay, iki defa yenilenebilir)."
+    ],
+    [
+     "Sigortalı bilgileri",
+     "T.C. kimlik no, meslek kodu."
+    ]
+   ],
+   "adimlar": [
+    "Geçici iş ilişkisinin 4857 md.7'deki hallerden birine dayandığını belirleyin.",
+    "Yazılı geçici iş ilişkisi sözleşmesini (ÖİB ile kullanan işveren arasında) yapın.",
+    "İşçinin yazılı onayını alın (holding içi devirde).",
+    "Sigortalının işe giriş bildirgesini devreden/ÖİB işyeri dosyasından verin.",
+    "e-Bildirge'de varsa geçici iş ilişkisi kurulan işveren bilgisini işleyin.",
+    "Ücret ve primler devreden/ÖİB tarafından ödenir; kullanan işveren ücret ödenmemesinden 6 ay içinde sorumludur.",
+    "Süre sonunda işçinin geri dönüşünü veya ayrılışını bildirin."
+   ],
+   "belgeler": [
+    "Geçici iş ilişkisi sözleşmesi",
+    "İşçinin yazılı onayı",
+    "ÖİB izin belgesi (İŞKUR)"
+   ],
+   "ceza": "İşe giriş bildirimi süresinde yapılmazsa her sigortalı için 33.030,00 TL (md.102/1-b). 4857 kapsamındaki ihlaller için İş Kanunu md.99 cezaları ayrıca uygulanır.",
+   "ipucu": [
+    "Geçici iş ilişkisini sürekli ihtiyaç için kullanmak alt işveren muvazaasına benzer sonuç doğurur.",
+    "Grev sırasında geçici işçi kullanılamaz.",
+    "Kullanan işveren de İSG yükümlülüklerinden sorumludur; iş kazası bildirimi devreden işveren dosyasından yapılır, kullanan işveren de bilgi vermekle yükümlüdür."
+   ],
+   "kaynak": [
+    "https://e.sgk.gov.tr/Uygulamalar/Isveren"
+   ]
+  },
+  {
+   "k": "kismi-sureli-calisma",
+   "ad": "Kısmi Süreli Çalışma Bildirimi",
+   "taraf": "isveren",
+   "kod": "İşe giriş bildirgesinde 'kısmi süreli' işaretlemesi; MUHSGK'de eksik gün kodu 06; özel sektörler için Ek-029 (şehir içi toplu taşıma), Ek-030 (sanatçı)",
+   "kisa": "Haftalık çalışma süresi tam süreli emsal işçiye göre önemli ölçüde (üçte iki oranına kadar) az olan sigortalıların bildirimi.",
+   "kim": "Kısmi süreli iş sözleşmesiyle işçi çalıştıran işverenler.",
+   "ne_zaman": "İşe giriş bildirgesi genel kurala göre (bir gün önce); aylık bildirim MUHSGK süresinde. Günlük çalışma saatleri toplamı 7,5 saate bölünerek prim günü bulunur.",
+   "nereden": [
+    [
+     "e-SGK 4a İşe Giriş",
+     "https://e.sgk.gov.tr/Uygulamalar/Detay/4a-Sigortali-Ise-Giris-ve-Isten-Ayrilis-Bildirgesi-2024-10-02-10-08-51"
+    ],
+    [
+     "Resmi form sayfası",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Kısmi süreli kutucuğu",
+     "İşe giriş bildirgesinde işaretlenir."
+    ],
+    [
+     "Prim günü",
+     "Ay içindeki toplam çalışma saati / 7,5 (küsurat tam güne iblağ edilir)."
+    ],
+    [
+     "Eksik gün nedeni",
+     "06 – Kısmi süreli çalışma."
+    ],
+    [
+     "PEK",
+     "Saat ücreti x çalışılan saat; PEK alt sınırı gün bazında uygulanır (gün x 1.101,00 TL)."
+    ]
+   ],
+   "adimlar": [
+    "Yazılı kısmi süreli iş sözleşmesi düzenleyin (haftalık saat, günler).",
+    "İşe giriş bildirgesinde 'kısmi süreli' seçeneğini işaretleyin.",
+    "Aylık puantajı saat bazında tutun.",
+    "Toplam saati 7,5'e bölerek prim gününü hesaplayın.",
+    "MUHSGK'de prim gününü ve eksik gün kodu 06'yı bildirin.",
+    "Sigortalıya, eksik günlerini isteğe bağlı sigorta ile tamamlayabileceğini (5510 md.50) bildirin."
+   ],
+   "belgeler": [
+    "Kısmi süreli iş sözleşmesi",
+    "Saat bazlı puantaj"
+   ],
+   "ceza": "Eksik gün nedeninin geçersiz/eksik bildirilmesi: sigortalı başına asgari ücretin 1/2'si (16.515,00 TL); denetimde fiilen tam süreli çalıştığı tespit edilirse fark primler ve md.102/1-c cezaları.",
+   "ipucu": [
+    "Tam süreli çalışanı kısmi süreli göstermek kayıt dışılığın en yaygın biçimidir ve denetimde prim farkı çıkarır.",
+    "Kısmi süreli çalışanın birden fazla işverende çalışması mümkündür; her işveren kendi gününü bildirir, toplam 30'u geçemez."
+   ],
+   "kaynak": [
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/",
+    "https://www.kazimceylan.av.tr/sgk-eksik-gun-kodlari",
+    "https://multinet.com.tr/blog/insan-kaynaklari/sgk-eksik-gun-nedenleri-ve-kodlari"
+   ]
+  },
+  {
+   "k": "gss-giris-bildirgesi",
+   "ad": "Genel Sağlık Sigortası Giriş Bildirgesi",
+   "taraf": "isveren",
+   "kod": "SSİY Ek-020 Genel Sağlık Sigortası Giriş Bildirgesi (açıklama Ek-021)",
+   "kisa": "Yalnızca genel sağlık sigortalısı olarak tescil edilmesi gereken kişilerin (örneğin bazı yabancılar, kurumca GSS'li sayılanlar) bildirimi.",
+   "kim": "Kendi adına veya Kurumca belirlenen kurum/kuruluşlar; işverenlerce ancak mevzuatın öngördüğü özel durumlarda.",
+   "ne_zaman": "GSS tescil gerektiren durumun başladığı tarihten itibaren 1 ay içinde (5510 md.61).",
+   "nereden": [
+    [
+     "Resmi form sayfası (Ek-020)",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ],
+    [
+     "e-Devlet SGK hizmetleri",
+     "https://www.turkiye.gov.tr/sosyal-guvenlik-kurumu"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Kimlik bilgileri",
+     "T.C. kimlik / YKN."
+    ],
+    [
+     "GSS tescil türü",
+     "5510 md.60'taki bent (örn. 60/1-g)."
+    ],
+    [
+     "Başlangıç tarihi",
+     "Tescil gerektiren olayın tarihi."
+    ]
+   ],
+   "adimlar": [
+    "Kişinin hangi bentten GSS'li olacağını belirleyin.",
+    "Ek-020'yi doldurun veya e-Devlet'ten tescil yapın.",
+    "SGM'ye teslim edin/gönderin.",
+    "60/1-g ise gelir testi başvurusunun 1 ay içinde yapılmasını sağlayın."
+   ],
+   "belgeler": [
+    "Kimlik",
+    "Durumu gösteren belge (ikamet izni vb.)"
+   ],
+   "ceza": "İşe giriş ve GSS giriş bildirgesinin süresinde verilmemesi md.102/1-b kapsamında her kişi için 33.030,00 TL.",
+   "ipucu": [
+    "4/a sigortalı için ayrıca GSS giriş bildirgesi verilmez; işe giriş bildirgesi GSS tescilini de sağlar."
+   ],
+   "kaynak": [
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/",
+    "https://www.alomaliye.com/2026/01/02/2026-yili-5510-sayili-kanun-idari-para-cezalari/"
+   ]
+  },
+  {
+   "k": "borcu-yoktur-belgesi",
+   "ad": "SGK Borcu Yoktur Yazısı (e-Borcu Yoktur) ve İlişiksizlik Belgesi",
+   "taraf": "isveren",
+   "kod": "SSİY Ek-069 4-1/a e-Borcu Yoktur Başvuru Formu",
+   "kisa": "İşyerinin prim, gecikme ve İPC borcu bulunmadığını gösteren elektronik belge; ihale, hakediş, teşvik ve kredi işlemlerinde istenir. İlişiksizlik belgesi ise ihale/özel inşaat işlerinin bitiminde hakediş/teminat iadesi için alınır.",
+   "kim": "İşverenler (e-Bildirge kullanıcıları), ihale makamları (kontrol için).",
+   "ne_zaman": "İhtiyaç anında; belge belirli süre (Kurumca belirtilen) geçerlidir. İlişiksizlik: iş bitiminde, asgari işçilik incelemesi sonrasında.",
+   "nereden": [
+    [
+     "e-Borcu Yoktur",
+     "https://e.sgk.gov.tr/Uygulamalar/Detay/E-Borcu-Yoktur-2025-04-16-04-15-18"
+    ],
+    [
+     "e-Borcu Yoktur Belgesi Kontrol",
+     "https://e.sgk.gov.tr/Uygulamalar/Detay/E-Borcu-Yoktur-Belgesi-Kontrol-Uygulamasi-2022-09-30-02-19-00"
+    ],
+    [
+     "İlişiksizlik Belgesi Başvuru",
+     "https://e.sgk.gov.tr/Uygulamalar/Detay/Ilisiksizlik-Belgesi-Basvuru-2022-09-30-02-09-50"
+    ],
+    [
+     "Resmi form (Ek-069)",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "İşyeri sicil numarası / vergi no",
+     "Tüm işyerleri veya tek işyeri bazında sorgu."
+    ],
+    [
+     "Belge talep amacı",
+     "İhale, hakediş, teşvik, banka vb."
+    ],
+    [
+     "Kapsam",
+     "Tüm Türkiye genelindeki dosyalar veya belirli il."
+    ]
+   ],
+   "adimlar": [
+    "e-SGK 'E-Borcu Yoktur' uygulamasına giriş yapın.",
+    "Sorgulama kapsamını (vergi no bazında tüm dosyalar) seçin.",
+    "Borç çıkarsa detayını görün; prim, gecikme zammı, İPC kalemlerini ödeyin.",
+    "Tecil/taksitli borçlar taksitler aksatılmadıkça borç sayılmaz; durumu kontrol edin.",
+    "Borç kalmadığında belgeyi oluşturup barkodlu PDF olarak indirin.",
+    "İlgili kuruma belgeyi veya doğrulama kodunu iletin; karşı taraf 'Belge Kontrol' ekranından doğrular.",
+    "İlişiksizlik için iş bitiminde 'İlişiksizlik Belgesi Başvuru' ekranından talep edin; asgari işçilik incelemesi tamamlanınca belge düzenlenir."
+   ],
+   "belgeler": [
+    "Gerek yok (elektronik)",
+    "İlişiksizlikte: iş bitim belgesi, hakediş ve sözleşme belgeleri"
+   ],
+   "ceza": "Ceza yok; borç varken ihale/hakediş ve teşvikler engellenir.",
+   "ipucu": [
+    "Farklı illerdeki pasif dosyalarda kalan küçük borçlar belge alımını engeller; vergi no bazında tüm dosyaları sorgulayın.",
+    "Kesinleşmemiş İPC'ler de borç olarak görünebilir; itiraz edilmişse durumunu teyit edin."
+   ],
+   "kaynak": [
+    "https://e.sgk.gov.tr/Uygulamalar/Detay/E-Borcu-Yoktur-2025-04-16-04-15-18",
+    "https://e.sgk.gov.tr/Uygulamalar/Detay/Ilisiksizlik-Belgesi-Basvuru-2022-09-30-02-09-50",
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+   ]
+  },
+  {
+   "k": "tecil-taksitlendirme",
+   "ad": "Prim Borcu Tecil ve Taksitlendirme / Yapılandırma Başvurusu",
+   "taraf": "isveren",
+   "kod": "SSİY Ek-076 Tecil ve Taksitlendirme Talep Formu; Ek-080 SMMM/YMM 'Çok Zor Durum' Raporu",
+   "kisa": "Vadesi geçmiş prim, işsizlik primi, kesinleşmiş İPC ve fer'ilerinin 6183 md.48 uyarınca tecil faiziyle taksitlendirilmesi. Ayrı bir af/yapılandırma kanunu olmadıkça kullanılan yol budur.",
+   "kim": "4/a işverenleri, 4/b sigortalılar, GSS borçluları.",
+   "ne_zaman": "Her zaman başvurulabilir; 2026'da SGK Genelgesi 2026/15 (19.06.2026) ile Haziran 2026 ve öncesi borçlar için azami süre 72 aya çıkarılmış, 16.06.2026–31.08.2026 döneminde yıllık %29 tecil faizi uygulanmış ve başvuru/ilk taksit için 31.08.2026 son gün belirlenmiştir (kampanya süresi geçmiştir). Ekim 2026 itibarıyla başvuruya açık bir yapılandırma (af) kanunu bulunmamaktadır.",
+   "nereden": [
+    [
+     "SGK il müdürlüğü / SGM (dilekçe + Ek-076)",
+     "https://www.sgk.gov.tr/il-mudurlukleri"
+    ],
+    [
+     "Resmi form sayfası (Ek-076, Ek-080)",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ],
+    [
+     "Gecikme Zammı Hesaplama",
+     "https://e.sgk.gov.tr/Uygulamalar/Detay/Gecikme-Zammi-Hesaplama-2022-09-30-02-32-42"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Borçlu bilgileri",
+     "İşyeri sicil no / T.C. kimlik no / vergi no."
+    ],
+    [
+     "Tecil talep edilen borç dönemleri",
+     "Ay bazında prim, İPC, gecikme cezası/zammı."
+    ],
+    [
+     "Taksit sayısı",
+     "Talep edilen ay sayısı (azami süreye kadar)."
+    ],
+    [
+     "Teminat",
+     "Teminat aranmayan sınırı aşan borçlarda teminat türü (ipotek, banka teminat mektubu vb.)."
+    ],
+    [
+     "Çok zor durum beyanı",
+     "Borç tutarı sınırı (2026'da 900.000 TL) aşılırsa SMMM/YMM tarafından Ek-080 rapor düzenlenir."
+    ]
+   ],
+   "adimlar": [
+    "e-Bildirge'den tüm borç dökümünü alın.",
+    "Gecikme Zammı Hesaplama ile güncel tutarı görün.",
+    "Ek-076 formunu doldurun; borç tutarına göre çok zor durum raporunun gerekip gerekmediğini belirleyin.",
+    "Gerekirse SMMM/YMM'den Ek-080 raporunu, bilanço/gelir tablosu ile birlikte düzenletin.",
+    "Teminat sınırını aşan borç için teminatı hazırlayın.",
+    "Başvuruyu borcun bulunduğu ünitesine verin.",
+    "Tecil kararı ve ödeme planı tebliğ edilince ilk taksiti süresinde ödeyin.",
+    "Taksitlerin yanında cari ay primlerini de süresinde ödeyin; aksi halde tecil bozulabilir.",
+    "Tecil süresince e-Borcu Yoktur alınabilir; teşviklerden yararlanma şartlarını kontrol edin."
+   ],
+   "belgeler": [
+    "Ek-076 Tecil ve Taksitlendirme Talep Formu",
+    "İmza sirküleri",
+    "Bilanço/gelir tablosu (gerekirse)",
+    "Ek-080 çok zor durum raporu",
+    "Teminat belgeleri"
+   ],
+   "ceza": "Taksitlerin aksatılması halinde tecil bozulur, kalan borç 6183'e göre gecikme zammıyla takibe alınır.",
+   "ipucu": [
+    "Cari dönem primlerini ödemeyi aksatmak tecilin bozulmasının en yaygın nedenidir.",
+    "Tecilli borç varken teşvik koşulu olarak 'borcu olmama' şartı genellikle tecil düzenli ödendikçe sağlanır; teşvik özelinde kontrol edin.",
+    "Ek-080 raporu SMMM'nin mesleki sorumluluğundadır; mali tablolarla uyumlu olmalı."
+   ],
+   "kaynak": [
+    "https://www.gzt.com/ekonomi/sgk-borcu-olanlar-dikkat-basvuru-icin-son-tarih-belli-oldu-4252000",
+    "https://www.alomaliye.com/2025/12/19/sgk-tecil-islemlerinde-2026-tutar-guncellemeleri/",
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/",
+    "https://www.e-yasamrehberi.com/e-devlet/sgk-borc-yapilandirma.html"
+   ]
+  },
+  {
+   "k": "idari-para-cezasina-itiraz",
+   "ad": "İdari Para Cezasına İtiraz Dilekçesi",
+   "taraf": "isveren",
+   "kod": "Serbest dilekçe (resmi form numarası yok)",
+   "kisa": "SGK'nın 5510 md.102 uyarınca verdiği idari para cezasına karşı Kurum içi itiraz ve sonrasında idari yargı yolu.",
+   "kim": "Cezaya muhatap işveren veya vekili.",
+   "ne_zaman": "Ceza tebliğinden itibaren 15 gün içinde SGK'ya itiraz; itirazın reddi tebliğinden itibaren 30 gün içinde idare mahkemesinde dava. E-tebligatta tebliğ, elektronik adrese ulaştığı tarihi izleyen 5. günün sonunda yapılmış sayılır.",
+   "nereden": [
+    [
+     "Cezayı veren SGK il müdürlüğü / SGM",
+     "https://www.sgk.gov.tr/il-mudurlukleri"
+    ],
+    [
+     "SGK E-Tebligat",
+     "https://www.sgk.gov.tr/Diger/ETebligat/fc00dd1e-1218-4f6f-b098-f8488c1c5e49/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Muhatap",
+     "Cezayı veren SGK il müdürlüğü / SGM."
+    ],
+    [
+     "İşyeri sicil no ve unvan",
+     ""
+    ],
+    [
+     "Ceza bilgileri",
+     "Ceza tarih-sayısı, tebliğ tarihi, tutar, ihlal türü (md.102/1 bendi)."
+    ],
+    [
+     "İtiraz gerekçesi",
+     "Bildirimin süresinde yapıldığı, sistem hatası, mücbir sebep, hesaplama hatası, mükerrer ceza vb. somut gerekçeler ve kanıtlar."
+    ],
+    [
+     "Talep",
+     "Cezanın iptali veya düzeltilmesi."
+    ],
+    [
+     "Ekler",
+     "Bildirge çıktıları, e-tebligat dökümü, sistem ekran görüntüleri."
+    ]
+   ],
+   "adimlar": [
+    "Tebliğ tarihini e-tebligat dökümünden tespit edin ve 15 günlük süreyi hesaplayın.",
+    "Cezanın dayanağını ve hesaplamasını (asgari ücret, sigortalı sayısı, kat) kontrol edin.",
+    "Peşin ödeme indirimi ile itiraz arasında karar verin (15 gün içinde ödeme 1/4 indirim sağlar ve itiraz hakkını ortadan kaldırmaz).",
+    "Dilekçeyi gerekçe ve eklerle hazırlayın.",
+    "Ünitesine elden/posta/KEP ile verin, evrak kayıt numarası alın.",
+    "İtiraz sonucunun tebliğini takip edin.",
+    "Ret halinde 30 gün içinde idare mahkemesinde iptal davası açın."
+   ],
+   "belgeler": [
+    "Ceza tebliğ belgesi",
+    "Bildirge ve tahakkuk çıktıları",
+    "Mücbir sebep belgeleri",
+    "Vekaletname (vekil başvurusunda)"
+   ],
+   "ceza": "Süresinde itiraz edilmeyen ceza kesinleşir ve 6183'e göre takibe alınır.",
+   "ipucu": [
+    "15 günlük süreyi ödeme indirimi süresiyle karıştırmamak; ikisi de tebliğden başlar.",
+    "Genel ifadeli dilekçe yerine bildirimin hangi tarihte, hangi sistemle yapıldığını kanıtlayan belgelerle itiraz edin."
+   ],
+   "kaynak": [
+    "https://hukukcularevi.com/sgk-idari-para-cezalari-isveren-bildirim-yukumlulukleri-5510-m102/",
+    "https://www.alomaliye.com/2026/01/08/is-kazasi-idari-para-cezasi-ve-bildirim-yukumlulugu/"
+   ]
+  },
+  {
+   "k": "tesvik-basvurusu",
+   "ad": "SGK Prim Teşviklerinin Tanımlanması (İŞKUR kaydı dahil)",
+   "taraf": "isveren",
+   "kod": "e-Bildirge 'Tescil ve Hizmet > Teşvik' ekranları; MUHSGK kanun numarası alanı",
+   "kisa": "İşverenin teşvik şartlarını sağlayan sigortalılar için MUHSGK'de doğru kanun numarasını seçerek prim desteğinden yararlanması.",
+   "kim": "Özel sektör işverenleri (kamu ve bazı ihale işleri bazı teşviklerden hariç).",
+   "ne_zaman": "Teşvikler aylık MUHSGK ile kullanılır; geçmiş aylar için teşvik talebi kanuna göre sınırlı (genellikle süresinde verilmiş belgeler için ek/iptal ile). 06111 (4447 geçici 10) için işe alım tarihi 31.12.2026'ya kadar uzatılmıştır.",
+   "nereden": [
+    [
+     "e-BildirgeV2",
+     "https://ebildirge.sgk.gov.tr/EBildirgeV2"
+    ],
+    [
+     "İŞKUR işveren sistemi",
+     "https://www.iskur.gov.tr/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "05510 – 5510 md.81/1-ı",
+     "İşveren hissesinden indirim: 2026'da imalat sektöründe 5 puan, diğer sektörlerde 2 puan. Şart: süresinde bildirim/ödeme, vadesi geçmiş borç olmaması, kayıt dışı tespit olmaması."
+    ],
+    [
+     "06111 – 4447 geçici 10 (genç, kadın, mesleki belge)",
+     "18 yaş üstü, son 6 ayda 4/a bildirimi olmayan, ortalama işçi sayısına ilave sigortalı; 6–54 ay işveren hissesi (işsizlik işveren payı hariç) İşsizlik Fonu'ndan karşılanır. İşe alım dönemi 01.03.2011–31.12.2026."
+    ],
+    [
+     "14857 – 4857 md.30 / 5510 md.81",
+     "Engelli sigortalılar; işveren hissesinin tamamı Hazine'ce karşılanır (kontenjan dahilinde/fazlası)."
+    ],
+    [
+     "Asgari ücret desteği (5510 geçici md.112)",
+     "2026'da prim günü x 42,33 TL (30 gün için 1.269,90 TL); kanun numarası seçimi gerekmez, şartları taşıyan işyerine otomatik uygulanır."
+    ],
+    [
+     "4447 geçici 36 – Turizm prim desteği (7590 sayılı Kanun md.11)",
+     "2026 için turizm işletme belgeli konaklama tesislerine geçici destek; kaynakta günlük 116,67 TL. Ayrıntı 'unverified' listesinde."
+    ],
+    [
+     "Diğer",
+     "Yatırım teşvik belgesi kapsamında prim desteği, Ar-Ge/tasarım (5746), kültür yatırımları (5225), işsizlik ödeneği alanların istihdamı, sosyal yardım alanların istihdamı, yurt dışına götürülen işçiler için 5 puan indirim gibi teşvikler SGK listesinde yer alır."
+    ]
+   ],
+   "adimlar": [
+    "Sigortalının işe girişinden önce teşvik şartlarını (yaş, son 6 ay bildirimi, eğitim, İŞKUR kaydı) kontrol edin.",
+    "İŞKUR kaydı şartı olan teşvikler için sigortalının işe girişten önce İŞKUR'a kayıtlı olmasını sağlayın.",
+    "İşe giriş bildirgesini süresinde verin; öğrenim/mesleki belge alanlarını eksiksiz doldurun.",
+    "e-Bildirge 'Teşvik Tanımlama/Sorgulama' ekranından sigortalının yararlanabileceği teşvikleri görüntüleyin.",
+    "Ortalama işçi sayısı şartını (ilave istihdam) kontrol edin.",
+    "MUHSGK'de sigortalı satırında en avantajlı kanun numarasını seçin.",
+    "Tahakkukta teşvik tutarının düşüldüğünü doğrulayın.",
+    "Primleri süresinde ödeyin; ödenmezse teşvik o ay için kaybedilir.",
+    "Kayıt dışı/muvazaa tespiti olursa teşvik geri alınır ve gecikme zammıyla tahsil edilir."
+   ],
+   "belgeler": [
+    "Diploma/mesleki belge",
+    "İŞKUR kayıt belgesi",
+    "Engelli sağlık kurulu raporu",
+    "Yatırım teşvik belgesi",
+    "Turizm işletme belgesi"
+   ],
+   "ceza": "Teşvikten yersiz yararlanıldığının tespitinde yararlanılan tutar gecikme cezası ve zammıyla geri alınır; ayrıca md.102 cezaları uygulanabilir.",
+   "ipucu": [
+    "Aynı sigortalı için aynı ayda birden fazla teşvik kanun numarası seçilemez; en yüksek tutarlı olanı seçin.",
+    "Emekli (SGDP) sigortalılar MYÖ indirimlerinden yararlanamaz.",
+    "06111'de 'son 6 ayda 4/a bildirimi yok' şartı işe alım tarihinden geriye doğru takvim ayları üzerinden hesaplanır.",
+    "İmalat dışı sektörlerde 2026'da indirim 4 puandan 2 puana inmiştir; maliyet hesaplarında güncelleyin."
+   ],
+   "kaynak": [
+    "https://www.alomaliye.com/2026/08/10/genc-kadin-ve-mesleki-belge-sahibi-olanlarin-istihdamina-yonelik-tesvik-2026/",
+    "https://cottgroup.com/tr/mevzuat/item/6111-sayili-sigorta-prim-tesviki-2026-yili-sonuna-uzatildi",
+    "https://www.alomaliye.com/2026/07/29/sgk-primleri-rehberi-2026/"
+   ]
+  },
+  {
+   "k": "prim-e-odeme",
+   "ad": "Prim Borcu Ödeme (e-Ödeme / Kart ile Prim Ödeme)",
+   "taraf": "isveren",
+   "kod": "Form yok (elektronik ödeme)",
+   "kisa": "Tahakkuk eden 4/a primleri, gecikme zammı ve İPC'lerin anlaşmalı bankalar veya kartla ödenmesi.",
+   "kim": "İşverenler, 4/b ve isteğe bağlı sigortalılar, GSS borçluları.",
+   "ne_zaman": "4/a primleri: hizmetin ait olduğu ayı izleyen ayın son günü (tatile rastlarsa ilk iş günü). Gecikmede 6183'e göre gecikme cezası ve gecikme zammı işler.",
+   "nereden": [
+    [
+     "Kart ile Prim Ödeme",
+     "https://e.sgk.gov.tr/Uygulamalar/Detay/Kart-ile-Prim-Odeme-2026-10-27-04-15-17"
+    ],
+    [
+     "Gecikme Zammı Hesaplama",
+     "https://e.sgk.gov.tr/Uygulamalar/Detay/Gecikme-Zammi-Hesaplama-2022-09-30-02-32-42"
+    ],
+    [
+     "Anlaşmalı bankaların internet/mobil şubeleri (SGK ödemeleri menüsü)",
+     ""
+    ]
+   ],
+   "alanlar": [
+    [
+     "İşyeri sicil no / T.C. kimlik no",
+     "Ödeme yapılacak dosya."
+    ],
+    [
+     "Dönem / tahakkuk",
+     "Ödenecek ay ve tahakkuk türü (asıl, ek, İPC)."
+    ],
+    [
+     "Tutar",
+     "Tahakkuk fişindeki tutar."
+    ]
+   ],
+   "adimlar": [
+    "e-Bildirge'den tahakkuk fişini kontrol edin.",
+    "Banka internet şubesinde 'Vergi/SGK ödemeleri > SGK prim ödemesi' menüsünü açın.",
+    "İşyeri sicil numarasını girin; borç listesi gelir.",
+    "Ödenecek dönemi seçip ödemeyi yapın veya 'Kart ile Prim Ödeme' uygulamasını kullanın.",
+    "Dekontu saklayın; ödeme e-Bildirge'ye genellikle aynı/ertesi gün yansır.",
+    "Gecikmiş borç varsa önce en eski borca mahsup kuralını dikkate alın."
+   ],
+   "belgeler": [
+    "Tahakkuk fişi"
+   ],
+   "ceza": "Süresinde ödenmeyen primlere 6183 md.51'e göre gecikme cezası ve aylık gecikme zammı uygulanır; ayrıca teşvikler ve 5 puan/2 puan indirim kaybedilir.",
+   "ipucu": [
+    "Ödemeyi ayın son günü mesai sonrasına bırakmak; banka valörü nedeniyle gecikmiş sayılabilir.",
+    "Ödemeler en eski borca mahsup edildiğinden, eski küçük borç varken cari ay ödenmiş sayılmayabilir; teşvik kaybı doğar."
+   ],
+   "kaynak": [
+    "https://e.sgk.gov.tr/Uygulamalar/Detay/Kart-ile-Prim-Odeme-2026-10-27-04-15-17",
+    "https://e.sgk.gov.tr/Uygulamalar/Detay/Gecikme-Zammi-Hesaplama-2022-09-30-02-32-42"
+   ]
+  },
+  {
+   "k": "e-bildirge-sifre",
+   "ad": "İşveren e-Bildirge Kullanıcı Kodu ve Şifre Başvurusu (İşyeri Sistem Şifresi)",
+   "taraf": "isveren",
+   "kod": "İşveren Sistemi Kullanıcı Şifresi Talep Formu / e-Sigorta (İnternet) Kullanıcı Sözleşmesi – SGM'den temin edilir (form adı üniteye göre değişebilir)",
+   "kisa": "İşyeri sicil numarası ile e-Bildirge, e-Vizite, işe giriş/ayrılış ve diğer işveren uygulamalarına giriş için kullanıcı adı, sistem şifresi ve işyeri şifresi alınması.",
+   "kim": "İşveren veya tüzel kişi yetkilisi; aracı olarak SMMM/YMM.",
+   "ne_zaman": "İşyeri tescilinin ardından, ilk işe giriş bildiriminden önce.",
+   "nereden": [
+    [
+     "E-SGK Uygulamaları ve E-SGK Şifre",
+     "https://e.sgk.gov.tr/Uygulamalar/Detay/E-SGK-Uygulamalari-ve-E-SGK-Sifre-2026-10-27-04-20-16"
+    ],
+    [
+     "E-SGK şifre ekranı",
+     "https://esgkuyg.sgk.gov.tr/ESGKSifre/"
+    ],
+    [
+     "İşveren Sistemi",
+     "https://e.sgk.gov.tr/Uygulamalar/Detay/Isveren-Sistemi-2022-10-31-10-05-50"
+    ]
+   ],
+   "alanlar": [
+    [
+     "İşyeri sicil numarası",
+     "Tescil sonrası verilen numara."
+    ],
+    [
+     "İşveren/yetkili bilgileri",
+     "T.C. kimlik, unvan, imza yetkisi."
+    ],
+    [
+     "Kullanıcı türü",
+     "Ana kullanıcı (işveren) veya alt kullanıcı/aracı (SMMM)."
+    ],
+    [
+     "İletişim bilgileri",
+     "Cep telefonu (SMS doğrulama) ve e-posta."
+    ]
+   ],
+   "adimlar": [
+    "İşyeri tescilini tamamlayın.",
+    "SGM'den e-Bildirge kullanıcı sözleşmesi/taahhütnamesini alın veya e-Devlet şifresiyle e-SGK şifre ekranından işlem yapın.",
+    "Yetkili imza sirkülerini ve kimliği hazırlayın.",
+    "Sözleşmeyi imzalayıp ünitesine teslim edin (aracı tanımlamada aracı sözleşmesi de verilir).",
+    "Kullanıcı kodu, sistem şifresi ve işyeri şifresini alın.",
+    "e-Bildirge 'Kullanıcı İşlemleri' menüsünden şifreyi değiştirin, vergi numarasını güncelleyin.",
+    "Alt kullanıcı (bordro/İK) tanımlarını yapın; yetkileri işlem bazında sınırlandırın.",
+    "Aracılık sona erdiğinde aracının yetkisini iptal ettirin."
+   ],
+   "belgeler": [
+    "İmza sirküleri",
+    "Kimlik",
+    "Aracı sözleşmesi ve SMMM ruhsat bilgileri (aracı için)"
+   ],
+   "ceza": "Ceza öngörülmemiştir; şifre ile yapılan tüm bildirimlerden işveren sorumludur.",
+   "ipucu": [
+    "Ana şifreyi aracıyla paylaşmak yerine aracı/alt kullanıcı tanımlayın.",
+    "Yetkili değişikliğinde eski yetkilinin şifrelerini kapatmayı unutmak."
+   ],
+   "kaynak": [
+    "https://e.sgk.gov.tr/Uygulamalar/Detay/E-SGK-Uygulamalari-ve-E-SGK-Sifre-2026-10-27-04-20-16",
+    "https://www.pwc.com.tr/tr/Hizmetlerimiz/sosyal-guvenlik/bultenler/2024/e-bildirge-kullanici-degisikligi.pdf"
+   ]
+  },
+  {
+   "k": "asgari-iscilik-is-bitim",
+   "ad": "Asgari İşçilik İncelemesi ve İş Bitim / İlişiksizlik Bildirimi",
+   "taraf": "isveren",
+   "kod": "SSİY Ek-071 İnşaatın İkmal Edilen Kısmının Bina Maliyetine Oranlarını Gösterir Cetvel; İlişiksizlik Belgesi Başvuru",
+   "kisa": "Özel bina inşaatları, ihale konusu işler ve bazı işlerde bildirilen işçilik tutarının, Kurumca belirlenen asgari işçilik oranına göre yeterli olup olmadığının incelenmesi.",
+   "kim": "İnşaat yapan müteahhit/arsa sahipleri, kamu/özel ihale işlerini üstlenen işverenler.",
+   "ne_zaman": "İşin bitiminde (iskân/ilişiksizlik talebinden önce). Eksik işçilik tespit edilirse fark işçilik tahakkuk ettirilir ve tebliğ edilir.",
+   "nereden": [
+    [
+     "İlişiksizlik Belgesi Başvuru",
+     "https://e.sgk.gov.tr/Uygulamalar/Detay/Ilisiksizlik-Belgesi-Basvuru-2022-09-30-02-09-50"
+    ],
+    [
+     "Resmi form sayfası (Ek-071)",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "İşin konusu ve bedeli",
+     "Sözleşme bedeli/yapı maliyeti (Bakanlık birim maliyetleri)."
+    ],
+    [
+     "Asgari işçilik oranı",
+     "İşin türüne göre Kurumca ilan edilen oran."
+    ],
+    [
+     "Bildirilen işçilik",
+     "İşyeri dosyasından bildirilen PEK toplamı."
+    ],
+    [
+     "Taşeron/alt işveren işçilikleri",
+     "Alt işveren dosyalarından bildirilenler ve fatura ile alınan hizmetlerdeki işçilik payı."
+    ]
+   ],
+   "adimlar": [
+    "İnşaat/ihale başlarken işyeri bildirgesini yapı ruhsatı ve sözleşme bilgileriyle verin.",
+    "İş süresince sigortalıları bu dosyadan bildirin.",
+    "İş bitiminde (yapı kullanma izni öncesi) ünitesine ilişiksizlik/iş bitim başvurusu yapın.",
+    "Fatura ve hakediş belgelerini, alt işveren sözleşmelerini hazırlayın.",
+    "Kurum asgari işçilik hesabını yapar; eksik varsa fark işçilik tebliğ edilir.",
+    "Fark işçilik primini ödeyin veya itiraz edin.",
+    "Borç kalmayınca ilişiksizlik belgesi/yazısı alınır (yapı kullanma izni için gereklidir)."
+   ],
+   "belgeler": [
+    "Yapı ruhsatı",
+    "İnşaat/ihale sözleşmesi",
+    "Hakedişler ve faturalar",
+    "Alt işveren sözleşmeleri",
+    "Ek-071 cetvel (kısmen tamamlanmış inşaatlarda)"
+   ],
+   "ceza": "Fark işçilik primine ek olarak, denetimle tespit edilen eksik bildirim için md.102/1-c uyarınca her ay için 66.060,00 TL ceza uygulanabilir; fark işçilik gecikme zammıyla tahsil edilir.",
+   "ipucu": [
+    "Fatura ile alınan işçilik içeren hizmetlerin (örn. hazır beton pompası, iskele kurulumu) işçilik oranı ayrıca hesaplanır; faturaları ayrıştırarak saklayın.",
+    "Kat karşılığı inşaatlarda arsa sahibi/müteahhit sorumluluğunu sözleşmede netleştirin."
+   ],
+   "kaynak": [
+    "https://e.sgk.gov.tr/Uygulamalar/Detay/Ilisiksizlik-Belgesi-Basvuru-2022-09-30-02-09-50",
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+   ]
+  },
+  {
+   "k": "yurtdisi-gecici-gorev",
+   "ad": "Yurt Dışına Geçici Görevlendirme (Sosyal Güvenlik Sözleşmesi Belgesi)",
+   "taraf": "isveren",
+   "kod": "Sözleşmeli ülkeye göre 'TUR/xx 101' benzeri görevlendirme (muafiyet) formları; sözleşmesiz ülkeler için belge türü 21",
+   "kisa": "Türk işverenin işçisini yurt dışında geçici olarak çalıştırmasında, sigortalılığın Türkiye'de devam ettiğinin belgelenmesi (çifte prim ödenmemesi).",
+   "kim": "İşçisini yurt dışına götüren/gönderen işverenler.",
+   "ne_zaman": "Yurt dışına gidişten önce işe giriş bildirgesi ve görevlendirme formu başvurusu; sözleşmede öngörülen azami görev süresi içinde uzatma talebi.",
+   "nereden": [
+    [
+     "SGK il müdürlüğü (Yurtdışı işlemleri)",
+     "https://www.sgk.gov.tr/il-mudurlukleri"
+    ],
+    [
+     "Resmi form sayfası",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Görevlendirme ülkesi",
+     "Sosyal güvenlik sözleşmesi olup olmadığına göre işlem değişir."
+    ],
+    [
+     "Görev süresi",
+     "Başlangıç–bitiş; sözleşmedeki azami süre (ülkeye göre)."
+    ],
+    [
+     "Yabancı ülkedeki işveren/işyeri",
+     "Adres ve proje bilgisi."
+    ],
+    [
+     "Sigortalı bilgileri",
+     "Kimlik, meslek."
+    ]
+   ],
+   "adimlar": [
+    "Gidilecek ülke ile Türkiye arasında sosyal güvenlik sözleşmesi olup olmadığını kontrol edin.",
+    "Sözleşmeli ülkede: görevlendirme formunun (101 vb.) düzenlenmesi için SGK'ya başvurun.",
+    "Formu sigortalıya ve yabancı ülke kurumuna ibraz için verin.",
+    "Sözleşmesiz ülkede: sigortalıyı belge türü 21 ile (kısa vadeli + GSS, istisna akdi vb.) bildirin.",
+    "Yurt dışına götürülen sigortalılar için 5 puanlık indirim (4447/6486 kapsamı) şartlarını kontrol edin.",
+    "Süre uzarsa uzatma talebini süre dolmadan yapın.",
+    "Dönüşte sigortalıyı yurt içi işyerine nakil edin veya ayrılış verin."
+   ],
+   "belgeler": [
+    "Görevlendirme yazısı",
+    "Yurt dışı iş sözleşmesi",
+    "Pasaport/vize",
+    "Proje sözleşmesi"
+   ],
+   "ceza": "İşe giriş bildirgesi yurt dışına gidişten önce verilmezse her sigortalı için 33.030,00 TL.",
+   "ipucu": [
+    "Sözleşmeli ülkelerde form alınmazsa yabancı ülkede de prim istenebilir.",
+    "Belge türü 21 sözleşmesiz ülkeler içindir; sözleşmeli ülkede kullanılmaz."
+   ],
+   "kaynak": [
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/",
+    "https://www.alomaliye.com/2026/08/10/genc-kadin-ve-mesleki-belge-sahibi-olanlarin-istihdamina-yonelik-tesvik-2026/"
+   ]
+  },
+  {
+   "k": "hizmet-dokumu",
+   "ad": "SGK Tescil ve Hizmet Dökümü (Hizmet Cetveli)",
+   "taraf": "sigortali",
+   "kod": "e-Devlet barkodlu belge (resmi form numarası yok)",
+   "kisa": "Sigortalının tüm statülerdeki (4/a, 4/b, 4/c) hizmet gün sayılarının, işyerlerinin ve kazançların dökümü.",
+   "kim": "Tüm sigortalılar; hak sahipleri vekâletle.",
+   "ne_zaman": "İstendiği an; aylık bildirimler beyanname döneminden sonra yansır.",
+   "nereden": [
+    [
+     "e-Devlet: SGK Tescil ve Hizmet Dökümü",
+     "https://www.turkiye.gov.tr/4a-hizmet-dokumu"
+    ],
+    [
+     "e-Devlet SGK hizmetleri",
+     "https://www.turkiye.gov.tr/sosyal-guvenlik-kurumu"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Dönem",
+     "Tüm dönemler veya yıl/ay aralığı."
+    ],
+    [
+     "Döküm türü",
+     "Gün bazlı, ay bazlı, işyeri bazlı, barkodlu/barkodsuz."
+    ]
+   ],
+   "adimlar": [
+    "e-Devlet'e giriş yapın.",
+    "'SGK Tescil ve Hizmet Dökümü' hizmetini açın.",
+    "Tüm hizmet dökümünü veya ilgili statüyü (4/a, 4/b, 4/c) seçin.",
+    "İşyeri, gün ve kazanç bilgilerini kontrol edin.",
+    "Eksik/hatalı ay varsa işverenden bildirim yapmasını isteyin veya SGM'ye şikâyet dilekçesi verin.",
+    "Barkodlu PDF'i indirip ilgili kuruma verin; kurum barkodla doğrular."
+   ],
+   "belgeler": [
+    "Gerekmez"
+   ],
+   "ceza": "Yok.",
+   "ipucu": [
+    "Çalışılmayan veya eksik gösterilen dönemler için hizmet tespit davası, ilgili yılın sonundan itibaren 5 yıl içinde açılmalıdır (5510 md.86/9).",
+    "Kısmi gün bildirimleri emeklilik prim gününü etkiler; dökümde aylık gün sayısını kontrol edin."
+   ],
+   "kaynak": [
+    "https://www.turkiye.gov.tr/sosyal-guvenlik-kurumu"
+   ]
+  },
+  {
+   "k": "yaslilik-ayligi-talebi",
+   "ad": "Yaşlılık (Emeklilik) Aylığı Talep Dilekçesi – 4/a, 4/b, 4/c",
+   "taraf": "sigortali",
+   "kod": "SGK Form ve Dilekçeler: Ek-038 Gelir/Aylık/Ödenek Talep Belgesi (e-Devlet'te 'Emeklilik Başvurusu')",
+   "kisa": "Yaş, prim günü ve sigortalılık süresi şartlarını tamamlayan sigortalının yaşlılık aylığı bağlanması için başvurusu.",
+   "kim": "Emeklilik şartlarını tamamlayan sigortalılar (EYT dahil).",
+   "ne_zaman": "Şartlar tamamlandıktan sonra; aylık, talep tarihini izleyen aybaşından başlar (4/a'da işten ayrılmış olmak veya SGDP'li çalışma). Kısmi aylık/yaş haddi başvurularında da aynı kural.",
+   "nereden": [
+    [
+     "e-Devlet: SGK Emeklilik Başvurusu",
+     "https://www.turkiye.gov.tr/sosyal-guvenlik-kurumu"
+    ],
+    [
+     "Ne Zaman Emekli Olabilirim (4A)",
+     "https://e.sgk.gov.tr/Uygulamalar/Detay/Ne-Zaman-Emekli-Olabilirim-4A-2022-09-30-11-13-54"
+    ],
+    [
+     "Resmi form sayfası (Ek-038)",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Kimlik ve iletişim",
+     "T.C. kimlik, adres, telefon."
+    ],
+    [
+     "Talep türü",
+     "Yaşlılık aylığı (normal / kısmi / yaş haddi / EYT)."
+    ],
+    [
+     "Statü",
+     "4/a, 4/b veya 4/c; hizmet birleştirmede son 7 yıl kuralına göre belirlenir."
+    ],
+    [
+     "Banka/ödeme tercihi",
+     "Aylığın ödeneceği banka veya PTT; bazı illerde bankayı SGK belirler."
+    ],
+    [
+     "Çalışma durumu",
+     "Çalışmaya devam edecek mi (SGDP)?"
+    ],
+    [
+     "Bakmakla yükümlü olunan kişiler",
+     "Eş, çocuk bilgileri (GSS için)."
+    ],
+    [
+     "Borçlanma/hizmet beyanları",
+     "Askerlik, doğum, yurt dışı borçlanması yapılacak/yapıldı bilgisi."
+    ]
+   ],
+   "adimlar": [
+    "'Ne Zaman Emekli Olabilirim' hizmetinden şartları kontrol edin.",
+    "Hizmet dökümünde eksik dönem olup olmadığına bakın; borçlanma gerekiyorsa önce borçlanmayı sonuçlandırın.",
+    "4/a'da işten ayrılın (veya SGDP ile çalışmaya devam edecekseniz işverene bildirin).",
+    "e-Devlet 'Emeklilik Başvurusu' hizmetinden 4/a, 4/b veya 4/c seçerek başvurun ya da Ek-038'i doldurup SGM'ye verin.",
+    "Banka ve adres bilgilerini girin.",
+    "Başvuru numarasını saklayın; durumunu e-Devlet'ten izleyin.",
+    "Tahsis kararı (aylık bağlama yazısı) e-Devlet'te ve adresinize gelir.",
+    "Emekli olduktan sonra çalışmaya başlarsanız işveren SGDP ile bildirim yapmalıdır (4/b'de aylıktan SGDP kesilir)."
+   ],
+   "belgeler": [
+    "Kimlik",
+    "Gerekirse askerlik terhis belgesi, yurt dışı hizmet belgeleri",
+    "Vekâletname (vekil başvurusunda)"
+   ],
+   "ceza": "Yok. 4/a'da işten ayrılmadan talep edilen aylık (SGDP talebi olmadan) bağlanmaz.",
+   "ipucu": [
+    "Başvuruyu işten ayrılış tarihinden önceye almak; aylık bağlanmaz, talep yinelenmelidir.",
+    "4/b'de prim borcu varken aylık bağlanmaz; borç ödenmeli veya yapılandırılmalı.",
+    "Son 7 yılda fiili hizmet süresi fazla olan statüden aylık bağlanır; 4/a'da emeklilik için son dönem bildirimine dikkat edin."
+   ],
+   "kaynak": [
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/",
+    "https://www.turkiye.gov.tr/sosyal-guvenlik-kurumu"
+   ]
+  },
+  {
+   "k": "malullik-ayligi",
+   "ad": "Malullük Aylığı Talebi",
+   "taraf": "sigortali",
+   "kod": "Ek-038 Gelir/Aylık/Ödenek Talep Belgesi + Sağlık Kurulu Raporu; Ek-087 Sağlık Kurulu kararına itiraz dilekçesi örneği",
+   "kisa": "Çalışma gücünün en az %60'ını kaybeden veya erken yaşta sigortalı olduğunda malul olanların aylık talebi (5510 md.25–26).",
+   "kim": "Malul sayılma şartlarını taşıyan, en az 10 yıl sigortalılık ve 1800 gün prim (sürekli bakıma muhtaçlarda süre şartı aranmaz, 1800 gün yeterli) şartını sağlayan sigortalılar.",
+   "ne_zaman": "Malullük tespit edildikten sonra; aylık talep tarihini izleyen aybaşından başlar.",
+   "nereden": [
+    [
+     "SGK il müdürlüğü / SGM",
+     "https://www.sgk.gov.tr/il-mudurlukleri"
+    ],
+    [
+     "Resmi form sayfası (Ek-038, Ek-039 sevk, Ek-087 itiraz)",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Talep türü",
+     "Malullük aylığı."
+    ],
+    [
+     "Sağlık bilgileri",
+     "Hastalık/teşhis, tedavi gördüğü hastaneler."
+    ],
+    [
+     "Sevk talebi",
+     "Ek-039 Sağlık Kuruluşuna Sevk Talep Belgesi ile yetkili hastaneye sevk."
+    ],
+    [
+     "Banka/adres",
+     ""
+    ]
+   ],
+   "adimlar": [
+    "SGM'ye Ek-038 ile başvurun ve sevk talep edin (Ek-039).",
+    "SGK'nın yetkilendirdiği hastanede sağlık kurulu raporu alın.",
+    "Rapor SGK Sağlık Kurulu'nca incelenir; %60 ve üzeri kayıp/malullük kararı verilir.",
+    "Karar olumluysa tahsis işlemleri yapılır.",
+    "Karara itiraz için Ek-087 dilekçe örneğiyle başvurun.",
+    "Aylık bağlandıktan sonra kontrol muayenesi istenebilir."
+   ],
+   "belgeler": [
+    "Kimlik",
+    "Tıbbi belgeler, epikriz",
+    "Sağlık kurulu raporu"
+   ],
+   "ceza": "Yok.",
+   "ipucu": [
+    "Malul sayılmadan önceki hastalık sigortalılık başlangıcından önce varsa, 'sigortalılık öncesi malullük' nedeniyle aylık bağlanmayabilir; bu durumda yaşlılık aylığına özel şartlar (engelli emekliliği) değerlendirilir."
+   ],
+   "kaynak": [
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+   ]
+  },
+  {
+   "k": "olum-ayligi",
+   "ad": "Ölüm (Dul–Yetim) Aylığı Talebi",
+   "taraf": "sigortali",
+   "kod": "Ek-038 Gelir/Aylık/Ödenek Talep Belgesi; Ek-050 Dul-Yetim Maaş Başvurusu; Ek-051 Erkek Yetim Taahhütname",
+   "kisa": "Ölen sigortalının veya aylık alanın hak sahiplerine (eş, çocuk, anne-baba) aylık bağlanması.",
+   "kim": "Hak sahibi eş, çocuklar (yaş/öğrenim/evlenmemiş kız/malul), şartları taşıyan anne-baba.",
+   "ne_zaman": "Ölüm tarihinden sonra; talep ölüm tarihinden itibaren belirli sürede yapılırsa aylık ölüm tarihini izleyen aybaşından başlar, aksi halde talep tarihini izleyen aybaşından.",
+   "nereden": [
+    [
+     "e-Devlet SGK hizmetleri (ölüm aylığı başvurusu)",
+     "https://www.turkiye.gov.tr/sosyal-guvenlik-kurumu"
+    ],
+    [
+     "Resmi form sayfası",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Ölen sigortalı bilgisi",
+     "T.C. kimlik, ölüm tarihi."
+    ],
+    [
+     "Hak sahibi bilgileri",
+     "Yakınlık, çalışma ve gelir durumu, öğrenim durumu."
+    ],
+    [
+     "Taahhütler",
+     "Erkek yetimlerde Ek-051 taahhüt; kız çocukta evli olmadığı/çalışmadığı beyanı."
+    ],
+    [
+     "Banka/adres",
+     ""
+    ]
+   ],
+   "adimlar": [
+    "Ölen sigortalının hizmet ve prim durumunu kontrol edin (en az 5 yıl sigortalılık ve 900 gün prim veya aylık almakta olması).",
+    "Hak sahiplerini ve paylarını belirleyin.",
+    "e-Devlet'ten veya Ek-038/Ek-050 ile SGM'ye başvurun.",
+    "Öğrenci çocuklar için öğrenci belgesi verin.",
+    "Tahsis kararını takip edin.",
+    "Evlenme, çalışmaya başlama gibi durumları Kuruma bildirin; yersiz ödeme geri istenir."
+   ],
+   "belgeler": [
+    "Ölüm belgesi (sistemden)",
+    "Öğrenci belgesi",
+    "Malul çocuk için sağlık kurulu raporu",
+    "Vekâletname"
+   ],
+   "ceza": "Yok; bildirilmeyen evlilik/çalışma nedeniyle yapılan ödemeler faiziyle geri alınır.",
+   "ipucu": [
+    "Kız çocuk evlenirse aylık kesilir, evlenme ödeneği talep edilebilir.",
+    "Anne-babanın aylığı, gelirlerinin asgari ücretin net tutarından az olması şartına bağlıdır."
+   ],
+   "kaynak": [
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+   ]
+  },
+  {
+   "k": "askerlik-borclanmasi",
+   "ad": "Askerlik Borçlanması",
+   "taraf": "sigortali",
+   "kod": "SSİY Ek-025 Borçlanma Talep Dilekçesi (5510 md.41); e-Devlet 'SGK Borçlanma Başvurusu'",
+   "kisa": "Er/yedek subay olarak yapılan askerlik süresinin prim ödenerek hizmetten sayılması.",
+   "kim": "Askerlik öncesinde veya sonrasında sigortalılığı olan kişiler (borçlanma için sigortalılık kaydı gerekir).",
+   "ne_zaman": "Her zaman başvurulabilir; tahakkuk tebliğinden itibaren 1 ay içinde ödenmezse başvuru geçersiz olur (yeniden başvuru gerekir ve o tarihteki tutar uygulanır).",
+   "nereden": [
+    [
+     "e-Devlet SGK Borçlanma Başvurusu",
+     "https://www.turkiye.gov.tr/sosyal-guvenlik-kurumu"
+    ],
+    [
+     "Resmi form (Ek-025)",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Askerlik süresi",
+     "Sevk–terhis tarihleri (MSB'den otomatik gelebilir)."
+    ],
+    [
+     "Borçlanılacak gün",
+     "Tamamı veya bir kısmı."
+    ],
+    [
+     "Günlük kazanç",
+     "2026'da günlük en az 1.101,00 TL, en fazla 9.909,00 TL arasında seçilir."
+    ]
+   ],
+   "adimlar": [
+    "Askerlik süresini (terhis belgesi) teyit edin.",
+    "e-Devlet'ten 'Borçlanma Başvurusu > Askerlik' seçin ya da Ek-025 ile SGM'ye başvurun.",
+    "Borçlanılacak gün ve günlük kazancı belirtin.",
+    "Tahakkuk tebliğini bekleyin (e-Devlet'te görünür).",
+    "Tebliğden itibaren 1 ay içinde tutarı ödeyin.",
+    "Hizmet dökümüne yansımasını kontrol edin; borçlanma gün sayısı ödeme tarihine göre sigortalılık başlangıcını da etkileyebilir (askerlik öncesi sigortalılık yoksa, ilk işe girişten önceki askerlik başlangıcı geriye çekebilir)."
+   ],
+   "belgeler": [
+    "Askerlik terhis belgesi (sistemde yoksa)",
+    "Kimlik"
+   ],
+   "ceza": "Yok. Süresinde ödenmezse başvuru hükümsüz.",
+   "ipucu": [
+    "2026 Genelgesi 2026/2'ye göre askerlik borçlanmasında günlük tutar en az 495,45 TL, en fazla 4.459,05 TL (%45 oran); 2025'teki %32 oranına göre artış vardır (bkz. unverified).",
+    "Bedelli askerlik süresi borçlanılamaz (yalnızca fiili hizmet süresi)."
+   ],
+   "kaynak": [
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/",
+    "https://cottgroup.com/tr/mevzuat/item/2026-yilina-ait-prime-esas-kazanclarin-alt-ve-ust-sinirlari-ile-guncel-tutarlarin-aciklandigi-genelge-yayimlandi",
+    "https://www.cnbce.com/sosyal-guvenlik/borclanma-tutarlari-degisiyor-zamsiz-borclanma-icin-son-hafta-dogum-ve-askerlik-borclanmasi-hesaplama-2026-g21814"
+   ]
+  },
+  {
+   "k": "dogum-borclanmasi",
+   "ad": "Doğum (Analık) Borçlanması",
+   "taraf": "sigortali",
+   "kod": "SSİY Ek-025 Borçlanma Talep Dilekçesi (5510 md.41/1-a); e-Devlet 'SGK Borçlanma Başvurusu'",
+   "kisa": "Kadın sigortalının doğumdan sonraki 2 yıllık süreler için (en fazla 3 doğum, toplam 2.160 gün) borçlanarak hizmet kazanması.",
+   "kim": "Doğumdan önce sigortalılığı başlamış (en az 1 gün) kadın sigortalılar; çocuğun yaşaması şartı aranır.",
+   "ne_zaman": "Her zaman; tahakkuk tebliğinden itibaren 1 ay içinde ödeme.",
+   "nereden": [
+    [
+     "e-Devlet SGK Borçlanma Başvurusu",
+     "https://www.turkiye.gov.tr/sosyal-guvenlik-kurumu"
+    ],
+    [
+     "Resmi form (Ek-025)",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Çocuk bilgileri",
+     "T.C. kimlik, doğum tarihi (MERNİS'ten)."
+    ],
+    [
+     "Borçlanılacak süre",
+     "Her doğum için doğum tarihinden itibaren en fazla 720 gün; o sürede çalışılan günler düşülür."
+    ],
+    [
+     "Günlük kazanç",
+     "Alt-üst sınır arasında."
+    ]
+   ],
+   "adimlar": [
+    "Sigortalılık başlangıcının doğumdan önce olduğunu kontrol edin.",
+    "e-Devlet 'Borçlanma Başvurusu > Doğum' ile başvurun.",
+    "Çocuk(lar)ı seçin ve gün sayısını belirleyin.",
+    "Tahakkuk tutarını inceleyin.",
+    "1 ay içinde ödeyin.",
+    "Hizmet dökümünde 'borçlanma' olarak görünmesini kontrol edin."
+   ],
+   "belgeler": [
+    "Genellikle gerekmez (MERNİS)"
+   ],
+   "ceza": "Yok.",
+   "ipucu": [
+    "2026 doğum borçlanması günlük en az 352,32 TL, en fazla 3.170,88 TL (%32); 30 günlük asgari tutar 10.569,60 TL.",
+    "Yurt dışında doğan çocuklar için yurt dışı borçlanması ayrı değerlendirilir."
+   ],
+   "kaynak": [
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/",
+    "https://cottgroup.com/tr/mevzuat/item/2026-yilina-ait-prime-esas-kazanclarin-alt-ve-ust-sinirlari-ile-guncel-tutarlarin-aciklandigi-genelge-yayimlandi"
+   ]
+  },
+  {
+   "k": "yurtdisi-borclanmasi",
+   "ad": "Yurt Dışı Hizmet Borçlanması (3201 sayılı Kanun)",
+   "taraf": "sigortali",
+   "kod": "SSİY Ek-065 Yurt Dışı Süreleri Borçlanma Talep Dilekçesi; Ek-086 (1992 öncesi giriş-çıkış beyanı)",
+   "kisa": "Yurt dışında geçen çalışma ve ev kadınlığı/işsizlik sürelerinin Türkiye'de prim ödenerek hizmetten sayılması.",
+   "kim": "Yurt dışında çalışmış veya ikamet etmiş Türk vatandaşları ve çifte vatandaşlar (mavi kartlılar dahil, şartlarla).",
+   "ne_zaman": "Her zaman; borç tebliğinden itibaren 3 ay içinde ödeme (3201 sayılı Kanun).",
+   "nereden": [
+    [
+     "SGK il müdürlüğü / yurt dışı ünitesi veya dış temsilcilikler",
+     "https://www.sgk.gov.tr/il-mudurlukleri"
+    ],
+    [
+     "Resmi form (Ek-065)",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Yurt dışı süreler",
+     "Ülke, işveren, başlangıç-bitiş; çalışma ve ev kadınlığı/işsizlik ayrı."
+    ],
+    [
+     "Yurda giriş-çıkış tarihleri",
+     "Emniyet kayıtları; 1992 öncesi belgelenemeyenler için Ek-086 beyanı."
+    ],
+    [
+     "Günlük kazanç",
+     "2026'da en az 495,45 TL, en fazla 4.459,05 TL günlük borçlanma tutarı (%45)."
+    ]
+   ],
+   "adimlar": [
+    "Yurt dışı hizmet belgelerini (ülkenin sosyal güvenlik kurumu, tercümeli) temin edin.",
+    "Ek-065'i doldurun.",
+    "SGM'ye veya dış temsilciliğe başvurun.",
+    "Borç tutarı tebliğ edilir.",
+    "3 ay içinde ödeyin (kısmi ödeme ile ödenen tutar kadar gün sayılır).",
+    "Hizmet dökümüne ve emeklilik hesabına yansımasını kontrol edin."
+   ],
+   "belgeler": [
+    "Yurt dışı hizmet cetveli (tercümeli)",
+    "Pasaport/giriş-çıkış kayıtları",
+    "Kimlik",
+    "İkamet belgeleri"
+   ],
+   "ceza": "Yok.",
+   "ipucu": [
+    "Yurt dışında aylık alıyorsanız Türkiye'den aylık bağlanmasının şartları sözleşmeye göre değişir.",
+    "Borçlanılan sürelerin ödeme tarihi emekliliğe esas statüyü belirleyebilir."
+   ],
+   "kaynak": [
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/",
+    "https://cottgroup.com/tr/mevzuat/item/2026-yilina-ait-prime-esas-kazanclarin-alt-ve-ust-sinirlari-ile-guncel-tutarlarin-aciklandigi-genelge-yayimlandi"
+   ]
+  },
+  {
+   "k": "istege-bagli-sigorta",
+   "ad": "İsteğe Bağlı Sigorta Giriş ve Çıkış",
+   "taraf": "sigortali",
+   "kod": "SSİY Ek-022 İsteğe Bağlı Sigortalılık Giriş Bildirgesi; Ek-026 12 aylık sorgulama dilekçesi; e-Devlet 'İsteğe Bağlı Sigorta Talep Belgesi'",
+   "kisa": "Zorunlu sigortalı olmayan kişilerin primlerini kendileri ödeyerek uzun vadeli sigorta ve GSS'den yararlanması (5510 md.50–52).",
+   "kim": "18 yaşını doldurmuş, Türkiye'de ikamet eden, zorunlu sigortalı olmayan, kendi sigortalılığından aylık almayan kişiler; kısmi süreli çalışanlar eksik günleri için.",
+   "ne_zaman": "Talep dilekçesinin Kuruma verildiği tarihi izleyen günden başlar. Primler ait olduğu ayın sonuna kadar ödenir. Çıkış: talep tarihinden itibaren veya zorunlu sigortalılık başlayınca sona erer.",
+   "nereden": [
+    [
+     "e-Devlet SGK İsteğe Bağlı Sigorta Talep",
+     "https://www.turkiye.gov.tr/sosyal-guvenlik-kurumu"
+    ],
+    [
+     "Resmi form (Ek-022, Ek-026)",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Kimlik ve adres",
+     ""
+    ],
+    [
+     "Prime esas kazanç tercihi",
+     "2026'da aylık 33.030,00–297.270,00 TL arası; prim oranı %32 (uzun vadeli %20 + GSS %12). Asgari aylık prim 10.569,60 TL."
+    ],
+    [
+     "Ödeme tercihi",
+     "Banka/kart; otomatik ödeme talimatı."
+    ],
+    [
+     "Sona erme talebi",
+     "Çıkış tarihinin belirtildiği dilekçe."
+    ]
+   ],
+   "adimlar": [
+    "Zorunlu sigortalılığınızın olmadığını kontrol edin.",
+    "e-Devlet'ten başvurun veya Ek-022'yi SGM'ye verin.",
+    "PEK tercihinizi belirtin (aylık prim = PEK x %32).",
+    "Primi her ay ait olduğu ayın sonuna kadar ödeyin.",
+    "Ödenmeyen aylar hizmet sayılmaz ve GSS yararlanmasını etkiler.",
+    "Çıkmak için sona erme dilekçesi verin.",
+    "İşe girerseniz isteğe bağlı sigortalılık işe giriş tarihinden itibaren kendiliğinden sona erer."
+   ],
+   "belgeler": [
+    "Kimlik"
+   ],
+   "ceza": "Yok; ödenmeyen primler borç olarak birikebilir (dönemine göre değişir).",
+   "ipucu": [
+    "İsteğe bağlı prim ödenen dönemde 30 günden fazla prim borcu varsa GSS'den yararlanma kısıtlanır.",
+    "Emeklilikte isteğe bağlı süreler hangi statüde sayılacağını etkiler (4/b sayılabilir)."
+   ],
+   "kaynak": [
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/",
+    "https://cottgroup.com/tr/mevzuat/item/2026-yilina-ait-prime-esas-kazanclarin-alt-ve-ust-sinirlari-ile-guncel-tutarlarin-aciklandigi-genelge-yayimlandi"
+   ]
+  },
+  {
+   "k": "gss-tescil-gelir-testi",
+   "ad": "GSS Tescil (60/1-g) ve Gelir Testi Başvurusu",
+   "taraf": "sigortali",
+   "kod": "Ek-020 GSS Giriş Bildirgesi; Gelir testi: Sosyal Yardımlaşma ve Dayanışma Vakfı başvuru formu",
+   "kisa": "Hiçbir güvencesi olmayan Türkiye'de ikamet eden kişilerin GSS'ye tescili ve hane geliri testine göre primin belirlenmesi.",
+   "kim": "Başka statüde sigortalı/bakmakla yükümlü olunan kişi olmayanlar.",
+   "ne_zaman": "Tescil tarihinden itibaren 1 ay içinde gelir testi için başvurulmalı; başvurmayanlardan en yüksek basamak üzerinden prim alınır.",
+   "nereden": [
+    [
+     "e-Devlet: GSS gelir testi / tescil sorgulama",
+     "https://www.turkiye.gov.tr/sosyal-guvenlik-kurumu"
+    ],
+    [
+     "Sosyal Yardımlaşma ve Dayanışma Vakfı (ilçe)",
+     "https://www.aile.gov.tr/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Hane bilgileri",
+     "Aynı hanede yaşayanlar, gelirleri, mal varlığı."
+    ],
+    [
+     "Gelir beyanı",
+     "Kira, faiz, ücret vb."
+    ],
+    [
+     "Adres",
+     "Yerleşim yeri (vakıf yetkisi)."
+    ]
+   ],
+   "adimlar": [
+    "e-Devlet'te GSS tescil durumunuzu kontrol edin.",
+    "1 ay içinde ikamet ettiğiniz ilçenin Sosyal Yardımlaşma ve Dayanışma Vakfı'na gelir testi için başvurun.",
+    "Vakıf hane ziyaretini/incelemesini yapar.",
+    "Sonuç SGK'ya iletilir; prim tutarı belirlenir.",
+    "Kişi başı aylık gelir brüt asgari ücretin 1/3'ünden (2026: 11.010,00 TL) azsa prim devletçe ödenir.",
+    "Fazlaysa aylık primi (2026'da 1.981,80 TL) her ay ödeyin.",
+    "Durum değişikliğinde (işe giriş, evlilik) Kurum kaydı güncellenir."
+   ],
+   "belgeler": [
+    "Kimlik",
+    "Gelir belgeleri",
+    "Tapu/araç bilgileri"
+   ],
+   "ceza": "Gelir testine başvurmayanlar için prim asgari ücretin 2 katı üzerinden %12 (2026: 7.927,20 TL/ay) hesaplanır.",
+   "ipucu": [
+    "Askerlik, öğrencilik gibi durumlarda bakmakla yükümlü olunan kişi olarak yararlanma ihtimalini kontrol edin; gereksiz GSS borcu doğmasın.",
+    "Yurt dışında yaşayanlar yurt dışında olduklarını belgeleyerek GSS tescilini durdurabilir."
+   ],
+   "kaynak": [
+    "https://www.eleman.net/is-rehberi/maaslar-ve-ucretler/gss-g1-primi-ne-kadar-h20613",
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+   ]
+  },
+  {
+   "k": "gecici-is-goremezlik-odenegi",
+   "ad": "Kısa Vadeli Ödenek: Geçici İş Göremezlik (Rapor Parası)",
+   "taraf": "sigortali",
+   "kod": "Başvuru formu gerekmez (e-Vizite üzerinden otomatik); Ek-038 Gelir/Aylık/Ödenek Talep Belgesi bazı durumlarda",
+   "kisa": "İş kazası, meslek hastalığı, hastalık ve analık hallerinde istirahatli olunan günler için SGK'nın ödediği ödenek.",
+   "kim": "4/a sigortalılar (4/b'de iş kazası/meslek hastalığı/analık için şartlı).",
+   "ne_zaman": "İşveren çalışmadığına dair bildirimi yaptıktan sonra ödenir; 5 yıl zamanaşımı.",
+   "nereden": [
+    [
+     "e-Devlet: SGK Rapor Ödeme Sorgulama",
+     "https://www.turkiye.gov.tr/sosyal-guvenlik-kurumu"
+    ],
+    [
+     "E-Vizite (işveren)",
+     "https://uyg.sgk.gov.tr/vizite/welcome.do"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Rapor",
+     "Hekim/hastane tarafından sisteme girilir."
+    ],
+    [
+     "İşveren bildirimi",
+     "Çalışmadığına dair bildirim."
+    ],
+    [
+     "Banka/PTT",
+     "Ödeme kanalı."
+    ]
+   ],
+   "adimlar": [
+    "Hekimden istirahat raporu alın (sisteme otomatik düşer).",
+    "İşverenin rapor bitiminde e-Vizite'de 'çalışmadı' bildirimini yaptığını teyit edin.",
+    "Hastalıkta son 1 yılda en az 90 gün kısa vadeli sigorta primi şartını kontrol edin (iş kazasında şart yok).",
+    "Ödenek: ayakta tedavide günlük kazancın 2/3'ü, yatarak tedavide 1/2'si; hastalıkta ilk 2 gün ödenmez.",
+    "Analıkta doğumdan önce 8 hafta ve sonra 8 hafta (çoğul gebelikte doğum öncesi +2 hafta) için ödenir.",
+    "Ödemeyi e-Devlet'ten sorgulayıp PTT/bankadan alın."
+   ],
+   "belgeler": [
+    "Rapor (sistemde)"
+   ],
+   "ceza": "Yok.",
+   "ipucu": [
+    "İşveren bildirim yapmazsa ödeme yapılmaz; işverenle takip edin.",
+    "Raporlu günlerde çalışırsanız ödenek alınamaz ve yersiz ödeme geri istenir."
+   ],
+   "kaynak": [
+    "https://e.sgk.gov.tr/Uygulamalar/Detay/Calisilmadigina-Dair-Bildirim-Girisi-4A-2025-12-19-11-26-07",
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+   ]
+  },
+  {
+   "k": "emzirme-odenegi",
+   "ad": "Emzirme Ödeneği",
+   "taraf": "sigortali",
+   "kod": "Ek-038 Gelir/Aylık/Ödenek Talep Belgesi; e-Devlet 'Emzirme Ödeneği Başvurusu'",
+   "kisa": "Doğum yapan sigortalı kadına veya sigortalı erkeğin sigortalı olmayan eşinin doğumu için, çocuğun yaşaması şartıyla tek seferlik ödenek. 2026 tutarı 1.621,00 TL.",
+   "kim": "Doğumdan önceki 1 yıl içinde en az 120 gün kısa vadeli sigorta primi bildirilmiş 4/a sigortalı kadın veya sigortalı erkeğin sigortalı olmayan eşi; 4/b'de ayrıca prim borcu olmaması.",
+   "ne_zaman": "Doğumdan sonra; 5 yıllık zamanaşımı içinde.",
+   "nereden": [
+    [
+     "e-Devlet SGK Emzirme Ödeneği Başvurusu",
+     "https://www.turkiye.gov.tr/sosyal-guvenlik-kurumu"
+    ],
+    [
+     "Resmi form (Ek-038)",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Çocuk bilgileri",
+     "T.C. kimlik (MERNİS)."
+    ],
+    [
+     "Başvuran",
+     "Anne veya baba."
+    ],
+    [
+     "Ödeme kanalı",
+     "PTT/banka."
+    ]
+   ],
+   "adimlar": [
+    "Doğum kaydının MERNİS'e işlendiğini kontrol edin.",
+    "e-Devlet'ten başvurun veya Ek-038 ile SGM'ye verin.",
+    "Prim şartı (120 gün) sistemce kontrol edilir.",
+    "Onaydan sonra ödemeyi PTT/bankadan alın."
+   ],
+   "belgeler": [
+    "Genellikle gerekmez"
+   ],
+   "ceza": "Yok.",
+   "ipucu": [
+    "Çocuk ölü doğmuşsa emzirme ödeneği ödenmez.",
+    "Anne ve baba ayrı ayrı sigortalıysa ödenek bir kez ödenir."
+   ],
+   "kaynak": [
+    "https://cottgroup.com/tr/mevzuat/item/2026-yilina-ait-prime-esas-kazanclarin-alt-ve-ust-sinirlari-ile-guncel-tutarlarin-aciklandigi-genelge-yayimlandi",
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+   ]
+  },
+  {
+   "k": "cenaze-odenegi",
+   "ad": "Cenaze Ödeneği",
+   "taraf": "sigortali",
+   "kod": "Ek-038 Gelir/Aylık/Ödenek Talep Belgesi",
+   "kisa": "Ölen sigortalı veya aylık alan için hak sahiplerine/cenazeyi kaldırana yapılan tek seferlik ödeme. 2026 tutarı 6.398,00 TL.",
+   "kim": "Eş, çocuklar, anne-baba, kardeşler (sırasıyla); bunlar yoksa cenaze masraflarını belgeleyen kişi.",
+   "ne_zaman": "Ölümden sonra, 5 yıllık zamanaşımı içinde.",
+   "nereden": [
+    [
+     "SGK il müdürlüğü / SGM",
+     "https://www.sgk.gov.tr/il-mudurlukleri"
+    ],
+    [
+     "e-Devlet SGK hizmetleri",
+     "https://www.turkiye.gov.tr/sosyal-guvenlik-kurumu"
+    ],
+    [
+     "Resmi form (Ek-038)",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Ölen sigortalı",
+     "T.C. kimlik, ölüm tarihi."
+    ],
+    [
+     "Başvuran",
+     "Yakınlık derecesi."
+    ],
+    [
+     "Masraf belgeleri",
+     "Hak sahibi olmayanlarda fatura vb."
+    ]
+   ],
+   "adimlar": [
+    "Ölenin cenaze ödeneği şartlarını taşıdığını kontrol edin (aylık alıyor olması, iş kazası/meslek hastalığı sonucu ölüm, ölüm aylığı şartları veya en az 360 gün prim).",
+    "Ek-038 ile başvurun.",
+    "Hak sahipliğini gösteren belgeleri ekleyin.",
+    "Ödemeyi alın."
+   ],
+   "belgeler": [
+    "Kimlik",
+    "Veraset ilamı (gerekirse)",
+    "Masraf belgeleri (hak sahibi değilse)"
+   ],
+   "ceza": "Yok.",
+   "ipucu": [
+    "Ödenek bir kez ödenir; birden fazla hak sahibi ayrı ayrı başvurmamalı."
+   ],
+   "kaynak": [
+    "https://cottgroup.com/tr/mevzuat/item/2026-yilina-ait-prime-esas-kazanclarin-alt-ve-ust-sinirlari-ile-guncel-tutarlarin-aciklandigi-genelge-yayimlandi",
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+   ]
+  },
+  {
+   "k": "evlenme-odenegi",
+   "ad": "Evlenme Ödeneği (Yetim Kız Çocuğu – 'Çeyiz Parası')",
+   "taraf": "sigortali",
+   "kod": "Ek-038 Gelir/Aylık/Ödenek Talep Belgesi",
+   "kisa": "Ölüm aylığı alırken evlendiği için aylığı kesilen kız çocuğuna, aylığının 24 aylık tutarının bir defada ödenmesi (5510 md.37).",
+   "kim": "Ölen ebeveyninden ölüm aylığı alan ve evlenen kız çocukları.",
+   "ne_zaman": "Evlenmeden sonra; 5 yıllık zamanaşımı içinde.",
+   "nereden": [
+    [
+     "e-Devlet SGK hizmetleri",
+     "https://www.turkiye.gov.tr/sosyal-guvenlik-kurumu"
+    ],
+    [
+     "Resmi form (Ek-038)",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Kimlik",
+     ""
+    ],
+    [
+     "Evlenme tarihi",
+     "MERNİS'ten."
+    ],
+    [
+     "Banka/PTT",
+     ""
+    ]
+   ],
+   "adimlar": [
+    "Evlilik MERNİS'e işlendikten sonra aylığın kesileceğini bilin.",
+    "Ek-038 veya e-Devlet ile evlenme ödeneği talep edin.",
+    "Tutar, kesilen aylığın 24 aylık toplamıdır.",
+    "Ödemeyi alın."
+   ],
+   "belgeler": [
+    "Kimlik"
+   ],
+   "ceza": "Yok.",
+   "ipucu": [
+    "Boşanma halinde ölüm aylığı yeniden bağlanabilir; ancak evlenme ödeneği alınmışsa ödenekten karşılanan süre dikkate alınır (koşullar Kurumca belirlenir).",
+    "'Çeyiz parası' ifadesi halk arasında ayrıca kadın işçinin evlenme nedeniyle kıdem tazminatlı ayrılması (işten çıkış kodu 13; evlenmeden itibaren 1 yıl içinde) için de kullanılır; bu SGK ödemesi değil işveren ödemesidir."
+   ],
+   "kaynak": [
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+   ]
+  },
+  {
+   "k": "hizmet-birlestirme",
+   "ad": "Hizmet Birleştirme",
+   "taraf": "sigortali",
+   "kod": "Ayrı form yok; aylık talebinde (Ek-038) değerlendirilir",
+   "kisa": "4/a, 4/b ve 4/c'de geçen hizmetlerin aylık bağlanmasında birleştirilmesi (5510 md.53).",
+   "kim": "Farklı statülerde hizmeti olan sigortalılar.",
+   "ne_zaman": "Aylık talebi sırasında birlikte değerlendirilir.",
+   "nereden": [
+    [
+     "SGK il müdürlüğü / SGM",
+     "https://www.sgk.gov.tr/il-mudurlukleri"
+    ],
+    [
+     "Resmi form sayfası",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Statüler ve süreler",
+     "Her statüdeki gün sayısı."
+    ],
+    [
+     "Son 7 yıl",
+     "Son 7 yılda en fazla fiili hizmetin geçtiği statü; eşitse son statü."
+    ]
+   ],
+   "adimlar": [
+    "Tüm statülerdeki hizmet dökümünü alın.",
+    "Son 7 yıldaki fiili hizmet sürelerini karşılaştırın.",
+    "Aylık talebinde birleştirmeyi belirtin.",
+    "Kurum hangi statüden aylık bağlanacağını belirler.",
+    "Çakışan sürelerde (aynı anda iki statü) yalnızca biri sayılır; kontrol edin."
+   ],
+   "belgeler": [
+    "Hizmet dökümleri"
+   ],
+   "ceza": "Yok.",
+   "ipucu": [
+    "4/b'de prim borcu varken 4/b süreleri birleştirmede sayılmayabilir; borcu ödeyin.",
+    "Emeklilik öncesi kısa süreli 4/a çalışması, son 7 yıl kuralında statüyü değiştirmeyebilir; hesap yapın."
+   ],
+   "kaynak": [
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+   ]
+  },
+  {
+   "k": "sigortalilik-baslangic-tespiti",
+   "ad": "Sigortalılık Başlangıç Tarihi Tespiti / Hizmet Tespiti",
+   "taraf": "sigortali",
+   "kod": "Serbest dilekçe; hizmet tespiti için iş mahkemesi davası",
+   "kisa": "İlk sigortalılık tarihinin (çıraklık, staj, 18 yaş öncesi, yurt dışı vb.) tespiti veya bildirilmeyen çalışmaların SGK kayıtlarına geçirilmesi.",
+   "kim": "Sigortalılık başlangıcının düzeltilmesini isteyen veya bildirilmemiş çalışmaları bulunan sigortalılar.",
+   "ne_zaman": "Kurum başvurusu her zaman; hizmet tespit davası hizmetin geçtiği yılın sonundan itibaren 5 yıl içinde (5510 md.86/9).",
+   "nereden": [
+    [
+     "SGK il müdürlüğü / SGM",
+     "https://www.sgk.gov.tr/il-mudurlukleri"
+    ],
+    [
+     "e-Devlet hizmet dökümü",
+     "https://www.turkiye.gov.tr/4a-hizmet-dokumu"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Talep konusu",
+     "İlk işe giriş tarihinin düzeltilmesi, çıraklık/staj süresi, bildirilmeyen çalışma."
+    ],
+    [
+     "Kanıtlar",
+     "İşyeri kayıtları, bordro, tanıklar, banka ücret ödemeleri."
+    ]
+   ],
+   "adimlar": [
+    "Hizmet dökümünden ilk sigortalılık tarihini kontrol edin.",
+    "Eksik/yanlışlık varsa belgeleri toplayın.",
+    "SGM'ye dilekçe ile başvurun.",
+    "Kurum inceleme/sorgulama yapar; gerekirse müfettiş incelemesi.",
+    "Kurum reddederse veya hizmet tespiti gerekiyorsa iş mahkemesinde dava açın.",
+    "Karar kesinleşince kayıtlar güncellenir."
+   ],
+   "belgeler": [
+    "Bordro, iş sözleşmesi",
+    "Tanık bilgileri",
+    "Çıraklık/staj belgeleri"
+   ],
+   "ceza": "Yok.",
+   "ipucu": [
+    "5 yıllık hak düşürücü süre kaçarsa hizmet tespiti talep edilemez (Kuruma bildirilmiş belgeler hariç).",
+    "Staj süresi ile sigortalılık başlangıcı 2026 itibarıyla yasal düzenleme gündemindedir; güncel mevzuatı kontrol edin."
+   ],
+   "kaynak": [
+    "https://kms.kaysis.gov.tr/Home/Kurum/22620739"
+   ]
+  },
+  {
+   "k": "4b-tescil-terk",
+   "ad": "4/b (Bağ-Kur) Sigortalılık Tescili ve Sona Erme (Terk)",
+   "taraf": "sigortali",
+   "kod": "SSİY Ek-004 Sigortalı İşe Giriş Bildirgesi (4/1-a-b); 4/b sona erme için Ek-006",
+   "kisa": "Vergi mükellefiyeti, şirket ortaklığı, esnaf odası kaydı veya tarımsal faaliyet nedeniyle kendi adına bağımsız çalışanların tescili ve faaliyetin bitiminde sigortalılığın sona erdirilmesi.",
+   "kim": "Ticari kazanç/serbest meslek kazancı mükellefleri, şirket ortakları (limited ortakları, anonim yönetim kurulu üyesi ortaklar), esnaf, tarım sigortalıları.",
+   "ne_zaman": "Vergi dairesi, ticaret sicili ve meslek odaları kayıtları Kuruma elektronik bildirir; tescil faaliyetin başladığı tarihten itibaren yapılır. Tarımsal faaliyette kişinin kendi talebi gerekir. Sona erme: mükellefiyet terk tarihi; kurumlar sona ermeyi de bildirir.",
+   "nereden": [
+    [
+     "e-Devlet: 4B Tescil / Hizmet Dökümü, Bağ-Kur borç sorgulama",
+     "https://www.turkiye.gov.tr/sosyal-guvenlik-kurumu"
+    ],
+    [
+     "Resmi form sayfası (Ek-004)",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Faaliyet bilgisi",
+     "Vergi no, işe başlama tarihi, oda sicil no."
+    ],
+    [
+     "Prime esas kazanç tercihi",
+     "2026'da günlük 1.101,00–9.909,00 TL arası; toplam prim oranı %35,75; alt sınırda aylık prim 11.808,23 TL, üst sınırda 106.274,03 TL (Genelge 2026/2). Prim borcu olmayanlara 5510 md.81/1-j uyarınca 5 puan indirim uygulanır (isteğe bağlı sigortalılar ve muhtarlar hariç)."
+    ],
+    [
+     "Sona erme tarihi",
+     "Terk/tasfiye/ortaklıktan çıkış tarihi."
+    ]
+   ],
+   "adimlar": [
+    "Vergi dairesinde mükellefiyet açın veya şirket ortaklığı tescil edilsin.",
+    "e-Devlet'ten 4/b tescilinizin oluştuğunu kontrol edin.",
+    "Prim tutarını (PEK seçimi) belirleyin; primi her ayın sonuna kadar ödeyin.",
+    "Aynı anda 4/a çalışıyorsanız 4/a önceliklidir (5510 md.53); 4/b tescili durdurulur.",
+    "Faaliyeti bıraktığınızda vergi dairesinde terk işlemi yapın.",
+    "Kurum kaydının kapandığını e-Devlet'ten kontrol edin; kapanmadıysa SGM'ye terk belgesiyle dilekçe verin.",
+    "Prim borcu varsa ödeme/tecil planı yapın."
+   ],
+   "belgeler": [
+    "Vergi levhası / terk yazısı",
+    "Ticaret sicil gazetesi",
+    "Oda kayıt belgesi",
+    "Tarımda ÇKS/ziraat odası belgesi"
+   ],
+   "ceza": "Faaliyeti sona eren 4/b sigortalıları süresinde bildirmeyen kurum/kuruluşlara md.102 uyarınca 33.030,00 TL. Sigortalı yönünden ödenmeyen primler gecikme zammıyla borçlanır ve 60 günden fazla prim borcunda GSS yararlanması kısıtlanır.",
+   "ipucu": [
+    "Şirketten ortaklık payını devrettiğiniz halde ticaret sicilinde tescil ettirmemek 4/b borcunun sürmesine yol açar.",
+    "Emekli olup 4/b faaliyetine devam edenlerin aylığından SGDP kesilir."
+   ],
+   "kaynak": [
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/",
+    "https://cottgroup.com/tr/mevzuat/item/2026-yilina-ait-prime-esas-kazanclarin-alt-ve-ust-sinirlari-ile-guncel-tutarlarin-aciklandigi-genelge-yayimlandi"
+   ]
+  },
+  {
+   "k": "sgdp-emekli-calisan",
+   "ad": "Sosyal Güvenlik Destek Primi (Emekli Olup Çalışma) Bildirimi",
+   "taraf": "sigortali",
+   "kod": "İşe giriş bildirgesinde SGDP seçimi; MUHSGK belge türü 02",
+   "kisa": "Yaşlılık aylığı alırken 4/a kapsamında çalışanlar için genel sağlık ve uzun vadeli sigorta primi yerine SGDP kesilmesi; 4/b emeklilerde aylıktan kesinti.",
+   "kim": "Emekli olup çalışmaya devam eden/yeniden başlayan sigortalılar ve işverenleri.",
+   "ne_zaman": "İşe girişte (bir gün önce) işveren SGDP olarak bildirir; emeklilik sonrası aynı işyerinde çalışmaya devam ediliyorsa aylık başlangıcından itibaren SGDP'ye geçilir.",
+   "nereden": [
+    [
+     "e-SGK 4a İşe Giriş",
+     "https://e.sgk.gov.tr/Uygulamalar/Detay/4a-Sigortali-Ise-Giris-ve-Isten-Ayrilis-Bildirgesi-2024-10-02-10-08-51"
+    ],
+    [
+     "e-BildirgeV2",
+     "https://ebildirge.sgk.gov.tr/EBildirgeV2"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Sigortalılık türü",
+     "Sosyal güvenlik destek primi."
+    ],
+    [
+     "Belge türü",
+     "02."
+    ],
+    [
+     "Oranlar (2026)",
+     "İşçi %7,5, işveren %22,5, KVSK %2,25 dahil toplam %32,25 (kaynak: alomaliye)."
+    ]
+   ],
+   "adimlar": [
+    "Emekliliğinizi işverene bildirin ve emeklilik belgesini verin.",
+    "İşveren işe giriş bildirgesini SGDP ile verir.",
+    "MUHSGK'de belge türü 02 kullanılır.",
+    "Emekli çalışanlar için MYÖ indirimi/teşvikleri uygulanmaz.",
+    "Ayrılışta işten ayrılış bildirgesi normal kurallarla verilir."
+   ],
+   "belgeler": [
+    "Emeklilik belgesi"
+   ],
+   "ceza": "Yanlış belge türü ile bildirimde ek/iptal belge cezaları: ek belgede sigortalı başına 4.128,75 TL.",
+   "ipucu": [
+    "Emekli çalışanı 01 belge türüyle bildirmek; fark primler ve cezalar doğar.",
+    "2008 sonrası 4/a emeklilerin çalışması aylığı kesmez; SGDP kesilir."
+   ],
+   "kaynak": [
+    "https://www.alomaliye.com/2026/07/29/sgk-primleri-rehberi-2026/",
+    "https://e.sgk.gov.tr/Uygulamalar/Detay/4a-Sigortali-Ise-Giris-ve-Isten-Ayrilis-Bildirgesi-2024-10-02-10-08-51"
+   ]
+  },
+  {
+   "k": "toptan-odeme",
+   "ad": "Toptan Ödeme Talebi",
+   "taraf": "sigortali",
+   "kod": "SSİY Ek-058 Toptan Ödeme Talep Dilekçesi",
+   "kisa": "Yaş şartını doldurduğu halde prim günü yetmediği için aylık bağlanamayan sigortalıya primlerinin güncellenerek toptan ödenmesi.",
+   "kim": "Yaşlılık aylığı için yaşı doldurup prim/süre şartını sağlayamayanlar; yabancı uyruklu olup Türkiye'den kesin ayrılanlar.",
+   "ne_zaman": "Yaş şartı dolduğunda; talep sonrası ödeme.",
+   "nereden": [
+    [
+     "SGK il müdürlüğü / SGM",
+     "https://www.sgk.gov.tr/il-mudurlukleri"
+    ],
+    [
+     "Resmi form (Ek-058)",
+     "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+    ]
+   ],
+   "alanlar": [
+    [
+     "Kimlik",
+     ""
+    ],
+    [
+     "Talep gerekçesi",
+     "Yaş şartı / kesin ayrılış."
+    ],
+    [
+     "Banka",
+     ""
+    ]
+   ],
+   "adimlar": [
+    "Aylık bağlanma imkânını (borçlanma, kısmi aylık) kontrol edin; toptan ödeme sonrası o süreler için aylık hakkı biter.",
+    "Ek-058'i doldurun.",
+    "SGM'ye verin.",
+    "Ödeme hesaplanıp yapılır."
+   ],
+   "belgeler": [
+    "Kimlik",
+    "Yabancılarda kesin ayrılış belgesi"
+   ],
+   "ceza": "Yok.",
+   "ipucu": [
+    "Borçlanma veya isteğe bağlı sigorta ile aylık hakkı kazanılabilecekken toptan ödeme almak çoğu durumda dezavantajlıdır."
+   ],
+   "kaynak": [
+    "https://www.sgk.gov.tr/Diger/FormveDilekceler/fed1b24a-9610-4ec1-8a4c-2d51dbb6db2c/"
+   ]
+  }
+ ],
+ "kodlar": {
+  "isten_cikis": [
+   [
+    "01",
+    "Deneme süreli iş sözleşmesinin işverence feshi"
+   ],
+   [
+    "02",
+    "Deneme süreli iş sözleşmesinin işçi tarafından feshi"
+   ],
+   [
+    "03",
+    "Belirsiz süreli iş sözleşmesinin işçi tarafından feshi (istifa)"
+   ],
+   [
+    "04",
+    "Belirsiz süreli iş sözleşmesinin işveren tarafından haklı sebep bildirilmeden feshi"
+   ],
+   [
+    "05",
+    "Belirli süreli iş sözleşmesinin sona ermesi"
+   ],
+   [
+    "08",
+    "Emeklilik (yaşlılık) veya toptan ödeme nedeniyle"
+   ],
+   [
+    "09",
+    "Malulen emeklilik nedeniyle"
+   ],
+   [
+    "10",
+    "Ölüm"
+   ],
+   [
+    "11",
+    "İş kazası sonucu ölüm"
+   ],
+   [
+    "12",
+    "Askerlik"
+   ],
+   [
+    "13",
+    "Kadın işçinin evlenmesi"
+   ],
+   [
+    "14",
+    "Emeklilik için yaş dışında diğer şartların tamamlanması"
+   ],
+   [
+    "15",
+    "Toplu işçi çıkarma"
+   ],
+   [
+    "16",
+    "Sözleşme sona ermeden sigortalının aynı işverene ait diğer işyerine nakli"
+   ],
+   [
+    "17",
+    "İşyerinin kapanması"
+   ],
+   [
+    "18",
+    "İşin sona ermesi"
+   ],
+   [
+    "19",
+    "Mevsim bitimi (iş sözleşmesi askıda; işçi dönmeyecekse 04)"
+   ],
+   [
+    "20",
+    "Kampanya bitimi (iş sözleşmesi askıda; işçi dönmeyecekse 04)"
+   ],
+   [
+    "21",
+    "Statü değişikliği"
+   ],
+   [
+    "22",
+    "Diğer nedenler"
+   ],
+   [
+    "23",
+    "İşçi tarafından zorunlu nedenle fesih"
+   ],
+   [
+    "24",
+    "İşçi tarafından sağlık nedeniyle fesih"
+   ],
+   [
+    "25",
+    "İşçi tarafından işverenin ahlak ve iyi niyet kurallarına aykırı davranışı nedeniyle fesih"
+   ],
+   [
+    "26",
+    "Disiplin kurulu kararı ile fesih"
+   ],
+   [
+    "27",
+    "İşveren tarafından zorunlu nedenlerle ve tutukluluk nedeniyle fesih"
+   ],
+   [
+    "28",
+    "İşveren tarafından sağlık nedeniyle fesih"
+   ],
+   [
+    "30",
+    "Vize süresinin bitimi (iş sözleşmesi askıda; işçi dönmeyecekse 04)"
+   ],
+   [
+    "31",
+    "Borçlar Kanunu, Sendikalar Kanunu, Grev ve Lokavt Kanunu kapsamında kendi istek ve kusuru dışında fesih"
+   ],
+   [
+    "32",
+    "4046 sayılı Kanunun 21. maddesine göre özelleştirme nedeniyle fesih"
+   ],
+   [
+    "33",
+    "Gazeteci tarafından sözleşmenin feshi"
+   ],
+   [
+    "34",
+    "İşyerinin devri, işin veya işyerinin niteliğinin değişmesi nedeniyle fesih"
+   ],
+   [
+    "35",
+    "6495 sayılı Kanun nedeniyle devlet memurluğuna geçenler"
+   ],
+   [
+    "36",
+    "KHK ile işyerinin kapatılması"
+   ],
+   [
+    "37",
+    "KHK ile kamu görevinden çıkarma"
+   ],
+   [
+    "38",
+    "Doğum nedeniyle işten ayrılma"
+   ],
+   [
+    "39",
+    "696 sayılı KHK ile kamu işçiliğine geçiş"
+   ],
+   [
+    "40",
+    "696 sayılı KHK ile kamu işçiliğine geçilememesi sebebiyle çıkış"
+   ],
+   [
+    "41",
+    "Resen işten ayrılış bildirgesi düzenlenenler"
+   ],
+   [
+    "42",
+    "4857 md.25/II-a: Sözleşme yapıldığı sırada işçinin gerekli vasıflara sahip olmadığı halde bunlara sahip olduğunu ileri sürerek işvereni yanıltması"
+   ],
+   [
+    "43",
+    "4857 md.25/II-b: İşçinin işveren veya aile üyelerinin onur ve şerefine dokunacak sözler sarf etmesi veya asılsız ihbar ve isnatta bulunması"
+   ],
+   [
+    "44",
+    "4857 md.25/II-c: İşçinin işverenin başka bir işçisine cinsel tacizde bulunması"
+   ],
+   [
+    "45",
+    "4857 md.25/II-d: İşçinin işverene, aile üyelerine veya başka işçiye sataşması, işyerine sarhoş/uyuşturucu almış olarak gelmesi ya da işyerinde kullanması"
+   ],
+   [
+    "46",
+    "4857 md.25/II-e: İşçinin işverenin güvenini kötüye kullanması, hırsızlık yapması, meslek sırlarını ortaya atması gibi doğruluk ve bağlılığa uymayan davranışlar"
+   ],
+   [
+    "47",
+    "4857 md.25/II-f: İşçinin işyerinde 7 günden fazla hapisle cezalandırılan ve cezası ertelenmeyen bir suç işlemesi"
+   ],
+   [
+    "48",
+    "4857 md.25/II-g: İşçinin işverenden izin almaksızın veya haklı bir nedene dayanmaksızın ardı ardına 2 işgünü veya bir ayda 2 defa herhangi bir tatil gününden sonraki işgünü veya bir ayda 3 işgünü işine devam etmemesi"
+   ],
+   [
+    "49",
+    "4857 md.25/II-h: İşçinin yapmakla ödevli bulunduğu görevleri kendisine hatırlatıldığı halde yapmamakta ısrar etmesi"
+   ],
+   [
+    "50",
+    "4857 md.25/II-ı: İşçinin kendi isteği veya savsaması yüzünden işin güvenliğini tehlikeye düşürmesi, işyerinin malı olan veya malı olmayıp da eli altında bulunan makineleri, tesisatı veya başka eşya ve maddeleri 30 günlük ücretinin tutarıyla ödeyemeyecek derecede hasara ve kayba uğratması"
+   ]
+  ],
+  "eksik_gun": [
+   [
+    "01",
+    "İstirahat (rapor)"
+   ],
+   [
+    "03",
+    "Disiplin cezası"
+   ],
+   [
+    "04",
+    "Gözaltına alınma"
+   ],
+   [
+    "05",
+    "Tutukluluk"
+   ],
+   [
+    "06",
+    "Kısmi istihdam (kısmi süreli çalışma)"
+   ],
+   [
+    "07",
+    "Puantaj kayıtları"
+   ],
+   [
+    "08",
+    "Grev"
+   ],
+   [
+    "09",
+    "Lokavt"
+   ],
+   [
+    "10",
+    "Genel hayatı etkileyen olaylar"
+   ],
+   [
+    "11",
+    "Doğal afet"
+   ],
+   [
+    "12",
+    "Birden fazla neden"
+   ],
+   [
+    "13",
+    "Diğer"
+   ],
+   [
+    "15",
+    "Devamsızlık"
+   ],
+   [
+    "16",
+    "Fesih tarihinde çalışmamış"
+   ],
+   [
+    "17",
+    "Ev hizmetlerinde 30 günden az çalışma"
+   ],
+   [
+    "18",
+    "Kısa çalışma ödeneği"
+   ],
+   [
+    "19",
+    "Ücretsiz doğum izni (analık sonrası ücretsiz izin)"
+   ],
+   [
+    "20",
+    "Ücretsiz yol izni"
+   ],
+   [
+    "21",
+    "Diğer ücretsiz izin"
+   ],
+   [
+    "22",
+    "5434 SK ek 76, GM 192 (4/c ile ilgili özel durum)"
+   ],
+   [
+    "23",
+    "Yarım çalışma ödeneği"
+   ],
+   [
+    "24",
+    "Yarım çalışma ödeneği ve diğer nedenler"
+   ],
+   [
+    "25",
+    "Diğer belge/kanun türlerinden gün tamamlama"
+   ],
+   [
+    "26",
+    "Kısmi istihdama izin verilen yabancı uyruklu sigortalı"
+   ],
+   [
+    "27",
+    "Kısa çalışma ödeneği ve diğer nedenler"
+   ]
+  ],
+  "belge_turleri": [
+   [
+    "01",
+    "Hizmet akdi ile tüm sigorta kollarına tabi çalışanlar (yabancı uyruklu sigortalılar dahil)"
+   ],
+   [
+    "02",
+    "Sosyal güvenlik destek primine tabi çalışanlar (emekli çalışanlar)"
+   ],
+   [
+    "04",
+    "Yer altında sürekli çalışanlar"
+   ],
+   [
+    "05",
+    "Yer altında gruplu (münavebeli) çalışanlar"
+   ],
+   [
+    "06",
+    "Yer üstü gruplu çalışanlar"
+   ],
+   [
+    "07",
+    "3308 sayılı Kanunda belirtilen aday çırak, çırak ve işletmelerde mesleki eğitim gören öğrencilerden bakmakla yükümlü olunanlar"
+   ],
+   [
+    "12",
+    "506 sayılı Kanun geçici 20. maddeye (banka/sigorta sandıkları) tabi olanlar"
+   ],
+   [
+    "13",
+    "Tüm sigorta kollarına tabi olup işsizlik sigortası primi kesilmeyenler"
+   ],
+   [
+    "14",
+    "Libya'da çalışanlar"
+   ],
+   [
+    "19",
+    "Ceza infaz kurumları ile tutukevleri bünyesinde oluşturulan tesis, atölye ve benzeri ünitelerde çalıştırılan hükümlü ve tutuklular"
+   ],
+   [
+    "20",
+    "İstisna akdine istinaden Almanya'ya götürülen Türk işçiler"
+   ],
+   [
+    "21",
+    "Türk işverenler tarafından sosyal güvenlik sözleşmesi imzalanmamış ülkelere götürülerek çalıştırılan Türk işçiler"
+   ],
+   [
+    "22",
+    "Meslek liselerinde okurken veya yükseköğrenim sırasında staja tabi tutulan öğrencilerden bakmakla yükümlü olunanlar"
+   ],
+   [
+    "23",
+    "Harp malulleri ile 3713 ve 2330 sayılı Kanunlara göre vazife malullüğü aylığı alanlardan kısa vadeli sigorta kollarına tabi olanlar"
+   ],
+   [
+    "24",
+    "Harp malulleri ile 3713 ve 2330 sayılı Kanunlara göre vazife malullüğü aylığı alanlardan kısa ve uzun vadeli sigorta kollarına tabi olanlar"
+   ],
+   [
+    "28",
+    "4046 sayılı Kanunun 21. maddesi kapsamında iş kaybı tazminatı alanlar"
+   ],
+   [
+    "29",
+    "Tüm sigorta kollarına tabi çalışıp 60 gün fiili hizmet süresi zammına tabi çalışanlar"
+   ],
+   [
+    "30",
+    "İşsizlik sigortası hariç 60 gün fiili hizmet süresi zammına tabi çalışanlar"
+   ],
+   [
+    "31",
+    "Harp malulleri / vazife malullüğü aylığı alanlardan 60 gün fiili hizmet süresi zammına tabi çalışanlar"
+   ],
+   [
+    "32",
+    "Tüm sigorta kollarına tabi çalışıp 90 gün fiili hizmet süresi zammına tabi çalışanlar"
+   ],
+   [
+    "33",
+    "İşsizlik sigortası hariç 90 gün fiili hizmet süresi zammına tabi çalışanlar"
+   ],
+   [
+    "34",
+    "Harp malulleri / vazife malullüğü aylığı alanlardan 90 gün fiili hizmet süresi zammına tabi çalışanlar"
+   ],
+   [
+    "35",
+    "Tüm sigorta kollarına tabi çalışıp 180 gün fiili hizmet süresi zammına tabi çalışanlar"
+   ],
+   [
+    "36",
+    "İşsizlik sigortası hariç 180 gün fiili hizmet süresi zammına tabi çalışanlar"
+   ],
+   [
+    "37",
+    "Harp malulleri / vazife malullüğü aylığı alanlardan 180 gün fiili hizmet süresi zammına tabi çalışanlar"
+   ],
+   [
+    "39",
+    "Birleşik Krallık'ta ikamet edenler ve İsviçre vatandaşı olanlardan uzun vadeli sigorta kolunun uygulanmasını istemeyenler"
+   ],
+   [
+    "41",
+    "Kamu idarelerinde iş akdi askıda olanlar"
+   ],
+   [
+    "42",
+    "3308 sayılı Kanunda belirtilen aday çırak, çırak ve işletmelerde mesleki eğitim gören öğrencilerden bakmakla yükümlü olunmayanlar"
+   ],
+   [
+    "43",
+    "Meslek liselerinde okurken veya yükseköğrenim sırasında staja tabi tutulan öğrencilerden bakmakla yükümlü olunmayanlar"
+   ],
+   [
+    "46",
+    "Meslek liselerinde okurken veya yükseköğrenim sırasında staja tabi tutulan öğrencilerden bakmakla yükümlü olunmayanlar (diğer alt grup; ayrıntı için unverified)"
+   ],
+   [
+    "47",
+    "Doğum ve evlat edinme sonrası yarım çalışma ödeneği"
+   ],
+   [
+    "48",
+    "Yer altında çalışan emekliler"
+   ],
+   [
+    "49",
+    "Mesleki ve teknik ortaöğretim sırasında tamamlayıcı eğitim ya da alan eğitimi gören öğrencilerden bakmakla yükümlü olunanlar"
+   ],
+   [
+    "50",
+    "Mesleki ve teknik ortaöğretim sırasında tamamlayıcı eğitim ya da alan eğitimi gören öğrencilerden bakmakla yükümlü olunmayanlar"
+   ],
+   [
+    "51",
+    "5510 sayılı Kanunun ek 15. maddesi kapsamındaki güvenlik korucuları"
+   ],
+   [
+    "52",
+    "Malullük aylığı bağlanmamış olup 670 sayılı KHK kapsamında tazminat hakkından yararlananlar"
+   ],
+   [
+    "53",
+    "Malullük aylığı bağlanmamış olup 670 sayılı KHK kapsamında tazminat hakkından yararlananlardan 60 gün fiili hizmet süresi zammına tabi olanlar"
+   ],
+   [
+    "54",
+    "Malullük aylığı bağlanmamış olup 670 sayılı KHK kapsamında tazminat hakkından yararlananlardan 90 gün fiili hizmet süresi zammına tabi olanlar"
+   ],
+   [
+    "55",
+    "Malullük aylığı bağlanmamış olup 670 sayılı KHK kapsamında tazminat hakkından yararlananlardan 180 gün fiili hizmet süresi zammına tabi olanlar"
+   ],
+   [
+    "90",
+    "İtibari hizmet süresine tabi olarak çalışanlar"
+   ],
+   [
+    "91",
+    "60 gün fiili hizmet süresi zammına tabi olanlardan itibari hizmet süresine tabi olarak çalışanlar"
+   ],
+   [
+    "92",
+    "90 gün fiili hizmet süresi zammına tabi olanlardan itibari hizmet süresine tabi olarak çalışanlar"
+   ]
+  ],
+  "kanun_numaralari_ornek": [
+   [
+    "00000",
+    "Teşviksiz bildirim"
+   ],
+   [
+    "05510",
+    "5510 md.81/1-ı – MYÖ işveren hissesi indirimi (2026: imalat 5 puan, diğer 2 puan)"
+   ],
+   [
+    "06111",
+    "4447 geçici 10 – Genç, kadın ve mesleki belge sahibi istihdamı (işe alım 31.12.2026'ya kadar)"
+   ],
+   [
+    "14857",
+    "4857 md.30 – Engelli sigortalı istihdamı (işveren hissesi Hazine'den)"
+   ]
+  ]
+ },
+ "unverified": [
+  "İşten ayrılış bildirgesi cezasının (asgari ücretin 1/10'u) üst sınırı kaynaklarda farklı ifade ediliyor; kanun metninden (5510 md.102) teyit edilmeli.",
+  "MUHSGK cezalarında '30 gün içinde kendiliğinden verme halinde 1/4' indiriminin hangi bentlere uygulandığı (yalnızca işyeri ve işe giriş bildirgesi mi, belgeler de mi) kanun metninden doğrulanmalı.",
+  "Çalışmadığına dair bildirimin hiç yapılmaması halinde 1/2, geç yapılmasında 1/10 asgari ücret cezası bilgisi tek kaynağa (kolayik) dayanıyor.",
+  "İş kazası bildiriminde 5510 md.102 kapsamında ayrıca SGK idari para cezası bulunup bulunmadığı netleştirilemedi; 6331 md.26 tutarları PwC'den alındı.",
+  "Askerlik ve diğer md.41 borçlanmalarında 2026'da oranın %32'den %45'e çıktığı bilgisi Genelge 2026/2 özetine (cottgroup) ve basına dayanıyor; ilgili kanun değişikliği numarası tespit edilemedi. Basında askerlik için üst sınır 3.715 TL olarak da geçiyor (cottgroup: 4.459,05 TL).",
+  "GSS (60/1-g) 2026 aylık prim tutarı 1.981,80 TL ve gelir testi yaptırmayanlar için 7.927,20 TL; hesaplama dayanağı (asgari ücretin %6'sı / 2 katının %12'si) resmi metinden doğrulanmalı.",
+  "4/b prim oranı ve 5 puan indirimli net prim tutarı (alt sınırda 11.808,23 TL brüt, %35,75) – sigortalının ödediği net tutar indirim ve GSS durumuna göre değişir.",
+  "4447 geçici 36 / 7590 sayılı Kanun md.11 turizm prim desteği (günlük 116,67 TL) tek kaynağa dayanıyor; MUHSGK kanun numarası kodu tespit edilemedi.",
+  "7103 (17103/27103) ve 7252, 7316 gibi eski teşviklerin 2026'da yeni işe alımlar için uygulanmadığı varsayılmıştır; SGK teşvik listesinde (04.08.2026 sunumu) adları geçmiyor.",
+  "Tecilde 72 ay ve 10 milyon TL teminatsız sınırının 31.08.2026 sonrasında da geçerli olup olmadığı netleşmedi (Genelge 2026/15). 'Çok zor durum' rapor sınırı 2026'da 900.000 TL olarak kaynakta geçiyor.",
+  "Gecikme zammı oranı (aylık %3,7, 13.11.2025 Cumhurbaşkanı Kararı) tek kaynağa dayanıyor; bu nedenle kartlara yazılmadı.",
+  "Eksik gün kodları 02 ve 14 ile pandemi dönemine ait 28 (pandemi ücretsiz izin) ve 29 (pandemi ücretsiz izin ve diğer nedenler) listeye alınmadı; 4857 geçici md.10 uygulaması sona erdiği için yürürlükte sayılmadı. İşten çıkış kodu 29 16.04.2021'de kaldırıldığı için listede yok. Eksik Gün Bildirim Formu (Ek-070) ve kâğıt APHB örnekleri (Ek-066/067/068) güncel kullanımı doğrulanamadığı için katalogdan çıkarıldı.",
+  "Belge türlerinde 03, 08–11, 15–18, 25–27, 38, 40, 44–45 ve 56–89 kodları kaynakta yer almıyor (kapalı veya kullanılmayan kodlar olabilir). 46 numaralı belge türünün açıklaması kaynakta 43 ile aynı görünüyor.",
+  "İşten çıkış kodu 06 ve 07 hiçbir kaynakta tanımlı değil; listede yer verilmedi.",
+  "Alt işverenlik sözleşmesinin SGK'ya noter onaylı örneğinin verilmesi zorunluluğu ve ÇSGB bildirim adımları kaynaklarda net teyit edilmedi.",
+  "Geçici iş ilişkisi için e-Bildirge'de ayrı bir 'geçici iş ilişkisi bildirimi' ekranı olup olmadığı ve form adı teyit edilemedi.",
+  "e-Bildirge şifre başvurusunda kullanılan sözleşme/taahhütname formunun güncel adı ve numarası resmi sayfada bulunamadı.",
+  "4/b sigortalıların iş kazasını 1 ay içinde bildirme süresi ve tarımsal 4/b tescilinin talep şartları güncel metinden doğrulanmalı.",
+  "e-Devlet hizmet adları (Emzirme Ödeneği Başvurusu, Cenaze Ödeneği, Borçlanma Başvurusu) ve doğrudan URL'leri tek tek doğrulanmadı; genel SGK e-Devlet sayfası verildi.",
+  "Cenaze ödeneği için 'en az 360 gün prim' şartı ve evlenme ödeneğinde boşanma sonrası aylık uygulaması ayrıntıları kanun metninden teyit edilmeli."
+ ]
+}
