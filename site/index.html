@@ -1286,6 +1286,15 @@ section[data-view],[id^="h-"],[id^="d-"],[id^="x-"],[id^="p-"]{scroll-margin-top
 .tbar .tb-tk-in .pg{grid-area:1/1;opacity:0;transform:translateY(6px);transition:opacity .3s ease,transform .3s ease;pointer-events:none;height:100%}
 .tbar .tb-tk-in .pg.on{opacity:1;transform:none;transition-delay:.3s}
 @media (prefers-reduced-motion:reduce){.tbar .tb-tk-in .pg{transition:none}}
+.gidx{padding:6px 2px}.gidx-l{color:var(--ink-2);margin:0 0 14px}.gidx h4{font:700 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--stamp);margin:18px 0 8px}
+.gidx-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.gidx-g button{display:grid;grid-template-columns:auto 1fr;align-items:center;column-gap:10px;row-gap:2px;text-align:left;padding:12px 14px;border:1px solid var(--rule);border-radius:14px;background:var(--sheet);color:var(--ink);cursor:pointer;font:inherit}
+.gidx-g button:hover{border-color:var(--glow);box-shadow:0 6px 18px -10px rgba(91,63,168,.5)}
+.gidx-g .ti{grid-row:span 2;display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:color-mix(in srgb,#5B3FA8 12%,transparent);color:#5B3FA8;font:700 12px var(--f-mono)}
+.gidx-g b{font-size:14.5px}.gidx-g small{font-size:12.5px;color:var(--ink-2);line-height:1.35}
+.result .row.long{flex-wrap:wrap;align-items:flex-start;gap:6px 12px}.result .row.long span{flex:1 0 100%}
+.result .row.long b{flex:1 1 auto;min-width:0;white-space:normal!important;overflow-wrap:anywhere;word-break:break-word;font-size:17px!important;line-height:1.4;text-align:left}
+.result .rcopy{flex:none;align-self:center;border:1px solid rgba(237,241,249,.25);background:transparent;color:inherit;border-radius:999px;padding:5px 12px;font:600 12px var(--f-body);cursor:pointer}.result .rcopy:hover{border-color:var(--glow)}
 /* alt bar v2: geniş, iki satır tarih, kayan piyasa şeridi */
 @media (min-width:641px){.tbar{width:min(1560px,calc(100% - 24px))!important}}
 @media (min-width:901px){.tbar{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important}.tbar .tb-info{padding-left:8px}}
@@ -2127,8 +2136,13 @@ function gshell(root,items,render,firstKey){
     x.addEventListener('click',function(){inp.value='';draw();inp.focus();});
     document.addEventListener('click',function(e){if(!root.querySelector('.gsrch').contains(e.target))box.hidden=true;});
   })();
-  select(firstKey);
-  return {select:select,has:function(k){return !!map[k];}};
+  function index(){tabs.forEach(function(t){t.setAttribute('aria-selected','false');});gns.forEach(function(g){g.classList.remove('cur');});sel.value='';
+    var noun=(root.closest('section')||{dataset:{}}).dataset.view==='dilekceler'?'dilekçe':'hesaplama';
+    gcur.innerHTML='<span>Başlarken</span><b>Bir '+noun+' seçin</b>';
+    pane.innerHTML='<div class="gidx"><p class="gidx-l">Yukarıdaki başlıklardan ya da aşağıdaki listeden istediğiniz '+noun+'yı seçin.</p>'+groups.map(function(g){return '<h4>'+esc(g)+'</h4><div class="gidx-g">'+gsort(items.filter(function(it){return it.g===g;})).map(function(it){return '<button type="button" data-k="'+it.key+'">'+(it.abbr?'<span class="ti">'+esc(it.abbr)+'</span>':'')+'<b>'+esc(it.title)+'</b>'+(it.lead?'<small>'+esc(it.lead)+'</small>':'')+'</button>';}).join('')+'</div>';}).join('')+'</div>';
+    $$('.gidx button',pane).forEach(function(b){b.onclick=function(){select(b.dataset.k);try{history.replaceState(null,'',location.pathname+location.search+'#'+(noun==='dilekçe'?'d-':'h-')+b.dataset.k);}catch(e){}var pw=$('.pane-wrap',root);setTimeout(function(){pw.scrollIntoView({behavior:'smooth',block:'start'});},30);};});}
+  if(firstKey)select(firstKey);else index();
+  return {select:select,index:index,has:function(k){return !!map[k];}};
 }
 
 /* ---------- güncel oranlar: oranlar.json dosyasından güncellenir ---------- */
@@ -2393,10 +2407,10 @@ function renderTool(it,p){
   var out=$('.result',p),tbl=$('.ttable',p);
   function run(){var r=null;try{r=it.calc(state);}catch(e){r=null;}
     if(!r){out.innerHTML='<div class="res-h"><span class="res-ic" aria-hidden="true">=</span><div><b>Hesaplama sonucu</b><small>Girdiğiniz bilgilere göre anında hesaplanır</small></div></div>'+'<div class="row big"><span>Sonuç</span><b>—</b></div><p class="note">Değerleri kontrol edin.</p>';tbl.innerHTML='';return;}
-    out.innerHTML='<div class="res-h"><span class="res-ic" aria-hidden="true">=</span><div><b>Hesaplama sonucu</b><small>Girdiğiniz bilgilere göre anında hesaplanır</small></div></div>'+r.rows.map(function(x){return '<div class="row'+(x[2]?' big':'')+'"><span>'+esc(x[0])+'</span><b>'+esc(x[1])+'</b></div>';}).join('')+(r.note?'<p class="note">'+esc(r.note)+'</p>':'')+'<div class="acts"><button type="button" data-a="copy">Sonucu kopyala</button><button type="button" data-a="share">Paylaş</button><button type="button" data-a="print">Yazdır</button></div>';
+    out.innerHTML='<div class="res-h"><span class="res-ic" aria-hidden="true">=</span><div><b>Hesaplama sonucu</b><small>Girdiğiniz bilgilere göre anında hesaplanır</small></div></div>'+r.rows.map(function(x){var L=String(x[1]).length>24;return '<div class="row'+(x[2]?' big':'')+(L?' long':'')+'"><span>'+esc(x[0])+'</span><b>'+esc(x[1])+'</b>'+(L?'<button type="button" class="rcopy" data-copy="'+esc(x[1])+'">Kopyala</button>':'')+'</div>';}).join('')+(r.note?'<p class="note">'+esc(r.note)+'</p>':'')+'<div class="acts"><button type="button" data-a="copy">Sonucu kopyala</button><button type="button" data-a="share">Paylaş</button><button type="button" data-a="print">Yazdır</button></div>';
     tbl.innerHTML=r.table?'<div class="tscroll"><table class="dtable"><thead><tr>'+r.table.head.map(function(h){return '<th>'+esc(h)+'</th>';}).join('')+'</tr></thead><tbody>'+r.table.body.map(function(row){return '<tr>'+row.map(function(c){return '<td>'+esc(c)+'</td>';}).join('')+'</tr>';}).join('')+'</tbody></table></div>':'';
     var txt=it.title+'\n'+r.rows.map(function(x){return x[0]+': '+x[1];}).join('\n')+'\n— erdalkarahan.com';
-    $('[data-a=copy]',out).onclick=function(){copyText(txt,'Sonuç kopyalandı');};
+    $('[data-a=copy]',out).onclick=function(){copyText(txt,'Sonuç kopyalandı');};$$('.rcopy',out).forEach(function(b){b.onclick=function(){copyText(b.dataset.copy,'Kopyalandı');b.textContent='Kopyalandı ✓';setTimeout(function(){b.textContent='Kopyala';},1600);};});
     $('[data-a=share]',out).onclick=function(){openShare(it.title,txt,SITE_URL+'#h-'+it.key,{rows:r.rows,table:r.table,el:(function(){var d=document.createElement('div');d.innerHTML=out.innerHTML+tbl.innerHTML;return d;})()});};$('[data-a=print]',out).onclick=function(){printEl(out,it.title);};}
   $$('[data-f]',p).forEach(function(el){['input','change'].forEach(function(ev){el.addEventListener(ev,function(){state[el.dataset.f]=el.value;run();});});});
   $$('[data-money]',p).forEach(function(el){el.addEventListener('blur',function(){var n=num(el.value);if(!isNaN(n)){el.value=NF.format(n);state[el.dataset.f]=el.value;run();}});});
@@ -2442,7 +2456,7 @@ function swatches(holder,box,key){var saved=null;try{saved=localStorage.getItem(
   function set(c){box.dataset.c=c;$$('button',holder).forEach(function(b){b.setAttribute('aria-pressed',b.dataset.c===c);});try{localStorage.setItem('ek-calc-'+key,c);}catch(e){}}
   $$('button',holder).forEach(function(b){b.addEventListener('click',function(){set(b.dataset.c);});});
   set(saved||(key==='home'?'acik':'mor'));}
-var TOOLSHELL=gshell($('#tools'),TOOLS,renderTool,TOOLS[0].key);
+var TOOLSHELL=gshell($('#tools'),TOOLS,renderTool,null);
 
 
 /* ---------- giriş biçimlendirme (telefon, TC, VKN, IBAN, tutar) ---------- */
@@ -2637,7 +2651,7 @@ KARARLAR.forEach(function(x){var F=[T('firma','Şirket unvanı',{val:x.g.indexOf
   F.push(T('katilanlar',(/anonim/i.test(x.g)?'Katılanlar / imzalar':'Katılanlar / imzalar')+' (her satıra: Ad Soyad – Görev veya pay)',{type:'area',val:/anonim/i.test(x.g)?'Ad Soyad – Yönetim Kurulu Başkanı\nAd Soyad – Yönetim Kurulu Üyesi':'Ad Soyad – Müdür / Ortak\nAd Soyad – Ortak'}));
   var tip=(x.tip||'')+(x.ts?' Ticaret siciline tescil gerekir.':' Tescil gerektirmez; karar defterine işlenir.')+(x.n?' Noter onayı: '+x.n+'.':'')+(x.e&&x.e.length?' Gerekli belgeler: '+x.e.join('; ')+'.':'');
   DOCS.push({g:x.g,key:'k-'+x.k,title:x.t,abbr:'KR',fields:F,body:function(v){return kararBody(x,v);},tip:tip});});
-var DOCSHELL=gshell($('#docs'),DOCS,renderDoc,'genel');
+var DOCSHELL=gshell($('#docs'),DOCS,renderDoc,null);
 
 
 /* ---------- Excel tabloları ---------- */
@@ -3732,7 +3746,7 @@ if(!FIREBASE_CONFIG)document.documentElement.classList.add('no-auth');
   function route(){
     var h=decodeURIComponent(location.hash.slice(1)),view='home',target=null;
     if(!h||h==='anasayfa'){view='home';}
-    else if(VIEWS.indexOf(h)>-1){view=h;}
+    else if(VIEWS.indexOf(h)>-1){view=h;if(h==='hesaplamalar')TOOLSHELL.index();if(h==='dilekceler')DOCSHELL.index();}
     else if(/^h-/.test(h)&&TOOLSHELL.has(h.slice(2))){view='hesaplamalar';TOOLSHELL.select(h.slice(2));}
     else if(/^d-/.test(h)&&DOCSHELL.has(h.slice(2))){view='dilekceler';DOCSHELL.select(h.slice(2));}
     else if(/^hp-\d+/.test(h)&&!document.getElementById(h)){view='hesapplani';}
@@ -3793,8 +3807,8 @@ if(!FIREBASE_CONFIG)document.documentElement.classList.add('no-auth');
   document.addEventListener('uyechange',function(){if(ls('ek-uye-ad')){g.hidden=false;open('home',true);}});
   bub.addEventListener('click',function(e){var c=e.target.closest('.g-chg');if(c){clearTimeout(hideT);msg.innerHTML='Bir maskot seçin:'+chooser();return;}var b=e.target.closest('.g-pick button');if(b){cur=b.dataset.m;ls('ek-maskot',cur);draw();$$('.g-pick button',bub).forEach(function(x){x.classList.toggle('on',x===b);});hi.textContent='Merhaba, ben '+M[cur].ad+'!';joy();}});
   var seen=false;try{seen=sessionStorage.getItem('ek-greeted')==='1';}catch(e){}
-  function greet(){g.hidden=false;if(!seen){open('home',true);try{sessionStorage.setItem('ek-greeted','1');}catch(e){}}else{bub.hidden=true;}}
-  setTimeout(function(){var ck=$('#cookie');if(ck&&!ck.hidden&&!seen){g.hidden=false;bub.hidden=true;var mo=new MutationObserver(function(){if(ck.hidden){mo.disconnect();setTimeout(greet,500);}});mo.observe(ck,{attributes:true,attributeFilter:['hidden']});}else greet();},900);
+  function greetNow(){g.hidden=false;if(!seen){open('home',true);try{sessionStorage.setItem('ek-greeted','1');}catch(e){}}else{bub.hidden=true;}}
+  setTimeout(function(){var ck=$('#cookie');if(ck&&!ck.hidden&&!seen){g.hidden=false;bub.hidden=true;var mo=new MutationObserver(function(){if(ck.hidden){mo.disconnect();setTimeout(greetNow,500);}});mo.observe(ck,{attributes:true,attributeFilter:["hidden"]});}else greetNow();},900);
   $('#g-x').addEventListener('click',function(){bub.hidden=true;});
   document.addEventListener('pointerdown',function(e){if(!bub.hidden&&!g.contains(e.target)){bub.hidden=true;clearTimeout(hideT);}},true);
   bot.addEventListener('click',function(){if(g.classList.contains('sleep')){wake();return;}if(bub.hidden){var v=($('[data-nav][aria-current]')||{dataset:{nav:'home'}}).dataset.nav;open(v,false);}else{bub.hidden=true;}});
