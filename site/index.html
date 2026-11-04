@@ -2895,18 +2895,45 @@ window.renderBelgeler=function(){var el=$('#belge-list');if(!el)return;
     return z.generateAsync({type:'blob',mimeType:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});});};
   function col(i){var s='';i++;while(i){var m=(i-1)%26;s=String.fromCharCode(65+m)+s;i=Math.floor((i-1)/26);}return s;}
   function numOf(v){v=String(v).trim();if(/^\d{2}\.\d{2}\.\d{4}$/.test(v)||/^\d{9,}$/.test(v))return null;var m=v.match(/^(-?\d{1,3}(?:\.\d{3})*(?:,\d+)?|-?\d+(?:,\d+)?)\s*(₺|TL|%)?$/);if(!m)return null;if(m[2]==='%')return null;if(!m[2]&&!/,/.test(m[1]))return null;var n=parseFloat(m[1].replace(/\./g,'').replace(',','.'));return isFinite(n)?{n:n,cur:!!m[2]}:null;}
-  window.ekXlsx=function(title,ctx){return zip().then(function(Z){var M=window.ekModel(title,ctx),R=[],widths=[48,22,18,18,18,18,18,18];
-    /* stiller: 0 normal, 1 kalın, 2 başlık, 3 para, 4 para kalın, 5 tablo başlığı, 6 gri küçük, 7 sayı */
-    function add(cells){R.push(cells);}
-    if(!ctx.noHead){add([[ 'SMMM Erdal Karahan · erdalkarahan.com',6]]);}
-    add([[title,2]]);add([['Hazırlanma: '+new Date().toLocaleDateString('tr-TR'),6]]);add([]);
-    M.forEach(function(k){if(k.t==='h'){if(title.indexOf(k.text)!==0)add([[k.text,1]]);}
-      else if(k.t==='p')k.lines.forEach(function(l){add([[l,k.bold?1:0]]);});
-      else if(k.t==='kv'){k.rows.forEach(function(r){var nv=numOf(r[1]);add([[String(r[0]).replace(/\n/g,' · '),r[2]?1:0],nv?[nv.n,nv.cur?(r[2]?4:3):7]:[String(r[1]).replace(/\n/g,' · '),r[2]?1:0]]);});add([]);}
-      else if(k.t==='table'){if(k.head)add(k.head.map(function(h){return [h,5];}));k.body.forEach(function(r){add(r.map(function(c){var nv=numOf(c);return nv?[nv.n,nv.cur?3:7]:[c,0];}));});add([]);}});
-    var rows=R.map(function(cells,ri){return '<row r="'+(ri+1)+'">'+cells.map(function(c,ci){var ref=col(ci)+(ri+1);return typeof c[0]==='number'?'<c r="'+ref+'" s="'+c[1]+'"><v>'+c[0]+'</v></c>':'<c r="'+ref+'" s="'+c[1]+'" t="inlineStr"><is><t xml:space="preserve">'+x(c[0])+'</t></is></c>';}).join('')+'</row>';}).join('');
-    var sheet='<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><cols>'+widths.map(function(w,i){return '<col min="'+(i+1)+'" max="'+(i+1)+'" width="'+w+'" customWidth="1"/>';}).join('')+'</cols><sheetData>'+rows+'</sheetData><pageSetup paperSize="9" orientation="portrait"/></worksheet>';
-    var styles='<?xml version="1.0" encoding="UTF-8" standalone="yes"?><styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><numFmts count="2"><numFmt numFmtId="164" formatCode="#,##0.00\\ &quot;₺&quot;"/><numFmt numFmtId="165" formatCode="#,##0.##"/></numFmts><fonts count="4"><font><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="14"/><color rgb="FF2A1F5C"/><name val="Calibri"/></font><font><sz val="9"/><color rgb="FF777777"/><name val="Calibri"/></font></fonts><fills count="3"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill><fill><patternFill patternType="solid"><fgColor rgb="FFECE7F8"/><bgColor indexed="64"/></patternFill></fill></fills><borders count="2"><border/><border><left style="thin"><color rgb="FFBFC6D4"/></left><right style="thin"><color rgb="FFBFC6D4"/></right><top style="thin"><color rgb="FFBFC6D4"/></top><bottom style="thin"><color rgb="FFBFC6D4"/></bottom></border></borders><cellStyleXfs count="1"><xf/></cellStyleXfs><cellXfs count="8"><xf/><xf fontId="1" applyFont="1"/><xf fontId="2" applyFont="1"/><xf numFmtId="164" applyNumberFormat="1"/><xf numFmtId="164" fontId="1" applyNumberFormat="1" applyFont="1"/><xf fontId="1" fillId="2" borderId="1" applyFont="1" applyFill="1" applyBorder="1"/><xf fontId="3" applyFont="1"/><xf numFmtId="165" applyNumberFormat="1"/></cellXfs></styleSheet>';
+  window.ekXlsx=function(title,ctx){return zip().then(function(Z){var M=window.ekModel(title,ctx),R=[],H={},MG=[],widths=[44,26,18,18,18,18,18,18],maxc=2;
+    function add(cells,ht,merge){R.push(cells);if(ht)H[R.length]=ht;if(merge)MG.push('A'+R.length+':'+col(merge-1)+R.length);}
+    M.forEach(function(k){if(k.t==='table')maxc=Math.max(maxc,(k.head||k.body[0]||[]).length);});
+    add([[title,2]],26,maxc);add([[(ctx.noHead?'':'SMMM Erdal Karahan · erdalkarahan.com · ')+'Hazırlanma: '+new Date().toLocaleDateString('tr-TR'),6]],null,maxc);add([]);
+    M.forEach(function(k){if(k.t==='h'){if(title.indexOf(k.text)!==0){add([[k.text,12],['',12]].concat(maxc>2?Array(maxc-2).fill(['',12]):[]),20,maxc);}}
+      else if(k.t==='p'){k.runs.forEach(function(r,ri){var t=r.map(function(z){return z.t;}).join('');var bold=r.length&&r.every(function(z){return z.b;});add([[t,bold||k.bold?(ri===0&&!k.dh?17:1):0]],null,maxc);});}
+      else if(k.t==='kv'){if(k.sig){add([]);add([[k.rows[0][0],16],[k.rows[0][1],16]],48);}
+        else{k.rows.forEach(function(r){var nv=numOf(r[1]),big=!!r[2];add([[String(r[0]).replace(/\n/g,' · '),big?13:8],nv?[nv.n,nv.cur?(big?11:10):(big?11:18)]:[String(r[1]).replace(/\n/g,' · '),big?19:9]],big?20:null);});}add([]);}
+      else if(k.t==='table'){if(k.head)add(k.head.map(function(h){return [h,5];}),20);k.body.forEach(function(r){add(r.map(function(c){var nv=numOf(c);return nv?[nv.n,nv.cur?15:20]:[c,14];}));});add([]);}});
+    var rows=R.map(function(cells,ri){return '<row r="'+(ri+1)+'"'+(H[ri+1]?' ht="'+H[ri+1]+'" customHeight="1"':'')+'>'+cells.map(function(c,ci){var ref=col(ci)+(ri+1);return typeof c[0]==='number'?'<c r="'+ref+'" s="'+c[1]+'"><v>'+c[0]+'</v></c>':'<c r="'+ref+'" s="'+c[1]+'" t="inlineStr"><is><t xml:space="preserve">'+x(c[0])+'</t></is></c>';}).join('')+'</row>';}).join('');
+    var sheet='<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetPr><pageSetUpPr fitToPage="1"/></sheetPr><sheetViews><sheetView workbookViewId="0" showGridLines="0"/></sheetViews><cols>'+widths.map(function(w,i){return '<col min="'+(i+1)+'" max="'+(i+1)+'" width="'+w+'" customWidth="1"/>';}).join('')+'</cols><sheetData>'+rows+'</sheetData>'+(MG.length?'<mergeCells count="'+MG.length+'">'+MG.map(function(m){return '<mergeCell ref="'+m+'"/>';}).join('')+'</mergeCells>':'')+'<pageMargins left="0.6" right="0.6" top="0.7" bottom="0.7" header="0.3" footer="0.3"/><pageSetup paperSize="9" orientation="portrait" fitToWidth="1" fitToHeight="0"/></worksheet>';
+    var BD='<border><left style="thin"><color rgb="FFBFC6D4"/></left><right style="thin"><color rgb="FFBFC6D4"/></right><top style="thin"><color rgb="FFBFC6D4"/></top><bottom style="thin"><color rgb="FFBFC6D4"/></bottom></border>';
+    var styles='<?xml version="1.0" encoding="UTF-8" standalone="yes"?><styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><numFmts count="2"><numFmt numFmtId="164" formatCode="#,##0.00\\ &quot;₺&quot;"/><numFmt numFmtId="165" formatCode="#,##0.##"/></numFmts>'+
+      '<fonts count="7"><font><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="16"/><color rgb="FF2A1F5C"/><name val="Calibri"/></font><font><sz val="9"/><color rgb="FF777777"/><name val="Calibri"/></font><font><b/><sz val="11"/><color rgb="FFFFFFFF"/><name val="Calibri"/></font><font><b/><sz val="12"/><name val="Calibri"/></font><font><b/><sz val="13"/><color rgb="FF2A1F5C"/><name val="Calibri"/></font></fonts>'+
+      '<fills count="5"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill><fill><patternFill patternType="solid"><fgColor rgb="FFECE7F8"/><bgColor indexed="64"/></patternFill></fill><fill><patternFill patternType="solid"><fgColor rgb="FF5B3FA8"/><bgColor indexed="64"/></patternFill></fill><fill><patternFill patternType="solid"><fgColor rgb="FFF5F3FB"/><bgColor indexed="64"/></patternFill></fill></fills>'+
+      '<borders count="3"><border/>'+BD+'<border><top style="thin"><color rgb="FF555555"/></top></border></borders><cellStyleXfs count="1"><xf/></cellStyleXfs>'+
+      '<cellXfs count="21">'+
+      '<xf/>'+/*0*/
+      '<xf fontId="1" applyFont="1"/>'+/*1*/
+      '<xf fontId="2" applyFont="1"><alignment vertical="center"/></xf>'+/*2*/
+      '<xf numFmtId="164" applyNumberFormat="1"/>'+/*3*/
+      '<xf numFmtId="164" fontId="1" applyNumberFormat="1" applyFont="1"/>'+/*4*/
+      '<xf fontId="1" fillId="2" borderId="1" applyFont="1" applyFill="1" applyBorder="1"><alignment vertical="center" wrapText="1"/></xf>'+/*5*/
+      '<xf fontId="3" applyFont="1"/>'+/*6*/
+      '<xf numFmtId="165" applyNumberFormat="1"/>'+/*7*/
+      '<xf borderId="1" applyBorder="1"><alignment vertical="center" wrapText="1"/></xf>'+/*8 etiket*/
+      '<xf borderId="1" applyBorder="1" fontId="1" applyFont="1"><alignment horizontal="right" vertical="center" wrapText="1"/></xf>'+/*9 metin değer*/
+      '<xf numFmtId="164" borderId="1" fontId="1" applyNumberFormat="1" applyBorder="1" applyFont="1"><alignment vertical="center"/></xf>'+/*10 para*/
+      '<xf numFmtId="164" borderId="1" fontId="6" fillId="2" applyNumberFormat="1" applyBorder="1" applyFont="1" applyFill="1"><alignment vertical="center"/></xf>'+/*11 toplam para*/
+      '<xf fontId="4" fillId="3" applyFont="1" applyFill="1"><alignment vertical="center"/></xf>'+/*12 bölüm başlığı*/
+      '<xf fontId="6" fillId="2" borderId="1" applyFont="1" applyFill="1" applyBorder="1"><alignment vertical="center"/></xf>'+/*13 toplam etiket*/
+      '<xf borderId="1" applyBorder="1"><alignment vertical="center" wrapText="1"/></xf>'+/*14 tablo hücre*/
+      '<xf numFmtId="164" borderId="1" applyNumberFormat="1" applyBorder="1"/>'+/*15 tablo para*/
+      '<xf fontId="1" borderId="2" applyFont="1" applyBorder="1"><alignment horizontal="center" vertical="top" wrapText="1"/></xf>'+/*16 imza*/
+      '<xf fontId="5" applyFont="1"/>'+/*17 firma adı*/
+      '<xf numFmtId="165" borderId="1" fontId="1" applyNumberFormat="1" applyBorder="1" applyFont="1"><alignment horizontal="right"/></xf>'+/*18 sayı*/
+      '<xf fontId="6" fillId="2" borderId="1" applyFont="1" applyFill="1" applyBorder="1"><alignment horizontal="right" vertical="center"/></xf>'+/*19 toplam metin*/
+      '<xf numFmtId="165" borderId="1" applyNumberFormat="1" applyBorder="1"/>'+/*20 tablo sayı*/
+      '</cellXfs></styleSheet>';
     var sname=title.replace(/[\\\/\?\*\[\]:]/g,' ').slice(0,31)||'Sayfa1';
     var z=new Z();z.file('[Content_Types].xml','<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/></Types>');
     z.file('_rels/.rels','<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>');
