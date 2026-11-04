@@ -1,0 +1,12 @@
+name: Site kontrol
+on: workflow_dispatch
+jobs:
+  kontrol:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for u in https://erdalkarahan.com/ https://www.erdalkarahan.com/ http://erdalkarahan.com/; do
+            echo "== $u"; curl -sS -o /tmp/b -D - --max-time 20 "$u" | grep -iE '^(HTTP|server|location|cf-ray)'; grep -o '<title>[^<]*' /tmp/b | head -1
+          done
+          curl -sS -X POST -H 'Content-Type: application/json' -d '{"web":"bot"}' https://erdalkarahan.com/form.php; echo
+          curl -sS https://erdalkarahan.com/sayac.php; echo
