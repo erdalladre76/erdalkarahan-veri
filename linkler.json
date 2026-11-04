@@ -43,16 +43,6 @@
      "https://dijital.gib.gov.tr/hesaplamalar/GecikmeZamVeFaizHesaplama"
     ],
     [
-     "Mükellefiyet / Borç Durum Yazısı Doğrulama",
-     "Belge doğrulama",
-     "https://dijital.gib.gov.tr/dogrulamalar/mukellefiyetDogrulama"
-    ],
-    [
-     "e-Belge Doğrulama",
-     "e-Fatura, e-Arşiv, e-SMM doğrulama",
-     "https://dijital.gib.gov.tr/dogrulamalar/eBelgeDogrulama"
-    ],
-    [
      "e-Beyanname",
      "Beyanname gönderimi",
      "https://ebeyanname.gib.gov.tr"
@@ -193,6 +183,43 @@
      "Adli Para Cezası Ödemeleri",
      "Şifresiz ödeme · GİB",
      "https://dijital.gib.gov.tr/hizliOdemeler/adliParaCezasiOdemeleri"
+    ]
+   ]
+  },
+  {
+   "g": "GİB Doğrulamalar",
+   "ic": "i-check",
+   "c": "#5B3FA8",
+   "items": [
+    [
+     "e-Belge Doğrulama",
+     "e-Fatura, e-Arşiv, e-SMM",
+     "https://dijital.gib.gov.tr/dogrulamalar/eBelgeDogrulama"
+    ],
+    [
+     "Mükellefiyet Yazısı / Borç Durum Yazısı Doğrulama",
+     "Resmî yazı doğrulama",
+     "https://dijital.gib.gov.tr/dogrulamalar/mukellefiyetDogrulama"
+    ],
+    [
+     "Dijital / İnteraktif Vergi Dairesi Belge Doğrulama",
+     "Dijital VD'den alınan belgeler",
+     "https://dijital.gib.gov.tr/dogrulamalar/ivdBelgeDogrulama"
+    ],
+    [
+     "Gerçek Faydalanıcı Durumu Gösterir Belge Doğrulama",
+     "Gerçek faydalanıcı belgesi",
+     "https://dijital.gib.gov.tr/dogrulamalar/gercekFaydalaniciBelgeDogrulama"
+    ],
+    [
+     "Alındı Belgesi Doğrulama",
+     "Ödeme alındı belgesi",
+     "https://dijital.gib.gov.tr/dogrulamalar/alindiBelgesiDogrulama"
+    ],
+    [
+     "Yabancı Plaka / Pasaport Numarası Ödemeleri Doğrulama",
+     "Foreign plate / passport payments",
+     "https://dijital.gib.gov.tr/dogrulamalar/yabanciPlakaPasaportNumarasiOdemeleriDogrulama"
     ]
    ]
   },
