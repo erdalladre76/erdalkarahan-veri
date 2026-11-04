@@ -1259,6 +1259,9 @@ section[data-view],[id^="h-"],[id^="d-"],[id^="x-"],[id^="p-"]{scroll-margin-top
 @media (max-width:640px){.tbar .tb-tk{border:0!important;height:30px!important;padding:0 2px!important;background:transparent!important}.tb-tk-more{display:none!important}.tb-tk-in .pg{justify-content:flex-start!important}footer.site-foot{padding-bottom:180px!important}}
 @media (max-width:640px){.tbar{width:100%!important;left:0!important;right:0!important;transform:none!important}}
 .app-help.flash{animation:ahflash 1.4s ease}@keyframes ahflash{0%,60%{box-shadow:0 0 0 3px var(--glow)}100%{box-shadow:0 0 0 0 transparent}}
+/* dokunmatik ekranda haber kutuları sayfanın kaymasını engellemesin: iç kaydırma yok, liste kısa */
+@media (hover:none){.news-scroll{height:auto!important;max-height:none!important;overflow:visible!important;mask-image:none!important;-webkit-mask-image:none!important}
+ #home-mvz>li:nth-child(n+7){display:none}.duy-scroll{max-height:none!important;overflow:visible!important}#news-up,#news-down,#news-pause{display:none!important}}
 /* alt bar v2: geniş, iki satır tarih, kayan piyasa şeridi */
 @media (min-width:641px){.tbar{width:min(1560px,calc(100% - 24px))!important}}
 @media (min-width:901px){.tbar{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important}.tbar .tb-info{padding-left:8px}}
@@ -3534,9 +3537,9 @@ document.addEventListener('click',function(e){$$('.sres').forEach(function(r){if
 
 /* ---------- haber paneli: kendiliğinden kayan, fareyle kaydırılabilen liste ---------- */
 window.newsTicker=(function(){
-  var box=$('#news-scroll'),ul=$('#home-mvz')||$('#news-list'),hover=false,stop=false,speed=0.35,acc=0,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var box=$('#news-scroll'),ul=$('#home-mvz')||$('#news-list'),hover=false,stop=false,speed=0.35,acc=0,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches||matchMedia('(hover: none)').matches;
   function half(){var c=ul.querySelector('li.clone');return c?c.offsetTop-ul.firstElementChild.offsetTop:0;}
-  function refresh(){$$('li.clone',ul).forEach(function(li){li.remove();});var items=$$('li',ul);if(items.length<3)return;items.forEach(function(li){var c=li.cloneNode(true);c.classList.add('clone');c.setAttribute('aria-hidden','true');$$('a',c).forEach(function(a){a.tabIndex=-1;});ul.appendChild(c);});}
+  function refresh(){$$('li.clone',ul).forEach(function(li){li.remove();});var items=$$('li',ul);if(items.length<3||reduce)return;items.forEach(function(li){var c=li.cloneNode(true);c.classList.add('clone');c.setAttribute('aria-hidden','true');$$('a',c).forEach(function(a){a.tabIndex=-1;});ul.appendChild(c);});}
   function loop(){var h=half();if(!hover&&!stop&&!reduce&&h){acc+=speed;if(acc>=1){box.scrollTop+=Math.floor(acc);acc-=Math.floor(acc);}}
     if(h){if(box.scrollTop>=h)box.scrollTop-=h;else if(box.scrollTop<=0&&hover)box.scrollTop+=h;}requestAnimationFrame(loop);}
   box.addEventListener('mouseenter',function(){hover=true;});box.addEventListener('mouseleave',function(){hover=false;});
