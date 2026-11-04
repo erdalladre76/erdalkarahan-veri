@@ -1334,6 +1334,7 @@ section[data-view],[id^="h-"],[id^="d-"],[id^="x-"],[id^="p-"]{scroll-margin-top
 .subnav a+a,.subnav .sn-more+a{position:relative}
 @media (max-width:640px){.subnav a,.subnav .sn-more{font-size:13px!important;padding:6px 11px!important;gap:6px}.subnav .sn-ic{width:15px;height:15px}}
 html[data-theme="light"] .subnav{background:linear-gradient(180deg,#141a33 0%,#0f1428 100%)!important}
+@media (hover:none){.subnav a:hover:not([aria-current="page"]),.subnav .sn-more:hover:not(.on):not([aria-expanded="true"]){background:transparent!important;border-color:transparent!important;color:rgba(226,231,245,.78)!important}}
 /* alt bar v2: geniş, iki satır tarih, kayan piyasa şeridi */
 @media (min-width:641px){.tbar{width:min(1560px,calc(100% - 24px))!important}}
 @media (min-width:901px){.tbar{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important}.tbar .tb-info{padding-left:8px}}
@@ -3504,14 +3505,14 @@ window.ozelGun=function(d){d=d||new Date();var md=new Intl.DateTimeFormat('en-CA
 (function(){var b=$('.subnav .sn-more');if(!b)return;
   var L=[['beyanname','Beyanname ve SGK','Doldurma rehberi, kodlar, cezalar'],['pratik','Pratik Bilgiler','2026 tutarları, oranları, süreleri'],['sirket','Şirket İşlemleri','Ticaret sicili, İTO, kararlar'],['hesapplani','Hesap Planı','Tek Düzen Hesap Planı ve işleyiş'],['belgeler','Belge Örnekleri','SMMM raporları, ticaret sicili örnekleri'],['programlar','Resmî Programlar','BDP, e-defter, e-imza ve mali mühür'],['kurumlar','Kurumlar','Kamu kurumları ve meslek kuruluşları'],['uye-ol','Üye Ol','Ücretsiz üyelik']];
   var m=document.createElement('div');m.className='sn-menu';m.hidden=true;m.innerHTML=L.map(function(x){return '<a href="#'+x[0]+'" data-v="'+x[0]+'"><b>'+esc(x[1])+'</b><span>'+esc(x[2])+'</span></a>';}).join('');document.body.appendChild(m);
-  function place(){var r=b.getBoundingClientRect(),w=Math.min(300,innerWidth-16);m.style.width=w+'px';m.style.left=Math.max(8,Math.min(r.left,innerWidth-w-8))+'px';m.style.top=(r.bottom+6)+'px';}
+  function place(){var r=b.getBoundingClientRect(),w=Math.min(300,innerWidth-16);m.style.width=w+'px';m.style.left=Math.max(8,Math.min(r.left,innerWidth-w-8))+'px';m.style.top=(r.bottom+6)+'px';m.style.maxHeight=Math.max(220,innerHeight-r.bottom-(innerWidth<=640?170:24))+'px';m.style.overflowY='auto';}
   function close(){m.hidden=true;b.setAttribute('aria-expanded','false');}
-  b.addEventListener('click',function(e){e.stopPropagation();if(m.hidden){place();m.hidden=false;b.setAttribute('aria-expanded','true');}else close();});
+  var oY=0,oX=0,oW=innerWidth,oT=0;b.addEventListener('click',function(e){e.stopPropagation();if(m.hidden){var sn0=$('.subnav'),r0=b.getBoundingClientRect();if(sn0&&(r0.right>innerWidth-8||r0.left<8)){sn0.scrollLeft+=r0.left-(innerWidth-r0.width)/2;}place();m.hidden=false;b.setAttribute('aria-expanded','true');oY=scrollY;oX=sn0?sn0.scrollLeft:0;oW=innerWidth;oT=Date.now();}else close();});
   m.addEventListener('click',function(e){if(e.target.closest('a'))close();});
   document.addEventListener('click',function(e){if(!m.hidden&&!m.contains(e.target))close();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
-  addEventListener('scroll',function(){if(!m.hidden)close();},{passive:true});addEventListener('resize',close);
-  var sn=$('.subnav');if(sn)sn.addEventListener('scroll',close,{passive:true});
+  addEventListener('scroll',function(){if(!m.hidden&&Date.now()-oT>300&&Math.abs(scrollY-oY)>60)close();},{passive:true});addEventListener('resize',function(){if(!m.hidden&&Math.abs(innerWidth-oW)>40)close();else if(!m.hidden)place();});
+  var sn=$('.subnav');if(sn)sn.addEventListener('scroll',function(){if(!m.hidden){if(Date.now()-oT<400||Math.abs(sn.scrollLeft-oX)<30)place();else close();}},{passive:true});
   function mark(v){var on=L.some(function(x){return x[0]===v;});b.classList.toggle('on',on);if(on)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');$$('a',m).forEach(function(a){a.classList.toggle('on',a.dataset.v===v);});}
   document.addEventListener('viewchange',function(e){mark(e.detail);});
   var h=(location.hash||'').slice(1);mark(h);
