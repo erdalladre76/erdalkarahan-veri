@@ -1,0 +1,19 @@
+name: Piyasa verisi
+on:
+  schedule:
+    - cron: "*/15 5-16 * * 1-5"
+    - cron: "0 */3 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  guncelle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/piyasa.py
+      - run: |
+          git config user.name "piyasa-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add piyasa.json
+          git diff --cached --quiet || (git commit -m "Piyasa verisi güncellendi" && git push)
