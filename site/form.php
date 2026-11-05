@@ -23,6 +23,34 @@ if (v($d, 'web') !== '') { out(true); }
 $tip = v($d, 'tip', 10) === 'iletisim' ? 'iletisim' : 'uye';
 $ad = v($d, 'ad', 120);
 $mail = v($d, 'mail', 160);
+
+/* Google ile üyelik: kimlik belirteci Google'da doğrulanır, ad ve e-posta oradan alınır */
+$GOOGLE_CLIENT_ID = '436539431747-ude9b1b9kmfjddkdfdj39pvpv8rji8p7.apps.googleusercontent.com';
+$gcred = v($d, 'google', 4096);
+if ($tip === 'uye' && $gcred !== '') {
+    $url = 'https://oauth2.googleapis.com/tokeninfo?id_token=' . rawurlencode($gcred);
+    $res = false;
+    if (function_exists('curl_init')) {
+        $ch = curl_init($url);
+        curl_setopt_array($ch, [CURLOPT_RETURNTRANSFER => true, CURLOPT_TIMEOUT => 8]);
+        $res = curl_exec($ch);
+        $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+        if ($code !== 200) { $res = false; }
+    } else {
+        $res = @file_get_contents($url);
+    }
+    $g = $res ? json_decode($res, true) : null;
+    $iss = is_array($g) && isset($g['iss']) ? $g['iss'] : '';
+    if (!is_array($g) || !isset($g['aud']) || $g['aud'] !== $GOOGLE_CLIENT_ID || !in_array($iss, ['accounts.google.com', 'https://accounts.google.com'], true)
+        || empty($g['email']) || !in_array((string) (isset($g['email_verified']) ? $g['email_verified'] : ''), ['true', '1'], true) || (int) $g['exp'] < time()) {
+        http_response_code(422); out(false, 'Google doğrulaması başarısız');
+    }
+    $mail = mb_substr((string) $g['email'], 0, 160, 'UTF-8');
+    $ad = mb_substr(trim((string) (isset($g['name']) ? $g['name'] : '')), 0, 120, 'UTF-8');
+    if ($ad === '') { $ad = $mail; }
+    $d['tur'] = 'Google ile üyelik';
+}
 $tel = v($d, 'tel', 40);
 if ($ad === '' || !filter_var($mail, FILTER_VALIDATE_EMAIL)) { http_response_code(422); out(false, 'Ad soyad ve geçerli e-posta gerekli'); }
 
