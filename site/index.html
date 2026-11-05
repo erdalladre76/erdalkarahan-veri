@@ -1381,6 +1381,9 @@ html[data-theme="light"] .subnav{background:linear-gradient(180deg,#141a33 0%,#0
 .faq-wrap .mascot-say{position:static!important;display:flex!important;align-items:center;gap:10px;margin:12px 0 4px!important;max-width:none!important;transform:none!important}
 .faq-wrap .mascot-say p{position:static!important;margin:0!important;max-width:none!important;transform:none!important}
 .faq-wrap .mascot-say .mascot{flex:none;width:44px!important;height:44px!important;position:static!important}
+.ckeys button{touch-action:manipulation;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
+.ckeys button.down{transform:scale(.94);filter:brightness(1.25)}
+.fcalc,.calcbox{touch-action:manipulation}
 /* alt bar v2: geniş, iki satır tarih, kayan piyasa şeridi */
 @media (min-width:641px){.tbar{width:min(1560px,calc(100% - 24px))!important}}
 @media (min-width:901px){.tbar{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important}.tbar .tb-info{padding-left:8px}}
@@ -2513,7 +2516,11 @@ function renderCalc(host,compact){
     else if('+−×÷'.indexOf(k)>-1){if(fresh&&expr.length)expr[expr.length-1]=k;else{expr.push(cur,k);fresh=true;}}
     else if(k==='='){if(!expr.length)return show();var full=expr.concat([cur]),r=compute(full);tape.push([full.join(' '),fmt(r)]);if(tape.length>30)tape.shift();renderTape();expr=[];cur=fmt(r);fresh=true;}
     show();}
-  $$('[data-k]',host).forEach(function(b){b.addEventListener('click',function(){key(b.dataset.k);});});
+  /* dokunmatikte hızlı basışlar kaybolmasın: tuş basıldığı anda işlenir */
+  $$('[data-k]',host).forEach(function(b){
+    b.addEventListener('pointerdown',function(e){if(e.button>0)return;e.preventDefault();b.classList.add('down');key(b.dataset.k);try{if(e.pointerType==='touch'&&navigator.vibrate)navigator.vibrate(6);}catch(x){}});
+    ['pointerup','pointercancel','pointerleave'].forEach(function(t){b.addEventListener(t,function(){b.classList.remove('down');});});
+    b.addEventListener('click',function(e){if(e.detail===0)key(b.dataset.k);});});
   $('.calcbox',host).addEventListener('keydown',function(e){var m={'*':'×','x':'×','/':'÷','-':'−','+':'+','Enter':'=','=':'=','Backspace':'⌫','Escape':'C','.':',',',':',','%':'%'},k=/^[0-9]$/.test(e.key)?e.key:m[e.key];if(k){e.preventDefault();key(k);}});
   var cc=$('.c-copy',host),cl=$('.c-clear',host);
   if(cc)cc.onclick=function(){copyText(tape.map(function(x){return x[0]+' = '+x[1];}).join('\n')||cur,'Şerit kopyalandı');};
