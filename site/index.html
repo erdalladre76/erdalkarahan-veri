@@ -1384,6 +1384,7 @@ html[data-theme="light"] .subnav{background:linear-gradient(180deg,#141a33 0%,#0
 .ckeys button{touch-action:manipulation;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
 .ckeys button.down{transform:scale(.94);filter:brightness(1.25)}
 .fcalc,.calcbox{touch-action:manipulation}
+label.flash{animation:lblFlash 1s ease}@keyframes lblFlash{0%{color:var(--stamp);background:var(--stamp-soft)}100%{background:transparent}}
 /* alt bar v2: geniş, iki satır tarih, kayan piyasa şeridi */
 @media (min-width:641px){.tbar{width:min(1560px,calc(100% - 24px))!important}}
 @media (min-width:901px){.tbar{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important}.tbar .tb-info{padding-left:8px}}
@@ -2322,7 +2323,7 @@ var TOOLS=[
   fields:[F('a','Aylık brüt ücret',{val:'60.000',sfx:'₺'}),F('ay','Hangi ay?',{type:'select',opts:AY,val:String(new Date().getMonth()+1),hint:'Gelir vergisi kümülatif matraha göre aydan aya değişir.'}),F('i','İşveren SGK oranı',{type:'select',opts:ISV,val:'.2175'})],
   calc:function(v){var a=num(v.a);if(isNaN(a)||a<P26.asg*.5)return null;var b=bordro(a,+v.ay,+v.i);return{rows:bordroRows(b),note:'2026 parametreleri: brüt asgari ücret 33.030 ₺, asgari ücret gelir ve damga vergisi istisnası uygulanmıştır. Her ay aynı brüt ücret alındığı varsayılır.'};}},
  {g:'Maaş ve SGK',key:'iscimaliyet',title:'İşçinin işverene maliyeti (SGK, stopaj, damga dahil)',abbr:'İM',lead:'Bir çalışanın işverene aylık ve yıllık toplam maliyetini (SSK maliyeti); SGK primi, işsizlik sigortası, gelir vergisi stopajı ve damga vergisiyle tek tabloda görün.',
-  fields:[F('y','Elinizdeki tutar',{type:'seg',opts:[['net','Net ücret'],['brut','Brüt ücret']],val:'net',hint:'Net: çalışanın eline geçen tutar. Brüt: kesintilerden önceki tutar.'}),F('a','Aylık ücret',{val:'28.075,50',sfx:'₺',hint:'2026 asgari ücret: net 28.075,50 ₺, brüt 33.030 ₺.'}),F('i','İşveren SGK oranı',{type:'select',opts:ISV,val:'.2175',hint:'Genel oran %21,75. 5 puanlık hazine teşvikinden yararlanılıyorsa %16,75 seçin.'}),F('ay','Ayrıntısı gösterilecek ay',{type:'select',opts:AY,val:String(new Date().getMonth()+1)})],
+  fields:[F('y','Elinizdeki tutar',{type:'seg',opts:[['brut','Brüt ücret'],['net','Net ücret']],val:'brut',hint:'Brüt: kesintilerden önceki tutar. Net: çalışanın eline geçen tutar.'}),F('a','Aylık ücret',{val:'33.030,00',sfx:'₺',hint:'2026 asgari ücret: brüt 33.030 ₺, net 28.075,50 ₺.'}),F('i','İşveren SGK oranı',{type:'select',opts:ISV,val:'.2175',hint:'Genel oran %21,75. 5 puanlık hazine teşvikinden yararlanılıyorsa %16,75 seçin.'}),F('ay','Ayrıntısı gösterilecek ay',{type:'select',opts:AY,val:String(new Date().getMonth()+1)})],
   calc:function(v){var a=num(v.a);if(isNaN(a)||a<1000)return null;var isv=+v.i||.2175,tav=P26.asg*P26.tavanX,am=P26.asg*(1-P26.sgkI-P26.issI);
     function ayHesap(brut,m,cum){var sm=Math.min(brut,tav),sgk=sm*P26.sgkI,iss=sm*P26.issI,mat=brut-sgk-iss,ist=gvT(am*m)-gvT(am*(m-1)),gv=Math.max(0,gvT(cum+mat)-gvT(cum)-ist),dv=Math.max(0,brut*P26.dv-P26.asg*P26.dv),net=brut-sgk-iss-gv-dv,isvP=sm*isv,isvI=sm*.02;
       return{brut:brut,sgk:sgk,iss:iss,mat:mat,gv:gv,dv:dv,net:net,isvP:isvP,isvI:isvI,maliyet:brut+isvP+isvI};}
@@ -2488,6 +2489,11 @@ function renderTool(it,p){
     $('[data-a=print]',out).onclick=function(){if(usePP()){var d=document.createElement('div');d.innerHTML=ekProfil.docHtml(it,r);printEl(d,'',true,!!ekProfil.get().f.unvan);}else printEl(out,it.title);};
     var pb=$('[data-a=prof]',out);if(pb)pb.onclick=function(){ekProfil.open(function(){run();});};}
   $$('[data-f]',p).forEach(function(el){['input','change'].forEach(function(ev){el.addEventListener(ev,function(){state[el.dataset.f]=el.value;run();});});});
+  /* tutar yazılırken binlik noktaları kendiliğinden eklenir: 50000 → 50.000 */
+  $$('[data-money]',p).forEach(function(el){el.addEventListener('input',function(e){if(e.isComposing)return;var v=el.value,pos=el.selectionStart==null?v.length:el.selectionStart;
+    var before=v.slice(0,pos).replace(/[^0-9,]/g,'').length,raw=v.replace(/[^0-9,]/g,'');var ci=raw.indexOf(',');var ip=ci>-1?raw.slice(0,ci):raw,dp=ci>-1?','+raw.slice(ci+1).replace(/,/g,'').slice(0,2):'';
+    ip=ip.replace(/^0+(?=\d)/,'');var g=ip.replace(/\B(?=(\d{3})+(?!\d))/g,'.')+dp;if(g===v)return;el.value=g;
+    var c=0,np=0;while(np<g.length&&c<before){if(/[0-9,]/.test(g.charAt(np)))c++;np++;}try{el.setSelectionRange(np,np);}catch(x){}});});
   $$('[data-money]',p).forEach(function(el){el.addEventListener('blur',function(){var n=num(el.value);if(!isNaN(n)){el.value=NF.format(n);state[el.dataset.f]=el.value;run();}});});
   $$('[data-rows]',p).forEach(function(g){var k=g.dataset.rows;$$('input',g).forEach(function(el){['input','change'].forEach(function(ev){el.addEventListener(ev,function(){state[k][+el.dataset.r][+el.dataset.c]=el.value;run();});});});});
   $$('[data-seg]',p).forEach(function(sg){$$('button',sg).forEach(function(b){b.addEventListener('click',function(){$$('button',sg).forEach(function(x){x.setAttribute('aria-pressed',x===b);});state[sg.dataset.seg]=b.dataset.v;run();});});});
@@ -4263,6 +4269,13 @@ document.addEventListener('fxfail',function(){setTimeout(function(){if(!window.F
   window.addEventListener('resize',function(){if(!win.hidden){size();place();}});
 })();
 
+
+/* işçi maliyeti: brüt/net seçilince asgari ücret tutarı ve kutu başlığı kendiliğinden değişir */
+function imLabel(root){var inp=(root||document).querySelector('#f-iscimaliyet-a');if(!inp)return;var on=(root||document).querySelector('[data-seg="y"] button[aria-pressed="true"]'),br=!on||on.dataset.v==='brut',l=document.querySelector('label[for="f-iscimaliyet-a"]');if(l)l.textContent=br?'Aylık BRÜT ücret':'Aylık NET ücret (çalışanın eline geçen)';inp.placeholder=br?'Brüt tutar':'Net tutar';}
+document.addEventListener('click',function(e){var b=e.target.closest('[data-seg="y"] button');if(!b)return;var inp=document.getElementById('f-iscimaliyet-a');if(!inp)return;
+  var v=num(inp.value),to=b.dataset.v==='brut'?'33.030,00':'28.075,50';var sw=isNaN(v)||Math.abs(v-33030)<0.01||Math.abs(v-28075.5)<0.01||!inp.value.trim();
+  setTimeout(function(){if(sw){inp.value=to;inp.dispatchEvent(new Event('input',{bubbles:true}));inp.dispatchEvent(new Event('blur'));}imLabel();var l=document.querySelector('label[for="f-iscimaliyet-a"]');if(l){l.classList.remove('flash');void l.offsetWidth;l.classList.add('flash');}},0);},true);
+document.addEventListener('viewchange',function(){setTimeout(imLabel,60);});window.addEventListener('hashchange',function(){setTimeout(imLabel,80);});setTimeout(imLabel,300);
 /* ---------- başa dön ---------- */
 (function(){var b=$('#to-top');function chk(){b.classList.toggle('off',scrollY<300);}window.addEventListener('scroll',chk,{passive:true});chk();b.addEventListener('click',function(){window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});})();
 
