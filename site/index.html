@@ -1365,6 +1365,22 @@ html[data-theme="light"] .subnav{background:linear-gradient(180deg,#141a33 0%,#0
 .gn-mh{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .gn-mx{display:none;border:0;width:38px;height:38px;border-radius:50%;background:color-mix(in srgb,var(--ink) 8%,transparent);color:var(--ink);font-size:24px;line-height:1;cursor:pointer;flex:none}
 @media (max-width:640px){.gn-mx{display:grid;place-items:center}.gn-m{max-height:52vh!important;padding-top:4px!important}.gn-mh{position:sticky;top:-4px;background:var(--sheet);z-index:1;padding:6px 4px 6px 10px!important;font-size:12px!important}}
+/* seçim düğmeleri ve sonuç etiketleri asla kesilmesin */
+.seg{flex-wrap:wrap!important;overflow:visible!important}
+.seg button{white-space:normal!important;overflow:visible!important;text-overflow:clip!important;line-height:1.25!important;min-height:40px;flex:1 1 0!important;min-width:min(120px,100%)!important;word-break:normal;hyphens:auto}
+.result .row span{min-width:0;overflow-wrap:anywhere;white-space:normal!important}
+/* rehber kartları: uzun değer satırı alta geçsin, etiket ezilmesin */
+.pcard dl div{flex-wrap:wrap!important;row-gap:2px!important}
+.pcard dt{flex:1 1 140px!important;min-width:min(140px,100%)!important}
+.pcard dd{flex:0 1 auto!important;max-width:100%!important;margin-left:auto!important}
+/* SSS başlığı: dar sütunda düzgün dursun */
+.faq-wrap .sec-head{display:block!important;position:relative!important;top:auto!important}
+.faq-wrap .sec-head .sec-art{display:none!important}
+.faq-wrap .sec-head .eyebrow{white-space:nowrap}
+.faq-wrap .sec-head h2{font-size:clamp(26px,2.6vw,34px)!important}
+.faq-wrap .mascot-say{position:static!important;display:flex!important;align-items:center;gap:10px;margin:12px 0 4px!important;max-width:none!important;transform:none!important}
+.faq-wrap .mascot-say p{position:static!important;margin:0!important;max-width:none!important;transform:none!important}
+.faq-wrap .mascot-say .mascot{flex:none;width:44px!important;height:44px!important;position:static!important}
 /* alt bar v2: geniş, iki satır tarih, kayan piyasa şeridi */
 @media (min-width:641px){.tbar{width:min(1560px,calc(100% - 24px))!important}}
 @media (min-width:901px){.tbar{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important}.tbar .tb-info{padding-left:8px}}
@@ -2303,7 +2319,7 @@ var TOOLS=[
   fields:[F('a','Aylık brüt ücret',{val:'60.000',sfx:'₺'}),F('ay','Hangi ay?',{type:'select',opts:AY,val:String(new Date().getMonth()+1),hint:'Gelir vergisi kümülatif matraha göre aydan aya değişir.'}),F('i','İşveren SGK oranı',{type:'select',opts:ISV,val:'.2175'})],
   calc:function(v){var a=num(v.a);if(isNaN(a)||a<P26.asg*.5)return null;var b=bordro(a,+v.ay,+v.i);return{rows:bordroRows(b),note:'2026 parametreleri: brüt asgari ücret 33.030 ₺, asgari ücret gelir ve damga vergisi istisnası uygulanmıştır. Her ay aynı brüt ücret alındığı varsayılır.'};}},
  {g:'Maaş ve SGK',key:'iscimaliyet',title:'İşçinin işverene maliyeti (SGK, stopaj, damga dahil)',abbr:'İM',lead:'Bir çalışanın işverene aylık ve yıllık toplam maliyetini (SSK maliyeti); SGK primi, işsizlik sigortası, gelir vergisi stopajı ve damga vergisiyle tek tabloda görün.',
-  fields:[F('y','Elinizdeki tutar',{type:'seg',opts:[['net','Net ücret (cebine giren)'],['brut','Brüt ücret']],val:'net'}),F('a','Aylık ücret',{val:'28.075,50',sfx:'₺',hint:'2026 asgari ücret: net 28.075,50 ₺, brüt 33.030 ₺.'}),F('i','İşveren SGK oranı',{type:'select',opts:ISV,val:'.2175',hint:'Genel oran %21,75. 5 puanlık hazine teşvikinden yararlanılıyorsa %16,75 seçin.'}),F('ay','Ayrıntısı gösterilecek ay',{type:'select',opts:AY,val:String(new Date().getMonth()+1)})],
+  fields:[F('y','Elinizdeki tutar',{type:'seg',opts:[['net','Net ücret'],['brut','Brüt ücret']],val:'net',hint:'Net: çalışanın eline geçen tutar. Brüt: kesintilerden önceki tutar.'}),F('a','Aylık ücret',{val:'28.075,50',sfx:'₺',hint:'2026 asgari ücret: net 28.075,50 ₺, brüt 33.030 ₺.'}),F('i','İşveren SGK oranı',{type:'select',opts:ISV,val:'.2175',hint:'Genel oran %21,75. 5 puanlık hazine teşvikinden yararlanılıyorsa %16,75 seçin.'}),F('ay','Ayrıntısı gösterilecek ay',{type:'select',opts:AY,val:String(new Date().getMonth()+1)})],
   calc:function(v){var a=num(v.a);if(isNaN(a)||a<1000)return null;var isv=+v.i||.2175,tav=P26.asg*P26.tavanX,am=P26.asg*(1-P26.sgkI-P26.issI);
     function ayHesap(brut,m,cum){var sm=Math.min(brut,tav),sgk=sm*P26.sgkI,iss=sm*P26.issI,mat=brut-sgk-iss,ist=gvT(am*m)-gvT(am*(m-1)),gv=Math.max(0,gvT(cum+mat)-gvT(cum)-ist),dv=Math.max(0,brut*P26.dv-P26.asg*P26.dv),net=brut-sgk-iss-gv-dv,isvP=sm*isv,isvI=sm*.02;
       return{brut:brut,sgk:sgk,iss:iss,mat:mat,gv:gv,dv:dv,net:net,isvP:isvP,isvI:isvI,maliyet:brut+isvP+isvI};}
