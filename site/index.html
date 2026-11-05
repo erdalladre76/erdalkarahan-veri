@@ -3474,10 +3474,11 @@ document.addEventListener('fxcache',function(){if(!window.FXR)return;var N={USD:
 /* ---------- ziyaretçi sayacı (eski sitenin sayısından devam) ---------- */
 setTimeout(function(){var el=$('#f-stat');if(!el||typeof SITE_STAT==='undefined')return;var yil=String(SITE_STAT.acilis).slice(0,4);
   function show(n){el.textContent=yil+'’dan beri yayında · Ziyaretçi sayımız: '+NI.format(n);}
+  var ben=false;try{if(/^#ben$/.test(location.hash)){localStorage.setItem('ek-ben','1');history.replaceState(null,'',location.pathname);setTimeout(function(){toast('Bu cihaz artık ziyaretçi sayısına eklenmeyecek');},800);}ben=localStorage.getItem('ek-ben')==='1';}catch(e){}
   var base=SITE_STAT.onceki||0,first=false;try{first=sessionStorage.getItem('ek-sayac')!=='1';sessionStorage.setItem('ek-sayac','1');}catch(e){}
   var cache=null;try{cache=+localStorage.getItem('ek-sayac-son')||null;}catch(e){}show(Math.max(base,cache||0));
   function save(n){show(n);try{localStorage.setItem('ek-sayac-son',String(n));}catch(e){}}
-  if(location.protocol.indexOf('http')===0&&!navigator.webdriver){fetch('sayac.php'+(first?'?hit=1':''),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(j){if(j&&typeof j.ziyaret==='number')save(base+j.ziyaret);else throw 0;}).catch(function(){fb();});}else fb();
+  if(location.protocol.indexOf('http')===0&&!navigator.webdriver){fetch('sayac.php'+(ben?'?ben=1':first?'?hit=1':''),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(j){if(j&&typeof j.ziyaret==='number')save(base+j.ziyaret);else throw 0;}).catch(function(){fb();});}else fb();
   function fb(){if(typeof FIREBASE_CONFIG==='undefined'||!FIREBASE_CONFIG)return;
   function ld(src){return new Promise(function(r,j){if(document.querySelector('script[src="'+src+'"]'))return r();var x=document.createElement('script');x.src=src;x.onload=r;x.onerror=j;document.head.appendChild(x);});}
   var b='https://www.gstatic.com/firebasejs/10.12.2/';
