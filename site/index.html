@@ -2319,8 +2319,14 @@ var TOOLS=[
   fields:[F('g','İşe giriş tarihi',{type:'date',val:'2018-09-03'}),F('c','Hesap tarihi',{type:'date',val:T0}),F('y','Çalışanın yaşı',{val:'35',sfx:'yaş'})],
   calc:function(v){var g=dParse(v.g),c=dParse(v.c),yas=num(v.y);if(!g||!c||c<=g)return null;var yil=Math.floor(dDiff(g,c)/365.25);if(yil<1)return{rows:[['Kıdem','1 yıldan az'],['Yıllık izin hakkı','Henüz doğmadı',1]]};var iz=yil<5?14:yil<15?20:26;if(isFinite(yas)&&(yas<=18||yas>=50))iz=Math.max(iz,20);return{rows:[['Kıdem',yil+' yıl'],['Yıllık izin hakkı',iz+' gün',1]],note:'1–5 yıl: 14, 5–15 yıl: 20, 15 yıl ve üzeri: 26 gün. 18 yaş ve altı ile 50 yaş ve üstü çalışanlara en az 20 gün verilir.'};}},
  {g:'Maaş ve SGK',key:'izinucret',title:'Yıllık izin ücreti',abbr:'İÜ',lead:'Kullanılmayan yıllık izin günlerinin brüt ücretini hesaplayın.',
-  fields:[F('u','Brüt aylık ücret',{val:'50.000',sfx:'₺'}),F('g','Kullanılmayan izin günü',{val:'14',sfx:'gün'})],
-  calc:function(v){var u=num(v.u),g=num(v.g);if(isNaN(u)||isNaN(g))return null;return{rows:[['Günlük brüt ücret',tl(u/30)],['Brüt izin ücreti',tl(u/30*g),1]],note:'İzin ücretinden SGK primi, gelir ve damga vergisi kesilir.'};}},
+  fields:[F('u','Brüt aylık ücret',{val:'50.000',sfx:'₺',hint:'Sözleşmenin sona erdiği tarihteki brüt ücret (İş K. md. 59).'}),F('g','Kullanılmayan izin günü',{val:'14',sfx:'gün'}),F('ay','Ödeme ayı',{type:'select',opts:AY,val:String(new Date().getMonth()+1),hint:'İzin ücreti o ayın maaşıyla birlikte ödenir; gelir vergisi kümülatif matraha göre değişir.'})],
+  calc:function(v){var u=num(v.u),g=num(v.g),ay=+v.ay||1;if(isNaN(u)||isNaN(g)||u<=0)return null;var iz=u/30*g;
+    var tav=P26.asg*P26.tavanX;function f(b){var sm=Math.min(b,tav),sgk=sm*P26.sgkI,iss=sm*P26.issI;return{sgk:sgk,iss:iss,mat:b-sgk-iss,dv:Math.max(0,b*P26.dv-P26.asg*P26.dv)};}
+    var mu=f(u),mt=f(u+iz),prev=mu.mat*(ay-1);var am=P26.asg*(1-P26.sgkI-P26.issI),ist=gvT(am*ay)-gvT(am*(ay-1));
+    var gvU=Math.max(0,gvT(prev+mu.mat)-gvT(prev)-ist),gvT2=Math.max(0,gvT(prev+mt.mat)-gvT(prev)-ist);
+    var sgk=mt.sgk-mu.sgk,iss=mt.iss-mu.iss,gv=gvT2-gvU,dv=mt.dv-mu.dv,net=iz-sgk-iss-gv-dv;
+    return{rows:[['Günlük brüt ücret (aylık / 30)',tl(u/30)],['Brüt izin ücreti',tl(iz)],['SGK işçi payı (%14)',tl(sgk)],['İşsizlik işçi payı (%1)',tl(iss)],['Gelir vergisi',tl(gv)],['Damga vergisi (binde 7,59)',tl(dv)],['Net izin ücreti',tl(net),1]],
+      note:'Kesintiler, izin ücretinin '+AY[ay-1][1]+' ayı maaşıyla birlikte ödendiği ve yıl içinde her ay aynı brüt ücretin alındığı varsayımıyla, maaşa eklenmesinden doğan fark olarak hesaplanır. SGK primi aylık tavan ('+tl(tav)+') aşılırsa tavan üzerinden kesilir.'};}},
  {g:'Maaş ve SGK',key:'mesai',title:'Fazla mesai ücreti',abbr:'FM',lead:'Brüt ücrete ve saate göre fazla çalışma ücretini hesaplayın.',
   fields:[F('u','Brüt aylık ücret',{val:'45.000',sfx:'₺'}),F('s','Fazla mesai saati',{val:'10',sfx:'saat'}),F('z','Zam oranı',{type:'seg',opts:[['1.5','%50 (fazla çalışma)'],['1.25','%25 (fazla sürelerle)'],['2','%100 (tatil günü)']],val:'1.5'})],
   calc:function(v){var u=num(v.u),s=num(v.s);if(isNaN(u)||isNaN(s))return null;var sa=u/225;return{rows:[['Saatlik brüt ücret (225 saat)',tl(sa)],['Saatlik fazla mesai ücreti',tl(sa*+v.z)],['Brüt fazla mesai ücreti',tl(sa*+v.z*s),1]],note:'Aylık çalışma 225 saat kabul edilir. Yıllık fazla çalışma 270 saati geçemez.'};}},
