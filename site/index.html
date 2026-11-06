@@ -2204,7 +2204,9 @@ var BIZ=[
 if($('#biz'))shell($('#biz'),BIZ,function(it,p){p.innerHTML='<h3>'+esc(it.title)+'</h3><p class="lead">'+esc(it.d)+'</p><div class="biz-grid">'+it.i.map(function(x){return '<div class="biz-item"><span class="when">'+esc(x[0])+'</span><b>'+esc(x[1])+'</b></div>';}).join('')+'</div>';});
 
 /* ---------- grouped tab shell (araçlar, dilekçeler) ---------- */
-function gsort(a){return a.slice().sort(function(x,y){return String(x.title).localeCompare(String(y.title),'tr',{sensitivity:'base',numeric:true});});}
+/* alfabetik sıralama; birbirinin tersi olan araçlar hep yan yana durur (ör. brütten nete hemen ardından netten brüte) */
+var GPAIR={netbrut:'brutnet'};
+function gsort(a){var r=a.slice().sort(function(x,y){return String(x.title).localeCompare(String(y.title),'tr',{sensitivity:'base',numeric:true});});Object.keys(GPAIR).forEach(function(k){var i=-1,j=-1;r.forEach(function(it,n){if(it.key===k)i=n;if(it.key===GPAIR[k])j=n;});if(i>-1&&j>-1){var it=r.splice(i,1)[0];if(i<j)j--;r.splice(j+1,0,it);}});return r;}
 function gshell(root,items,render,firstKey){
   var groups=[];items.forEach(function(it){if(groups.indexOf(it.g)<0)groups.push(it.g);});
   var gsph={hesaplamalar:'Hesaplama ara: KDV, kıdem, kira…',dilekceler:'Dilekçe ara: istifa, kira, vergi…',tablolar:'Tablo ara: bordro, gelir gider…'}[(root.closest('section')||{}).dataset&&root.closest('section').dataset.view]||'Bu bölümde ara…';
