@@ -4200,6 +4200,8 @@ if(!FIREBASE_CONFIG&&!GOOGLE_CLIENT_ID)document.documentElement.classList.add('n
     document.dispatchEvent(new CustomEvent('viewchange',{detail:view}));
   }
   window.addEventListener('hashchange',route);
+  /* aynı menüye tekrar basınca tarayıcı kendi başına sayfa içinde atlamasın; sayfa baştan açılsın */
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a||e.ctrlKey||e.metaKey||e.shiftKey)return;var h=a.getAttribute('href');if(h.length>1&&h===location.hash&&VIEWS.indexOf(h.slice(1))>-1){e.preventDefault();route();}});
   route();
 })();
 
