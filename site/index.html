@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="tr">
 <meta charset="utf-8">
+<script>/* yeni sürüm kontrolü: tarayıcı sayfanın eski kopyasını gösterirse güncel sayfayı açar (HEAD isteği, önbelleğe yazılmaz) */(function(){if(!/^https?:/.test(location.protocol))return;setTimeout(function(){fetch(location.pathname+'?vchk='+Date.now(),{method:'HEAD',cache:'no-store'}).then(function(r){var lm=Date.parse(r.headers.get('last-modified')||''),cur=Date.parse(document.lastModified);if(!lm||!cur||lm<=cur+5000)return;var k='ek-upd-'+lm;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');}catch(e){return;}location.replace(location.pathname+'?v='+Math.round(lm/1000)+location.hash);}).catch(function(){});},1200);})();</script>
 <script>document.documentElement.lang="tr";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SMMM Erdal Karahan · Kadıköy Mali Müşavir</title>
