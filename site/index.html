@@ -1444,6 +1444,11 @@ body:not([data-v="duyurular"]) #hap .hap-all{display:none}
 /* bağlantıyla gelinen başlık üst menünün altında kalmasın; uzun linkler taşmasın */
 section[data-view] [id]{scroll-margin-top:72px}
 section[data-view] a{overflow-wrap:anywhere}
+.det-t{margin-left:auto;display:inline-flex;padding:3px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14)}
+.det-t button{border:0;background:transparent;color:var(--night-mute);font:inherit;font-size:12.5px;font-weight:600;padding:5px 12px;border-radius:999px;cursor:pointer}
+.det-t button.on{background:var(--glow);color:var(--night)}
+.result .row.sub{border-bottom:0;padding:10px 0 0}.result .row.sub span{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--glow)}
+.result .row.drow span{color:var(--night-mute);font-size:.94em}.result .row.drow b{font-weight:500;color:var(--night-fg);opacity:.9}
 /* alt bar v2: geniş, iki satır tarih, kayan piyasa şeridi */
 @media (min-width:641px){.tbar{width:min(1560px,calc(100% - 24px))!important}}
 @media (min-width:901px){.tbar{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important}.tbar .tb-info{padding-left:8px}}
@@ -2276,17 +2281,42 @@ function bordro(brut,ay,isvOran){
   var gvH=gvT(mat*ay)-gvT(mat*(ay-1));var am=P26.asg*(1-P26.sgkI-P26.issI);var ist=gvT(am*ay)-gvT(am*(ay-1));var gv=Math.max(0,gvH-ist);
   var dv=Math.max(0,brut*P26.dv-P26.asg*P26.dv);var net=brut-sgk-iss-gv-dv;
   var isv=sm*(isvOran||.2175),isvI=sm*.02;
-  return {brut:brut,sgk:sgk,iss:iss,mat:mat,gvH:gvH,ist:ist,gv:gv,dv:dv,net:net,isv:isv,isvI:isvI,maliyet:brut+isv+isvI};
+  return {brut:brut,sgk:sgk,iss:iss,mat:mat,gvH:gvH,ist:ist,gv:gv,dv:dv,net:net,isv:isv,isvI:isvI,maliyet:brut+isv+isvI,ay:ay,isvOran:isvOran||.2175,sm:sm,tav:tav,dvH:brut*P26.dv,dvIst:Math.min(brut*P26.dv,P26.asg*P26.dv)};
 }
 /* maaşa ek ödeme (izin ücreti, ihbar, fazla mesai) kesintileri: aynı ay maaşına eklenmenin doğurduğu fark */
 function ekOdeme(u,ek,ay,sgkli){var tav=P26.asg*P26.tavanX;function f(b,eb){var sm=Math.min(b+(sgkli?eb:0),tav),sgk=sm*P26.sgkI,iss=sm*P26.issI;return{sgk:sgk,iss:iss,mat:b+eb-sgk-iss,dv:Math.max(0,(b+eb)*P26.dv-P26.asg*P26.dv)};}
   var mu=f(u,0),mt=f(u,ek),prev=mu.mat*(ay-1),am=P26.asg*(1-P26.sgkI-P26.issI),ist=gvT(am*ay)-gvT(am*(ay-1));
   var gvU=Math.max(0,gvT(prev+mu.mat)-gvT(prev)-ist),gvA=Math.max(0,gvT(prev+mt.mat)-gvT(prev)-ist);
-  var r={sgk:mt.sgk-mu.sgk,iss:mt.iss-mu.iss,gv:gvA-gvU,dv:mt.dv-mu.dv,tav:tav};r.net=ek-r.sgk-r.iss-r.gv-r.dv;return r;}
-function ekRows(ek,r,sgkli,lbl){var a=[];if(sgkli){a.push(['SGK işçi payı (%14)',tl(r.sgk)]);a.push(['İşsizlik işçi payı (%1)',tl(r.iss)]);}a.push(['Gelir vergisi',tl(r.gv)]);a.push(['Damga vergisi (binde 7,59)',tl(r.dv)]);a.push([lbl,tl(r.net),1]);return a;}
+  var r={sgk:mt.sgk-mu.sgk,iss:mt.iss-mu.iss,gv:gvA-gvU,dv:mt.dv-mu.dv,tav:tav,emat:mt.mat-mu.mat,c0:prev+mu.mat,c1:prev+mt.mat};r.net=ek-r.sgk-r.iss-r.gv-r.dv;return r;}
+function ekRows(ek,r,sgkli,lbl){var a=[];if(sgkli){a.push(['SGK işçi payı (%14)',tl(r.sgk)]);a.push(['İşsizlik işçi payı (%1)',tl(r.iss)]);}a.push(['Gelir vergisine esas tutar',tl(r.emat),0,'d']);a.push(['Kümülatif matrah (ödeme öncesi → sonrası)',tl(r.c0)+' → '+tl(r.c1),0,'d']);a.push(['Uygulanan vergi dilimi',dilimTxt(r.c0,r.c1),0,'d']);a.push(['Gelir vergisi',tl(r.gv)]);a.push(['Damga vergisi (binde 7,59)',tl(r.dv)]);a.push([lbl,tl(r.net),1]);return a;}
 var AY=[['1','Ocak'],['2','Şubat'],['3','Mart'],['4','Nisan'],['5','Mayıs'],['6','Haziran'],['7','Temmuz'],['8','Ağustos'],['9','Eylül'],['10','Ekim'],['11','Kasım'],['12','Aralık']];
 var ISV=[['.2175','Genel, teşviksiz (%21,75)'],['.1975','2 puan indirimli – imalat dışı (%19,75)'],['.1675','5 puan indirimli – imalat (%16,75)']];
-function bordroRows(b){return [['Brüt ücret',tl(b.brut)],['SGK işçi payı (%14)',tl(b.sgk)],['İşsizlik işçi payı (%1)',tl(b.iss)],['Gelir vergisi (istisna sonrası)',tl(b.gv)],['Damga vergisi (istisna sonrası)',tl(b.dv)],['Net ücret',tl(b.net),1],['İşverene toplam maliyet',tl(b.maliyet)]];}
+function dilimOf(m){var D=P26.dil;for(var i=0;i<D.length;i++){if(m<=D[i][0])return D[i][1];}return D[D.length-1][1];}
+function dilimTxt(a,b){var r1=dilimOf(Math.max(a,0.01)),r2=dilimOf(b);return r1===r2?'%'+(r1*100):'%'+(r1*100)+' → %'+(r2*100);}
+function pc(x){return '%'+NI.format(Math.round(x*10000)/100);}
+function bordroRows(b){var AYN=AY[(b.ay||1)-1][1],prev=b.mat*(b.ay-1),cum=b.mat*b.ay;return [
+ ['Brüt ücret',tl(b.brut)],
+ ['SGK kesintileri','',0,'h'],
+ ['SGK matrahı (prime esas kazanç)',tl(b.sm)+(b.brut>b.tav?' (tavan '+tl(b.tav)+')':''),0,'d'],
+ ['SGK işçi payı (%14)',tl(b.sgk)],['İşsizlik işçi payı (%1)',tl(b.iss)],
+ ['Gelir vergisi','',0,'h'],
+ ['Gelir vergisi matrahı (brüt − SGK − işsizlik)',tl(b.mat),0,'d'],
+ ['Önceki ayların kümülatif matrahı (Ocak–'+(b.ay>1?AY[b.ay-2][1]:'—')+')',tl(prev),0,'d'],
+ [AYN+' sonu kümülatif matrah',tl(cum),0,'d'],
+ ['Uygulanan vergi dilimi',dilimTxt(prev,cum),0,'d'],
+ ['Hesaplanan gelir vergisi',tl(b.gvH),0,'d'],
+ ['Asgari ücret gelir vergisi istisnası ('+AYN+')','− '+tl(Math.min(b.ist,b.gvH)),0,'d'],
+ ['Gelir vergisi (istisna sonrası)',tl(b.gv)],
+ ['Damga vergisi','',0,'h'],
+ ['Hesaplanan damga vergisi (binde 7,59)',tl(b.dvH),0,'d'],
+ ['Asgari ücret damga vergisi istisnası','− '+tl(b.dvIst),0,'d'],
+ ['Damga vergisi (istisna sonrası)',tl(b.dv)],
+ ['Toplam yasal kesinti',tl(b.sgk+b.iss+b.gv+b.dv),0,'d'],
+ ['Net ücret',tl(b.net),1],
+ ['İşveren maliyeti','',0,'h'],
+ ['SGK işveren payı ('+pc(b.isvOran)+')',tl(b.isv),0,'d'],
+ ['İşsizlik işveren payı (%2)',tl(b.isvI),0,'d'],
+ ['İşverene toplam maliyet',tl(b.maliyet)]];}
 
 /* ---------- Türkçe sayıyı yazıya ---------- */
 function yazi(n){var B=['','bir','iki','üç','dört','beş','altı','yedi','sekiz','dokuz'],O=['','on','yirmi','otuz','kırk','elli','altmış','yetmiş','seksen','doksan'],K=['','bin','milyon','milyar','trilyon'];
@@ -2435,7 +2465,7 @@ var TOOLS=[
    return {rows:rows,note:'İİK 83 ve İş Kanunu 35 uyarınca işçinin net ücretinin dörtte biri kesilir. Birden çok haciz varsa sıraya konur; önceki dosya bitmeden sonrakine kesinti yapılmaz (İİK 83/2). Kıdem ve ihbar tazminatının tamamı haczedilebilir. İşveren kesintiyi her ay dosya hesabına yatırmak ve ücret değişikliği ya da işten ayrılışı bildirmekle yükümlüdür (İİK 355); yapmazsa sorumlu olur (İİK 356).'};}},
  {g:'Maaş ve SGK',key:'kidem',title:'Kıdem tazminatı',abbr:'KT',lead:'Çalışma süresine ve giydirilmiş brüt ücrete göre kıdem tazminatını hesaplayın.',
   fields:[F('g','İşe giriş tarihi',{type:'date',val:'2019-03-01'}),F('c','İşten çıkış tarihi',{type:'date',val:T0}),F('u','Giydirilmiş brüt aylık ücret',{val:'60.000',sfx:'₺',hint:'Brüt ücrete düzenli yan ödemeler (yemek, yol vb.) eklenir.'}),F('t','Kıdem tazminatı tavanı (isteğe bağlı)',{val:'',sfx:'₺',hint:'Boş bırakırsanız çıkış tarihinde geçerli resmî tavan otomatik uygulanır (1 Temmuz – 31 Aralık 2026: 73.729,87 ₺).'})],
-  calc:function(v){var g=dParse(v.g),c=dParse(v.c),u=num(v.u),t=num(v.t);if(!g||!c||isNaN(u)||c<=g)return null;var gun=dDiff(g,c)+1;if(gun<365)return{rows:[['Çalışma süresi',gun+' gün'],['Kıdem tazminatı','Hak yok',1]],note:'Kıdem tazminatı için en az bir yıl çalışmış olmak gerekir.'};var kt=kidemTavan(c),tav=(!isNaN(t)&&t>0)?t:(kt?kt.tutar:NaN),e=isNaN(tav)?u:Math.min(u,tav),br=e*gun/365,dv=br*.00759,y=Math.floor(gun/365);return{rows:[['Çalışma süresi',y+' yıl '+(gun-y*365)+' gün'],['Uygulanan tavan',isNaN(tav)?'Bu tarih için tavan girin':tl(tav)],['Hesaba esas ücret',tl(e)],['Brüt kıdem tazminatı',tl(br)],['Damga vergisi (binde 7,59)',tl(dv)],['Net kıdem tazminatı',tl(br-dv),1]],note:'Kıdem tazminatından yalnızca damga vergisi kesilir.'};}},
+  calc:function(v){var g=dParse(v.g),c=dParse(v.c),u=num(v.u),t=num(v.t);if(!g||!c||isNaN(u)||c<=g)return null;var gun=dDiff(g,c)+1;if(gun<365)return{rows:[['Çalışma süresi',gun+' gün'],['Kıdem tazminatı','Hak yok',1]],note:'Kıdem tazminatı için en az bir yıl çalışmış olmak gerekir.'};var kt=kidemTavan(c),tav=(!isNaN(t)&&t>0)?t:(kt?kt.tutar:NaN),e=isNaN(tav)?u:Math.min(u,tav),br=e*gun/365,dv=br*.00759,y=Math.floor(gun/365);return{rows:[['Çalışma süresi',y+' yıl '+(gun-y*365)+' gün'],['Toplam çalışma günü',gun+' gün ('+trDate(v.g)+' – '+trDate(v.c)+')',0,'d'],['Uygulanan tavan',isNaN(tav)?'Bu tarih için tavan girin':tl(tav)],['Hesaba esas ücret',tl(e)],['Tam yıllar için ('+y+' yıl × '+tl(e)+')',tl(e*y),0,'d'],['Kalan süre için ('+(gun-y*365)+' gün ÷ 365 × '+tl(e)+')',tl(e*(gun-y*365)/365),0,'d'],['Brüt kıdem tazminatı',tl(br)],['Damga vergisi (binde 7,59)',tl(dv)],['Net kıdem tazminatı',tl(br-dv),1]],note:'Kıdem tazminatından yalnızca damga vergisi kesilir.'};}},
  {g:'Maaş ve SGK',key:'ihbar',title:'İhbar süresi ve tazminatı',abbr:'İH',lead:'Çalışma süresine göre bildirim süresini ve brüt ihbar tazminatını bulun.',
   fields:[F('g','İşe giriş tarihi',{type:'date',val:'2023-06-15'}),F('c','Fesih tarihi',{type:'date',val:T0}),F('u','Giydirilmiş brüt aylık ücret',{val:'45.000',sfx:'₺'})],
   calc:function(v){var g=dParse(v.g),c=dParse(v.c),u=num(v.u);if(!g||!c||c<=g)return null;var gun=dDiff(g,c)+1,ay=gun/30.4375,h=ay<6?2:ay<18?4:ay<36?6:8,r=[['Çalışma süresi',gun+' gün'],['İhbar süresi',h+' hafta ('+(h*7)+' gün)',!isFinite(u)]];
@@ -2451,7 +2481,7 @@ var TOOLS=[
     var mu=f(u),mt=f(u+iz),prev=mu.mat*(ay-1);var am=P26.asg*(1-P26.sgkI-P26.issI),ist=gvT(am*ay)-gvT(am*(ay-1));
     var gvU=Math.max(0,gvT(prev+mu.mat)-gvT(prev)-ist),gvT2=Math.max(0,gvT(prev+mt.mat)-gvT(prev)-ist);
     var sgk=mt.sgk-mu.sgk,iss=mt.iss-mu.iss,gv=gvT2-gvU,dv=mt.dv-mu.dv,net=iz-sgk-iss-gv-dv;
-    return{rows:[['Günlük brüt ücret (aylık / 30)',tl(u/30)],['Brüt izin ücreti',tl(iz)],['SGK işçi payı (%14)',tl(sgk)],['İşsizlik işçi payı (%1)',tl(iss)],['Gelir vergisi',tl(gv)],['Damga vergisi (binde 7,59)',tl(dv)],['Net izin ücreti',tl(net),1]],
+    return{rows:[['Günlük brüt ücret (aylık / 30)',tl(u/30)],['Brüt izin ücreti',tl(iz)],['SGK işçi payı (%14)',tl(sgk)],['İşsizlik işçi payı (%1)',tl(iss)],['Gelir vergisine esas tutar',tl(mt.mat-mu.mat),0,'d'],['Kümülatif matrah (ödeme öncesi → sonrası)',tl(prev+mu.mat)+' → '+tl(prev+mt.mat),0,'d'],['Uygulanan vergi dilimi',dilimTxt(prev+mu.mat,prev+mt.mat),0,'d'],['Gelir vergisi',tl(gv)],['Damga vergisi (binde 7,59)',tl(dv)],['Net izin ücreti',tl(net),1]],
       note:'Kesintiler, izin ücretinin '+AY[ay-1][1]+' ayı maaşıyla birlikte ödendiği ve yıl içinde her ay aynı brüt ücretin alındığı varsayımıyla, maaşa eklenmesinden doğan fark olarak hesaplanır. SGK primi aylık tavan ('+tl(tav)+') aşılırsa tavan üzerinden kesilir.'};}},
  {g:'Maaş ve SGK',key:'mesai',title:'Fazla mesai ücreti',abbr:'FM',lead:'Brüt ücrete ve saate göre fazla çalışma ücretini hesaplayın.',
   fields:[F('u','Brüt aylık ücret',{val:'45.000',sfx:'₺'}),F('s','Fazla mesai saati',{val:'10',sfx:'saat'}),F('z','Zam oranı',{type:'seg',opts:[['1.5','%50 (fazla çalışma)'],['1.25','%25 (fazla sürelerle)'],['2','%100 (tatil günü)']],val:'1.5'}),F('ay','Ödeme ayı',{type:'select',opts:AY,val:String(new Date().getMonth()+1),hint:'Fazla mesai o ayın maaşıyla ödenir; gelir vergisi kümülatif matraha göre değişir.'})],
@@ -2548,10 +2578,13 @@ function renderTool(it,p){
   function lockH(){[out,tbl].forEach(function(x){if(x&&x.offsetHeight)x.style.minHeight=Math.max(x.offsetHeight,parseFloat(x.style.minHeight)||0)+'px';});}
   p.addEventListener('focusout',function(){setTimeout(function(){if(!p.contains(document.activeElement)){[out,tbl].forEach(function(x){if(x)x.style.minHeight='';});}},200);});
   function run(){if(p.contains(document.activeElement))lockH();var r=null;try{r=it.calc(state);}catch(e){r=null;}
+    var hasDet=!!(r&&r.rows&&r.rows.some(function(x){return x[3];})),det=false;try{det=localStorage.getItem('ek-detay')==='1';}catch(e){}
+    if(r&&hasDet){r=Object.assign({},r,{rows:r.rows.filter(function(x){return det||!x[3];})});}
     if(!r){out.innerHTML='<div class="res-h"><span class="res-ic" aria-hidden="true">=</span><div><b>Hesaplama sonucu</b></div></div>'+'<div class="row big"><span>Sonuç</span><b>—</b></div><p class="note">Değerleri kontrol edin.</p>';tbl.innerHTML='';return;}
-    out.innerHTML='<div class="res-h"><span class="res-ic" aria-hidden="true">=</span><div><b>Hesaplama sonucu</b></div></div>'+r.rows.map(function(x){var L=String(x[1]).length>24;return '<div class="row'+(x[2]?' big':'')+(L?' long':'')+'"><span>'+esc(x[0])+'</span><b>'+esc(x[1])+'</b>'+(L?'<button type="button" class="rcopy" data-copy="'+esc(x[1])+'">Kopyala</button>':'')+'</div>';}).join('')+(r.note?'<p class="note">'+esc(r.note)+'</p>':'')+(it.g==='Maaş ve SGK'?'<div class="prof-bar">'+(ekProfil.has()?'<span>Belgede: <b>'+esc([ekProfil.get().f.unvan,ekProfil.get().c.ad].filter(Boolean).join(' · '))+'</b></span><button type="button" data-a="prof">Değiştir</button>':'<button type="button" data-a="prof" class="prof-add"><span class="pa-ic" aria-hidden="true">＋</span><span class="pa-t"><b>Firma ve çalışan bilgisi ekle</b><small>Sonucu hesap pusulası olarak yazdırın, PDF / Word / Excel indirin ya da çalışana gönderin</small></span><span class="pa-go" aria-hidden="true">→</span></button>')+'</div>':'')+'<div class="acts"><button type="button" data-a="copy">Sonucu kopyala</button><button type="button" data-a="dl">İndir ▾</button><button type="button" data-a="share">Paylaş</button><button type="button" data-a="print">Yazdır</button></div>';
+    out.innerHTML='<div class="res-h"><span class="res-ic" aria-hidden="true">=</span><div><b>Hesaplama sonucu</b></div>'+(hasDet?'<div class="det-t" role="group" aria-label="Görünüm"><button type="button" data-det="0" class="'+(det?'':'on')+'">Özet</button><button type="button" data-det="1" class="'+(det?'on':'')+'">Detaylı</button></div>':'')+'</div>'+r.rows.map(function(x){if(x[3]==='h')return '<div class="row sub"><span>'+esc(x[0])+'</span></div>';var L=String(x[1]).length>24;return '<div class="row'+(x[2]?' big':'')+(L?' long':'')+(x[3]==='d'?' drow':'')+'"><span>'+esc(x[0])+'</span><b>'+esc(x[1])+'</b>'+(L?'<button type="button" class="rcopy" data-copy="'+esc(x[1])+'">Kopyala</button>':'')+'</div>';}).join('')+(r.note?'<p class="note">'+esc(r.note)+'</p>':'')+(it.g==='Maaş ve SGK'?'<div class="prof-bar">'+(ekProfil.has()?'<span>Belgede: <b>'+esc([ekProfil.get().f.unvan,ekProfil.get().c.ad].filter(Boolean).join(' · '))+'</b></span><button type="button" data-a="prof">Değiştir</button>':'<button type="button" data-a="prof" class="prof-add"><span class="pa-ic" aria-hidden="true">＋</span><span class="pa-t"><b>Firma ve çalışan bilgisi ekle</b><small>Sonucu hesap pusulası olarak yazdırın, PDF / Word / Excel indirin ya da çalışana gönderin</small></span><span class="pa-go" aria-hidden="true">→</span></button>')+'</div>':'')+'<div class="acts"><button type="button" data-a="copy">Sonucu kopyala</button><button type="button" data-a="dl">İndir ▾</button><button type="button" data-a="share">Paylaş</button><button type="button" data-a="print">Yazdır</button></div>';
     tbl.innerHTML=r.table?'<div class="tscroll"><table class="dtable"><thead><tr>'+r.table.head.map(function(h){return '<th>'+esc(h)+'</th>';}).join('')+'</tr></thead><tbody>'+r.table.body.map(function(row){return '<tr>'+row.map(function(c){return '<td>'+esc(c)+'</td>';}).join('')+'</tr>';}).join('')+'</tbody></table></div>':'';
-    var txt=it.title+'\n'+r.rows.map(function(x){return x[0]+': '+x[1];}).join('\n')+'\n— erdalkarahan.com';
+    $$('[data-det]',out).forEach(function(bt){bt.onclick=function(){try{localStorage.setItem('ek-detay',bt.dataset.det);}catch(e){}run();};});
+    var txt=it.title+'\n'+r.rows.map(function(x){return x[3]==='h'?'\n— '+x[0]+' —':x[0]+': '+x[1];}).join('\n')+'\n— erdalkarahan.com';
     $('[data-a=copy]',out).onclick=function(){copyText(txt,'Sonuç kopyalandı');};$$('.rcopy',out).forEach(function(b){b.onclick=function(){copyText(b.dataset.copy,'Kopyalandı');b.textContent='Kopyalandı ✓';setTimeout(function(){b.textContent='Kopyala';},1600);};});
     var usePP=function(){return it.g==='Maaş ve SGK'&&ekProfil.has();};
     $('[data-a=share]',out).onclick=function(){if(usePP()){var o=ekProfil.get(),T=ekProfil.title(it)+(o.c.ad?' – '+o.c.ad:'');openShare(T,txt,SITE_URL+'#h-'+it.key,{html:ekProfil.docHtml(it,r),noHead:!!o.f.unvan});}else openShare(it.title,txt,SITE_URL+'#h-'+it.key,{rows:r.rows,table:r.table,el:(function(){var d=document.createElement('div');d.innerHTML=out.innerHTML+tbl.innerHTML;return d;})()});};
@@ -3015,7 +3048,7 @@ window.renderBelgeler=function(){var el=$('#belge-list');if(!el)return;
     h+='<h1 class="pp-t">'+esc(window.ekProfil.title(it))+'</h1><p class="pp-d">Düzenleme tarihi: '+today+'</p>';
     var cr=[['Adı soyadı',c.ad],['TC kimlik no',c.tc],['Görevi',c.gorev],['İşe giriş tarihi',d(c.giris)],['İşten ayrılış tarihi',d(c.cikis)]];
     if(cr.some(function(x){return x[1];}))h+='<h2 class="pp-h">Çalışan bilgileri</h2>'+kv(cr);
-    h+='<h2 class="pp-h">Hesaplama</h2><table class="pp-kv pp-res">'+r.rows.map(function(x){return '<tr'+(x[2]?' class="big"':'')+'><td>'+esc(x[0])+'</td><td><b>'+esc(x[1])+'</b></td></tr>';}).join('')+'</table>';
+    h+='<h2 class="pp-h">Hesaplama</h2><table class="pp-kv pp-res">'+r.rows.map(function(x){if(x[3]==='h')return '<tr class="pp-sub"><td colspan="2"><b>'+esc(x[0])+'</b></td></tr>';return '<tr'+(x[2]?' class="big"':'')+'><td>'+esc(x[0])+'</td><td><b>'+esc(x[1])+'</b></td></tr>';}).join('')+'</table>';
     if(r.table)h+='<table class="pp-tbl"><thead><tr>'+r.table.head.map(function(x){return '<th>'+esc(x)+'</th>';}).join('')+'</tr></thead><tbody>'+r.table.body.map(function(row){return '<tr>'+row.map(function(x){return '<td>'+esc(x)+'</td>';}).join('')+'</tr>';}).join('')+'</tbody></table>';
     if(r.note)h+='<p class="pp-n">'+esc(r.note)+'</p>';
     h+='<p class="pp-n">Yukarıdaki hesaplamayı okudum; bir nüshasını teslim aldım.</p><table class="pp-sig"><tr><td><b>İşveren / Yetkili</b><br>'+esc(f.yetkili||'')+'<br><br>Kaşe – İmza</td><td><b>Çalışan</b><br>'+esc(c.ad||'')+'<br><br>İmza</td></tr></table></div>';
@@ -3136,7 +3169,7 @@ window.renderBelgeler=function(){var el=$('#belge-list');if(!el)return;
     $$('input,select,textarea',c).forEach(function(i){var s=document.createElement('span');s.textContent=i.tagName==='SELECT'?(i.options[i.selectedIndex]||{}).text||'':i.value;i.replaceWith(s);});
     $$('svg',c).forEach(function(s){s.remove();});return c;}
   function head(title){var d=new Date().toLocaleDateString('tr-TR');return {d:d,h:'<div style="border-bottom:2px solid #5B3FA8;padding-bottom:8px;margin-bottom:14px"><b style="font-size:15pt;color:#2A1F5C">SMMM Erdal Karahan</b><br><span style="font-size:9pt;color:#555">Serbest Muhasebeci Mali Müşavir · Kadıköy / İstanbul · www.erdalkarahan.com · 0216 550 20 73</span></div><h1 style="font-size:16pt;margin:0 0 12px;color:#121C33">'+esc(title)+'</h1>',f:'<p style="font-size:8.5pt;color:#777;border-top:1px solid #ccc;padding-top:6px;margin-top:18px">Bilgiler genel bilgilendirme amaçlıdır; uygulamadan önce güncel mevzuatı kontrol edin veya bir meslek mensubuna danışın.</p>'};}
-  function rowsOf(ctx){var R=[];if(ctx.rows)ctx.rows.forEach(function(r){R.push([r[0],r[1]]);});
+  function rowsOf(ctx){var R=[];if(ctx.rows)ctx.rows.forEach(function(r){R.push(r[3]==='h'?[r[0].toLocaleUpperCase('tr-TR'),'']:[r[0],r[1]]);});
     else if(ctx.el){var c=cleanClone(ctx.el);$$('.row',c).forEach(function(r){var a=r.children;if(a.length>=2)R.push([a[0].textContent.trim(),a[a.length-1].textContent.trim()]);});
       if(!R.length)$$('h2,h3,h4,p,li,summary',c).forEach(function(x){if(x.closest('table'))return;var t=x.textContent.replace(/\s+/g,' ').trim();if(t)R.push([t]);});}
     return R;}
