@@ -3,6 +3,31 @@
  "aciklama": "Resmî oran ve tutarlar değiştiğinde yalnızca bu dosyayı (ve gerekirse cezalar.json, beyan_vergi.json, sgk_formlar.json, yazilar.json) güncelleyin; site yeni değerleri otomatik kullanır.",
  "kidemTavan": [
   {
+   "bas": "2024-01-01",
+   "bit": "2024-06-30",
+   "tutar": 35058.58
+  },
+  {
+   "bas": "2024-07-01",
+   "bit": "2024-12-31",
+   "tutar": 41828.42
+  },
+  {
+   "bas": "2025-01-01",
+   "bit": "2025-06-30",
+   "tutar": 46655.43
+  },
+  {
+   "bas": "2025-07-01",
+   "bit": "2025-12-31",
+   "tutar": 53919.68
+  },
+  {
+   "bas": "2026-01-01",
+   "bit": "2026-06-30",
+   "tutar": 64948.77
+  },
+  {
    "bas": "2026-07-01",
    "bit": "2026-12-31",
    "tutar": 73729.87
