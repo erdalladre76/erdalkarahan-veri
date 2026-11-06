@@ -4321,6 +4321,15 @@ document.addEventListener('viewchange',function(){setTimeout(imLabel,60);});wind
   box.addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.classList.contains('hap-c'))e.target.classList.toggle('open');});
   var pr=$('.hap-pr'),nx=$('.hap-nx');function step(d){var c=box.querySelector('.hap-c');box.scrollBy({left:d*((c?c.offsetWidth:300)+14),behavior:'smooth'});}if(pr)pr.onclick=function(){step(-1);};if(nx)nx.onclick=function(){step(1);};
 })();
+/* ---------- Enter = sonraki alan: formlarda Enter'a basınca imleç alttaki kutuya geçer; son kutuda klavye kapanır */
+(function(){var SEL='input:not([type=hidden]):not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]):not([type=file]):not([disabled]):not([readonly]),select:not([disabled]),textarea:not([disabled]):not([readonly])';
+function skip(el){var t=(el.type||'').toLowerCase();return t==='search'||el.getAttribute('enterkeyhint')==='search'||el.getAttribute('role')==='combobox'||el.hasAttribute('data-noenter');}
+function list(el){var box=el.closest('.modal,.ov,[role=dialog],form,.tool,.calc,.dform,section')||document.body;return [].slice.call(box.querySelectorAll(SEL)).filter(function(x){return !skip(x)&&x.offsetParent!==null&&!x.closest('[hidden]');});}
+document.addEventListener('focusin',function(e){var el=e.target;if(!el.matches||!el.matches('input,select')||skip(el)||el.hasAttribute('enterkeyhint'))return;var L=list(el),i=L.indexOf(el);if(i<0)return;el.setAttribute('enterkeyhint',i<L.length-1?'next':'done');});
+document.addEventListener('keydown',function(e){if(e.key!=='Enter'||e.defaultPrevented||e.isComposing||e.shiftKey||e.ctrlKey||e.metaKey||e.altKey)return;var el=e.target;if(!el.matches||!el.matches('input,select')||skip(el))return;
+ var L=list(el),i=L.indexOf(el);if(i<0)return;var f=el.form;
+ if(i<L.length-1){e.preventDefault();var n=L[i+1];n.focus();try{if(n.select&&n.tagName==='INPUT'&&!/date|month|time/.test(n.type))n.select();}catch(x){}try{n.scrollIntoView({block:'nearest'});}catch(x){}}
+ else{if(f&&f.querySelector('[type=submit],button:not([type])'))return;e.preventDefault();el.blur();}});})();
 /* ---------- başa dön ---------- */
 (function(){var b=$('#to-top');function chk(){b.classList.toggle('off',scrollY<300);}window.addEventListener('scroll',chk,{passive:true});chk();b.addEventListener('click',function(){window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});})();
 
