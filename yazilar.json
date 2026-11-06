@@ -830,6 +830,317 @@
     "Yemek kartında 300 TL’nin KDV hariç tutar olduğu bilgisi tek kaynaktan (muhasebetr) alındı.",
     "7577 sayılı Kanunda tutarın değiştirilmesine ilişkin yetki (Kurum/Cumhurbaşkanı) netleştirilemediği için metne alınmadı."
    ]
+  },
+  {
+   "slug": "pazaryeri-yemek-platformu-muhasebe-kayitlari-2026",
+   "baslik": "Yemek Platformları ve Pazaryerlerinde Muhasebe Kaydı: Satıcı, Platform ve Alıcı Firma İçin Örnek Fişler",
+   "ozet": "Yemeksepeti, Trendyol, Hepsiburada gibi platformların hakediş dökümündeki komisyon, hizmet bedeli, “KDV bedeli” ve %1 stopaj kalemleri sık sık karıştırılıyor. Satıcının, platformun ve siparişi veren firmanın kayıtlarını aynı örnek üzerinden fiş fiş gösteriyoruz.",
+   "tarih": "2026-11-06",
+   "etiketler": [
+    "Pazaryeri",
+    "E-ticaret stopajı",
+    "KDV",
+    "Muhasebe kaydı",
+    "Yemek platformları"
+   ],
+   "bolumler": [
+    {
+     "baslik": "GİRİŞ",
+     "paragraflar": [
+      "Restoranı, mağazası ya da e-ticaret satıcısı olan mükelleflerimizin hakediş dökümleri her ay aynı soruyu getiriyor: “Bu KDV bedeli ne, platform benim KDV’mi mi ödüyor?” Döküm; satış tutarını, indirimleri, komisyonu, sipariş iletim ya da kargo bedelini, bunların KDV’sini ve 2025’ten beri %1 stopajı tek ekranda netleştirdiği için kalemlerin hangisinin kime ait olduğu kolayca karışıyor.",
+      "Bu yazıda tek bir sipariş üzerinden üç tarafın, yani satıcının, platformun ve siparişi veren firmanın defterine ne yazılacağını adım adım gösteriyoruz. Aynı hesabı kendi rakamlarınızla yapmak için sitemizdeki araç: https://www.erdalkarahan.com/#h-pazaryeri"
+     ]
+    },
+    {
+     "baslik": "DÖKÜMDEKİ KALEMLER NE ANLAMA GELİYOR?",
+     "paragraflar": [
+      "Platform, satıcı adına müşteriden parayı tahsil eder, kendi alacaklarını ve kestiği vergiyi düşer, kalanı satıcının hesabına aktarır. Dökümdeki kalemlerin karşılığı şöyledir:"
+     ],
+     "liste": [
+      "Satış tutarı: Satıcının müşteriye kestiği faturanın KDV dahil tutarı. Satıcının karşıladığı indirim düşülmüş haliyle faturaya girer; platformun karşıladığı indirim satıcının satış tutarını azaltmaz.",
+      "Komisyon, sipariş iletim, kargo, reklam bedelleri: Platformun satıcıya verdiği hizmetler. Platform bunlar için satıcıya ayrıca fatura keser; satıcı için gider, platform için gelirdir.",
+      "“KDV bedeli”: Satıcının satış KDV’si değil, platformun komisyon ve hizmet faturasının KDV’sidir (%20). Satıcı bu tutarı platformun faturasıyla indirilecek KDV olarak alır.",
+      "Stopaj: Platformun, KDV hariç satış bedeli üzerinden yaptığı %1 gelir veya kurumlar vergisi kesintisidir. Komisyon ve kargo bu matrahtan düşülmez.",
+      "Satıcının satış KDV’si (lokanta ve paket yemekte %10, çoğu üründe %20) dökümde düşülmez; satıcı bunu kendi KDV beyannamesinde beyan eder."
+     ]
+    },
+    {
+     "baslik": "%1 STOPAJ: KİM KESER, KİM MAHSUP EDER?",
+     "paragraflar": [
+      "7524 sayılı Kanunla Gelir Vergisi Kanunu’nun 94 ve Kurumlar Vergisi Kanunu’nun 15. maddelerine eklenen düzenleme ve 9284 sayılı Cumhurbaşkanı Kararıyla, aracı hizmet sağlayıcılar ile elektronik ticaret aracı hizmet sağlayıcıları, ödemesine aracılık ettikleri satışlar için satıcıya yaptıkları ödemelerden 1 Ocak 2025’ten itibaren %1 kesinti yapıyor. Ayrıntılar 330 Seri No.lu Gelir Vergisi Genel Tebliği’nde düzenlendi.",
+      "Matrah, mal ya da hizmet bedelinin KDV hariç tutarıdır; komisyon, kargo ve hizmet bedelleri düşülmez. Platform kesintiyi ertesi ayın 26’sına kadar muhtasar ve prim hizmet beyannamesiyle beyan edip öder. Satıcı ise kesilen vergiyi geçici vergi ve yıllık beyannamesinde mahsup eder."
+     ],
+     "liste": [
+      "Kesinti yapılmayanlar: vergi mükellefiyeti olmayanlar, GVK 9/10 kapsamında esnaf muaflığından yararlananlar, basit usul mükellefleri ve kazancı GVK 20/B kapsamında kesinti yoluyla vergilendirilenler.",
+      "Kesinti yapılmayan ödemeler: platformun kendi mal ve hizmet satışları, ödemeye aracılık etmediği satışlar, kapıda nakit ya da satıcının POS cihazıyla ödenen siparişler.",
+      "İade: Ürün aynı ay içinde, stopaj beyan edilmeden iade edilirse o tutar için kesinti yapılmayabilir. Daha sonraki iadelerde kesilen vergi satıcıya geri ödenmez; satıcı mahsup yoluyla kullanır."
+     ]
+    },
+    {
+     "baslik": "ÖRNEK",
+     "paragraflar": [
+      "Bir restoran, platform üzerinden 1.100 TL’lik (1.000 TL + %10 KDV 100 TL) sipariş alıyor ve müşteri online ödüyor. Platform 150 TL komisyon ve 30 TL sipariş iletim bedeli (toplam 180 TL + %20 KDV 36 TL) ile 1.000 TL × %1 = 10 TL stopaj düşüyor. Restoranın hesabına geçen tutar: 1.100 − 216 − 10 = 874 TL."
+     ]
+    },
+    {
+     "baslik": "1) SATICININ (RESTORANIN) KAYITLARI",
+     "paragraflar": [
+      "Satış faturası (müşteriye e-arşiv ya da e-fatura). Tahsilatı platform yaptığı için alacak platform carisine yazılır:"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "120 Alıcılar (platform cari)",
+       "1.100,00",
+       ""
+      ],
+      [
+       "600 Yurt İçi Satışlar",
+       "",
+       "1.000,00"
+      ],
+      [
+       "391 Hesaplanan KDV",
+       "",
+       "100,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "",
+     "paragraflar": [
+      "Platformun komisyon ve hizmet faturası:"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "760 Pazarlama Satış ve Dağıtım Giderleri",
+       "180,00",
+       ""
+      ],
+      [
+       "191 İndirilecek KDV",
+       "36,00",
+       ""
+      ],
+      [
+       "320 Satıcılar (platform cari)",
+       "",
+       "216,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "",
+     "paragraflar": [
+      "Platformun kestiği %1 stopaj:"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "193 Peşin Ödenen Vergiler ve Fonlar",
+       "10,00",
+       ""
+      ],
+      [
+       "120 Alıcılar (platform cari)",
+       "",
+       "10,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "",
+     "paragraflar": [
+      "Hakedişin bankaya gelmesi ve cari hesapların mahsubu:"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "102 Bankalar",
+       "874,00",
+       ""
+      ],
+      [
+       "320 Satıcılar (platform cari)",
+       "216,00",
+       ""
+      ],
+      [
+       "120 Alıcılar (platform cari)",
+       "",
+       "1.090,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "2) PLATFORMUN KAYITLARI",
+     "paragraflar": [
+      "Platform, müşteriden satıcı adına tahsil ettiği tutarı kendi geliri olarak değil, satıcıya borç olarak izler:"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "102 Bankalar (sanal POS)",
+       "1.100,00",
+       ""
+      ],
+      [
+       "336 Diğer Çeşitli Borçlar (satıcı cari)",
+       "",
+       "1.100,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "",
+     "paragraflar": [
+      "Satıcıya kesilen komisyon ve hizmet faturası:"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "120 Alıcılar (satıcı cari)",
+       "216,00",
+       ""
+      ],
+      [
+       "600 Yurt İçi Satışlar (komisyon ve hizmet gelirleri)",
+       "",
+       "180,00"
+      ],
+      [
+       "391 Hesaplanan KDV",
+       "",
+       "36,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "",
+     "paragraflar": [
+      "Stopaj kesintisi ve satıcıya ödeme:"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "336 Diğer Çeşitli Borçlar (satıcı cari)",
+       "10,00",
+       ""
+      ],
+      [
+       "360 Ödenecek Vergi ve Fonlar",
+       "",
+       "10,00"
+      ],
+      [
+       "336 Diğer Çeşitli Borçlar (satıcı cari)",
+       "1.090,00",
+       ""
+      ],
+      [
+       "120 Alıcılar (satıcı cari)",
+       "",
+       "216,00"
+      ],
+      [
+       "102 Bankalar",
+       "",
+       "874,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "3) SİPARİŞİ VEREN FİRMANIN KAYDI",
+     "paragraflar": [
+      "Siparişi bir şirket veriyorsa gider belgesi platformun dökümü değil, satıcının (restoranın) faturasıdır. Bu nedenle sipariş verilirken kurumsal fatura seçeneğiyle firma unvanı ve vergi numarası girilmelidir; aksi halde restoran adına düzenlenen e-arşiv fatura şirket adına olmaz.",
+      "Personele işyerinde yemek olarak verildiğinde gider ve KDV indirimi açısından sorun yoktur. Yemek bedeli çalışana nakit ya da yemek kartıyla ödeniyorsa 2026 için günlük 300 TL (KDV hariç) gelir vergisi istisnası sınırı ayrıca izlenmelidir. Kartla ödenen bir sipariş şöyle kaydedilir:"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "770 Genel Yönetim Giderleri",
+       "1.000,00",
+       ""
+      ],
+      [
+       "191 İndirilecek KDV",
+       "100,00",
+       ""
+      ],
+      [
+       "300 Banka Kredileri (kredi kartı) veya 102 Bankalar",
+       "",
+       "1.100,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "E-TİCARET PAZARYERİNDE DURUM",
+     "paragraflar": [
+      "Trendyol, Hepsiburada, Amazon gibi pazaryerlerinde yapı aynıdır; yalnızca kalemler çoğalır: komisyon, kargo, platform hizmet bedeli, reklam ve iade kargoları. Örneğin 2.400 TL’ye (2.000 TL + %20 KDV) satılan bir üründe 360 TL komisyon, 90 TL kargo ve 10 TL hizmet bedeli (toplam 460 TL + %20 KDV 92 TL) ile 2.000 TL × %1 = 20 TL stopaj düşülürse satıcının hesabına 2.400 − 552 − 20 = 1.828 TL geçer. Kayıtlar yukarıdaki dört fişle birebir aynı mantıkta, yalnızca tutarlar değişerek yapılır.",
+      "Platformun kendi stoğundan sattığı modelde (ör. hızlı market siparişleri) platform aracı değil satıcıdır; kayıt normal alış-satıştır ve %1 stopaj uygulanmaz."
+     ]
+    },
+    {
+     "baslik": "UYGULAMADA NE YAPMALI?",
+     "liste": [
+      "Her platform için ayrı cari hesap açın; alacak (120) ve borç (320) tarafını ay sonunda hakediş raporuyla mutabık edin.",
+      "Hakediş raporundaki brüt satış toplamını aynı dönemin e-arşiv ve e-fatura satışlarıyla karşılaştırın; fark genellikle iade, iptal ya da platform indiriminden çıkar.",
+      "Komisyon faturalarını platformun e-fatura portalından dönem kapanmadan indirin; “KDV bedeli” ancak bu faturayla indirilebilir.",
+      "Kesilen %1 stopajı ay ay 193 hesabında izleyin; geçici vergi beyannamesinde mahsup etmeyi unutmayın. Platformların aylık stopaj dökümleri mahsup için dayanak olarak saklanmalıdır.",
+      "Kapıda nakit ya da POS’la ödenen siparişleri ayrı izleyin: bu tutarlar doğrudan kasaya veya bankaya girer, stopaj kesilmez."
+     ]
+    },
+    {
+     "baslik": "SONUÇ",
+     "paragraflar": [
+      "Platform dökümü bir mutabakat ekranıdır, muhasebe belgesi değildir. Satıcı kendi satış faturasını, platform komisyon faturasını düzenler; stopaj ise satıcının mahsup edeceği bir ön ödemedir. Bu ayrımı fiş bazında kurduğunuzda ay sonu mutabakatı kolaylaşır. Kendi tutarlarınızla fişleri çıkarmak için: https://www.erdalkarahan.com/#h-pazaryeri"
+     ]
+    }
+   ],
+   "kaynaklar": [
+    "https://gib.gov.tr/sites/default/files/fileadmin/mevzuatek/mevzuatbilginotu/gelirvergisiteblig330not.pdf",
+    "https://kpmgvergi.com/yayinlar/mali-bultenler/vergi/9284-sayili-cumhurbaskani-karari-ile-elektronik-ticarette-uygulanacak-stopaj-orani-1-olarak-belirlendi/2892",
+    "https://www.muhasebetr.com/vergiden-mustesna-yemek-bedeli/"
+   ],
+   "dogrulanmadi": [
+    "GVK 94 ve KVK 15’in ilgili bent numaraları resmî metinden teyit edilemediği için yazıda bent numarası verilmedi.",
+    "Hesap kodları yaygın uygulamaya göredir (ör. platform carisi için 120/320, platformda satıcı borcu için 336); büroların tercihine göre değişebilir.",
+    "2026 yılında %1 oranında değişiklik bulunamadı; 9284 sayılı CBK ile belirlenen oran esas alındı."
+   ]
   }
  ]
 }
