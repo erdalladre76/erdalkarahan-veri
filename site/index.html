@@ -1458,6 +1458,8 @@ section[data-view] a{overflow-wrap:anywhere}
 #dl-wait .dw-snd b{display:block;font-size:15px}
 #dl-wait .dw-snd small{display:block;font-size:12.5px;opacity:.7}
 #dl-wait .dw-b .btn{padding:0 14px;gap:6px}
+.res-h{flex-wrap:wrap}.res-tg{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}.res-tg .det-t{margin-left:0}
+.dec-t span{font-family:var(--f-mono);font-size:12px;color:var(--night-mute);padding:5px 4px 5px 8px;align-self:center}.dec-t button{padding:5px 10px}
 /* alt bar v2: geniş, iki satır tarih, kayan piyasa şeridi */
 @media (min-width:641px){.tbar{width:min(1560px,calc(100% - 24px))!important}}
 @media (min-width:901px){.tbar{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important}.tbar .tb-info{padding-left:8px}}
@@ -2186,7 +2188,10 @@ var $=function(s,r){return (r||document).querySelector(s);}, $$=function(s,r){re
 function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 var NF=new Intl.NumberFormat('tr-TR',{minimumFractionDigits:2,maximumFractionDigits:2});
 var NI=new Intl.NumberFormat('tr-TR',{maximumFractionDigits:2});
-function tl(n){return isFinite(n)?NF.format(n)+' ₺':'—';}
+/* sonuçlarda ondalık hane sayısı: varsayılan 2; kullanıcı 3 ya da 4 seçebilir (yalnızca hesaplama sonucu çizilirken geçerli) */
+var RP=2,NF2=NF,NI2=NI,_nfc={};function NFP(){return _nfc[RP]||(_nfc[RP]=new Intl.NumberFormat('tr-TR',{minimumFractionDigits:RP,maximumFractionDigits:RP}));}
+function fx(n){return isFinite(n)?NFP().format(n):'—';}
+function tl(n){return isFinite(n)?NFP().format(n)+' ₺':'—';}
 function num(s){s=String(s==null?'':s).replace(/\s|₺|%/g,'');if(!s)return NaN;if(s.indexOf(',')>-1){s=s.replace(/\./g,'').replace(',','.');}else if((s.match(/\./g)||[]).length>1||/\.\d{3,}$/.test(s)){s=s.replace(/\./g,'');}var n=parseFloat(s);return isFinite(n)?n:NaN;}
 function dParse(s){if(!s)return null;var p=s.split('-');if(p.length!==3)return null;var d=new Date(Date.UTC(+p[0],+p[1]-1,+p[2]));return isNaN(d)?null:d;}
 function dDiff(a,b){return Math.round((b-a)/864e5);}
@@ -2339,7 +2344,7 @@ var TOOLS=[
  /* GENEL */
  {g:'Genel',key:'yuzde',title:'Yüzde hesaplama',abbr:'%',lead:'Yüzdeyi, oranı ya da iki değer arasındaki değişimi bulun.',
   fields:[F('m','Ne hesaplansın?',{type:'seg',opts:[['a','A’nın %B’si'],['b','A, B’nin yüzde kaçı'],['c','A’dan B’ye değişim']],val:'a'}),F('a','A',{val:'2.500'}),F('b','B',{val:'18'})],
-  calc:function(v){var a=num(v.a),b=num(v.b);if(isNaN(a)||isNaN(b))return null;if(v.m==='a')return{rows:[['Sonuç',NI.format(a*b/100),1]]};if(v.m==='b')return b?{rows:[['Oran','%'+NI.format(a/b*100),1]]}:null;return a?{rows:[['Fark',NI.format(b-a)],['Değişim oranı','%'+NI.format((b-a)/a*100),1]]}:null;}},
+  calc:function(v){var a=num(v.a),b=num(v.b);if(isNaN(a)||isNaN(b))return null;if(v.m==='a')return{rows:[['Sonuç',fx(a*b/100),1]]};if(v.m==='b')return b?{rows:[['Oran','%'+NI.format(a/b*100),1]]}:null;return a?{rows:[['Fark',fx(b-a)],['Değişim oranı','%'+NI.format((b-a)/a*100),1]]}:null;}},
  {g:'Genel',key:'yazi',title:'Sayıyı yazıya çevir',abbr:'Aa',lead:'Fatura, çek ve sözleşmeler için tutarı yazıyla yazın.',
   fields:[F('a','Tutar',{val:'12.450,75',sfx:'₺'}),F('f','Yazım biçimi',{type:'seg',opts:[['buyuk','BÜYÜK HARF'],['bas','Kelime Başları Büyük'],['kucuk','Küçük harf']],val:'buyuk'})],
   calc:function(v){var a=num(v.a);if(isNaN(a)||a<0||a>=1e15)return null;var tl_=Math.floor(a+1e-9),kr=Math.round((a-tl_)*100);if(kr===100){tl_++;kr=0;}
@@ -2554,7 +2559,7 @@ var TOOLS=[
   calc:function(v){var a=num(v.a),r=num(v.r),k=v.m?kiraOran(v.m):kiraOran(),src;if(isNaN(a))return null;if(isNaN(r)){if(!k)return{rows:[['Yeni aylık kira','Bu ay için oran henüz açıklanmadı; oranı elle yazın',1]],note:'TÜİK her ayın 3’ünde enflasyonu açıklar; 12 aylık TÜFE ortalaması o gün belli olur.'};r=k.oran;src=ymAd(k.ay)+' yasal üst sınırı (12 aylık TÜFE ort.)';}else src='Girdiğiniz oran';return{rows:[['Uygulanan oran','%'+NI.format(r)],['Oranın kaynağı',src],['Artış tutarı',tl(a*r/100)],['Yeni aylık kira',tl(a*(1+r/100)),1],['Yeni yıllık kira',tl(a*(1+r/100)*12)]],note:'Konut ve işyeri kiralarında artış oranı bir önceki kira yılının 12 aylık TÜFE ortalamasını geçemez (TBK 344). Daha düşük bir oranda anlaşabilirsiniz.'};}},
  {g:'Kredi ve finans',key:'doviz',title:'Döviz çevirici',abbr:'FX',lead:'Döviz ile Türk lirası arasında çeviri yapın.',
   fields:[F('a','Tutar',{val:'1.000'}),F('c','Para birimi',{type:'seg',opts:[['USD','USD'],['EUR','EUR'],['GBP','GBP']],val:'USD'}),F('m','Yön',{type:'seg',opts:[['d','Dövizden TL’ye'],['t','TL’den dövize']],val:'d'}),F('k','Kur (boş bırakırsanız güncel kur)',{val:'',sfx:'₺'})],
-  calc:function(v){var a=num(v.a),k=num(v.k);if(isNaN(k))k=(window.FXR||{})[v.c];if(isNaN(a))return null;if(!k)return{rows:[['Sonuç','Kur girin',1]],note:'Güncel kur alınamadı; kuru elle yazın.'};return{rows:[['Kullanılan kur',NF.format(k)+' ₺'],['Sonuç',v.m==='d'?tl(a*k):NF.format(a/k)+' '+v.c,1]]};}},
+  calc:function(v){var a=num(v.a),k=num(v.k);if(isNaN(k))k=(window.FXR||{})[v.c];if(isNaN(a))return null;if(!k)return{rows:[['Sonuç','Kur girin',1]],note:'Güncel kur alınamadı; kuru elle yazın.'};return{rows:[['Kullanılan kur',NFP().format(k)+' ₺'],['Sonuç',v.m==='d'?tl(a*k):NFP().format(a/k)+' '+v.c,1]]};}},
  /* TARİH VE SÜRE */
  {g:'Tarih ve süre',key:'gun',title:'İki tarih arası gün',abbr:'GÜN',lead:'İki tarih arasındaki takvim gününü ve iş gününü bulun.',
   fields:[F('b','Başlangıç',{type:'date',val:T0}),F('e','Bitiş',{type:'date',val:'2026-12-31'})],
@@ -2586,13 +2591,14 @@ function renderTool(it,p){
   /* yazarken sonuç alanı küçülüp büyüyerek sayfayı zıplatmasın: alan yalnızca büyür, kutudan çıkınca serbest kalır */
   function lockH(){[out,tbl].forEach(function(x){if(x&&x.offsetHeight)x.style.minHeight=Math.max(x.offsetHeight,parseFloat(x.style.minHeight)||0)+'px';});}
   p.addEventListener('focusout',function(){setTimeout(function(){if(!p.contains(document.activeElement)){[out,tbl].forEach(function(x){if(x)x.style.minHeight='';});}},200);});
-  function run(){if(p.contains(document.activeElement))lockH();var r=null;try{r=it.calc(state);}catch(e){r=null;}
+  function run(){if(p.contains(document.activeElement))lockH();var r=null,dp=2;try{dp=+(localStorage.getItem('ek-ondalik')||2);}catch(e){}if(!(dp>=2&&dp<=4))dp=2;RP=dp;NI=dp>2?new Intl.NumberFormat('tr-TR',{maximumFractionDigits:dp}):NI2;try{r=it.calc(state);}catch(e){r=null;}RP=2;NI=NI2;
     var hasDet=!!(r&&r.rows&&r.rows.some(function(x){return x[3];})),det=false;try{det=localStorage.getItem('ek-detay')==='1';}catch(e){}
     if(r&&hasDet){r=Object.assign({},r,{rows:r.rows.filter(function(x){return det||!x[3];})});}
     if(!r){out.innerHTML='<div class="res-h"><span class="res-ic" aria-hidden="true">=</span><div><b>Hesaplama sonucu</b></div></div>'+'<div class="row big"><span>Sonuç</span><b>—</b></div><p class="note">Değerleri kontrol edin.</p>';tbl.innerHTML='';return;}
-    out.innerHTML='<div class="res-h"><span class="res-ic" aria-hidden="true">=</span><div><b>Hesaplama sonucu</b></div>'+(hasDet?'<div class="det-t" role="group" aria-label="Görünüm"><button type="button" data-det="0" class="'+(det?'':'on')+'">Özet</button><button type="button" data-det="1" class="'+(det?'on':'')+'">Detaylı</button></div>':'')+'</div>'+r.rows.map(function(x){if(x[3]==='h')return '<div class="row sub"><span>'+esc(x[0])+'</span></div>';var L=String(x[1]).length>24;return '<div class="row'+(x[2]?' big':'')+(L?' long':'')+(x[3]==='d'?' drow':'')+'"><span>'+esc(x[0])+'</span><b>'+esc(x[1])+'</b>'+(L?'<button type="button" class="rcopy" data-copy="'+esc(x[1])+'">Kopyala</button>':'')+'</div>';}).join('')+(r.note?'<p class="note">'+esc(r.note)+'</p>':'')+(it.g==='Maaş ve SGK'?'<div class="prof-bar">'+(ekProfil.has()?'<span>Belgede: <b>'+esc([ekProfil.get().f.unvan,ekProfil.get().c.ad].filter(Boolean).join(' · '))+'</b></span><button type="button" data-a="prof">Değiştir</button>':'<button type="button" data-a="prof" class="prof-add"><span class="pa-ic" aria-hidden="true">＋</span><span class="pa-t"><b>Firma ve çalışan bilgisi ekle</b><small>Sonucu hesap pusulası olarak yazdırın, PDF / Word / Excel indirin ya da çalışana gönderin</small></span><span class="pa-go" aria-hidden="true">→</span></button>')+'</div>':'')+'<div class="acts"><button type="button" data-a="copy">Sonucu kopyala</button><button type="button" data-a="dl">İndir ▾</button><button type="button" data-a="share">Paylaş</button><button type="button" data-a="print">Yazdır</button></div>';
+    out.innerHTML='<div class="res-h"><span class="res-ic" aria-hidden="true">=</span><div><b>Hesaplama sonucu</b></div>'+'<div class="res-tg"><div class="det-t dec-t" role="group" aria-label="Virgülden sonra hane" title="Virgülden sonra kaç hane gösterilsin"><span>Hane</span>'+[2,3,4].map(function(n){return '<button type="button" data-dp="'+n+'" class="'+(n===dp?'on':'')+'">'+n+'</button>';}).join('')+'</div>'+(hasDet?'<div class="det-t" role="group" aria-label="Görünüm"><button type="button" data-det="0" class="'+(det?'':'on')+'">Özet</button><button type="button" data-det="1" class="'+(det?'on':'')+'">Detaylı</button></div>':'')+'</div></div>'+r.rows.map(function(x){if(x[3]==='h')return '<div class="row sub"><span>'+esc(x[0])+'</span></div>';var L=String(x[1]).length>24;return '<div class="row'+(x[2]?' big':'')+(L?' long':'')+(x[3]==='d'?' drow':'')+'"><span>'+esc(x[0])+'</span><b>'+esc(x[1])+'</b>'+(L?'<button type="button" class="rcopy" data-copy="'+esc(x[1])+'">Kopyala</button>':'')+'</div>';}).join('')+(r.note?'<p class="note">'+esc(r.note)+'</p>':'')+(it.g==='Maaş ve SGK'?'<div class="prof-bar">'+(ekProfil.has()?'<span>Belgede: <b>'+esc([ekProfil.get().f.unvan,ekProfil.get().c.ad].filter(Boolean).join(' · '))+'</b></span><button type="button" data-a="prof">Değiştir</button>':'<button type="button" data-a="prof" class="prof-add"><span class="pa-ic" aria-hidden="true">＋</span><span class="pa-t"><b>Firma ve çalışan bilgisi ekle</b><small>Sonucu hesap pusulası olarak yazdırın, PDF / Word / Excel indirin ya da çalışana gönderin</small></span><span class="pa-go" aria-hidden="true">→</span></button>')+'</div>':'')+'<div class="acts"><button type="button" data-a="copy">Sonucu kopyala</button><button type="button" data-a="dl">İndir ▾</button><button type="button" data-a="share">Paylaş</button><button type="button" data-a="print">Yazdır</button></div>';
     tbl.innerHTML=r.table?'<div class="tscroll"><table class="dtable"><thead><tr>'+r.table.head.map(function(h){return '<th>'+esc(h)+'</th>';}).join('')+'</tr></thead><tbody>'+r.table.body.map(function(row){return '<tr>'+row.map(function(c){return '<td>'+esc(c)+'</td>';}).join('')+'</tr>';}).join('')+'</tbody></table></div>':'';
     $$('[data-det]',out).forEach(function(bt){bt.onclick=function(){try{localStorage.setItem('ek-detay',bt.dataset.det);}catch(e){}run();};});
+    $$('[data-dp]',out).forEach(function(bt){bt.onclick=function(){try{localStorage.setItem('ek-ondalik',bt.dataset.dp);}catch(e){}run();};});
     var txt=it.title+'\n'+r.rows.map(function(x){return x[3]==='h'?'\n— '+x[0]+' —':x[0]+': '+x[1];}).join('\n')+'\n— erdalkarahan.com';
     $('[data-a=copy]',out).onclick=function(){copyText(txt,'Sonuç kopyalandı');};$$('.rcopy',out).forEach(function(b){b.onclick=function(){copyText(b.dataset.copy,'Kopyalandı');b.textContent='Kopyalandı ✓';setTimeout(function(){b.textContent='Kopyala';},1600);};});
     var usePP=function(){return it.g==='Maaş ve SGK'&&ekProfil.has();};
@@ -2606,7 +2612,7 @@ function renderTool(it,p){
     var before=v.slice(0,pos).replace(/[^0-9,]/g,'').length,raw=v.replace(/[^0-9,]/g,'');var ci=raw.indexOf(',');var ip=ci>-1?raw.slice(0,ci):raw,dp=ci>-1?','+raw.slice(ci+1).replace(/,/g,'').slice(0,2):'';
     ip=ip.replace(/^0+(?=\d)/,'');var g=ip.replace(/\B(?=(\d{3})+(?!\d))/g,'.')+dp;if(g===v)return;el.value=g;
     var c=0,np=0;while(np<g.length&&c<before){if(/[0-9,]/.test(g.charAt(np)))c++;np++;}try{el.setSelectionRange(np,np);}catch(x){}state[el.dataset.f]=g;run();});});
-  $$('[data-money]',p).forEach(function(el){el.addEventListener('blur',function(){var n=num(el.value);if(!isNaN(n)){el.value=NF.format(n);state[el.dataset.f]=el.value;run();}});});
+  $$('[data-money]',p).forEach(function(el){el.addEventListener('blur',function(){var n=num(el.value);if(!isNaN(n)){el.value=NFP().format(n);state[el.dataset.f]=el.value;run();}});});
   $$('[data-rows]',p).forEach(function(g){var k=g.dataset.rows;$$('input',g).forEach(function(el){['input','change'].forEach(function(ev){el.addEventListener(ev,function(){state[k][+el.dataset.r][+el.dataset.c]=el.value;run();});});});});
   $$('[data-seg]',p).forEach(function(sg){$$('button',sg).forEach(function(b){b.addEventListener('click',function(){$$('button',sg).forEach(function(x){x.setAttribute('aria-pressed',x===b);});state[sg.dataset.seg]=b.dataset.v;run();});});});
   run();
