@@ -2,6 +2,17 @@
  "guncelleme": "2026-11-06",
  "hap": [
   {
+   "id": "kira-artis-kasim-2026",
+   "tarih": "2026-11-03",
+   "etiket": "VERGİ",
+   "baslik": "Kasım kira yenilemelerinde azami artış %31,23",
+   "metin": "TÜİK’in 3 Kasım’da açıkladığı Ekim 2026 TÜFE verisine göre 12 aylık ortalama değişim %31,23 oldu. Kasım 2026’da yenilenen konut ve işyeri kira sözleşmelerinde artış bu oranı aşamaz. Aylık TÜFE %2,58, yıllık TÜFE %29,77 olarak açıklandı.",
+   "kaynak": {
+    "ad": "TÜİK · Tüketici Fiyat Endeksi, Ekim 2026",
+    "url": "https://www.tuik.gov.tr/"
+   }
+  },
+  {
    "id": "muhtasar-phb-2026-ekim",
    "tarih": "2026-11-02",
    "etiket": "Vergi · SGK",
