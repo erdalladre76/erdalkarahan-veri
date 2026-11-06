@@ -1409,6 +1409,23 @@ label.flash{animation:lblFlash 1s ease}@keyframes lblFlash{0%{color:var(--stamp)
 .hap-more{color:var(--stamp);font-weight:600}
 @media (max-width:640px){.hap-nav button{display:none}.hap-list{grid-auto-columns:86%}}
 body:not([data-v="duyurular"]) #hap .hap-all{display:none}
+/* ay-yıl seçici */
+.ym-in{flex:1;min-width:0;border:0;background:transparent;outline:0;padding:13px 0;font-size:16px}
+.ym-btn{flex:none;display:grid;place-items:center;width:34px;height:34px;margin-right:-6px;border:0;border-radius:9px;background:var(--stamp-soft);color:var(--stamp);cursor:pointer}
+.ym-btn:hover{background:var(--stamp);color:#fff}.ym-btn svg{width:18px;height:18px}
+.ym-pop{position:absolute;z-index:3000;width:292px;max-width:calc(100vw - 24px);background:var(--sheet);color:var(--ink);border:1px solid var(--rule);border-radius:16px;box-shadow:0 18px 50px rgba(13,21,40,.22);padding:12px;font-family:var(--f-body)}
+.ym-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.ym-hd b{font-family:var(--f-display);font-size:19px;letter-spacing:-.01em}
+.ym-hd button{width:36px;height:36px;border:1px solid var(--rule);border-radius:10px;background:var(--paper);font-size:20px;line-height:1;cursor:pointer;color:var(--ink)}
+.ym-hd button:hover{border-color:var(--stamp-2);color:var(--stamp)}
+.ym-g{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.ym-g button{padding:11px 0;border:1px solid transparent;border-radius:10px;background:var(--paper);font-size:14.5px;font-weight:500;cursor:pointer;color:var(--ink)}
+.ym-g button:hover{border-color:var(--stamp-2);color:var(--stamp)}
+.ym-g button.now{border-color:var(--stamp-2)}
+.ym-g button.on{background:linear-gradient(135deg,var(--stamp),var(--stamp-2));color:#fff;border-color:transparent;font-weight:700}
+.ym-ft{display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-size:12.5px;color:var(--ink-2)}
+.pt-row .ym-in{flex:none;width:150px;border:1.5px solid var(--rule);border-radius:9px;padding:6px 10px;margin-left:6px;font-size:15px;background:var(--sheet)}.pt-row .ym-btn{width:30px;height:30px;margin:0 0 0 4px;vertical-align:middle}
+.ym-ft button{border:0;background:none;color:var(--stamp);font-weight:600;font-size:13.5px;cursor:pointer;padding:6px 4px}
 /* alt bar v2: geniş, iki satır tarih, kayan piyasa şeridi */
 @media (min-width:641px){.tbar{width:min(1560px,calc(100% - 24px))!important}}
 @media (min-width:901px){.tbar{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important}.tbar .tb-info{padding-left:8px}}
@@ -2504,7 +2521,7 @@ function renderTool(it,p){
     if(f.type==='seg')return '<div class="f"><label>'+esc(f.label)+'</label>'+seg(f.id,f.opts,f.val)+(f.hint?'<p class="fhint">'+esc(f.hint)+'</p>':'')+'</div>';
     if(f.type==='rows')return '<div class="f"><label>'+esc(f.label)+'</label><div class="rgrid" data-rows="'+f.id+'">'+f.val.map(function(r,ri){return '<div class="rrow">'+f.cols.map(function(c,ci){return '<div class="inp"><input aria-label="'+esc(c[0])+' '+(ri+1)+'" data-r="'+ri+'" data-c="'+ci+'" '+(c[1]==='date'?'type="date"':'inputmode="decimal" placeholder="'+esc(c[0])+'"')+' value="'+esc(r[ci])+'">'+(c[2]?'<span class="sfx">'+c[2]+'</span>':'')+'</div>';}).join('')+'</div>';}).join('')+'</div></div>';
     if(f.type==='select')return '<div class="f"><label for="'+id+'">'+esc(f.label)+'</label><div class="inp"><select id="'+id+'" data-f="'+f.id+'">'+f.opts.map(function(o){return '<option value="'+o[0]+'"'+(o[0]===f.val?' selected':'')+'>'+esc(o[1])+'</option>';}).join('')+'</select></div>'+(f.hint?'<p class="fhint">'+esc(f.hint)+'</p>':'')+'</div>';
-    return '<div class="f"><label for="'+id+'">'+esc(f.label)+'</label><div class="inp"><input id="'+id+'" data-f="'+f.id+'"'+(f.sfx==='₺'?' data-money="1"':'')+' '+(f.type==='date'?'type="date"':f.type==='text'?'type="text"':'inputmode="decimal"')+' autocomplete="off" placeholder="'+esc(f.ph)+'" value="'+esc(f.val)+'">'+(f.sfx?'<span class="sfx">'+esc(f.sfx)+'</span>':'')+'</div>'+(f.hint?'<p class="fhint">'+esc(f.hint)+'</p>':'')+'</div>';}
+    return '<div class="f"><label for="'+id+'">'+esc(f.label)+'</label><div class="inp"><input id="'+id+'" data-f="'+f.id+'"'+(f.sfx==='₺'?' data-money="1"':'')+' '+(f.type==='date'?'type="date"':f.type==='month'?'type="month"':f.type==='text'?'type="text"':'inputmode="decimal"')+' autocomplete="off" placeholder="'+esc(f.ph)+'" value="'+esc(f.val)+'">'+(f.sfx?'<span class="sfx">'+esc(f.sfx)+'</span>':'')+'</div>'+(f.hint?'<p class="fhint">'+esc(f.hint)+'</p>':'')+'</div>';}
   p.innerHTML='<h3>'+esc(it.title)+'</h3><p class="lead">'+esc(it.lead)+'</p><div class="tool"><div class="fields"><div class="fld-h"><span class="res-ic" aria-hidden="true">1</span><b>Bilgileri girin</b></div>'+it.fields.map(fld).join('')+'</div><div class="result" aria-live="polite"></div></div><div class="ttable"></div>';
   var out=$('.result',p),tbl=$('.ttable',p);
   function run(){var r=null;try{r=it.calc(state);}catch(e){r=null;}
@@ -4321,6 +4338,43 @@ document.addEventListener('viewchange',function(){setTimeout(imLabel,60);});wind
   box.addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.classList.contains('hap-c'))e.target.classList.toggle('open');});
   var pr=$('.hap-pr'),nx=$('.hap-nx');function step(d){var c=box.querySelector('.hap-c');box.scrollBy({left:d*((c?c.offsetWidth:300)+14),behavior:'smooth'});}if(pr)pr.onclick=function(){step(-1);};if(nx)nx.onclick=function(){step(1);};
 })();
+/* ---------- ay-yıl seçici: elle yazılabilir (11.2026, 2026-11, kasım 2026) + takvimden seçilir */
+(function(){var AK=['oca','şub','mar','nis','may','haz','tem','ağu','eyl','eki','kas','ara'],KS=['Oca','Şub','Mar','Nis','May','Haz','Tem','Ağu','Eyl','Eki','Kas','Ara'];
+var ICO='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 3v3M16 3v3"/></svg>';
+function pad(n){return (n<10?'0':'')+n;}
+function show(ym){if(!/^\d{4}-\d{2}$/.test(ym||''))return '';var p=ym.split('-');return AYADI[+p[1]-1]+' '+p[0];}
+function parse(v,loose){v=String(v||'').toLocaleLowerCase('tr-TR').trim().replace(/\s+/g,' ');if(!v)return '';var m,y,mo;
+ if((m=v.match(/^(\d{4})\s*[-./ ]\s*(\d{1,2})$/))){y=+m[1];mo=+m[2];}
+ else if((m=v.match(/^(\d{1,2})\s*[-./ ]?\s*(\d{4})$/))){mo=+m[1];y=+m[2];}
+ else if(loose&&(m=v.match(/^(\d{1,2})\s*[-./ ]\s*(\d{2})$/))){mo=+m[1];y=2000+ +m[2];}
+ else{var i=-1;for(var k=0;k<12;k++){if(v.indexOf(AK[k])===0||v.indexOf(AYADI[k].toLocaleLowerCase('tr-TR'))===0){i=k;break;}}var yy=v.match(/(\d{4})$/)||(loose&&v.match(/\b(\d{2})$/));if(i>-1&&yy){mo=i+1;y=yy[1].length===2?2000+ +yy[1]:+yy[1];}}
+ if(!(mo>=1&&mo<=12&&y>=1900&&y<=2100))return null;return y+'-'+pad(mo);}
+var pop=null,cur=null,py=0;
+function close(){if(pop){pop.remove();pop=null;cur=null;}}
+function place(){if(!pop||!cur)return;var r=cur.box.getBoundingClientRect(),w=pop.offsetWidth,x=Math.min(Math.max(8,r.right-w),document.documentElement.clientWidth-w-8),y=r.bottom+6;if(y+pop.offsetHeight>innerHeight-70&&r.top-pop.offsetHeight-6>8)y=r.top-pop.offsetHeight-6;pop.style.left=(x+scrollX)+'px';pop.style.top=(y+scrollY)+'px';}
+function draw(){var val=cur.h.value,d=new Date(),now=d.getFullYear()+'-'+pad(d.getMonth()+1),h='<div class="ym-hd"><button type="button" data-y="-1" aria-label="Önceki yıl">‹</button><b>'+py+'</b><button type="button" data-y="1" aria-label="Sonraki yıl">›</button></div><div class="ym-g">';
+ for(var k=0;k<12;k++){var ym=py+'-'+pad(k+1);h+='<button type="button" data-m="'+ym+'" class="'+(ym===val?'on':'')+(ym===now?' now':'')+'" aria-label="'+AYADI[k]+' '+py+'">'+KS[k]+'</button>';}
+ pop.innerHTML=h+'</div><div class="ym-ft"><span>Elle de yazabilirsiniz: 11.2026</span><button type="button" data-m="'+now+'">Bu ay</button></div>';}
+function set(o,ym){o.h.value=ym;o.v.value=show(ym);['input','change'].forEach(function(t){o.h.dispatchEvent(new Event(t,{bubbles:true}));});}
+function open(o){if(cur===o&&pop){close();return;}close();cur=o;var v=o.h.value;py=/^\d{4}/.test(v)?+v.slice(0,4):new Date().getFullYear();pop=document.createElement('div');pop.className='ym-pop';pop.setAttribute('role','dialog');pop.setAttribute('aria-label','Ay ve yıl seçin');
+ pop.addEventListener('pointerdown',function(e){e.preventDefault();});
+ pop.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;if(b.dataset.y){py+=+b.dataset.y;draw();return;}if(b.dataset.m){var oo=cur;set(oo,b.dataset.m);close();oo.v.focus();}});
+ document.body.appendChild(pop);draw();place();}
+function enh(h){if(h.dataset.ymx)return;h.dataset.ymx='1';var box=h.closest('.inp')||h.parentNode,v=document.createElement('input'),b=document.createElement('button');
+ v.type='text';v.className='ym-in';v.setAttribute('inputmode','text');v.autocomplete='off';v.placeholder='AA.YYYY veya ay adı';if(h.id){v.id=h.id;h.id=h.id+'-ym';}if(h.getAttribute('aria-label'))v.setAttribute('aria-label',h.getAttribute('aria-label'));
+ v.value=show(h.value);b.type='button';b.className='ym-btn';b.innerHTML=ICO;b.setAttribute('aria-label','Takvimden ay seç');b.tabIndex=-1;
+ h.type='hidden';h.parentNode.insertBefore(v,h);h.parentNode.insertBefore(b,h.nextSibling);var o={h:h,v:v,box:box};
+ b.addEventListener('pointerdown',function(e){e.preventDefault();});b.addEventListener('click',function(){open(o);v.focus();});
+ v.addEventListener('click',function(){if(cur!==o)open(o);});
+ v.addEventListener('input',function(e){var t=v.value;if(/^[\d.]*$/.test(t)&&!(e.inputType||'').startsWith('delete')){var dg=t.replace(/\D/g,'').slice(0,6);if(dg.length>=2&&!/^\d{4}/.test(t)&&+dg.slice(0,2)<=12){t=dg.slice(0,2)+'.'+dg.slice(2);}else if(dg.length===1&&+dg>1){t='0'+dg+'.';}if(t!==v.value)v.value=t;}
+  var ym=parse(v.value,false);if(ym&&ym!==h.value){h.value=ym;['input','change'].forEach(function(x){h.dispatchEvent(new Event(x,{bubbles:true}));});if(cur===o){py=+ym.slice(0,4);draw();}}else if(v.value===''&&h.value){h.value='';['input','change'].forEach(function(x){h.dispatchEvent(new Event(x,{bubbles:true}));});}});
+ v.addEventListener('blur',function(){setTimeout(function(){if(document.activeElement!==v&&cur===o)close();},120);var ym=parse(v.value,true);if(ym){if(ym!==h.value)set(o,ym);else v.value=show(ym);}else if(v.value.trim()==='')v.value='';else v.value=show(h.value);});
+ v.addEventListener('keydown',function(e){if(e.key==='Escape'&&cur===o){close();e.stopPropagation();}if(e.key==='ArrowDown'&&cur!==o){e.preventDefault();open(o);}if(e.key==='Enter'&&cur===o)close();});}
+function scan(r){[].forEach.call((r||document).querySelectorAll('input[type=month]'),enh);}
+new MutationObserver(function(ms){for(var i=0;i<ms.length;i++)if(ms[i].addedNodes.length){scan();break;}}).observe(document.body,{childList:true,subtree:true});scan();
+document.addEventListener('pointerdown',function(e){if(pop&&!pop.contains(e.target)&&!(cur&&cur.box.contains(e.target)))close();});
+addEventListener('resize',close);addEventListener('scroll',function(){place();},{passive:true});
+window.ymShow=show;window.ymParse=parse;})();
 /* ---------- Enter = sonraki alan: formlarda Enter'a basınca imleç alttaki kutuya geçer; son kutuda klavye kapanır */
 (function(){var SEL='input:not([type=hidden]):not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]):not([type=file]):not([disabled]):not([readonly]),select:not([disabled]),textarea:not([disabled]):not([readonly])';
 function skip(el){var t=(el.type||'').toLowerCase();return t==='search'||el.getAttribute('enterkeyhint')==='search'||el.getAttribute('role')==='combobox'||el.hasAttribute('data-noenter');}
