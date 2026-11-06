@@ -1,0 +1,6 @@
+# Sayfa ve veri dosyaları her açılışta sunucudan kontrol edilsin (güncellemeler hemen görünsün)
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|php|json|webmanifest|js|xml|txt)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
