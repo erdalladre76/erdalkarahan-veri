@@ -1385,6 +1385,30 @@ html[data-theme="light"] .subnav{background:linear-gradient(180deg,#141a33 0%,#0
 .ckeys button.down{transform:scale(.94);filter:brightness(1.25)}
 .fcalc,.calcbox{touch-action:manipulation}
 label.flash{animation:lblFlash 1s ease}@keyframes lblFlash{0%{color:var(--stamp);background:var(--stamp-soft)}100%{background:transparent}}
+/* hap bilgi şeridi */
+.hap-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:12px}
+.hap-head h2{font-size:clamp(20px,2.2vw,26px);margin:4px 0 0}
+.hap-eb{display:inline-flex;align-items:center;gap:8px;font:600 12px/1 var(--f-mono,monospace);letter-spacing:.16em;text-transform:uppercase;color:var(--stamp)}
+.hap-dot{width:9px;height:9px;border-radius:50%;background:#e5484d;box-shadow:0 0 0 0 rgba(229,72,77,.6);animation:hapP 1.8s infinite}
+@keyframes hapP{70%{box-shadow:0 0 0 9px rgba(229,72,77,0)}100%{box-shadow:0 0 0 0 rgba(229,72,77,0)}}
+.hap-nav{display:flex;align-items:center;gap:6px}.hap-nav button{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--sheet);color:var(--ink);font-size:20px;cursor:pointer}
+.hap-list{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(280px,1fr);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 12px;scrollbar-width:thin}
+@media (min-width:1100px){.hap-list{grid-auto-columns:calc((100% - 28px)/3)}}
+.hap-c{scroll-snap-align:start;position:relative;display:flex;flex-direction:column;gap:8px;padding:16px 16px 14px;border-radius:18px;background:var(--sheet);border:1px solid var(--line);box-shadow:0 10px 26px -18px rgba(20,12,51,.35);cursor:pointer;transition:border-color .2s,transform .2s}
+.hap-c:hover{border-color:color-mix(in srgb,var(--stamp) 45%,transparent);transform:translateY(-1px)}
+.hap-c.imp{border-left:4px solid #e5484d}
+.hap-m{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--ink-2)}
+.hap-m .tag{font-size:11px}
+.hap-new{background:#e5484d;color:#fff;border-radius:6px;padding:2px 7px;font:700 10.5px/1.3 var(--f-body);letter-spacing:.06em}
+.hap-c h3{font-size:16px;line-height:1.3;margin:0}
+.hap-c p{margin:0;font-size:14px;line-height:1.55;color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.hap-c.open p{-webkit-line-clamp:unset;display:block}
+.hap-f{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:13px}
+.hap-f a{color:var(--stamp);font-weight:600;text-decoration:none}
+.hap-f button{border:0;background:transparent;color:var(--ink-2);font:600 13px var(--f-body);cursor:pointer;padding:6px 4px}
+.hap-more{color:var(--stamp);font-weight:600}
+@media (max-width:640px){.hap-nav button{display:none}.hap-list{grid-auto-columns:86%}}
+body:not([data-v="duyurular"]) #hap .hap-all{display:none}
 /* alt bar v2: geniş, iki satır tarih, kayan piyasa şeridi */
 @media (min-width:641px){.tbar{width:min(1560px,calc(100% - 24px))!important}}
 @media (min-width:901px){.tbar{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important}.tbar .tb-info{padding-left:8px}}
@@ -1537,6 +1561,12 @@ label.flash{animation:lblFlash 1s ease}@keyframes lblFlash{0%{color:var(--stamp)
   </section>
 
   <!-- HOME: finance + popular + news panel -->
+  <section class="block hap-band" id="hap" data-view="home duyurular" style="padding-top:22px;padding-bottom:6px">
+    <div class="wrap">
+      <div class="hap-head"><div><span class="hap-eb"><i class="hap-dot" aria-hidden="true"></i>Hap bilgi</span><h2>Güncel gelişmeler</h2></div><div class="hap-nav"><button type="button" class="hap-pr" aria-label="Önceki">‹</button><button type="button" class="hap-nx" aria-label="Sonraki">›</button><a class="more" href="#duyurular">Tümü →</a></div></div>
+      <div class="hap-list" id="hap-list" role="list"></div>
+    </div>
+  </section>
   <section class="block" id="bugun" data-view="home" style="padding-top:28px">
     <div class="wrap home-grid">
       <div class="home-main">
@@ -4278,6 +4308,19 @@ document.addEventListener('click',function(e){var b=e.target.closest('[data-seg=
   var v=num(inp.value),to=b.dataset.v==='brut'?'33.030,00':'28.075,50';var sw=isNaN(v)||Math.abs(v-33030)<0.01||Math.abs(v-28075.5)<0.01||!inp.value.trim();
   setTimeout(function(){if(sw){inp.value=to;inp.dispatchEvent(new Event('input',{bubbles:true}));inp.dispatchEvent(new Event('blur'));}imLabel();var l=document.querySelector('label[for="f-iscimaliyet-a"]');if(l){l.classList.remove('flash');void l.offsetWidth;l.classList.add('flash');}},0);},true);
 document.addEventListener('viewchange',function(){setTimeout(imLabel,60);});window.addEventListener('hashchange',function(){setTimeout(imLabel,80);});setTimeout(imLabel,300);
+
+/* ---------- hap bilgi: kısa güncel gelişmeler (GitHub'daki hapbilgi.json'dan) ---------- */
+(function(){var box=$('#hap-list');if(!box)return;var SEED={"guncelleme": "2026-11-06", "hap": [{"id": "muhtasar-phb-2026-ekim", "tarih": "2026-11-02", "etiket": "Vergi · SGK", "onemli": true, "baslik": "Muhtasar ve prim hizmet beyannamesinde değişiklik", "metin": "2026/Ekim vergilendirme döneminden itibaren (1 Kasım 2026’dan sonra verilecek beyannameler) muhtasar ve prim hizmet beyannamesinde değişiklik yapıldı. Beyannameyi e-Beyanname sisteminden verenlerin Dijital Vergi Dairesi’nde “Gerekli Programlar” menüsündeki Beyanname Düzenleme Programı’nı (BDP) güncellemesi gerekiyor.", "kaynak": {"ad": "GİB Gerekli Programlar", "url": "https://dijital.gib.gov.tr/gerekliProgramlar"}}, {"id": "sgk-2026-22", "tarih": "2026-10-19", "etiket": "SGK", "baslik": "SGK 2026/22 Genelgesi: tutanaklarla tespit edilen çalışmalar", "metin": "SGK, kamu görevlilerinin tutanaklarına (ör. trafik cezası tutanağı) dayanan kayıt dışı çalışma tespitlerinde hizmet süresinin nasıl kazandırılacağını 19.10.2026 tarihli 2026/22 sayılı Genelge ile yeniden düzenledi.", "kaynak": {"ad": "Ayrıntılı yazı", "url": "#yz-sgk-2026-22-genelgesi-trafik-tutanagi-fiili-calisma-tespiti"}}, {"id": "asgari-sermaye-2027", "tarih": "2026-10-17", "etiket": "Şirketler", "baslik": "Asgari sermayeye uyum süresi 31.12.2027’ye uzatıldı", "metin": "Anonim ve limited şirketlerin sermayelerini yeni asgari tutarlara (anonim şirkette 250.000 TL, limited şirkette 50.000 TL) yükseltme süresi 17 Ekim 2026 tarihli Resmî Gazete’de yayımlanan Tebliğ ile 31 Aralık 2027’ye uzatıldı.", "kaynak": {"ad": "Ayrıntılı yazı", "url": "#yz-asgari-sermaye-uyum-suresi-31-aralik-2027-uzatildi"}}, {"id": "kdv-istanbul-e-beyan", "tarih": "2026-10-14", "etiket": "Vergi", "baslik": "İstanbul’da KDV beyannameleri yeni e-Beyan’dan", "metin": "İstanbul’daki mükelleflerin KDV beyannameleri Ekim/2026 döneminden itibaren yeni e-Beyan sistemi üzerinden alınacak. Önceki dönemlere ait düzeltme beyannameleri ve eski sistemde kalan işlemler için geçiş duyurusunu takip edin.", "kaynak": {"ad": "Ayrıntılı yazı", "url": "#yz-istanbulda-kdv-beyannamesi-yeni-e-beyan-ekim-2026"}}, {"id": "e-tebligat-596", "tarih": "2026-10-11", "etiket": "Vergi", "onemli": true, "baslik": "e-Tebligat zorunluluğu: son başvuru 30 Kasım 2026", "metin": "596 sıra no’lu VUK Genel Tebliği ile e-Tebligat zorunluluğu genişletildi. Kapsama girenlerin 30 Kasım 2026’ya kadar e-Tebligat başvurusunu yapması gerekiyor; başvuru Dijital Vergi Dairesi üzerinden yapılabiliyor.", "kaynak": {"ad": "Dijital Vergi Dairesi", "url": "https://dijital.gib.gov.tr/"}}, {"id": "yemek-300", "tarih": "2026-04-17", "etiket": "Bordro", "baslik": "Yemek bedelinde günlük 300 TL: vergi ve SGK eşitlendi", "metin": "7577 sayılı Kanun ile 17.04.2026’dan itibaren işyeri dışında sağlanan yemek bedelinde SGK prim istisnası da günlük 300 TL’ye çıkarıldı ve gelir vergisi istisnasıyla aynı tutara geldi.", "kaynak": {"ad": "Ayrıntılı yazı", "url": "#yz-yemek-bedeli-istisnasi-300-tl-gelir-vergisi-sgk-2026"}}]};
+  function d2(t){var p=String(t).split('-');return p.length===3?p[2]+'.'+p[1]+'.'+p[0]:t;}
+  function draw(j){var L=(j&&j.hap||[]).slice().sort(function(a,b){return a.tarih<b.tarih?1:-1;}).slice(0,12),now=new Date();now.setHours(0,0,0,0);
+    box.innerHTML=L.map(function(h){var g=Math.round((now-new Date(h.tarih+'T00:00:00'))/864e5),k=h.kaynak||{},ext=/^https?:/.test(k.url||'');
+      return '<article class="hap-c'+(h.onemli?' imp':'')+'" role="listitem" tabindex="0" data-id="'+esc(h.id)+'"><div class="hap-m"><span class="tag">'+esc(h.etiket||'Mevzuat')+'</span><span>'+d2(h.tarih)+'</span>'+(g>=0&&g<=3?'<span class="hap-new">YENİ</span>':'')+'</div><h3>'+esc(h.baslik)+'</h3><p>'+esc(h.metin)+'</p><div class="hap-f">'+(k.url?'<a href="'+esc(k.url)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+esc(k.ad||'Kaynak')+(ext?' ↗':' →')+'</a>':'<span class="hap-more">Devamı</span>')+'<button type="button" data-hs aria-label="Paylaş">Paylaş</button></div></article>';}).join('');}
+  draw(SEED);
+  fetch('https://raw.githubusercontent.com/erdalladre76/erdalkarahan-veri/main/hapbilgi.json?t='+Math.floor(Date.now()/6e5)).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(j){if(j&&j.hap&&j.hap.length){SEED=j;draw(j);}}).catch(function(){});
+  box.addEventListener('click',function(e){var c=e.target.closest('.hap-c');if(!c)return;if(e.target.closest('[data-hs]')){var h=(SEED.hap||[]).filter(function(x){return x.id===c.dataset.id;})[0];if(h&&window.openShare)openShare(h.baslik,h.baslik+'\n\n'+h.metin,location.origin+'/#hap');return;}if(e.target.closest('a'))return;c.classList.toggle('open');});
+  box.addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.classList.contains('hap-c'))e.target.classList.toggle('open');});
+  var pr=$('.hap-pr'),nx=$('.hap-nx');function step(d){var c=box.querySelector('.hap-c');box.scrollBy({left:d*((c?c.offsetWidth:300)+14),behavior:'smooth'});}if(pr)pr.onclick=function(){step(-1);};if(nx)nx.onclick=function(){step(1);};
+})();
 /* ---------- başa dön ---------- */
 (function(){var b=$('#to-top');function chk(){b.classList.toggle('off',scrollY<300);}window.addEventListener('scroll',chk,{passive:true});chk();b.addEventListener('click',function(){window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});})();
 
