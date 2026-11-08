@@ -1,0 +1,2995 @@
+{
+ "guncelleme": "2026-11-08",
+ "baslik": "Şirket Amaç ve Konu Maddeleri",
+ "giris": [
+  "Limited şirkette TTK 576, anonim şirkette TTK 339 esas sözleşmede işletme konusunun “esaslı noktaları belirtilmiş ve açıkça tanımlanmış” olarak yer almasını istiyor. “Her türlü ticari faaliyet” gibi tek satır yetmez; sözleşmeyi okuyan, şirketin ne iş yaptığını anlamalı.",
+  "Aşağıda sektör sektör hazır bentler var. İşinize uyan sektörü açın, ihtiyacınız olan bentleri işaretleyin, gerekirse başka sektörlerden de bent ekleyin. Seçtikleriniz alttaki kutuda sırayla birleşir; sonuna bütün şirketlerde kullanılan genel yetkiler eklenir. Metni kopyalayıp MERSİS’te esas sözleşmenin amaç ve konu maddesine yapıştırabilir ya da Word olarak indirebilirsiniz.",
+  "NACE kodları 4 haneli sınıf düzeyinde, Türkiye’de 01.01.2025’ten beri kullanılan NACE Rev.2.1’e göre verildi. MERSİS ve vergi dairesinde 6 haneli alt sınıf seçilir; kodu MERSİS’teki güncel listeden, işinizi en iyi anlatan açıklamaya bakarak seçin."
+ ],
+ "kurallar": [
+  "Asıl işinizi ilk bende yazın. MERSİS’te seçilen ana faaliyet kodu vergi dairesine de aktarılır; ilk bent ile ana NACE kodu birbirini tutmalı.",
+  "Konuyu makul genişlikte tutun. Sonradan konu eklemek esas sözleşme değişikliğidir: ortaklar kurulu / genel kurul kararı, noter, tescil ve ilan masrafı çıkar. Yakın ve ileride yapabileceğiniz işleri baştan ekleyin.",
+  "Ama birbiriyle hiç ilgisi olmayan onlarca sektörü tek sözleşmeye doldurmayın. Banka hesap açılışı, teşvik ve izin başvurularında “gerçek faaliyet” sorulur; dağınık konu açıklama ister.",
+  "İzne ve özel şarta bağlı faaliyetleri (aşağıdaki tabloya bakın) gerekli izin, şirket türü ve sermaye şartını sağlamadan yazmayın; sicil müdürlüğü ilgili kurumun uygun görüşünü ister, yoksa tescil yapılmaz.",
+  "Şirket konusunun dışında kalan bir işlemde bulunsa da işlem kural olarak şirketi bağlar (AŞ için TTK 371, limited için TTK 629 atfı). Konunun önemi daha çok ortaklar arası ilişki, yönetimin sorumluluğu, teşvik ve izinler bakımındandır.",
+  "İştirak, menkul kıymet ve bağış bentlerine sermaye piyasası mevzuatı kaydını ekleyin (“yatırım hizmetleri ve faaliyetleri niteliğinde olmamak kaydıyla”). Aksi hâlde sicil müdürlüğü düzeltme isteyebilir.",
+  "Ticaret unvanında geçen faaliyet ibaresi (ör. “İnşaat”, “Gıda”, “Yazılım”) amaç ve konuda mutlaka yer almalı.",
+  "Asgari sermaye 2026 itibarıyla limited şirkette 50.000 TL, anonim şirkette 250.000 TL, kayıtlı sermaye sistemindeki halka açık olmayan anonim şirkette başlangıç sermayesi 500.000 TL (7887 sayılı CB Kararı). Bazı izinli faaliyetlerde çok daha yüksek sermaye aranır.",
+  "Başvurudan önce kuruluşu yapacağınız ticaret sicili müdürlüğünün (İstanbul’da İTO) güncel örnek sözleşmesine ve istediği eklere bakın; müdürlükler arasında küçük uygulama farkları olabiliyor."
+ ],
+ "izinli": [
+  [
+   "Bankacılık, finansal kiralama, faktoring, finansman, varlık yönetimi",
+   "BDDK kuruluş ve faaliyet izni",
+   "Anonim şirket ve yüksek asgari sermaye; konu yalnızca bu faaliyetle sınırlı tutulur."
+  ],
+  [
+   "Ödeme kuruluşu, elektronik para kuruluşu",
+   "TCMB faaliyet izni",
+   "Anonim şirket; sermaye ve ortaklık şartları var."
+  ],
+  [
+   "Yetkili müessese (döviz bürosu), kıymetli maden aracılığı",
+   "Hazine ve Maliye Bakanlığı / TCMB mevzuatı",
+   "Anonim şirket ve asgari sermaye şartı."
+  ],
+  [
+   "Aracı kurum, portföy yönetimi, kripto varlık hizmet sağlayıcı",
+   "SPK izni",
+   "Anonim şirket; konu bu faaliyetlerle sınırlı."
+  ],
+  [
+   "Sigorta, reasürans; sigorta ve reasürans brokerliği",
+   "Hazine ve Maliye Bakanlığı / SEDDK",
+   "Anonim şirket (sigorta acenteliği farklıdır; levhaya kayıt gerekir)."
+  ],
+  [
+   "Bağımsız denetim kuruluşu",
+   "Kamu Gözetimi Kurumu (KGK) yetkisi",
+   "Ortaklık ve yönetim şartları var."
+  ],
+  [
+   "Özel güvenlik şirketi",
+   "İçişleri Bakanlığı faaliyet izni (5188 s. Kanun)",
+   "Şirket yalnızca özel güvenlik alanında faaliyet gösterir; başka konu eklenemez."
+  ],
+  [
+   "Radyo, televizyon ve isteğe bağlı yayın",
+   "RTÜK yayın lisansı / izni",
+   "Anonim şirket ve ortaklık sınırlamaları."
+  ],
+  [
+   "Elektrik üretimi, ticareti, doğal gaz, akaryakıt, LPG dağıtım ve istasyonları",
+   "EPDK lisansı",
+   "Lisans türüne göre AŞ veya limited, sermaye ve pay şartları; bayilik için de lisans gerekir."
+  ],
+  [
+   "Elektronik haberleşme (internet servis sağlayıcı, GSM sanal operatör vb.)",
+   "BTK yetkilendirmesi",
+   "Yetki türüne göre şirket türü ve sermaye şartları."
+  ],
+  [
+   "Kargo, kurye ve posta hizmeti",
+   "BTK posta hizmet sağlayıcı yetkisi",
+   "Asgari sermaye ve teminat şartı."
+  ],
+  [
+   "Karayolu yük ve yolcu taşımacılığı, taşıma işleri organizatörlüğü",
+   "Ulaştırma ve Altyapı Bakanlığı yetki belgesi (C, K, L, N, R, D, B türleri)",
+   "Belge türüne göre öz mal, taşıt ve sermaye şartları."
+  ],
+  [
+   "Seyahat acentası",
+   "Kültür ve Turizm Bakanlığı belgesi, TÜRSAB üyeliği",
+   "Konu ve unvanda “seyahat acentası” ibaresi; belge alınmadan faaliyet yapılamaz."
+  ],
+  [
+   "Özel okul, kurs, etüt merkezi, sürücü kursu",
+   "Millî Eğitim Bakanlığı kurum açma izni",
+   "Kurucu ve bina şartları."
+  ],
+  [
+   "Özel hastane, tıp merkezi, poliklinik, laboratuvar, ağız ve diş sağlığı merkezi",
+   "Sağlık Bakanlığı ruhsatı",
+   "Mesul müdür ve kadro şartları. Muayenehane ve eczane şirket olarak açılamaz."
+  ],
+  [
+   "Kreş ve gündüz bakımevi, huzurevi, bakım merkezi",
+   "Aile ve Sosyal Hizmetler Bakanlığı / MEB izni",
+   "Bina ve personel şartları."
+  ],
+  [
+   "Özel istihdam bürosu, geçici iş ilişkisi",
+   "İŞKUR izni",
+   "Geçici iş ilişkisi kuracak büro için ayrıca teminat ve şartlar."
+  ],
+  [
+   "İş sağlığı ve güvenliği (OSGB), İSG eğitimi",
+   "Çalışma ve Sosyal Güvenlik Bakanlığı yetkisi",
+   "Kadro ve mekân şartları."
+  ],
+  [
+   "Madencilik",
+   "MAPEG ruhsatı",
+   "Ruhsat sahibi olabilmek için şirket konusunda madencilik yazılı olmalı."
+  ],
+  [
+   "Alkollü içki, tütün mamulleri üretimi ve toptan satışı",
+   "Tarım ve Orman Bakanlığı (eski TAPDK) izni",
+   "Perakende satış için ayrıca satış belgesi."
+  ],
+  [
+   "İlaç, tıbbi cihaz üretimi ve satışı, kozmetik üretimi",
+   "TİTCK izin ve kayıtları",
+   "Sorumlu müdür ve tesis şartları."
+  ],
+  [
+   "Gıda üretimi ve satışı, yem, veteriner ürünleri",
+   "Tarım ve Orman Bakanlığı işletme kayıt veya onay belgesi",
+   "Faaliyete başlamadan önce kayıt gerekir."
+  ],
+  [
+   "Taşınmaz ticareti (emlak danışmanlığı)",
+   "Ticaret Bakanlığı taşınmaz ticareti yetki belgesi",
+   "Mesleki yeterlilik belgesi şartı."
+  ],
+  [
+   "İkinci el motorlu kara taşıtı ticareti",
+   "Ticaret Bakanlığı yetki belgesi",
+   "İşyeri ve mesleki yeterlilik şartları."
+  ],
+  [
+   "Silah, mühimmat, patlayıcı madde üretimi ve ticareti",
+   "MSB / İçişleri Bakanlığı izinleri",
+   "Ayrıntılı güvenlik soruşturması ve özel şartlar."
+  ],
+  [
+   "Gümrük müşavirliği",
+   "Ticaret Bakanlığı izni",
+   "Gümrük müşavirliği gerçek kişilerce yapılır; şirket ancak mevzuattaki şartlarla kurulabilir."
+  ]
+ ],
+ "kategoriler": [
+  [
+   "tarim",
+   "Tarım, hayvancılık ve gıda"
+  ],
+  [
+   "sanayi",
+   "Sanayi ve imalat"
+  ],
+  [
+   "insaat",
+   "İnşaat ve gayrimenkul"
+  ],
+  [
+   "ticaret",
+   "Ticaret ve e-ticaret"
+  ],
+  [
+   "turizm",
+   "Turizm, yeme-içme ve etkinlik"
+  ],
+  [
+   "lojistik",
+   "Ulaştırma ve lojistik"
+  ],
+  [
+   "bilisim",
+   "Bilişim, medya ve reklam"
+  ],
+  [
+   "profesyonel",
+   "Danışmanlık ve profesyonel hizmetler"
+  ],
+  [
+   "egitim",
+   "Eğitim, sağlık ve sosyal hizmet"
+  ],
+  [
+   "hizmet",
+   "Kişisel ve işletme hizmetleri"
+  ],
+  [
+   "enerji",
+   "Enerji, çevre ve madencilik"
+  ],
+  [
+   "yatirim",
+   "Holding, yatırım ve finans"
+  ]
+ ],
+ "sektorler": [
+  {
+   "id": "bitkisel-uretim",
+   "k": "tarim",
+   "ad": "Bitkisel üretim, seracılık ve fidancılık",
+   "nace": [
+    [
+     "01.13",
+     "Sebze, kavun-karpuz, kök ve yumru bitkileri yetiştiriciliği"
+    ],
+    [
+     "01.2",
+     "Çok yıllık bitkiler (meyve, zeytin, fındık vb.)"
+    ],
+    [
+     "01.30",
+     "Bitki üretimi (fide, fidan, çiçek)"
+    ],
+    [
+     "01.61",
+     "Bitkisel üretimi destekleyici faaliyetler"
+    ]
+   ],
+   "m": [
+    "Her türlü tarla bitkisi, sebze, meyve, zeytin, fındık, narenciye, kesme çiçek ve süs bitkisi yetiştirmek; açık alanda, serada, topraksız (hidroponik) ve dikey tarım yöntemleriyle üretim yapmak.",
+    "Fide, fidan, tohum, aşı kalemi ve çoğaltım materyali üretmek; fidanlık ve sera kurmak, işletmek, kiralamak.",
+    "Ürettiği veya satın aldığı tarımsal ürünleri yıkamak, ayıklamak, sınıflandırmak, paketlemek, soğuk hava deposunda muhafaza etmek, kurutmak ve işlemek; yurt içinde ve yurt dışında satmak, ihraç etmek.",
+    "Sözleşmeli üretim yapmak; üreticilerle ürün alım, ön finansman ve girdi temini sözleşmeleri imzalamak.",
+    "Tarım arazisi satın almak, kiralamak, toprak ıslahı, sulama, drenaj ve arazi düzenleme işleri yapmak; damla ve yağmurlama sulama sistemleri kurmak.",
+    "Tohum, fide, gübre, zirai ilaç, sera malzemesi ve tarım makinelerinin alım satımını, ithalat ve ihracatını yapmak; mevzuatın izin verdiği ölçüde bayilik almak.",
+    "İyi tarım, organik tarım ve benzeri sertifikasyon süreçlerini yürütmek; tarımsal danışmanlık, ilaçlama, budama, hasat ve harman hizmetleri vermek.",
+    "Tarımsal destek, hibe ve kırsal kalkınma programlarına başvurmak; tarım sigortası yaptırmak."
+   ],
+   "not": "Zirai ilaç ve gübre bayiliği için Tarım ve Orman Bakanlığı’ndan bayilik belgesi; tohumculuk için ayrıca yetki belgesi gerekir."
+  },
+  {
+   "id": "hayvancilik",
+   "k": "tarim",
+   "ad": "Hayvancılık, süt ve besicilik",
+   "nace": [
+    [
+     "01.41",
+     "Süt sığırcılığı"
+    ],
+    [
+     "01.42",
+     "Diğer sığır ve manda yetiştiriciliği"
+    ],
+    [
+     "01.45",
+     "Koyun ve keçi yetiştiriciliği"
+    ],
+    [
+     "01.47",
+     "Kümes hayvancılığı"
+    ],
+    [
+     "01.62",
+     "Hayvancılığı destekleyici faaliyetler"
+    ]
+   ],
+   "m": [
+    "Büyükbaş ve küçükbaş hayvan yetiştiriciliği, süt hayvancılığı ve besicilik yapmak; damızlık hayvan üretmek, almak ve satmak.",
+    "Kümes hayvanları, yumurta tavukçuluğu, etlik piliç, hindi, kaz ve diğer kanatlı yetiştiriciliği yapmak; kuluçkahane kurmak ve işletmek.",
+    "Arıcılık, ipekböcekçiliği ve diğer hayvan yetiştiriciliği yapmak; bal, polen, propolis ve arı sütü üretmek ve satmak.",
+    "Ahır, ağıl, kümes, yem deposu, silaj ve gübre tesisleri kurmak, kiralamak ve işletmek.",
+    "Çiğ süt, et, yumurta ve diğer hayvansal ürünleri toplamak, soğutmak, depolamak ve satmak.",
+    "Yem, yem katkı maddesi, veteriner ürünleri, sağım ve hayvancılık ekipmanının alım satımını ve ithalatını yapmak.",
+    "Suni tohumlama, sürü yönetimi, kırkım ve benzeri hayvancılık destek hizmetleri vermek.",
+    "Hayvancılık destekleri, kredi ve hibe programlarına başvurmak; hayvan hayat sigortası yaptırmak."
+   ],
+   "not": "Veteriner hekimlik hizmeti ve veteriner ilacı satışı mevzuattaki şartlara bağlıdır."
+  },
+  {
+   "id": "su-urunleri",
+   "k": "tarim",
+   "ad": "Su ürünleri, balıkçılık ve yetiştiricilik",
+   "nace": [
+    [
+     "03.11",
+     "Deniz balıkçılığı"
+    ],
+    [
+     "03.21",
+     "Deniz su ürünleri yetiştiriciliği"
+    ],
+    [
+     "03.22",
+     "Tatlı su ürünleri yetiştiriciliği"
+    ],
+    [
+     "10.20",
+     "Balık ve su ürünlerinin işlenmesi"
+    ]
+   ],
+   "m": [
+    "Denizde, iç sularda ve kafeslerde balık ve diğer su ürünleri avlamak ve yetiştirmek; yavru (larva) üretim tesisi kurmak ve işletmek.",
+    "Su ürünlerini işlemek, temizlemek, dondurmak, tütsülemek, marine etmek, konserve yapmak ve paketlemek.",
+    "Su ürünlerinin toptan ve perakende ticaretini, ithalat ve ihracatını yapmak; soğuk hava deposu ve soğuk zincir araçları işletmek.",
+    "Balıkçı gemisi, tekne, ağ ve av araç gereçlerini satın almak, kiralamak, satmak ve onarmak.",
+    "Balık yemi ve su ürünleri yetiştiriciliği ekipmanının alım satımını ve ithalatını yapmak.",
+    "Su ürünleri hal ve pazarlarında komisyonculuk yapmak, ihracat için kontrol ve sertifika işlemlerini yürütmek."
+   ],
+   "not": "Ticari balıkçılık ruhsat tezkeresi ve yetiştiricilik için Tarım ve Orman Bakanlığı izni gerekir."
+  },
+  {
+   "id": "gida-imalati",
+   "k": "tarim",
+   "ad": "Gıda üretimi ve paketleme (genel)",
+   "nace": [
+    [
+     "10.39",
+     "Meyve ve sebzelerin işlenmesi ve saklanması"
+    ],
+    [
+     "10.84",
+     "Baharat, sos ve çeşni üretimi"
+    ],
+    [
+     "10.85",
+     "Hazır yemek üretimi"
+    ],
+    [
+     "10.89",
+     "Başka yerde sınıflandırılmamış gıda üretimi"
+    ]
+   ],
+   "m": [
+    "Her türlü gıda maddesini, kuru gıdayı, bakliyatı, baharatı, sosu, salçayı, turşuyu, reçeli, kuruyemişi, dondurulmuş ve hazır gıdayı üretmek, işlemek, paketlemek ve satmak.",
+    "Gıda üretim tesisleri, paketleme ve dolum hatları, soğuk hava depoları kurmak, kiralamak ve işletmek; fason üretim yapmak ve yaptırmak.",
+    "Kendi markası veya başkalarının markası adına (özel marka) gıda üretmek; ambalaj ve etiket tasarımı yaptırmak.",
+    "Gıda hammaddesi, katkı maddesi ve ambalaj malzemesinin alım satımını, ithalat ve ihracatını yapmak.",
+    "Ürünlerin market zincirleri, toptancılar, e-ticaret siteleri ve ihracat kanallarıyla satışını yapmak; bayilik ve distribütörlük vermek ve almak.",
+    "Gıda güvenliği, kalite yönetimi, helal ve organik sertifikasyon süreçlerini yürütmek; laboratuvar kurmak.",
+    "Gıda teknolojisi alanında Ar-Ge yapmak, yeni ürün geliştirmek."
+   ],
+   "not": "Tarım ve Orman Bakanlığı’ndan gıda işletme kayıt belgesi (bazı ürünlerde onay belgesi) alınmadan üretime başlanamaz."
+  },
+  {
+   "id": "unlu-mamul",
+   "k": "tarim",
+   "ad": "Fırın, pastane, unlu mamul ve şekerleme",
+   "nace": [
+    [
+     "10.71",
+     "Ekmek, taze pastane ürünleri ve kek üretimi"
+    ],
+    [
+     "10.72",
+     "Peksimet, bisküvi, dayanıklı pastane ürünleri"
+    ],
+    [
+     "10.82",
+     "Kakao, çikolata ve şekerleme üretimi"
+    ],
+    [
+     "47.2",
+     "Gıda perakende ticareti (grup)"
+    ]
+   ],
+   "m": [
+    "Ekmek, simit, pide, poğaça, börek, pasta, kek, kurabiye, tatlı, baklava ve her türlü unlu mamul üretmek ve satmak.",
+    "Çikolata, lokum, helva, şekerleme, bisküvi, gofret ve dayanıklı pastane ürünleri üretmek, paketlemek ve satmak.",
+    "Fırın, pastane, butik pasta atölyesi ve satış noktaları açmak, işletmek, kiralamak; franchise vermek ve almak.",
+    "Otel, restoran, kafe, market ve kurumlara toptan unlu mamul tedarik etmek; dondurulmuş hamur ürünleri üretmek.",
+    "Un, şeker, yağ, kakao ve diğer hammaddelerin, fırın ve pastane ekipmanının alım satımını ve ithalatını yapmak.",
+    "Ürünlerin internet ve paket servis yoluyla satışını yapmak; özel gün ve organizasyonlara ürün hazırlamak."
+   ],
+   "not": "Gıda işletme kayıt belgesi ve belediyeden işyeri açma ve çalışma ruhsatı gerekir."
+  },
+  {
+   "id": "et-sut",
+   "k": "tarim",
+   "ad": "Et, tavuk ve süt ürünleri işleme",
+   "nace": [
+    [
+     "10.11",
+     "Etin işlenmesi ve saklanması (kümes hayvanları hariç)"
+    ],
+    [
+     "10.12",
+     "Kümes hayvanı etinin işlenmesi"
+    ],
+    [
+     "10.13",
+     "Et ve kümes hayvanı eti ürünleri üretimi"
+    ],
+    [
+     "10.51",
+     "Süt ürünleri üretimi"
+    ],
+    [
+     "10.52",
+     "Dondurma üretimi"
+    ]
+   ],
+   "m": [
+    "Mezbaha ve kesimhane kurmak ve işletmek; kırmızı et ve kanatlı eti kesmek, parçalamak, işlemek, dondurmak ve paketlemek.",
+    "Sucuk, salam, sosis, pastırma, kavurma, köfte ve diğer et ürünlerini üretmek ve satmak.",
+    "Süt toplamak, soğutmak; süt, yoğurt, ayran, peynir, tereyağı, kaymak, dondurma ve diğer süt ürünlerini üretmek, paketlemek ve satmak.",
+    "Et ve süt ürünlerinin toptan ve perakende ticaretini, ithalat ve ihracatını yapmak; kasap, şarküteri ve satış mağazaları açmak.",
+    "Soğuk zincir araçları, soğuk hava depoları ve dağıtım ağı kurmak ve işletmek.",
+    "Üreticilerle süt ve canlı hayvan alım sözleşmeleri yapmak; yem ve girdi desteği sağlamak."
+   ],
+   "not": "Kesimhane ve et-süt işleme tesisleri Tarım ve Orman Bakanlığı onay belgesine tabidir."
+  },
+  {
+   "id": "icecek",
+   "k": "tarim",
+   "ad": "İçecek, su dolum ve kahve-çay işleme",
+   "nace": [
+    [
+     "11.07",
+     "Alkolsüz içecek, maden suyu ve şişelenmiş su üretimi"
+    ],
+    [
+     "10.83",
+     "Çay ve kahve işleme"
+    ],
+    [
+     "10.32",
+     "Meyve ve sebze suyu üretimi"
+    ]
+   ],
+   "m": [
+    "Meyve suyu, gazlı ve gazsız alkolsüz içecek, enerji içeceği, soğuk çay ve benzeri içecekleri üretmek, dolum yapmak ve satmak.",
+    "Kaynak suyu, içme suyu ve maden suyu dolum tesisi kurmak ve işletmek.",
+    "Kahve çekirdeği kavurmak, öğütmek, paketlemek; çay harmanlamak ve paketlemek; bitki çayı ve aromalı içecek tozları üretmek.",
+    "İçeceklerin bayi ve dağıtım ağı aracılığıyla, e-ticaret ve otomatlarla satışını yapmak; otomat yerleştirmek ve işletmek.",
+    "İçecek hammaddesi, şişe, kapak, etiket ve dolum makinelerinin alım satımını ve ithalatını yapmak."
+   ],
+   "not": "Kaynak ve maden suyu için Sağlık Bakanlığı izni; alkollü içki üretimi için Tarım ve Orman Bakanlığı izni gerekir."
+  },
+  {
+   "id": "tekstil-konfeksiyon",
+   "k": "sanayi",
+   "ad": "Tekstil, konfeksiyon ve hazır giyim",
+   "nace": [
+    [
+     "13.20",
+     "Dokuma"
+    ],
+    [
+     "13.30",
+     "Tekstil terbiyesi (boya, baskı, apre)"
+    ],
+    [
+     "14.10",
+     "Örgü giyim eşyası üretimi"
+    ],
+    [
+     "14.21",
+     "Dış giyim üretimi"
+    ],
+    [
+     "14.23",
+     "İş giysisi üretimi"
+    ]
+   ],
+   "m": [
+    "İplik, kumaş, örme ve dokuma ürünleri üretmek; boyama, baskı, nakış, yıkama ve apre işlemleri yapmak.",
+    "Her türlü kadın, erkek ve çocuk hazır giyim, iç giyim, iş elbisesi, üniforma, spor giyim ve ev tekstili ürünü dikmek, üretmek ve satmak.",
+    "Konfeksiyon atölyesi ve fabrika kurmak, kiralamak ve işletmek; yurt içinde ve yurt dışında fason üretim yapmak ve yaptırmak.",
+    "Model, kalıp ve koleksiyon tasarlamak; numune üretmek; marka oluşturmak ve tescil ettirmek.",
+    "Tekstil hammaddesi, kumaş, aksesuar ve tekstil makinelerinin alım satımını, ithalat ve ihracatını yapmak.",
+    "Ürünlerin toptan, perakende, mağaza ve e-ticaret yoluyla satışını yapmak; ihracat ve dış ticaret işlemlerini yürütmek.",
+    "Kalite kontrol, ürün testleri ve sürdürülebilirlik sertifikasyonu süreçlerini yürütmek."
+   ]
+  },
+  {
+   "id": "deri-ayakkabi",
+   "k": "sanayi",
+   "ad": "Deri, ayakkabı ve çanta",
+   "nace": [
+    [
+     "15.11",
+     "Derinin tabaklanması ve işlenmesi"
+    ],
+    [
+     "15.12",
+     "Bavul, el çantası, saraciye ürünleri"
+    ],
+    [
+     "15.20",
+     "Ayakkabı üretimi"
+    ],
+    [
+     "14.24",
+     "Deri ve kürk giyim eşyası"
+    ]
+   ],
+   "m": [
+    "Ham deriyi işlemek, tabaklamak, boyamak ve satmak.",
+    "Ayakkabı, bot, terlik, çanta, cüzdan, kemer, bavul ve saraciye ürünleri üretmek, tasarlamak ve satmak.",
+    "Deri ve kürk giyim eşyası, eldiven ve aksesuar üretmek ve satmak.",
+    "Atölye ve fabrika kurmak, işletmek; fason üretim yapmak ve yaptırmak.",
+    "Deri, taban, aksesuar, kimyasal ve makinelerin alım satımını, ithalat ve ihracatını yapmak.",
+    "Ürünlerin mağaza, bayi ve e-ticaret yoluyla satışını ve ihracatını yapmak; marka tescil ettirmek."
+   ]
+  },
+  {
+   "id": "mobilya-ahsap",
+   "k": "sanayi",
+   "ad": "Mobilya, ahşap ve doğrama",
+   "nace": [
+    [
+     "31.00",
+     "Mobilya üretimi"
+    ],
+    [
+     "16.23",
+     "Diğer ahşap yapı ve doğrama ürünleri"
+    ],
+    [
+     "16.25",
+     "Ahşap kapı ve pencere üretimi"
+    ],
+    [
+     "47.5",
+     "Diğer ev eşyası perakende ticareti (grup)"
+    ]
+   ],
+   "m": [
+    "Ev, ofis, otel, okul ve hastane mobilyası, mutfak dolabı, gömme dolap, vestiyer, bahçe mobilyası üretmek, tasarlamak ve monte etmek.",
+    "Ahşap kapı, pencere, parke, lambri, merdiven ve doğrama ürünleri üretmek ve satmak.",
+    "Kereste, sunta, MDF, kontrplak ve ahşap levha işlemek; CNC kesim, kaplama, cila ve boya hizmeti vermek.",
+    "Mobilya mağazası ve showroom açmak, işletmek; bayilik ve franchise vermek ve almak.",
+    "Proje bazlı iç mekân mobilyası ve dekorasyon işleri üstlenmek; anahtar teslim proje yapmak.",
+    "Ahşap, aksesuar, kumaş, sünger ve mobilya makinelerinin alım satımını, ithalat ve ihracatını yapmak."
+   ]
+  },
+  {
+   "id": "plastik-ambalaj",
+   "k": "sanayi",
+   "ad": "Plastik, ambalaj ve kâğıt ürünleri",
+   "nace": [
+    [
+     "22.21",
+     "Plastik levha, tüp ve profil üretimi"
+    ],
+    [
+     "22.22",
+     "Plastik ambalaj üretimi"
+    ],
+    [
+     "22.25",
+     "Plastik ürünlerin işlenmesi ve son işlemleri"
+    ],
+    [
+     "17.21",
+     "Oluklu mukavva ve kâğıt-karton ambalaj"
+    ]
+   ],
+   "m": [
+    "Plastik enjeksiyon, şişirme, ekstrüzyon ve termoform yöntemleriyle her türlü plastik ürün, ambalaj, şişe, kap, poşet ve film üretmek.",
+    "Karton kutu, oluklu mukavva, kâğıt torba, etiket ve her türlü ambalaj malzemesi üretmek ve basmak.",
+    "Kalıp tasarlamak ve yaptırmak; fason üretim yapmak.",
+    "Plastik hammadde (granül), geri dönüştürülmüş hammadde, boya ve katkı maddelerinin alım satımını ve ithalatını yapmak.",
+    "Ambalaj atıklarını toplamak, ayırmak ve geri kazanmak (mevzuattaki izinlerle).",
+    "Ürünlerin yurt içi ve yurt dışı satışını, ihracatını yapmak."
+   ]
+  },
+  {
+   "id": "metal-makine",
+   "k": "sanayi",
+   "ad": "Metal işleme, makine ve ekipman imalatı",
+   "nace": [
+    [
+     "25.11",
+     "Metal yapı ve yapı parçaları"
+    ],
+    [
+     "25.6",
+     "Metallerin işlenmesi ve kaplanması (grup)"
+    ],
+    [
+     "28.2",
+     "Genel amaçlı diğer makineler (grup)"
+    ],
+    [
+     "28.99",
+     "Başka yerde sınıflandırılmamış özel amaçlı makineler"
+    ],
+    [
+     "33.12",
+     "Makinelerin onarımı"
+    ]
+   ],
+   "m": [
+    "Çelik konstrüksiyon, metal yapı, sundurma, hangar, depo, tank, silo ve metal kapı-pencere üretmek ve monte etmek.",
+    "Talaşlı imalat, CNC işleme, kaynak, lazer ve plazma kesim, büküm, pres, döküm, galvaniz, boya ve kaplama işleri yapmak.",
+    "Sanayi makineleri, üretim hatları, konveyör, yedek parça ve özel amaçlı makineler tasarlamak, üretmek, kurmak ve satmak.",
+    "Makine ve ekipmanların montaj, bakım, onarım ve revizyon hizmetlerini vermek.",
+    "Metal hammadde, profil, sac, boru ve hırdavat malzemelerinin alım satımını, ithalat ve ihracatını yapmak.",
+    "Proje ve mühendislik çalışmaları yapmak; anahtar teslim tesis kurmak.",
+    "Kalite belgeleri almak, test ve muayene süreçlerini yürütmek; Ar-Ge yapmak."
+   ]
+  },
+  {
+   "id": "kimya-kozmetik",
+   "k": "sanayi",
+   "ad": "Kimya, kozmetik ve temizlik ürünleri",
+   "nace": [
+    [
+     "20.41",
+     "Sabun, deterjan, temizlik ve parlatıcı ürünler"
+    ],
+    [
+     "20.42",
+     "Parfüm, kozmetik ve kişisel bakım ürünleri"
+    ],
+    [
+     "20.59",
+     "Başka yerde sınıflandırılmamış kimyasal ürünler"
+    ],
+    [
+     "20.30",
+     "Boya, vernik ve benzeri kaplamalar"
+    ]
+   ],
+   "m": [
+    "Sabun, deterjan, yüzey temizleyici, dezenfektan ve her türlü temizlik ürünü üretmek, dolum yapmak ve satmak.",
+    "Parfüm, kozmetik, cilt ve saç bakım ürünü, kişisel hijyen ürünü üretmek, fason ürettirmek ve satmak.",
+    "Boya, vernik, yapıştırıcı, endüstriyel kimyasal ve katkı maddesi üretmek ve satmak.",
+    "Kimyasal hammaddelerin alım satımını, ithalat ve ihracatını yapmak; depolamak.",
+    "Kendi markasıyla ve özel marka (private label) olarak üretim yapmak; ambalaj ve etiket tasarlatmak.",
+    "Laboratuvar kurmak, formül geliştirmek, ürün güvenlik değerlendirmesi ve kayıt işlemlerini yürütmek."
+   ],
+   "not": "Kozmetik üretimi ve biyosidal ürünler TİTCK kayıt ve izinlerine; tehlikeli kimyasallar ayrıca çevre ve İSG mevzuatına tabidir."
+  },
+  {
+   "id": "elektronik-imalat",
+   "k": "sanayi",
+   "ad": "Elektrik-elektronik ve aydınlatma imalatı",
+   "nace": [
+    [
+     "26.11",
+     "Elektronik bileşen ve kart üretimi"
+    ],
+    [
+     "27.12",
+     "Elektrik dağıtım ve kontrol cihazları"
+    ],
+    [
+     "27.40",
+     "Aydınlatma ekipmanı üretimi"
+    ],
+    [
+     "27.90",
+     "Diğer elektrikli ekipman"
+    ]
+   ],
+   "m": [
+    "Elektronik kart, devre, sensör, kontrol ve otomasyon cihazları tasarlamak, üretmek ve satmak.",
+    "Elektrik panosu, kablo, şalt malzemesi, trafo ve elektrik dağıtım ekipmanı üretmek ve satmak.",
+    "LED ve diğer aydınlatma armatürleri, aydınlatma sistemleri tasarlamak ve üretmek.",
+    "Gömülü yazılım geliştirmek, nesnelerin interneti (IoT) ürünleri tasarlamak; Ar-Ge yapmak.",
+    "Elektronik komponent ve malzemelerin alım satımını, ithalat ve ihracatını yapmak.",
+    "Ürünlerin kurulum, bakım, onarım ve satış sonrası hizmetlerini vermek."
+   ]
+  },
+  {
+   "id": "matbaa",
+   "k": "sanayi",
+   "ad": "Matbaa, baskı ve reklam ürünleri üretimi",
+   "nace": [
+    [
+     "18.12",
+     "Diğer basım faaliyetleri"
+    ],
+    [
+     "18.13",
+     "Baskı öncesi hizmetler"
+    ],
+    [
+     "18.14",
+     "Ciltçilik"
+    ],
+    [
+     "18.20",
+     "Kayıtlı medyanın çoğaltılması"
+    ]
+   ],
+   "m": [
+    "Ofset, dijital, serigrafi, flekso ve geniş format baskı yöntemleriyle kitap, dergi, katalog, broşür, ambalaj, etiket ve her türlü basılı ürün basmak.",
+    "Kurumsal kimlik ürünleri, promosyon ürünleri, tabela, totem, branda ve açık hava reklam malzemesi üretmek.",
+    "Baskı öncesi tasarım, mizanpaj, kalıp ve prova hizmetleri; cilt, kesim, laminasyon ve diğer baskı sonrası işleri yapmak.",
+    "Matbaa makineleri, kâğıt, mürekkep ve sarf malzemelerinin alım satımını ve ithalatını yapmak.",
+    "Fason baskı yapmak ve yaptırmak; ürünleri internet üzerinden satmak."
+   ],
+   "not": "Matbaalar 5187 sayılı Basın Kanunu’na göre bilgi verme yükümlülüğüne tabidir."
+  },
+  {
+   "id": "kuyum",
+   "k": "sanayi",
+   "ad": "Kuyum, mücevher ve takı",
+   "nace": [
+    [
+     "32.12",
+     "Mücevher ve benzeri ürünler"
+    ],
+    [
+     "32.13",
+     "İmitasyon takı"
+    ],
+    [
+     "47.7",
+     "Diğer ürünlerin perakende ticareti (grup)"
+    ]
+   ],
+   "m": [
+    "Altın, gümüş, platin ve diğer kıymetli madenlerden mücevher, takı, saat ve süs eşyası tasarlamak, üretmek ve satmak.",
+    "Değerli ve yarı değerli taşları işlemek, montürlemek; imitasyon takı ve bijuteri üretmek.",
+    "Kuyumcu mağazası ve atölye açmak, işletmek; tamir, gravür ve ölçü hizmetleri vermek.",
+    "Kıymetli madenlerin ve mücevherin toptan ve perakende ticaretini, ithalat ve ihracatını mevzuat çerçevesinde yapmak.",
+    "Ürünlerin fuar, e-ticaret ve ihracat kanallarıyla satışını yapmak."
+   ],
+   "not": "Borsa İstanbul Kıymetli Madenler Piyasası üyeliği ve kıymetli maden aracılığı ayrı izin ve sermaye şartına bağlıdır."
+  },
+  {
+   "id": "yapi-malzemesi",
+   "k": "sanayi",
+   "ad": "Beton, mermer, cam ve yapı malzemesi üretimi",
+   "nace": [
+    [
+     "23.61",
+     "İnşaat amaçlı beton ürünleri"
+    ],
+    [
+     "23.63",
+     "Hazır beton üretimi"
+    ],
+    [
+     "23.70",
+     "Taşların kesilmesi ve şekillendirilmesi"
+    ],
+    [
+     "23.1",
+     "Cam ve cam ürünleri (grup)"
+    ]
+   ],
+   "m": [
+    "Hazır beton, beton blok, briket, parke taşı, bordür, prefabrik yapı elemanı üretmek ve satmak.",
+    "Mermer, granit, traverten ve doğal taşları kesmek, işlemek, cilalamak ve satmak; ocak işletmek veya işlettirmek.",
+    "Düz cam, temperli cam, ısıcam ve cam ürünleri işlemek ve monte etmek.",
+    "Seramik, karo, tuğla, kiremit, alçı ve yalıtım malzemesi üretmek ve satmak.",
+    "Yapı malzemesi toptan ve perakende ticareti, ithalat ve ihracatı yapmak; şantiyelere tedarik etmek.",
+    "Beton pompası, mikser ve iş makinesi kiralamak, nakliye hizmeti vermek."
+   ],
+   "not": "Ocak işletmesi için MAPEG ruhsatı; hazır beton tesisleri için çevre izni gerekir."
+  },
+  {
+   "id": "otomotiv-yan-sanayi",
+   "k": "sanayi",
+   "ad": "Otomotiv yan sanayi ve karoser",
+   "nace": [
+    [
+     "29.20",
+     "Karoser, treyler ve yarı treyler üretimi"
+    ],
+    [
+     "29.3",
+     "Motorlu kara taşıtları parça ve aksesuarları (grup)"
+    ],
+    [
+     "22.11",
+     "Kauçuk lastik ve iç lastik"
+    ]
+   ],
+   "m": [
+    "Motorlu taşıtlar için yedek parça, aksam, aksesuar ve komponent üretmek ve satmak.",
+    "Karoser, kasa, damper, treyler, yarı treyler, frigorifik kasa ve özel amaçlı araç üstyapısı üretmek.",
+    "Araç dönüşüm (ambulans, karavan, engelli aracı vb.) işleri yapmak; tip onayı ve homologasyon süreçlerini yürütmek.",
+    "Otomotiv ana sanayisine ve yedek parça pazarına tedarik yapmak; ihracat yapmak.",
+    "Hammadde, kalıp ve üretim ekipmanı alım satımını ve ithalatını yapmak."
+   ]
+  },
+  {
+   "id": "medikal-imalat",
+   "k": "sanayi",
+   "ad": "Tıbbi cihaz ve medikal ürün üretimi",
+   "nace": [
+    [
+     "32.50",
+     "Tıbbi ve dişçilik alet ve malzemeleri"
+    ],
+    [
+     "26.60",
+     "Işınlama, elektromedikal ve elektroterapi cihazları"
+    ],
+    [
+     "46",
+     "Toptan ticaret: tıbbi ürünlere ilişkin sınıf"
+    ]
+   ],
+   "m": [
+    "Tıbbi cihaz, sarf malzemesi, ortopedik ürün, protez, diş ve laboratuvar malzemesi üretmek ve satmak.",
+    "Hastane ve sağlık kuruluşlarına tıbbi cihaz ve sarf malzemesi tedarik etmek; kamu ihalelerine katılmak.",
+    "Tıbbi cihazların kurulum, bakım, kalibrasyon ve teknik servis hizmetlerini vermek.",
+    "Tıbbi cihaz ve medikal ürünlerin ithalat ve ihracatını yapmak; yetkili temsilcilik almak.",
+    "Ürün tescil, ÜTS kayıt ve CE belgelendirme süreçlerini yürütmek; Ar-Ge yapmak."
+   ],
+   "not": "Tıbbi cihaz üretimi, satışı ve satış merkezleri TİTCK kayıt ve izinlerine tabidir."
+  },
+  {
+   "id": "geri-donusum",
+   "k": "sanayi",
+   "ad": "Geri dönüşüm ve atık işleme",
+   "nace": [
+    [
+     "38.1",
+     "Atıkların toplanması (grup)"
+    ],
+    [
+     "38.2",
+     "Atıkların geri kazanımı (grup)"
+    ],
+    [
+     "46",
+     "Toptan ticaret: atık ve hurdaya ilişkin sınıf"
+    ]
+   ],
+   "m": [
+    "Ambalaj atığı, hurda metal, plastik, kâğıt, cam, elektronik atık, atık yağ ve diğer atıkları toplamak, taşımak, ayrıştırmak ve geri kazanmak.",
+    "Geri kazanım ve ayrıştırma tesisi kurmak ve işletmek; geri dönüştürülmüş hammadde üretmek ve satmak.",
+    "Hurda ve atık ticareti, ithalat ve ihracatını mevzuat çerçevesinde yapmak.",
+    "Belediyeler ve sanayi kuruluşlarıyla atık yönetimi sözleşmeleri yapmak; sıfır atık danışmanlığı vermek.",
+    "Atık taşıma araçları, konteyner ve ekipman satın almak, kiralamak."
+   ],
+   "not": "Atık toplama, taşıma ve geri kazanım faaliyetleri Çevre, Şehircilik ve İklim Değişikliği Bakanlığı lisansına tabidir."
+  },
+  {
+   "id": "bina-insaati",
+   "k": "insaat",
+   "ad": "Bina inşaatı, müteahhitlik ve taahhüt",
+   "nace": [
+    [
+     "41.00",
+     "İkamet amaçlı olan ve olmayan binaların inşaatı"
+    ],
+    [
+     "43.3",
+     "Binanın tamamlanması ve bitirilmesi (grup)"
+    ],
+    [
+     "43.12",
+     "Şantiyenin hazırlanması"
+    ],
+    [
+     "43.11",
+     "Yıkım"
+    ]
+   ],
+   "m": [
+    "Her türlü konut, villa, rezidans, işyeri, ofis, alışveriş merkezi, otel, hastane, okul, yurt, sanayi tesisi, fabrika ve depo binalarının inşaatını yapmak, yaptırmak ve taahhüt etmek.",
+    "Kamu kurum ve kuruluşlarının, belediyelerin ve özel sektörün yapım ihalelerine yalnız veya iş ortaklığı ve konsorsiyum kurarak katılmak; ihale kapsamındaki işleri üstlenmek ve alt yüklenicilere yaptırmak.",
+    "Anahtar teslimi, götürü bedel, birim fiyat, maliyet artı kâr ve benzeri usullerle inşaat sözleşmeleri yapmak.",
+    "Yıkım, hafriyat, kazı, dolgu, zemin iyileştirme, temel, kaba inşaat, ince işler, çatı, cephe giydirme, yalıtım ve tadilat işlerini yapmak.",
+    "Kentsel dönüşüm, riskli yapıların yenilenmesi, güçlendirme ve restorasyon projelerinde yer almak; bu kapsamda hak sahipleriyle sözleşmeler yapmak.",
+    "Yapı müteahhitliği yetki belgesi almak; şantiye kurmak, şantiye şefi ve teknik personel istihdam etmek.",
+    "İnşaat malzemesi, hazır beton, demir, çimento ve yapı kimyasallarının alım satımını, ithalat ve ihracatını yapmak.",
+    "İş makineleri, vinç, iskele, kalıp ve şantiye ekipmanını satın almak, kiralamak, kiraya vermek ve finansal kiralama yoluyla edinmek.",
+    "Yurt dışında müteahhitlik hizmetleri vermek, şube ve şantiye açmak."
+   ],
+   "not": "İnşaat işleri için Çevre, Şehircilik ve İklim Değişikliği Bakanlığı’ndan yapı müteahhidi yetki belge numarası alınması gerekir."
+  },
+  {
+   "id": "proje-gelistirme",
+   "k": "insaat",
+   "ad": "Kat karşılığı, proje geliştirme ve gayrimenkul satışı",
+   "nace": [
+    [
+     "68.12",
+     "Bina projelerinin geliştirilmesi"
+    ],
+    [
+     "68.11",
+     "Kendine ait gayrimenkulün alınıp satılması"
+    ],
+    [
+     "41.00",
+     "Bina inşaatı"
+    ]
+   ],
+   "m": [
+    "Arsa ve arazi satın almak, kiralamak; ifraz, tevhit, imar uygulaması, cins değişikliği ve kat irtifakı işlemlerini yaptırmak.",
+    "Kat karşılığı, hasılat paylaşımı ve arsa payı karşılığı inşaat sözleşmeleri yapmak; arsa sahipleriyle ortak projeler geliştirmek.",
+    "Konut, ticari ve karma kullanımlı gayrimenkul projeleri tasarlatmak, finanse etmek, inşa ettirmek ve pazarlamak.",
+    "Bağımsız bölümleri kat irtifakı veya kat mülkiyeti kurulduktan sonra ya da ön satış sözleşmesiyle satmak, kiralamak ve işletmek.",
+    "Proje finansmanı için kredi kullanmak, taşınmazlar üzerinde ipotek kurmak ve kaldırmak.",
+    "Satış ofisi, örnek daire ve tanıtım faaliyetleri yürütmek; gayrimenkul ekspertiz ve değerleme raporları aldırmak."
+   ],
+   "not": "Konut ön satışı yapacak şirketler 6502 sayılı Kanun ve Konut Satış Yönetmeliği’ndeki şartlara (yapı ruhsatı, teminat vb.) uymak zorundadır."
+  },
+  {
+   "id": "altyapi",
+   "k": "insaat",
+   "ad": "Altyapı, yol, köprü ve peyzaj",
+   "nace": [
+    [
+     "42.11",
+     "Kara ve demir yolları inşaatı"
+    ],
+    [
+     "42.21",
+     "Akışkanlarla ilgili hizmet projelerinin inşaatı"
+    ],
+    [
+     "42.22",
+     "Elektrik ve telekomünikasyon hatları inşaatı"
+    ],
+    [
+     "42.99",
+     "Başka yerde sınıflandırılmamış diğer bina dışı yapıların inşaatı"
+    ],
+    [
+     "81.30",
+     "Çevre düzenlemesi ve bakım hizmetleri"
+    ]
+   ],
+   "m": [
+    "Yol, otoyol, köprü, tünel, viyadük, havalimanı, liman, demiryolu ve raylı sistem inşaatı yapmak.",
+    "İçme suyu, kanalizasyon, yağmur suyu, arıtma tesisi, sulama, baraj, gölet ve doğal gaz boru hattı inşaatı yapmak.",
+    "Elektrik enerji nakil hatları, trafo merkezi, telekomünikasyon ve fiber altyapı inşaatı yapmak.",
+    "Asfalt, beton yol, parke, bordür, kaldırım, otopark ve saha düzenleme işleri yapmak; asfalt plenti işletmek.",
+    "Peyzaj, park, bahçe, spor sahası, oyun alanı ve rekreasyon alanı yapmak ve bakımını üstlenmek.",
+    "Kamu ihalelerine katılmak, iş deneyim belgesi almak ve devretmek.",
+    "İş makinelerini satın almak, kiralamak, kiraya vermek ve operatörlü iş makinesi hizmeti vermek."
+   ]
+  },
+  {
+   "id": "tesisat",
+   "k": "insaat",
+   "ad": "Elektrik, mekanik tesisat ve iklimlendirme",
+   "nace": [
+    [
+     "43.21",
+     "Elektrik tesisatı"
+    ],
+    [
+     "43.22",
+     "Sıhhi tesisat, ısıtma ve iklimlendirme tesisatı"
+    ],
+    [
+     "43.24",
+     "Diğer inşaat tesisatı"
+    ],
+    [
+     "43.23",
+     "Yalıtım işleri"
+    ]
+   ],
+   "m": [
+    "Binalarda ve tesislerde elektrik, zayıf akım, aydınlatma, yangın algılama, güvenlik kamerası ve otomasyon tesisatı yapmak.",
+    "Sıhhi tesisat, doğal gaz iç tesisatı, kalorifer, yerden ısıtma, havalandırma, klima, soğutma ve iklimlendirme sistemleri kurmak.",
+    "Yangın söndürme sistemleri, sprinkler, hidrofor, asansör ve yürüyen merdiven montajı yapmak (izinli faaliyetlerde ilgili yetkiyi almak).",
+    "Isı, ses ve su yalıtımı, mantolama işleri yapmak.",
+    "Kurulan sistemlerin periyodik bakım, onarım ve servis hizmetlerini vermek.",
+    "Tesisat malzemesi, kombi, klima, pompa ve ekipmanların alım satımını, ithalatını yapmak; yetkili servis ve bayilik almak.",
+    "Mekanik ve elektrik proje çizmek, keşif ve metraj hazırlamak (mühendislik yetkisi gerektiren işleri yetkili mühendislere yaptırmak)."
+   ],
+   "not": "Doğal gaz iç tesisatı için dağıtım şirketinden sertifika, elektrik tesisatında yetkili elektrik mühendisi ve EMO kaydı gerekir."
+  },
+  {
+   "id": "ic-mimarlik-tadilat",
+   "k": "insaat",
+   "ad": "İç mimarlık, dekorasyon ve tadilat",
+   "nace": [
+    [
+     "74.13",
+     "İç mimarlık (iç tasarım) faaliyetleri"
+    ],
+    [
+     "43.3",
+     "Binanın tamamlanması ve bitirilmesi (grup)"
+    ],
+    [
+     "43.34",
+     "Boya ve cam işleri"
+    ]
+   ],
+   "m": [
+    "Konut, ofis, mağaza, otel, restoran ve kamu binaları için iç mimari tasarım, uygulama projesi ve 3B görselleştirme hazırlamak.",
+    "Anahtar teslim dekorasyon, tadilat, renovasyon, mutfak-banyo yenileme, alçıpano, asma tavan, boya, parke, seramik ve doğrama işleri yapmak.",
+    "Mobilya, aydınlatma, perde, halı, aksesuar ve dekorasyon ürünlerini temin etmek, satmak ve monte etmek.",
+    "Mağaza ve ofis konsept tasarımı, sergi ve fuar standı tasarımı ve kurulumu yapmak.",
+    "Dekorasyon ürünleri mağazası ve showroom açmak, işletmek.",
+    "Yapılan işlerin bakım ve garanti hizmetlerini vermek."
+   ]
+  },
+  {
+   "id": "emlak",
+   "k": "insaat",
+   "ad": "Emlak danışmanlığı ve gayrimenkul aracılığı",
+   "nace": [
+    [
+     "68.31",
+     "Gayrimenkul faaliyetlerine yönelik aracılık hizmetleri"
+    ],
+    [
+     "68.32",
+     "Ücret veya sözleşmeye dayalı diğer gayrimenkul faaliyetleri"
+    ]
+   ],
+   "m": [
+    "Konut, işyeri, arsa ve arazi alım satımında, kiralanmasında aracılık ve danışmanlık yapmak.",
+    "Gayrimenkul portföyü oluşturmak, ilan ve pazarlama faaliyetleri yürütmek; internet portalları ve dijital kanallar üzerinden tanıtım yapmak.",
+    "Yatırımcılara yurt içinde ve yurt dışında gayrimenkul yatırım danışmanlığı vermek; yabancılara taşınmaz satışında aracılık yapmak.",
+    "Kiralanan taşınmazların kira tahsilatı, sözleşme takibi, bakım ve onarım organizasyonu gibi mülk yönetimi hizmetlerini vermek.",
+    "Proje pazarlama ve satış ofisi yönetimi hizmetleri vermek.",
+    "Franchise ağına katılmak veya franchise vermek."
+   ],
+   "not": "Taşınmaz Ticareti Hakkında Yönetmelik uyarınca yetki belgesi alınmadan emlak aracılığı yapılamaz; ayrıca mesleki yeterlilik belgeli personel gerekir. Gayrimenkul değerleme (ekspertiz) SPK lisansına tabidir."
+  },
+  {
+   "id": "gayrimenkul-isletme",
+   "k": "insaat",
+   "ad": "Gayrimenkul kiralama ve işletme (AVM, ofis, depo)",
+   "nace": [
+    [
+     "68.20",
+     "Kendine ait veya kiralanan gayrimenkulün kiralanması ve işletilmesi"
+    ],
+    [
+     "68.11",
+     "Kendine ait gayrimenkulün alınıp satılması"
+    ]
+   ],
+   "m": [
+    "Kendisine ait veya kiraladığı konut, işyeri, ofis, depo, AVM, iş merkezi ve arsaları kiraya vermek ve işletmek.",
+    "Hazır ofis, ortak çalışma alanı (coworking), sanal ofis, toplantı salonu ve depolama alanı (self storage) işletmek.",
+    "Gayrimenkul satın almak, satmak; değer artışı amacıyla taşınmaz portföyü oluşturmak.",
+    "Kiralanan alanların ortak gider yönetimi, bakım, temizlik ve güvenlik hizmetlerini organize etmek.",
+    "Gayrimenkuller üzerinde intifa, üst hakkı, irtifak ve kira şerhi kurmak ve kaldırmak.",
+    "Yurt dışındaki gayrimenkulleri satın almak, kiralamak ve işletmek."
+   ]
+  },
+  {
+   "id": "tesis-yonetimi",
+   "k": "insaat",
+   "ad": "Site, bina ve tesis yönetimi",
+   "nace": [
+    [
+     "81.10",
+     "Tesis bünyesindeki kombine destek hizmetleri"
+    ],
+    [
+     "68.32",
+     "Ücret veya sözleşmeye dayalı diğer gayrimenkul faaliyetleri"
+    ],
+    [
+     "81.21",
+     "Binaların genel temizliği"
+    ]
+   ],
+   "m": [
+    "Apartman, site, rezidans, iş merkezi ve AVM’lerin profesyonel yönetimini üstlenmek; aidat tahsilatı, bütçe ve işletme projesi hazırlamak.",
+    "Teknik bakım, temizlik, peyzaj, güvenlik organizasyonu, resepsiyon ve danışma hizmetlerini bütünleşik olarak vermek.",
+    "Yönetim kurulu ve kat malikleri kurulu toplantılarının organizasyonu ve kayıtlarının tutulmasına destek vermek.",
+    "Tesis yönetim yazılımı kullanmak, enerji ve tüketim takibi yapmak.",
+    "Alt yüklenicilerle hizmet sözleşmeleri yapmak ve denetlemek."
+   ],
+   "not": "Silahlı veya silahsız güvenlik görevlisi çalıştırmak, ancak izinli özel güvenlik şirketi aracılığıyla mümkündür."
+  },
+  {
+   "id": "genel-ticaret",
+   "k": "ticaret",
+   "ad": "Toptan ticaret, ithalat ve ihracat (genel)",
+   "nace": [
+    [
+     "46.1",
+     "Ücret veya sözleşmeye dayalı toptan ticaret (grup)"
+    ],
+    [
+     "46.90",
+     "Belirli bir mala tahsis edilmemiş toptan ticaret"
+    ],
+    [
+     "46",
+     "Ürüne göre ilgili toptan ticaret sınıfı"
+    ]
+   ],
+   "m": [
+    "Her türlü gıda, tüketim malı, hammadde, yarı mamul, makine, ekipman ve sanayi ürününün yurt içinde ve yurt dışında alımını, satımını, toptan ticaretini, ithalat ve ihracatını yapmak.",
+    "Dış ticaret işlemlerinde transit ticaret, üçüncü ülkeler arası ticaret, bağlantılı ticaret ve ihracat kayıtlı satış yapmak; dahilde işleme ve diğer teşvik rejimlerinden yararlanmak.",
+    "Yurt içi ve yurt dışı firmaların temsilciliğini, distribütörlüğünü, bayiliğini ve acenteliğini almak ve vermek; komisyonculuk yapmak.",
+    "Depo, antrepo, soğuk hava deposu ve satış noktaları kiralamak ve işletmek.",
+    "Ticari ürünlerin paketlenmesi, etiketlenmesi, standardizasyonu ve kalite kontrolünü yapmak veya yaptırmak.",
+    "Yurt içi ve yurt dışı fuarlara katılmak, ticaret heyetleri düzenlemek.",
+    "Dış ticarette akreditif, vesaik mukabili ve diğer ödeme yöntemlerini kullanmak; ihracat sigortası ve kredi imkânlarından yararlanmak."
+   ]
+  },
+  {
+   "id": "e-ticaret",
+   "k": "ticaret",
+   "ad": "E-ticaret ve pazaryeri satıcılığı",
+   "nace": [
+    [
+     "47",
+     "Perakende ticaret: satılan ürüne göre ilgili sınıf (Rev.2.1’de internet satışı ayrı sınıflanmıyor)"
+    ],
+    [
+     "46",
+     "Toptan ticaret: ürüne göre ilgili sınıf"
+    ]
+   ],
+   "m": [
+    "Her türlü tüketim malının kendi internet sitesi, mobil uygulaması, sosyal medya hesapları ve yurt içi ve yurt dışı pazaryerleri üzerinden perakende ve toptan satışını yapmak.",
+    "Hazır giyim, ayakkabı, aksesuar, kozmetik, kişisel bakım, ev ve yaşam ürünleri, elektronik, oyuncak, kırtasiye, spor, evcil hayvan ve gıda ürünlerinin alımını, satımını, ithalat ve ihracatını yapmak.",
+    "Mikro ihracat ve e-ihracat yapmak; yurt dışı pazaryerlerinde mağaza açmak, yurt dışı depolarında stok tutmak.",
+    "Kendi markasıyla ürün geliştirmek, fason ürettirmek, marka tescil ettirmek.",
+    "Ürünlerin depolama, paketleme, kargo ve iade süreçlerini yürütmek veya hizmet satın almak.",
+    "Dijital pazarlama, reklam, içerik üretimi ve sosyal medya yönetimi faaliyetlerinde bulunmak; satış ortaklığı (affiliate) ve influencer işbirlikleri yapmak.",
+    "Fiziki mağaza, showroom ve satış noktası açmak, işletmek."
+   ],
+   "not": "Rev.2.1’de mal satışı satış yöntemine bakılmaksızın ürüne göre sınıflanır; internetten giyim satan şirket giyim perakende sınıfını seçer. 6563 s. Kanun ve ETBİS kaydı yükümlülüğü unutulmamalı."
+  },
+  {
+   "id": "pazaryeri-platform",
+   "k": "ticaret",
+   "ad": "Pazaryeri ve aracılık platformu işletmeciliği",
+   "nace": [
+    [
+     "47.91",
+     "Belirli bir ürüne özgü olmayan perakende satışa aracılık"
+    ],
+    [
+     "47.92",
+     "Belirli ürünlerin perakende satışına aracılık"
+    ],
+    [
+     "46.1",
+     "Toptan ticarete aracılık (grup)"
+    ],
+    [
+     "63.92",
+     "Diğer bilgi hizmetleri"
+    ]
+   ],
+   "m": [
+    "İnternet sitesi ve mobil uygulama üzerinden satıcılar ile alıcıları buluşturan elektronik pazaryeri, ilan ve aracılık platformu kurmak ve işletmek.",
+    "Platformda satış yapan işletmelerden komisyon, üyelik, ilan ve hizmet bedeli almak.",
+    "Ödeme altyapısı, lojistik, depolama ve müşteri hizmetleri çözümlerini anlaşmalı kuruluşlarla birlikte sunmak.",
+    "Platform yazılımını geliştirmek, lisanslamak ve başka işletmelere hizmet olarak (SaaS) sunmak.",
+    "Kampanya, reklam ve görünürlük hizmetleri satmak; satıcılara eğitim ve danışmanlık vermek.",
+    "Kendi hesabına da mal alıp satmak (karma model)."
+   ],
+   "not": "Elektronik ticaret aracı hizmet sağlayıcılara 6563 s. Kanun’la işlem hacmine göre lisans ve ek yükümlülükler getirildi; ödeme hizmeti vermek ise TCMB izni ister."
+  },
+  {
+   "id": "market",
+   "k": "ticaret",
+   "ad": "Market, şarküteri ve gıda perakendesi",
+   "nace": [
+    [
+     "47.11",
+     "Belirli bir mala tahsis edilmemiş, ağırlıklı gıda satılan perakende ticaret"
+    ],
+    [
+     "47.2",
+     "Gıda, içecek ve tütün perakende ticareti (grup)"
+    ]
+   ],
+   "m": [
+    "Market, süpermarket, bakkal, şarküteri, manav, kuruyemiş, şarap ve içki mağazası (izinlerle) açmak, işletmek ve kiralamak.",
+    "Gıda, içecek, temizlik, kişisel bakım ve ev ürünlerinin toptan ve perakende alım satımını yapmak.",
+    "Online market, hızlı teslimat ve paket servis hizmeti vermek.",
+    "Kendi markalı ürünler ürettirmek ve satmak.",
+    "Franchise vermek ve almak; zincir mağaza ağı kurmak.",
+    "Kasap, fırın ve hazır yemek reyonları işletmek."
+   ],
+   "not": "Alkollü içki ve tütün satışı için satış belgesi; gıda satışı için işletme kayıt belgesi gerekir."
+  },
+  {
+   "id": "hazir-giyim-magaza",
+   "k": "ticaret",
+   "ad": "Hazır giyim, ayakkabı ve aksesuar mağazacılığı",
+   "nace": [
+    [
+     "47.7",
+     "Diğer ürünlerin perakende ticareti (giyim, ayakkabı, aksesuar)"
+    ],
+    [
+     "46",
+     "Toptan ticaret: giyim ve ayakkabıya ilişkin sınıf"
+    ]
+   ],
+   "m": [
+    "Kadın, erkek ve çocuk hazır giyim, iç giyim, ayakkabı, çanta, saat, gözlük ve aksesuar ürünlerinin toptan ve perakende ticaretini yapmak.",
+    "Mağaza, outlet, butik ve corner açmak, işletmek ve kiralamak; AVM’lerde satış alanı kiralamak.",
+    "Yurt dışı markaların Türkiye temsilciliğini, distribütörlüğünü ve franchise’ını almak.",
+    "Kendi markasıyla koleksiyon oluşturmak, fason ürettirmek.",
+    "Ürünlerin internet, sosyal medya ve pazaryerleri üzerinden satışını yapmak, ihraç etmek."
+   ]
+  },
+  {
+   "id": "elektronik-magaza",
+   "k": "ticaret",
+   "ad": "Elektronik, bilgisayar, telefon ve beyaz eşya ticareti",
+   "nace": [
+    [
+     "47.40",
+     "Bilgi ve iletişim ekipmanı perakende ticareti"
+    ],
+    [
+     "46.50",
+     "Bilgi ve iletişim ekipmanı toptan ticareti"
+    ],
+    [
+     "47.5",
+     "Diğer ev eşyası perakende ticareti (grup)"
+    ],
+    [
+     "95.10",
+     "Bilgisayar ve iletişim ekipmanı onarımı"
+    ]
+   ],
+   "m": [
+    "Bilgisayar, tablet, cep telefonu, aksesuar, yazılım, oyun konsolu ve çevre birimlerinin toptan ve perakende ticaretini yapmak.",
+    "Beyaz eşya, küçük ev aletleri, televizyon, ses ve görüntü sistemlerinin alım satımını ve ithalatını yapmak.",
+    "Yetkili satıcılık, bayilik ve servis yetkisi almak; mağaza açmak, işletmek.",
+    "Teknik servis, onarım, kurulum, veri kurtarma ve yenilenmiş cihaz satışı yapmak.",
+    "Kurumlara bilgisayar, ağ ve güvenlik ürünleri tedarik etmek; kamu ihalelerine katılmak.",
+    "Operatör hat, cihaz ve tarifelerinin satışında bayi olarak faaliyet göstermek."
+   ],
+   "not": "Yenilenmiş cep telefonu satışı Yenileme Hizmetleri Hakkında Yönetmelik’teki yetki belgesine tabidir."
+  },
+  {
+   "id": "yapi-market",
+   "k": "ticaret",
+   "ad": "Hırdavat, yapı market, boya ve elektrik malzemesi",
+   "nace": [
+    [
+     "47.5",
+     "Diğer ev eşyası perakende ticareti (hırdavat, boya, cam dahil)"
+    ],
+    [
+     "46",
+     "Toptan ticaret: inşaat malzemesi ve hırdavata ilişkin sınıf"
+    ]
+   ],
+   "m": [
+    "Hırdavat, nalburiye, el aletleri, elektrikli aletler, boya, vernik, yapı kimyasalları, seramik, vitrifiye, banyo ve mutfak ürünleri satmak.",
+    "Elektrik malzemesi, kablo, aydınlatma, tesisat malzemesi, ısıtma ve soğutma ürünlerinin toptan ve perakende ticaretini yapmak.",
+    "Yapı market ve satış mağazası açmak, işletmek; şantiyelere toplu satış yapmak.",
+    "Yurt dışından ürün ithal etmek, bayilik ve distribütörlük almak.",
+    "Kesim, boya karışımı, montaj ve nakliye hizmetleri vermek."
+   ]
+  },
+  {
+   "id": "oto-galeri",
+   "k": "ticaret",
+   "ad": "Otomobil alım satımı (galeri) ve oto kiralama",
+   "nace": [
+    [
+     "47.8",
+     "Motorlu taşıt ve parçalarının perakende ticareti (grup)"
+    ],
+    [
+     "46",
+     "Toptan ticaret: motorlu taşıtlara ilişkin sınıf"
+    ],
+    [
+     "77.11",
+     "Otomobil ve hafif motorlu kara taşıtlarının kiralanması"
+    ]
+   ],
+   "m": [
+    "Sıfır ve ikinci el otomobil, hafif ticari araç, motosiklet ve ticari araçların alım satımını, ithalat ve ihracatını yapmak.",
+    "Yetkili bayilik, galeri ve showroom açmak, işletmek.",
+    "Araçların ekspertiz, bakım, temizlik ve hazırlık işlemlerini yaptırmak; noter satış ve devir işlemlerini yürütmek.",
+    "Araç kiralama (günlük ve uzun dönem) hizmeti vermek, filo kiralama yapmak.",
+    "Araç satışında kredi, sigorta ve kasko kuruluşlarına aracılık eden anlaşmalar yapmak (sigorta acenteliği hariç)."
+   ],
+   "not": "İkinci el motorlu kara taşıtı ticareti için Ticaret Bakanlığı’ndan yetki belgesi şarttır."
+  },
+  {
+   "id": "yedek-parca",
+   "k": "ticaret",
+   "ad": "Oto yedek parça, lastik ve aksesuar",
+   "nace": [
+    [
+     "47.8",
+     "Motorlu taşıt parça ve aksesuarları perakende ticareti (grup)"
+    ],
+    [
+     "46",
+     "Toptan ticaret: motorlu taşıt parçalarına ilişkin sınıf"
+    ],
+    [
+     "95.31",
+     "Motorlu kara taşıtlarının bakım ve onarımı"
+    ]
+   ],
+   "m": [
+    "Otomobil, ticari araç, iş makinesi ve motosiklet yedek parçası, lastik, akü, madeni yağ ve aksesuarının toptan ve perakende ticaretini yapmak.",
+    "Yedek parça ithal etmek, ihraç etmek; marka temsilciliği ve distribütörlük almak.",
+    "Mağaza ve depo açmak; internet ve pazaryerleri üzerinden satış yapmak.",
+    "Lastik değişimi, balans, rot ayarı ve hızlı servis hizmetleri vermek."
+   ]
+  },
+  {
+   "id": "akaryakit",
+   "k": "ticaret",
+   "ad": "Akaryakıt istasyonu ve LPG",
+   "nace": [
+    [
+     "47.30",
+     "Otomotiv yakıtının perakende ticareti"
+    ],
+    [
+     "46",
+     "Toptan ticaret: yakıtlara ilişkin sınıf"
+    ]
+   ],
+   "m": [
+    "Akaryakıt ve otogaz (LPG) istasyonu kurmak, kiralamak ve işletmek; bayilik sözleşmeleri yapmak.",
+    "Madeni yağ, araç bakım ürünleri ve aksesuarlarının satışını yapmak.",
+    "İstasyon bünyesinde market, kafe, oto yıkama, lastik ve hızlı servis birimleri işletmek.",
+    "Elektrikli araç şarj istasyonu kurmak ve işletmek.",
+    "Akaryakıt ve LPG’nin taşınması, depolanması ve dağıtımı faaliyetlerinde mevzuatın izin verdiği ölçüde bulunmak."
+   ],
+   "not": "Bayilik, taşıma, depolama ve şarj hizmetleri EPDK lisansına tabidir; konuyu lisans türüne uygun yazın."
+  },
+  {
+   "id": "medikal-ticaret",
+   "k": "ticaret",
+   "ad": "Medikal ürün, tıbbi cihaz ve ortopedi ticareti",
+   "nace": [
+    [
+     "47.7",
+     "Diğer ürünlerin perakende ticareti (tıbbi ve ortopedik ürünler)"
+    ],
+    [
+     "46",
+     "Toptan ticaret: tıbbi ürünlere ilişkin sınıf"
+    ]
+   ],
+   "m": [
+    "Tıbbi cihaz, sarf malzemesi, ortopedik ürün, işitme cihazı, hasta bakım ürünleri ve laboratuvar malzemesinin toptan ve perakende ticaretini yapmak.",
+    "Hastanelere, kliniklere ve kamu kurumlarına ürün tedarik etmek; ihalelere katılmak.",
+    "Ürünleri ithal etmek, Türkiye distribütörlüğü ve temsilciliği almak.",
+    "Cihazların kurulum, eğitim, bakım ve teknik servis hizmetlerini vermek.",
+    "Medikal ürünleri internet üzerinden mevzuatın izin verdiği ölçüde satmak."
+   ],
+   "not": "Tıbbi cihaz satış merkezleri TİTCK kaydı ve sorumlu personel şartına tabidir; reçeteli ilaç satışı yalnızca eczanelerce yapılır."
+  },
+  {
+   "id": "kozmetik-ticaret",
+   "k": "ticaret",
+   "ad": "Kozmetik, parfümeri ve kişisel bakım ticareti",
+   "nace": [
+    [
+     "47.7",
+     "Diğer ürünlerin perakende ticareti (kozmetik ve kişisel bakım)"
+    ],
+    [
+     "46",
+     "Toptan ticaret: parfüm ve kozmetiğe ilişkin sınıf"
+    ]
+   ],
+   "m": [
+    "Kozmetik, parfüm, cilt ve saç bakım ürünleri, kişisel hijyen ürünleri ve aksesuarların toptan ve perakende ticaretini yapmak.",
+    "Yurt dışı markaların distribütörlüğünü almak, ithalat ve ihracat yapmak.",
+    "Mağaza ve kozmetik reyonları açmak, işletmek; internet üzerinden satış yapmak.",
+    "Kendi markasıyla fason ürün ürettirmek ve satmak; ürün kayıt süreçlerini yürütmek."
+   ]
+  },
+  {
+   "id": "tarim-girdileri",
+   "k": "ticaret",
+   "ad": "Tarım girdileri (tohum, gübre, ilaç) ve tarım makineleri ticareti",
+   "nace": [
+    [
+     "46.61",
+     "Tarım makineleri, ekipman ve malzemelerinin toptan ticareti"
+    ],
+    [
+     "46",
+     "Toptan ticaret: tarımsal hammadde ve kimyasallara ilişkin sınıf"
+    ]
+   ],
+   "m": [
+    "Tohum, fide, gübre, zirai ilaç, yem ve tarımsal girdilerin toptan ve perakende ticaretini yapmak.",
+    "Traktör, tarım makinesi, sulama ekipmanı ve yedek parçalarının alım satımını, ithalat ve ihracatını yapmak; bayilik almak.",
+    "Tarım makinelerinin bakım, onarım ve servis hizmetlerini vermek.",
+    "Üreticilere tarımsal danışmanlık vermek, girdi ön finansmanı ve vadeli satış yapmak.",
+    "Hububat, bakliyat ve tarım ürünlerini üreticiden satın almak, depolamak ve satmak; lisanslı depoculuk sistemini kullanmak."
+   ],
+   "not": "Zirai ilaç ve gübre bayiliği ile tohum satışı Tarım ve Orman Bakanlığı bayilik belgelerine tabidir."
+  },
+  {
+   "id": "kirtasiye-kitap",
+   "k": "ticaret",
+   "ad": "Kırtasiye, kitap, oyuncak ve hediyelik eşya",
+   "nace": [
+    [
+     "47.6",
+     "Kültür ve eğlence ürünlerinin perakende ticareti (grup)"
+    ],
+    [
+     "47.7",
+     "Diğer ürünlerin perakende ticareti (hediyelik eşya dahil)"
+    ]
+   ],
+   "m": [
+    "Kitap, dergi, kırtasiye, okul ve ofis malzemesi, sanat malzemesi, oyuncak ve hobi ürünleri satmak.",
+    "Hediyelik eşya, promosyon ürünü, parti ve süsleme malzemesi ticareti yapmak.",
+    "Mağaza açmak, işletmek; okullara ve kurumlara toplu satış yapmak.",
+    "Ürünleri internet üzerinden satmak, ithal ve ihraç etmek.",
+    "Fotokopi, baskı, ciltleme ve laminasyon hizmetleri vermek."
+   ]
+  },
+  {
+   "id": "evcil-hayvan",
+   "k": "ticaret",
+   "ad": "Pet shop, evcil hayvan ürünleri ve bakım",
+   "nace": [
+    [
+     "47.7",
+     "Diğer ürünlerin perakende ticareti (evcil hayvan ve mama)"
+    ],
+    [
+     "96.9",
+     "Diğer kişisel hizmetler (evcil hayvan bakımı) (grup)"
+    ],
+    [
+     "75.00",
+     "Veterinerlik hizmetleri"
+    ]
+   ],
+   "m": [
+    "Evcil hayvan maması, aksesuarı, bakım ürünü ve ekipmanının toptan ve perakende ticaretini yapmak.",
+    "Pet shop açmak, işletmek; internet üzerinden satış yapmak.",
+    "Evcil hayvan kuaförü, bakım, eğitim, pansiyon ve kreş hizmetleri vermek.",
+    "Mama ve ürün ithalatı yapmak, distribütörlük almak.",
+    "Veteriner hekimler aracılığıyla veteriner muayene ve tedavi hizmeti sunan klinikler kurmak (mevzuattaki şartlarla)."
+   ],
+   "not": "Pet shop ve hayvan satışı için il müdürlüğünden izin, veteriner klinikleri için ise mesul veteriner hekim şartı vardır."
+  },
+  {
+   "id": "otel",
+   "k": "turizm",
+   "ad": "Otel, pansiyon ve konaklama",
+   "nace": [
+    [
+     "55.10",
+     "Oteller ve benzeri konaklama yerleri"
+    ],
+    [
+     "55.20",
+     "Tatil ve diğer kısa süreli konaklama yerleri"
+    ],
+    [
+     "55.30",
+     "Kamp alanları ve karavan parkları"
+    ],
+    [
+     "55.40",
+     "Konaklamaya aracılık hizmetleri"
+    ]
+   ],
+   "m": [
+    "Otel, butik otel, apart otel, motel, pansiyon, tatil köyü, kamp alanı, glamping ve benzeri konaklama tesisleri kurmak, kiralamak, işletmek ve işlettirmek.",
+    "Konaklama tesislerinde restoran, bar, kafe, spa, hamam, sauna, fitness, havuz, plaj, toplantı ve düğün salonu işletmek.",
+    "Günlük kiralık konut ve kısa süreli konaklama hizmeti vermek; kiralama platformları üzerinden rezervasyon almak.",
+    "Turizm yatırım ve işletme belgesi almak; turizm teşviklerinden yararlanmak.",
+    "Otel yönetim ve işletme sözleşmeleri yapmak; zincir otellerin franchise’ını almak veya kendi markasını franchise olarak vermek.",
+    "Konaklayan misafirlere transfer, tur, araç kiralama ve rehberlik hizmetlerini anlaşmalı kuruluşlarla sunmak.",
+    "Turizm amaçlı arsa, arazi ve tesis satın almak, kiralamak; tesislerin inşaatını, tadilatını ve dekorasyonunu yaptırmak."
+   ],
+   "not": "Tesisler Kültür ve Turizm Bakanlığı belgesi veya belediye ruhsatıyla açılır; konutların turizm amaçlı kiralanması 7464 s. Kanun’la izne bağlandı."
+  },
+  {
+   "id": "restoran-kafe",
+   "k": "turizm",
+   "ad": "Restoran, kafe, bar ve paket servis",
+   "nace": [
+    [
+     "56.11",
+     "Restoranlar"
+    ],
+    [
+     "56.12",
+     "Seyyar yemek hizmetleri"
+    ],
+    [
+     "56.30",
+     "İçecek sunum hizmetleri"
+    ],
+    [
+     "56.40",
+     "Yiyecek-içecek hizmetlerine aracılık"
+    ]
+   ],
+   "m": [
+    "Restoran, lokanta, kafe, kafeterya, pastane, fast food, büfe, bar, pub, nargile salonu (mevzuattaki şartlarla) ve benzeri yiyecek-içecek işletmeleri açmak, işletmek ve kiralamak.",
+    "Paket servis, gel-al ve yemek sipariş platformları üzerinden satış yapmak; bulut mutfak (dark kitchen) işletmek.",
+    "Yemek arabası (food truck), seyyar satış ve festival standları işletmek.",
+    "Kendi markasını franchise olarak vermek, başka markaların franchise’ını almak; zincir restoran ağı kurmak.",
+    "Gıda, içecek, mutfak ekipmanı ve sarf malzemelerinin alım satımını, ithalatını yapmak.",
+    "Etkinlik, toplantı ve organizasyonlara ikram ve yemek hizmeti vermek.",
+    "Mevzuatın izin verdiği yerlerde alkollü içki sunumu ve canlı müzik faaliyetinde bulunmak."
+   ],
+   "not": "Belediyeden işyeri açma ve çalışma ruhsatı, alkollü içki için satış belgesi gerekir."
+  },
+  {
+   "id": "catering",
+   "k": "turizm",
+   "ad": "Catering ve toplu yemek",
+   "nace": [
+    [
+     "56.21",
+     "Etkinlikler için yemek hizmeti (catering)"
+    ],
+    [
+     "56.22",
+     "Sözleşmeye dayalı diğer yemek hizmetleri"
+    ],
+    [
+     "10.85",
+     "Hazır yemek üretimi"
+    ]
+   ],
+   "m": [
+    "Fabrika, şantiye, okul, hastane, yurt, otel ve kamu kurumlarına toplu yemek hizmeti vermek; merkezi mutfak kurmak ve işletmek.",
+    "Düğün, toplantı, kongre, fuar ve özel davetler için catering, ikram ve kokteyl hizmeti vermek.",
+    "Kurum yemekhanelerini, kafeteryalarını ve kantinlerini işletmek.",
+    "Kamu ve özel sektör yemek ihalelerine katılmak.",
+    "Hazır yemek, kumanya ve kutu yemek üretmek, paketlemek ve dağıtmak.",
+    "Gıda maddeleri, mutfak ekipmanı ve servis malzemesi alım satımı yapmak; soğuk zincir araçları işletmek."
+   ]
+  },
+  {
+   "id": "seyahat-acentasi",
+   "k": "turizm",
+   "ad": "Seyahat acentası ve tur organizasyonu",
+   "nace": [
+    [
+     "79.11",
+     "Seyahat acentesi faaliyetleri"
+    ],
+    [
+     "79.12",
+     "Tur operatörü faaliyetleri"
+    ],
+    [
+     "79.90",
+     "Diğer rezervasyon hizmetleri"
+    ]
+   ],
+   "m": [
+    "Seyahat acentası olarak yurt içi ve yurt dışı paket tur, kültür turu, inanç turizmi, sağlık turizmi, kongre ve teşvik (MICE) organizasyonları düzenlemek.",
+    "Uçak, otobüs, tren ve feribot bileti; otel rezervasyonu; transfer ve araç kiralama hizmetlerini satmak.",
+    "Yabancı turistlere Türkiye’de tur ve konaklama hizmetleri sunmak (gelen turizm).",
+    "Rehberlik hizmetlerini kokartlı turist rehberleri aracılığıyla vermek.",
+    "Vize başvurusu ve seyahat sigortası işlemlerinde danışmanlık vermek (sigorta acenteliği hariç).",
+    "Online rezervasyon sistemi ve seyahat platformu kurmak, işletmek."
+   ],
+   "not": "Seyahat acentası belgesi (Kültür ve Turizm Bakanlığı) ve TÜRSAB üyeliği olmadan faaliyet yapılamaz; unvanda “Seyahat Acentası” ibaresi bulunmalıdır."
+  },
+  {
+   "id": "organizasyon",
+   "k": "turizm",
+   "ad": "Organizasyon, düğün, etkinlik ve fuar",
+   "nace": [
+    [
+     "82.30",
+     "Kongre ve ticari fuar organizasyonu"
+    ],
+    [
+     "90.3",
+     "Sanat ve gösteri sanatlarını destekleyici faaliyetler (grup)"
+    ],
+    [
+     "77.22",
+     "Diğer kişisel ve ev eşyalarının kiralanması"
+    ]
+   ],
+   "m": [
+    "Düğün, nişan, kına, doğum günü, mezuniyet, kurumsal etkinlik, lansman, konser, festival ve özel davet organizasyonları düzenlemek.",
+    "Kongre, seminer, konferans, fuar ve sergi organizasyonu yapmak; stand tasarımı ve kurulumu yapmak.",
+    "Düğün salonu, etkinlik alanı ve davet mekânları işletmek ve kiralamak.",
+    "Ses, ışık, sahne, çadır, masa-sandalye, dekor ve süsleme malzemesi kiralamak ve satmak.",
+    "Sanatçı, sunucu, müzisyen ve ekip temin etmek; bilet satışı organizasyonu yapmak.",
+    "Etkinliklerin fotoğraf, video, canlı yayın ve sosyal medya hizmetlerini vermek."
+   ],
+   "not": "Ticari fuar düzenlemek TOBB/Ticaret Bakanlığı mevzuatındaki izne tabidir."
+  },
+  {
+   "id": "yuk-tasimaciligi",
+   "k": "lojistik",
+   "ad": "Karayolu yük taşımacılığı ve nakliye",
+   "nace": [
+    [
+     "49.41",
+     "Karayolu ile yük taşımacılığı"
+    ],
+    [
+     "49.42",
+     "Taşımacılık için kiralama dahil ev ve büro eşyası taşıma (evden eve)"
+    ],
+    [
+     "52.31",
+     "Yük taşımacılığına aracılık hizmetleri"
+    ]
+   ],
+   "m": [
+    "Yurt içi ve uluslararası karayolu yük taşımacılığı yapmak; komple ve parsiyel yük taşımak.",
+    "Frigorifik, tehlikeli madde, gabari dışı yük ve konteyner taşımacılığı yapmak (ilgili belgeleri alarak).",
+    "Evden eve, ofis ve fabrika taşımacılığı, ambalajlama ve eşya depolama hizmetleri vermek.",
+    "Taşıma işleri organizatörlüğü, komisyonculuk ve acentelik yapmak; yük ve araç eşleştirme platformu işletmek.",
+    "Çekici, kamyon, kamyonet, römork ve yarı römork satın almak, kiralamak, kiraya vermek ve finansal kiralama yoluyla edinmek.",
+    "Taşıma için gerekli yetki belgelerini almak, araç takip ve filo yönetim sistemleri kurmak.",
+    "Araçların bakım, onarım ve lastik hizmetlerini kendi bünyesinde yapmak veya yaptırmak."
+   ],
+   "not": "Ulaştırma ve Altyapı Bakanlığı’ndan faaliyete uygun yetki belgesi (ör. C2, K1, L, R) alınması zorunludur; tehlikeli madde için ayrıca belge gerekir."
+  },
+  {
+   "id": "lojistik-depo",
+   "k": "lojistik",
+   "ad": "Lojistik, depolama, antrepo ve dağıtım",
+   "nace": [
+    [
+     "52.10",
+     "Depolama ve ambarlama"
+    ],
+    [
+     "52.24",
+     "Kargo yükleme ve boşaltma hizmetleri"
+    ],
+    [
+     "52.25",
+     "Lojistik hizmetleri"
+    ],
+    [
+     "52.31",
+     "Yük taşımacılığına aracılık hizmetleri"
+    ]
+   ],
+   "m": [
+    "Genel depo, soğuk hava deposu, gümrüklü ve gümrüksüz antrepo, lisanslı depo ve dağıtım merkezi kurmak, kiralamak ve işletmek.",
+    "Elleçleme, paketleme, etiketleme, stok yönetimi, sipariş toplama ve e-ticaret depolama (fulfillment) hizmetleri vermek.",
+    "Kara, deniz, hava ve demiryolu ile kombine taşımacılık organize etmek; uluslararası taşıma işleri organizatörlüğü (freight forwarding) yapmak.",
+    "Gümrük işlemlerinde gümrük müşavirleriyle çalışarak dış ticaret lojistiği hizmeti vermek.",
+    "Lojistik yazılımları kullanmak, depo yönetim sistemleri kurmak.",
+    "Forklift, raf sistemi ve depolama ekipmanını satın almak ve kiralamak."
+   ],
+   "not": "Antrepo işletmesi Ticaret Bakanlığı iznine, lisanslı depoculuk ayrı lisansa tabidir."
+  },
+  {
+   "id": "kargo-kurye",
+   "k": "lojistik",
+   "ad": "Kargo, kurye ve son kilometre teslimat",
+   "nace": [
+    [
+     "53.20",
+     "Diğer posta ve kurye faaliyetleri"
+    ],
+    [
+     "53.30",
+     "Posta ve kurye faaliyetlerine aracılık hizmetleri"
+    ]
+   ],
+   "m": [
+    "Doküman, koli ve paketlerin şehir içi, şehirler arası ve uluslararası taşınmasını ve teslimini yapmak.",
+    "Moto kurye, araçlı kurye, aynı gün teslimat ve son kilometre dağıtım hizmeti vermek.",
+    "Kargo şubesi, transfer merkezi ve teslim noktası açmak, işletmek; acentelik vermek.",
+    "E-ticaret işletmelerine entegre kargo ve iade hizmetleri sunmak; kurye yönlendirme yazılımı işletmek.",
+    "Kurye ve kargo araçlarını satın almak, kiralamak."
+   ],
+   "not": "Posta ve kargo hizmeti BTK’dan posta hizmet sağlayıcı yetkilendirmesi gerektirir."
+  },
+  {
+   "id": "yolcu-tasima",
+   "k": "lojistik",
+   "ad": "Yolcu taşımacılığı, servis ve transfer",
+   "nace": [
+    [
+     "49.31",
+     "Tarifeli kara yolu yolcu taşımacılığı"
+    ],
+    [
+     "49.32",
+     "Tarifesiz kara yolu yolcu taşımacılığı"
+    ],
+    [
+     "52.32",
+     "Yolcu taşımacılığına aracılık hizmetleri"
+    ]
+   ],
+   "m": [
+    "Personel ve öğrenci servis taşımacılığı yapmak.",
+    "Turizm taşımacılığı, havalimanı transferi, VIP ve şoförlü araç hizmetleri vermek.",
+    "Şehirler arası ve uluslararası yolcu taşımacılığı yapmak; otobüs işletmesi ve yazıhaneler açmak.",
+    "Yolcu taşımacılığında acentelik ve bilet satışı yapmak; rezervasyon platformu işletmek.",
+    "Otobüs, midibüs, minibüs ve otomobil satın almak, kiralamak, kiraya vermek."
+   ],
+   "not": "Yetki belgesi (ör. D2, B2) ve şehir içinde belediye izni gerekir; taksi ve dolmuş plakaları ayrı mevzuata tabidir."
+  },
+  {
+   "id": "arac-kiralama",
+   "k": "lojistik",
+   "ad": "Araç ve iş makinesi kiralama",
+   "nace": [
+    [
+     "77.11",
+     "Otomobil ve hafif motorlu kara taşıtlarının kiralanması"
+    ],
+    [
+     "77.12",
+     "Kamyon kiralanması"
+    ],
+    [
+     "77.32",
+     "İnşaat ve inşaat mühendisliği makine ve ekipmanının kiralanması"
+    ],
+    [
+     "77.51",
+     "Otomobil, karavan ve römork kiralamaya aracılık"
+    ]
+   ],
+   "m": [
+    "Otomobil, hafif ticari araç, minibüs, karavan, motosiklet ve kamyon kiralamak; günlük, aylık ve uzun dönem filo kiralama hizmeti vermek.",
+    "İş makinesi, vinç, forklift, jeneratör, iskele ve inşaat ekipmanını operatörlü veya operatörsüz kiralamak.",
+    "Kiralık araç ofisleri ve havalimanı şubeleri açmak; uluslararası kiralama markalarının franchise’ını almak.",
+    "Kiralanan araçların bakım, sigorta, lastik ve hasar süreçlerini yönetmek.",
+    "Araçları satın almak, finansal kiralama yoluyla edinmek, ikinci el olarak satmak."
+   ]
+  },
+  {
+   "id": "denizcilik",
+   "k": "lojistik",
+   "ad": "Denizcilik, yat ve tekne işletmeciliği",
+   "nace": [
+    [
+     "50.10",
+     "Deniz ve kıyı sularında yolcu taşımacılığı"
+    ],
+    [
+     "50.20",
+     "Deniz ve kıyı sularında yük taşımacılığı"
+    ],
+    [
+     "52.22",
+     "Su yolu taşımacılığını destekleyici hizmetler"
+    ],
+    [
+     "77.34",
+     "Su yolu taşıtlarının kiralanması"
+    ]
+   ],
+   "m": [
+    "Deniz ve iç sularda yolcu ve yük taşımacılığı yapmak; gemi, yat ve tekne satın almak, kiralamak ve işletmek.",
+    "Günlük ve haftalık yat kiralama (charter), mavi tur ve tekne turu düzenlemek.",
+    "Gemi acenteliği, kumanyacılık, gemi kiralama komisyonculuğu (shipbroking) yapmak.",
+    "Marina, çekek yeri ve tekne bakım-onarım tesisi işletmek.",
+    "Deniz araçları, yedek parça ve ekipmanın alım satımını ve ithalatını yapmak."
+   ],
+   "not": "Gemi acenteliği ve yat işletmeciliği Ulaştırma ve Altyapı Bakanlığı / Kültür ve Turizm Bakanlığı belgelerine tabidir."
+  },
+  {
+   "id": "yazilim",
+   "k": "bilisim",
+   "ad": "Yazılım geliştirme ve SaaS",
+   "nace": [
+    [
+     "62.10",
+     "Bilgisayar programlama faaliyetleri"
+    ],
+    [
+     "58.29",
+     "Diğer yazılım programlarının yayımlanması"
+    ],
+    [
+     "62.90",
+     "Diğer bilgi teknolojisi ve bilgisayar hizmetleri"
+    ]
+   ],
+   "m": [
+    "Masaüstü, web ve mobil yazılımlar, kurumsal uygulamalar, e-ticaret altyapıları ve internet siteleri tasarlamak, geliştirmek, satmak, kiralamak ve lisanslamak.",
+    "Yazılımları bulut üzerinden abonelikle hizmet olarak (SaaS) sunmak; uygulama mağazalarında yayımlamak.",
+    "Yapay zekâ, makine öğrenmesi, veri analitiği, nesnelerin interneti ve blokzincir tabanlı çözümler geliştirmek.",
+    "Müşteri ihtiyacına özel yazılım geliştirmek; yazılımların kurulum, entegrasyon, bakım, güncelleme ve destek hizmetlerini vermek.",
+    "Yazılım ve bilişim alanında Ar-Ge projeleri yürütmek; teknoloji geliştirme bölgelerinde ve Ar-Ge merkezlerinde faaliyette bulunmak.",
+    "Yazılım ürünlerinin fikri mülkiyet haklarını tescil ettirmek, lisans vermek ve almak; yurt dışına yazılım ihraç etmek.",
+    "Yazılım eğitimleri, sertifika programları ve seminerler düzenlemek (resmî izne tabi eğitim kurumu açmak hariç).",
+    "Bilişim donanımı ve lisanslı yazılım ürünlerinin alım satımını yapmak."
+   ],
+   "not": "Teknoparkta faaliyet için yönetici şirketin onayı gerekir; ödeme hizmeti ve kripto varlık hizmeti ayrı izin ister."
+  },
+  {
+   "id": "mobil-oyun",
+   "k": "bilisim",
+   "ad": "Mobil uygulama ve oyun geliştirme",
+   "nace": [
+    [
+     "58.21",
+     "Video oyunlarının yayımlanması"
+    ],
+    [
+     "62.10",
+     "Bilgisayar programlama faaliyetleri"
+    ],
+    [
+     "74.12",
+     "Grafik tasarım ve görsel iletişim"
+    ]
+   ],
+   "m": [
+    "Bilgisayar, konsol ve mobil cihazlar için oyun ve uygulama tasarlamak, geliştirmek ve yayımlamak.",
+    "Oyun içi satın alma, abonelik ve reklam modelleriyle gelir elde etmek; uygulama mağazaları ve dağıtım platformlarıyla sözleşme yapmak.",
+    "Oyun için grafik, animasyon, karakter, müzik ve ses tasarımı yapmak ve yaptırmak.",
+    "Başka şirketlere oyun ve uygulama geliştirme hizmeti vermek; oyun yayıncılığı yapmak.",
+    "Espor takımı kurmak, turnuva düzenlemek ve sponsorluk anlaşmaları yapmak.",
+    "Oyun ve uygulamalar üzerindeki fikri hakları devretmek, lisanslamak."
+   ]
+  },
+  {
+   "id": "bt-danismanlik",
+   "k": "bilisim",
+   "ad": "BT danışmanlığı, sistem entegrasyonu ve siber güvenlik",
+   "nace": [
+    [
+     "62.20",
+     "Bilgisayar danışmanlığı ve bilgisayar tesisleri yönetimi"
+    ],
+    [
+     "62.90",
+     "Diğer bilgi teknolojisi ve bilgisayar hizmetleri"
+    ],
+    [
+     "95.10",
+     "Bilgisayar ve iletişim ekipmanı onarımı"
+    ]
+   ],
+   "m": [
+    "Kurumlara bilgi teknolojileri danışmanlığı, dijital dönüşüm, sistem analizi ve proje yönetimi hizmetleri vermek.",
+    "Sunucu, ağ, veri merkezi, depolama ve yedekleme sistemleri kurmak; sistem entegrasyonu ve dış kaynak BT hizmeti vermek.",
+    "Siber güvenlik danışmanlığı, sızma testi, güvenlik açığı taraması ve olay müdahale hizmetleri vermek.",
+    "KVKK uyumu, bilgi güvenliği yönetim sistemi kurulumu ve denetime hazırlık danışmanlığı vermek.",
+    "Donanım ve yazılım ürünlerinin satışını, kurulumunu, bakım ve onarımını yapmak; çözüm ortaklığı ve bayilik almak.",
+    "Kurumlara teknik destek (helpdesk) ve uzaktan yönetim hizmetleri vermek."
+   ],
+   "not": "Kamu kurumlarına sızma testi hizmeti için TSE personel ve firma belgelendirmesi aranabilir."
+  },
+  {
+   "id": "barindirma",
+   "k": "bilisim",
+   "ad": "Barındırma, veri merkezi ve bulut",
+   "nace": [
+    [
+     "63.10",
+     "Bilgi işlem altyapısı, veri işleme, barındırma ve ilgili faaliyetler"
+    ],
+    [
+     "63.92",
+     "Diğer bilgi hizmetleri"
+    ],
+    [
+     "61.20",
+     "Telekomünikasyon hizmetlerinin yeniden satışı ve aracılığı"
+    ]
+   ],
+   "m": [
+    "İnternet sitesi, sunucu, e-posta ve uygulama barındırma (hosting), sanal sunucu, bulut sunucu ve veri depolama hizmetleri vermek.",
+    "Veri merkezi kurmak, işletmek; sunucu barındırma (colocation) ve kabin kiralama hizmeti vermek.",
+    "Alan adı tescil aracılığı yapmak; SSL sertifikası ve güvenlik ürünleri satmak.",
+    "Veri işleme, yedekleme, felaket kurtarma ve yönetilen hizmetler sunmak.",
+    "Altyapı ekipmanını satın almak, kiralamak ve finansal kiralama yoluyla edinmek."
+   ],
+   "not": "Yer sağlayıcılar 5651 s. Kanun kapsamında BTK’ya bildirimde bulunur; .tr alan adı tescili için TRABİS kayıt kuruluşu yetkisi gerekir."
+  },
+  {
+   "id": "dijital-pazarlama",
+   "k": "bilisim",
+   "ad": "Dijital pazarlama ve sosyal medya ajansı",
+   "nace": [
+    [
+     "73.11",
+     "Reklam ajanslarının faaliyetleri"
+    ],
+    [
+     "73.12",
+     "Medya temsilciliği"
+    ],
+    [
+     "73.20",
+     "Piyasa ve kamuoyu araştırması"
+    ],
+    [
+     "74.12",
+     "Grafik tasarım ve görsel iletişim"
+    ]
+   ],
+   "m": [
+    "İşletmelere dijital pazarlama, sosyal medya yönetimi, içerik üretimi, arama motoru optimizasyonu (SEO) ve arama motoru reklamcılığı hizmetleri vermek.",
+    "Reklam kampanyası planlamak, dijital reklam alanı satın almak ve yönetmek; performans pazarlaması yapmak.",
+    "Influencer pazarlaması, marka işbirlikleri ve sponsorluk ajanslığı yapmak.",
+    "Kurumsal kimlik, logo, ambalaj, web ve grafik tasarım hizmetleri vermek; fotoğraf ve video içerik üretmek.",
+    "Pazar araştırması, tüketici analizi ve raporlama hizmetleri vermek.",
+    "E-posta pazarlaması, CRM ve pazarlama otomasyonu kurulumu yapmak."
+   ],
+   "not": "Ticari elektronik ileti gönderiminde 6563 s. Kanun ve İYS kaydı; reklam içeriklerinde Ticari Reklam ve Haksız Ticari Uygulamalar Yönetmeliği uygulanır."
+  },
+  {
+   "id": "reklam-ajansi",
+   "k": "bilisim",
+   "ad": "Reklam, halkla ilişkiler ve açık hava reklamcılığı",
+   "nace": [
+    [
+     "73.11",
+     "Reklam ajanslarının faaliyetleri"
+    ],
+    [
+     "73.12",
+     "Medya temsilciliği"
+    ],
+    [
+     "73.30",
+     "Halkla ilişkiler ve iletişim faaliyetleri"
+    ]
+   ],
+   "m": [
+    "Her türlü reklam, tanıtım ve iletişim kampanyası tasarlamak, yürütmek; televizyon, radyo, gazete, dergi, internet ve açık hava mecralarında reklam yer ve zamanı satın almak ve satmak.",
+    "Açık hava reklam panoları, billboard, raket, megalight ve dijital ekran kurmak, kiralamak ve işletmek (belediye izinleriyle).",
+    "Halkla ilişkiler, kriz iletişimi, basın bülteni hazırlama ve medya ilişkileri hizmetleri vermek.",
+    "Promosyon ürünleri, fuar standı, POP malzemesi ve tanıtım materyalleri hazırlamak ve ürettirmek.",
+    "Marka danışmanlığı, kurumsal iletişim ve itibar yönetimi hizmetleri vermek.",
+    "Etkinlik ve lansman organizasyonları düzenlemek."
+   ]
+  },
+  {
+   "id": "sinema-dizi-reklam",
+   "k": "bilisim",
+   "ad": "Sinema, dizi, reklam filmi ve video prodüksiyon",
+   "nace": [
+    [
+     "59.11",
+     "Sinema filmi, video ve televizyon programları yapım faaliyetleri"
+    ],
+    [
+     "59.12",
+     "Sinema filmi, video ve televizyon programları çekim sonrası faaliyetleri"
+    ],
+    [
+     "59.13",
+     "Sinema filmi, video ve televizyon programları dağıtım faaliyetleri"
+    ],
+    [
+     "73.11",
+     "Reklam ajanslarının faaliyetleri"
+    ]
+   ],
+   "m": [
+    "Sinema filmi, televizyon dizisi, belgesel, reklam filmi, tanıtım filmi, video klip, kısa film, dijital platform içeriği ve her türlü görsel-işitsel eserin yapımını, yapımcılığını ve ortak yapımcılığını yapmak.",
+    "Senaryo, kurgu, montaj, seslendirme, dublaj, alt yazı, renk düzenleme, görsel efekt ve animasyon gibi çekim öncesi ve çekim sonrası hizmetlerini vermek.",
+    "Yapılan veya devralınan eserlerin yurt içi ve yurt dışında sinema salonları, televizyon kanalları ve dijital platformlarda dağıtımını, satışını, kiralanmasını ve lisanslanmasını yapmak; eserler üzerindeki mali hakları devralmak, devretmek ve lisans vermek.",
+    "Reklam ajansı olarak reklam kampanyaları tasarlamak, reklam ve tanıtım filmi hazırlamak, medya planlama ve yerleştirme hizmetleri vermek.",
+    "Çekim ekipmanı, ışık, ses, kamera, dekor, kostüm ve aksesuar almak, satmak, kiralamak; stüdyo kurmak, işletmek ve kiraya vermek.",
+    "Oyuncu, yönetmen, senarist ve teknik ekip ile sözleşmeler yapmak; oyuncu menajerliği, casting ve prodüksiyon organizasyonu hizmetleri vermek.",
+    "Festival, gala, gösterim ve tanıtım etkinlikleri düzenlemek; film festivallerine ve pazarlarına katılmak.",
+    "Kültür ve Turizm Bakanlığı ve diğer kurumların sinema destek, teşvik ve hibe programlarına başvurmak; uluslararası ortak yapım anlaşmaları yapmak.",
+    "Yurt dışı yapımlara Türkiye’de prodüksiyon hizmeti (servis prodüksiyon) vermek; çekim izinlerini almak."
+   ],
+   "not": "Sinema eserlerinin kayıt ve tescili Kültür ve Turizm Bakanlığı’nca yapılır; yayın kuruluşu kurmak RTÜK lisansı ister. Eser sahiplerine telif ödemelerinde %17, serbest meslek ödemelerinde %20 stopaj vardır (GVK 94)."
+  },
+  {
+   "id": "muzik",
+   "k": "bilisim",
+   "ad": "Müzik yapımı, kayıt stüdyosu ve sanatçı menajerliği",
+   "nace": [
+    [
+     "59.20",
+     "Ses kaydı ve müzik yayıncılığı faaliyetleri"
+    ],
+    [
+     "90.2",
+     "Gösteri sanatları (grup)"
+    ],
+    [
+     "74.99",
+     "Başka yerde sınıflandırılmamış diğer mesleki faaliyetler (menajerlik)"
+    ]
+   ],
+   "m": [
+    "Müzik eserlerinin, albüm ve tekli kayıtlarının yapımını yapmak; kayıt, mix ve mastering stüdyosu kurmak ve işletmek.",
+    "Müzik eserlerini dijital platformlarda yayımlamak, dağıtmak; yayın ve çoğaltma haklarını devralmak, lisanslamak.",
+    "Sanatçı menajerliği, konser ve turne organizasyonu yapmak; bilet satışını organize etmek.",
+    "Reklam, dizi ve film müziği, jingle ve ses tasarımı yapmak.",
+    "Müzik aletleri ve ses ekipmanı alım satımı ve kiralaması yapmak.",
+    "Müzik eğitimi atölyeleri düzenlemek (resmî izne tabi kurs açmak hariç)."
+   ]
+  },
+  {
+   "id": "yayincilik",
+   "k": "bilisim",
+   "ad": "Kitap, dergi, gazete ve dijital yayıncılık",
+   "nace": [
+    [
+     "58.11",
+     "Kitap yayımcılığı"
+    ],
+    [
+     "58.1",
+     "Gazete, dergi, süreli yayın ve diğer yayımcılık (grup)"
+    ]
+   ],
+   "m": [
+    "Kitap, ders kitabı, dergi, gazete, bülten ve süreli yayın yayımlamak; basılı ve dijital (e-kitap, sesli kitap) olarak çıkarmak.",
+    "Telif haklarını satın almak, çeviri hakları edinmek, yazarlarla sözleşme yapmak.",
+    "Haber sitesi, dijital dergi, bülten ve podcast yayımlamak; abonelik ve reklam geliri elde etmek.",
+    "Yayınların dağıtımını yapmak veya yaptırmak; kitap fuarlarına katılmak.",
+    "Editörlük, redaksiyon, düzelti ve sayfa tasarımı hizmetleri vermek."
+   ],
+   "not": "Süreli yayınlarda 5187 s. Basın Kanunu’na göre beyanname verilir; kitaplar için bandrol ve ISBN işlemleri yapılır."
+  },
+  {
+   "id": "yayin-kurulusu",
+   "k": "bilisim",
+   "ad": "Radyo, televizyon ve internet yayıncılığı",
+   "nace": [
+    [
+     "60.10",
+     "Radyo yayıncılığı ve ses dağıtımı"
+    ],
+    [
+     "60.20",
+     "Televizyon programcılığı, yayıncılığı ve video dağıtımı"
+    ],
+    [
+     "60.39",
+     "Diğer içerik dağıtım faaliyetleri"
+    ]
+   ],
+   "m": [
+    "Karasal, uydu, kablo ve internet ortamında radyo ve televizyon yayıncılığı yapmak.",
+    "İsteğe bağlı yayın (video platformu) hizmeti sunmak; program ve içerik satın almak, satmak.",
+    "Yayın için stüdyo, reji, verici ve yayın altyapısı kurmak ve işletmek.",
+    "Reklam zamanı satmak, sponsorluk anlaşmaları yapmak.",
+    "Program yapımı ve içerik üretimi yapmak, yaptırmak."
+   ],
+   "not": "Yayın lisansı ve internet yayın izni RTÜK’ten alınır; yayın kuruluşları anonim şirket olarak kurulmalı ve 6112 s. Kanun’daki ortaklık şartlarına uymalıdır."
+  },
+  {
+   "id": "haber-ajansi",
+   "k": "bilisim",
+   "ad": "Haber ajansı ve içerik dağıtımı",
+   "nace": [
+    [
+     "60.31",
+     "Haber ajanslarının faaliyetleri"
+    ],
+    [
+     "60.39",
+     "Diğer içerik dağıtım faaliyetleri"
+    ]
+   ],
+   "m": [
+    "Yurt içi ve yurt dışından haber, fotoğraf, video ve bilgi derlemek, üretmek ve abonelere dağıtmak.",
+    "Gazete, televizyon, internet sitelerine ve kurumlara içerik satmak ve lisanslamak.",
+    "Muhabir ağı ve bürolar kurmak, akreditasyon işlemlerini yürütmek.",
+    "İçerik arşivi oluşturmak, arşiv içeriğini lisanslamak."
+   ]
+  },
+  {
+   "id": "fotograf-video",
+   "k": "bilisim",
+   "ad": "Fotoğraf, video, drone çekimi ve stüdyo",
+   "nace": [
+    [
+     "74.20",
+     "Fotoğrafçılık faaliyetleri"
+    ],
+    [
+     "59.11",
+     "Video ve film yapım faaliyetleri"
+    ],
+    [
+     "77.39",
+     "Başka yerde sınıflandırılmamış diğer makine ve ekipman kiralama"
+    ]
+   ],
+   "m": [
+    "Düğün, nişan, ürün, reklam, katalog, moda, mimari, endüstriyel ve etkinlik fotoğrafçılığı ile video çekimi yapmak.",
+    "Fotoğraf stüdyosu, çekim platosu ve baskı merkezi açmak, işletmek ve kiralamak.",
+    "Drone (insansız hava aracı) ile hava fotoğrafı, video, haritalama ve denetim çekimleri yapmak.",
+    "Fotoğraf ve video düzenleme, montaj, rötuş ve baskı hizmetleri vermek.",
+    "Kamera, ışık ve çekim ekipmanı satmak ve kiralamak.",
+    "Fotoğraf ve videoların telif haklarını lisanslamak, stok içerik platformlarında satmak."
+   ],
+   "not": "Ticari drone uçuşları SHGM kaydı ve izinlerine tabidir."
+  },
+  {
+   "id": "telekom",
+   "k": "bilisim",
+   "ad": "Telekomünikasyon bayiliği ve iletişim hizmetleri",
+   "nace": [
+    [
+     "61.10",
+     "Kablolu, kablosuz ve uydu telekomünikasyon faaliyetleri"
+    ],
+    [
+     "61.20",
+     "Telekomünikasyon hizmetlerinin yeniden satışı ve aracılığı"
+    ],
+    [
+     "61.90",
+     "Diğer telekomünikasyon faaliyetleri"
+    ]
+   ],
+   "m": [
+    "Elektronik haberleşme operatörlerinin bayiliğini yapmak; hat, internet, cihaz ve tarife satmak.",
+    "İnternet servis sağlayıcılığı, sanal mobil operatörlük, sabit telefon ve veri iletim hizmetleri vermek (yetkilendirme alarak).",
+    "Kurumlara santral, çağrı merkezi, VoIP ve iletişim altyapısı kurmak.",
+    "Fiber, kablosuz ağ ve baz istasyonu kurulum ve bakım hizmetleri vermek.",
+    "Telekomünikasyon ekipmanlarının alım satımını ve ithalatını yapmak."
+   ],
+   "not": "Operatör niteliğindeki hizmetler BTK yetkilendirmesine tabidir; bayilik bu yetkiyi gerektirmez."
+  },
+  {
+   "id": "yonetim-danismanligi",
+   "k": "profesyonel",
+   "ad": "Yönetim, iş geliştirme ve kurumsal danışmanlık",
+   "nace": [
+    [
+     "70.20",
+     "İşletme ve diğer yönetim danışmanlığı faaliyetleri"
+    ],
+    [
+     "70.10",
+     "İdare merkezi faaliyetleri"
+    ],
+    [
+     "73.20",
+     "Piyasa ve kamuoyu araştırması"
+    ]
+   ],
+   "m": [
+    "İşletmelere strateji, yönetim, organizasyon, kurumsallaşma, süreç iyileştirme, iş geliştirme ve verimlilik danışmanlığı vermek.",
+    "Fizibilite, iş planı, yatırım projesi, pazar ve rekabet analizi hazırlamak.",
+    "Devlet destekleri, teşvik, hibe ve kalkınma ajansı programlarına başvuru danışmanlığı vermek.",
+    "Kalite, çevre, gıda güvenliği ve bilgi güvenliği yönetim sistemleri kurulum danışmanlığı vermek.",
+    "Dış ticaret, ihracat ve yabancı yatırımcılar için Türkiye’de iş kurma danışmanlığı vermek.",
+    "Eğitim, seminer, koçluk ve mentorluk programları düzenlemek (resmî izne tabi eğitim kurumu açmak hariç).",
+    "Grup şirketlerine merkezi yönetim, raporlama ve destek hizmetleri vermek."
+   ],
+   "not": "Yeminli mali müşavirlik, serbest muhasebeci mali müşavirlik, avukatlık ve bağımsız denetim ayrı meslek mevzuatına tabidir; bu hizmetler ancak o mevzuattaki şirket türleriyle verilebilir."
+  },
+  {
+   "id": "muhendislik-mimarlik",
+   "k": "profesyonel",
+   "ad": "Mühendislik, mimarlık, proje ve kontrollük",
+   "nace": [
+    [
+     "71.11",
+     "Mimarlık faaliyetleri"
+    ],
+    [
+     "71.12",
+     "Mühendislik faaliyetleri ve ilgili teknik danışmanlık"
+    ],
+    [
+     "71.20",
+     "Teknik test ve analiz faaliyetleri"
+    ]
+   ],
+   "m": [
+    "Mimari, statik, mekanik, elektrik, altyapı, peyzaj ve kentsel tasarım projeleri hazırlamak; ruhsat ve uygulama projesi çizmek.",
+    "Mühendislik, müşavirlik, kontrollük, proje yönetimi ve yapı denetimine hazırlık hizmetleri vermek.",
+    "Harita, ölçüm, aplikasyon, halihazır harita ve kadastro çalışmaları yapmak (yetkili lisanslı mühendislerle).",
+    "Zemin etüdü, jeolojik-jeoteknik inceleme, deprem performans analizi ve güçlendirme projesi hazırlamak.",
+    "Enerji kimlik belgesi, enerji etüdü ve verimlilik projeleri hazırlamak.",
+    "Kamu ve özel sektör danışmanlık ihalelerine katılmak; yurt dışında proje hizmeti vermek.",
+    "Proje ve tasarım yazılımları, BIM modelleme ve dijital ikiz hizmetleri sunmak."
+   ],
+   "not": "Yapı denetim şirketleri, lisanslı harita kadastro büroları ve enerji verimliliği şirketleri ayrı yetki belgelerine tabidir; proje imzası ilgili meslek odasına kayıtlı mühendis/mimar tarafından atılır."
+  },
+  {
+   "id": "arge",
+   "k": "profesyonel",
+   "ad": "Ar-Ge, teknoloji geliştirme ve laboratuvar",
+   "nace": [
+    [
+     "72.10",
+     "Doğa bilimleri ve mühendislikte araştırma ve deneysel geliştirme"
+    ],
+    [
+     "72.20",
+     "Sosyal bilimler ve beşeri bilimlerde araştırma ve deneysel geliştirme"
+    ],
+    [
+     "71.20",
+     "Teknik test ve analiz faaliyetleri"
+    ],
+    [
+     "74.91",
+     "Patent aracılığı ve pazarlama hizmetleri"
+    ]
+   ],
+   "m": [
+    "Mühendislik, yazılım, biyoteknoloji, malzeme, enerji, tarım, gıda, sağlık ve diğer alanlarda araştırma ve deneysel geliştirme faaliyetleri yürütmek.",
+    "Teknoloji geliştirme bölgelerinde, Ar-Ge ve tasarım merkezlerinde faaliyette bulunmak; TÜBİTAK, KOSGEB ve uluslararası fon programlarına proje sunmak.",
+    "Prototip, pilot tesis ve deneme üretimi yapmak; geliştirilen teknolojileri ticarileştirmek.",
+    "Patent, faydalı model ve tasarım başvurusu yapmak; lisans vermek, teknoloji transferi yapmak.",
+    "Test, analiz, kalibrasyon ve ölçüm laboratuvarı kurmak, akreditasyon almak.",
+    "Üniversiteler ve araştırma kurumlarıyla işbirliği ve proje sözleşmeleri yapmak."
+   ],
+   "not": "Patent ve marka vekilliği TÜRKPATENT siciline kayıtlı vekiller tarafından yapılır."
+  },
+  {
+   "id": "insan-kaynaklari",
+   "k": "profesyonel",
+   "ad": "İnsan kaynakları, işe alım ve özel istihdam",
+   "nace": [
+    [
+     "78.10",
+     "İşe yerleştirme ajanslarının faaliyetleri"
+    ],
+    [
+     "78.20",
+     "Geçici iş bulma ajansı faaliyetleri ve diğer insan kaynakları sağlanması"
+    ],
+    [
+     "70.20",
+     "Yönetim danışmanlığı"
+    ]
+   ],
+   "m": [
+    "İşverenlere personel seçme ve yerleştirme, yönetici arama (headhunting) ve işe alım danışmanlığı vermek.",
+    "Özel istihdam bürosu olarak iş arayanlara aracılık etmek; geçici iş ilişkisi kurmak (izinle).",
+    "Bordro, özlük ve insan kaynakları süreçlerine danışmanlık; performans, ücret yönetimi ve organizasyon tasarımı hizmetleri vermek.",
+    "Kurumsal eğitim, yetenek değerlendirme ve kariyer danışmanlığı hizmetleri vermek.",
+    "İşe alım platformu ve kariyer sitesi kurmak, işletmek."
+   ],
+   "not": "İş ve işçi bulmaya aracılık için İŞKUR’dan özel istihdam bürosu izni gerekir."
+  },
+  {
+   "id": "ceviri",
+   "k": "profesyonel",
+   "ad": "Çeviri, tercüme ve dil hizmetleri",
+   "nace": [
+    [
+     "74.30",
+     "Çeviri ve sözlü tercüme faaliyetleri"
+    ],
+    [
+     "85.59",
+     "Başka yerde sınıflandırılmamış diğer eğitim"
+    ]
+   ],
+   "m": [
+    "Yazılı çeviri, yeminli tercüme (yeminli tercümanlar aracılığıyla), noter onaylı tercüme, simultane ve ardıl çeviri hizmetleri vermek.",
+    "Web sitesi, yazılım, oyun ve doküman yerelleştirme hizmetleri vermek.",
+    "Alt yazı, seslendirme ve transkripsiyon hizmetleri vermek.",
+    "Kongre ve toplantılar için tercüman ve çeviri ekipmanı temin etmek.",
+    "Apostil, konsolosluk ve belge onay işlemlerinde takip hizmeti vermek."
+   ]
+  },
+  {
+   "id": "tasarim",
+   "k": "profesyonel",
+   "ad": "Endüstriyel ürün, moda ve grafik tasarım",
+   "nace": [
+    [
+     "74.11",
+     "Endüstriyel ürün ve moda tasarımı"
+    ],
+    [
+     "74.12",
+     "Grafik tasarım ve görsel iletişim"
+    ],
+    [
+     "74.14",
+     "Diğer uzmanlaşmış tasarım faaliyetleri"
+    ]
+   ],
+   "m": [
+    "Endüstriyel ürün, mobilya, ambalaj, moda, tekstil, takı ve aksesuar tasarlamak.",
+    "Logo, kurumsal kimlik, afiş, katalog, ambalaj, kullanıcı arayüzü (UI/UX) ve dijital tasarım hizmetleri vermek.",
+    "Tasarımları tescil ettirmek, lisanslamak ve satmak; tasarım ürünlerini ürettirip pazarlamak.",
+    "Tasarım merkezi kurmak, tasarım desteklerinden yararlanmak.",
+    "Tasarım eğitimleri ve atölyeler düzenlemek."
+   ]
+  },
+  {
+   "id": "cevre-isg",
+   "k": "profesyonel",
+   "ad": "Çevre danışmanlığı, iş sağlığı ve güvenliği",
+   "nace": [
+    [
+     "74.99",
+     "Başka yerde sınıflandırılmamış diğer mesleki faaliyetler"
+    ],
+    [
+     "86.99",
+     "Başka yerde sınıflandırılmamış diğer insan sağlığı faaliyetleri"
+    ],
+    [
+     "71.20",
+     "Teknik test ve analiz"
+    ]
+   ],
+   "m": [
+    "Çevre danışmanlığı, ÇED raporu, çevre izin ve lisans dosyası, atık yönetim planı hazırlamak.",
+    "İş sağlığı ve güvenliği hizmetleri vermek; risk değerlendirmesi, acil durum planı, ortam ölçümü ve eğitim yapmak.",
+    "Ortak sağlık ve güvenlik birimi (OSGB) kurmak, işyerlerine iş güvenliği uzmanı ve işyeri hekimi hizmeti vermek.",
+    "Periyodik kontrol, emisyon ve gürültü ölçümleri yapmak (yetkilendirmeyle).",
+    "Karbon ayak izi hesaplama, sürdürülebilirlik raporlaması ve iklim danışmanlığı vermek."
+   ],
+   "not": "OSGB ve İSG eğitim kurumu için Çalışma ve Sosyal Güvenlik Bakanlığı, çevre danışmanlık firmaları için Çevre Bakanlığı yeterlik belgesi gerekir."
+  },
+  {
+   "id": "cagri-merkezi",
+   "k": "profesyonel",
+   "ad": "Çağrı merkezi, büro destek ve sekreterya hizmetleri",
+   "nace": [
+    [
+     "82.20",
+     "Çağrı merkezlerinin faaliyetleri"
+    ],
+    [
+     "82.10",
+     "Büro yönetimi ve destek faaliyetleri"
+    ],
+    [
+     "82.40",
+     "İşletme destek hizmetlerine aracılık"
+    ],
+    [
+     "82.9",
+     "Başka yerde sınıflandırılmamış iş destek hizmetleri (grup)"
+    ]
+   ],
+   "m": [
+    "Kurumlara gelen ve giden arama, müşteri hizmetleri, satış, anket ve teknik destek çağrı merkezi hizmeti vermek.",
+    "Sanal ofis, sekreterya, resepsiyon, evrak yönetimi, veri girişi ve arşivleme hizmetleri vermek.",
+    "Doküman tarama, dijitalleştirme ve arşiv yönetimi yapmak.",
+    "Tahsilat takibi ve hatırlatma hizmetleri vermek (avukatlık ve varlık yönetimi faaliyetleri hariç).",
+    "Fatura, sevkiyat ve sipariş süreçlerine dış kaynak hizmeti vermek."
+   ]
+  },
+  {
+   "id": "ozel-egitim",
+   "k": "egitim",
+   "ad": "Özel okul, kurs, etüt ve dil okulu",
+   "nace": [
+    [
+     "85.5",
+     "Diğer eğitim faaliyetleri (grup)"
+    ],
+    [
+     "85.59",
+     "Başka yerde sınıflandırılmamış diğer eğitim"
+    ],
+    [
+     "85.69",
+     "Diğer eğitimi destekleyici faaliyetler"
+    ],
+    [
+     "85.61",
+     "Kurs ve özel ders aracılık hizmetleri"
+    ]
+   ],
+   "m": [
+    "Okul öncesi, ilkokul, ortaokul ve lise düzeyinde özel öğretim kurumları açmak ve işletmek.",
+    "Yabancı dil, bilgisayar, mesleki ve teknik eğitim, kişisel gelişim, sanat ve spor kursları açmak, işletmek.",
+    "Özel öğretim kursu, etüt eğitim merkezi ve özel eğitim ve rehabilitasyon merkezi kurmak.",
+    "Eğitim materyali, kitap ve dijital içerik hazırlamak, yayımlamak ve satmak.",
+    "Yurt dışı eğitim danışmanlığı, öğrenci ve dil okulu yerleştirme hizmetleri vermek.",
+    "Öğrenci yurdu, pansiyon ve kampüs tesisleri kurmak ve işletmek.",
+    "Eğitim kurumları için servis, yemek ve kantin hizmetlerini organize etmek."
+   ],
+   "not": "Her tür özel öğretim kurumu MEB izniyle açılır; kurucu temsilcisi ve bina şartları aranır."
+  },
+  {
+   "id": "online-egitim",
+   "k": "egitim",
+   "ad": "Online eğitim, e-öğrenme ve özel ders platformu",
+   "nace": [
+    [
+     "85.59",
+     "Başka yerde sınıflandırılmamış diğer eğitim"
+    ],
+    [
+     "85.61",
+     "Kurs ve özel ders aracılık hizmetleri"
+    ],
+    [
+     "58.29",
+     "Diğer yazılım programlarının yayımlanması"
+    ]
+   ],
+   "m": [
+    "İnternet üzerinden canlı ve kayıtlı eğitim, kurs, seminer ve sertifika programları düzenlemek ve satmak.",
+    "Eğitmenler ile öğrencileri buluşturan özel ders ve kurs aracılık platformu kurmak, işletmek.",
+    "Kurumlara e-öğrenme içeriği ve öğrenme yönetim sistemi (LMS) geliştirmek, lisanslamak.",
+    "Eğitim videoları, dijital kitaplar ve testler hazırlamak ve satmak.",
+    "Eğitmenlerle içerik ve telif sözleşmeleri yapmak."
+   ],
+   "not": "Resmî diploma veya MEB onaylı sertifika veren eğitimler izne tabidir; ticari sertifika programları için bu durum ayrıca kontrol edilmelidir."
+  },
+  {
+   "id": "surucu-kursu",
+   "k": "egitim",
+   "ad": "Sürücü kursu",
+   "nace": [
+    [
+     "85.53",
+     "Sürücü kursu faaliyetleri"
+    ]
+   ],
+   "m": [
+    "Motorlu taşıt sürücüleri kursu açmak ve işletmek; her sınıf sürücü belgesi için teorik ve direksiyon eğitimi vermek.",
+    "Eğitim araçları, simülatör ve eğitim materyali satın almak, kiralamak.",
+    "Mesleki yeterlilik ve SRC gibi mesleki eğitim programlarını izinlerle düzenlemek."
+   ],
+   "not": "MEB Özel Öğretim Kurumları mevzuatına göre izin alınır."
+  },
+  {
+   "id": "spor-salonu",
+   "k": "egitim",
+   "ad": "Spor salonu, fitness ve spor tesisi",
+   "nace": [
+    [
+     "93.13",
+     "Fitness tesisleri"
+    ],
+    [
+     "93.11",
+     "Spor tesislerinin işletilmesi"
+    ],
+    [
+     "85.51",
+     "Spor ve eğlence eğitimi"
+    ],
+    [
+     "93.12",
+     "Spor kulüplerinin faaliyetleri"
+    ]
+   ],
+   "m": [
+    "Spor salonu, fitness merkezi, pilates ve yoga stüdyosu, yüzme havuzu, halı saha, tenis kortu ve diğer spor tesislerini kurmak, kiralamak ve işletmek.",
+    "Kişisel antrenörlük, grup dersleri, spor okulu ve çocuk spor eğitimi vermek.",
+    "Spor ekipmanı, giyim ve besin takviyesi ürünlerini satmak.",
+    "Spor organizasyonları, turnuva ve kamplar düzenlemek; sporcu menajerliği yapmak.",
+    "Franchise vermek ve almak; kurumlara üyelik ve kurumsal spor programları sunmak."
+   ],
+   "not": "Spor tesisleri Gençlik ve Spor Bakanlığı mevzuatına, besin takviyesi satışı Tarım ve Orman Bakanlığı mevzuatına tabidir."
+  },
+  {
+   "id": "saglik-kurulusu",
+   "k": "egitim",
+   "ad": "Özel sağlık kuruluşu, tıp merkezi ve diş kliniği",
+   "nace": [
+    [
+     "86.10",
+     "Hastane hizmetleri"
+    ],
+    [
+     "86.2",
+     "Hekimlik ve diş hekimliği uygulama faaliyetleri (grup)"
+    ],
+    [
+     "86.91",
+     "Tanısal görüntüleme ve tıbbi laboratuvar"
+    ],
+    [
+     "86.95",
+     "Fizyoterapi faaliyetleri"
+    ]
+   ],
+   "m": [
+    "Özel hastane, tıp merkezi, poliklinik, ağız ve diş sağlığı merkezi, görüntüleme merkezi, tıbbi laboratuvar, fizik tedavi ve rehabilitasyon merkezi kurmak ve işletmek (Sağlık Bakanlığı ruhsatıyla).",
+    "Sağlık kuruluşlarında hekim, diş hekimi ve sağlık personeli istihdam etmek; SGK ve özel sigorta şirketleriyle anlaşmalar yapmak.",
+    "Tıbbi cihaz, sarf malzemesi ve ekipman satın almak, kiralamak ve finansal kiralama yoluyla edinmek.",
+    "Evde sağlık, ambulans ve hasta nakil hizmetleri vermek (izinle).",
+    "Sağlık turizmi kapsamında yurt dışından gelen hastalara hizmet vermek.",
+    "Sağlık kuruluşlarına yönetim, kalite ve akreditasyon danışmanlığı vermek."
+   ],
+   "not": "Sağlık kuruluşları Sağlık Bakanlığı ruhsatına tabidir; muayenehane ve eczane şirket olarak açılamaz."
+  },
+  {
+   "id": "saglik-turizmi",
+   "k": "egitim",
+   "ad": "Sağlık turizmi ve sağlık hizmetlerine aracılık",
+   "nace": [
+    [
+     "86.97",
+     "Tıbbi, dişçilik ve diğer insan sağlığı hizmetlerine aracılık"
+    ],
+    [
+     "79.90",
+     "Diğer rezervasyon hizmetleri"
+    ]
+   ],
+   "m": [
+    "Yurt dışından gelen hastalara anlaşmalı sağlık kuruluşlarında tedavi, ameliyat ve check-up hizmetlerini organize etmek.",
+    "Hastaların vize, ulaşım, konaklama, transfer ve tercüme süreçlerini koordine etmek.",
+    "Sağlık turizmi aracı kuruluşu olarak yetki belgesi almak, tanıtım faaliyetleri yürütmek.",
+    "Termal ve wellness turizmi programları düzenlemek."
+   ],
+   "not": "Uluslararası sağlık turizmi aracı kuruluşları Sağlık Bakanlığı yetki belgesine tabidir."
+  },
+  {
+   "id": "psikoloji-danismanlik",
+   "k": "egitim",
+   "ad": "Psikolojik danışmanlık, diyetisyen ve terapi merkezi",
+   "nace": [
+    [
+     "86.93",
+     "Psikolog ve psikoterapistlerin faaliyetleri (tıp doktorları hariç)"
+    ],
+    [
+     "86.99",
+     "Başka yerde sınıflandırılmamış diğer insan sağlığı faaliyetleri"
+    ],
+    [
+     "86.96",
+     "Geleneksel, tamamlayıcı ve alternatif tıp"
+    ]
+   ],
+   "m": [
+    "Psikolog ve psikolojik danışmanlar aracılığıyla bireysel, çift, aile ve çocuk danışmanlığı merkezi işletmek.",
+    "Diyetisyenler aracılığıyla beslenme danışmanlığı hizmeti vermek.",
+    "Dil ve konuşma terapisi, ergoterapi ve benzeri destek hizmetlerini mevzuattaki yetkili kişilerle sunmak.",
+    "Online danışmanlık platformu kurmak ve işletmek.",
+    "Eğitim, seminer ve atölye çalışmaları düzenlemek."
+   ],
+   "not": "Tanı ve tedavi niteliğindeki sağlık hizmetleri Sağlık Bakanlığı ruhsatına tabidir; meslek mensuplarının yetki sınırları aşılmamalıdır."
+  },
+  {
+   "id": "kres-bakim",
+   "k": "egitim",
+   "ad": "Kreş, gündüz bakımevi ve yaşlı bakım merkezi",
+   "nace": [
+    [
+     "88.91",
+     "Çocuk gündüz bakım faaliyetleri"
+    ],
+    [
+     "87.30",
+     "Yaşlılar ve engelliler için yatılı bakım"
+    ],
+    [
+     "88.10",
+     "Yaşlılara ve engellilere yönelik barınacak yer sağlanmaksızın verilen sosyal hizmetler"
+    ],
+    [
+     "87.91",
+     "Yatılı bakım hizmetlerine aracılık"
+    ]
+   ],
+   "m": [
+    "Kreş, gündüz bakımevi, çocuk kulübü ve oyun grubu açmak ve işletmek.",
+    "Huzurevi, yaşlı bakım merkezi, engelli bakım ve rehabilitasyon merkezi kurmak ve işletmek.",
+    "Evde yaşlı, hasta ve çocuk bakımı hizmetleri vermek.",
+    "Bakım hizmetlerinde çalışacak personeli yetiştirmek ve istihdam etmek.",
+    "Bakım hizmetlerine aracılık eden dijital platform işletmek."
+   ],
+   "not": "Kreş ve gündüz bakımevleri Aile ve Sosyal Hizmetler Bakanlığı veya MEB’den; huzurevleri Aile ve Sosyal Hizmetler Bakanlığı’ndan izin alır."
+  },
+  {
+   "id": "kuafor-guzellik",
+   "k": "hizmet",
+   "ad": "Kuaför, berber, güzellik merkezi ve spa",
+   "nace": [
+    [
+     "96.21",
+     "Kuaförlük ve berberlik"
+    ],
+    [
+     "96.22",
+     "Güzellik bakımı ve diğer güzellik uygulamaları"
+    ],
+    [
+     "96.23",
+     "Spa, sauna ve hamam faaliyetleri"
+    ],
+    [
+     "96.40",
+     "Kişisel hizmetlere aracılık"
+    ]
+   ],
+   "m": [
+    "Kadın kuaförü, erkek berberi, güzellik merkezi, cilt bakım, manikür-pedikür, kirpik-kaş ve makyaj stüdyosu açmak ve işletmek.",
+    "Masaj salonu, spa, hamam, sauna ve wellness merkezi işletmek.",
+    "Kozmetik, saç bakım ve güzellik ürünleri satmak; kendi markasıyla ürün ürettirmek.",
+    "Franchise vermek ve almak; zincir salon ağı kurmak.",
+    "Güzellik ve kuaförlük eğitimleri düzenlemek (resmî izne tabi kurs hariç).",
+    "Online randevu platformu işletmek, düğün ve özel gün hizmetleri sunmak."
+   ],
+   "not": "Lazer, dövme ve tıbbi estetik uygulamalar ayrı izin ve sorumlu hekim şartına bağlıdır; belediyeden ruhsat alınır."
+  },
+  {
+   "id": "temizlik",
+   "k": "hizmet",
+   "ad": "Temizlik, ilaçlama ve hijyen hizmetleri",
+   "nace": [
+    [
+     "81.21",
+     "Binaların genel temizliği"
+    ],
+    [
+     "81.22",
+     "Diğer bina ve endüstriyel temizlik faaliyetleri"
+    ],
+    [
+     "81.29",
+     "Diğer temizlik faaliyetleri"
+    ],
+    [
+     "81.30",
+     "Çevre düzenlemesi ve bakım hizmetleri"
+    ]
+   ],
+   "m": [
+    "Ev, ofis, işyeri, fabrika, hastane, okul, otel ve kamu binalarının temizlik hizmetlerini vermek.",
+    "İnşaat sonrası temizlik, cephe ve cam temizliği, halı, koltuk ve yatak yıkama hizmetleri vermek.",
+    "Haşere ilaçlama, dezenfeksiyon ve hijyen hizmetleri vermek (izinle).",
+    "Kurumlara temizlik personeli sağlamak; kamu ihalelerine katılmak.",
+    "Temizlik malzemesi, makine ve ekipmanlarının alım satımını yapmak.",
+    "Peyzaj bakımı, bahçe düzenleme ve kar temizleme hizmetleri vermek."
+   ],
+   "not": "Haşere ilaçlaması Sağlık Bakanlığı biyosidal ürün uygulama izni gerektirir."
+  },
+  {
+   "id": "oto-servis",
+   "k": "hizmet",
+   "ad": "Oto servis, bakım, kaporta ve oto yıkama",
+   "nace": [
+    [
+     "95.31",
+     "Motorlu kara taşıtlarının bakım ve onarımı"
+    ],
+    [
+     "95.32",
+     "Motosikletlerin bakım ve onarımı"
+    ],
+    [
+     "95.40",
+     "Bakım ve onarım hizmetlerine aracılık"
+    ]
+   ],
+   "m": [
+    "Otomobil, ticari araç ve motosikletlerin periyodik bakım, mekanik, elektrik, kaporta, boya ve onarım hizmetlerini vermek.",
+    "Oto yıkama, detaylı temizlik, seramik kaplama, cam filmi ve kaplama hizmetleri vermek.",
+    "Lastik, akü, egzoz, klima ve hızlı servis hizmetleri sunmak.",
+    "Yetkili servis ve özel servis olarak sigorta şirketleriyle hasar onarım anlaşmaları yapmak.",
+    "Yedek parça ve aksesuar satmak; çekici ve yol yardım hizmeti vermek.",
+    "Araç ekspertiz hizmeti vermek (yetki belgesiyle)."
+   ],
+   "not": "Oto ekspertiz hizmeti Ticaret Bakanlığı yetki belgesi ve TSE belgesine tabidir."
+  },
+  {
+   "id": "tamir-servis",
+   "k": "hizmet",
+   "ad": "Elektronik, beyaz eşya ve ev eşyası tamir servisi",
+   "nace": [
+    [
+     "95.10",
+     "Bilgisayar ve iletişim ekipmanının onarımı"
+    ],
+    [
+     "95.2",
+     "Kişisel ve ev eşyalarının onarımı (grup)"
+    ],
+    [
+     "95.40",
+     "Bakım ve onarım hizmetlerine aracılık"
+    ]
+   ],
+   "m": [
+    "Bilgisayar, cep telefonu, tablet, televizyon ve elektronik cihazların bakım ve onarımını yapmak.",
+    "Beyaz eşya, klima, kombi ve küçük ev aletlerinin kurulum, bakım ve onarımını yapmak; yetkili servislik almak.",
+    "Saat, ayakkabı, mobilya ve ev eşyası tamiri yapmak.",
+    "Yedek parça ve aksesuar satmak.",
+    "Onarım hizmetlerini bir araya getiren aracılık platformu işletmek."
+   ]
+  },
+  {
+   "id": "kuru-temizleme",
+   "k": "hizmet",
+   "ad": "Kuru temizleme, çamaşırhane ve terzilik",
+   "nace": [
+    [
+     "96.10",
+     "Tekstil ve kürk ürünlerinin yıkanması ve temizlenmesi"
+    ],
+    [
+     "95.2",
+     "Kişisel ve ev eşyalarının onarımı (grup)"
+    ]
+   ],
+   "m": [
+    "Kuru temizleme, çamaşırhane, ütü ve leke çıkarma hizmetleri vermek.",
+    "Otel, hastane ve restoranlara endüstriyel çamaşırhane hizmeti vermek.",
+    "Halı, perde ve ev tekstili yıkama hizmetleri vermek.",
+    "Terzilik, tadilat ve giysi onarım hizmetleri vermek.",
+    "Kapıdan teslim alma ve teslim etme hizmeti sunmak."
+   ]
+  },
+  {
+   "id": "ozel-guvenlik",
+   "k": "hizmet",
+   "ad": "Özel güvenlik (yalnızca bu konuda kurulan şirket)",
+   "nace": [
+    [
+     "80.01",
+     "Soruşturma ve özel güvenlik faaliyetleri"
+    ],
+    [
+     "80.09",
+     "Başka yerde sınıflandırılmamış güvenlik faaliyetleri"
+    ]
+   ],
+   "m": [
+    "5188 sayılı Özel Güvenlik Hizmetlerine Dair Kanun ve ilgili mevzuat çerçevesinde kişi, kurum ve kuruluşlara silahlı ve silahsız özel güvenlik hizmeti vermek.",
+    "Para ve değerli eşya nakli, alarm izleme ve güvenlik danışmanlığı hizmetlerini mevzuatın izin verdiği ölçüde vermek.",
+    "Faaliyet için gerekli araç, gereç, silah ve teçhizatı mevzuata uygun olarak edinmek."
+   ],
+   "not": "Özel güvenlik şirketleri yalnızca özel güvenlik alanında faaliyet gösterebilir; İçişleri Bakanlığı izni olmadan kurulamaz ve başka konu eklenemez. Kamera ve alarm sistemi satış-montajı ise ayrı bir şirkette yapılabilir."
+  },
+  {
+   "id": "guvenlik-sistemleri",
+   "k": "hizmet",
+   "ad": "Güvenlik sistemleri, kamera ve alarm kurulumu",
+   "nace": [
+    [
+     "80.09",
+     "Başka yerde sınıflandırılmamış güvenlik faaliyetleri"
+    ],
+    [
+     "43.21",
+     "Elektrik tesisatı"
+    ],
+    [
+     "47.40",
+     "Bilgi ve iletişim ekipmanı perakende ticareti"
+    ]
+   ],
+   "m": [
+    "Güvenlik kamerası, alarm, yangın algılama, geçiş kontrol, turnike ve bariyer sistemlerinin satışını, kurulumunu ve bakımını yapmak.",
+    "Akıllı ev ve bina otomasyonu sistemleri kurmak.",
+    "Güvenlik sistemlerine ilişkin proje ve keşif hizmetleri vermek.",
+    "Güvenlik ürünlerinin ithalatını yapmak, bayilik ve distribütörlük almak."
+   ],
+   "not": "Alarm izleme merkezi kurmak 5188 s. Kanun kapsamında izne tabidir."
+  },
+  {
+   "id": "cenaze",
+   "k": "hizmet",
+   "ad": "Cenaze ve defin hizmetleri",
+   "nace": [
+    [
+     "96",
+     "Diğer kişisel hizmetler: cenaze işlerine ilişkin sınıf"
+    ]
+   ],
+   "m": [
+    "Cenaze nakli, yıkama, kefenleme ve defin işlemlerinin organizasyonunu yapmak (belediye mevzuatı çerçevesinde).",
+    "Yurt içi ve yurt dışı cenaze nakli işlemlerini yürütmek.",
+    "Mezar yapımı, mezar taşı, çiçek ve anma hizmetleri vermek."
+   ],
+   "not": "Cenaze hizmetleri büyük ölçüde belediyelerce yürütülür; özel hizmetler belediye izinlerine bağlıdır."
+  },
+  {
+   "id": "ges",
+   "k": "enerji",
+   "ad": "Güneş enerjisi (GES) kurulumu ve yenilenebilir enerji",
+   "nace": [
+    [
+     "35.12",
+     "Yenilenebilir kaynaklardan elektrik üretimi"
+    ],
+    [
+     "43.21",
+     "Elektrik tesisatı"
+    ],
+    [
+     "35.16",
+     "Elektriğin depolanması"
+    ],
+    [
+     "71.12",
+     "Mühendislik ve teknik danışmanlık"
+    ]
+   ],
+   "m": [
+    "Güneş, rüzgâr, biyokütle, jeotermal ve hidroelektrik kaynaklardan elektrik enerjisi üretmek için tesis kurmak ve işletmek (lisanslı veya lisanssız üretim mevzuatı çerçevesinde).",
+    "Çatı ve arazi tipi güneş enerjisi santrallerinin projelendirme, anahtar teslim kurulum, devreye alma, bakım ve izleme hizmetlerini vermek.",
+    "Güneş paneli, invertör, akü, enerji depolama sistemi ve montaj ekipmanının alım satımını, ithalatını yapmak.",
+    "Kendi tüketimi için üretim tesisi kurmak; mahsuplaşma ve bağlantı anlaşmalarını yapmak.",
+    "Elektrikli araç şarj istasyonu kurmak ve işletmek.",
+    "Enerji verimliliği etüdü, danışmanlık ve proje hizmetleri vermek.",
+    "Yenilenebilir enerji yatırımları için arazi kiralamak, üst hakkı kurdurmak, kredi ve teşviklerden yararlanmak."
+   ],
+   "not": "Lisanslı elektrik üretimi, depolama ve şarj hizmeti EPDK lisansına tabidir; lisanslı üretim şirketlerinde şirket türü ve pay şartları vardır."
+  },
+  {
+   "id": "enerji-ticareti",
+   "k": "enerji",
+   "ad": "Elektrik ve doğal gaz ticareti",
+   "nace": [
+    [
+     "35.15",
+     "Elektrik ticareti"
+    ],
+    [
+     "35.23",
+     "Gazın ana şebeke üzerinden ticareti"
+    ],
+    [
+     "35.40",
+     "Elektrik ve doğal gaz komisyoncu ve acentelerinin faaliyetleri"
+    ]
+   ],
+   "m": [
+    "Elektrik enerjisi ve kapasite alım satımı yapmak; serbest tüketicilere enerji tedarik etmek.",
+    "Doğal gaz toptan ve perakende satışı, ithalatı ve ihracatı yapmak.",
+    "Enerji piyasalarında işlem yapmak; enerji tedarik anlaşmaları ve enerji yönetim hizmetleri sunmak.",
+    "Enerji danışmanlığı ve tüketim optimizasyonu hizmetleri vermek."
+   ],
+   "not": "Tedarik ve ticaret faaliyeti EPDK lisansı ister; lisans türüne göre konu bu faaliyetle sınırlı tutulmalı ve şirket türü, sermaye ve pay şartlarına uyulmalıdır."
+  },
+  {
+   "id": "su-aritma",
+   "k": "enerji",
+   "ad": "Su arıtma, çevre teknolojileri ve atık su",
+   "nace": [
+    [
+     "36.00",
+     "Suyun toplanması, arıtılması ve dağıtılması"
+    ],
+    [
+     "37.00",
+     "Kanalizasyon"
+    ],
+    [
+     "39.00",
+     "İyileştirme faaliyetleri ve diğer atık yönetimi hizmetleri"
+    ]
+   ],
+   "m": [
+    "İçme ve kullanma suyu arıtma, atık su arıtma ve geri kazanım tesisleri kurmak, işletmek ve bakımını yapmak.",
+    "Su arıtma cihazı, filtre, kimyasal ve ekipmanlarının satışını ve servisini yapmak.",
+    "Toprak ve yeraltı suyu iyileştirme, kirlilik giderme ve çevre temizliği projeleri yürütmek.",
+    "Sanayi tesislerine çevre teknolojisi çözümleri, emisyon kontrol sistemleri kurmak."
+   ]
+  },
+  {
+   "id": "madencilik",
+   "k": "enerji",
+   "ad": "Madencilik, taş ocağı ve kum-çakıl",
+   "nace": [
+    [
+     "08.11",
+     "Süsleme ve yapı taşları, kireçtaşı, alçıtaşı ocakçılığı"
+    ],
+    [
+     "08.12",
+     "Kum ve çakıl ocakçılığı; kil ve kaolin çıkarımı"
+    ],
+    [
+     "07.29",
+     "Diğer demir dışı metal cevherleri madenciliği"
+    ],
+    [
+     "09.90",
+     "Diğer madencilik ve taş ocakçılığını destekleyici faaliyetler"
+    ]
+   ],
+   "m": [
+    "Maden arama, işletme ve üretim ruhsatı almak; maden sahalarını işletmek ve işlettirmek (rödovans dahil).",
+    "Metalik madenler, endüstriyel hammaddeler, mermer, granit, kireçtaşı, kum, çakıl ve diğer yapı hammaddelerini çıkarmak, zenginleştirmek, işlemek ve satmak.",
+    "Kırma-eleme ve zenginleştirme tesisleri kurmak ve işletmek.",
+    "Sondaj, etüt, jeolojik araştırma ve maden mühendisliği hizmetleri vermek.",
+    "Maden ürünlerinin ihracatını yapmak; iş makinesi ve ekipman satın almak, kiralamak."
+   ],
+   "not": "MAPEG’den ruhsat alınır; ruhsat sahibi şirketin esas sözleşmesinde madencilik faaliyeti açıkça yazılı olmalıdır."
+  },
+  {
+   "id": "holding",
+   "k": "yatirim",
+   "ad": "Holding ve iştirak yönetimi",
+   "nace": [
+    [
+     "64.21",
+     "Holding şirketlerinin faaliyetleri"
+    ],
+    [
+     "70.10",
+     "İdare merkezi faaliyetleri"
+    ]
+   ],
+   "m": [
+    "Kurulmuş veya kurulacak yerli ve yabancı şirketlerin sermayesine ve yönetimine katılmak; bu şirketlerin pay senetlerini, ortaklık paylarını satın almak, satmak ve rehin vermek (yatırım hizmetleri ve faaliyetleri niteliğinde olmamak kaydıyla).",
+    "İştiraklerin yatırım, finansman, organizasyon ve yönetim işlerini planlamak, koordine etmek ve denetlemek.",
+    "Grup şirketlerine muhasebe, finans, insan kaynakları, hukuk koordinasyonu, bilgi işlem ve satın alma gibi merkezi hizmetler vermek.",
+    "Grup şirketlerine sermaye piyasası ve bankacılık mevzuatına aykırı olmamak kaydıyla finansman sağlamak, onlar lehine kefalet ve teminat vermek.",
+    "İştiraklerden temettü, kâr payı ve hizmet bedeli elde etmek.",
+    "Yeni yatırım fırsatlarını araştırmak, fizibilite hazırlamak, ortak girişimler (joint venture) kurmak."
+   ],
+   "not": "Grup içi finansman ve kefalet verilirken örtülü sermaye ve transfer fiyatlandırması hükümlerine dikkat edilmeli. Holding, yatırım fonu veya portföy yönetimi gibi SPK faaliyeti değildir."
+  },
+  {
+   "id": "gayrimenkul-yatirim",
+   "k": "yatirim",
+   "ad": "Gayrimenkul ve girişim yatırımı (SPK faaliyeti olmayan)",
+   "nace": [
+    [
+     "68.11",
+     "Kendine ait gayrimenkulün alınıp satılması"
+    ],
+    [
+     "68.20",
+     "Gayrimenkulün kiralanması ve işletilmesi"
+    ],
+    [
+     "64.21",
+     "Holding şirketlerinin faaliyetleri"
+    ]
+   ],
+   "m": [
+    "Kendi hesabına konut, işyeri, arsa ve arazi yatırımları yapmak; bu taşınmazları kiralamak, işletmek ve satmak.",
+    "Kendi özkaynaklarıyla girişim şirketlerine ve yeni kurulan şirketlere ortak olmak (yatırım hizmetleri ve faaliyetleri niteliğinde olmamak kaydıyla).",
+    "Melek yatırımcı ağlarına ve ortak yatırım platformlarına mevzuat çerçevesinde katılmak.",
+    "Yatırım yapılan şirketlere yönetim ve iş geliştirme desteği vermek."
+   ],
+   "not": "Başkaları adına para toplamak, portföy yönetmek, kitle fonlaması platformu işletmek SPK iznine tabidir ve bu konu metnine yazılamaz."
+  },
+  {
+   "id": "sigorta-acenteligi",
+   "k": "yatirim",
+   "ad": "Sigorta acenteliği",
+   "nace": [
+    [
+     "66.22",
+     "Sigorta acentelerinin ve aracılarının faaliyetleri"
+    ]
+   ],
+   "m": [
+    "Sigorta şirketlerinin acenteliğini yapmak; hayat dışı ve hayat sigortası ile bireysel emeklilik ürünlerini mevzuat çerçevesinde pazarlamak.",
+    "Sigortalılara hasar süreçlerinde destek vermek.",
+    "Acentelik için gerekli teknik personeli istihdam etmek."
+   ],
+   "not": "Sigorta acenteleri levhaya kayıt olmadan faaliyet gösteremez; anonim veya limited şirket olarak kurulabilir ve teknik personel şartı vardır. Sigorta brokerliği ayrı izin ve sermaye ister."
+  },
+  {
+   "id": "doviz-kuyum-finans",
+   "k": "yatirim",
+   "ad": "Kıymetli maden, döviz ve ödeme hizmetleri (izinli)",
+   "nace": [
+    [
+     "66.12",
+     "Menkul kıymet ve emtia sözleşmelerinin aracılığı"
+    ],
+    [
+     "66.19",
+     "Finansal hizmetlere yardımcı diğer faaliyetler"
+    ],
+    [
+     "64.9",
+     "Diğer finansal hizmet faaliyetleri (grup)"
+    ]
+   ],
+   "m": [
+    "İlgili izinlerin alınması şartıyla yetkili müessese olarak döviz ve kıymetli maden alım satımı yapmak.",
+    "İlgili izinlerin alınması şartıyla ödeme hizmetleri veya elektronik para ihracı faaliyetinde bulunmak.",
+    "Bu faaliyetler için mevzuatın öngördüğü sermaye, ortaklık, personel ve teknik altyapı şartlarını yerine getirmek."
+   ],
+   "not": "Bu tür faaliyetler esas sözleşmeye ancak ilgili kurumun (Hazine ve Maliye Bakanlığı, TCMB, BDDK, SPK) uygun görüşüyle yazılabilir; genellikle anonim şirket ve konunun bu faaliyetle sınırlı tutulması gerekir. Örnekteki ifadeler yalnızca yer tutucudur, metin ilgili kurumun şablonuna göre hazırlanmalıdır."
+  }
+ ],
+ "genel": [
+  "Faaliyet konusu için gerekli her türlü taşınır ve taşınmaz malı satın almak, satmak, kiralamak, kiraya vermek, finansal kiralama yoluyla edinmek, inşa ettirmek ve işletmek.",
+  "Şirketin kendi borçları ile iştirakleri ve üçüncü kişiler lehine, sermaye piyasası mevzuatının ilgili hükümleri saklı kalmak kaydıyla, şirket taşınır ve taşınmazları üzerinde ipotek, rehin, ticari işletme rehni ve diğer ayni hakları kurmak, kaldırmak; başkalarına ait taşınır ve taşınmazlar üzerinde şirket lehine bu hakları kabul etmek ve fek etmek.",
+  "Taşınmazlar üzerinde irtifak, intifa, sükna, üst hakkı ve kat irtifakı kurmak, bunları kaldırmak; ifraz, tevhit ve cins değişikliği işlemlerini yapmak; kira sözleşmelerini tapuya şerh ettirmek.",
+  "Yurt içindeki ve yurt dışındaki banka ve finans kuruluşlarından kısa, orta ve uzun vadeli krediler, gayrinakdi krediler ve teminat mektupları almak; kefalet ve garanti vermek ve almak.",
+  "Faaliyet konusu ile ilgili marka, patent, faydalı model, endüstriyel tasarım, ihtira beratı, know-how, telif ve lisans haklarını edinmek, tescil ettirmek, kullanmak, devretmek, kiralamak ve lisans vermek.",
+  "Faaliyet konusu ile ilgili olarak ithalat ve ihracat yapmak; dış ticaret işlemlerinde gümrük ve kambiyo mevzuatından yararlanmak.",
+  "Yurt içinde ve yurt dışında şube, temsilcilik, irtibat bürosu, depo, satış mağazası ve fabrika açmak; yurt içi ve yurt dışı firmaların bayiliğini, acenteliğini, temsilciliğini, distribütörlüğünü ve franchise’ını almak ve vermek.",
+  "Kamu kurum ve kuruluşları ile özel sektörün açtığı ihalelere tek başına veya iş ortaklığı, konsorsiyum ve ortak girişim kurarak katılmak; ihale konusu işleri üstlenmek.",
+  "Faaliyet konusu ile ilgili danışmanlık, eğitim, mühendislik, bakım, onarım ve satış sonrası hizmetler vermek ve almak.",
+  "Sermaye piyasası mevzuatı hükümleri saklı kalmak ve yatırım hizmetleri ve faaliyetleri niteliğinde olmamak kaydıyla, yerli ve yabancı şirketlere ortak olmak, kurulmuş veya kurulacak şirketlere iştirak etmek, bu şirketlerin paylarını almak ve satmak.",
+  "Faaliyet konusu ile ilgili kamu ve özel kuruluşlardan izin, ruhsat, lisans, belge, teşvik, destek ve hibe almak; bunları devretmek ve kiralamak.",
+  "Sermaye piyasası mevzuatına aykırı olmamak kaydıyla, sosyal amaçlı vakıf, dernek, kamu kurumu, üniversite ve benzeri kuruluşlara bağış ve yardımda bulunmak.",
+  "Faaliyet konusu ile ilgili her türlü taşıt, iş makinesi ve ekipmanı satın almak, kiralamak ve satmak.",
+  "Personel çalıştırmak; çalışanlar için sosyal tesis, yemekhane, lojman ve servis hizmetleri sağlamak.",
+  "Faaliyet konusu ile ilgili internet siteleri, mobil uygulamalar ve dijital kanallar kurmak, işletmek; elektronik ticaret yapmak.",
+  "Şirket için faydalı ve gerekli görülen başka işlere girişilmek istendiğinde, yönetim kurulunun / müdürlerin önerisi üzerine genel kurulun / ortaklar kurulunun kararıyla esas sözleşme değiştirilerek, tescil ve ilan ettirilmek suretiyle bu işler de yapılabilir."
+ ],
+ "kapanis": "Seçtiğiniz bentler örnektir; işinize göre ekleme ve çıkarma yapın. İzne tabi faaliyetlerde ilgili kurumun istediği şablon metni kullanın. Metni MERSİS’e girmeden önce ticaret sicili müdürlüğünün güncel uygulamasını ve şirketin muhasebe ve vergi yükümlülüklerini mali müşavirinizle birlikte gözden geçirin."
+}
