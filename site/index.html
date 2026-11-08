@@ -4319,6 +4319,19 @@ if(!FIREBASE_CONFIG&&!GOOGLE_CLIENT_ID)document.documentElement.classList.add('n
   var calcT;document.addEventListener('input',function(e){if(!e.target.closest('#tools .pane'))return;clearTimeout(calcT);calcT=setTimeout(function(){var r=$('#tools .pane .result .row b, #tools .pane .result .big');if(r)joy('Hesaplandı!');},1400);},true);
 })();
 
+/* ---------- maskot arama sonuçları: ekrana sığacak yöne açılsın, üstü kesilmesin (klavye açıkken de) ---------- */
+(function(){var box=$('#g-res');if(!box)return;var inp=box.parentNode&&box.parentNode.querySelector('input');
+ function fit(){if(box.hidden||!inp)return;var vv=window.visualViewport,vh=vv?vv.height:innerHeight,top0=vv?vv.offsetTop:0,r=inp.getBoundingClientRect(),hdr=0,tbh=0;
+  var hb=document.querySelector('header');if(hb){var hr=hb.getBoundingClientRect();if(hr.bottom>0)hdr=hr.bottom;}
+  var tb=document.querySelector('nav.tbar');if(tb&&getComputedStyle(tb).display!=='none'){var tr=tb.getBoundingClientRect();if(tr.top<top0+vh)tbh=top0+vh-tr.top;}
+  var up=r.top-top0-Math.max(hdr,8)-10,dn=top0+vh-tbh-r.bottom-10;
+  if(dn>=Math.min(260,up)||dn>up){box.style.setProperty('top','calc(100% + 6px)','important');box.style.setProperty('bottom','auto','important');box.style.maxHeight=Math.max(120,dn)+'px';}
+  else{box.style.setProperty('top','auto','important');box.style.setProperty('bottom','calc(100% + 6px)','important');box.style.maxHeight=Math.max(120,up)+'px';}
+  box.style.overflowY='auto';}
+ new MutationObserver(fit).observe(box,{attributes:true,attributeFilter:['hidden'],childList:true});
+ if(window.visualViewport){visualViewport.addEventListener('resize',fit);visualViewport.addEventListener('scroll',fit);}addEventListener('resize',fit);
+})();
+
 /* ---------- maskot denetimi: sürükleyerek taşı, yerini sabitle, eski yerine al, tamamen kaldır ---------- */
 (function(){var g=$('#greeter'),bot=$('#g-bot'),bub=$('#g-bubble'),fm=$('#f-mk');if(!g||!bot||!bub)return;
  function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,v);}catch(e){return null;}}
