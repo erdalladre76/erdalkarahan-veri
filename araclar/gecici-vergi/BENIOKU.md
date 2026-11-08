@@ -15,3 +15,9 @@ cd ../../dosyalar && soffice --headless --convert-to pdf gecici-vergi-kontrol-li
 ```
 
 PDF'ten önce formüllerin hesaplanması için dosya LibreOffice ile bir kez açılıp kaydedilir (`soffice --convert-to xlsx` ya da xlsx skill'indeki recalc.py).
+
+Dosyalar her yeniden üretildiğinde `dosyalar/sha256.json` da güncellenir (sitedeki "Güvenli dosya" kutusu SHA-256 parmak izini ve VirusTotal bağlantısını buradan okur):
+
+```
+python3 -c "import hashlib,json,os,datetime;d={f:hashlib.sha256(open('dosyalar/'+f,'rb').read()).hexdigest() for f in sorted(os.listdir('dosyalar')) if f.endswith(('.xlsx','.pdf'))};json.dump({'guncelleme':datetime.date.today().isoformat(),'sha256':d},open('dosyalar/sha256.json','w'),indent=1)"
+```
