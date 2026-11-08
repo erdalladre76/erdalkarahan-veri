@@ -3575,10 +3575,11 @@ function goTo(h){if(location.hash==='#'+h){window.dispatchEvent(new HashChangeEv
   document.addEventListener('keydown',function(e){if(e.key==='Escape')m.hidden=true;if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();open();}});
   wireSearch($('#q2'),$('#sres2'),function(){m.hidden=true;},10);
   $$('#search-modal .qchip').forEach(function(c){c.addEventListener('click',function(){$('#q2').value=c.textContent;$('#q2').dispatchEvent(new Event('input'));$('#q2').focus();});});
-  wireSearch($('#g-q'),$('#g-res'),null,5);
+  function gDone(){var q=$('#g-q'),b=$('#g-bubble'),r=$('#g-res');window.__gHold=false;if(q){q.value='';q.blur();}if(r){r.hidden=true;r.innerHTML='';}if(b)b.hidden=true;}
+  wireSearch($('#g-q'),$('#g-res'),gDone,5);
   var gq=$('#g-q');gq.addEventListener('focus',function(){window.__gHold=true;});
   $('#g-go').addEventListener('click',function(){var q=gq.value.trim();if(!q){gq.focus();toast('Aramak istediğinizi yazın');return;}
-    var r=siteSearch(q,1)[0];if(r){if(r.ext)window.open(r.h,'_blank','noopener');else goTo(r.h.slice(1));gq.value='';$('#g-res').hidden=true;}
+    var r=siteSearch(q,1)[0];if(r){if(r.ext)window.open(r.h,'_blank','noopener');else goTo(r.h.slice(1));gDone();}
     else{var m=$('#search-modal');m.hidden=false;$('#q2').value=q;$('#q2').dispatchEvent(new Event('input'));setTimeout(function(){$('#q2').focus();},30);}});
 })();
 
