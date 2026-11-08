@@ -1,6 +1,17 @@
 {
- "guncelleme": "2026-11-06",
+ "guncelleme": "2026-11-08",
  "hap": [
+  {
+   "id": "yd-2026-3",
+   "tarih": "2026-10-30",
+   "etiket": "VERGİ",
+   "baslik": "3. dönem yeniden değerleme oranı %19,64",
+   "metin": "2026 yılı 3. geçici vergi dönemi için VUK mükerrer 298/Ç kapsamındaki yeniden değerleme oranı %19,64 olarak açıklandı. 2025–2027’de enflasyon düzeltmesi yapılmadığından, amortismana tabi varlıklarını yeniden değerlemek isteyenler bu oranı kullanabilir. 1. veya 2. dönemde yeniden değerleme yapanlar oranı tekrar uygulamaz; yıl başı değerlerinden hesaplayıp farkı kaydeder.",
+   "kaynak": {
+    "ad": "GİB KVK Sirküleri No: 74",
+    "url": "https://www.alomaliye.com/2026/10/30/5520-sayili-kurumlar-vergisi-kanunu-sirkuleri-74/"
+   }
+  },
   {
    "id": "kira-artis-kasim-2026",
    "tarih": "2026-11-03",

@@ -1,0 +1,17 @@
+{
+ "yil": 2026,
+ "secili": 3,
+ "guncelleme": "2026-11-08",
+ "donemler": [
+  {"no": 1, "aylar": "Ocak–Mart", "songun": "18 Mayıs 2026", "oran": 4.19, "kaynak": "KVK Sirküleri No: 72 (10.04.2026)", "url": "https://www.alomaliye.com/2026/04/12/5520-sayili-kurumlar-vergisi-kanunu-sirkuleri-72/"},
+  {"no": 2, "aylar": "Ocak–Haziran", "songun": "17 Ağustos 2026", "oran": 11.51, "kaynak": "KVK Sirküleri No: 73 (23.07.2026)", "url": "https://www.alomaliye.com/2026/07/24/5520-sayili-kurumlar-vergisi-kanunu-sirkuleri-73/"},
+  {"no": 3, "aylar": "Ocak–Eylül", "songun": "17 Kasım 2026", "oran": 19.64, "kaynak": "KVK Sirküleri No: 74 (30.10.2026)", "url": "https://www.alomaliye.com/2026/10/30/5520-sayili-kurumlar-vergisi-kanunu-sirkuleri-74/"},
+  {"no": 4, "aylar": "Ocak–Aralık", "songun": "17 Şubat 2027", "oran": null, "kaynak": "", "url": ""}
+ ],
+ "oranlar": [
+  ["Kurumlar vergisi mükellefleri", 0.25, "KVK md. 32", "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5520&MevzuatTur=1&MevzuatTertip=5"],
+  ["Kanunda sayılan finansal kurumlar (banka, finansal kiralama, faktoring, sigorta vb.)", 0.30, "KVK md. 32", "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5520&MevzuatTur=1&MevzuatTertip=5"],
+  ["Gelir vergisi mükellefleri (geçici vergi)", 0.15, "GVK mük. md. 120", "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=193&MevzuatTur=1&MevzuatTertip=4"],
+  ["Yurt içi asgari kurumlar vergisi", 0.10, "KVK md. 32/C", "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5520&MevzuatTur=1&MevzuatTertip=5"]
+ ]
+}

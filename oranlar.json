@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-03",
+ "guncelleme": "2026-11-08",
  "aciklama": "Resmî oran ve tutarlar değiştiğinde yalnızca bu dosyayı (ve gerekirse cezalar.json, beyan_vergi.json, sgk_formlar.json, yazilar.json) güncelleyin; site yeni değerleri otomatik kullanır.",
  "kidemTavan": [
   {
@@ -209,5 +209,64 @@
   "2026-09": 2.91,
   "2026-10": 2.91
  },
- "pratik": {}
+ "pratik": {
+  "gecicivergi": {
+   "t": "Geçici vergi (2026)",
+   "rows": [
+    [
+     "Dönem sayısı",
+     "4 (4. dönem 2025’ten itibaren yeniden)"
+    ],
+    [
+     "Beyan ve ödeme",
+     "Dönemi izleyen 2. ayın 17’si"
+    ],
+    [
+     "1. dönem (Ocak–Mart)",
+     "18 Mayıs 2026"
+    ],
+    [
+     "2. dönem (Nisan–Haziran)",
+     "17 Ağustos 2026"
+    ],
+    [
+     "3. dönem (Temmuz–Eylül)",
+     "17 Kasım 2026"
+    ],
+    [
+     "4. dönem (Ekim–Aralık)",
+     "17 Şubat 2027"
+    ],
+    [
+     "Gelir vergisi mükellefleri",
+     "%15"
+    ],
+    [
+     "Kurumlar vergisi mükellefleri",
+     "%25 (finansal kurumlar %30)"
+    ],
+    [
+     "Yurt içi asgari kurumlar vergisi",
+     "%10"
+    ],
+    [
+     "Yeniden değerleme oranı · 1. dönem",
+     "%4,19 (KVK Sirk. 72)"
+    ],
+    [
+     "Yeniden değerleme oranı · 2. dönem",
+     "%11,51 (KVK Sirk. 73)"
+    ],
+    [
+     "Yeniden değerleme oranı · 3. dönem",
+     "%19,64 (KVK Sirk. 74)"
+    ],
+    [
+     "Yeniden değerleme oranı · 4. dönem",
+     "Açıklandığında eklenecek"
+    ]
+   ],
+   "note": "Ödenen geçici vergi yıllık gelir/kurumlar vergisinden mahsup edilir. 2025–2027’de enflasyon düzeltmesi yapılmaz (7571 s. Kanun); amortismana tabi varlıklar için VUK mük. 298/Ç yeniden değerlemesi isteğe bağlıdır. Dönem sonu kontrol listesi: Excel bölümünde."
+  }
+ }
 }
