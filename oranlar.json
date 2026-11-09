@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-08",
+ "guncelleme": "2026-11-09",
  "aciklama": "Resmî oran ve tutarlar değiştiğinde yalnızca bu dosyayı (ve gerekirse cezalar.json, beyan_vergi.json, sgk_formlar.json, yazilar.json) güncelleyin; site yeni değerleri otomatik kullanır.",
  "kidemTavan": [
   {
@@ -263,7 +263,7 @@
     ],
     [
      "Yeniden değerleme oranı · 4. dönem",
-     "Açıklandığında eklenecek"
+     "%27,83 (TÜİK Ekim 2026 Yİ-ÜFE 12 aylık ort.; VUK tebliğiyle ilanı bekleniyor)"
     ]
    ],
    "note": "Ödenen geçici vergi yıllık gelir/kurumlar vergisinden mahsup edilir. 2025–2027’de enflasyon düzeltmesi yapılmaz (7571 s. Kanun); amortismana tabi varlıklar için VUK mük. 298/Ç yeniden değerlemesi isteğe bağlıdır. Dönem sonu kontrol listesi: Excel bölümünde."
