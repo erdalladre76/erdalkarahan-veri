@@ -1138,6 +1138,7 @@ section[data-view],[id^="h-"],[id^="d-"],[id^="x-"],[id^="p-"]{scroll-margin-top
 
 .dz-part{margin:26px 0 12px;padding-top:18px;border-top:2px solid var(--rule)}.dz-part>span{display:inline-block;font:800 24px var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--stamp);border-radius:12px;padding:8px 20px;margin-bottom:8px}.dz-part h3{margin:2px 0 4px;font-size:22px}.dz-part p{margin:0;color:var(--ink-2);font-size:14px}
 .dz-more{background:var(--sheet);border:1px solid var(--rule);border-radius:var(--r);margin:0 0 10px}.dz-more>summary{cursor:pointer;padding:14px 16px;font-weight:700;font-size:15.5px;list-style:none;display:flex;justify-content:space-between;gap:10px}.dz-more>summary::-webkit-details-marker{display:none}.dz-more>summary::after{content:"+";font-size:20px;line-height:1;color:var(--stamp)}.dz-more[open]>summary::after{content:"–"}
+.ak-wiz{background:var(--sheet);border:1px solid var(--rule);border-radius:var(--r);padding:16px;margin:0 0 14px}.ak-top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin-bottom:10px}.ak-chips{display:flex;flex-wrap:wrap;gap:6px}.ak-chip{border:1px solid var(--stamp);color:var(--stamp);background:transparent;border-radius:999px;padding:5px 11px;font:inherit;font-size:13.5px;cursor:pointer}.ak-reset{border:0;background:none;color:var(--ink-2);text-decoration:underline;cursor:pointer;font:inherit;font-size:14px}.ak-big{font:800 44px/1.05 var(--f-head,inherit);color:var(--stamp);margin:6px 0 12px}.ak-big small{display:block;font:500 14px/1.4 inherit;color:var(--ink-2);margin-top:4px}.ak-h{margin:16px 0 6px;font-size:15px}.ak-ul{margin:6px 0 0 18px;padding:0}.ak-ul li{margin:4px 0}.ak-yev{margin-top:12px}.ak-yev>b{display:block;margin-bottom:6px}.ak-wiz .dz-grid input{width:100%;padding:10px;border:1px solid var(--rule);border-radius:10px;font:inherit;background:var(--paper);color:var(--ink)}.ak-wiz .dz-grid label{display:flex;flex-direction:column;gap:4px;font-size:13.5px;color:var(--ink-2)}
 .dz-links{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}.dz-links a{display:inline-flex;align-items:center;padding:10px 14px;border-radius:999px;font-weight:700;font-size:14.5px;text-decoration:none;border:1px solid var(--stamp)}.dz-links a.btn-p{background:var(--stamp);color:#fff}.dz-links a.btn-g{color:var(--stamp);background:transparent}.dz-yap{margin-top:12px!important}.dz-yap .dz-steps{margin:12px 14px}.dz-kay{font-size:13px;color:var(--ink-2)}.dz-kay a{color:var(--stamp)}
 .dz-more[open]>summary{border-bottom:1px solid var(--rule)}.dz-more>*:not(summary){margin:12px 14px}.dz-more .dz-tls{margin:12px 14px}.dz-more .dz-chain{border:0;padding:0;background:none}.dz-more .dz-chain>h3{display:none}
 .gb-sub{margin:-8px 0 18px;font-size:14px;color:var(--ink-2)}.gb-sub a{color:var(--stamp);font-weight:700}
@@ -1965,6 +1966,7 @@ section[data-view] a{overflow-wrap:anywhere}
       <div class="sec-head rv" style="margin-top:34px"><div><span class="eyebrow">Rehberler</span><h2>Rehberler ve bilgi sayfaları.</h2></div><p>Mevzuat, süreler ve uygulama örnekleri.</p></div>
       <div class="hub">
         <a class="hub-card rv" href="#gecbeyan"><span class="hub-ico"><svg><use href="#i-calc"/></svg></span><b>Beyanname vermeme cezası</b><span>Verilmeyen ya da düzeltilecek beyanname: vergi, zam, ceza ve SGK hesabı</span><em>Hesapla</em></a>
+        <a class="hub-card rv" href="#arackdv"><span class="hub-ico"><svg><use href="#i-calc"/></svg></span><b>Araç ve iş makinesi KDV oranı</b><span>İkinci el binek, traktör, iş makinesi: soru sorarak oranı bulun</span><em>Rehber</em></a>
         <a class="hub-card rv" href="#duzeltme"><span class="hub-ico"><svg><use href="#i-book"/></svg></span><b>Düzeltme beyannamesi ve geç beyan</b><span>KDV ve MUHSGK’da hangi durumda ne yapılır, adım adım</span><em>Rehber</em></a>
         <a class="hub-card rv" href="#pratik"><span class="hub-ico"><svg><use href="#i-info"/></svg></span><b>Pratik bilgiler</b><span>2026 tutarları, oranları ve süreleri tek sayfada</span><em>2026</em></a>
         <a class="hub-card rv" href="#sirket"><span class="hub-ico"><svg><use href="#i-building"/></svg></span><b>Şirket işlemleri</b><span>Ticaret sicili, İTO ve şirket kararları</span><em>Rehber</em></a>
@@ -2301,6 +2303,28 @@ section[data-view] a{overflow-wrap:anywhere}
     </div>
   </section>
 
+  <!-- ARAÇ KDV ORANI -->
+  <section class="block" id="arackdv" data-view="arackdv">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="eyebrow">Vergi rehberi</span><h2>Araç ve iş makinesi alım-satımında KDV oranı kaç?</h2></div><p>İkinci el binekte %1 mi %20 mi, ikinci el iş makinesinde %10 mu, traktörde kaç? Soruları yanıtlayın; oranı, dayanağını, alıcının KDV’yi indirip indiremeyeceğini ve muhasebe kaydını görün.</p></div>
+      <div class="ak-wiz" id="ak-wiz" aria-live="polite"></div>
+      <details class="dz-more"><summary>Bütün oranlar tek tabloda (2026)<span aria-hidden="true">+</span></summary>
+        <div class="tscroll"><table class="dtable"><thead><tr><th>Ne satılıyor?</th><th>Sıfır</th><th>İkinci el</th><th>Dayanak</th></tr></thead><tbody>
+        <tr><td>Binek otomobil (87.03)</td><td>%20 (+ÖTV)</td><td>Satıcı alışta KDV indirmediyse %1 · indirdiyse %20 · vatandaş satıyorsa KDV yok</td><td>(I) liste 9. sıra</td></tr>
+        <tr><td>Binek · yetki belgeli galeri, vatandaştan alınmış</td><td>—</td><td>Alış-satış farkı üzerinden %20</td><td>KDVK 23/f, CK 5359</td></tr>
+        <tr><td>Binek · başka galeriden fark faturasıyla alınmış</td><td>—</td><td>Satış bedelinin tamamına %1</td><td>(I) liste 9. sıra</td></tr>
+        <tr><td>Kamyonet, kamyon, çekici, minibüs, otobüs, motosiklet</td><td>%20</td><td>%20 (yetkili galeride vatandaştan alınmışsa fark üzerinden %20)</td><td>Genel oran, KDVK 23/f</td></tr>
+        <tr><td>Ambulans, cenaze, itfaiye, para nakil aracı</td><td>%20</td><td>%20</td><td>(I) liste 9. sıra kapsam dışı</td></tr>
+        <tr><td>Tarım traktörü</td><td>%10</td><td>%1 (galeri satışında %10)</td><td>(II) liste 28. sıra, (I) liste 9. sıra</td></tr>
+        <tr><td>Biçerdöver, motokültör, tarım makineleri</td><td>%10</td><td>%10</td><td>(II) liste 28. sıra</td></tr>
+        <tr><td>Ekskavatör (paletli, lastik tekerlekli kuleli), beko loder</td><td>%10 · leasingde %1</td><td>%10</td><td>(II) liste 29. sıra, (I) liste 17. sıra</td></tr>
+        <tr><td>Dozer, greyder, silindir, forklift, vinç, diğer iş makineleri</td><td>%20 · leasingde %1</td><td>%20</td><td>Genel oran, (I) liste 17. sıra</td></tr>
+        </tbody></table></div>
+        <p class="pnote">Oranlar 2007/13033 sayılı Karar eki listelere göredir; (II) sayılı liste %10, genel oran %20 (10.07.2023’ten beri). Leasingdeki %1 yalnız sıfır makinelerin finansal kiralama şirketine teslimi ve leasingle kiralanması içindir. GTİP’e göre listede yer alıp almadığını mutlaka kontrol edin; tereddütte vergi dairesinden özelge isteyin.</p>
+      </details>
+    </div>
+  </section>
+
   <!-- AMAÇ VE KONU -->
   <section class="block tint" id="amackonu" data-view="amackonu">
     <div class="wrap">
@@ -2503,7 +2527,7 @@ var NF=new Intl.NumberFormat('tr-TR',{minimumFractionDigits:2,maximumFractionDig
 var NI=new Intl.NumberFormat('tr-TR',{maximumFractionDigits:2});
 /* muhasebe kayıtları (yevmiye) görünümü */
 function yevHtml(Y,not){return '<div class="yev"><div class="yev-h"><span class="eyebrow">Muhasebe kayıtları</span><h3>Yevmiye kayıtları</h3><p>Tek Düzen Hesap Planına göre örnek kayıtlar; tutarlar yukarıdaki bilgilerle hesaplanmıştır.</p></div>'+Y.map(function(e,k){var tb=0,ta=0;var rows=e.l.map(function(x){tb+=x[2];ta+=x[3];return '<tr><td class="yk">'+esc(x[0])+'</td><td class="'+(x[3]&&!x[2]?'ya':'')+'">'+esc(x[1])+'</td><td class="num yb'+(x[2]?'':' ye')+'">'+(x[2]?esc(tl(x[2])):'')+'</td><td class="num ya2'+(x[3]?'':' ye')+'">'+(x[3]?esc(tl(x[3])):'')+'</td></tr>';}).join('');
- return '<div class="yev-e"><div class="yev-t"><b>'+(k+1)+'. '+esc(e.t)+'</b>'+(e.d?'<span>'+esc(e.d)+'</span>':'')+'</div><div class="tscroll"><table class="dtable yev-tb"><thead><tr><th>Hesap</th><th>Hesap adı</th><th class="num">Borç</th><th class="num">Alacak</th></tr></thead><tbody>'+rows+'<tr class="yev-top"><td class="ye"></td><td>Toplam</td><td class="num yb">'+esc(tl(tb))+'</td><td class="num ya2">'+esc(tl(ta))+'</td></tr></tbody></table></div></div>';}).join('')+(not?'<p class="note yev-n">'+esc(not)+'</p>':'')+'</div>';}
+ return '<div class="yev-e"><div class="yev-t"><b>'+esc(e.t)+'</b>'+(e.d?'<span>'+esc(e.d)+'</span>':'')+'</div><div class="tscroll"><table class="dtable yev-tb"><thead><tr><th>Hesap</th><th>Hesap adı</th><th class="num">Borç</th><th class="num">Alacak</th></tr></thead><tbody>'+rows+'<tr class="yev-top"><td class="ye"></td><td>Toplam</td><td class="num yb">'+esc(tl(tb))+'</td><td class="num ya2">'+esc(tl(ta))+'</td></tr></tbody></table></div></div>';}).join('')+(not?'<p class="note yev-n">'+esc(not)+'</p>':'')+'</div>';}
 /* sonuçlarda ondalık hane sayısı: varsayılan 2; kullanıcı 3 ya da 4 seçebilir (yalnızca hesaplama sonucu çizilirken geçerli) */
 var RP=2,NF2=NF,NI2=NI,_nfc={};function NFP(){return _nfc[RP]||(_nfc[RP]=new Intl.NumberFormat('tr-TR',{minimumFractionDigits:RP,maximumFractionDigits:RP}));}
 function fx(n){return isFinite(n)?NFP().format(n):'—';}
@@ -2728,7 +2752,7 @@ var TOOLS=[
      note='Galeri/bayi stoğundaki araçlar şirket işinde kullanılırsa (ör. yöneticiye tahsis) demirbaşa alınmalı; binek ise kısıtlamalar o tarihten itibaren uygulanır.';}
    else if(!kis){var mal=b+o,ya=mal/n,k1=ya*(binek?(13-m)/12:1);rows.push(['KDV',tl(kdv)+' · indirilir (KDV-1, 191)'],['Amortismana esas bedel (254)',tl(mal)],['Yıllık amortisman (%'+NI.format(100/n)+')',tl(ya)],['Bu yıl ayrılacak amortisman',tl(k1)+(binek?' (binekte kıst: '+(13-m)+' ay)':''),1],['Gider kısıtlaması','Yok: giderlerin tamamı indirilir']);if(!binek)rows.push(['Alış ayı','Binek dışı taşıtta etkisi yok: alış yılında tam yıl amortisman ayrılır']);
      Y.push({t:'Araç alışı',d:binek?'Faaliyet konusu binek kiralama/işletme olduğundan KDV indirilir, ÖTV maliyete eklenir.':'Ticari taşıtta KDV indirilir; ÖTV maliyete eklenir (ya da doğrudan gider yazılabilir).',l:[['254','Taşıtlar',mal,0],['191','İndirilecek KDV',kdv,0],['320','Satıcılar',0,top]]});
-     Y.push({t:'Yıl sonu amortisman',d:'',l:[['770','Genel yönetim giderleri (amortisman)',k1,0],['257','Birikmiş amortismanlar',0,k1]]});
+     Y.push({t:'Dönem sonu amortisman kaydı',d:'',l:[['770','Genel yönetim giderleri (amortisman)',k1,0],['257','Birikmiş amortismanlar',0,k1]]});
      note=binek?'İstisna yalnızca kiralama/işletme işinde kullanılan araçlar için geçerlidir; aynı şirkette yönetici kullanımına verilen binek araçlara kısıtlama uygulanır.':'Ruhsatta binek (M1) olarak tescilli araçlar GTİP’i ne olursa olsun incelemede binek sayılabilir; Danıştay ticari tescilli (N1) araçlarda yalnız GTİP’e dayanan reddi kaldırmıştır.';}
    else{var vk=o+kdv,gid,kkV,mal,esas,kkA,ya,yk,k1,kk1;
      if(v.y==='gider'){gid=Math.min(vk,L1);kkV=vk-gid;mal=b;esas=Math.min(b,L2);}
@@ -2739,7 +2763,7 @@ var TOOLS=[
      rows.push(['Taşıt maliyeti (254)',tl(mal)],['Amortismana esas bedel (sınır '+tl(v.y==='gider'?L2:L3)+')',tl(esas)],['Bu yıl indirilebilir amortisman (kıst '+(13-m)+' ay)',tl(k1),1],['Bu yıl KKEG amortisman',tl(kk1)],['Kullanım giderleri','%70’i gider, %30’u KKEG; kiralamada aylık 46.000 ₺ üstü KKEG']);
      var L=[['254','Taşıtlar',mal,0]];if(v.y==='gider')L.push(['770','Genel yönetim giderleri (ÖTV+KDV)',vk,0]);L.push(['320','Satıcılar',0,top]);
      Y.push({t:'Binek otomobil alışı',d:v.y==='gider'?'İndirilemeyen ÖTV ve KDV alış yılında gider yazılır; '+tl(L1)+'’yi aşan kısım KKEG olarak beyannamede matraha eklenir.':'ÖTV ve KDV maliyete eklenir; amortisman en çok '+tl(L3)+' üzerinden ayrılır.',l:L});
-     Y.push({t:'Yıl sonu amortisman',d:'Kaydın tamamı yapılır; sınırı aşan kısım ('+tl(kk1)+') kurumlar/gelir vergisi beyannamesinde KKEG olarak eklenir.',l:[['770','Genel yönetim giderleri (amortisman)',k1+kk1,0],['257','Birikmiş amortismanlar',0,k1+kk1]]});
+     Y.push({t:'Dönem sonu amortisman kaydı',d:'Kaydın tamamı yapılır; sınırı aşan kısım ('+tl(kk1)+') kurumlar/gelir vergisi beyannamesinde KKEG olarak eklenir.',l:[['770','Genel yönetim giderleri (amortisman)',k1+kk1,0],['257','Birikmiş amortismanlar',0,k1+kk1]]});
      note='2026 sınırları (332 Sıra No.lu GVK Genel Tebliği): ÖTV+KDV gider yazma 1.200.000 ₺, amortismana esas bedel 1.380.000 ₺ (vergiler maliyete eklenirse 2.600.000 ₺), aylık kira 46.000 ₺, giderlerin %70’i. Sınır aracın alındığı yılın tutarıdır. Binek otomobilde ilk yıl kıst amortisman uygulanır, kalan kısım son yıla aktarılır.';}
    note+=' GTİP’i bulmak için: yeni araçta bayi faturasındaki GTİP alanına ya da bayinin yazılı teyidine, ruhsattaki “cinsi” ve araç sınıfına (M1 binek, N1/N2 eşya taşıma), uygunluk (COC) belgesine, ithal araçta gümrük beyannamesine bakın. İkinci el araçta satıcıdan ilk fatura istenebilir; ruhsat ile GTİP çelişirse ruhsattaki sınıf ve kullanım amacı esas alınarak değerlendirilir.';
    return {rows:rows,note:note,table:{head:['GTİP','Araç','Binek mi?','KDV indirimi','Gider kısıtlaması'],body:[
@@ -2979,16 +3003,18 @@ var TOOLS=[
    else res.note=v.t==='k'?'Bireysel konut kredisinde KKDF ve BSMV alınmaz. Muhasebe kayıtlarını görmek için “Ticari (TL)” seçin.':'Bireysel krediler kişisel borç olduğundan muhasebe kaydı gerekmez. Şirket adına kullanılan kredi için “Ticari (TL)” seçin; kayıtlar ödeme planının altında çıkar.';
    return res;}},
  {g:'Kredi ve finans',key:'leasing',title:'Finansal kiralama (leasing)',abbr:'FK',lead:'Leasing ile alınan makine, taşıt ya da demirbaşın kira planını, KDV’sini ve kiracı açısından muhasebe kayıtlarını çıkarın.',
-  fields:[F('a','Kiralanan varlığın bedeli (KDV hariç)',{val:'1.000.000',sfx:'₺'}),F('p','Peşin kira / peşinat (KDV hariç, isteğe bağlı)',{val:'',sfx:'₺'}),F('r','Aylık faiz oranı',{val:'2,5',sfx:'%'}),F('n','Vade',{val:'36',sfx:'ay'}),F('k','KDV oranı',{type:'seg',opts:[['20','%20'],['10','%10'],['1','%1']],val:'20',hint:'Finansal kiralamada KDV oranı, kiralanan malın teslimindeki orandır; çoğu makine ve taşıtta %20.'}),F('h','Kiralanan varlık',{type:'seg',opts:[['253','253 Makine, tesis'],['254','254 Taşıt'],['255','255 Demirbaş']],val:'253'})],
+  fields:[F('a','Kiralanan varlığın bedeli (KDV hariç)',{val:'1.000.000',sfx:'₺'}),F('p','Peşin kira / peşinat (KDV hariç, isteğe bağlı)',{val:'',sfx:'₺'}),F('r','Aylık faiz oranı',{val:'2,5',sfx:'%'}),F('n','Vade',{val:'36',sfx:'ay'}),F('k','KDV oranı',{type:'seg',opts:[['20','%20'],['10','%10'],['1','%1']],val:'20',hint:'Kural: malın kendi oranı (çoğu taşıt ve makinede %20). Sıfır iş makineleri ve listedeki makine-teçhizat leasingde %1 ((I) sayılı liste 17. sıra; kullanılmışlar hariç). Ekskavatör ve beko loder %10. Oranı bulmak için Araç ve iş makinesi KDV oranı rehberine bakın.'}),F('h','Kiralanan varlık',{type:'seg',opts:[['253','253 Makine, tesis'],['254','254 Taşıt'],['255','255 Demirbaş']],val:'253'}),F('b','Binek otomobil mi?',{type:'seg',opts:[['h','Hayır'],['e','Evet (87.03)']],val:'h',hint:'Binek otomobilde kira KDV’si genel faaliyette indirilemez ve amortisman sınırları uygulanır.'}),F('o','Faydalı ömür',{val:'5',sfx:'yıl',hint:'VUK amortisman listesindeki süre: binek 5, kamyonet 4, iş makinesi çoğunlukla 6–8, bilgisayar 4 yıl.'}),F('m','Sözleşme ayı (ilk yıl kıst amortisman için)',{type:'select',val:'1',opts:[['1','Ocak'],['2','Şubat'],['3','Mart'],['4','Nisan'],['5','Mayıs'],['6','Haziran'],['7','Temmuz'],['8','Ağustos'],['9','Eylül'],['10','Ekim'],['11','Kasım'],['12','Aralık']]})],
   calc:function(v){var a=num(v.a),pe=num(v.p)||0,r=num(v.r)/100,n=Math.round(num(v.n)),kd=(+v.k||20)/100;if(isNaN(a)||isNaN(r)||!(n>0)||n>240||pe>=a)return null;var F0=a-pe,ki=r?F0*r/(1-Math.pow(1+r,-n)):F0/n,kal=F0,body=[],tF=0,P=[];for(var i=1;i<=n;i++){var f=kal*r,ana=ki-f;kal-=ana;tF+=f;P.push({f:f,ana:ana});body.push([i,tl(ki),tl(f),tl(ana),tl(ki*kd),tl(ki*(1+kd)),tl(Math.max(0,kal))]);}
    var HA={'253':'Tesis, makine ve cihazlar','254':'Taşıtlar','255':'Demirbaşlar'}[v.h]||'Tesis, makine ve cihazlar',HK=v.h||'253';
    var k12=0,k2=0,f12=0,f2=0,k13=0,f13=0;P.forEach(function(x,j){if(j<12){k12+=ki;f12+=x.f;}else{k2+=ki;f2+=x.f;if(j<24){k13+=ki;f13+=x.f;}}});
-   var rows=[['Aylık kira (KDV hariç)',tl(ki)],['KDV (%'+(kd*100)+')',tl(ki*kd)],['Aylık ödeme (KDV dahil)',tl(ki*(1+kd)),1],['Finanse edilen tutar',tl(F0)],['Toplam kira (KDV hariç)',tl(ki*n)],['Toplam faiz',tl(tF)],['Toplam KDV',tl((ki*n+pe)*kd)],['Toplam ödeme (peşinat ve KDV dahil)',tl((ki*n+pe)*(1+kd))]];
+   var rows=[['Aylık kira (KDV hariç)',tl(ki)],['KDV (%'+(kd*100)+')',tl(ki*kd)],['Aylık ödeme (KDV dahil)',tl(ki*(1+kd)),1],['Finanse edilen tutar',tl(F0)],['Toplam kira (KDV hariç)',tl(ki*n)],['Toplam faiz',tl(tF)],['Toplam KDV',tl((ki*n+pe)*kd)],['Toplam ödeme (peşinat ve KDV dahil)',tl((ki*n+pe)*(1+kd))]];var bin=v.b==='e',om=Math.max(1,num(v.o)||5),ay=+v.m||1,esasA=bin?Math.min(a,1380000):a,ya=esasA/om,ilk=bin?ya*(13-ay)/12:ya;rows.push(['Amortismana esas bedel',tl(a)+(bin&&a>1380000?' (binekte 2026 sınırı 1.380.000 ₺; aşan kısmın amortismanı KKEG)':'')],['Yıllık amortisman (%'+NI.format(Math.round(10000/om)/100)+')',tl(ya)],['İlk yıl amortisman'+(bin?' (kıst '+(13-ay)+' ay)':''),tl(ilk)]);if(bin)rows.push(['Kira KDV’si','Genel faaliyette indirilemez: 191 yerine gider / maliyet (KDVK 30/b)']);
    var e1=[[HK,HA,a,0],['302','Ertelenmiş finansal kiralama borçlanma maliyetleri (−) (12 ay)',f12,0]];if(f2)e1.push(['402','Ertelenmiş finansal kiralama borçlanma maliyetleri (−) (12 aydan sonra)',f2,0]);e1.push(['301','Finansal kiralama işlemlerinden borçlar (12 ay içindeki kiralar)',0,k12]);if(k2)e1.push(['401','Finansal kiralama işlemlerinden borçlar (12 aydan sonraki kiralar)',0,k2]);if(pe){e1.push(['191','İndirilecek KDV (peşinat)',pe*kd,0]);e1.push(['102','Bankalar (peşinat + KDV)',0,pe*(1+kd)]);}
    var p1=P[0],Y=[{t:'Sözleşme ve varlığın teslimi',d:'Varlık, finanse edilen tutar ile peşinatın toplamı olan bedelle aktife alınır. Kira borcunun tamamı 301/401’e, içindeki faiz 302/402 düzenleyici hesaplarına yazılır.',l:e1},
-    {t:'1. kira ödemesi',d:'Kira faturası geldiğinde ve ödendiğinde. Diğer aylarda tutarları ödeme planındaki ilgili satırdan alın.',l:[['301','Finansal kiralama işlemlerinden borçlar',ki,0],['191','İndirilecek KDV',ki*kd,0],['102','Bankalar',0,ki*(1+kd)]]},
+    {t:'1. kira ödemesi',d:'Kira faturası geldiğinde ve ödendiğinde. Diğer aylarda tutarları ödeme planındaki ilgili satırdan alın.'+(bin?' Binek otomobilde KDV indirilemediği için 770’e (ya da 689 KKEG) yazılır.':''),l:[['301','Finansal kiralama işlemlerinden borçlar',ki,0],bin?['770','Genel yönetim giderleri (indirilemeyen KDV)',ki*kd,0]:['191','İndirilecek KDV',ki*kd,0],['102','Bankalar',0,ki*(1+kd)]]},
     {t:'1. ayın faizinin gidere aktarılması',d:'Her ay, o aya düşen faiz ertelenmiş maliyetlerden gidere alınır.',l:[['780','Finansman giderleri',p1.f,0],['302','Ertelenmiş finansal kiralama borçlanma maliyetleri (−)',0,p1.f]]}];
    if(k2)Y.push({t:'Dönem sonu: uzun vadeden kısa vadeye aktarma',d:'Her yıl sonunda izleyen 12 ayın kiraları ve faizi uzun vadeli hesaplardan kısa vadeliye aktarılır. Örnekteki tutarlar 13.–24. aylara aittir; gerçek tutarları bilanço tarihine göre ödeme planından alın.',l:[['401','Finansal kiralama işlemlerinden borçlar (uzun)',k13,0],['301','Finansal kiralama işlemlerinden borçlar (kısa)',0,k13],['302','Ertelenmiş FK borçlanma maliyetleri (−) (kısa)',f13,0],['402','Ertelenmiş FK borçlanma maliyetleri (−) (uzun)',0,f13]]});
+   Y.push({t:'Dönem sonu amortisman kaydı',d:'Kiracı, varlık kendisine ait gibi amortisman ayırır (VUK 290). '+(bin?'Binekte ilk yıl kıst; 1.380.000 ₺’yi aşan kısma düşen amortisman KKEG.':'Binek dışında alış yılında tam yıl ayrılır.'),l:[['770','Genel yönetim giderleri (ya da 730 / 760)',ilk,0],['257','Birikmiş amortismanlar',0,ilk]]});
+   Y.push({t:'Sözleşme sonu: mülkiyetin devri',d:'Son kira ödenince varlık zaten aktifte olduğu için ayrı alış kaydı gerekmez. Devir için sembolik bedel faturası gelirse: bedel 253/254’e, KDV’si 191’e (binekte maliyete) yazılır. Amortismana kalan süre boyunca devam edilir.',l:[[HK,HA+' (sembolik devir bedeli, varsa)',0,0],['320','Satıcılar / leasing şirketi',0,0]]});
    return {rows:rows,table:{head:['Ay','Kira (KDV hariç)','Faiz','Anapara','KDV','Ödeme (KDV dahil)','Kalan anapara'],body:body},yev:Y,yevNot:'Kiracı, kiralanan varlık için VUK’ta belirlenen faydalı ömre göre amortisman ayırır (ör. 770 / 730 borç, 257 Birikmiş Amortismanlar alacak). Faiz, 7/B seçeneğinde 780 yerine 660 hesabına yazılır. Sözleşme kiralayanla yapılan ödeme planına göre farklılık gösterebilir; kayıtları sözleşmedeki kira ve faiz tablosuna göre yapın.'};}},
  {g:'Kredi ve finans',key:'mevduat',title:'Mevduat faizi',abbr:'MF',lead:'Vadeli mevduatın brüt ve net faiz getirisini hesaplayın.',
   fields:[F('a','Anapara',{val:'500.000',sfx:'₺'}),F('r','Yıllık faiz oranı',{val:'40',sfx:'%'}),F('g','Vade',{val:'32',sfx:'gün'}),F('s','Farklı stopaj oranı (isteğe bağlı)',{val:'',sfx:'%',hint:'Boş bırakırsanız TL mevduat için vadeye göre yasal oran uygulanır: 6 aya kadar %17,5, 1 yıla kadar %15, 1 yıldan uzun %10.'})],
@@ -3525,7 +3551,7 @@ window.renderBelgeler=function(){var el=$('#belge-list');if(!el)return;
     h+='<h2 class="pp-h">Hesaplama</h2><table class="pp-kv pp-res">'+r.rows.map(function(x){if(x[3]==='h')return '<tr class="pp-sub"><td colspan="2"><b>'+esc(x[0])+'</b></td></tr>';return '<tr'+(x[2]?' class="big"':'')+'><td>'+esc(x[0])+'</td><td><b>'+esc(x[1])+'</b></td></tr>';}).join('')+'</table>';
     if(r.table)h+='<table class="pp-tbl"><thead><tr>'+r.table.head.map(function(x){return '<th>'+esc(x)+'</th>';}).join('')+'</tr></thead><tbody>'+r.table.body.map(function(row){return '<tr>'+row.map(function(x){return '<td>'+esc(x)+'</td>';}).join('')+'</tr>';}).join('')+'</tbody></table>';
     if(r.note)h+='<p class="pp-n">'+esc(r.note)+'</p>';
-    if(FM){if(r.yev)h+='<h2 class="pp-h">Muhasebe kayıtları</h2>'+r.yev.map(function(y,i){return '<p class="pp-n"><b>'+(i+1)+'. '+esc(y.t)+'</b>'+(y.d?' · '+esc(y.d):'')+'</p><table class="pp-tbl"><thead><tr><th>Hesap</th><th>Hesap adı</th><th>Borç</th><th>Alacak</th></tr></thead><tbody>'+y.l.map(function(l){return '<tr><td>'+esc(l[0])+'</td><td>'+esc(l[1])+'</td><td>'+(l[2]?esc(tl(l[2])):'')+'</td><td>'+(l[3]?esc(tl(l[3])):'')+'</td></tr>';}).join('')+'</tbody></table>';}).join('');h+='<table class="pp-sig"><tr><td><b>Düzenleyen / Yetkili</b><br>'+esc(f.yetkili||'')+'<br><br>Kaşe – İmza</td></tr></table></div>';return h;}
+    if(FM){if(r.yev)h+='<h2 class="pp-h">Muhasebe kayıtları</h2>'+r.yev.map(function(y,i){return '<p class="pp-n"><b>'+esc(y.t)+'</b>'+(y.d?' · '+esc(y.d):'')+'</p><table class="pp-tbl"><thead><tr><th>Hesap</th><th>Hesap adı</th><th>Borç</th><th>Alacak</th></tr></thead><tbody>'+y.l.map(function(l){return '<tr><td>'+esc(l[0])+'</td><td>'+esc(l[1])+'</td><td>'+(l[2]?esc(tl(l[2])):'')+'</td><td>'+(l[3]?esc(tl(l[3])):'')+'</td></tr>';}).join('')+'</tbody></table>';}).join('');h+='<table class="pp-sig"><tr><td><b>Düzenleyen / Yetkili</b><br>'+esc(f.yetkili||'')+'<br><br>Kaşe – İmza</td></tr></table></div>';return h;}
     h+='<p class="pp-n">Yukarıdaki hesaplamayı okudum; bir nüshasını teslim aldım.</p><table class="pp-sig"><tr><td><b>İşveren / Yetkili</b><br>'+esc(f.yetkili||'')+'<br><br>Kaşe – İmza</td><td><b>Çalışan</b><br>'+esc(c.ad||'')+'<br><br>İmza</td></tr></table></div>';
     return h;};
   window.ekProfil.fillDoc=function(p){var o=load(),n=0;if(!has(o))return 0;var M={firma:o.f.unvan,isyeri:o.f.unvan,unvan:o.f.unvan,sirket:o.f.unvan,per:o.c.ad,calisan:o.c.ad,isci:o.c.ad,gorev:o.c.gorev,bas:o.c.giris,giris:o.c.giris,bit:o.c.cikis,cikis:o.c.cikis,sgk:o.f.sgk,sicil:o.f.sgk,vkn:o.f.vkn,vd:o.f.vd};
@@ -4187,7 +4213,7 @@ window.ozelGun=function(d){d=d||new Date();var md=new Intl.DateTimeFormat('en-CA
   document.body.insertBefore(b,document.body.firstChild);b.querySelector('button').onclick=function(){b.remove();try{localStorage.setItem('ek-ozel-'+o.k,'1');}catch(e){}};})();
 /* ---------- üst menü: Rehberler açılır menüsü ---------- */
 (function(){var b=$('.subnav .sn-more');if(!b)return;
-  var L=[['beyanname','Beyanname ve SGK','Doldurma rehberi, kodlar, cezalar'],['pratik','Pratik Bilgiler','2026 tutarları, oranları, süreleri'],['sirket','Şirket İşlemleri','Ticaret sicili, İTO, kararlar'],['amackonu','Amaç ve Konu Maddeleri','Şirket kuruluşu: sektör sektör hazır bentler'],['duzeltme','Düzeltme Beyannamesi ve Geç Beyan','Beyanname vermeme cezası ne kadar? Hesapla, pişmanlıkla ver'],['hesapplani','Hesap Planı','Tek Düzen Hesap Planı ve işleyiş'],['belgeler','Belge Örnekleri','SMMM raporları, ticaret sicili örnekleri'],['programlar','Resmî Programlar','BDP, e-defter, e-imza ve mali mühür'],['kurumlar','Kurumlar','Kamu kurumları ve meslek kuruluşları']];
+  var L=[['beyanname','Beyanname ve SGK','Doldurma rehberi, kodlar, cezalar'],['pratik','Pratik Bilgiler','2026 tutarları, oranları, süreleri'],['sirket','Şirket İşlemleri','Ticaret sicili, İTO, kararlar'],['amackonu','Amaç ve Konu Maddeleri','Şirket kuruluşu: sektör sektör hazır bentler'],['duzeltme','Düzeltme Beyannamesi ve Geç Beyan','Beyanname vermeme cezası ne kadar? Hesapla, pişmanlıkla ver'],['arackdv','Araç ve İş Makinesi KDV Oranı','İkinci el binek %1 mi %20 mi? Traktör, iş makinesi, galeri'],['hesapplani','Hesap Planı','Tek Düzen Hesap Planı ve işleyiş'],['belgeler','Belge Örnekleri','SMMM raporları, ticaret sicili örnekleri'],['programlar','Resmî Programlar','BDP, e-defter, e-imza ve mali mühür'],['kurumlar','Kurumlar','Kamu kurumları ve meslek kuruluşları']];
   var m=document.createElement('div');m.className='sn-menu';m.hidden=true;m.innerHTML=L.map(function(x){return '<a href="#'+x[0]+'" data-v="'+x[0]+'"><b>'+esc(x[1])+'</b><span>'+esc(x[2])+'</span></a>';}).join('');document.body.appendChild(m);
   function place(){var r=b.getBoundingClientRect(),w=Math.min(300,innerWidth-16);m.style.width=w+'px';m.style.left=Math.max(8,Math.min(r.left,innerWidth-w-8))+'px';m.style.top=(r.bottom+6)+'px';m.style.maxHeight=Math.max(220,innerHeight-r.bottom-(innerWidth<=640?170:24))+'px';m.style.overflowY='auto';}
   function close(){m.hidden=true;b.setAttribute('aria-expanded','false');}
@@ -4472,6 +4498,106 @@ var BURO={
 };
 (function(){var L=[['Adı soyadı','adsoyad'],['Mesleki ünvan','unvan'],['Akademik ünvan','akademik'],['Büro unvanı','buroUnvan'],['Bağlı olduğu oda','oda'],['Oda sicil no','odaSicil'],['Ruhsat no','ruhsatNo'],['Mesleğe başlama tarihi','baslama'],['Mezun olduğu üniversite','universite'],['Yabancı dil','dil'],['Büro adresi','adres'],['Telefon','telefon'],['E-posta','eposta']];
   var dl=$('#buro-dl');if(dl)dl.innerHTML=L.filter(function(x){return BURO[x[1]];}).map(function(x){var v=esc(BURO[x[1]]);if(x[1]==='telefon')v='<a href="tel:+90'+BURO.telefon.replace(/\D/g,'').replace(/^0/,'')+'">'+v+'</a>';if(x[1]==='eposta')v='<a href="mailto:'+v+'">'+v+'</a>';return '<div><dt>'+x[0]+'</dt><dd>'+v+'</dd></div>';}).join('');})();
+
+/* ---------- Araç ve iş makinesi alım-satımında KDV oranı (soru sora sora) ---------- */
+(function(){var W=document.getElementById('ak-wiz');if(!W)return;
+ var Q={
+  i:{t:'Ne yapıyorsunuz?',o:[['sat','Satıyorum','Fatura ben keseceğim'],['al','Alıyorum','Faturada hangi oran olmalı, KDV’yi indirebilir miyim?']]},
+  t:{t:'Ne alınıp satılıyor?',o:[['binek','Otomobil, SUV, arazi binek','GTİP 87.03 · ruhsatta M1'],['ticari','Kamyonet, pikap, panelvan, kamyon, çekici','GTİP 87.04 / 87.01 çekici · N1, N2, N3'],['otobus','Minibüs, midibüs, otobüs','GTİP 87.02 · 10 kişi ve üzeri'],['moto','Motosiklet, moped','GTİP 87.11'],['ozel','Ambulans, cenaze, itfaiye, para nakil aracı','Özel amaçlı taşıt'],['traktor','Tarım traktörü','GTİP 87.01 · tekerlekli zirai traktör'],['tarim','Biçerdöver, motokültör, tarım makinesi','Pulluk, ekim, ilaçlama, silaj vb.'],['eksk','Ekskavatör, beko loder','Paletli ya da lastik tekerlekli kuleli ekskavatör, kazıcı yükleyici'],['isk','Diğer iş makinesi','Dozer, greyder, silindir, forklift, vinç, yükleyici']]},
+  d:{t:'Sıfır mı, ikinci el mi?',o:[['yeni','Sıfır','Bayiden ya da ithalatçıdan ilk satış'],['ikinci','İkinci el','Daha önce tescil edilmiş / kullanılmış']]},
+  s:{t:'Satıcı kim?',o:[['sahis','Şahıs (vatandaş)','İşletmeye kayıtlı olmayan, KDV mükellefi olmayan kişi'],['isletme','Bir şirket ya da işletme','Aracı kendi işinde kullanmış (aktifinde kayıtlı)'],['galeri','Galeri ya da bayi','Araç alım-satımı işi yapan'],['leasing','Finansal kiralama (leasing)','Leasing şirketine teslim ya da leasingle kiralama']]},
+  k:{t:'Satıcı bu aracı alırken KDV’yi indirmiş miydi?',o:[['hayir','Hayır, indirmedi','Normal şirket: binek otomobil KDV’si indirilemez (KDVK 30/b)'],['evet','Evet, indirdi','Satıcının işi binek kiralama, sürücü kursu, taksi ya da galeri']]},
+  g:{t:'Galeri aracı nasıl almıştı?',o:[['vat','Vatandaştan, KDV’siz','Noter satışıyla, faturasız'],['k20','%20 KDV’li faturayla',''],['k1','%1 KDV’li faturayla','Şirket aktifinden çıkan ikinci el binek'],['fark','Başka galeriden, fark (özel matrah) faturasıyla','']]},
+  y:{t:'Galerinin “İkinci El Motorlu Kara Taşıtı Ticareti Yetki Belgesi” var mı?',o:[['var','Var','Ticaret Bakanlığı yetki belgesi'],['yok','Yok','']]}
+ };
+ var st={},LKEY='ek-arackdv';try{st=JSON.parse(sessionStorage.getItem(LKEY)||'{}')||{};}catch(e){st={};}
+ var MOT={binek:1,ticari:1,otobus:1,moto:1,ozel:1,traktor:1};
+ function steps(){var L=['i','t','d','s'];
+   if(st.s==='isletme'&&st.t==='binek'&&st.d==='ikinci')L.push('k');
+   if(st.s==='galeri'&&st.d==='ikinci'&&MOT[st.t]){L.push('g');if(st.g==='vat')L.push('y');}
+   return L;}
+ function opts(k){var o=Q[k].o;
+   if(k==='s'){o=o.filter(function(x){if(x[0]==='leasing')return (st.t==='isk'||st.t==='eksk')&&st.d==='yeni';if(x[0]==='sahis'&&st.d==='yeni')return false;return true;});
+     if(st.i==='sat')o=o.map(function(x){return x[0]==='sahis'?['sahis','Kişisel aracımı satıyorum','İşletmeme kayıtlı değil, KDV mükellefi değilim']:x[0]==='isletme'?['isletme','İşletmemin aktifindeki aracı','Kendi işimde kullandığım']:x[0]==='galeri'?['galeri','Galeri / bayi olarak satıyorum','Araç alım-satımı işim']:x;});}
+   if(k==='k'&&st.i==='sat')o=[['hayir','Hayır, indirmedim','Normal şirket: binek KDV’si indirilemez'],['evet','Evet, indirdim','İşim binek kiralama, sürücü kursu, taksi']];
+   if(k==='g'&&st.i==='sat')Q.g.t='Aracı nasıl almıştınız?';else Q.g.t='Galeri aracı nasıl almıştı?';
+   return o;}
+ function cur(){var L=steps();for(var j=0;j<L.length;j++)if(!st[L[j]])return L[j];return null;}
+ var TN={binek:'binek otomobil',ticari:'kamyonet / kamyon',otobus:'minibüs / otobüs',moto:'motosiklet',ozel:'özel amaçlı taşıt',traktor:'tarım traktörü',tarim:'tarım makinesi',eksk:'ekskavatör / beko loder',isk:'iş makinesi'};
+ function karar(){var t=st.t,d=st.d,s=st.s,r={oran:null,mt:'tam',dy:'',ac:[],al:[]};
+   var D20='KDV Kanunu 28. madde, genel oran (CK 7346, 10.07.2023’ten beri %20)';
+   if(s==='sahis'){r.oran=0;r.dy='KDV Kanunu 1. madde: ticari faaliyet kapsamında olmayan satış KDV’ye tabi değildir.';r.ac.push('Kişisel aracını satan vatandaş fatura kesmez, KDV hesaplamaz. Motorlu taşıtlarda satış noterde yapılır; noter satış sözleşmesi alış belgesi yerine geçer.','Bu kişi sürekli araç alıp satıyorsa ticari faaliyet sayılabilir ve vergilendirilir.');return r;}
+   if(t==='binek'){
+     if(d==='yeni'){r.oran=20;r.dy=D20;r.ac.push('Sıfır binek otomobilde ÖTV de vardır; KDV, ÖTV dahil bedel üzerinden hesaplanır.');}
+     else if(s==='isletme'){if(st.k==='evet'){r.oran=20;r.dy='2007/13033 sayılı Karar (I) sayılı liste 9. sıra parantez içi hükmü: alışında KDV indirilen binek otomobil genel orana tabidir.';}else{r.oran=1;r.dy='2007/13033 sayılı Karar (I) sayılı liste 9. sıra: KDV indirimi yapılmadan alınan kullanılmış binek otomobilin teslimi %1.';r.ac.push('Sık yapılan hata: alışta KDV’yi indiremeyen şirketin %20 kesmesi. Oran %1’dir.');}}
+     else if(s==='galeri'){var g=st.g;
+       if(g==='vat'){if(st.y==='var'){r.oran=20;r.mt='fark';r.dy='KDV Kanunu 23/f (özel matrah) ve 5359 sayılı CK: vatandaştan alınan aracı yetki belgeli galeri satarsa KDV yalnız alış-satış farkı üzerinden %20.';}else{r.oran=1;r.dy='Yetki belgesi yoksa özel matrah uygulanamaz; KDV indirimi olmadan alınan kullanılmış binek (I) sayılı liste 9. sıraya göre %1.';r.ac.push('Yetki belgesi olmayan galeri, alış KDV’sini indiremez ve özel matrahtan yararlanamaz (31.08.2020’den beri).');}}
+       else if(g==='k20'){r.oran=20;r.dy='Alışında %20 KDV indirilen kullanılmış binek: genel oran (I sayılı liste 9. sıra parantez içi).';}
+       else if(g==='k1'){r.oran=1;r.dy='%1 KDV’li faturayla alınan kullanılmış binek satışı da %1 (I sayılı liste 9. sıra).';}
+       else if(g==='fark'){r.oran=1;r.dy='Başka galeriden özel matrahla alınan binek, satış bedelinin tamamı üzerinden %1 (845 sayılı CK ile değişen I sayılı liste 9. sıra).';r.ac.push('Fark yöntemini ikinci kez uygulayamazsınız; satış bedelinin tamamına %1 KDV hesaplanır.');}}
+   } else if(t==='traktor'){
+     if(d==='yeni'){r.oran=10;r.dy='2007/13033 sayılı Karar (II) sayılı liste 28. sıra: traktör ve tarım makineleri %10.';}
+     else if(s==='galeri'){r.oran=10;r.dy='Kullanılmış traktörde %1 oranı galericilerin teslimlerini kapsamaz; (II) sayılı liste 28. sıraya göre %10 uygulanır.';r.ac.push('Yetki belgeli galerinin vatandaştan aldığı traktörde özel matrah uygulanıp uygulanamayacağı tartışmalıdır; tereddütte vergi dairesinden özelge isteyin.');}
+     else{r.oran=1;r.dy='(I) sayılı liste 9. sıra: kullanılmış tekerlekli zirai traktörlerin (GTİP 8701.90.50) teslimi %1.';}
+   } else if(t==='tarim'){r.oran=10;r.dy='(II) sayılı liste 28. sıra: biçerdöver, motokültör ve tarım makineleri (yeni ve kullanılmış) %10.';
+   } else if(t==='eksk'){if(s==='leasing'){r.oran=1;r.dy='(I) sayılı liste 17. sıra: GTİP 84.29 iş makinelerinin (kullanılmışlar hariç) finansal kiralama şirketine teslimi ve leasingle kiralanması %1.';}else{r.oran=10;r.dy='(II) sayılı liste 29. sıra: paletli ve lastik tekerlekli kuleli ekskavatörler ile beko loderler (kullanılmışlar dahil) %10.';r.ac.push('“İkinci el iş makinesi %10” denmesinin nedeni budur; ama yalnız bu makineler için. Kullanılmış dozer, greyder, forklift ve vinç %20’dir.');}
+   } else if(t==='isk'){if(s==='leasing'){r.oran=1;r.dy='(I) sayılı liste 17. sıra: listedeki iş makineleri ve makine-teçhizatın (kullanılmışlar hariç) finansal kiralama şirketine teslimi ve leasingle kiralanması %1.';r.ac.push('Leasing dışında aynı makinenin normal satışı genel orana (%20) tabidir.');}else{r.oran=20;r.dy=D20+'; kullanılmış dozer, greyder, silindir, forklift ve vinç için indirimli oran yoktur.';}
+   } else {
+     if(s==='galeri'&&d==='ikinci'&&st.g==='vat'&&st.y==='var'){r.oran=20;r.mt='fark';r.dy='KDV Kanunu 23/f: yetki belgeli galerinin vatandaştan aldığı ikinci el motorlu kara taşıtı satışında KDV alış-satış farkı üzerinden %20.';}
+     else{r.oran=20;r.dy=D20+'. '+TN[t].charAt(0).toUpperCase()+TN[t].slice(1)+' için sıfırda da ikinci elde de indirimli oran yoktur.';}
+     if(t==='ozel')r.ac.push('Ambulans, cenaze, para nakil gibi özel amaçlı taşıtlar kullanılmış olsa da %1 oranından yararlanamaz.');
+   }
+   if(t==='binek'&&d==='ikinci'&&r.oran===1)r.ac.push('Kullanılmış: ÖTV’si daha önce ödenmiş, yeniden ÖTV’ye tabi olmayan araç demektir.');
+   return r;}
+ function alici(r){var t=st.t,L=[];
+   if(r.oran===0){L.push('Fatura olmadığı için indirilecek KDV yoktur; aracı noter satış bedeliyle aktife alırsınız (binekte amortisman sınırları yine geçerli).');}
+   else if(t==='binek'){L.push('Binek otomobilde ödenen KDV genel faaliyetteki şirkette indirilemez (KDVK 30/b); ÖTV ile birlikte gider ya da maliyet yazılır, 2026’da ÖTV+KDV’nin 1.200.000 TL’si gider olabilir. İşiniz binek kiralama, sürücü kursu, taksi ya da galeri ise KDV’yi indirirsiniz.');
+     if(r.oran===1)L.push('%1’lik faturadaki KDV de aynı kurala tabidir: genel faaliyette indirilemez.');}
+   else L.push('Faturadaki KDV’yi 191 İndirilecek KDV’ye alır, KDV-1’de indirirsiniz; ticari taşıt ve makinelerde kısıtlama yoktur.');
+   if(MOT[t]||t==='binek')L.push('Binek mi ticari mi, gider ve amortisman sınırları ve alış kaydı için Araç alımı hesaplayıcısına bakın.');
+   if(st.s==='galeri'&&r.mt==='fark')L.push('Fark (özel matrah) faturasıyla aldığınız araçta faturada KDV ayrıca gösterilse de bu tutar sizin için indirilecek KDV’dir; aracı sonra satarsanız binekte %1 uygulanır.');
+   if(t==='eksk'||t==='isk'||t==='tarim'||t==='traktor')L.push('Makine ve teçhizatta KDV indirilir; yatırım teşvik belgesi kapsamındaki sıfır alımlarda KDV istisnası (KDVK 13/d) da olabilir.');
+   return L;}
+ function q(k){var o=opts(k),i=steps().indexOf(k)+1;return '<div class="dz-q"><b>'+i+' · '+esc(Q[k].t)+'</b><div class="dz-opts">'+o.map(function(x){return '<button type="button" class="dz-opt" data-q="'+k+'" data-v="'+x[0]+'" aria-pressed="'+(st[k]===x[0])+'"><b>'+esc(x[1])+'</b>'+(x[2]?'<small>'+esc(x[2])+'</small>':'')+'</button>';}).join('')+'</div></div>';}
+ function ozet(){var L=steps(),h=[];L.forEach(function(k){if(st[k]){var o=opts(k).filter(function(x){return x[0]===st[k];})[0];if(o)h.push('<button type="button" class="ak-chip" data-back="'+k+'">'+esc(o[1])+' ✎</button>');}});return h.join('');}
+ function v(id){var e=document.getElementById(id);return e?num(e.value):NaN;}
+ function hesap(r){if(r.oran===0||r.oran===null)return '';var sb=v('ak-sb'),ab=v('ak-ab'),mal=v('ak-ml'),bir=v('ak-ba');var h='';
+   if(isNaN(sb)||sb<=0)return '';
+   if(r.mt==='fark'){if(isNaN(ab))return '<p class="pnote">Alış bedelini de yazın.</p>';var fk=Math.max(0,sb-ab),kd=fk*r.oran/100;h+='<table class="dz-mini"><tr><td>Satış bedeli (KDV hariç)</td><td>'+tl(sb)+'</td></tr><tr><td>Vatandaştan alış bedeli</td><td>'+tl(ab)+'</td></tr><tr><td>Özel matrah (fark)</td><td>'+tl(fk)+'</td></tr><tr><td><b>KDV (%'+r.oran+')</b></td><td><b>'+tl(kd)+'</b></td></tr><tr><td>Fatura toplamı</td><td>'+tl(sb+kd)+'</td></tr></table>';
+     if(st.i==='sat')h+=yev([['120','Alıcılar',sb+kd,0],['600','Yurt içi satışlar',0,sb],['391','Hesaplanan KDV',0,kd]],'Satış kaydı','Alış kaydında araç 153 Ticari Mallar’a vatandaştan alış bedeliyle alınmıştır (KDV yok).');
+     return h;}
+   var kd2=sb*r.oran/100;h+='<table class="dz-mini"><tr><td>Bedel (KDV hariç)</td><td>'+tl(sb)+'</td></tr><tr><td><b>KDV (%'+r.oran+')</b></td><td><b>'+tl(kd2)+'</b></td></tr><tr><td>Fatura toplamı</td><td>'+tl(sb+kd2)+'</td></tr></table>';
+   if(st.i==='sat'&&st.s==='isletme'&&!isNaN(mal)&&mal>0){var ba=isNaN(bir)?0:bir,nd=mal-ba,kz=sb-nd,L=[['102','Bankalar (ya da 120 / 136)',sb+kd2,0]];if(ba)L.push(['257','Birikmiş amortismanlar',ba,0]);if(kz<0)L.push(['689','Diğer olağan dışı gider ve zararlar',-kz,0]);L.push(['254','Taşıtlar (maliyet)',0,mal],['391','Hesaplanan KDV',0,kd2]);if(kz>0)L.push(['679','Diğer olağan dışı gelir ve kârlar',0,kz]);
+     h+=yev(L,'Aktiften satış kaydı','Net defter değeri '+tl(nd)+'; satış '+(kz>=0?'kârı ':'zararı ')+tl(Math.abs(kz))+'. Satış yılında amortisman ayrılmaz. Binekte daha önce KKEG’ye atılan amortismanlar satış yılında beyannamede indirilebilir; kâr yenileme fonuna da alınabilir (bilanço esası).');}
+   else if(st.i==='al'){var acc=st.t==='binek'?'254':(st.s==='galeri'||st.s==='isletme')&&st.d==='ikinci'?'254':'254';if(st.t==='eksk'||st.t==='isk'||st.t==='tarim')acc='253';var bn=st.t==='binek';var L2=[[acc,acc==='253'?'Tesis, makine ve cihazlar':'Taşıtlar',sb+(bn?kd2:0),0]];if(!bn)L2.push(['191','İndirilecek KDV',kd2,0]);L2.push(['320','Satıcılar',0,sb+kd2]);
+     h+=yev(L2,'Alış kaydı',bn?'Genel faaliyette binek KDV’si indirilemediği için maliyete eklendi (ya da sınır dahilinde 770’e gider yazılabilir).':'');}
+   return h;}
+ function yev(L,t,n){var b=0,a=0;L.forEach(function(x){b+=x[2];a+=x[3];});return '<div class="ak-yev"><b>'+esc(t)+'</b><table class="dz-mini"><tr><th>Hesap</th><th>Hesap adı</th><th>Borç</th><th>Alacak</th></tr>'+L.map(function(x){return '<tr><td>'+x[0]+'</td><td>'+esc(x[1])+'</td><td>'+(x[2]?tl(x[2]):'')+'</td><td>'+(x[3]?tl(x[3]):'')+'</td></tr>';}).join('')+'<tr><td></td><td><b>Toplam</b></td><td><b>'+tl(b)+'</b></td><td><b>'+tl(a)+'</b></td></tr></table>'+(n?'<p class="pnote">'+esc(n)+'</p>':'')+'</div>';}
+ var inp={};
+ function draw(){var k=cur(),h='<div class="ak-top"><div class="ak-chips">'+ozet()+'</div>'+(st.i?'<button type="button" class="ak-reset">Baştan başla</button>':'')+'</div>';
+   if(k){h+=q(k);}
+   else{var r=karar();
+     h+='<article class="dz-card '+(r.oran===0?'ok':r.oran===1||r.oran===10?'ok':'warn')+'"><header><span class="dz-badge ok">Sonuç</span><h4>'+esc((st.d==='yeni'?'Sıfır ':'İkinci el ')+TN[st.t])+' · '+(r.oran===0?'KDV yok':(r.mt==='fark'?'Fark üzerinden ':'')+'KDV %'+r.oran)+'</h4></header><div class="dz-body">'
+      +'<div class="ak-big">'+(r.oran===0?'KDV yok':'%'+r.oran)+'<small>'+(r.oran===0?'Fatura kesilmez':r.mt==='fark'?'alış-satış farkı üzerinden':'satış bedelinin tamamı üzerinden')+'</small></div>'
+      +'<p><b>Dayanak:</b> '+esc(r.dy)+'</p>'+(r.ac.length?'<ul class="ak-ul">'+r.ac.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul>':'')
+      +'<h5 class="ak-h">'+(st.i==='al'?'Alıcı olarak sizin için':'Alıcı açısından')+'</h5><ul class="ak-ul">'+alici(r).map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul>'
+      +(r.oran?'<h5 class="ak-h">Tutarı hesaplayın (isteğe bağlı)</h5><div class="dz-grid"><label>'+(st.i==='al'?'Alış bedeli':'Satış bedeli')+' (KDV hariç)<input id="ak-sb" inputmode="decimal" value="'+(inp.sb||'')+'" placeholder="ör. 1.000.000"></label>'
+        +(r.mt==='fark'?'<label>Vatandaştan alış bedeli<input id="ak-ab" inputmode="decimal" value="'+(inp.ab||'')+'"></label>':'')
+        +(st.i==='sat'&&st.s==='isletme'?'<label>Aracın maliyeti (254)<input id="ak-ml" inputmode="decimal" value="'+(inp.ml||'')+'"></label><label>Birikmiş amortisman (257)<input id="ak-ba" inputmode="decimal" value="'+(inp.ba||'')+'"></label>':'')
+        +'</div><div id="ak-out">'+hesap(r)+'</div>':'')
+      +'<div class="dz-links"><a class="btn-p" href="#h-aracalim">Araç alımı: binek mi ticari mi →</a><a class="btn-g" href="#h-leasing">Leasing ile alım →</a><a class="btn-g" href="#h-tevkifat">KDV tevkifatı →</a></div>'
+      +'</div></article>';}
+   W.innerHTML=h;try{sessionStorage.setItem(LKEY,JSON.stringify(st));}catch(e){}
+   ['sb','ab','ml','ba'].forEach(function(x){var e=document.getElementById('ak-'+x);if(e)e.addEventListener('input',function(){inp[x]=e.value;var o=document.getElementById('ak-out');if(o)o.innerHTML=hesap(karar());});});}
+ W.addEventListener('click',function(ev){var b=ev.target.closest('.dz-opt');if(b){var k=b.dataset.q;st[k]=b.dataset.v;var L=steps(),ix=L.indexOf(k);
+     /* sonraki cevaplar geçersiz kalabilir: sonrakileri sil */
+     L.slice(ix+1).forEach(function(x){delete st[x];});['k','g','y'].forEach(function(x){if(steps().indexOf(x)<0)delete st[x];});
+     if(st.s&&opts('s').every(function(o){return o[0]!==st.s;}))delete st.s;
+     draw();W.scrollIntoView({behavior:'smooth',block:'start'});return;}
+   var c=ev.target.closest('[data-back]');if(c){var L2=steps(),i2=L2.indexOf(c.dataset.back);L2.slice(i2).forEach(function(x){delete st[x];});draw();return;}
+   if(ev.target.closest('.ak-reset')){st={};inp={};draw();}});
+ draw();
+})();
 
 /* ---------- Düzeltme / geç beyan rehberi ---------- */
 (function(){var W=$('#dz-wiz');if(!W)return;
@@ -4877,7 +5003,7 @@ var DZ={
  $('#dz-usul').innerHTML='<thead><tr><th>Mükellef</th><th>1. derece</th><th>2. derece</th></tr></thead><tbody>'+DZ.usul.map(function(u){return '<tr><td>'+esc(u[0])+'</td><td>'+f2(u[1])+'</td><td>'+f2(u[2])+'</td></tr>';}).join('')+'</tbody>';
  $('#dz-notes').innerHTML=DZ.notlar.map(function(n){return '<li>'+esc(n)+'</li>';}).join('');
  $('#dz-src').innerHTML='Son güncelleme: '+DZ.guncelleme+' · Kaynaklar: '+DZ.kaynak.map(function(k){return '<a href="'+k[1]+'" target="_blank" rel="noopener">'+esc(k[0])+'</a>';}).join(' · ')+'. Bilgiler genel bilgilendirme amaçlıdır; somut durumda vergi dairesi ve SGK uygulamasını kontrol edin.';
- if(typeof SEARCH_IDX!=='undefined'){SEARCH_IDX.push({t:'Beyanname vermeme cezası hesaplama (şimdi versem ne öderim?)',g:'Beyanname ve SGK',h:'#gecbeyan',kw:'geç beyan ceza hesaplama verilmeyen beyanname KDV muhtasar SGK idari para cezası pişmanlık zammı usulsüzlük cezası ne kadar öderim'});SEARCH_IDX.push({t:'Düzeltme beyannamesi ve geç beyan rehberi',g:'Beyanname ve SGK',h:'#duzeltme',kw:'düzeltme beyannamesi pişmanlık kendiliğinden süre sonrası KDV muhtasar MUHSGK ek belge iptal belge idari para cezası usulsüzlük vergi ziyaı'});
+ if(typeof SEARCH_IDX!=='undefined'){SEARCH_IDX.push({t:'Araç ve iş makinesi alım-satımında KDV oranı',g:'Vergi',h:'#arackdv',kw:'ikinci el binek otomobil kdv oranı yüzde 1 yüzde 20 galeri özel matrah traktör iş makinesi ekskavatör beko loder forklift kamyonet satış kdv leasing'});SEARCH_IDX.push({t:'Beyanname vermeme cezası hesaplama (şimdi versem ne öderim?)',g:'Beyanname ve SGK',h:'#gecbeyan',kw:'geç beyan ceza hesaplama verilmeyen beyanname KDV muhtasar SGK idari para cezası pişmanlık zammı usulsüzlük cezası ne kadar öderim'});SEARCH_IDX.push({t:'Düzeltme beyannamesi ve geç beyan rehberi',g:'Beyanname ve SGK',h:'#duzeltme',kw:'düzeltme beyannamesi pişmanlık kendiliğinden süre sonrası KDV muhtasar MUHSGK ek belge iptal belge idari para cezası usulsüzlük vergi ziyaı'});
    Object.keys(DZ.sen).forEach(function(k){SEARCH_IDX.push({t:DZ.sen[k].t,g:'Düzeltme ve geç beyan',h:'#duzeltme',kw:DZ.sen[k].ozet});});}
 })();
 
@@ -5042,7 +5168,7 @@ window.newsTicker=(function(){
 /* ---------- Türkçe başlık düzeni: her kelimenin ilk harfi büyük (bağlaçlar hariç) ---------- */
 (function(){
   var SMALL={'ve':1,'ile':1,'veya':1,'ya':1,'da':1,'de':1,'ki':1,'mi':1,'mı':1,'mu':1,'mü':1},ENS={'and':1,'or':1,'of':1,'the':1,'to':1,'for':1,'in':1,'on':1,'a':1,'an':1,'with':1,'by':1,'at':1,'from':1,'vs':1};
-  var SEL='.gb-tx b,.gb-tx small,.gb-li i,nav.links a,.subnav a,.eyebrow,.hero h1,.sec-head h2,h3,h4,.tab b,.tab small,.btn,.quick span,.chip,.biz-item b,.biz-item .when,.marquee-track span,.fx-row .nm,.rep b,.rep span,.sc strong,.sc span,.f label,.result .row span,.seg button,.tag,.float-card b,.float-card span,.ledger-head span,.ledger-head b,.ledger td.name,.c-row .k,.xls .cols span,.hub-card b,.pop-card b,.tgrp,.xgrp,.kgrp,.fcol > b,.pcard h3,.ptile span,.tb-btns span,.xls-top h3,.chip,.step .n,.brand-txt span,.mk-head .nmeta,h2,.mk-head .live,.mvz-head .live,.hfx-foot a,.mk-head a.more,.news-src a,.ptile b,.svc .codes,.hub-card em,option,optgroup,.ktx b,.fcol a,.g-link,.gn-b,.gcur b,.gcur span,.acts button,.mvz-chips .qchip,dt,.kband-txt b,.sc-links a,summary b,summary > span,.hp-classes .qchip,.hp-ex b,.hp-t,.gbtn,fieldset label,.mk-foot a,.duy-home h3,.res-h b,.fld-h b,#sirket li > a,.xed-tip b';
+  var SEL='.ak-yev > b,.ak-yev td:nth-child(2),.ak-big small,.yev-t b,.dtable th,.yev-tb td:nth-child(2),.pp-tbl th,.dz-q > b,.dz-opt b,.dz-badge,h5,.dz-mini td:first-child,.dz-mini th,.dz-links a,.pa-t b,.ak-chip,.ak-reset,summary,.prof-card h3,.qchip,.gb-tx b,.gb-tx small,.gb-li i,nav.links a,.subnav a,.eyebrow,.hero h1,.sec-head h2,h3,h4,.tab b,.tab small,.btn,.quick span,.chip,.biz-item b,.biz-item .when,.marquee-track span,.fx-row .nm,.rep b,.rep span,.sc strong,.sc span,.f label,.result .row span,.seg button,.tag,.float-card b,.float-card span,.ledger-head span,.ledger-head b,.ledger td.name,.c-row .k,.xls .cols span,.hub-card b,.pop-card b,.tgrp,.xgrp,.kgrp,.fcol > b,.pcard h3,.ptile span,.tb-btns span,.xls-top h3,.chip,.step .n,.brand-txt span,.mk-head .nmeta,h2,.mk-head .live,.mvz-head .live,.hfx-foot a,.mk-head a.more,.news-src a,.ptile b,.svc .codes,.hub-card em,option,optgroup,.ktx b,.fcol a,.g-link,.gn-b,.gcur b,.gcur span,.acts button,.mvz-chips .qchip,dt,.kband-txt b,.sc-links a,summary b,summary > span,.hp-classes .qchip,.hp-ex b,.hp-t,.gbtn,fieldset label,.mk-foot a,.duy-home h3,.res-h b,.fld-h b,#sirket li > a,.xed-tip b';
   function word(w,first){if(!/\S/.test(w))return w;if(/^e-[a-zçğıöşü]/i.test(w)&&w.charAt(0)==='e')return w.slice(0,2)+w.charAt(2).toLocaleUpperCase('tr-TR')+w.slice(3);if(w.indexOf('-')>0&&!/^e-/i.test(w))return w.split('-').map(function(x,i){return word(x,first&&i===0);}).join('-');var low=w.toLocaleLowerCase('tr-TR');if(!first&&(SMALL[low]||(document.documentElement.lang==='en'&&ENS[low])))return low;if(/^[^A-Za-zÇĞİÖŞÜçğıöşü]*[0-9]/.test(w)&&/['’]/.test(w))return w;return w.replace(/^([^A-Za-zÇĞİÖŞÜçğıöşü]*)([A-Za-zÇĞİÖŞÜçğıöşü])/,function(m,a,b){return a+b.toLocaleUpperCase('tr-TR');});}
   function tc(s){var first=true;return s.split(/(\s+)/).map(function(w){var r=word(w,first);if(/\S/.test(w))first=false;return r;}).join('');}
   window.trTitle=tc;
@@ -5066,7 +5192,7 @@ if(!FIREBASE_CONFIG&&!GOOGLE_CLIENT_ID)document.documentElement.classList.add('n
 
 /* ---------- sayfa yönlendirme (başlıklar ayrı sayfa gibi açılır) ---------- */
 (function(){
-  var VIEWS=['home','hesaplamalar','dilekceler','tablolar','piyasa','duyurular','hakkimizda','iletisim','uye-ol','kurumlar','kvkk','pratik','sirket','amackonu','duzeltme','gecbeyan','hesapplani','beyanname','takvim','yazilar','programlar','belgeler'];
+  var VIEWS=['home','hesaplamalar','dilekceler','tablolar','piyasa','duyurular','hakkimizda','iletisim','uye-ol','kurumlar','kvkk','pratik','sirket','amackonu','duzeltme','gecbeyan','arackdv','hesapplani','beyanname','takvim','yazilar','programlar','belgeler'];
   var secs=$$('[data-view]').filter(function(el){return el.tagName==='SECTION';});
   var navs=$$('[data-nav]');
   function route(){
@@ -5121,6 +5247,7 @@ if(!FIREBASE_CONFIG&&!GOOGLE_CLIENT_ID)document.documentElement.classList.add('n
     kurumlar:'Vergi, SGK, tebligat ve ticaret sicili sistemlerinin bağlantıları burada.',
     sirket:'Şirket işlemlerinde istenen evraklar ve formlar burada.',
     hesapplani:'Hesap kodunu ya da adını yazın; işleyişi ve örnek kaydı açılır.',
+    arackdv:'Soruları yanıtlayın: oran, dayanak, alıcının KDV indirimi ve muhasebe kaydı açılır.',
     duzeltme:'Durumunuzu seçin: hangi beyanname, süre içinde mi sonra mı? Adımlar ve ceza açılır.',
     gecbeyan:'Soruları sırayla yanıtlayın; birden fazla beyanname varsa ekleyin, en sonda toplamı görün.',
     amackonu:'Sektörünüzü yazın; amaç ve konu bentlerini seçip metni kopyalayın.',
