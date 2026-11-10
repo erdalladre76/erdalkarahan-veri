@@ -1,6 +1,220 @@
 {
  "yazilar": [
   {
+   "slug": "sahibinden-ilan-faturasi-kdv-tevkifati-3-10-muhasebe-kaydi",
+   "baslik": "Sahibinden İlan Faturalarında KDV Tevkifatı: “Yeni” mi, Kim Uygular, Kayıt Nasıl Yapılır?",
+   "ozet": "Sosyal medyada “1 Kasım’dan itibaren sahibinden faturalarına yeni %30 tevkifat” paylaşımları dolaşıyor. Aslında yeni bir tebliğ yok; ilan ve doping bedelleri ticari reklam hizmeti sayıldığı için yıllardır yürürlükte olan 3/10 tevkifat uygulanıyor. Kimi etkilediğini, 12.000 TL sınırını, KDV-1/KDV-2 beyanını ve örnek muhasebe kayıtlarını anlattık.",
+   "tarih": "2026-11-10",
+   "etiketler": [
+    "KDV tevkifatı",
+    "Ticari reklam",
+    "Sahibinden",
+    "KDV-2",
+    "Muhasebe kaydı"
+   ],
+   "bolumler": [
+    {
+     "baslik": "GİRİŞ",
+     "paragraflar": [
+      "Son günlerde sosyal medyada “Gelir İdaresi’nden yeni tevkifat: 1 Kasım’dan itibaren sahibinden.com’un 12 bin TL üzerindeki faturalarına %30 tevkifat” şeklinde paylaşımlar yapılıyor. Paylaşımlardaki oran ve tutar doğru, ancak bu yeni bir düzenleme değil.",
+      "2026 yılında KDV Genel Uygulama Tebliği’nde yapılan değişikliklerde (57 ve 58 Seri No.lu tebliğler) ilan ya da internet reklamlarına yönelik yeni bir tevkifat yer almıyor. Uygulanan kural, tebliğde öteden beri bulunan “ticari reklam hizmetleri” tevkifatıdır. Kurumsal hesapların sahibinden’e ödediği ilan, mağaza ve öne çıkarma (doping) bedelleri de reklam hizmeti niteliğinde olduğu için bu kapsama giriyor."
+     ]
+    },
+    {
+     "baslik": "KURAL NE DİYOR?",
+     "liste": [
+      "Kapsam: Ticari reklam hizmetleri. İnternet siteleri, sosyal medya ve dijital platformlardaki reklamlar, ilan yayımlama ve öne çıkarma hizmetleri de buna dahil.",
+      "Oran: 3/10. Faturadaki KDV’nin %30’unu alıcı tevkif eder, %70’ini satıcıya öder.",
+      "Kim uygular: KDV mükellefi olan alıcılar ile tebliğde sayılan kamu kurumları gibi belirlenmiş alıcılar. KDV mükellefi olmayan bireysel ilan verenler tevkifat yapmaz.",
+      "Sınır: KDV dahil fatura tutarı 2026 yılı için 12.000 TL’yi aşıyorsa tevkifat uygulanır; aşmıyorsa uygulanmaz. Sınır aşıldığında tevkifat tutarın tamamı üzerinden hesaplanır.",
+      "Bölme yasağı: Tevkifattan kaçınmak için bir bütün olan alım birden fazla faturaya bölünürse, sınır kontrolünde bu faturaların toplamına bakılır."
+     ]
+    },
+    {
+     "baslik": "BEYAN: KDV-2 VE KDV-1",
+     "paragraflar": [
+      "Alıcı, tevkif ettiği KDV’yi sorumlu sıfatıyla 2 No.lu KDV Beyannamesi ile beyan eder ve öder; beyan ve ödeme süresi izleyen ayın 28’idir. Faturadaki KDV’nin tamamı ise alıcının 1 No.lu KDV Beyannamesinde indirilecek KDV olarak yer alır: %70’lik kısım normal indirim, %30’luk kısım “sorumlu sıfatıyla beyan edilip ödenen KDV” olarak.",
+      "Satıcı (sahibinden) ise KDV’nin yalnızca %70’ini hesaplanan KDV olarak beyan eder; tevkif edilen kısmı alıcı öder."
+     ]
+    },
+    {
+     "baslik": "ÖRNEK",
+     "paragraflar": [
+      "Bir oto galeri (KDV mükellefi) sahibinden’den aylık kurumsal mağaza ve doping paketi almış; fatura: 15.000,00 TL + %20 KDV 3.000,00 TL = 18.000,00 TL. Tutar 12.000 TL’yi aştığı için tevkifat uygulanır.",
+      "Tevkif edilen KDV: 3.000,00 × 3/10 = 900,00 TL. Sahibinden’e ödenecek: 15.000,00 + 2.100,00 = 17.100,00 TL. KDV-2 ile ödenecek: 900,00 TL."
+     ]
+    },
+    {
+     "baslik": "1) ALICININ KAYITLARI",
+     "paragraflar": [
+      "Faturanın kaydı (gider hesabı işletmeye göre 760 ya da 770; 7/B kullananlarda 631):"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "760 Pazarlama Satış ve Dağıtım Giderleri",
+       "15.000,00",
+       ""
+      ],
+      [
+       "191 İndirilecek KDV",
+       "3.000,00",
+       ""
+      ],
+      [
+       "320 Satıcılar (sahibinden)",
+       "",
+       "17.100,00"
+      ],
+      [
+       "360 Ödenecek Vergi ve Fonlar (sorumlu sıfatıyla KDV)",
+       "",
+       "900,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "",
+     "paragraflar": [
+      "Sahibinden’e ödeme:"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "320 Satıcılar (sahibinden)",
+       "17.100,00",
+       ""
+      ],
+      [
+       "102 Bankalar",
+       "",
+       "17.100,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "",
+     "paragraflar": [
+      "KDV-2’de beyan edilen tutarın ödenmesi (izleyen ayın 28’i):"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "360 Ödenecek Vergi ve Fonlar",
+       "900,00",
+       ""
+      ],
+      [
+       "102 Bankalar",
+       "",
+       "900,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "",
+     "paragraflar": [
+      "İsterseniz 900,00 TL’yi 191 altında ayrı bir alt hesapta (ör. 191.02 Sorumlu sıfatıyla KDV) izleyebilirsiniz; KDV-1’deki “sorumlu sıfatıyla beyan edilen KDV” satırı ile mutabakat kolaylaşır."
+     ]
+    },
+    {
+     "baslik": "2) SATICININ (SAHİBİNDEN) KAYDI",
+     "paragraflar": [
+      "Satıcı, KDV’nin tevkif edilmeyen kısmını hesaplanan KDV olarak kaydeder:"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "120 Alıcılar",
+       "17.100,00",
+       ""
+      ],
+      [
+       "600 Yurt İçi Satışlar",
+       "",
+       "15.000,00"
+      ],
+      [
+       "391 Hesaplanan KDV",
+       "",
+       "2.100,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "SINIRIN ALTINDA KALAN FATURA",
+     "paragraflar": [
+      "Fatura 8.000,00 TL + 1.600,00 TL KDV = 9.600,00 TL olsaydı 12.000 TL sınırı aşılmadığı için tevkifat uygulanmazdı:"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "760 Pazarlama Satış ve Dağıtım Giderleri",
+       "8.000,00",
+       ""
+      ],
+      [
+       "191 İndirilecek KDV",
+       "1.600,00",
+       ""
+      ],
+      [
+       "320 Satıcılar (sahibinden)",
+       "",
+       "9.600,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "UYGULAMADA NE YAPMALI?",
+     "liste": [
+      "Müşterilerinizin Kasım 2026 ve sonrası sahibinden faturalarında tevkifat satırı olup olmadığına bakın; varsa tevkifat tutarını KDV-2’ye almayı unutmayın.",
+      "Faturada tevkifat yapılmamış ama tutar 12.000 TL’yi aşıyorsa, sorumluluk alıcıdadır; satıcıdan faturanın düzeltilmesini isteyin.",
+      "Aynı kural Google, Meta gibi yurt içinden faturalanan reklam hizmetleri ve reklam ajanslarının faturaları için de geçerlidir. Yurt dışından alınan reklam hizmetlerinde ise tevkifat değil, KDV’nin tamamı KDV-2 ile ödenir (ayrıca %15 stopaj).",
+      "Basit usul ve KDV mükellefi olmayan bireysel ilan sahipleri tevkifat yapmaz; fatura onlara KDV’nin tamamı üzerinden kesilir."
+     ]
+    },
+    {
+     "baslik": "SONUÇ",
+     "paragraflar": [
+      "Paylaşımlardaki %30 oran, 12.000 TL sınırı ve “önce KDV-2, sonra indirim” sırası doğru; yeni olan yalnızca sahibinden’in bu kuralı faturalarına uygulamaya başlaması. Tevkifat tutarlarını hesaplamak için sitedeki KDV tevkifat aracını kullanabilirsiniz: erdalkarahan.com/#h-tevkifat"
+     ]
+    }
+   ],
+   "kaynaklar": [
+    "https://www.alomaliye.com/2025/03/06/ticari-reklam-hizmetlerinde-kdv-tevkifati-ve-iadesi/",
+    "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv%2Fyardim-kaynaklar%2Fyararli-bilgiler%2Fkdvde-kismi-tevkifat-uygulamasinda-tevkifat-oranlari.pdf",
+    "https://yardim.sahibinden.com/hc/tr/articles/21603426862620-KDV-Tevkifat-Uygulamas%C4%B1",
+    "https://danisozcan.com/fatura-tevkifat-siniri/",
+    "https://kpmgvergi.com/yayinlar/mali-bultenler/vergi/katma-deger-vergisi-genel-uygulama-tebliginde-degisiklik-yapilmasina-dair-teblig-yururluge-girdi/3464",
+    "https://www.mondaq.com/turkey/sales-taxes-vat-gst/1806248/katma-de%C4%9Fer-vergisi-genel-uygulama-tebli%C4%9Finde-de%C4%9Fi%C5%9Fiklik-yap%C4%B1lm%C4%B1%C5%9Ft%C4%B1r-58-seri-nolu-kdv-tebli%C4%9Fi"
+   ],
+   "dogrulanmadi": [
+    "sahibinden.com’un tevkifata 1 Kasım 2026’da başladığı bilgisi sosyal medya paylaşımından alındı; sahibinden’in yardım sayfası açılamadığı için tarih doğrudan teyit edilmedi.",
+    "Hesap kodları yaygın uygulamaya göredir; büroların tercihine göre değişebilir."
+   ]
+  },
+  {
    "slug": "istanbulda-kdv-beyannamesi-yeni-e-beyan-ekim-2026",
    "baslik": "İstanbul’da KDV Beyannamesi Yeni e-Beyan’a Taşınıyor: Ekim 2026 Dönemi İçin Hazırlık Listesi",
    "ozet": "Gelir İdaresi’nin 14 Ekim 2026 tarihli duyurusuyla İstanbul’daki KDV beyannameleri Ekim/2026 döneminden itibaren yeni e-Beyan sisteminden alınacak. Geçişin kapsamını, eski sistemde kalan işlemleri ve beyan öncesi yapılması gereken kontrolleri ele alıyoruz.",
