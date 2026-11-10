@@ -990,6 +990,56 @@ section[data-view],[id^="h-"],[id^="d-"],[id^="x-"],[id^="p-"]{scroll-margin-top
 .mvz-ins{flex:none;width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font:800 12px var(--f-display);letter-spacing:.02em;color:#fff}
 .ins-gib{background:#D7262E}.ins-sgk{background:#1F5FAD}.ins-rg{background:#5B4636}.ins-tb{background:#C2410C}.ins-oth{background:#4B5872}
 .mvz-none{padding:14px 2px;color:color-mix(in srgb,var(--ink) 60%,transparent);font-size:14px}
+.dz-tls{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:14px;margin:0 0 18px}
+.dz-tls figure{margin:0;background:var(--sheet);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px 6px}
+.dz-tls figcaption{font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--stamp);margin-bottom:4px}
+.dz-tl{width:100%;height:auto;display:block;color:var(--ink)}
+.dz-wiz,.dz-calc,.dz-chain{background:var(--sheet);border:1px solid var(--rule);border-radius:var(--r);padding:16px;margin:0 0 18px}
+.dz-wiz>h3,.dz-calc>h3,.dz-chain>h3{margin:0 0 4px;font-size:19px}.dz-wiz>p,.dz-calc>p{margin:0 0 12px;color:color-mix(in srgb,var(--ink) 65%,transparent);font-size:14px}
+.dz-q{margin:12px 0 0}.dz-q>b{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--stamp);margin-bottom:6px}
+.dz-opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:8px}
+.dz-opt{text-align:left;border:1.5px solid var(--rule);background:var(--paper);color:var(--ink);border-radius:12px;padding:10px 12px;cursor:pointer;font:inherit}
+.dz-opt b{display:block;font-size:15px}.dz-opt small{display:block;font-size:12.5px;opacity:.7;margin-top:2px}
+.dz-opt[aria-pressed="true"]{border-color:var(--stamp);background:color-mix(in srgb,var(--stamp) 10%,var(--sheet));box-shadow:0 0 0 2px color-mix(in srgb,var(--stamp) 25%,transparent)}
+.dz-res{margin-top:16px}
+.dz-card{border:1px solid var(--rule);border-radius:var(--r);background:var(--sheet);margin-bottom:12px;overflow:hidden}
+.dz-card>header{display:flex;gap:10px;align-items:flex-start;padding:14px 16px;border-bottom:1px solid var(--rule)}
+.dz-card>header h4{margin:0;font-size:17px;line-height:1.3}
+.dz-badge{flex:0 0 auto;font:700 11px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;border-radius:999px;padding:4px 9px;margin-top:2px;white-space:nowrap}
+.dz-badge.ok{background:rgba(14,159,142,.14);color:#0b7f72}.dz-badge.warn{background:rgba(232,163,23,.18);color:#8a5a00}.dz-badge.bad{background:rgba(194,65,12,.14);color:#b3380a}
+.dz-card.ok>header{border-left:5px solid #0E9F8E}.dz-card.warn>header{border-left:5px solid #E8A317}.dz-card.bad>header{border-left:5px solid #C2410C}
+.dz-body{padding:12px 16px 16px;display:grid;gap:12px}
+.dz-body>p{margin:0;font-size:15px;line-height:1.55}
+.dz-two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:10px}
+.dz-col{border-radius:12px;padding:10px 12px;border:1px solid var(--rule)}
+.dz-col.warn{background:rgba(232,163,23,.08)}.dz-col.bad{background:rgba(194,65,12,.07)}.dz-col.ok{background:rgba(14,159,142,.07)}
+.dz-col h5{margin:0 0 6px;font-size:15px}.dz-col ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:14px;line-height:1.5}
+.dz-steps{margin:0;padding:0;list-style:none;counter-reset:dz;display:grid;gap:8px}
+.dz-steps li{counter-increment:dz;display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;font-size:14.5px;line-height:1.5}
+.dz-steps li::before{content:counter(dz);width:26px;height:26px;border-radius:50%;background:var(--stamp);color:#fff;display:grid;place-items:center;font:700 13px var(--f-mono)}
+.dz-mini{width:100%;border-collapse:collapse;font-size:14px}.dz-mini td{padding:6px 8px;border-bottom:1px solid var(--rule);vertical-align:top}.dz-mini td:first-child{font-weight:600;width:40%}
+.dz-pay{font-size:13.5px;color:color-mix(in srgb,var(--ink) 70%,transparent)}
+.dz-ex{background:color-mix(in srgb,var(--stamp) 6%,transparent);border-radius:12px;padding:10px 12px;font-size:14px;line-height:1.55}
+.dz-ex b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--stamp);margin-bottom:4px}
+.dz-ex table{width:100%;border-collapse:collapse;margin-top:6px}.dz-ex td{padding:4px 6px;border-bottom:1px dashed var(--rule)}.dz-ex td:last-child{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.dz-h{font-size:19px;margin:26px 0 10px}
+.dz-tw{overflow-x:auto}.dz-t{width:100%;border-collapse:collapse;font-size:14px;background:var(--sheet);border:1px solid var(--rule);border-radius:12px}
+.dz-t th,.dz-t td{padding:8px 10px;border-bottom:1px solid var(--rule);text-align:left}.dz-t td+td,.dz-t th+th{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.dz-t th{font:600 11.5px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--stamp)}
+.dz-notes{margin:0;padding-left:20px;display:grid;gap:6px;font-size:14.5px;line-height:1.55}
+.dz-tab{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px}
+.dz-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:10px}
+.dz-grid label{display:grid;gap:4px;font-size:13px;font-weight:600}
+.dz-grid input,.dz-grid select{font:inherit;font-size:15px;padding:9px 10px;border-radius:10px;border:1.5px solid var(--rule);background:var(--paper);color:var(--ink);min-width:0}
+.dz-chk{display:flex;gap:8px;align-items:center;font-size:14px;margin-top:8px}.dz-chk input{width:18px;height:18px;accent-color:var(--stamp)}
+.dz-out{margin-top:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:10px}
+.dz-out .dz-col b.t{display:block;font-size:22px;margin:4px 0}
+.dz-chainv{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.dz-m{flex:1 1 90px;border:1.5px solid var(--rule);border-radius:10px;padding:8px;font-size:12.5px;text-align:center;background:var(--paper)}
+.dz-m b{display:block;font-size:14px}.dz-m.err{border-color:#C2410C;background:rgba(194,65,12,.08)}.dz-m.fix{border-color:#E8A317;background:rgba(232,163,23,.1)}.dz-m.pay{border-color:#7F1D1D;background:rgba(127,29,29,.1)}
+.dz-card h4,.dz-col h5,.dz-q>b,.dz-wiz>h3,.dz-calc>h3,.dz-chain>h3,.dz-h{text-transform:none}
+.dz-tlm{display:none;margin:4px 0 8px;padding:0;list-style:none}.dz-tlm li{position:relative;padding:0 0 10px 22px;font-size:14px;line-height:1.45}.dz-tlm li::before{content:"";position:absolute;left:5px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--c,#5B3FA8)}.dz-tlm li::after{content:"";position:absolute;left:9px;top:16px;bottom:0;width:2px;background:var(--rule)}.dz-tlm li:last-child::after{display:none}.dz-tlm b{display:block}
+@media (max-width:640px){.dz-card>header{flex-direction:column;gap:6px}.dz-tl{display:none}.dz-tlm{display:block}}
 .ak-promo{display:flex;align-items:center;gap:14px;background:var(--sheet);border:1px solid color-mix(in srgb,var(--stamp) 35%,var(--rule));border-radius:var(--r);padding:14px 16px;margin:0 0 16px;color:inherit;text-decoration:none}
 .ak-promo:hover{border-color:var(--stamp)}.ak-promo b{display:block;font-size:16px;color:var(--stamp)}.ak-promo small{display:block;font-size:13px;color:color-mix(in srgb,var(--ink) 65%,transparent)}
 .ak-pi{flex:0 0 40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--stamp);color:#fff;font:700 20px var(--f-display)}
@@ -2089,6 +2139,45 @@ section[data-view] a{overflow-wrap:anywhere}
       <p class="pnote" style="margin-top:14px">Kaynak: İstanbul Ticaret Odası Ticaret Sicili Müdürlüğü sayfaları. Uygulama değişebilir; başvurudan önce İTO’nun güncel listesini kontrol edin.</p>
     </div>
   </section>
+  <!-- DÜZELTME / GEÇ BEYAN REHBERİ -->
+  <section class="block tint" id="duzeltme" data-view="duzeltme">
+    <div class="wrap">
+      <div class="sec-head"><svg class="sec-art" viewBox="0 0 200 140" role="img" aria-label="Düzeltilen beyanname"><rect width="200" height="140" rx="22" fill="#ECE7F8"/><rect x="36" y="18" width="88" height="106" rx="8" fill="#fff" stroke="#C9BEEB" stroke-width="2"/><rect x="48" y="30" width="60" height="9" rx="3" fill="#5B3FA8"/><g fill="#D6CEF0"><rect x="48" y="50" width="64" height="6" rx="3"/><rect x="48" y="64" width="64" height="6" rx="3"/><rect x="48" y="92" width="50" height="6" rx="3"/></g><rect x="48" y="78" width="64" height="6" rx="3" fill="#F2B8A2"/><path d="M44 81h72" stroke="#C2410C" stroke-width="3"/><circle cx="146" cy="88" r="26" fill="#0E9F8E"/><path d="M134 88l8 8 16-17" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><rect x="132" y="26" width="40" height="22" rx="6" fill="#F5C64B"/><text x="152" y="41" text-anchor="middle" font-size="12" font-weight="700" fill="#3b2a00">DZT</text></svg><div><span class="eyebrow">Beyanname ve SGK</span><h2>Düzeltme, ek ve geç beyan rehberi.</h2></div><p>KDV ve muhtasar-prim hizmet beyannamesinde hata ya da gecikme olduğunda ne yapılır? Süresi içinde mi, sonra mı, hiç verilmedi mi; vergi kısmı mı, SGK kısmı mı? Durumunuzu seçin, adımları, cezayı ve ödeme tutarını görün.</p></div>
+      <div class="dz-tls"><figure><figcaption>KDV beyannamesi</figcaption><svg class="dz-tl" viewBox="0 0 640 150" role="img" aria-label="KDV beyannamesi zaman çizelgesi">
+<rect x="20" y="64" width="190" height="14" rx="7" fill="#0E9F8E"/><rect x="210" y="64" width="80" height="14" fill="#E8A317"/><rect x="290" y="64" width="330" height="14" rx="0" fill="#C2410C"/><rect x="606" y="64" width="14" height="14" rx="7" fill="#C2410C"/>
+<g font-family="inherit" font-size="13" fill="currentColor">
+<circle cx="20" cy="71" r="9" fill="#5B3FA8"/><text x="20" y="40" text-anchor="start" font-weight="700">Dönem sonu</text><text x="20" y="56" text-anchor="start" opacity=".7">ör. 31 Ekim</text>
+<circle cx="210" cy="71" r="9" fill="#5B3FA8"/><text x="210" y="40" text-anchor="middle" font-weight="700">28 Kasım 23.59</text><text x="210" y="56" text-anchor="middle" opacity=".7">beyan + ödeme</text>
+<circle cx="290" cy="71" r="7" fill="#fff" stroke="#5B3FA8" stroke-width="3"/><text x="300" y="40" text-anchor="start" font-weight="700">+7 gün</text><text x="300" y="56" text-anchor="start" opacity=".7">usulsüzlük 2. → 1. derece</text>
+<text x="115" y="104" text-anchor="middle" font-weight="700" fill="#0E9F8E">Düzeltme cezasız</text><text x="115" y="121" text-anchor="middle" opacity=".75">vadede ödenir</text>
+<text x="455" y="104" text-anchor="middle" font-weight="700" fill="#C2410C">Süre sonrası</text><text x="455" y="121" text-anchor="middle" opacity=".75">pişmanlık (zam) ya da kendiliğinden (%50 ceza)</text>
+<text x="455" y="138" text-anchor="middle" opacity=".75">aylık %3,7 zam / faiz işler</text>
+</g></svg><ul class="dz-tlm"><li style="--c:#5B3FA8"><b>Dönem sonu</b>ör. 31 Ekim</li><li style="--c:#0E9F8E"><b>28 Kasım 23.59’a kadar</b>beyan ve ödeme son günü; bu tarihe kadar düzeltme cezasız</li><li style="--c:#E8A317"><b>Sonraki 7 gün</b>hiç verilmeyen beyanname için usulsüzlük cezası 2. derece</li><li style="--c:#C2410C"><b>Sonrası</b>usulsüzlük 1. derece; düzeltmede pişmanlık (zam) ya da kendiliğinden (%50 ceza); aylık %3,7 zam/faiz</li></ul></figure><figure><figcaption>Muhtasar ve prim hizmet beyannamesi (MUHSGK)</figcaption><svg class="dz-tl" viewBox="0 0 640 150" role="img" aria-label="Muhtasar ve prim hizmet beyannamesi zaman çizelgesi">
+<rect x="20" y="64" width="160" height="14" rx="7" fill="#0E9F8E"/><rect x="180" y="64" width="110" height="14" fill="#E8A317"/><rect x="290" y="64" width="225" height="14" fill="#C2410C"/><rect x="515" y="64" width="105" height="14" rx="7" fill="#7F1D1D"/>
+<g font-family="inherit" font-size="13" fill="currentColor">
+<circle cx="20" cy="71" r="9" fill="#5B3FA8"/><text x="20" y="40" font-weight="700">Ay sonu</text><text x="20" y="56" opacity=".7">ör. 31 Ekim</text>
+<circle cx="180" cy="71" r="9" fill="#5B3FA8"/><text x="180" y="40" text-anchor="middle" font-weight="700">26 Kasım</text><text x="180" y="56" text-anchor="middle" opacity=".7">beyan + stopaj ödeme</text>
+<circle cx="290" cy="71" r="7" fill="#fff" stroke="#5B3FA8" stroke-width="3"/><text x="290" y="40" text-anchor="middle" font-weight="700">30 Kasım</text><text x="290" y="56" text-anchor="middle" opacity=".7">prim ödeme</text>
+<circle cx="390" cy="71" r="7" fill="#fff" stroke="#5B3FA8" stroke-width="3"/><text x="390" y="40" text-anchor="middle" font-weight="700">+30 gün</text><text x="390" y="56" text-anchor="middle" opacity=".7">SGK cezası 1/4</text>
+<circle cx="515" cy="71" r="7" fill="#fff" stroke="#5B3FA8" stroke-width="3"/><text x="520" y="40" text-anchor="middle" font-weight="700">+3. ay sonu</text><text x="520" y="56" text-anchor="middle" opacity=".7">incelemesiz sınır</text>
+<text x="100" y="104" text-anchor="middle" font-weight="700" fill="#0E9F8E">Düzeltme cezasız</text><text x="100" y="121" text-anchor="middle" opacity=".75">tahakkuk nedeni A</text>
+<text x="400" y="104" text-anchor="middle" font-weight="700" fill="#C2410C">Süre sonrası (B)</text><text x="400" y="121" text-anchor="middle" opacity=".75">vergi: pişmanlık / %50</text><text x="400" y="138" text-anchor="middle" opacity=".75">SGK: idari para cezası</text>
+<text x="567" y="104" text-anchor="middle" font-weight="700" fill="#7F1D1D">İnceleme</text>
+</g></svg><ul class="dz-tlm"><li style="--c:#5B3FA8"><b>Ay sonu</b>ör. 31 Ekim</li><li style="--c:#0E9F8E"><b>26 Kasım</b>beyan ve stopaj ödeme son günü; düzeltme cezasız (tahakkuk nedeni A)</li><li style="--c:#0E9F8E"><b>30 Kasım</b>SGK prim ödeme son günü</li><li style="--c:#C2410C"><b>Süre sonrası 30 gün</b>kendiliğinden verilen belgede SGK cezası 1/4</li><li style="--c:#C2410C"><b>3. ayın sonuna kadar</b>şartlar uygunsa belge incelemesiz işlenir</li><li style="--c:#7F1D1D"><b>Sonrası</b>SGK denetmeni incelemesi</li></ul></figure></div>
+      <div class="dz-wiz" id="dz-wiz" aria-live="polite"></div>
+      <div class="dz-calc" id="dz-calc"></div>
+      <div class="dz-chain" id="dz-chain"></div>
+      <h3 class="dz-h">Bütün durumlar</h3>
+      <div class="qchips" id="dz-tabs"></div>
+      <div id="dz-all"></div>
+      <h3 class="dz-h">2026 genel usulsüzlük cezaları (VUK 352)</h3>
+      <div class="dz-tw"><table class="dz-t" id="dz-usul"></table></div>
+      <p class="pnote">Beyanname kanuni süresinin bitimini izleyen 7 gün içinde verilirse 2. derece, daha sonra verilirse 1. derece usulsüzlük cezası kesilir. Usulsüzlük aynı zamanda re’sen takdiri gerektiriyorsa ceza iki kat uygulanır.</p>
+      <h3 class="dz-h">Bilmeniz gerekenler</h3>
+      <ul class="dz-notes" id="dz-notes"></ul>
+      <p class="pnote" id="dz-src"></p>
+    </div>
+  </section>
   <!-- AMAÇ VE KONU -->
   <section class="block tint" id="amackonu" data-view="amackonu">
     <div class="wrap">
@@ -2139,6 +2228,7 @@ section[data-view] a{overflow-wrap:anywhere}
   <section class="block tint" id="beyanname" data-view="beyanname">
     <div class="wrap">
       <div class="sec-head"><svg class="sec-art" viewBox="0 0 200 140" role="img" aria-label="Beyanname formu ve onay"><rect width="200" height="140" rx="22" fill="#ECE7F8"/><circle cx="166" cy="26" r="13" fill="#F5C64B" opacity=".55"/><rect x="34" y="20" width="86" height="104" rx="8" fill="#fff" stroke="#C9BEEB"/><rect x="44" y="30" width="66" height="10" rx="3" fill="#5B3FA8"/><g fill="#D6CEF0"><rect x="44" y="48" width="30" height="6" rx="2"/><rect x="78" y="48" width="32" height="6" rx="2" fill="#B6A3F7"/><rect x="44" y="60" width="30" height="6" rx="2"/><rect x="78" y="60" width="32" height="6" rx="2" fill="#B6A3F7"/><rect x="44" y="72" width="30" height="6" rx="2"/><rect x="78" y="72" width="32" height="6" rx="2" fill="#B6A3F7"/><rect x="44" y="90" width="66" height="5" rx="2"/><rect x="44" y="100" width="48" height="5" rx="2"/></g><g transform="translate(118 64)"><rect width="56" height="52" rx="10" fill="#121C33"/><text x="28" y="22" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="11" font-weight="700" fill="#D9F7E8">SGK</text><text x="28" y="38" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="11" font-weight="700" fill="#F5C64B">GİB</text></g><circle cx="44" cy="118" r="0"/><path d="M128 40l8 8 16-18" fill="none" stroke="#0E9F8E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><div><span class="eyebrow">Beyanname ve bildirgeler</span><h2>Beyanname, bildirge ve SGK formları rehberi.</h2></div><p>Vergi beyannameleri ile SGK işveren ve sigortalı formlarının kim tarafından, ne zaman, nereden ve nasıl doldurulacağı; alan alan açıklamalar, kontrol listeleri, sık yapılan hatalar ve cezalar.</p></div>
+      <a class="ak-promo" href="#duzeltme"><span class="ak-pi" aria-hidden="true">±</span><span><b>Düzeltme, ek ve geç beyan rehberi</b><small>KDV ve MUHSGK’da süresinde / süre sonrası düzeltme, hiç verilmeyen beyanname, cezalar ve hesaplayıcı.</small></span><span aria-hidden="true">→</span></a>
       <div class="hp-classes" id="by-tabs"></div>
       <div id="by-list"><p class="pnote">Rehber yükleniyor…</p></div>
       <p class="pnote" style="margin-top:14px">Bilgiler genel bilgilendirme amaçlıdır; mevzuat değişikliklerini resmî kaynaklardan (GİB, SGK, Resmî Gazete) kontrol edin. Resmî formların güncel hâli için bağlantıları kullanın.</p>
@@ -3636,6 +3726,7 @@ function goTo(h){if(location.hash==='#'+h){window.dispatchEvent(new HashChangeEv
     tablolar:{ph:'Ara: kasa, bordro, stok, fatura…',items:'#xls .xls',heads:'#xls .xgrp'},
     kurumlar:{ph:'Ara: KEP, e-Bildirge, MERSİS…',items:'#kurum-list .kcard',heads:'#kurum-list .kgrp'},
     sirket:{ph:'Ara: hisse devri, tasfiye, müdür, sermaye…',items:'#sicil-list .sc-item'},
+    duzeltme:{ph:'Ara: KDV düzeltme, pişmanlık, ek belge, iptal…',items:'#dz-all .dz-card'},
     amackonu:{ph:'Ara: inşaat, e-ticaret, yazılım, restoran, 62.10…',items:'#ak-list .ak-s',heads:'#ak-list .ak-gh'},
     hesapplani:{ph:'Ara: 100, kasa, 191, indirilecek KDV, amortisman…',items:'#hp-list .hp-a',heads:'#hp-list .hp-g h4'},
     beyanname:{ph:'Ara: KDV, muhtasar, işe giriş, işten çıkış kodu, emeklilik…',items:'#by-list .by-a, #by-list .by-kr',heads:'#by-list .hp-g h4'},
@@ -3856,7 +3947,7 @@ window.ozelGun=function(d){d=d||new Date();var md=new Intl.DateTimeFormat('en-CA
   document.body.insertBefore(b,document.body.firstChild);b.querySelector('button').onclick=function(){b.remove();try{localStorage.setItem('ek-ozel-'+o.k,'1');}catch(e){}};})();
 /* ---------- üst menü: Rehberler açılır menüsü ---------- */
 (function(){var b=$('.subnav .sn-more');if(!b)return;
-  var L=[['beyanname','Beyanname ve SGK','Doldurma rehberi, kodlar, cezalar'],['pratik','Pratik Bilgiler','2026 tutarları, oranları, süreleri'],['sirket','Şirket İşlemleri','Ticaret sicili, İTO, kararlar'],['amackonu','Amaç ve Konu Maddeleri','Şirket kuruluşu: sektör sektör hazır bentler'],['hesapplani','Hesap Planı','Tek Düzen Hesap Planı ve işleyiş'],['belgeler','Belge Örnekleri','SMMM raporları, ticaret sicili örnekleri'],['programlar','Resmî Programlar','BDP, e-defter, e-imza ve mali mühür'],['kurumlar','Kurumlar','Kamu kurumları ve meslek kuruluşları'],['uye-ol','Üye Ol','Ücretsiz üyelik']];
+  var L=[['beyanname','Beyanname ve SGK','Doldurma rehberi, kodlar, cezalar'],['pratik','Pratik Bilgiler','2026 tutarları, oranları, süreleri'],['sirket','Şirket İşlemleri','Ticaret sicili, İTO, kararlar'],['amackonu','Amaç ve Konu Maddeleri','Şirket kuruluşu: sektör sektör hazır bentler'],['duzeltme','Düzeltme ve Geç Beyan','KDV ve MUHSGK: süresinde, süre sonrası, hiç verilmeyen'],['hesapplani','Hesap Planı','Tek Düzen Hesap Planı ve işleyiş'],['belgeler','Belge Örnekleri','SMMM raporları, ticaret sicili örnekleri'],['programlar','Resmî Programlar','BDP, e-defter, e-imza ve mali mühür'],['kurumlar','Kurumlar','Kamu kurumları ve meslek kuruluşları'],['uye-ol','Üye Ol','Ücretsiz üyelik']];
   var m=document.createElement('div');m.className='sn-menu';m.hidden=true;m.innerHTML=L.map(function(x){return '<a href="#'+x[0]+'" data-v="'+x[0]+'"><b>'+esc(x[1])+'</b><span>'+esc(x[2])+'</span></a>';}).join('');document.body.appendChild(m);
   function place(){var r=b.getBoundingClientRect(),w=Math.min(300,innerWidth-16);m.style.width=w+'px';m.style.left=Math.max(8,Math.min(r.left,innerWidth-w-8))+'px';m.style.top=(r.bottom+6)+'px';m.style.maxHeight=Math.max(220,innerHeight-r.bottom-(innerWidth<=640?170:24))+'px';m.style.overflowY='auto';}
   function close(){m.hidden=true;b.setAttribute('aria-expanded','false');}
@@ -4142,6 +4233,181 @@ var BURO={
 (function(){var L=[['Adı soyadı','adsoyad'],['Mesleki ünvan','unvan'],['Akademik ünvan','akademik'],['Büro unvanı','buroUnvan'],['Bağlı olduğu oda','oda'],['Oda sicil no','odaSicil'],['Ruhsat no','ruhsatNo'],['Mesleğe başlama tarihi','baslama'],['Mezun olduğu üniversite','universite'],['Yabancı dil','dil'],['Büro adresi','adres'],['Telefon','telefon'],['E-posta','eposta']];
   var dl=$('#buro-dl');if(dl)dl.innerHTML=L.filter(function(x){return BURO[x[1]];}).map(function(x){var v=esc(BURO[x[1]]);if(x[1]==='telefon')v='<a href="tel:+90'+BURO.telefon.replace(/\D/g,'').replace(/^0/,'')+'">'+v+'</a>';if(x[1]==='eposta')v='<a href="mailto:'+v+'">'+v+'</a>';return '<div><dt>'+x[0]+'</dt><dd>'+v+'</dd></div>';}).join('');})();
 
+/* ---------- Düzeltme / geç beyan rehberi ---------- */
+(function(){var W=$('#dz-wiz');if(!W)return;
+/* Düzeltme ve geç beyan rehberi verisi (10.11.2026) */
+var DZ={
+ guncelleme:'10.11.2026',
+ gz:3.7, asgari:33030,
+ usul:[ // VUK 352, 2026 (588 Sıra No.lu VUK GT)
+  ['Sermaye şirketleri',35000,17000],
+  ['1. sınıf tüccar ve serbest meslek erbabı',17000,8700],
+  ['2. sınıf tüccar',8700,6000],
+  ['Diğer beyanname veren gelir vergisi mükellefleri',6000,4000],
+  ['Basit usul',4000,2600],
+  ['Gelir vergisinden muaf esnaf',2600,1700]
+ ],
+ sorular:{
+  b:[['kdv','KDV beyannamesi','KDV-1 ve KDV-2 (sorumlu sıfatıyla)'],['mv','Muhtasar · vergi kısmı','MUHSGK’daki stopajlar'],['ms','Muhtasar · SGK kısmı','MUHSGK’daki prim ve hizmet bilgileri']],
+  d:[['duz','Verdim, düzeltmem gerekiyor','Hatalı ya da eksik bilgi var'],['yok','Hiç vermedim','Beyanname gönderilmedi'],['ode','Verdim ama ödemedim','Tahakkuk var, ödeme yapılmadı']],
+  s:[['ici','Beyan süresi bitmedi','KDV: izleyen ayın 28’i · MUHSGK: 26’sı'],['sonra','Süre geçti','Son gün 23.59 geçti']],
+  e:{
+   kdv:[['art','Ödenecek KDV artıyor','Eksik satış, fazla indirim vb.'],['dev','Ödenecek çıkmıyor, devreden azalıyor','Devreden KDV hatayı karşılıyor'],['lehe','Fazla beyan ettim','Ödenecek azalıyor / devreden artıyor']],
+   mv:[['art','Eksik stopaj beyan ettim','Ödenecek vergi artıyor'],['lehe','Fazla stopaj beyan ettim','Ödenecek vergi azalıyor']],
+   ms:[['art','Eksik gün / kazanç bildirdim','Ek belge gerekiyor'],['lehe','Fazla bildirdim','İptal belge gerekiyor'],['tur','Belge türü, kanun no ya da teşvik yanlış','Gün ve kazanç aynı']]
+  }
+ },
+ /* ton: ok (cezasız) / warn (zam-faiz) / bad (ceza) */
+ sen:{
+ 'kdv|duz|ici':{t:'KDV · Süresi içinde düzeltme',ton:'ok',ozet:'Beyan süresi bitmeden verilen düzeltme beyannamesi ilk beyannamenin yerine geçer. Ceza, gecikme zammı ya da faiz yoktur.',
+  adim:['e-Beyan / e-Beyanname’de aynı dönem için beyannameyi yeniden oluşturun; yalnız değişen satırı değil, dönemin bütün bilgilerini doğru haliyle girin.','Gönderirken beyanname türü / özel onay olarak “Düzeltme” seçin ve kısa gerekçe yazın (ör. “Fatura no 123 satışlara eklendi”).','Onaylanınca önceki beyanname geçersiz olur; yeni tahakkuk ya da tahakkuk farkı oluşur.','Ödenecek tutarı yine izleyen ayın 28’ine kadar ödeyin. Önceki tahakkuku ödediyseniz yalnız farkı ödersiniz.','Lehe düzeltmede fazla ödediğiniz tutar için vergi dairesine mahsup/iade dilekçesi verin.'],
+  ceza:[['Vergi ziyaı cezası','Yok'],['Usulsüzlük cezası','Yok'],['Gecikme zammı / faiz','Yok (28’ine kadar ödenirse)']],
+  odeme:'İzleyen ayın 28’i'},
+ 'kdv|duz|sonra|art':{t:'KDV · Süre geçtikten sonra, ödenecek artıyor',ton:'warn',ozet:'İki yol var: pişmanlıkla (ceza yok, pişmanlık zammı var) ya da kendiliğinden (vergi ziyaı cezası %50). Beyanname zamanında verildiği için usulsüzlük cezası çıkmaz.',
+  iki:[{h:'Pişmanlıkla (VUK 371)',ton:'warn',l:['Vergi incelemesi başlamamış, takdire sevk edilmemiş ve hakkınızda ihbar olmamalı.','Düzeltme beyannamesini gönderirken “Pişmanlık” seçin; bu seçim pişmanlık dilekçesi yerine geçer.','Fark vergi + pişmanlık zammını 15 gün içinde ödeyin. Zam: aylık %3,7; vadeden beyan tarihine kadar her ay ve ay kesri tam ay sayılır.','Vergi ziyaı cezası ve usulsüzlük cezası yoktur.','15 gün içinde ödenmezse pişmanlık düşer, kendiliğinden verilmiş sayılır.']},
+       {h:'Kendiliğinden (pişmanlıksız)',ton:'bad',l:['Pişmanlık şartları sağlanmıyorsa (ör. 15 günde ödeyemeyecekseniz) düzeltme “kanuni süre sonrası / kendiliğinden” olarak verilir.','Fark vergiye vergi ziyaı cezası %50 oranında uygulanır (VUK 344).','Vadeden tarha kadar gecikme faizi hesaplanır (aylık %3,7).','Ceza ihbarnamesi tebliğinden itibaren 30 gün içinde ödenirse VUK 376’ya göre vergi ziyaı cezasının yarısı (ilk seferde) indirilir.','İnceleme başladıktan sonra verilen beyanda %50 indirimi de olmaz; cezanın tamamı uygulanır.']}],
+  adim:['Hatalı dönemin beyannamesini bütün bilgilerle yeniden düzenleyin.','Özel onay / beyanname türünde “Pişmanlık” ya da “Kendiliğinden” seçeneğini işaretleyip gerekçe yazın.','Sonraki dönemlerin devreden KDV’si değişiyorsa onları da sırayla düzeltin (aşağıdaki “Devreden KDV zinciri” kutusuna bakın).'],
+  ceza:[['Vergi ziyaı cezası','Pişmanlıkta yok · kendiliğinden %50'],['Usulsüzlük cezası','Yok (asıl beyanname süresinde verilmiş)'],['Zam / faiz','Pişmanlık zammı ya da gecikme faizi, aylık %3,7']],
+  odeme:'Pişmanlıkta 15 gün; kendiliğinden ihbarname tebliğinden itibaren 1 ay',ornek:'kdvart'},
+ 'kdv|duz|sonra|dev':{t:'KDV · Süre geçti, ödenecek çıkmıyor (devreden azalıyor)',ton:'ok',ozet:'Hata devreden KDV ile karşılanıyorsa ödenecek vergi doğmaz; vergi ziyaı yoktur. Düzeltme beyannamesi verilir ve devreden zinciri düzeltilir.',
+  adim:['Hatalı dönemi düzeltme beyannamesiyle doğru haliyle gönderin (gerekçe yazarak).','Devreden KDV’nin değiştiği sonraki bütün dönemleri sırayla düzeltin; hangi dönemde ödenecek KDV çıkarsa o dönem için “süre sonrası, ödenecek artıyor” kuralları uygulanır.','Ek vergi çıkmıyor ve devreden azalmıyorsa uygulamada yalnız hatalı dönem ile son dönemin düzeltilmesi yeterli görülür; emin değilseniz zinciri tamamlayın.'],
+  ceza:[['Vergi ziyaı cezası','Yok (ödenecek vergi çıkmıyorsa)'],['Usulsüzlük cezası','Yok'],['Zam / faiz','Yok']],
+  odeme:'Ödeme yok; zincirde vergi çıkan dönem olursa o döneme göre'},
+ 'kdv|duz|sonra|lehe':{t:'KDV · Süre geçti, fazla beyan (lehe düzeltme)',ton:'ok',ozet:'Pişmanlık hükümleri lehe düzeltmede uygulanmaz. Düzeltme beyannamesi verilir; fazla ödenen KDV için dilekçeyle mahsup ya da iade istenir.',
+  adim:['Hatalı dönemi düzeltme beyannamesiyle doğru haliyle gönderin; gerekçeyi ayrıntılı yazın, belgeleri hazır tutun.','Devreden KDV artıyorsa sonraki dönemleri de sırayla düzeltin.','Fazla ödenmiş vergi varsa vergi dairesine “düzeltme ve ret-iade / mahsup” dilekçesi verin (VUK 116-126, beş yıllık zamanaşımı içinde).','Matrah azaltan ve devreden artıran düzeltmeler vergi incelemesine sevk edilebilir.'],
+  ceza:[['Vergi ziyaı cezası','Yok'],['Usulsüzlük cezası','Yok'],['Zam / faiz','Yok']],
+  odeme:'Ödeme yok'},
+ 'kdv|yok|ici':{t:'KDV · Henüz süre bitmedi',ton:'ok',ozet:'Son gün 23.59’a kadar normal beyanname verilir ve ödenir. Ceza yoktur.',
+  adim:['Beyannameyi normal türde gönderin.','Tahakkuku izleyen ayın 28’ine kadar ödeyin.'],ceza:[['Ceza','Yok']],odeme:'İzleyen ayın 28’i'},
+ 'kdv|yok|sonra|art':{t:'KDV · Hiç verilmedi, ödenecek KDV var',ton:'bad',ozet:'Pişmanlıkla verilirse vergi ziyaı cezası yok ama geç beyan nedeniyle usulsüzlük cezası var. Kendiliğinden verilirse vergi ziyaı cezası %50 ve usulsüzlük cezası birlikte gündeme gelir; VUK 336’ya göre tutarı ağır olanı kesilir.',
+  iki:[{h:'Pişmanlıkla',ton:'warn',l:['Beyannameyi “Pişmanlık” seçeneğiyle gönderin.','Vergi + pişmanlık zammını (aylık %3,7) 15 gün içinde ödeyin.','Vergi ziyaı cezası yok.','Usulsüzlük cezası: süre bitiminden sonra 7 gün içinde verilirse 2. derece, sonra verilirse 1. derece (aşağıdaki tablo).']},
+       {h:'Kendiliğinden',ton:'bad',l:['Beyanname süre sonrası / kendiliğinden gönderilir.','Vergi ziyaı cezası %50 + gecikme faizi.','Geç beyan için usulsüzlük cezası; uygulamada iki kat 1. derece kesildiği görülür.','Aynı fiil hem vergi ziyaına hem usulsüzlüğe yol açtığı için VUK 336’ya göre ikisinden tutarı ağır olan kesilir.']}],
+  adim:['Önce hangi yolu seçeceğinize karar verin: 15 gün içinde ödeyebilecekseniz pişmanlık neredeyse her zaman daha ucuzdur.','Beyannameyi doğru bilgilerle gönderin, özel onayda seçiminizi işaretleyin.','Sonraki dönemlerin devreden KDV’sini kontrol edin.'],
+  ceza:[['Vergi ziyaı cezası','Pişmanlıkta yok · kendiliğinden %50'],['Usulsüzlük cezası','Var · 7 gün içinde 2. derece, sonra 1. derece'],['Zam / faiz','Aylık %3,7']],
+  odeme:'Pişmanlıkta 15 gün',ornek:'kdvyok'},
+ 'kdv|yok|sonra|dev':{t:'KDV · Hiç verilmedi, ödenecek çıkmıyor',ton:'warn',ozet:'Devreden ya da iade çıkan beyannamede vergi ziyaı yoktur; yalnız geç beyan nedeniyle usulsüzlük cezası kesilir. Ödenecek vergi olmadığı için pişmanlık uygulanmaz.',
+  adim:['Beyannameyi en kısa sürede gönderin: süre bitimini izleyen 7 gün içinde verilirse ceza 2. dereceden kesilir.','Ceza ihbarnamesi gelince 30 gün içinde ödeyip VUK 376’ya göre 1/3 indirim isteyebilirsiniz.'],
+  ceza:[['Vergi ziyaı cezası','Yok'],['Usulsüzlük cezası','7 gün içinde 2. derece, sonra 1. derece (uygulamada iki kat kesilebilir)'],['Zam / faiz','Yok']],
+  odeme:'Ceza ihbarnamesine göre'},
+ 'kdv|ode':{t:'KDV · Beyan verildi, ödeme yapılmadı',ton:'warn',ozet:'Beyanname zamanında verildiği için düzeltme ya da ceza gerekmez. Ödenmeyen vergiye vade tarihinden itibaren gecikme zammı işler.',
+  adim:['Borcu Dijital Vergi Dairesi ya da bankadan ödeyin; gecikme zammı ödeme günü otomatik hesaplanır.','Borç ödenene kadar vergi borcu yoktur yazısı alınamaz.','Ödeyemiyorsanız 6183 m.48’e göre tecil başvurusu yapabilirsiniz.'],
+  ceza:[['Ceza','Yok'],['Gecikme zammı','Aylık %3,7 (ay kesirleri gün hesabıyla)']],odeme:'Ne kadar erken o kadar az zam',ornek:'gz'},
+ /* ---- MUHSGK vergi kısmı ---- */
+ 'mv|duz|ici':{t:'Muhtasar (vergi kısmı) · Süresi içinde düzeltme',ton:'ok',ozet:'Ayın 26’sına kadar verilen düzeltme beyannamesi öncekinin yerine geçer; ceza ya da zam yoktur.',
+  adim:['e-Beyanname’de MUHSGK’yı aynı dönem için yeniden açın, vergi bildirimlerini doğru haliyle girin.','Sigortalı bilgileri değişmiyorsa SGK bölümünü değiştirmeyin; “sigortalı bilgilerinde değişiklik var mı?” sorusuna “Hayır” deyin.','Özel onayda “Düzeltme” seçip gerekçe yazın ve gönderin.','Vergi tahakkukunu ayın 26’sına kadar ödeyin.'],
+  ceza:[['Vergi ziyaı cezası','Yok'],['Usulsüzlük cezası','Yok'],['Zam','Yok']],odeme:'İzleyen ayın 26’sı'},
+ 'mv|duz|sonra|art':{t:'Muhtasar (vergi kısmı) · Süre geçti, eksik stopaj',ton:'warn',ozet:'Stopaj eksik beyan edildiyse KDV ile aynı kurallar geçerli: pişmanlıkla (zam, ceza yok) ya da kendiliğinden (vergi ziyaı cezası %50). Asıl beyanname zamanında verildiği için usulsüzlük cezası yok.',
+  iki:[{h:'Pişmanlıkla',ton:'warn',l:['İnceleme başlamamış, ihbar olmamalı.','Düzeltme MUHSGK’yı “Pişmanlık” ile gönderin.','Fark stopaj + pişmanlık zammı (aylık %3,7) 15 gün içinde ödenir.','Vergi ziyaı ve usulsüzlük cezası yok.']},
+       {h:'Kendiliğinden',ton:'bad',l:['Düzeltme süre sonrası / kendiliğinden gönderilir.','Vergi ziyaı cezası %50 + gecikme faizi.','Ceza 30 gün içinde ödenirse VUK 376 indirimi.']}],
+  adim:['Unutulan ödemenin (kira, serbest meslek, ücret vb.) kesinti tutarını hesaplayın.','Düzeltme beyannamesinde yalnız vergi bölümü değişiyorsa sigortalı bilgilerine dokunmayın.','Stopajı kesmediyseniz bile vergi sorumlusu olarak siz ödersiniz; tutarı karşı taraftan tahsil etmek ayrı bir konudur.'],
+  ceza:[['Vergi ziyaı cezası','Pişmanlıkta yok · kendiliğinden %50'],['Usulsüzlük cezası','Yok'],['Zam / faiz','Aylık %3,7']],odeme:'Pişmanlıkta 15 gün',ornek:'kdvart'},
+ 'mv|duz|sonra|lehe':{t:'Muhtasar (vergi kısmı) · Fazla stopaj beyanı',ton:'ok',ozet:'Düzeltme beyannamesi verilir, fazla ödenen stopaj dilekçeyle mahsup ya da iade edilir. Pişmanlık hükümleri uygulanmaz.',
+  adim:['Hatalı dönemi düzeltme MUHSGK ile doğru haliyle gönderin, gerekçeyi açık yazın.','Fazla ödenen tutar için vergi dairesine ret-iade ya da mahsup dilekçesi verin.','Karşı tarafa (kiraya veren, serbest meslek erbabı) verilen kesinti bilgisi değiştiyse onları da bilgilendirin; yıllık beyanda mahsup ettikleri tutar değişir.'],
+  ceza:[['Ceza','Yok']],odeme:'Ödeme yok'},
+ 'mv|yok|ici':{t:'Muhtasar · Henüz süre bitmedi',ton:'ok',ozet:'Ayın 26’sı 23.59’a kadar normal beyanname verilir.',adim:['Normal MUHSGK gönderin; vergi tahakkukunu 26’sına, SGK primini ay sonuna kadar ödeyin.'],ceza:[['Ceza','Yok']],odeme:'Vergi 26’sı · prim ay sonu'},
+ 'mv|yok|sonra|art':{t:'Muhtasar · Hiç verilmedi (vergi kısmı)',ton:'bad',ozet:'Stopaj varsa: pişmanlıkla (zam + usulsüzlük cezası) ya da kendiliğinden (vergi ziyaı %50 + usulsüzlük, ağır olan). Aynı beyannamenin SGK kısmı da geç verilmiş olur; SGK idari para cezası ayrıca gelir.',
+  iki:[{h:'Vergi kısmı',ton:'warn',l:['Pişmanlıkla: stopaj + pişmanlık zammı 15 günde; vergi ziyaı yok; geç beyan için usulsüzlük cezası (7 gün içinde 2. derece).','Kendiliğinden: vergi ziyaı %50 + gecikme faizi; usulsüzlükle birlikte VUK 336’ya göre ağır olan.','Stopaj yoksa (yalnız sigortalı bildirimi) vergi ziyaı olmaz.']},
+       {h:'SGK kısmı',ton:'bad',l:['Asıl belge süre sonrası verilmiş sayılır (tahakkuk nedeni B).','İdari para cezası: sigortalı başına asgari ücretin 1/5’i (2026: 6.606 TL), belge başına üst sınır 2 asgari ücret (66.060 TL).','Süre bitiminden sonra 30 gün içinde kendiliğinden verilirse ceza 1/4’e iner.','Prim süresinde ödenmezse gecikme cezası ve gecikme zammı; teşvikler kaybedilebilir.']}],
+  adim:['MUHSGK’yı vergi ve sigortalı bilgileriyle birlikte gönderin.','Vergi tarafında pişmanlık ya da kendiliğinden seçimini yapın.','SGK tahakkuku (B) Kurum onayına düşebilir; e-Bildirge’den takip edin.'],
+  ceza:[['Vergi ziyaı cezası','Pişmanlıkta yok · kendiliğinden %50'],['Vergi usulsüzlük cezası','Var'],['SGK idari para cezası','Var (30 gün içinde 1/4)']],odeme:'Pişmanlıkta 15 gün · prim için gecikme cezası/zammı',ornek:'sgk'},
+ 'mv|ode':{t:'Muhtasar (vergi kısmı) · Verildi, ödenmedi',ton:'warn',ozet:'Ceza yok; ödenmeyen stopaja gecikme zammı (aylık %3,7) işler.',adim:['Vergi borcunu en kısa sürede ödeyin; zam ödeme günü hesaplanır.'],ceza:[['Ceza','Yok'],['Gecikme zammı','Aylık %3,7']],odeme:'Hemen',ornek:'gz'},
+ /* ---- MUHSGK SGK kısmı ---- */
+ 'ms|duz|ici':{t:'Muhtasar (SGK kısmı) · Süresi içinde düzeltme',ton:'ok',ozet:'Ayın 26’sına kadar düzeltme MUHSGK ile sigortalı bilgileri düzeltilir; ceza yoktur, tahakkuk nedeni A’dır.',
+  adim:['Düzeltme MUHSGK’da ya bütün sigortalı bilgilerini yeniden girin ya da yalnız değişenleri girip “önceki beyannamedeki diğer bilgiler aynıdır” kutucuğunu işaretleyin.','Değişen sigortalı için önce eski bilgilerle bir İPTAL satırı, sonra doğru bilgilerle ASIL (ya da EK) satırı yazın.','Özel onayda “Düzeltme” seçip gerekçe yazın.','Prim tahakkukunu izleyen ayın sonuna kadar ödeyin.'],
+  ceza:[['İdari para cezası','Yok'],['Gecikme','Yok (prim ay sonuna kadar ödenirse)']],odeme:'Prim: izleyen ayın sonu'},
+ 'ms|duz|sonra|art':{t:'Muhtasar (SGK kısmı) · Süre geçti, eksik gün/kazanç (EK belge)',ton:'bad',ozet:'Eksik bildirilen gün ya da kazanç için EK belge verilir (tahakkuk nedeni B). Sigortalı başına asgari ücretin 1/8’i idari para cezası, prim farkına gecikme cezası ve zammı uygulanır.',
+  adim:['2020/7 ve sonraki dönemler için düzeltme MUHSGK’yı e-Beyanname’den gönderin; belge mahiyeti EK, tahakkuk nedeni B.','Yalnız sigortalı bilgisi değişiyorsa vergi bölümüne dokunmayın; ücret ve stopaj da değişiyorsa vergi kısmını birlikte düzeltin.','Belge Kurum onayına düşer: süre bitimini izleyen 3. ayın sonuna kadar verilir, şüpheli durum yoksa ve işe giriş bildirgeleri zamanında verilmişse incelemesiz işleme alınır; aksi halde SGK denetmenine sevk edilir.','Prim farkını gecikme cezası ve gecikme zammıyla birlikte ödeyin.'],
+  ceza:[['İdari para cezası','Sigortalı başına 1/8 asgari ücret (2026: 4.128,75 TL), belge başına üst sınır 66.060 TL'],['İndirim','Süre bitiminden itibaren 30 gün içinde kendiliğinden verilirse 1/4; tebliğden 15 gün içinde ödenirse ayrıca %25'],['Prim','Gecikme cezası + gecikme zammı (5510 m.89)']],odeme:'Prim farkı hemen; ceza tebliğe göre',ornek:'sgk'},
+ 'ms|duz|sonra|lehe':{t:'Muhtasar (SGK kısmı) · Süre geçti, fazla bildirim (İPTAL belge)',ton:'warn',ozet:'Fazla bildirilen gün ya da kazanç İPTAL belgeyle geri alınır. İptal belgeler, sonradan değiştirilemeyen belgeyle kanıtlanmadıkça her zaman incelemeye sevk edilir.',
+  adim:['Düzeltme MUHSGK’da ilgili sigortalı için eski bilgilerle İPTAL satırı verin; doğru tutar varsa ayrıca ASIL/EK satırı yazın.','İptalin nedenini kanıtlayan belgeleri hazırlayın (ör. sigortalının yurt dışında olduğunu gösteren pasaport kaydı, işten çıkış tarihi).','Belge SGK denetmeni incelemesinden sonra işleme alınır; fazla ödenen prim onaydan sonra mahsup ya da iade edilir.'],
+  ceza:[['İdari para cezası','Fazla bildirimin geri alınmasında kural olarak yok'],['Not','Sigortalının hizmeti ve emeklilik hakları etkilenir; dikkatli olun']],odeme:'İade/mahsup onaydan sonra'},
+ 'ms|duz|sonra|tur':{t:'Muhtasar (SGK kısmı) · Belge türü, kanun no ya da teşvik değişikliği',ton:'ok',ozet:'Sigortalılar, gün sayısı ve kazanç aynı kalıyorsa belge türü ya da kanun numarası düzeltmesi incelemesiz işleme alınır ve idari para cezası uygulanmaz (SGK 2024/14 Genelgesi).',
+  adim:['Eski belge türü / kanun numarasıyla İPTAL, doğru olanla ASIL ya da EK satırı verin.','Geçmişe dönük teşvik kullanımı ya da teşvikten vazgeçme varsa önce teşvikin geriye dönük uygulanabildiği süreyi kontrol edin.','Fiili hizmet süresi zammı doğuran değişikliklerde 3 ay kuralı ve inceleme uygulanır.'],
+  ceza:[['İdari para cezası','Yok (gün ve kazanç aynıysa)'],['Prim farkı','Teşvik iptalinde çıkan prim farkına gecikme cezası ve zammı']],odeme:'Fark varsa hemen'},
+ 'ms|yok|ici':{t:'Muhtasar (SGK kısmı) · Henüz süre bitmedi',ton:'ok',ozet:'Ayın 26’sına kadar normal beyanname verilir.',adim:['Normal MUHSGK gönderin.'],ceza:[['Ceza','Yok']],odeme:'Prim: izleyen ayın sonu'},
+ 'ms|yok|sonra|art':{t:'Muhtasar (SGK kısmı) · Hiç verilmedi (asıl belge geç)',ton:'bad',ozet:'Asıl belge süre sonrası verilir (tahakkuk nedeni B). Sigortalı başına asgari ücretin 1/5’i idari para cezası; 30 gün içinde kendiliğinden verilirse 1/4’e iner. Prim gecikmesi ve teşvik kaybı da gündeme gelir.',
+  adim:['MUHSGK’yı vergi ve sigortalı bilgileriyle gönderin; vergi kısmı için “Hiç verilmedi” vergi senaryosuna da bakın.','Belge süre bitimini izleyen 3. ayın sonuna kadar verilirse ve şartlar uygunsa incelemesiz işleme alınır.','Primi gecikme cezası ve zammıyla ödeyin; süresinde verilmeyen belge için 5 puanlık hazine teşviki gibi teşvikler kaybedilebilir.'],
+  ceza:[['İdari para cezası','Sigortalı başına 1/5 asgari ücret (2026: 6.606 TL), belge başına üst sınır 66.060 TL'],['İndirim','30 gün içinde kendiliğinden: 1/4 · 15 gün içinde peşin ödeme: %25'],['Prim','Gecikme cezası + gecikme zammı']],odeme:'Prim hemen; ceza tebliğe göre',ornek:'sgk'},
+ 'ms|ode':{t:'Muhtasar (SGK kısmı) · Verildi, prim ödenmedi',ton:'warn',ozet:'İdari para cezası yok; ödenmeyen prime gecikme cezası ve gecikme zammı (5510 m.89) uygulanır ve teşvikler risk altına girer.',adim:['Primi en kısa sürede ödeyin; teşviklerde genellikle primin yasal süresinde ödenmesi şarttır.','Ödeyemiyorsanız SGK’ya tecil-taksitlendirme başvurusu yapın.','Tutarı sitedeki SGK gecikme hesaplayıcısıyla hesaplayabilirsiniz.'],ceza:[['İdari para cezası','Yok'],['Gecikme cezası ve zammı','Var (5510 m.89)']],odeme:'Hemen'}
+ },
+ devreden:'Geçmiş bir dönemde indirilecek KDV azaldığında ya da hesaplanan KDV arttığında, o dönemden sonraki her beyannamenin “önceki dönemden devreden KDV” satırı değişir. Bu yüzden düzeltme yalnız hatalı ayla bitmez: hata ayından son verilen beyannameye kadar her ay sırayla düzeltilir. Devreden hatayı karşıladığı sürece ödenecek çıkmaz; devreden bittiği ay ödenecek KDV doğar ve o ay için süre sonrası (pişmanlık / kendiliğinden) kuralları uygulanır.',
+ notlar:[
+  'Vergi incelemesi başladıktan, takdire sevk edildikten ya da ihbar yapıldıktan sonra pişmanlıktan yararlanılamaz. Vergi dairesinin “izaha davet” yazısı geldiyse VUK 370’e göre 15 gün içinde açıklama yapma ve pişmanlık zammıyla ödeme imkânı ayrıca değerlendirilir.',
+  'Pişmanlık zammı vadeden pişmanlık beyannamesinin verildiği tarihe kadar hesaplanır; ödeme 15 gün içinde yapılmalıdır. Mahsup talebi nakit ödeme yerine geçmez.',
+  'Usulsüzlük cezası yalnız beyanname kanuni süresinde hiç verilmediğinde söz konusudur. Zamanında verilmiş beyannamenin düzeltilmesinde usulsüzlük cezası kesilmez.',
+  'Beş yıllık zamanaşımı içinde düzeltme yapılabilir (VUK 114, 126).',
+  'Ceza tutarları ve oranlar 2026 içindir: usulsüzlük cezaları 588 Sıra No.lu VUK Genel Tebliği, gecikme zammı/pişmanlık zammı aylık %3,7 (10556 sayılı CBK), SGK cezaları brüt asgari ücret 33.030 TL üzerinden.'
+ ],
+ kaynak:[
+  ['VUK 2026 ceza tutarları (PwC)','https://www.pwc.com.tr/tr/hizmetlerimiz/vergi/vergi-portali/pratik-bilgiler/vergi-usul-kanunu-ceza-tutarlari/vuk-ceza-tutarlari.html'],
+  ['Pişmanlık ve ıslah, VUK 371 (M. Çoban)','https://muhammetcoban.com/vergi-hukuku/pismanlik-ve-islah/'],
+  ['Kanuni süresinden sonra verilen beyannameler (TÜRMOB)','https://www.turmob.org.tr/BasinOdasi/BasinArsiv/Detay/6c841cfe-dd62-4771-8f1f-403de5372c84/idari-cozum-yollari-kanuni-suresinden-sonra-verilen-beyanname'],
+  ['Süre sonrası ve düzeltme beyannameleri (Alomaliye)','https://www.alomaliye.com/2007/03/26/kanuni-suresinden-sonra-verilen-beyannameler-ve-duzeltme-beyannameleri-uzerinde-vergi-dairesinde-yapilan-islemler-omer-tekin-ymm/'],
+  ['VUK 344 vergi ziyaı cezası','https://www.fatiharas.com/vuk-madde-344-vergi-ziyai-cezasi/'],
+  ['SGK 2024/14 Genelgesi','https://www.muhasebetr.com/guncelmevzuat/mevzuat_oku.php?mevzuat_id=6718'],
+  ['2026 SGK idari para cezaları','https://www.esasdenetim.com/2026-sirkuler/2026-yilinda-5510-sayili-kanununa-gore-uygulanacak-idari-para-cezalari-yeniden-belirlendi-2247'],
+  ['MUHSGK sıkça sorulan sorular (Alomaliye)','https://www.alomaliye.com/2020/08/26/muhsgk-guncel-sikca-sorulan-sorular/']
+ ]
+};
+
+ function f2(n){return (Math.round(n*100)/100).toLocaleString('tr-TR',{minimumFractionDigits:2,maximumFractionDigits:2});}
+ var st={b:'kdv',d:null,s:null,e:null};
+ function key(o){if(!o.d)return null;if(o.d==='ode')return o.b+'|ode';if(!o.s)return null;if(o.s==='ici')return o.b+'|'+o.d+'|ici';
+   if(o.d==='yok'){if(o.b==='kdv')return o.e?('kdv|yok|sonra|'+(o.e==='dev'?'dev':'art')):null;return o.b+'|yok|sonra|art';}
+   return o.e?(o.b+'|duz|sonra|'+o.e):null;}
+ function ornek(k){var a=DZ.gz/100;
+   if(k==='kdvart'){var v=20000,m=4,z=v*a*m,vz=v*.5;return '<div class="dz-ex"><b class="h">Örnek</b>Temmuz 2026 KDV’sinde 20.000 TL eksik beyan fark edildi. Vade 28.07.2026, düzeltme 10.11.2026: 3 ay 13 gün → ay kesri tam sayıldığı için 4 ay.<table><tr><td>Pişmanlıkla: vergi</td><td>'+f2(v)+' TL</td></tr><tr><td>+ pişmanlık zammı (20.000 × %3,7 × 4)</td><td>'+f2(z)+' TL</td></tr><tr><td><b>Ödenecek (15 gün içinde)</b></td><td><b>'+f2(v+z)+' TL</b></td></tr><tr><td>Kendiliğinden: vergi + vergi ziyaı cezası %50</td><td>'+f2(v+vz)+' TL</td></tr><tr><td>+ gecikme faizi (yaklaşık)</td><td>'+f2(z)+' TL</td></tr><tr><td><b>Toplam</b> (VUK 376 ile cezanın yarısı düşerse '+f2(v+vz/2+z)+' TL)</td><td><b>'+f2(v+vz+z)+' TL</b></td></tr></table></div>';}
+   if(k==='kdvyok'){var u=DZ.usul[0],v2=50000,m2=3,z2=v2*a*m2;return '<div class="dz-ex"><b class="h">Örnek</b>Bir limited şirket Temmuz 2026 KDV beyannamesini (50.000 TL ödenecek) hiç vermedi; Ekim sonunda pişmanlıkla veriyor (3 ay).<table><tr><td>Vergi</td><td>'+f2(v2)+' TL</td></tr><tr><td>Pişmanlık zammı (50.000 × %3,7 × 3)</td><td>'+f2(z2)+' TL</td></tr><tr><td>Usulsüzlük cezası (sermaye şirketi, 1. derece)</td><td>'+f2(u[1])+' TL</td></tr><tr><td><b>Toplam</b></td><td><b>'+f2(v2+z2+u[1])+' TL</b></td></tr></table>Usulsüzlük cezası ihbarnameyle gelir; 30 gün içinde ödenirse VUK 376’ya göre 1/3’ü indirilir.</div>';}
+   if(k==='gz'){var v3=30000,z3=v3*a+v3*a*15/30;return '<div class="dz-ex"><b class="h">Örnek</b>30.000 TL vergi 1 ay 15 gün gecikmeyle ödeniyor.<table><tr><td>1 ay (30.000 × %3,7)</td><td>'+f2(v3*a)+' TL</td></tr><tr><td>15 gün (gün hesabıyla)</td><td>'+f2(v3*a*15/30)+' TL</td></tr><tr><td><b>Gecikme zammı</b></td><td><b>'+f2(z3)+' TL</b></td></tr></table></div>';}
+   if(k==='sgk'){var A=DZ.asgari,n=12,ek=Math.min(n*A/8,2*A),as=Math.min(n*A/5,2*A);return '<div class="dz-ex"><b class="h">Örnek · 12 sigortalı</b><table><tr><td>EK belge geç (12 × 1/8 asgari ücret)</td><td>'+f2(ek)+' TL</td></tr><tr><td>· 30 gün içinde kendiliğinden (1/4)</td><td>'+f2(ek/4)+' TL</td></tr><tr><td>· ayrıca 15 gün içinde peşin ödeme (%25 indirim)</td><td>'+f2(ek/4*.75)+' TL</td></tr><tr><td>ASIL belge geç (12 × 1/5 = '+f2(n*A/5)+', üst sınır 2 asgari ücret)</td><td>'+f2(as)+' TL</td></tr><tr><td>· 30 gün içinde kendiliğinden (1/4)</td><td>'+f2(as/4)+' TL</td></tr></table>Prim farkına ayrıca gecikme cezası ve gecikme zammı eklenir.</div>';}
+   return '';}
+ function card(k,open){var x=DZ.sen[k];if(!x)return '';var lab={ok:'Cezasız',warn:'Zam / faiz',bad:'Ceza var'}[x.ton];
+   return '<article class="dz-card '+x.ton+'" data-k="'+k+'"><header><span class="dz-badge '+x.ton+'">'+lab+'</span><h4>'+esc(x.t)+'</h4></header><div class="dz-body"><p>'+esc(x.ozet)+'</p>'
+    +(x.iki?'<div class="dz-two">'+x.iki.map(function(c){return '<div class="dz-col '+c.ton+'"><h5>'+esc(c.h)+'</h5><ul>'+c.l.map(function(l){return '<li>'+esc(l)+'</li>';}).join('')+'</ul></div>';}).join('')+'</div>':'')
+    +'<ol class="dz-steps">'+x.adim.map(function(a){return '<li><span>'+esc(a)+'</span></li>';}).join('')+'</ol>'
+    +'<table class="dz-mini">'+x.ceza.map(function(r){return '<tr><td>'+esc(r[0])+'</td><td>'+esc(r[1])+'</td></tr>';}).join('')+'</table>'
+    +'<div class="dz-pay"><b>Ödeme:</b> '+esc(x.odeme)+'</div>'+(x.ornek?ornek(x.ornek):'')+'</div></article>';}
+ function q(name,title,opts){return '<div class="dz-q"><b>'+title+'</b><div class="dz-opts">'+opts.map(function(o){return '<button type="button" class="dz-opt" data-q="'+name+'" data-v="'+o[0]+'" aria-pressed="'+(st[name]===o[0])+'"><b>'+esc(o[1])+'</b><small>'+esc(o[2])+'</small></button>';}).join('')+'</div></div>';}
+ function drawW(){var h='<h3>Durumunuzu seçin</h3><p>Dört soruda hangi yolun izleneceğini, cezayı ve ödeme süresini gösterir.</p>'+q('b','1 · Hangi beyanname?',DZ.sorular.b)+q('d','2 · Ne oldu?',DZ.sorular.d);
+   if(st.d&&st.d!=='ode')h+=q('s','3 · Süre',DZ.sorular.s);
+   if(st.d&&st.d!=='ode'&&st.s==='sonra'){var e=DZ.sorular.e[st.b];if(st.d==='yok')e=st.b==='kdv'?[['art','Ödenecek KDV var','Beyannamede ödenecek çıkıyor'],['dev','Ödenecek çıkmıyor','Devreden ya da iade']]:null;if(e)h+=q('e','4 · Etkisi',e);}
+   var k=key(st);h+='<div class="dz-res">'+(k&&DZ.sen[k]?card(k):'')+'</div>';W.innerHTML=h;}
+ W.addEventListener('click',function(ev){var b=ev.target.closest('.dz-opt');if(!b)return;var n=b.dataset.q,v=b.dataset.v;st[n]=v;
+   if(n==='b'){st.e=null;}if(n==='d'){st.s=null;st.e=null;}if(n==='s')st.e=null;
+   if(st.d==='yok'&&st.b!=='kdv'&&st.s==='sonra')st.e='art';
+   drawW();var r=$('.dz-res',W);if(r&&r.firstChild&&n!=='b'){var y=r.getBoundingClientRect().top;if(y>innerHeight-120)r.scrollIntoView({behavior:'smooth',block:'start'});}});
+ drawW();
+ /* hesaplayıcılar */
+ var C=$('#dz-calc');
+ C.innerHTML='<h3>Hesaplayıcı</h3><p>Süre sonrası ödenecek tutarı iki yol için karşılaştırın ya da SGK idari para cezasını hesaplayın.</p><div class="dz-tab"><button type="button" class="qchip on" data-t="v">Vergi farkı: pişmanlık mı, kendiliğinden mi?</button><button type="button" class="qchip" data-t="s">SGK idari para cezası</button></div>'
+  +'<div data-p="v"><div class="dz-grid"><label>Vergi farkı (TL)<input id="dzv-t" inputmode="decimal" value="20.000"></label><label>Vade (ilk son ödeme günü)<input id="dzv-v" type="date" value="2026-07-28"></label><label>Beyan tarihi<input id="dzv-b" type="date"></label><label>Mükellef<select id="dzv-m">'+DZ.usul.map(function(u,i){return '<option value="'+i+'">'+esc(u[0])+'</option>';}).join('')+'</select></label></div><label class="dz-chk"><input type="checkbox" id="dzv-y"> Beyanname süresinde hiç verilmedi (usulsüzlük cezası eklensin)</label><div class="dz-out" id="dzv-o"></div></div>'
+  +'<div data-p="s" hidden><div class="dz-grid"><label>Sigortalı sayısı<input id="dzs-n" inputmode="numeric" value="12"></label><label>Belge<select id="dzs-b"><option value="5">ASIL belge geç verildi (1/5)</option><option value="8">EK belge geç verildi (1/8)</option></select></label></div><label class="dz-chk"><input type="checkbox" id="dzs-k" checked> Süre bitiminden itibaren 30 gün içinde kendiliğinden verildi (1/4)</label><label class="dz-chk"><input type="checkbox" id="dzs-p"> Ceza tebliğden itibaren 15 gün içinde ödenecek (%25 indirim)</label><div class="dz-out" id="dzs-o"></div></div>'
+  +'<p class="pnote" style="margin:10px 0 0">Gecikme faizi yaklaşık olarak pişmanlık zammıyla aynı ay sayısı üzerinden gösterildi; kesin tutar vergi dairesi tahakkukunda çıkar. SGK cezası 2026 brüt asgari ücreti (33.030 TL) üzerinden, belge başına 2 asgari ücret sınırıyla hesaplanır.</p>';
+ (function(){var d=new Date();$('#dzv-b').value=d.toISOString().slice(0,10);})();
+ function months(a,b){if(!(b>a))return 0;var m=(b.getFullYear()-a.getFullYear())*12+(b.getMonth()-a.getMonth());if(b.getDate()>a.getDate())m++;return Math.max(m,1);}
+ function calcV(){var t=num($('#dzv-t').value)||0,va=new Date($('#dzv-v').value+'T00:00'),be=new Date($('#dzv-b').value+'T00:00'),m=months(va,be),z=t*DZ.gz/100*m,yok=$('#dzv-y').checked,u=DZ.usul[+$('#dzv-m').value]||DZ.usul[0],gun=Math.round((be-va)/864e5),us=yok?(gun<=7?u[2]:u[1]):0,us2=us*2,vz=t*.5,ag=Math.max(vz,us2);
+   var o='<div class="dz-col warn"><h5>Pişmanlıkla</h5><b class="t">'+f2(t+z+us)+' TL</b><ul><li>Vergi: '+f2(t)+' TL</li><li>Pişmanlık zammı ('+m+' ay × %3,7): '+f2(z)+' TL</li>'+(yok?'<li>Usulsüzlük ('+(gun<=7?'2.':'1.')+' derece): '+f2(us)+' TL</li>':'<li>Vergi ziyaı cezası: yok</li>')+'<li>15 gün içinde ödenmeli</li></ul></div>'
+    +'<div class="dz-col bad"><h5>Kendiliğinden</h5><b class="t">'+f2(t+z+(yok?ag:vz))+' TL</b><ul><li>Vergi: '+f2(t)+' TL</li><li>Gecikme faizi (yaklaşık): '+f2(z)+' TL</li><li>Vergi ziyaı cezası %50: '+f2(vz)+' TL'+(yok?' · usulsüzlük (iki kat): '+f2(us2)+' TL → VUK 336’ya göre ağır olan ('+f2(ag)+' TL)':'')+'</li><li>VUK 376 indirimiyle (30 gün içinde ödeme): '+f2(t+z+(yok?(vz>=us2?vz/2:us2*2/3):vz/2))+' TL</li></ul></div>';
+   $('#dzv-o').innerHTML=t>0&&m>0?o:'<p class="pnote">Vergi farkını ve tarihleri girin; beyan tarihi vadeden sonra olmalı.</p>';}
+ function calcS(){var n=Math.max(0,Math.floor(num($('#dzs-n').value)||0)),k=+$('#dzs-b').value,A=DZ.asgari,ham=n*A/k,c=Math.min(ham,2*A),c1=$('#dzs-k').checked?c/4:c,c2=$('#dzs-p').checked?c1*.75:c1;
+   $('#dzs-o').innerHTML=n?'<div class="dz-col bad"><h5>İdari para cezası</h5><b class="t">'+f2(c2)+' TL</b><ul><li>'+n+' × 1/'+k+' asgari ücret = '+f2(ham)+' TL</li><li>Belge başına üst sınır (2 asgari ücret): '+f2(2*A)+' TL → '+f2(c)+' TL</li>'+($('#dzs-k').checked?'<li>30 gün içinde kendiliğinden: 1/4 → '+f2(c1)+' TL</li>':'')+($('#dzs-p').checked?'<li>15 gün içinde peşin: %25 indirim → '+f2(c2)+' TL</li>':'')+'</ul></div>':'';}
+ C.addEventListener('input',function(e){if(e.target.closest('[data-p="v"]'))calcV();else calcS();});C.addEventListener('change',function(e){if(e.target.closest('[data-p="v"]'))calcV();else calcS();});
+ C.addEventListener('click',function(e){var b=e.target.closest('[data-t]');if(!b)return;$$('[data-t]',C).forEach(function(x){x.classList.toggle('on',x===b);});$$('[data-p]',C).forEach(function(p){p.hidden=p.dataset.p!==b.dataset.t;});});
+ calcV();calcS();
+ /* devreden zinciri */
+ $('#dz-chain').innerHTML='<h3>Devreden KDV zinciri</h3><p class="pnote" style="margin:0">'+esc(DZ.devreden)+'</p><div class="dz-chainv" aria-label="Örnek zincir"><div class="dz-m err"><b>Mart</b>hatalı ay<br>devreden 40.000 → 25.000</div><div class="dz-m fix"><b>Nisan</b>devreden düzelir<br>ödenecek yok</div><div class="dz-m fix"><b>Mayıs</b>devreden düzelir<br>ödenecek yok</div><div class="dz-m pay"><b>Haziran</b>devreden biter<br>8.000 TL ödenecek</div><div class="dz-m"><b>Temmuz…</b>sırayla<br>düzeltilir</div></div><p class="pnote" style="margin:0">Örnekte Mart’taki 15.000 TL’lik fazla indirim Nisan ve Mayıs’ta devredenle karşılanıyor; Haziran’da ödenecek KDV doğuyor. Haziran için pişmanlık ya da kendiliğinden kuralları uygulanır, pişmanlık zammı Haziran vadesinden (28 Temmuz) itibaren hesaplanır.</p>';
+ /* bütün durumlar */
+ var T=$('#dz-tabs'),ALL=$('#dz-all'),grp=[['kdv','KDV'],['mv','Muhtasar · vergi'],['ms','Muhtasar · SGK']],cur='kdv';
+ function drawAll(){T.innerHTML=grp.map(function(g){return '<button type="button" class="qchip'+(g[0]===cur?' on':'')+'" data-g="'+g[0]+'">'+g[1]+'</button>';}).join('');
+   ALL.innerHTML=Object.keys(DZ.sen).filter(function(k){return k.split('|')[0]===cur&&!/\|yok\|ici$/.test(k);}).map(function(k){return card(k);}).join('');}
+ T.addEventListener('click',function(e){var b=e.target.closest('[data-g]');if(!b)return;cur=b.dataset.g;drawAll();});drawAll();
+ $('#dz-usul').innerHTML='<thead><tr><th>Mükellef</th><th>1. derece</th><th>2. derece</th></tr></thead><tbody>'+DZ.usul.map(function(u){return '<tr><td>'+esc(u[0])+'</td><td>'+f2(u[1])+'</td><td>'+f2(u[2])+'</td></tr>';}).join('')+'</tbody>';
+ $('#dz-notes').innerHTML=DZ.notlar.map(function(n){return '<li>'+esc(n)+'</li>';}).join('');
+ $('#dz-src').innerHTML='Son güncelleme: '+DZ.guncelleme+' · Kaynaklar: '+DZ.kaynak.map(function(k){return '<a href="'+k[1]+'" target="_blank" rel="noopener">'+esc(k[0])+'</a>';}).join(' · ')+'. Bilgiler genel bilgilendirme amaçlıdır; somut durumda vergi dairesi ve SGK uygulamasını kontrol edin.';
+ if(typeof SEARCH_IDX!=='undefined'){SEARCH_IDX.push({t:'Düzeltme, ek ve geç beyan rehberi',g:'Beyanname ve SGK',h:'#duzeltme',kw:'düzeltme beyannamesi pişmanlık kendiliğinden süre sonrası KDV muhtasar MUHSGK ek belge iptal belge idari para cezası usulsüzlük vergi ziyaı'});
+   Object.keys(DZ.sen).forEach(function(k){SEARCH_IDX.push({t:DZ.sen[k].t,g:'Düzeltme ve geç beyan',h:'#duzeltme',kw:DZ.sen[k].ozet});});}
+})();
+
 /* ---------- Amaç ve konu maddeleri (amackonu.json, GitHub'dan) ---------- */
 (function(){var box=$('#ak-list'),cats=$('#ak-cats'),intro=$('#ak-intro'),bar=$('#ak-bar'),out=$('#ak-out'),doc=$('#ak-doc'),gen=$('#ak-gen');if(!box)return;
   var D=null,P=null,cur='all',SEL=[];/* SEL: [[sektörId,[bent no,...]],...] seçim sırası korunur */
@@ -4327,7 +4593,7 @@ if(!FIREBASE_CONFIG&&!GOOGLE_CLIENT_ID)document.documentElement.classList.add('n
 
 /* ---------- sayfa yönlendirme (başlıklar ayrı sayfa gibi açılır) ---------- */
 (function(){
-  var VIEWS=['home','hesaplamalar','dilekceler','tablolar','piyasa','duyurular','hakkimizda','iletisim','uye-ol','kurumlar','kvkk','pratik','sirket','amackonu','hesapplani','beyanname','takvim','yazilar','programlar','belgeler'];
+  var VIEWS=['home','hesaplamalar','dilekceler','tablolar','piyasa','duyurular','hakkimizda','iletisim','uye-ol','kurumlar','kvkk','pratik','sirket','amackonu','duzeltme','hesapplani','beyanname','takvim','yazilar','programlar','belgeler'];
   var secs=$$('[data-view]').filter(function(el){return el.tagName==='SECTION';});
   var navs=$$('[data-nav]');
   function route(){
@@ -4382,6 +4648,7 @@ if(!FIREBASE_CONFIG&&!GOOGLE_CLIENT_ID)document.documentElement.classList.add('n
     kurumlar:'Vergi, SGK, tebligat ve ticaret sicili sistemlerinin bağlantıları burada.',
     sirket:'Şirket işlemlerinde istenen evraklar ve formlar burada.',
     hesapplani:'Hesap kodunu ya da adını yazın; işleyişi ve örnek kaydı açılır.',
+    duzeltme:'Durumunuzu seçin: hangi beyanname, süre içinde mi sonra mı? Adımlar ve ceza açılır.',
     amackonu:'Sektörünüzü yazın; amaç ve konu bentlerini seçip metni kopyalayın.',
     beyanname:'Beyanname ya da SGK formunun adını yazın; adım adım nasıl doldurulacağı açılır.',
     kvkk:'Kişisel verilerin işlenmesine ilişkin aydınlatma metni.',
