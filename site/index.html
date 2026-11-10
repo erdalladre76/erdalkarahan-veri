@@ -1096,6 +1096,13 @@ section[data-view],[id^="h-"],[id^="d-"],[id^="x-"],[id^="p-"]{scroll-margin-top
 .dzt-dm{display:block;margin-top:6px;font-size:13px}
 @media (max-width:640px){.dzt-g{grid-template-columns:repeat(2,minmax(0,1fr))}.dzt-g label{font-size:12px}.dzt-g select,.dzt-g input{font-size:14px;padding:8px}}
 @media (max-width:640px){.dzt{padding:12px}.dzt-tot b{font-size:22px}}
+.gb-cta{display:flex;align-items:center;gap:16px;margin:0 0 18px;padding:18px 20px;border-radius:var(--r);text-decoration:none;color:#fff;background:linear-gradient(120deg,#4C2F9A,#7C3AED 60%,#C2410C);box-shadow:0 10px 30px -12px rgba(76,47,154,.55)}
+.gb-cta:hover{filter:brightness(1.06)}.gb-ic{flex:0 0 auto;width:56px;height:56px;border-radius:16px;background:rgba(255,255,255,.18);display:grid;place-items:center;font-size:30px;font-weight:800}
+.gb-tx{flex:1;min-width:0}.gb-tx small{display:block;font-size:13.5px;opacity:.9;font-weight:600}.gb-tx b{display:block;font-size:21px;line-height:1.25;margin:2px 0 6px}
+.gb-li{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;opacity:.95}.gb-li i{font-style:normal}.gb-li i::before{content:"✓ ";font-weight:800}
+.gb-btn{flex:0 0 auto;background:#fff;color:#4C2F9A;font-weight:800;border-radius:999px;padding:11px 18px;font-size:15px;white-space:nowrap}
+@media (max-width:640px){.gb-cta{flex-wrap:wrap;padding:16px}.gb-ic{width:44px;height:44px;font-size:24px}.gb-tx b{font-size:18px}.gb-btn{width:100%;text-align:center}}
+
 .dzt{border-width:1px}
 .dzt-set{display:flex!important;flex-wrap:wrap;gap:8px 14px;align-items:center;padding:8px 12px!important;font-size:13.5px}
 .dzt-set[hidden]{display:none!important}.dzt-set>span{font-weight:600}.dzt-set input[type=date]{width:auto!important;padding:6px 8px!important}.dzt-set .dz-chk{margin:0!important}
@@ -2234,7 +2241,7 @@ section[data-view] a{overflow-wrap:anywhere}
   <section class="block tint" id="duzeltme" data-view="duzeltme">
     <div class="wrap">
       <div class="sec-head"><svg class="sec-art" viewBox="0 0 200 140" role="img" aria-label="Düzeltilen beyanname"><rect width="200" height="140" rx="22" fill="#ECE7F8"/><rect x="36" y="18" width="88" height="106" rx="8" fill="#fff" stroke="#C9BEEB" stroke-width="2"/><rect x="48" y="30" width="60" height="9" rx="3" fill="#5B3FA8"/><g fill="#D6CEF0"><rect x="48" y="50" width="64" height="6" rx="3"/><rect x="48" y="64" width="64" height="6" rx="3"/><rect x="48" y="92" width="50" height="6" rx="3"/></g><rect x="48" y="78" width="64" height="6" rx="3" fill="#F2B8A2"/><path d="M44 81h72" stroke="#C2410C" stroke-width="3"/><circle cx="146" cy="88" r="26" fill="#0E9F8E"/><path d="M134 88l8 8 16-17" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><rect x="132" y="26" width="40" height="22" rx="6" fill="#F5C64B"/><text x="152" y="41" text-anchor="middle" font-size="12" font-weight="700" fill="#3b2a00">DZT</text></svg><div><span class="eyebrow">Beyanname ve SGK</span><h2>Düzeltme, ek ve geç beyan rehberi.</h2></div><p>KDV ve muhtasar-prim hizmet beyannamesinde hata ya da gecikme olduğunda ne yapılır? Süresi içinde mi, sonra mı, hiç verilmedi mi; vergi kısmı mı, SGK kısmı mı? Durumunuzu seçin, adımları, cezayı ve ödeme tutarını görün.</p></div>
-      <div class="dz-tls"><figure><figcaption>KDV beyannamesi</figcaption><svg class="dz-tl" viewBox="0 0 640 150" role="img" aria-label="KDV beyannamesi zaman çizelgesi">
+      <a class="gb-cta" href="#gecbeyan"><span class="gb-ic" aria-hidden="true">₺</span><span class="gb-tx"><small>Beyanname verilmedi ya da geç mi kaldı?</small><b>Şimdi verirseniz ne ödeyeceğinizi hesaplayın</b><span class="gb-li"><i>KDV, muhtasar-SGK, geçici, yıllık, kurumlar ve 5 beyanname daha</i><i>Vergi, zam, usulsüzlük ve SGK cezası tek toplamda</i><i>Pişmanlıkla ve pişmanlıksız tutar</i></span></span><span class="gb-btn">Hesapla →</span></a><div class="dz-tls"><figure><figcaption>KDV beyannamesi</figcaption><svg class="dz-tl" viewBox="0 0 640 150" role="img" aria-label="KDV beyannamesi zaman çizelgesi">
 <rect x="20" y="64" width="190" height="14" rx="7" fill="#0E9F8E"/><rect x="210" y="64" width="80" height="14" fill="#E8A317"/><rect x="290" y="64" width="330" height="14" rx="0" fill="#C2410C"/><rect x="606" y="64" width="14" height="14" rx="7" fill="#C2410C"/>
 <g font-family="inherit" font-size="13" fill="currentColor">
 <circle cx="20" cy="71" r="9" fill="#5B3FA8"/><text x="20" y="40" text-anchor="start" font-weight="700">Dönem sonu</text><text x="20" y="56" text-anchor="start" opacity=".7">ör. 31 Ekim</text>
@@ -2255,7 +2262,6 @@ section[data-view] a{overflow-wrap:anywhere}
 <text x="400" y="104" text-anchor="middle" font-weight="700" fill="#C2410C">Süre sonrası (B)</text><text x="400" y="121" text-anchor="middle" opacity=".75">vergi: pişmanlık / %50</text><text x="400" y="138" text-anchor="middle" opacity=".75">SGK: idari para cezası</text>
 <text x="567" y="104" text-anchor="middle" font-weight="700" fill="#7F1D1D">İnceleme</text>
 </g></svg><ul class="dz-tlm"><li style="--c:#5B3FA8"><b>Ay sonu</b>ör. 31 Ekim</li><li style="--c:#0E9F8E"><b>26 Kasım</b>beyan ve stopaj ödeme son günü; düzeltme cezasız (tahakkuk nedeni A)</li><li style="--c:#0E9F8E"><b>30 Kasım</b>SGK prim ödeme son günü</li><li style="--c:#C2410C"><b>Süre sonrası 30 gün</b>kendiliğinden verilen belgede SGK cezası 1/4</li><li style="--c:#C2410C"><b>3. ayın sonuna kadar</b>şartlar uygunsa belge incelemesiz işlenir</li><li style="--c:#7F1D1D"><b>Sonrası</b>SGK denetmeni incelemesi</li></ul></figure></div>
-      <a class="ak-promo" href="#gecbeyan"><span class="ak-pi" aria-hidden="true">₺</span><span><b>Şimdi versem ne öderim?</b><small>Verilmeyen ya da eksik KDV ve MUHSGK beyannameleri için ödenecek vergi, zam, ceza ve SGK tutarını adım adım hesaplayın.</small></span><span aria-hidden="true">→</span></a>
       <div class="dz-wiz" id="dz-wiz" aria-live="polite"></div>
       <div class="dz-calc" id="dz-calc" hidden></div>
       <div class="dz-chain" id="dz-chain"></div>
