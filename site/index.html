@@ -4529,9 +4529,17 @@ var DZ={
  function iso(d){return d.toISOString().slice(0,10);}
  function trd(d){return String(d.getUTCDate()).padStart(2,'0')+'.'+String(d.getUTCMonth()+1).padStart(2,'0')+'.'+d.getUTCFullYear();}
  function ymOf(d){return d.getUTCFullYear()+'-'+String(d.getUTCMonth()+1).padStart(2,'0');}
- function bday(d){var w=d.getUTCDay();if(w===6)return U(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate()+2);if(w===0)return U(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate()+1);return d;}
+ var HOL={};['2025-01-01','2025-03-30','2025-03-31','2025-04-01','2025-04-23','2025-05-01','2025-05-19','2025-06-06','2025-06-07','2025-06-08','2025-06-09','2025-07-15','2025-08-30','2025-10-29','2026-01-01','2026-03-20','2026-03-21','2026-03-22','2026-04-23','2026-05-01','2026-05-19','2026-05-27','2026-05-28','2026-05-29','2026-05-30','2026-07-15','2026-08-30','2026-10-29','2027-01-01'].forEach(function(x){HOL[x]=1;});
+ var EXT={'kdv|2026-04':'2026-06-05','kdv2|2026-04':'2026-06-05','mv|2026-04':'2026-06-03','ms|2026-04':'2026-06-03','dv|2026-04':'2026-06-03','kon|2026-04':'2026-06-03'};
+ function bday(d){for(var k=0;k<10;k++){var w=d.getUTCDay();if(w===6||w===0||HOL[d.toISOString().slice(0,10)])d=U(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate()+1);else break;}return d;}
  function vadeOf(tur,ym,prim){var p=ym.split('-'),y=+p[0],m=+p[1];/* m: 1-12 → izleyen ay index m */
-   if(prim)return bday(U(y,m+1,0));return bday(U(y,m,(tur==='kdv'||tur==='kdv2')?28:26));}
+   if(prim)return bday(U(y,m+1,0));
+   if(EXT[tur+'|'+ym])return dParse(EXT[tur+'|'+ym]);
+   if(tur==='gec')return bday(U(y,m+1,17));
+   if(tur==='gv')return bday(U(y+1,2,31));
+   if(tur==='gv2')return bday(U(y+1,6,31));
+   if(tur==='kv')return bday(U(y+1,3,30));
+   return bday(U(y,m,(tur==='kdv'||tur==='kdv2')?28:26));}
  function addM(a,k){var y=a.getUTCFullYear(),m=a.getUTCMonth()+k,d=a.getUTCDate(),last=U(y,m+1,0).getUTCDate();return U(y,m,Math.min(d,last));}
  function span(a,b){/* tam ay + kalan gün */var m=(b.getUTCFullYear()-a.getUTCFullYear())*12+(b.getUTCMonth()-a.getUTCMonth());if(addM(a,m)>b)m--;var r=dDiff(addM(a,m),b);return {m:m,d:r};}
  function sgkGec(a,d1,d2){var g=dDiff(d1,d2);if(g<=0||!a)return {c:0,z:0,est:false};var m=Math.min(Math.ceil(g/30),3),C=a*(1+.03*m),n=Math.floor(g/30),d=g%30,K=C,est=false;
@@ -4546,7 +4554,8 @@ var DZ={
      o.P.v=t;o.P.z=zp;o.K.v=t;o.K.z=fz;
      o.lines.push('Vade '+trd(V)+' · '+g+' gün gecikme');
      if(t)o.lines.push('Pişmanlık zammı: '+mc+' ay × %'+String(DZ.gz).replace('.',',')+' = '+f2(zp)+' TL (ay kesri tam ay sayılır)');
-     if(r.dur==='yok'){var us=g<=7?u[2]:u[1];o.P.us=us;o.i376p=us/3;o.lines.push('Usulsüzlük cezası ('+(g<=7?'süre bitiminden 7 gün içinde: 2.':'1.')+' derece, '+u[0]+'): '+f2(us)+' TL');
+     if(r.dur==='yok'&&r.nous){var vz3=t*.5;o.K.vz=vz3;o.i376=vz3/2;if(t)o.lines.push('Pişmanlıksız: vergi ziyaı %50 = '+f2(vz3)+' TL');}
+     else if(r.dur==='yok'){var us=g<=7?u[2]:u[1];o.P.us=us;o.i376p=us/3;o.lines.push('Usulsüzlük cezası ('+(g<=7?'süre bitiminden 7 gün içinde: 2.':'1.')+' derece, '+u[0]+'): '+f2(us)+' TL');
        if(!t){o.K.z=0;o.P.z=0;o.K.us=us;o.i376=us/3;o.lines.push('Ödenecek vergi yok (ör. devreden KDV): vergi ziyaı olmadığından yalnız usulsüzlük cezası çıkar. Bazı vergi dairesi uygulamalarında süre sonrası kendiliğinden verilen beyannamede bu ceza iki kat kesilebilir.');}
        else{var vz=t*.5,us2=us*2;if(vz>=us2){o.K.vz=vz;o.i376=vz/2;}else{o.K.us=us2;o.i376=us2/3;}
          o.lines.push('Pişmanlıksız: vergi ziyaı %50 = '+f2(vz)+' TL, usulsüzlük iki kat = '+f2(us2)+' TL → VUK 336 gereği ağır olan '+f2(Math.max(vz,us2))+' TL kesilir.');}}
@@ -4566,10 +4575,18 @@ var DZ={
    if(!p&&r.dur!=='ipt')o.lines.push(r.dur==='duz'?'Prim için ek belgedeki brüt kazanç farkını girin.':'Prim için belgedeki toplam brüt kazancı girin.');
    if(r.dur!=='ode'&&r.dur!=='ipt'&&!n)o.lines.push(r.dur==='duz'?'Ceza için ek belgeye giren (eklenen ya da düzeltilen) kişi sayısını girin.':'Ceza için belgedeki sigortalı sayısını girin.');
    return o;}
- function sum(x){return x.v+x.z+x.vz+x.us+x.pr+x.sg+x.ipc;} var BT={kdv:['KDV beyannamesi','KDV-1 · aylık','#5B3FA8'],kdv2:['KDV-2','Sorumlu sıfatıyla (tevkifat, yurt dışı hizmet)','#7C5CC4'],muh:['Muhtasar ve prim hizmet (MUHSGK)','Stopaj + SGK bildirimi ve primi','#C2410C']};
+ function sum(x){return x.v+x.z+x.vz+x.us+x.pr+x.sg+x.ipc;} var BT={kdv:['KDV beyannamesi','KDV-1 · aylık','#5B3FA8',1],kdv2:['KDV-2','Sorumlu sıfatıyla (tevkifat, yurt dışı hizmet) · aylık','#7C5CC4',1],muh:['Muhtasar ve prim hizmet (MUHSGK)','Stopaj + SGK bildirimi ve primi · aylık','#C2410C',1],
+  gec:['Geçici vergi','Gelir ya da kurumlar · 3 aylık (1.–3. dönem)','#0E7490',3],gv:['Yıllık gelir vergisi','Mart’ta verilir · iki taksit','#B45309',12],kv:['Kurumlar vergisi','Nisan’da verilir','#9D174D',12],
+  dv:['Damga vergisi beyannamesi','Muhtasardan ayrı veriliyorsa · aylık','#475569',1],kon:['Konaklama vergisi','Otel, pansiyon · aylık','#0F766E',1]};
  var BD={kdv:[['yok','Hiç verilmedi','Bu dönemlerin beyannamesi gönderilmedi'],['ode','Verildi, ödenmedi','Tahakkuk var, vergi ödenmedi'],['duz','Eksik / hatalı verildi','Düzeltme beyannamesi verilecek']],
   muh:[['yok','Hiç verilmedi','Ne stopaj ne SGK bildirimi yapıldı'],['ode','Verildi, ödenmedi','Stopaj ve/veya prim ödenmedi'],['duz','Eksik verildi','Stopaj eksik ya da personel unutuldu (ek belge)']]};
- BD.kdv2=BD.kdv;
+ ['kdv2','gec','gv','kv','dv','kon'].forEach(function(x){BD[x]=BD.kdv;});
+ function PER(t){return (BT[t]||[0,0,0,1])[3];}
+ function PLIST(t){var p=PER(t),o=[],cy=now.getFullYear(),cur=ymOf(U(cy,now.getMonth(),1));if(p===1)return MS.map(function(m){return [m,ymLabel(m)];});
+   if(p===3){for(var y=cy;y>=cy-3;y--)for(var q=3;q>=1;q--){var ym=y+'-'+String(q*3).padStart(2,'0');if(ym<cur)o.push([ym,y+' / '+q+'. dönem ('+['Oca–Mar','Nis–Haz','Tem–Eyl'][q-1]+')']);}return o;}
+   for(var y2=cy-1;y2>=cy-5;y2--)o.push([y2+'-12',y2+' yılı']);return o;}
+ function DEF(t){var L=PLIST(t),T=dParse(st.t)||new Date(),b=L[0][0];for(var i=0;i<L.length;i++){if(vadeOf(t,L[i][0])<=T){b=L[i][0];break;}}var a=PER(t)===12?b:b.slice(0,4)+(PER(t)===3?'-03':'-01');return [a,b];}
+ function plbl(t,ym,sh){var p=PER(t),pp=ym.split('-');if(p===12)return pp[0]+(sh?'':' yılı');if(p===3)return pp[0]+(sh?' ':' / ')+(+pp[1]/3)+'. dönem';return sh?ymShort(ym):ymLabel(ym);}
  var st={m:null,t:'',pesin:false,rows:[],cur:null,edit:null},nid=1;
  try{var sv=JSON.parse(localStorage.getItem('dzt5')||'null');if(sv){st.m=sv.m;st.pesin=!!sv.pesin;st.rows=sv.rows||[];st.rows.forEach(function(r){nid=Math.max(nid,r.id+1);});}}catch(e){}
  function save(){try{localStorage.setItem('dzt5',JSON.stringify({m:st.m,pesin:st.pesin,rows:st.rows}));}catch(e){}}
@@ -4579,43 +4596,44 @@ var DZ={
  function ymShort(ym){var p=ym.split('-');return AY[+p[1]-1].slice(0,3)+' '+p[0].slice(2);}
  var LAST=ymOf(U(now.getFullYear(),now.getMonth()-2,1));
  function newItem(){return {id:nid++,tur:null,dur:null,a:LAST.slice(0,4)+'-01',b:LAST,ayni:true,v:{},d:{},gir:null,gd:'',cik:false,cd:''};}
- function mlist(e){var a=e.a<=e.b?e.a:e.b,b=e.a<=e.b?e.b:e.a,o=[],p=a.split('-'),y=+p[0],m=+p[1]-1;for(var k=0;k<120;k++){var ym=ymOf(U(y,m+k,1));if(ym>b)break;o.push(ym);}return o;}
+ function mlist(e){var a=e.a<=e.b?e.a:e.b,b=e.a<=e.b?e.b:e.a,o=[],p=a.split('-'),y=+p[0],m=+p[1]-1,sp=PER(e.tur);for(var k=0;k<120;k++){var ym=ymOf(U(y,m+k*sp,1));if(sp===3&&+ym.slice(5)>9)continue;if(ym>b)break;o.push(ym);}return o;}
  function V(e,ym,f){var d=!e.ayni&&e.d[ym];return d&&d[f]!=null&&d[f]!==''?d[f]:(e.v[f]||'');}
  function z0(){return {v:0,z:0,vz:0,us:0,pr:0,sg:0,ipc:0};}
  function add(o,x,pre){Object.keys(o.P).forEach(function(k){o.P[k]+=x.P[k];o.K[k]+=x.K[k];});o.i376+=x.i376;o.i376p+=x.i376p;if(x.est)o.est=true;x.lines.forEach(function(l){o.lines.push((pre||'')+l);});}
  function month(e,ym){var o={P:z0(),K:z0(),i376:0,i376p:0,est:false,lines:[]},g=function(f){return V(e,ym,f);};
-   if(e.tur!=='muh')add(o,calc({tur:e.tur,dur:e.dur,ym:ym,t:g('t')}));
+   if(e.tur==='gv'){var hh=String(Math.round((num(g('t'))||0)*50)/100).replace('.',',');add(o,calc({tur:'gv',dur:e.dur,ym:ym,t:hh}),'1. taksit · ');add(o,calc({tur:'gv2',dur:e.dur,ym:ym,t:hh,nous:1}),'2. taksit (Temmuz) · ');}
+   else if(e.tur!=='muh')add(o,calc({tur:e.tur,dur:e.dur,ym:ym,t:g('t')}));
    else if(e.dur==='yok'){add(o,calc({tur:'mv',dur:'yok',ym:ym,t:g('s')}),'Vergi · ');add(o,calc({tur:'ms',dur:'yok',ym:ym,n:g('n'),k:g('k')}),'SGK · ');}
    else if(e.dur==='ode'){if(num(g('s')))add(o,calc({tur:'mv',dur:'ode',ym:ym,t:g('s')}),'Vergi · ');if(num(g('pr')))add(o,calc({tur:'ms',dur:'ode',ym:ym,pr:g('pr')}),'SGK · ');}
    else{if(num(g('s')))add(o,calc({tur:'mv',dur:'duz',ym:ym,t:g('s')}),'Vergi · ');if(num(g('n'))||num(g('k')))add(o,calc({tur:'ms',dur:'duz',ym:ym,n:g('n'),k:g('k')}),'SGK · ');}
    return o;}
- function agg(e){var A={P:z0(),K:z0(),i376:0,i376p:0,est:false,ms:[],once:[],lines:[]};if(!e.tur||!e.dur)return A;
+ function agg(e){var A={P:z0(),K:z0(),i376:0,i376p:0,est:false,ms:[],once:[],lines:[],tur:e.tur};if(!e.tur||!e.dur)return A;
    mlist(e).forEach(function(ym){var o=month(e,ym);A.ms.push([ym,o]);add(A,o);});
    if(e.tur==='muh'&&e.dur!=='ode'){var ms=mlist(e),gn=Math.max(0,Math.floor(num(V(e,ms[0],'n'))||0)),TT=dParse(st.t),Aa=DZ.asgari;
      [[e.gir===false,e.gd,1,0,'İşe giriş bildirgesi'],[e.cik,e.cd,.1,10,'İşten ayrılış bildirgesi']].forEach(function(q){if(!q[0]||!gn||!TT)return;var bd=dParse(q[1]),son=bd?new Date(bd.getTime()+q[3]*864e5):null,gg=son?dDiff(son,TT):null,ham=gn*Aa*q[2],c1=(gg!=null&&gg<=30)?ham/4:ham,c2=st.pesin?c1*.75:c1;
        A.P.ipc+=c2;A.K.ipc+=c2;A.once.push(q[4]+': '+gn+' kişi × '+(q[2]===1?'1 asgari ücret':'asgari ücretin 1/10’u')+' = '+f2(ham)+' TL'+(gg==null?' (tarih girilmedi; 30 gün indirimi uygulanmadı)':gg<=30?' · süre bitiminden 30 gün içinde kendiliğinden: 1/4 → '+f2(c1)+' TL':' · 30 gün geçtiği için indirim yok')+(st.pesin?' · peşin 3/4 → '+f2(c2)+' TL':'')+'. Bir kez kesilir; denetimde tespit edilirse işe girişte 2 katı.');});}
    return A;}
  function sum(x){return x.v+x.z+x.vz+x.us+x.pr+x.sg+x.ipc;}
- function title(e){var ms=mlist(e);return BT[e.tur][0]+' · '+(ms.length>1?ymShort(ms[0])+' – '+ymShort(ms[ms.length-1])+' ('+ms.length+' dönem)':ymLabel(ms[0]));}
+ function title(e){return BT[e.tur][0]+' · '+perLbl(e);}
  function opts(q,list,cur,cls){return '<div class="dz-opts'+(cls?' '+cls:'')+'">'+list.map(function(o){return '<button type="button" class="dz-opt" data-q="'+q+'" data-v="'+o[0]+'" aria-pressed="'+(String(cur)===String(o[0]))+'"><b>'+esc(o[1])+'</b>'+(o[2]?'<small>'+esc(o[2])+'</small>':'')+'</button>';}).join('')+'</div>';}
  function Q(n,txt,body){return '<div class="dz-q"><b>'+n+' · '+txt+'</b>'+body+'</div>';}
  function inp(f,lab,e,hint,ym){var val=ym?V(e,ym,f):(e.v[f]||'');return '<label>'+lab+'<input data-f="'+f+'"'+(ym?' data-m="'+ym+'"':'')+' inputmode="decimal" value="'+esc(val)+'" placeholder="'+(hint||'0')+'"></label>';}
  function FL(e){/* alan listesi */
-   if(e.tur!=='muh')return [['t',e.dur==='duz'?'Eksik beyan edilen KDV farkı':(e.tur==='kdv2'?'Ödenecek KDV-2':'Ödenecek KDV'),'0 = ödeme çıkmıyor']];
+   if(e.tur!=='muh')return [['t',e.dur==='duz'?'Eksik beyan edilen KDV farkı':({kdv:'Ödenecek KDV',kdv2:'Ödenecek KDV-2',gec:'Ödenecek geçici vergi',gv:'Hesaplanan gelir vergisi (yıllık)',kv:'Ödenecek kurumlar vergisi',dv:'Ödenecek damga vergisi',kon:'Ödenecek konaklama vergisi'}[e.tur]),'0 = ödeme çıkmıyor']];
    if(e.dur==='yok')return [['n','Çalışan sayısı','kişi'],['k','Toplam brüt ücret','brüt TL'],['s','Toplam stopaj (GV + damga, kira, serbest meslek vb.)','TL']];
    if(e.dur==='ode')return [['s','Ödenmemiş stopaj (vergi)','TL'],['pr','Ödenmemiş SGK primi','TL']];
    return [['s','Eksik stopaj farkı (varsa)','TL'],['n','Unutulan / eksik bildirilen kişi','kişi'],['k','Bu kişilerin brüt ücreti','brüt TL']];}
  function resHTML(A,full){var a=sum(A.P),b=sum(A.K);
    var top='<div class="v">'+(a===b?'<span>Ödenecek: <b>'+f2(a)+' TL</b></span>':'<span>Pişmanlıkla: <b>'+f2(a)+' TL</b></span><span>Pişmanlıksız: <b>'+f2(b)+' TL</b></span>')+'</div>';
    if(!full)return top;
-   var tb=A.ms.length>1?'<table class="dzt-mini"><thead><tr><th>Dönem</th><th>Pişmanlıkla</th><th>Pişmanlıksız</th></tr></thead><tbody>'+A.ms.map(function(x){return '<tr><td>'+ymShort(x[0])+'</td><td>'+f2(sum(x[1].P))+'</td><td>'+f2(sum(x[1].K))+'</td></tr>';}).join('')+'</tbody></table>':'';
-   var det=A.ms.map(function(x){return (A.ms.length>1?'<b class="dzt-dm">'+ymLabel(x[0])+'</b>':'')+'<ul>'+x[1].lines.map(function(l){return '<li>'+esc(l)+'</li>';}).join('')+'</ul>';}).join('')+(A.once.length?'<b class="dzt-dm">Bir kez kesilen</b><ul>'+A.once.map(function(l){return '<li>'+esc(l)+'</li>';}).join('')+'</ul>':'');
+   var tb=A.ms.length>1?'<table class="dzt-mini"><thead><tr><th>Dönem</th><th>Pişmanlıkla</th><th>Pişmanlıksız</th></tr></thead><tbody>'+A.ms.map(function(x){return '<tr><td>'+plbl(A.tur,x[0],1)+'</td><td>'+f2(sum(x[1].P))+'</td><td>'+f2(sum(x[1].K))+'</td></tr>';}).join('')+'</tbody></table>':'';
+   var det=A.ms.map(function(x){return (A.ms.length>1?'<b class="dzt-dm">'+plbl(A.tur,x[0])+'</b>':'')+'<ul>'+x[1].lines.map(function(l){return '<li>'+esc(l)+'</li>';}).join('')+'</ul>';}).join('')+(A.once.length?'<b class="dzt-dm">Bir kez kesilen</b><ul>'+A.once.map(function(l){return '<li>'+esc(l)+'</li>';}).join('')+'</ul>':'');
    return top+'<details><summary>'+(A.ms.length>1?'Dönem dökümü ve hesap ayrıntısı':'Hesap ayrıntısı')+'</summary>'+tb+det+'</details>';}
  /* adım adım akış */
  st.step=null;
  function steps(e){var s=[];if(st.m==null)s.push('m');s.push('tur');if(e&&e.tur)s.push('dur');if(e&&e.dur){s.push('don','tut');if(e.tur==='muh'&&e.dur!=='ode')s.push('gir');}s.push('res');return s;}
  function durLbl(e){var d=BD[e.tur].filter(function(x){return x[0]===e.dur;})[0];return d?d[1]:'';}
- function perLbl(e){var ms=mlist(e);return ms.length>1?ymShort(ms[0])+' – '+ymShort(ms[ms.length-1])+' ('+ms.length+' ay)':ymLabel(ms[0]);}
+ function perLbl(e){var ms=mlist(e),un=PER(e.tur)===1?'ay':'dönem';return ms.length>1?plbl(e.tur,ms[0],1)+' – '+plbl(e.tur,ms[ms.length-1],1)+' ('+ms.length+' '+un+')':plbl(e.tur,ms[0]);}
  function chips(e){var c=[];if(st.m!=null)c.push(['m',DZ.usul[st.m][0]]);if(e.tur)c.push(['tur',BT[e.tur][0]]);if(e.dur)c.push(['dur',durLbl(e)]);if(e.dur&&st.step!=='don'&&steps(e).indexOf(st.step)>steps(e).indexOf('don'))c.push(['don',perLbl(e)]);
    return c.length?'<div class="dzs-chips">'+c.map(function(x){return '<button type="button" data-go="'+x[0]+'" title="Değiştir">'+esc(x[1])+' <span aria-hidden="true">✎</span></button>';}).join('')+'</div>':'';}
  function big(list,q,cur){return '<div class="dzs-opts">'+list.map(function(o){return '<button type="button" class="dzs-opt" data-q="'+q+'" data-v="'+o[0]+'" aria-pressed="'+(String(cur)===String(o[0]))+'"><b>'+esc(o[1])+'</b>'+(o[2]?'<small>'+esc(o[2])+'</small>':'')+'</button>';}).join('')+'</div>';}
@@ -4629,13 +4647,13 @@ var DZ={
    if(s==='m')h+='<h4 class="dzs-q">Mükellef türü nedir?</h4><p class="dzs-h">Usulsüzlük cezası mükellef türüne göre değişir.</p>'+big(DZ.usul.map(function(u,k){return [k,u[0]];}),'m',st.m)+nav();
    else if(s==='tur')h+='<h4 class="dzs-q">Hangi beyanname?</h4><p class="dzs-h">Önce birini seçin; diğerlerini sonra ekleyeceksiniz.</p>'+big(Object.keys(BT).map(function(k){return [k,BT[k][0],BT[k][1]];}),'tur',e.tur)+nav();
    else if(s==='dur')h+='<h4 class="dzs-q">'+esc(BT[e.tur][0])+' için durum ne?</h4>'+big(BD[e.tur],'dur',e.dur)+nav();
-   else if(s==='don'){var MO=MS.map(function(m){return '<option value="'+m+'">'+ymLabel(m)+'</option>';}).join('');
-     h+='<h4 class="dzs-q">Hangi aylar?</h4><p class="dzs-h">İlk ve son ayı seçin, aradaki bütün aylar dahil edilir.</p><div class="dzs-row"><label>İlk ay<select data-f="a">'+MO.replace('value="'+e.a+'"','value="'+e.a+'" selected')+'</select></label><label>Son ay<select data-f="b">'+MO.replace('value="'+e.b+'"','value="'+e.b+'" selected')+'</select></label></div><p class="dzs-h" id="dzs-cnt">'+mlist(e).length+' ay seçildi.</p>'+nav('Devam');}
+   else if(s==='don'){var MO=PLIST(e.tur).map(function(m){return '<option value="'+m[0]+'">'+esc(m[1])+'</option>';}).join(''),un=PER(e.tur)===1?'ay':PER(e.tur)===3?'dönem':'yıl';
+     h+='<h4 class="dzs-q">Hangi '+(un==='ay'?'aylar':un==='dönem'?'dönemler':'yıllar')+'?</h4><p class="dzs-h">İlk ve son '+un+'ı seçin, aradakiler dahil edilir.'+(e.tur==='gec'?' Yılın 4. dönemi için geçici vergi beyannamesi verilmez.':'')+'</p><div class="dzs-row"><label>İlk '+un+'<select data-f="a">'+MO.replace('value="'+e.a+'"','value="'+e.a+'" selected')+'</select></label><label>Son '+un+'<select data-f="b">'+MO.replace('value="'+e.b+'"','value="'+e.b+'" selected')+'</select></label></div><p class="dzs-h" id="dzs-cnt">'+mlist(e).length+' '+un+' seçildi.</p>'+nav('Devam');}
    else if(s==='tut'){var ms=mlist(e),F=FL(e),many=ms.length>1;
-     h+='<h4 class="dzs-q">'+(e.tur==='muh'?(e.dur==='yok'?'Çalışan ve stopaj bilgileri':e.dur==='ode'?'Ödenmeyen tutarlar':'Eksik kalanlar'):'Tutar')+'</h4><p class="dzs-h">'+(many?(e.ayni?'Her ay için aynı tutar kabul edilir.':'Her ayın tutarını ayrı yazın.'):'')+(e.tur==='muh'&&e.dur==='yok'?' Stopaj: bordrodaki gelir + damga vergisi ile kira, serbest meslek kesintilerinin toplamı. Prim brütten hesaplanır.':'')+(e.tur!=='muh'&&e.dur!=='duz'?' Ödenecek çıkmıyorsa (devreden varsa) 0 yazın.':'')+'</p>';
-     if(e.ayni||!many)h+='<div class="dzs-row">'+F.map(function(f){return inp(f[0],f[1]+(many?' · her ay':''),e,f[2]);}).join('')+'</div>';
-     else h+='<div class="dzt-tbl"><table><thead><tr><th>Ay</th>'+F.map(function(f){return '<th>'+esc(f[1])+'</th>';}).join('')+'</tr></thead><tbody>'+ms.map(function(ym){return '<tr><td>'+ymShort(ym)+'</td>'+F.map(function(f){return '<td><input data-f="'+f[0]+'" data-m="'+ym+'" inputmode="decimal" value="'+esc(V(e,ym,f[0]))+'" placeholder="'+f[2]+'" aria-label="'+esc(ymLabel(ym)+' '+f[1])+'"></td>';}).join('')+'</tr>';}).join('')+'</tbody></table></div>';
-     if(many)h+='<button type="button" class="dzs-link" data-act="ayni">'+(e.ayni?'Tutarlar aydan aya farklı mı? Ay ay girin':'Hepsi aynı tutar olsun')+'</button>';
+     h+='<h4 class="dzs-q">'+(e.tur==='muh'?(e.dur==='yok'?'Çalışan ve stopaj bilgileri':e.dur==='ode'?'Ödenmeyen tutarlar':'Eksik kalanlar'):'Tutar')+'</h4><p class="dzs-h">'+(many?(e.ayni?'Her dönem için aynı tutar kabul edilir.':'Her dönemin tutarını ayrı yazın.'):'')+(e.tur==='gv'?' Beyannamede hesaplanan gelir vergisinin tamamını yazın; yarısı Mart, yarısı Temmuz vadesiyle hesaplanır.':'')+(e.tur==='gec'?' Geçici vergi, yıllık beyanname süresi geçtikten sonra artık tarh edilmez; o durumda yıllık beyannameyi seçin.':'')+(e.tur==='muh'&&e.dur==='yok'?' Stopaj: bordrodaki gelir + damga vergisi ile kira, serbest meslek kesintilerinin toplamı. Prim brütten hesaplanır.':'')+(e.tur!=='muh'&&e.dur!=='duz'?' Ödenecek çıkmıyorsa (devreden varsa) 0 yazın.':'')+'</p>';
+     if(e.ayni||!many)h+='<div class="dzs-row">'+F.map(function(f){return inp(f[0],f[1]+(many?(PER(e.tur)===1?' · her ay':' · her dönem'):''),e,f[2]);}).join('')+'</div>';
+     else h+='<div class="dzt-tbl"><table><thead><tr><th>Dönem</th>'+F.map(function(f){return '<th>'+esc(f[1])+'</th>';}).join('')+'</tr></thead><tbody>'+ms.map(function(ym){return '<tr><td>'+plbl(e.tur,ym,1)+'</td>'+F.map(function(f){return '<td><input data-f="'+f[0]+'" data-m="'+ym+'" inputmode="decimal" value="'+esc(V(e,ym,f[0]))+'" placeholder="'+f[2]+'" aria-label="'+esc(ymLabel(ym)+' '+f[1])+'"></td>';}).join('')+'</tr>';}).join('')+'</tbody></table></div>';
+     if(many)h+='<button type="button" class="dzs-link" data-act="ayni">'+(e.ayni?'Tutarlar dönemden döneme farklı mı? Tek tek girin':'Hepsi aynı tutar olsun')+'</button>';
      h+=nav('Devam');}
    else if(s==='gir'){h+='<h4 class="dzs-q">'+(e.dur==='yok'?'Çalışanların SGK işe giriş bildirgesi yapıldı mı?':'Unutulan kişinin SGK işe giriş bildirgesi yapıldı mı?')+'</h4><p class="dzs-h">Yapılmadıysa kişi başı ayrıca ceza çıkar.</p>'+big([['1','Evet, yapıldı'],['0','Hayır / geç yapıldı']],'gir',e.gir===null?'':(e.gir?'1':'0'));
      if(e.gir===false)h+='<div class="dzs-row"><label>İşe başlama tarihi<input type="date" data-f="gd" value="'+esc(e.gd)+'"></label></div><p class="dzs-h">30 gün içinde kendiliğinden yapılırsa ceza 1/4’e iner.</p>';
@@ -4669,7 +4687,7 @@ var DZ={
  R.addEventListener('click',function(ev){var t=ev.target,b;
    if(b=t.closest('.dzs-opt[data-q]')){var q=b.dataset.q,v=b.dataset.v,e=st.cur;
      if(q==='m'){st.m=+v;all();go('tur');return;}
-     if(q==='tur'){if(e.tur!==v){e.tur=v;e.dur=null;e.v={};e.d={};e.gir=null;}next();return;}
+     if(q==='tur'){if(e.tur!==v){e.tur=v;e.dur=null;e.v={};e.d={};e.gir=null;var df=DEF(v);e.a=df[0];e.b=df[1];}next();return;}
      if(q==='dur'){if(e.dur!==v){e.dur=v;e.v={};e.d={};e.gir=null;}next();return;}
      if(q==='gir'){e.gir=v==='1';if(e.gir&&!e.cik)next();else drawStep();return;}}
    if(b=t.closest('[data-go]')){go(b.dataset.go);return;}
@@ -4687,7 +4705,7 @@ var DZ={
    if(t.id==='dzt-t'){st.t=t.value;all();return;}
    if(t.id==='dzt-p'){st.pesin=t.checked;all();return;}
    var e=st.cur,f=t.dataset.f;if(!e||!f)return;
-   if(f==='a'||f==='b'){e[f]=t.value;if(!e.ayni)mlist(e).forEach(function(ym){e.d[ym]=e.d[ym]||JSON.parse(JSON.stringify(e.v));});var c=$('#dzs-cnt',R);if(c)c.textContent=mlist(e).length+' ay seçildi.';return;}
+   if(f==='a'||f==='b'){e[f]=t.value;if(!e.ayni)mlist(e).forEach(function(ym){e.d[ym]=e.d[ym]||JSON.parse(JSON.stringify(e.v));});var c=$('#dzs-cnt',R);if(c)c.textContent=mlist(e).length+' '+(PER(e.tur)===1?'ay':PER(e.tur)===3?'dönem':'yıl')+' seçildi.';return;}
    if(f==='cik'){if(ev.type!=='change')return;e.cik=t.checked;drawStep();return;}
    if(f==='gd'||f==='cd'){e[f]=t.value;return;}
    if(t.dataset.m){(e.d[t.dataset.m]=e.d[t.dataset.m]||{})[f]=t.value;}else e.v[f]=t.value;}
