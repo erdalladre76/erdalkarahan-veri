@@ -1,95 +1,107 @@
 {
- "guncelleme": "2026-11-08",
- "hap": [
-  {
-   "id": "yd-2026-3",
-   "tarih": "2026-10-30",
-   "etiket": "VERGİ",
-   "baslik": "3. dönem yeniden değerleme oranı %19,64",
-   "metin": "2026 yılı 3. geçici vergi dönemi için VUK mükerrer 298/Ç kapsamındaki yeniden değerleme oranı %19,64 olarak açıklandı. 2025–2027’de enflasyon düzeltmesi yapılmadığından, amortismana tabi varlıklarını yeniden değerlemek isteyenler bu oranı kullanabilir. 1. veya 2. dönemde yeniden değerleme yapanlar oranı tekrar uygulamaz; yıl başı değerlerinden hesaplayıp farkı kaydeder.",
-   "kaynak": {
-    "ad": "GİB KVK Sirküleri No: 74",
-    "url": "https://www.alomaliye.com/2026/10/30/5520-sayili-kurumlar-vergisi-kanunu-sirkuleri-74/"
-   }
-  },
-  {
-   "id": "kira-artis-kasim-2026",
-   "tarih": "2026-11-03",
-   "etiket": "VERGİ",
-   "baslik": "Kasım kira yenilemelerinde azami artış %31,23",
-   "metin": "TÜİK’in 3 Kasım’da açıkladığı Ekim 2026 TÜFE verisine göre 12 aylık ortalama değişim %31,23 oldu. Kasım 2026’da yenilenen konut ve işyeri kira sözleşmelerinde artış bu oranı aşamaz. Aylık TÜFE %2,58, yıllık TÜFE %29,77 olarak açıklandı.",
-   "kaynak": {
-    "ad": "TÜİK · Tüketici Fiyat Endeksi, Ekim 2026",
-    "url": "https://www.tuik.gov.tr/"
-   }
-  },
-  {
-   "id": "muhtasar-phb-2026-ekim",
-   "tarih": "2026-11-02",
-   "etiket": "Vergi · SGK",
-   "onemli": true,
-   "baslik": "Muhtasar ve prim hizmet beyannamesinde değişiklik",
-   "metin": "2026/Ekim vergilendirme döneminden itibaren (1 Kasım 2026’dan sonra verilecek beyannameler) muhtasar ve prim hizmet beyannamesinde değişiklik yapıldı. Beyannameyi e-Beyanname sisteminden verenlerin Dijital Vergi Dairesi’nde “Gerekli Programlar” menüsündeki Beyanname Düzenleme Programı’nı (BDP) güncellemesi gerekiyor.",
-   "kaynak": {
-    "ad": "GİB Gerekli Programlar",
-    "url": "https://dijital.gib.gov.tr/gerekliProgramlar"
-   }
-  },
-  {
-   "id": "sgk-2026-22",
-   "tarih": "2026-10-19",
-   "etiket": "SGK",
-   "baslik": "SGK 2026/22 Genelgesi: tutanaklarla tespit edilen çalışmalar",
-   "metin": "SGK, kamu görevlilerinin tutanaklarına (ör. trafik cezası tutanağı) dayanan kayıt dışı çalışma tespitlerinde hizmet süresinin nasıl kazandırılacağını 19.10.2026 tarihli 2026/22 sayılı Genelge ile yeniden düzenledi.",
-   "kaynak": {
-    "ad": "Ayrıntılı yazı",
-    "url": "#yz-sgk-2026-22-genelgesi-trafik-tutanagi-fiili-calisma-tespiti"
-   }
-  },
-  {
-   "id": "asgari-sermaye-2027",
-   "tarih": "2026-10-17",
-   "etiket": "Şirketler",
-   "baslik": "Asgari sermayeye uyum süresi 31.12.2027’ye uzatıldı",
-   "metin": "Anonim ve limited şirketlerin sermayelerini yeni asgari tutarlara (anonim şirkette 250.000 TL, limited şirkette 50.000 TL) yükseltme süresi 17 Ekim 2026 tarihli Resmî Gazete’de yayımlanan Tebliğ ile 31 Aralık 2027’ye uzatıldı.",
-   "kaynak": {
-    "ad": "Ayrıntılı yazı",
-    "url": "#yz-asgari-sermaye-uyum-suresi-31-aralik-2027-uzatildi"
-   }
-  },
-  {
-   "id": "kdv-istanbul-e-beyan",
-   "tarih": "2026-10-14",
-   "etiket": "Vergi",
-   "baslik": "İstanbul’da KDV beyannameleri yeni e-Beyan’dan",
-   "metin": "İstanbul’daki mükelleflerin KDV beyannameleri Ekim/2026 döneminden itibaren yeni e-Beyan sistemi üzerinden alınacak. Önceki dönemlere ait düzeltme beyannameleri ve eski sistemde kalan işlemler için geçiş duyurusunu takip edin.",
-   "kaynak": {
-    "ad": "Ayrıntılı yazı",
-    "url": "#yz-istanbulda-kdv-beyannamesi-yeni-e-beyan-ekim-2026"
-   }
-  },
-  {
-   "id": "e-tebligat-596",
-   "tarih": "2026-10-11",
-   "etiket": "Vergi",
-   "onemli": true,
-   "baslik": "e-Tebligat zorunluluğu: son başvuru 30 Kasım 2026",
-   "metin": "596 sıra no’lu VUK Genel Tebliği ile e-Tebligat zorunluluğu genişletildi. Kapsama girenlerin 30 Kasım 2026’ya kadar e-Tebligat başvurusunu yapması gerekiyor; başvuru Dijital Vergi Dairesi üzerinden yapılabiliyor.",
-   "kaynak": {
-    "ad": "Dijital Vergi Dairesi",
-    "url": "https://dijital.gib.gov.tr/"
-   }
-  },
-  {
-   "id": "yemek-300",
-   "tarih": "2026-04-17",
-   "etiket": "Bordro",
-   "baslik": "Yemek bedelinde günlük 300 TL: vergi ve SGK eşitlendi",
-   "metin": "7577 sayılı Kanun ile 17.04.2026’dan itibaren işyeri dışında sağlanan yemek bedelinde SGK prim istisnası da günlük 300 TL’ye çıkarıldı ve gelir vergisi istisnasıyla aynı tutara geldi.",
-   "kaynak": {
-    "ad": "Ayrıntılı yazı",
-    "url": "#yz-yemek-bedeli-istisnasi-300-tl-gelir-vergisi-sgk-2026"
-   }
-  }
- ]
+  "guncelleme": "2026-11-10",
+  "hap": [
+    {
+      "id": "vuk-597-borclu-listesi-2026",
+      "tarih": "2026-11-10",
+      "etiket": "VERGİ",
+      "onemli": true,
+      "baslik": "5 milyon TL üzeri vergi borçluları Aralık’ta ilan edilecek",
+      "metin": "10 Kasım 2026 tarihli Resmî Gazete’de yayımlanan VUK Genel Tebliği (Sıra No: 597) ile vergi dairesi bazında 5 milyon TL ve üzeri borcu olanların listesi açıklanacak. 31.12.2025’e kadar vadesi geçip 20 Kasım 2026 itibarıyla ödenmemiş vergi ve cezalar kapsamda. Listeler 1–15 Aralık’ta vergi dairelerinde, 16–30 Aralık’ta GİB internet sitesinde yayımlanacak. 1.6.2025–31.5.2026 arasında kesinleşen tarhiyatlar da ayrıca ilan edilecek.",
+      "kaynak": {
+        "ad": "VUK Genel Tebliği (Sıra No: 597) – NTV Para",
+        "url": "https://www.ntv.com.tr/ntvpara/galeri-vergi-yuzsuzleri-aciklanacak-iste-tarihler-1750199"
+      }
+    },
+    {
+      "id": "yd-2026-3",
+      "tarih": "2026-10-30",
+      "etiket": "VERGİ",
+      "baslik": "3. dönem yeniden değerleme oranı %19,64",
+      "metin": "2026 yılı 3. geçici vergi dönemi için VUK mükerrer 298/Ç kapsamındaki yeniden değerleme oranı %19,64 olarak açıklandı. 2025–2027’de enflasyon düzeltmesi yapılmadığından, amortismana tabi varlıklarını yeniden değerlemek isteyenler bu oranı kullanabilir. 1. veya 2. dönemde yeniden değerleme yapanlar oranı tekrar uygulamaz; yıl başı değerlerinden hesaplayıp farkı kaydeder.",
+      "kaynak": {
+        "ad": "GİB KVK Sirküleri No: 74",
+        "url": "https://www.alomaliye.com/2026/10/30/5520-sayili-kurumlar-vergisi-kanunu-sirkuleri-74/"
+      }
+    },
+    {
+      "id": "kira-artis-kasim-2026",
+      "tarih": "2026-11-03",
+      "etiket": "VERGİ",
+      "baslik": "Kasım kira yenilemelerinde azami artış %31,23",
+      "metin": "TÜİK’in 3 Kasım’da açıkladığı Ekim 2026 TÜFE verisine göre 12 aylık ortalama değişim %31,23 oldu. Kasım 2026’da yenilenen konut ve işyeri kira sözleşmelerinde artış bu oranı aşamaz. Aylık TÜFE %2,58, yıllık TÜFE %29,77 olarak açıklandı.",
+      "kaynak": {
+        "ad": "TÜİK · Tüketici Fiyat Endeksi, Ekim 2026",
+        "url": "https://www.tuik.gov.tr/"
+      }
+    },
+    {
+      "id": "muhtasar-phb-2026-ekim",
+      "tarih": "2026-11-02",
+      "etiket": "Vergi · SGK",
+      "onemli": true,
+      "baslik": "Muhtasar ve prim hizmet beyannamesinde değişiklik",
+      "metin": "2026/Ekim vergilendirme döneminden itibaren (1 Kasım 2026’dan sonra verilecek beyannameler) muhtasar ve prim hizmet beyannamesinde değişiklik yapıldı. Beyannameyi e-Beyanname sisteminden verenlerin Dijital Vergi Dairesi’nde “Gerekli Programlar” menüsündeki Beyanname Düzenleme Programı’nı (BDP) güncellemesi gerekiyor.",
+      "kaynak": {
+        "ad": "GİB Gerekli Programlar",
+        "url": "https://dijital.gib.gov.tr/gerekliProgramlar"
+      }
+    },
+    {
+      "id": "sgk-2026-22",
+      "tarih": "2026-10-19",
+      "etiket": "SGK",
+      "baslik": "SGK 2026/22 Genelgesi: tutanaklarla tespit edilen çalışmalar",
+      "metin": "SGK, kamu görevlilerinin tutanaklarına (ör. trafik cezası tutanağı) dayanan kayıt dışı çalışma tespitlerinde hizmet süresinin nasıl kazandırılacağını 19.10.2026 tarihli 2026/22 sayılı Genelge ile yeniden düzenledi.",
+      "kaynak": {
+        "ad": "Ayrıntılı yazı",
+        "url": "#yz-sgk-2026-22-genelgesi-trafik-tutanagi-fiili-calisma-tespiti"
+      }
+    },
+    {
+      "id": "asgari-sermaye-2027",
+      "tarih": "2026-10-17",
+      "etiket": "Şirketler",
+      "baslik": "Asgari sermayeye uyum süresi 31.12.2027’ye uzatıldı",
+      "metin": "Anonim ve limited şirketlerin sermayelerini yeni asgari tutarlara (anonim şirkette 250.000 TL, limited şirkette 50.000 TL) yükseltme süresi 17 Ekim 2026 tarihli Resmî Gazete’de yayımlanan Tebliğ ile 31 Aralık 2027’ye uzatıldı.",
+      "kaynak": {
+        "ad": "Ayrıntılı yazı",
+        "url": "#yz-asgari-sermaye-uyum-suresi-31-aralik-2027-uzatildi"
+      }
+    },
+    {
+      "id": "kdv-istanbul-e-beyan",
+      "tarih": "2026-10-14",
+      "etiket": "Vergi",
+      "baslik": "İstanbul’da KDV beyannameleri yeni e-Beyan’dan",
+      "metin": "İstanbul’daki mükelleflerin KDV beyannameleri Ekim/2026 döneminden itibaren yeni e-Beyan sistemi üzerinden alınacak. Önceki dönemlere ait düzeltme beyannameleri ve eski sistemde kalan işlemler için geçiş duyurusunu takip edin.",
+      "kaynak": {
+        "ad": "Ayrıntılı yazı",
+        "url": "#yz-istanbulda-kdv-beyannamesi-yeni-e-beyan-ekim-2026"
+      }
+    },
+    {
+      "id": "e-tebligat-596",
+      "tarih": "2026-10-11",
+      "etiket": "Vergi",
+      "onemli": true,
+      "baslik": "e-Tebligat zorunluluğu: son başvuru 30 Kasım 2026",
+      "metin": "596 sıra no’lu VUK Genel Tebliği ile e-Tebligat zorunluluğu genişletildi. Kapsama girenlerin 30 Kasım 2026’ya kadar e-Tebligat başvurusunu yapması gerekiyor; başvuru Dijital Vergi Dairesi üzerinden yapılabiliyor.",
+      "kaynak": {
+        "ad": "Dijital Vergi Dairesi",
+        "url": "https://dijital.gib.gov.tr/"
+      }
+    },
+    {
+      "id": "yemek-300",
+      "tarih": "2026-04-17",
+      "etiket": "Bordro",
+      "baslik": "Yemek bedelinde günlük 300 TL: vergi ve SGK eşitlendi",
+      "metin": "7577 sayılı Kanun ile 17.04.2026’dan itibaren işyeri dışında sağlanan yemek bedelinde SGK prim istisnası da günlük 300 TL’ye çıkarıldı ve gelir vergisi istisnasıyla aynı tutara geldi.",
+      "kaynak": {
+        "ad": "Ayrıntılı yazı",
+        "url": "#yz-yemek-bedeli-istisnasi-300-tl-gelir-vergisi-sgk-2026"
+      }
+    }
+  ]
 }
