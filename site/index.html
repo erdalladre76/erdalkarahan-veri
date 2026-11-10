@@ -1037,6 +1037,41 @@ section[data-view],[id^="h-"],[id^="d-"],[id^="x-"],[id^="p-"]{scroll-margin-top
 .dz-chainv{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
 .dz-m{flex:1 1 90px;border:1.5px solid var(--rule);border-radius:10px;padding:8px;font-size:12.5px;text-align:center;background:var(--paper)}
 .dz-m b{display:block;font-size:14px}.dz-m.err{border-color:#C2410C;background:rgba(194,65,12,.08)}.dz-m.fix{border-color:#E8A317;background:rgba(232,163,23,.1)}.dz-m.pay{border-color:#7F1D1D;background:rgba(127,29,29,.1)}
+.dzt{background:var(--sheet);border:2px solid var(--stamp);border-radius:var(--r);padding:16px;margin:0 0 18px}
+.dzt>h3{margin:0 0 4px;font-size:21px;text-transform:none}.dzt>p{margin:0 0 12px;color:color-mix(in srgb,var(--ink) 65%,transparent);font-size:14px}
+.dzt-sec{font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--stamp);margin:16px 0 8px}
+.dzt-add{border:1px dashed var(--rule);border-radius:12px;padding:12px;background:var(--paper)}
+.dzt-chips{display:flex;flex-wrap:wrap;gap:6px}
+.dzt-chips button{font:inherit;font-size:13.5px;border:1.5px solid var(--rule);background:var(--sheet);color:var(--ink);border-radius:999px;padding:6px 11px;cursor:pointer}
+.dzt-chips button[aria-pressed="true"]{border-color:var(--stamp);background:var(--stamp);color:#fff}
+.dzt-yr{font:600 12px var(--f-mono);color:var(--ink-2);margin:8px 0 4px}
+.dzt-months button{min-width:58px;border-radius:10px;padding:6px 8px}
+.dzt-go{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.dzt-btn{font:inherit;font-weight:700;font-size:14.5px;border:0;border-radius:10px;padding:10px 14px;background:var(--stamp);color:#fff;cursor:pointer}
+.dzt-btn.alt{background:transparent;color:var(--stamp);border:1.5px solid var(--stamp)}
+.dzt-btn:disabled{opacity:.45;cursor:default}
+.dzt-rows{display:grid;gap:10px}
+.dzt-row{border:1px solid var(--rule);border-left:5px solid var(--c,#5B3FA8);border-radius:12px;padding:10px 12px;background:var(--paper)}
+.dzt-rh{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px}
+.dzt-rh b{font-size:15px}.dzt-x{border:0;background:none;color:var(--ink-2);font-size:22px;line-height:1;cursor:pointer;padding:0 4px}
+.dzt-ro{margin-top:8px;font-size:13.5px;line-height:1.5}
+.dzt-ro .v{display:flex;flex-wrap:wrap;gap:6px 14px;font-variant-numeric:tabular-nums}
+.dzt-ro .v span b{font-size:15px}
+.dzt-ro details{margin-top:4px}.dzt-ro summary{cursor:pointer;color:var(--stamp);font-weight:600}
+.dzt-ro ul{margin:4px 0 0;padding-left:18px;display:grid;gap:2px}
+.dzt-empty{padding:14px;border:1px dashed var(--rule);border-radius:12px;font-size:14px;color:var(--ink-2);text-align:center}
+.dzt-tot{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:10px;margin-top:6px}
+.dzt-tot>div{border-radius:12px;padding:12px 14px;border:1px solid var(--rule)}
+.dzt-tot .p{background:rgba(232,163,23,.10)}.dzt-tot .k{background:rgba(194,65,12,.08)}
+.dzt-tot small{display:block;font-size:13px;font-weight:600}.dzt-tot b{display:block;font-size:26px;margin:2px 0;font-variant-numeric:tabular-nums}.dzt-tot em{font-style:normal;font-size:12.5px;color:var(--ink-2)}
+.dzt-tw{overflow-x:auto;margin-top:10px}
+.dzt-t{width:100%;border-collapse:collapse;font-size:14px}
+.dzt-t th,.dzt-t td{padding:7px 9px;border-bottom:1px solid var(--rule);text-align:left}
+.dzt-t td+td,.dzt-t th+th{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.dzt-t th{font:600 11.5px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--stamp)}
+.dzt-t tr.tt td{font-weight:800;font-size:15.5px;border-top:2px solid var(--ink)}
+.dzt-t tr.ind td{color:var(--ink-2);font-size:13px}
+@media (max-width:640px){.dzt{padding:12px}.dzt-tot b{font-size:22px}}
 .dz-card h4,.dz-col h5,.dz-q>b,.dz-wiz>h3,.dz-calc>h3,.dz-chain>h3,.dz-h{text-transform:none}
 .dz-tlm{display:none;margin:4px 0 8px;padding:0;list-style:none}.dz-tlm li{position:relative;padding:0 0 10px 22px;font-size:14px;line-height:1.45}.dz-tlm li::before{content:"";position:absolute;left:5px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--c,#5B3FA8)}.dz-tlm li::after{content:"";position:absolute;left:9px;top:16px;bottom:0;width:2px;background:var(--rule)}.dz-tlm li:last-child::after{display:none}.dz-tlm b{display:block}
 @media (max-width:640px){.dz-card>header{flex-direction:column;gap:6px}.dz-tl{display:none}.dz-tlm{display:block}}
@@ -2164,6 +2199,7 @@ section[data-view] a{overflow-wrap:anywhere}
 <text x="400" y="104" text-anchor="middle" font-weight="700" fill="#C2410C">Süre sonrası (B)</text><text x="400" y="121" text-anchor="middle" opacity=".75">vergi: pişmanlık / %50</text><text x="400" y="138" text-anchor="middle" opacity=".75">SGK: idari para cezası</text>
 <text x="567" y="104" text-anchor="middle" font-weight="700" fill="#7F1D1D">İnceleme</text>
 </g></svg><ul class="dz-tlm"><li style="--c:#5B3FA8"><b>Ay sonu</b>ör. 31 Ekim</li><li style="--c:#0E9F8E"><b>26 Kasım</b>beyan ve stopaj ödeme son günü; düzeltme cezasız (tahakkuk nedeni A)</li><li style="--c:#0E9F8E"><b>30 Kasım</b>SGK prim ödeme son günü</li><li style="--c:#C2410C"><b>Süre sonrası 30 gün</b>kendiliğinden verilen belgede SGK cezası 1/4</li><li style="--c:#C2410C"><b>3. ayın sonuna kadar</b>şartlar uygunsa belge incelemesiz işlenir</li><li style="--c:#7F1D1D"><b>Sonrası</b>SGK denetmeni incelemesi</li></ul></figure></div>
+      <div class="dzt" id="dz-toplu"></div>
       <div class="dz-wiz" id="dz-wiz" aria-live="polite"></div>
       <div class="dz-calc" id="dz-calc"></div>
       <div class="dz-chain" id="dz-chain"></div>
@@ -2604,6 +2640,30 @@ var TOOLS=[
    zam=K-C;
    var rows=[['Gecikilen süre',g+' gün ('+n+' tam ay '+d+' gün)'],['Gecikme cezası uygulanan ay',m+' ay × %'+NI.format(c)],['Gecikme cezası',tl(ceza)],['Gecikme zammı'+(used.length?' (aylık %'+NI.format(Math.min.apply(null,used))+(used.length>1&&Math.min.apply(null,used)!==Math.max.apply(null,used)?'–%'+NI.format(Math.max.apply(null,used)):'')+')':''),tl(zam)],['Toplam ödenecek',tl(K),1]];
    return{rows:rows,note:'Gecikme cezası ilk üç ayda her ay için uygulanır (başlanan ay tam ay sayılmıştır). Gecikme zammı cezalı tutar üzerinden her ay SGK’nın o ay için ilan ettiği oranla bileşik, ödeme ayında gün hesabıyla bulunur (oranlar: SGK, Yürürlük Tarihlerine Göre Gecikme Zammı Oranları; son güncelleme Ekim 2026).'+(est?' Henüz ilan edilmemiş ay(lar) için son ilan edilen oran kullanılmıştır.':'')+' SGK primlerinde 6183 sayılı Kanun’daki %3,7 oran uygulanmaz. Kesin tutar için SGK’nın gecikme zammı hesaplama uygulamasıyla (uyg.sgk.gov.tr) kontrol edin.'};}},
+ {g:'Maaş ve SGK',key:'raporparasi',title:'Rapor parası (geçici iş göremezlik ödeneği): ne kadar, ne zaman?',abbr:'RP',lead:'Hastalık, iş kazası ya da doğum raporunda SGK’nın ödeyeceği geçici iş göremezlik ödeneğini ve paranın yaklaşık hangi tarihlerde yatacağını hesaplayın.',
+  fields:[F('t','Rapor türü',{type:'seg',opts:[['h','Hastalık'],['k','İş kazası / meslek hastalığı'],['a','Doğum (analık)']],val:'h'}),
+   F('y','Tedavi',{type:'seg',opts:[['a','Ayakta (2/3)'],['y','Yatarak (1/2)']],val:'a',hint:'Doğum raporunda bu seçim dikkate alınmaz; analık ödeneği 2/3 oranındadır.'}),
+   F('b','Rapor başlangıcı',{type:'date',val:T0}),F('e','Rapor bitişi (son raporlu gün)',{type:'date',val:T0,hint:'İşe başlama günü değil, raporun kapsadığı son gün.'}),
+   F('k','Aylık brüt kazanç (son 12 ay ortalaması)',{val:'33.030',sfx:'₺',hint:'SGK’ya bildirilen prime esas kazanç (brüt ücret, prim, ikramiye dahil). SGK son 12 aydaki toplam kazancı prim gün sayısına böler; burada aylık brüt ÷ 30 alınır.'}),
+   F('g','Son 12 ayda bildirilen prim günü',{val:'360',sfx:'gün',hint:'Hastalık ve doğumda en az 90 gün şart. 180 günden azsa günlük kazanç, günlük asgari kazancın iki katıyla sınırlanır.'}),
+   F('o','İşverenin “çalışmadı” onayını vereceği tarih (isteğe bağlı)',{type:'date',val:'',hint:'Boş bırakırsanız rapor bitiş günü onay verildiği varsayılır. İşveren onayı ne kadar erken verirse para o kadar erken yatar.'})],
+  calc:function(v){var b=dParse(v.b),e=dParse(v.e),k=num(v.k),g=num(v.g),t=v.t||'h',y=v.y||'a';if(!b||!e||isNaN(k))return null;if(isNaN(g))g=360;
+   var gun=dDiff(b,e)+1;if(gun<=0)return{rows:[['Rapor süresi','Bitiş, başlangıçtan önce olamaz']]};
+   function fd(d){return String(d.getUTCDate()).padStart(2,'0')+'.'+String(d.getUTCMonth()+1).padStart(2,'0')+'.'+d.getUTCFullYear();}
+   function ad(d,n){return new Date(d.getTime()+n*864e5);}
+   var ASG=33030,gt=ASG/30,gu=ASG*9/30,gk=k/30,cap='';
+   if(gk>gu){gk=gu;cap=' (üst sınır: günlük '+tl(gu)+')';}
+   if(g<180&&gk>2*gt){gk=2*gt;cap=' (180 günden az prim: en çok günlük asgarinin 2 katı = '+tl(2*gt)+')';}
+   if(gk<gt){gk=gt;cap=' (alt sınır: günlük asgari '+tl(gt)+')';}
+   if(t!=='k'&&g<90)return{rows:[['Rapor süresi',gun+' gün'],['Ödenek','Ödenmez',1]],note:(t==='a'?'Doğum':'Hastalık')+' halinde ödenek için rapordan (doğumda doğumdan) önceki son 1 yıl içinde en az 90 gün kısa vadeli sigorta primi bildirilmiş olmalıdır (5510 md.18). İş kazası ve meslek hastalığında bu şart aranmaz.'};
+   var oran=t==='a'?2/3:(y==='y'?1/2:2/3),bek=t==='h'?Math.min(2,gun):0,od=gun-bek,gun1=gk*oran,top=gun1*od;
+   var on=dParse(v.o)||e;if(on<b)on=e;
+   var mx=ad(on,15),muh=new Date(Date.UTC(e.getUTCFullYear(),e.getUTCMonth()+1,26)),muh2=ad(muh,15);
+   var rows=[['Rapor süresi',gun+' gün ('+fd(b)+' – '+fd(e)+')']];
+   if(t==='h')rows.push(['Ödenmeyen ilk gün',bek+' gün (hastalıkta ilk 2 gün ödenmez)']);
+   rows.push(['Ödenecek gün',od+' gün'],['Günlük kazanç',tl(gk)+cap],['Oran',t==='a'?'2/3 (analık)':(y==='y'?'1/2 (yatarak)':'2/3 (ayakta)')],['Günlük ödenek',tl(gun1)],['Toplam rapor parası',tl(top),1],
+     ['İşveren onayı',fd(on)],['Tahmini yatış','En geç '+fd(mx)+' (onaydan sonra 15 gün içinde)',1],['İşveren onay vermezse','MUHSGK ile bildirilen eksik gün üzerinden; beyanname son günü '+fd(muh)+' → yaklaşık '+fd(muh2)]);
+   return{rows:rows,note:'Ödeme, işverenin raporlu dönemde çalışılmadığını SGK’ya bildirmesiyle (vizite / iş göremezlik sistemi ya da MUHSGK’da eksik gün bildirimi) başlar: SGK hesaplar, en geç 15 gün içinde ödemeye gönderir; para PTT’den ya da e-Devlet’ten bildirilen IBAN’a ödenir. Raporunuz biter bitmez işverene haber verip onayı hemen girmesini isterseniz paranızı erken alırsınız. Günlük kazanç, 21.12.2024’ten itibaren rapordan önceki 12 ayın prime esas kazancının prim gün sayısına bölünmesiyle bulunur (5510 md.17, SGK 2025/3 Genelgesi); burada aylık brüt ÷ 30 ile yaklaşık hesaplandı. '+(t==='a'?'Doğum izni 01.05.2026’dan itibaren tekil gebelikte toplam 24 hafta (doğumdan önce 8, sonra 16), çoğul gebelikte 26 haftadır (7578 sayılı Kanun); doğumdan önce çalışılan günler için ödenek verilmez. ':'')+(t==='k'?'İş kazası ve meslek hastalığında ödenek ilk günden başlar ve prim günü şartı aranmaz; işveren iş kazasını 3 iş günü içinde SGK’ya bildirmelidir. ':'')+'Ödenek gelir ve damga vergisinden istisnadır. İlk 2 günün ücretini işveren ödemek zorunda değildir; toplu sözleşme ya da iş sözleşmesine bakın. Kesin tutar ve tarih için e-Devlet “SGK Rapor Ödeme Bilgisi” ekranına bakın.'};}},
  {g:'Maaş ve SGK',key:'insaatiscilik',title:'Özel bina inşaatı asgari işçilik ve SGK fark işçilik',abbr:'Aİ',lead:'Yapı sınıfı ve alana göre inşaat maliyetini, asgari işçilik tutarını, bildirilmesi gereken prim matrahını, fark işçiliği ve ödenecek primi hesaplayın.',
   fields:[F('m','İnşaat alanı',{val:'2.000',sfx:'m²'}),
    F('s','Yapı sınıfı (2026 birim maliyet)',{type:'select',val:'21050',opts:[['2600','I-A · 2.600 ₺/m²'],['3900','I-B · 3.900 ₺/m²'],['4200','I-C · 4.200 ₺/m²'],['4800','I-D · 4.800 ₺/m²'],['8100','II-A · 8.100 ₺/m²'],['12500','II-B · 12.500 ₺/m²'],['15100','II-C · 15.100 ₺/m²'],['19800','III-A · 19.800 ₺/m²'],['21050','III-B · 21.050 ₺/m²'],['23400','III-C · 23.400 ₺/m²'],['26450','IV-A · 26.450 ₺/m²'],['33900','IV-B · 33.900 ₺/m²'],['40500','IV-C · 40.500 ₺/m²'],['42350','V-A · 42.350 ₺/m²'],['43850','V-B · 43.850 ₺/m²'],['48750','V-C · 48.750 ₺/m²'],['53500','V-D · 53.500 ₺/m²'],['103500','V-E · 103.500 ₺/m²']],hint:'Çevre ve Şehircilik Bakanlığı 2026 yapı yaklaşık birim maliyetleri (RG 03.02.2026). Farklı birim maliyet için aşağıdaki alanı kullanın.'}),
@@ -4394,6 +4454,130 @@ var DZ={
  C.addEventListener('input',function(e){if(e.target.closest('[data-p="v"]'))calcV();else calcS();});C.addEventListener('change',function(e){if(e.target.closest('[data-p="v"]'))calcV();else calcS();});
  C.addEventListener('click',function(e){var b=e.target.closest('[data-t]');if(!b)return;$$('[data-t]',C).forEach(function(x){x.classList.toggle('on',x===b);});$$('[data-p]',C).forEach(function(p){p.hidden=p.dataset.p!==b.dataset.t;});});
  calcV();calcS();
+ /* toplu: şimdi versem ne öderim */
+ (function(){var R=$('#dz-toplu');if(!R)return;
+ var TUR={kdv:['KDV beyannamesi','#5B3FA8'],kdv2:['KDV-2 (sorumlu sıfatıyla)','#7C5CC4'],mv:['Muhtasar · vergi (stopaj)','#0E7490'],ms:['Muhtasar · SGK (prim)','#C2410C']};
+ var DUR={v:[['yok','Hiç verilmedi'],['ode','Verildi, ödenmedi'],['duz','Eksik beyan edildi (düzeltme)']],s:[['yok','Hiç verilmedi (asıl belge)'],['duz','Eksik bildirildi (ek belge)'],['ode','Verildi, prim ödenmedi']]};
+ var AY=['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+ function U(y,m,d){return new Date(Date.UTC(y,m,d));}
+ function iso(d){return d.toISOString().slice(0,10);}
+ function trd(d){return String(d.getUTCDate()).padStart(2,'0')+'.'+String(d.getUTCMonth()+1).padStart(2,'0')+'.'+d.getUTCFullYear();}
+ function ymOf(d){return d.getUTCFullYear()+'-'+String(d.getUTCMonth()+1).padStart(2,'0');}
+ function bday(d){var w=d.getUTCDay();if(w===6)return U(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate()+2);if(w===0)return U(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate()+1);return d;}
+ function vadeOf(tur,ym,prim){var p=ym.split('-'),y=+p[0],m=+p[1];/* m: 1-12 → izleyen ay index m */
+   if(prim)return bday(U(y,m+1,0));return bday(U(y,m,(tur==='kdv'||tur==='kdv2')?28:26));}
+ function addM(a,k){var y=a.getUTCFullYear(),m=a.getUTCMonth()+k,d=a.getUTCDate(),last=U(y,m+1,0).getUTCDate();return U(y,m,Math.min(d,last));}
+ function span(a,b){/* tam ay + kalan gün */var m=(b.getUTCFullYear()-a.getUTCFullYear())*12+(b.getUTCMonth()-a.getUTCMonth());if(addM(a,m)>b)m--;var r=dDiff(addM(a,m),b);return {m:m,d:r};}
+ function sgkGec(a,d1,d2){var g=dDiff(d1,d2);if(g<=0||!a)return {c:0,z:0,est:false};var m=Math.min(Math.ceil(g/30),3),C=a*(1+.03*m),n=Math.floor(g/30),d=g%30,K=C,est=false;
+   for(var q=0;q<n;q++){var o=sgkGzOran(ymOf(U(d1.getUTCFullYear(),d1.getUTCMonth()+q+1,1)));if(o[1])est=true;K*=1+o[0]/100;}
+   if(d){var o2=sgkGzOran(ymOf(d2));if(o2[1])est=true;K*=1+o2[0]/100*d/30;}return {c:C-a,z:K-C,est:est};}
+ var st={m:1,t:'',pesin:false,rows:[],sel:{tur:'kdv',dur:'yok',ms:{}}},nid=1;
+ try{var sv=JSON.parse(localStorage.getItem('dzt')||'null');if(sv&&sv.rows){st.m=sv.m;st.pesin=!!sv.pesin;st.rows=sv.rows;sv.rows.forEach(function(r){nid=Math.max(nid,r.id+1);});}}catch(e){}
+ function save(){try{localStorage.setItem('dzt',JSON.stringify({m:st.m,pesin:st.pesin,rows:st.rows}));}catch(e){}}
+ var now=new Date(),todayIso=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');st.t=todayIso;
+ if(!st.rows.length){var pm=U(now.getFullYear(),now.getMonth()-2,1);st.rows=[{id:nid++,tur:'kdv',ym:ymOf(pm),dur:'yok',t:'20.000',n:'',p:''}];}
+ /* dönem listesi */
+ var MS=[];for(var i=1;i<=36;i++){MS.push(ymOf(U(now.getFullYear(),now.getMonth()-i,1)));}
+ function ymLabel(ym){var p=ym.split('-');return AY[+p[1]-1]+' '+p[0];}
+ function calc(r){var T=dParse(st.t),u=DZ.usul[st.m]||DZ.usul[0],A=DZ.asgari,o={P:{v:0,z:0,vz:0,us:0,pr:0,sg:0,ipc:0},K:{v:0,z:0,vz:0,us:0,pr:0,sg:0,ipc:0},i376:0,i376p:0,lines:[],est:false,ok:true};
+   if(!T){o.ok=false;return o;}
+   if(r.tur!=='ms'){var t=num(r.t)||0,V=vadeOf(r.tur,r.ym);o.vade=V;
+     if(T<=V){o.P.v=o.K.v=t;o.lines.push('Süre henüz dolmadı (son gün '+trd(V)+'); ceza ya da zam yok.');o.wait=true;return o;}
+     var g=dDiff(V,T),sp=span(V,T),mc=Math.max(sp.m+(sp.d>0?1:0),1),mf=sp.m+sp.d/30,gz=DZ.gz/100;o.gun=g;
+     if(r.dur==='ode'){var z=t*gz*mf;o.P.v=o.K.v=t;o.P.z=o.K.z=z;o.lines.push('Vade '+trd(V)+' · '+g+' gün gecikme');o.lines.push('Gecikme zammı: '+f2(t)+' × %'+String(DZ.gz).replace('.',',')+' × '+sp.m+' ay '+sp.d+' gün = '+f2(z)+' TL (ceza yok)');return o;}
+     var zp=t*gz*mc,fz=t*gz*mf;
+     o.P.v=t;o.P.z=zp;o.K.v=t;o.K.z=fz;
+     o.lines.push('Vade '+trd(V)+' · '+g+' gün gecikme');
+     if(t)o.lines.push('Pişmanlık zammı: '+mc+' ay × %'+String(DZ.gz).replace('.',',')+' = '+f2(zp)+' TL (ay kesri tam ay sayılır)');
+     if(r.dur==='yok'){var us=g<=7?u[2]:u[1];o.P.us=us;o.i376p=us/3;o.lines.push('Usulsüzlük cezası ('+(g<=7?'süre bitiminden 7 gün içinde: 2.':'1.')+' derece, '+u[0]+'): '+f2(us)+' TL');
+       if(!t){o.K.z=0;o.P.z=0;o.K.us=us;o.i376=us/3;o.lines.push('Ödenecek vergi yok (ör. devreden KDV): vergi ziyaı olmadığından yalnız usulsüzlük cezası çıkar. Bazı vergi dairesi uygulamalarında süre sonrası kendiliğinden verilen beyannamede bu ceza iki kat kesilebilir.');}
+       else{var vz=t*.5,us2=us*2;if(vz>=us2){o.K.vz=vz;o.i376=vz/2;}else{o.K.us=us2;o.i376=us2/3;}
+         o.lines.push('Pişmanlıksız: vergi ziyaı %50 = '+f2(vz)+' TL, usulsüzlük iki kat = '+f2(us2)+' TL → VUK 336 gereği ağır olan '+f2(Math.max(vz,us2))+' TL kesilir.');}}
+     else{var vz2=t*.5;o.K.vz=vz2;o.i376=vz2/2;o.lines.push('Asıl beyanname süresinde verildiği için usulsüzlük cezası yok. Pişmanlıksız: vergi ziyaı %50 = '+f2(vz2)+' TL');}
+     if(t)o.lines.push('Gecikme faizi (pişmanlıksız, yaklaşık): '+sp.m+' ay '+sp.d+' gün = '+f2(fz)+' TL');
+     return o;}
+   /* SGK */
+   var n=Math.max(0,Math.floor(num(r.n)||0)),p=num(r.p)||0,BV=vadeOf('ms',r.ym),PV=vadeOf('ms',r.ym,true);o.vade=BV;
+   if(r.dur!=='ode'&&T>BV&&n){var k=r.dur==='yok'?5:8,ham=n*A/k,c=Math.min(ham,2*A),gb=dDiff(BV,T),c1=gb<=30?c/4:c,c2=st.pesin?c1*.75:c1;o.P.ipc=o.K.ipc=c2;
+     o.lines.push('Belge son günü '+trd(BV)+' · '+gb+' gün gecikme');
+     o.lines.push('İdari para cezası: '+n+' sigortalı × 1/'+k+' asgari ücret = '+f2(ham)+' TL'+(ham>2*A?' → belge başına sınır '+f2(2*A)+' TL':'')+(gb<=30?' · 30 gün içinde kendiliğinden: 1/4 → '+f2(c1)+' TL':'')+(st.pesin?' · peşin %25 indirim → '+f2(c2)+' TL':''));}
+   else if(r.dur!=='ode'&&T<=BV){o.lines.push('Belge süresi dolmadı (son gün '+trd(BV)+'); idari para cezası yok.');}
+   if(p){o.P.pr=o.K.pr=p;if(T>PV){var s=sgkGec(p,PV,T);o.P.sg=o.K.sg=s.c+s.z;o.est=s.est;o.lines.push('Prim son ödeme '+trd(PV)+' · gecikme cezası '+f2(s.c)+' TL + gecikme zammı '+f2(s.z)+' TL'+(s.est?' (son aylar için tahmini oran)':''));}
+     else o.lines.push('Prim son ödeme günü '+trd(PV)+'; henüz gecikme yok.');}
+   if(r.dur==='ode'&&!p)o.lines.push('Ödenmeyen prim tutarını girin.');
+   if(r.dur!=='ode'&&!n)o.lines.push('Ceza için belgedeki sigortalı sayısını girin.');
+   return o;}
+ function sum(x){return x.v+x.z+x.vz+x.us+x.pr+x.sg+x.ipc;}
+ function rowHTML(r){var V=r.tur==='ms'?DUR.s:DUR.v;
+   return '<div class="dzt-row" data-id="'+r.id+'" style="--c:'+TUR[r.tur][1]+'"><div class="dzt-rh"><b>'+esc(TUR[r.tur][0])+' · '+ymLabel(r.ym)+'</b><button type="button" class="dzt-x" data-del aria-label="Satırı sil">×</button></div><div class="dz-grid">'
+    +'<label>Beyanname<select data-f="tur">'+Object.keys(TUR).map(function(k){return '<option value="'+k+'"'+(k===r.tur?' selected':'')+'>'+esc(TUR[k][0])+'</option>';}).join('')+'</select></label>'
+    +'<label>Dönem<select data-f="ym">'+MS.map(function(m){return '<option value="'+m+'"'+(m===r.ym?' selected':'')+'>'+ymLabel(m)+'</option>';}).join('')+'</select></label>'
+    +'<label>Durum<select data-f="dur">'+V.map(function(d){return '<option value="'+d[0]+'"'+(d[0]===r.dur?' selected':'')+'>'+d[1]+'</option>';}).join('')+'</select></label>'
+    +(r.tur==='ms'?'<label>Sigortalı sayısı<input data-f="n" inputmode="numeric" placeholder="ör. 5" value="'+esc(r.n||'')+'"></label><label>'+(r.dur==='duz'?'Prim farkı (TL)':'Ödenmemiş prim (TL)')+'<input data-f="p" inputmode="decimal" placeholder="0 = ödeme yok" value="'+esc(r.p||'')+'"></label>'
+      :'<label>'+(r.dur==='duz'?'Ödenecek vergi farkı (TL)':'Ödenecek vergi (TL)')+'<input data-f="t" inputmode="decimal" placeholder="0 = ödeme çıkmıyor" value="'+esc(r.t||'')+'"></label>')
+    +'</div><div class="dzt-ro" aria-live="polite"></div></div>';}
+ function outHTML(o){var a=sum(o.P),b=sum(o.K);
+   return '<div class="v">'+(o.wait?'<span>Şimdilik <b>'+f2(a)+' TL</b> (sadece asıl tutar)</span>':(a===b?'<span>Ödenecek: <b>'+f2(a)+' TL</b></span>':'<span>Pişmanlıkla: <b>'+f2(a)+' TL</b></span><span>Pişmanlıksız: <b>'+f2(b)+' TL</b></span>'))+'</div>'
+    +(o.lines.length?'<details><summary>Hesap ayrıntısı</summary><ul>'+o.lines.map(function(l){return '<li>'+esc(l)+'</li>';}).join('')+'</ul></details>':'');}
+ function draw(){
+   R.innerHTML='<h3>Şimdi versem ne öderim?</h3><p>Verilmeyen ya da eksik beyannameleri dönem dönem işaretleyin. Pişmanlıkla ve pişmanlık olmadan ödenecek tutarlar; vergi, zam, ceza ve SGK kalemleri ayrı ayrı anında hesaplanır.</p>'
+    +'<div class="dz-grid"><label>Mükellef<select id="dzt-m">'+DZ.usul.map(function(u,i){return '<option value="'+i+'"'+(i===+st.m?' selected':'')+'>'+esc(u[0])+'</option>';}).join('')+'</select></label><label>Beyan ve ödeme tarihi<input type="date" id="dzt-t" value="'+st.t+'"></label></div>'
+    +'<label class="dz-chk"><input type="checkbox" id="dzt-p"'+(st.pesin?' checked':'')+'> SGK idari para cezasını tebliğden itibaren 15 gün içinde peşin öderim (%25 indirim)</label>'
+    +'<div class="dzt-sec">1 · Dönemleri işaretleyin</div><div class="dzt-add"><div class="dzt-chips" id="dzt-tur">'+Object.keys(TUR).map(function(k){return '<button type="button" data-tur="'+k+'" aria-pressed="'+(k===st.sel.tur)+'">'+esc(TUR[k][0])+'</button>';}).join('')+'</div>'
+    +'<div class="dz-grid" style="margin-top:10px"><label>Durum<select id="dzt-dur">'+(st.sel.tur==='ms'?DUR.s:DUR.v).map(function(d){return '<option value="'+d[0]+'"'+(d[0]===st.sel.dur?' selected':'')+'>'+d[1]+'</option>';}).join('')+'</select></label></div>'
+    +'<div id="dzt-ms"></div><div class="dzt-go"><button type="button" class="dzt-btn" id="dzt-ekle" disabled>Seçili dönemleri ekle</button><button type="button" class="dzt-btn alt" id="dzt-tum">Son 12 ayı seç</button></div></div>'
+    +'<div class="dzt-sec">2 · Tutarları girin</div><div class="dzt-rows" id="dzt-rows"></div>'
+    +'<div class="dzt-sec">3 · Sonuç</div><div id="dzt-sum"></div>'
+    +'<p class="pnote">Hesap '+DZ.guncelleme+' itibarıyla: gecikme zammı ve pişmanlık zammı aylık %'+String(DZ.gz).replace('.',',')+', usulsüzlük cezaları 2026 tutarları, SGK cezası brüt asgari ücret '+f2(DZ.asgari)+' TL. Son gün hafta sonuna denk gelirse pazartesiye kaydırıldı; resmî tatiller ayrıca kontrol edilmeli. Pişmanlık için dilekçeyle beyan ve verginin zammıyla 15 gün içinde ödenmesi şarttır; inceleme başlamışsa pişmanlık yolu kapanır. Pişmanlıksız sütunda vergi dairesinin tarh edeceği tutar ve gecikme faizi yaklaşık gösterilir. Bu sayfa genel bilgilendirme amaçlıdır.</p>';
+   drawMs();drawRows();}
+ function drawMs(){var by={};MS.forEach(function(m){var y=m.slice(0,4);(by[y]=by[y]||[]).push(m);});
+   $('#dzt-ms',R).innerHTML=Object.keys(by).sort().reverse().map(function(y){return '<div class="dzt-yr">'+y+'</div><div class="dzt-chips dzt-months">'+by[y].slice().reverse().map(function(m){return '<button type="button" data-ym="'+m+'" aria-pressed="'+(!!st.sel.ms[m])+'">'+AY[+m.slice(5)-1].slice(0,3)+'</button>';}).join('')+'</div>';}).join('');
+   var n=Object.keys(st.sel.ms).length,b=$('#dzt-ekle',R);b.disabled=!n;b.textContent=n?n+' dönemi ekle':'Seçili dönemleri ekle';}
+ function drawRows(){var W=$('#dzt-rows',R);
+   W.innerHTML=st.rows.length?st.rows.map(rowHTML).join(''):'<div class="dzt-empty">Henüz satır yok. Yukarıdan beyanname türünü ve dönemleri seçip ekleyin.</div>';
+   upd();}
+ function upd(){var TP={v:0,z:0,vz:0,us:0,pr:0,sg:0,ipc:0},TK={v:0,z:0,vz:0,us:0,pr:0,sg:0,ipc:0},i376=0,i376p=0,est=false;
+   st.rows.forEach(function(r){var el=R.querySelector('.dzt-row[data-id="'+r.id+'"]');var o=calc(r);if(el)$('.dzt-ro',el).innerHTML=outHTML(o);
+     Object.keys(TP).forEach(function(k){TP[k]+=o.P[k];TK[k]+=o.K[k];});i376+=o.i376;i376p+=o.i376p;if(o.est)est=true;});
+   var a=sum(TP),b=sum(TK),S=$('#dzt-sum',R);
+   if(!st.rows.length){S.innerHTML='';save();return;}
+   var L=[['Vergi aslı','v'],['Pişmanlık zammı / gecikme faizi-zammı','z'],['Vergi ziyaı cezası','vz'],['Usulsüzlük cezası','us'],['SGK prim aslı','pr'],['SGK gecikme cezası + zammı','sg'],['SGK idari para cezası','ipc']];
+   S.innerHTML='<div class="dzt-tot"><div class="p"><small>Pişmanlıkla şimdi verirseniz</small><b>'+f2(a)+' TL</b><em>Pişmanlık dilekçesi + 15 gün içinde ödeme</em></div><div class="k"><small>Pişmanlık olmadan</small><b>'+f2(b)+' TL</b><em>VUK 376 indirimiyle: '+f2(b-i376)+' TL</em></div></div>'
+    +'<div class="dzt-tw"><table class="dzt-t"><thead><tr><th>Kalem</th><th>Pişmanlıkla</th><th>Pişmanlıksız</th></tr></thead><tbody>'
+    +L.filter(function(l){return TP[l[1]]||TK[l[1]];}).map(function(l){return '<tr><td>'+l[0]+'</td><td>'+f2(TP[l[1]])+'</td><td>'+f2(TK[l[1]])+'</td></tr>';}).join('')
+    +'<tr class="tt"><td>Toplam</td><td>'+f2(a)+'</td><td>'+f2(b)+'</td></tr>'
+    +(i376||i376p?'<tr class="ind"><td>Ceza ihbarnamesi tebliğinden 30 gün içinde ödenirse (VUK 376: vergi ziyaında 1/2, usulsüzlükte 1/3 indirim)</td><td>'+f2(a-i376p)+'</td><td>'+f2(b-i376)+'</td></tr>':'')
+    +'</tbody></table></div>'
+    +(est?'<p class="pnote">SGK gecikme zammında henüz açıklanmamış aylar için son bilinen oran kullanıldı.</p>':'')
+    +'<div class="dzt-go"><button type="button" class="dzt-btn alt" id="dzt-cp">Sonucu kopyala</button><button type="button" class="dzt-btn alt" id="dzt-clr">Tümünü temizle</button></div>';
+   save();}
+ function txt(){var L=['Şimdi versem ne öderim? ('+trd(dParse(st.t))+', '+DZ.usul[st.m][0]+')'];st.rows.forEach(function(r){var o=calc(r),a=sum(o.P),b=sum(o.K);L.push('- '+TUR[r.tur][0]+' '+ymLabel(r.ym)+': '+(a===b?f2(a)+' TL':'pişmanlıkla '+f2(a)+' TL / pişmanlıksız '+f2(b)+' TL'));});
+   var s=$('#dzt-sum .dzt-tot',R);if(s)L.push('Toplam: '+s.querySelectorAll('b')[0].textContent+' (pişmanlıkla) / '+s.querySelectorAll('b')[1].textContent+' (pişmanlıksız)');L.push('Hesaplayıcı: https://www.erdalkarahan.com/#duzeltme');return L.join('\n');}
+ R.addEventListener('click',function(e){var t=e.target,b;
+   if(b=t.closest('[data-tur]')){st.sel.tur=b.dataset.tur;var ok=(st.sel.tur==='ms'?DUR.s:DUR.v).some(function(d){return d[0]===st.sel.dur;});if(!ok)st.sel.dur='yok';
+     $$('[data-tur]',R).forEach(function(x){x.setAttribute('aria-pressed',x===b);});$('#dzt-dur',R).innerHTML=(st.sel.tur==='ms'?DUR.s:DUR.v).map(function(d){return '<option value="'+d[0]+'"'+(d[0]===st.sel.dur?' selected':'')+'>'+d[1]+'</option>';}).join('');return;}
+   if(b=t.closest('[data-ym]')){if(st.sel.ms[b.dataset.ym])delete st.sel.ms[b.dataset.ym];else st.sel.ms[b.dataset.ym]=1;drawMs();return;}
+   if(t.closest('#dzt-tum')){st.sel.ms={};MS.slice(0,12).forEach(function(m){st.sel.ms[m]=1;});drawMs();return;}
+   if(t.closest('#dzt-ekle')){var ks=Object.keys(st.sel.ms).sort();ks.forEach(function(m){if(!st.rows.some(function(r){return r.tur===st.sel.tur&&r.ym===m;}))st.rows.push({id:nid++,tur:st.sel.tur,ym:m,dur:st.sel.dur,t:'',n:'',p:''});});
+     st.rows.sort(function(a,b){return a.ym<b.ym?-1:a.ym>b.ym?1:Object.keys(TUR).indexOf(a.tur)-Object.keys(TUR).indexOf(b.tur);});st.sel.ms={};drawMs();drawRows();
+     var f=R.querySelector('.dzt-row input[value=""]');if(f){f.focus({preventScroll:true});f.closest('.dzt-row').scrollIntoView({behavior:'smooth',block:'center'});}
+     if(window.toast)toast(ks.length+' dönem eklendi; tutarları girin');return;}
+   if(b=t.closest('[data-del]')){var id=+b.closest('.dzt-row').dataset.id;st.rows=st.rows.filter(function(r){return r.id!==id;});drawRows();return;}
+   if(t.closest('#dzt-cp')){copyText(txt(),'Sonuç kopyalandı');return;}
+   if(t.closest('#dzt-clr')){st.rows=[];drawRows();return;}});
+ function onInput(e){var t=e.target;
+   if(t.id==='dzt-m'){st.m=+t.value;upd();return;}
+   if(t.id==='dzt-t'){st.t=t.value;upd();return;}
+   if(t.id==='dzt-p'){st.pesin=t.checked;upd();return;}
+   if(t.id==='dzt-dur'){st.sel.dur=t.value;return;}
+   var el=t.closest('.dzt-row');if(!el||!t.dataset.f)return;var r=st.rows.find(function(x){return x.id===+el.dataset.id;});if(!r)return;
+   r[t.dataset.f]=t.value;
+   if(t.dataset.f==='tur'||t.dataset.f==='dur'||t.dataset.f==='ym'){if(t.dataset.f==='tur'){var ok=(r.tur==='ms'?DUR.s:DUR.v).some(function(d){return d[0]===r.dur;});if(!ok)r.dur='yok';}
+     if(e.type==='change'){var tmp=document.createElement('div');tmp.innerHTML=rowHTML(r);el.replaceWith(tmp.firstChild);upd();}return;}
+   upd();}
+ R.addEventListener('input',onInput);R.addEventListener('change',onInput);
+ draw();
+ })();
  /* devreden zinciri */
  $('#dz-chain').innerHTML='<h3>Devreden KDV zinciri</h3><p class="pnote" style="margin:0">'+esc(DZ.devreden)+'</p><div class="dz-chainv" aria-label="Örnek zincir"><div class="dz-m err"><b>Mart</b>hatalı ay<br>devreden 40.000 → 25.000</div><div class="dz-m fix"><b>Nisan</b>devreden düzelir<br>ödenecek yok</div><div class="dz-m fix"><b>Mayıs</b>devreden düzelir<br>ödenecek yok</div><div class="dz-m pay"><b>Haziran</b>devreden biter<br>8.000 TL ödenecek</div><div class="dz-m"><b>Temmuz…</b>sırayla<br>düzeltilir</div></div><p class="pnote" style="margin:0">Örnekte Mart’taki 15.000 TL’lik fazla indirim Nisan ve Mayıs’ta devredenle karşılanıyor; Haziran’da ödenecek KDV doğuyor. Haziran için pişmanlık ya da kendiliğinden kuralları uygulanır, pişmanlık zammı Haziran vadesinden (28 Temmuz) itibaren hesaplanır.</p>';
  /* bütün durumlar */
@@ -4648,7 +4832,7 @@ if(!FIREBASE_CONFIG&&!GOOGLE_CLIENT_ID)document.documentElement.classList.add('n
     kurumlar:'Vergi, SGK, tebligat ve ticaret sicili sistemlerinin bağlantıları burada.',
     sirket:'Şirket işlemlerinde istenen evraklar ve formlar burada.',
     hesapplani:'Hesap kodunu ya da adını yazın; işleyişi ve örnek kaydı açılır.',
-    duzeltme:'Durumunuzu seçin: hangi beyanname, süre içinde mi sonra mı? Adımlar ve ceza açılır.',
+    duzeltme:'Verilmeyen dönemleri işaretle: şimdi versen ne ödeyeceğin en üstte hesaplanıyor.',
     amackonu:'Sektörünüzü yazın; amaç ve konu bentlerini seçip metni kopyalayın.',
     beyanname:'Beyanname ya da SGK formunun adını yazın; adım adım nasıl doldurulacağı açılır.',
     kvkk:'Kişisel verilerin işlenmesine ilişkin aydınlatma metni.',
