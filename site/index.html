@@ -4535,6 +4535,7 @@ var DZ={
  function vadeOf(tur,ym,prim){var p=ym.split('-'),y=+p[0],m=+p[1];/* m: 1-12 → izleyen ay index m */
    if(prim)return bday(U(y,m+1,0));
    if(EXT[tur+'|'+ym])return dParse(EXT[tur+'|'+ym]);
+   if(tur==='tp'||tur==='gek')return bday(U(y,m+1,0));
    if(tur==='gec')return bday(U(y,m+1,17));
    if(tur==='gv')return bday(U(y+1,2,31));
    if(tur==='gv2')return bday(U(y+1,6,31));
@@ -4546,6 +4547,7 @@ var DZ={
    for(var q=0;q<n;q++){var o=sgkGzOran(ymOf(U(d1.getUTCFullYear(),d1.getUTCMonth()+q+1,1)));if(o[1])est=true;K*=1+o[0]/100;}
    if(d){var o2=sgkGzOran(ymOf(d2));if(o2[1])est=true;K*=1+o2[0]/100*d/30;}return {c:C-a,z:K-C,est:est};} function calc(r){var T=dParse(st.t),u=DZ.usul[st.m]||DZ.usul[0],A=DZ.asgari,o={P:{v:0,z:0,vz:0,us:0,pr:0,sg:0,ipc:0},K:{v:0,z:0,vz:0,us:0,pr:0,sg:0,ipc:0},i376:0,i376p:0,lines:[],est:false,ok:true};
    if(!T){o.ok=false;return o;}
+   if(r.tur==='gek'&&r.dur!=='ode'){r=Object.assign({},r,{dur:'ode'});o.lines.push('GEKAP’ta VUK cezaları (usulsüzlük, vergi ziyaı) ve pişmanlık uygulanmaz; tutar gecikme zammıyla ödenir. Geç beyan için Çevre, Şehircilik ve İklim Değişikliği Bakanlığı ayrıca idari para cezası uygulayabilir (burada hesaplanmadı).');}
    if(r.tur!=='ms'){var t=num(r.t)||0,V=vadeOf(r.tur,r.ym);o.vade=V;
      if(T<=V){o.P.v=o.K.v=t;o.lines.push('Süre henüz dolmadı (son gün '+trd(V)+'); ceza ya da zam yok.');o.wait=true;return o;}
      var g=dDiff(V,T),sp=span(V,T),mc=Math.max(sp.m+(sp.d>0?1:0),1),mf=sp.m+sp.d/30,gz=DZ.gz/100;o.gun=g;
@@ -4577,10 +4579,11 @@ var DZ={
    return o;}
  function sum(x){return x.v+x.z+x.vz+x.us+x.pr+x.sg+x.ipc;} var BT={kdv:['KDV beyannamesi','KDV-1 · aylık','#5B3FA8',1],kdv2:['KDV-2','Sorumlu sıfatıyla (tevkifat, yurt dışı hizmet) · aylık','#7C5CC4',1],muh:['Muhtasar ve prim hizmet (MUHSGK)','Stopaj + SGK bildirimi ve primi · aylık','#C2410C',1],
   gec:['Geçici vergi','Gelir ya da kurumlar · 3 aylık (1.–3. dönem)','#0E7490',3],gv:['Yıllık gelir vergisi','Mart’ta verilir · iki taksit','#B45309',12],kv:['Kurumlar vergisi','Nisan’da verilir','#9D174D',12],
-  dv:['Damga vergisi beyannamesi','Muhtasardan ayrı veriliyorsa · aylık','#475569',1],kon:['Konaklama vergisi','Otel, pansiyon · aylık','#0F766E',1]};
+  dv:['Damga vergisi beyannamesi','Muhtasardan ayrı veriliyorsa · aylık','#475569',1],kon:['Konaklama vergisi','Otel, pansiyon · aylık','#0F766E',1],
+  tp:['Turizm payı','Kurumlar aylık, diğerleri 3 aylık','#0369A1',1],gek:['GEKAP','Geri kazanım katılım payı · aylık','#15803D',1]};
  var BD={kdv:[['yok','Hiç verilmedi','Bu dönemlerin beyannamesi gönderilmedi'],['ode','Verildi, ödenmedi','Tahakkuk var, vergi ödenmedi'],['duz','Eksik / hatalı verildi','Düzeltme beyannamesi verilecek']],
   muh:[['yok','Hiç verilmedi','Ne stopaj ne SGK bildirimi yapıldı'],['ode','Verildi, ödenmedi','Stopaj ve/veya prim ödenmedi'],['duz','Eksik verildi','Stopaj eksik ya da personel unutuldu (ek belge)']]};
- ['kdv2','gec','gv','kv','dv','kon'].forEach(function(x){BD[x]=BD.kdv;});
+ ['kdv2','gec','gv','kv','dv','kon','tp','gek'].forEach(function(x){BD[x]=BD.kdv;});
  function PER(t){return (BT[t]||[0,0,0,1])[3];}
  function PLIST(t){var p=PER(t),o=[],cy=now.getFullYear(),cur=ymOf(U(cy,now.getMonth(),1));if(p===1)return MS.map(function(m){return [m,ymLabel(m)];});
    if(p===3){for(var y=cy;y>=cy-3;y--)for(var q=3;q>=1;q--){var ym=y+'-'+String(q*3).padStart(2,'0');if(ym<cur)o.push([ym,y+' / '+q+'. dönem ('+['Oca–Mar','Nis–Haz','Tem–Eyl'][q-1]+')']);}return o;}
@@ -4619,7 +4622,7 @@ var DZ={
  function Q(n,txt,body){return '<div class="dz-q"><b>'+n+' · '+txt+'</b>'+body+'</div>';}
  function inp(f,lab,e,hint,ym){var val=ym?V(e,ym,f):(e.v[f]||'');return '<label>'+lab+'<input data-f="'+f+'"'+(ym?' data-m="'+ym+'"':'')+' inputmode="decimal" value="'+esc(val)+'" placeholder="'+(hint||'0')+'"></label>';}
  function FL(e){/* alan listesi */
-   if(e.tur!=='muh')return [['t',e.dur==='duz'?'Eksik beyan edilen KDV farkı':({kdv:'Ödenecek KDV',kdv2:'Ödenecek KDV-2',gec:'Ödenecek geçici vergi',gv:'Hesaplanan gelir vergisi (yıllık)',kv:'Ödenecek kurumlar vergisi',dv:'Ödenecek damga vergisi',kon:'Ödenecek konaklama vergisi'}[e.tur]),'0 = ödeme çıkmıyor']];
+   if(e.tur!=='muh')return [['t',e.dur==='duz'?'Eksik beyan edilen KDV farkı':({kdv:'Ödenecek KDV',kdv2:'Ödenecek KDV-2',gec:'Ödenecek geçici vergi',gv:'Hesaplanan gelir vergisi (yıllık)',kv:'Ödenecek kurumlar vergisi',dv:'Ödenecek damga vergisi',kon:'Ödenecek konaklama vergisi',tp:'Ödenecek turizm payı',gek:'Ödenecek GEKAP'}[e.tur]),'0 = ödeme çıkmıyor']];
    if(e.dur==='yok')return [['n','Çalışan sayısı','kişi'],['k','Toplam brüt ücret','brüt TL'],['s','Toplam stopaj (GV + damga, kira, serbest meslek vb.)','TL']];
    if(e.dur==='ode')return [['s','Ödenmemiş stopaj (vergi)','TL'],['pr','Ödenmemiş SGK primi','TL']];
    return [['s','Eksik stopaj farkı (varsa)','TL'],['n','Unutulan / eksik bildirilen kişi','kişi'],['k','Bu kişilerin brüt ücreti','brüt TL']];}
@@ -4650,7 +4653,7 @@ var DZ={
    else if(s==='don'){var MO=PLIST(e.tur).map(function(m){return '<option value="'+m[0]+'">'+esc(m[1])+'</option>';}).join(''),un=PER(e.tur)===1?'ay':PER(e.tur)===3?'dönem':'yıl';
      h+='<h4 class="dzs-q">Hangi '+(un==='ay'?'aylar':un==='dönem'?'dönemler':'yıllar')+'?</h4><p class="dzs-h">İlk ve son '+un+'ı seçin, aradakiler dahil edilir.'+(e.tur==='gec'?' Yılın 4. dönemi için geçici vergi beyannamesi verilmez.':'')+'</p><div class="dzs-row"><label>İlk '+un+'<select data-f="a">'+MO.replace('value="'+e.a+'"','value="'+e.a+'" selected')+'</select></label><label>Son '+un+'<select data-f="b">'+MO.replace('value="'+e.b+'"','value="'+e.b+'" selected')+'</select></label></div><p class="dzs-h" id="dzs-cnt">'+mlist(e).length+' '+un+' seçildi.</p>'+nav('Devam');}
    else if(s==='tut'){var ms=mlist(e),F=FL(e),many=ms.length>1;
-     h+='<h4 class="dzs-q">'+(e.tur==='muh'?(e.dur==='yok'?'Çalışan ve stopaj bilgileri':e.dur==='ode'?'Ödenmeyen tutarlar':'Eksik kalanlar'):'Tutar')+'</h4><p class="dzs-h">'+(many?(e.ayni?'Her dönem için aynı tutar kabul edilir.':'Her dönemin tutarını ayrı yazın.'):'')+(e.tur==='gv'?' Beyannamede hesaplanan gelir vergisinin tamamını yazın; yarısı Mart, yarısı Temmuz vadesiyle hesaplanır.':'')+(e.tur==='gec'?' Geçici vergi, yıllık beyanname süresi geçtikten sonra artık tarh edilmez; o durumda yıllık beyannameyi seçin.':'')+(e.tur==='muh'&&e.dur==='yok'?' Stopaj: bordrodaki gelir + damga vergisi ile kira, serbest meslek kesintilerinin toplamı. Prim brütten hesaplanır.':'')+(e.tur!=='muh'&&e.dur!=='duz'?' Ödenecek çıkmıyorsa (devreden varsa) 0 yazın.':'')+'</p>';
+     h+='<h4 class="dzs-q">'+(e.tur==='muh'?(e.dur==='yok'?'Çalışan ve stopaj bilgileri':e.dur==='ode'?'Ödenmeyen tutarlar':'Eksik kalanlar'):'Tutar')+'</h4><p class="dzs-h">'+(many?(e.ayni?'Her dönem için aynı tutar kabul edilir.':'Her dönemin tutarını ayrı yazın.'):'')+(e.tur==='gv'?' Beyannamede hesaplanan gelir vergisinin tamamını yazın; yarısı Mart, yarısı Temmuz vadesiyle hesaplanır.':'')+(e.tur==='tp'?' Üç aylık verenler her dönemin son ayını (Mart, Haziran, Eylül, Aralık) seçip o dönemin toplam payını yazsın.':'')+(e.tur==='gek'?' GEKAP’ta ceza değil, yalnızca gecikme zammı hesaplanır.':'')+(e.tur==='gec'?' Geçici vergi, yıllık beyanname süresi geçtikten sonra artık tarh edilmez; o durumda yıllık beyannameyi seçin.':'')+(e.tur==='muh'&&e.dur==='yok'?' Stopaj: bordrodaki gelir + damga vergisi ile kira, serbest meslek kesintilerinin toplamı. Prim brütten hesaplanır.':'')+(e.tur!=='muh'&&e.dur!=='duz'?' Ödenecek çıkmıyorsa (devreden varsa) 0 yazın.':'')+'</p>';
      if(e.ayni||!many)h+='<div class="dzs-row">'+F.map(function(f){return inp(f[0],f[1]+(many?(PER(e.tur)===1?' · her ay':' · her dönem'):''),e,f[2]);}).join('')+'</div>';
      else h+='<div class="dzt-tbl"><table><thead><tr><th>Dönem</th>'+F.map(function(f){return '<th>'+esc(f[1])+'</th>';}).join('')+'</tr></thead><tbody>'+ms.map(function(ym){return '<tr><td>'+plbl(e.tur,ym,1)+'</td>'+F.map(function(f){return '<td><input data-f="'+f[0]+'" data-m="'+ym+'" inputmode="decimal" value="'+esc(V(e,ym,f[0]))+'" placeholder="'+f[2]+'" aria-label="'+esc(ymLabel(ym)+' '+f[1])+'"></td>';}).join('')+'</tr>';}).join('')+'</tbody></table></div>';
      if(many)h+='<button type="button" class="dzs-link" data-act="ayni">'+(e.ayni?'Tutarlar dönemden döneme farklı mı? Tek tek girin':'Hepsi aynı tutar olsun')+'</button>';
@@ -4660,7 +4663,7 @@ var DZ={
      h+='<label class="dz-chk"><input type="checkbox" data-f="cik"'+(e.cik?' checked':'')+'> Ayrılan çalışan var, işten ayrılış bildirgesi yapılmadı</label>'+(e.cik?'<div class="dzs-row"><label>İşten ayrılış tarihi<input type="date" data-f="cd" value="'+esc(e.cd)+'"></label></div>':'')+nav(e.gir===null?'':'Sonucu gör');}
    else if(s==='res'){var A=agg(e),a=sum(A.P),b=sum(A.K);
      h+='<h4 class="dzs-q">'+esc(BT[e.tur][0])+' · '+esc(perLbl(e))+'</h4>'
-      +'<div class="dzs-res"><small>Pişmanlıkla şimdi verirseniz ödenecek</small><b>'+f2(a)+' TL</b>'+(a!==b?'<em>Pişmanlık dilekçesi vermezseniz yaklaşık '+f2(b)+' TL</em>':'')+'</div>'
+      +'<div class="dzs-res"><small>'+(a===b?'Şimdi verirseniz ödenecek':'Pişmanlıkla şimdi verirseniz ödenecek')+'</small><b>'+f2(a)+' TL</b>'+(a!==b?'<em>Pişmanlık dilekçesi vermezseniz yaklaşık '+f2(b)+' TL</em>':'')+'</div>'
       +'<table class="dzs-t">'+simple(A).map(function(r){return '<tr><td>'+r[0]+'</td><td>'+f2(r[1])+'</td></tr>';}).join('')+'</table>'
       +'<details class="dzs-det"><summary>Ay ay ayrıntı</summary>'+resHTML(A,true).replace(/^<div class="v">[\s\S]*?<\/div>/,'').replace('<details>','<div>').replace('</details>','</div>').replace(/<summary>.*?<\/summary>/,'')+'</details>'
       +'<div class="dzs-end"><button type="button" class="dzt-btn" data-act="more">+ Başka beyanname ekle</button><button type="button" class="dzt-btn alt" data-act="done">Bitti, toplamı göster</button></div>'+nav();}
