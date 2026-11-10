@@ -1952,13 +1952,26 @@ section[data-view] a{overflow-wrap:anywhere}
     <div class="wrap">
       <div class="sec-head rv"><div><span class="eyebrow">Sitemizde</span><h2>Araçlar ve belgeler.</h2></div><p>Başlığa tıklayın, ilgili sayfa açılsın.</p></div>
       <div class="hub">
-        <a class="hub-card rv" href="#hesaplamalar"><span class="hub-ico"><svg><use href="#i-calc"/></svg></span><b>Hesaplamalar</b><span>KDV, tevkifat, kıdem, ihbar, kira stopajı ve daha fazlası</span><em>47 araç</em></a>
-        <a class="hub-card rv" href="#dilekceler"><span class="hub-ico"><svg><use href="#i-word"/></svg></span><b>Dilekçe ve formlar</b><span>Doldurun, yazdırın, Word olarak indirin</span><em>111 belge</em></a>
+        <a class="hub-card rv" href="#hesaplamalar"><span class="hub-ico"><svg><use href="#i-calc"/></svg></span><b>Hesaplamalar</b><span>KDV, tevkifat, kıdem, ihbar, kira stopajı ve daha fazlası</span><em data-cnt="h">50 araç</em></a>
+        <a class="hub-card rv" href="#dilekceler"><span class="hub-ico"><svg><use href="#i-word"/></svg></span><b>Dilekçe ve formlar</b><span>Doldurun, yazdırın, Word olarak indirin</span><em data-cnt="d">111 belge</em></a>
         <a class="hub-card rv" href="#tablolar"><span class="hub-ico xl">XLS</span><b>Excel tabloları</b><span>Formülleri hazır ön muhasebe tabloları</span><em>20 tablo</em></a>
         <a class="hub-card rv" href="#beyanname"><span class="hub-ico xl">GİB</span><b>Beyanname ve SGK</b><span>Beyanname ve SGK formları adım adım nasıl doldurulur</span><em>Rehber</em></a>
         <a class="hub-card rv" href="#piyasa"><span class="hub-ico"><svg><use href="#i-tax"/></svg></span><b>Piyasalar ve raporlar</b><span>Döviz kurları ve resmî raporlar</span><em>Canlı</em></a>
         <a class="hub-card rv" href="#duyurular"><span class="hub-ico"><svg><use href="#i-chat"/></svg></span><b>Duyurular</b><span>Büromuzdan ve mevzuattan haberler</span><em>Güncel</em></a>
         <a class="hub-card rv" href="#hakkimizda"><span class="hub-ico"><svg><use href="#i-shield"/></svg></span><b>Hakkımızda</b><span>Büro bilgileri ve sık sorulan sorular</span><em>Büro</em></a>
+      </div>
+      <div class="sec-head rv" style="margin-top:34px"><div><span class="eyebrow">Rehberler</span><h2>Rehberler ve bilgi sayfaları.</h2></div><p>Mevzuat, süreler ve uygulama örnekleri.</p></div>
+      <div class="hub">
+        <a class="hub-card rv" href="#gecbeyan"><span class="hub-ico"><svg><use href="#i-calc"/></svg></span><b>Beyanname vermeme cezası</b><span>Verilmeyen ya da düzeltilecek beyanname: vergi, zam, ceza ve SGK hesabı</span><em>Hesapla</em></a>
+        <a class="hub-card rv" href="#duzeltme"><span class="hub-ico"><svg><use href="#i-book"/></svg></span><b>Düzeltme beyannamesi ve geç beyan</b><span>KDV ve MUHSGK’da hangi durumda ne yapılır, adım adım</span><em>Rehber</em></a>
+        <a class="hub-card rv" href="#pratik"><span class="hub-ico"><svg><use href="#i-info"/></svg></span><b>Pratik bilgiler</b><span>2026 tutarları, oranları ve süreleri tek sayfada</span><em>2026</em></a>
+        <a class="hub-card rv" href="#sirket"><span class="hub-ico"><svg><use href="#i-building"/></svg></span><b>Şirket işlemleri</b><span>Ticaret sicili, İTO ve şirket kararları</span><em>Rehber</em></a>
+        <a class="hub-card rv" href="#amackonu"><span class="hub-ico"><svg><use href="#i-store"/></svg></span><b>Amaç ve konu maddeleri</b><span>Şirket kuruluşu için sektör sektör hazır bentler</span><em>Kuruluş</em></a>
+        <a class="hub-card rv" href="#hesapplani"><span class="hub-ico"><svg><use href="#i-table"/></svg></span><b>Hesap planı</b><span>Tek Düzen Hesap Planı ve hesapların işleyişi</span><em>TDHP</em></a>
+        <a class="hub-card rv" href="#belgeler"><span class="hub-ico"><svg><use href="#i-badge"/></svg></span><b>Belge örnekleri</b><span>SMMM raporları ve ticaret sicili örnekleri</span><em>Örnek</em></a>
+        <a class="hub-card rv" href="#programlar"><span class="hub-ico"><svg><use href="#i-download-app"/></svg></span><b>Resmî programlar</b><span>BDP, e-defter, e-imza ve mali mühür</span><em>Kurulum</em></a>
+        <a class="hub-card rv" href="#takvim"><span class="hub-ico"><svg><use href="#i-cal"/></svg></span><b>Vergi takvimi</b><span>Beyanname ve ödeme son günleri</span><em>Takvim</em></a>
+        <a class="hub-card rv" href="#yazilar"><span class="hub-ico"><svg><use href="#i-chat"/></svg></span><b>Yazılar</b><span>Güncel mevzuat yazıları ve muhasebe kayıtları</span><em>Güncel</em></a>
       </div>
     </div>
   </section>
@@ -2723,7 +2736,7 @@ var TOOLS=[
    var gun=dDiff(b,e)+1;if(gun<=0)return{rows:[['Rapor süresi','Bitiş, başlangıçtan önce olamaz']]};
    function fd(d){return String(d.getUTCDate()).padStart(2,'0')+'.'+String(d.getUTCMonth()+1).padStart(2,'0')+'.'+d.getUTCFullYear();}
    function ad(d,n){return new Date(d.getTime()+n*864e5);}
-   var ASG=33030,gt=ASG/30,gu=ASG*9/30,gk=k/30,cap='';
+   var ASG=window.DZASG||33030,gt=ASG/30,gu=ASG*9/30,gk=k/30,cap='';
    if(gk>gu){gk=gu;cap=' (üst sınır: günlük '+tl(gu)+')';}
    if(g<180&&gk>2*gt){gk=2*gt;cap=' (180 günden az prim: en çok günlük asgarinin 2 katı = '+tl(2*gt)+')';}
    if(gk<gt){gk=gt;cap=' (alt sınır: günlük asgari '+tl(gt)+')';}
@@ -3692,7 +3705,7 @@ function shareText(title,t){openShare(title,t);}
 })();
 
 /* ---------- güncel oranlar (oranlar.json ile güncellenir) ---------- */
-window.oranUygula=function(j){if(!j)return;if(j.kidemTavan)ORAN.kidemTavan=j.kidemTavan;if(j.gz)ORAN.gz=j.gz;if(j.kira)ORAN.kira=j.kira;if(j.guncelleme)ORAN.guncelleme=j.guncelleme;
+window.oranUygula=function(j){window.__ORAN=j;if(j&&j.gecbeyan&&window.__dzApply)window.__dzApply(j.gecbeyan);if(!j)return;if(j.kidemTavan)ORAN.kidemTavan=j.kidemTavan;if(j.gz)ORAN.gz=j.gz;if(j.kira)ORAN.kira=j.kira;if(j.guncelleme)ORAN.guncelleme=j.guncelleme;
   if(j.P26&&typeof P26!=='undefined')Object.keys(j.P26).forEach(function(k){var v=j.P26[k];if(k==='dil'&&Array.isArray(v))v=v.map(function(r){return [r[0]==null?Infinity:r[0],r[1]];});P26[k]=v;});
   if(j.sgkGz&&typeof SGK_GZ!=='undefined')Object.keys(j.sgkGz).forEach(function(k){SGK_GZ[k]=j.sgkGz[k];});
   if(j.pratik&&typeof PRATIK!=='undefined'){Object.keys(j.pratik).forEach(function(k){var c=j.pratik[k],i=PRATIK.findIndex(function(x){return x.k===k;});if(c===null){if(i>-1)PRATIK.splice(i,1);return;}if(i>-1)PRATIK[i]=Object.assign({},PRATIK[i],c);else PRATIK.push(Object.assign({k:k},c));});if(window.renderPratik)renderPratik();}
@@ -4724,6 +4737,8 @@ var DZ={
    if(f==='cik'){if(ev.type!=='change')return;e.cik=t.checked;drawStep();return;}
    if(f==='gd'||f==='cd'){e[f]=t.value;return;}
    if(t.dataset.m){(e.d[t.dataset.m]=e.d[t.dataset.m]||{})[f]=t.value;}else e.v[f]=t.value;}
+ window.__dzApply=function(g){try{if(!g)return;if(g.gz)DZ.gz=+g.gz;if(g.asgari){DZ.asgari=+g.asgari;window.DZASG=+g.asgari;}if(g.usul&&g.usul.length===6)DZ.usul=g.usul;if(g.guncelleme)DZ.guncelleme=g.guncelleme;(g.hol||[]).forEach(function(x){HOL[x]=1;});if(g.ext)Object.keys(g.ext).forEach(function(k){EXT[k]=g.ext[k];});all();}catch(e){}};
+ if(window.__ORAN&&window.__ORAN.gecbeyan)window.__dzApply(window.__ORAN.gecbeyan);
  R.addEventListener('input',onInput);R.addEventListener('change',onInput);
  R.addEventListener('keydown',function(ev){if(ev.key==='Enter'&&ev.target.matches('input[data-f]')){ev.preventDefault();var n=$('[data-act="next"]',R);if(n)n.click();}});
  draw();
@@ -5376,5 +5391,6 @@ document.addEventListener('keydown',function(e){if(e.key!=='Enter'||e.defaultPre
 
 })();
 </script>
+<script>(function(){function c(){var h=new Set([].map.call(document.querySelectorAll('#hesaplamalar [data-k]'),function(e){return e.dataset.k;})).size,d=new Set([].map.call(document.querySelectorAll('#dilekceler [data-k]'),function(e){return e.dataset.k;})).size;var a=document.querySelector('[data-cnt="h"]'),b=document.querySelector('[data-cnt="d"]');if(a&&h>5)a.textContent=h+' araç';if(b&&d>5)b.textContent=d+' belge';}setTimeout(c,1500);setTimeout(c,5000);})();</script>
 
 </html>

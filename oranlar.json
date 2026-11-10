@@ -268,5 +268,52 @@
    ],
    "note": "Ödenen geçici vergi yıllık gelir/kurumlar vergisinden mahsup edilir. 2025–2027’de enflasyon düzeltmesi yapılmaz (7571 s. Kanun); amortismana tabi varlıklar için VUK mük. 298/Ç yeniden değerlemesi isteğe bağlıdır. Dönem sonu kontrol listesi: Excel bölümünde."
   }
+ },
+ "gecbeyan": {
+  "aciklama": "Geç beyan / beyanname vermeme cezası hesaplayıcısı (#gecbeyan) ve rapor parası (#h-raporparasi) için. gz: aylık gecikme ve pişmanlık zammı (%); asgari: brüt asgari ücret (SGK idari para cezası ve rapor parası hesabı); usul: VUK 352 genel usulsüzlük cezaları [ad, 1. derece, 2. derece] sırası sabit (sermaye şirketleri, 1. sınıf, 2. sınıf, diğer beyanname veren, basit usul, muaf esnaf); hol: son günü kaydıran resmî tatiller (YYYY-AA-GG; tam gün); ext: GİB süre uzatmaları {'tur|YYYY-AA':'YYYY-AA-GG'} tur: kdv, kdv2, mv (muhtasar vergi), ms (muhtasar SGK belge), dv, kon, tp, gek, gec, gv, kv.",
+  "guncelleme": "10.11.2026",
+  "gz": 3.7,
+  "asgari": 33030,
+  "usul": [
+   [
+    "Sermaye şirketleri",
+    35000,
+    17000
+   ],
+   [
+    "1. sınıf tüccar ve serbest meslek erbabı",
+    17000,
+    8700
+   ],
+   [
+    "2. sınıf tüccar",
+    8700,
+    6000
+   ],
+   [
+    "Diğer beyanname veren gelir vergisi mükellefleri",
+    6000,
+    4000
+   ],
+   [
+    "Basit usul",
+    4000,
+    2600
+   ],
+   [
+    "Gelir vergisinden muaf esnaf",
+    2600,
+    1700
+   ]
+  ],
+  "hol": [],
+  "ext": {
+   "kdv|2026-04": "2026-06-05",
+   "kdv2|2026-04": "2026-06-05",
+   "mv|2026-04": "2026-06-03",
+   "ms|2026-04": "2026-06-03",
+   "dv|2026-04": "2026-06-03",
+   "kon|2026-04": "2026-06-03"
+  }
  }
 }
