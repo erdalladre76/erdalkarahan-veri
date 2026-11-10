@@ -4586,8 +4586,8 @@ var DZ={
   gec:['Geçici vergi','Gelir ya da kurumlar · 3 aylık (1.–3. dönem)','#0E7490',3],gv:['Yıllık gelir vergisi','Mart’ta verilir · iki taksit','#B45309',12],kv:['Kurumlar vergisi','Nisan’da verilir','#9D174D',12],
   dv:['Damga vergisi beyannamesi','Muhtasardan ayrı veriliyorsa · aylık','#475569',1],kon:['Konaklama vergisi','Otel, pansiyon · aylık','#0F766E',1],
   tp:['Turizm payı','Kurumlar aylık, diğerleri 3 aylık','#0369A1',1],gek:['GEKAP','Geri kazanım katılım payı · aylık','#15803D',1]};
- var BD={kdv:[['yok','Hiç verilmedi','Bu dönemlerin beyannamesi gönderilmedi'],['ode','Verildi ama vergi ödenmedi','Beyanname zamanında verildi; ceza yok, sadece gecikme zammı'],['duz','Eksik / hatalı verildi','Düzeltme beyannamesi verilecek']],
-  muh:[['yok','Hiç verilmedi','Ne stopaj ne SGK bildirimi yapıldı'],['ode','Verildi ama ödenmedi','Stopaj ya da SGK primi ödenmedi; ceza yok, sadece gecikme zammı'],['duz','Eksik verildi','Stopaj eksik ya da personel unutuldu (ek belge)']]};
+ var BD={kdv:[['yok','Hiç verilmedi','Bu dönemlerin beyannamesi gönderilmedi'],['duz','Eksik / hatalı verildi','Düzeltme beyannamesi verilecek']],
+  muh:[['yok','Hiç verilmedi','Ne stopaj ne SGK bildirimi yapıldı'],['duz','Eksik verildi','Stopaj eksik ya da personel unutuldu (ek belge)']]};
  ['kdv2','gec','gv','kv','dv','kon','tp','gek'].forEach(function(x){BD[x]=BD.kdv;});
  function PER(t){return (BT[t]||[0,0,0,1])[3];}
  function PLIST(t){var p=PER(t),o=[],cy=now.getFullYear(),cur=ymOf(U(cy,now.getMonth(),1));if(p===1)return MS.map(function(m){return [m,ymLabel(m)];});
