@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-04",
+ "guncelleme": "2026-11-10",
  "aciklama": "Kurumlar (p:1 olmayan gruplar), Resmî Programlar (p:1 gruplar) ve Belge Örnekleri sayfalarının linkleri. Her öğe [Ad, Açıklama, URL]. Yalnızca resmî kurum adresleri.",
  "kurumlar": [
   {
@@ -627,6 +627,254 @@
   }
  ],
  "belgeler": [
+  {
+   "g": "GİB beyanname formları ve bildirimler (resmî)",
+   "c": "#2F4FA8",
+   "ic": "i-gov",
+   "src": "GİB",
+   "items": [
+    [
+     "İşe başlama / bırakma bildirimi",
+     "Mükellefiyet açılış ve kapanış",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/isebaslama_birakmabildirimi.xls"
+    ],
+    [
+     "Yıllık gelir vergisi beyannamesi",
+     "Genel form",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/1901_ac_ornek_Nolu_Yil_Gel_Ver_Bey.xls"
+    ],
+    [
+     "Yıllık gelir vergisi beyannamesi eki",
+     "Mart ayında beyan edenler",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/2042_ac_ornek_Nolu_Yil_Gel_Ver_Bey_Eki.xls"
+    ],
+    [
+     "Yıllık gelir vergisi beyannamesi (ücret, GMSİ, MSİ, diğer)",
+     "Geliri yalnız bunlardan oluşanlar",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/Yil_Gel_Ver_Bey_1001_D.xls"
+    ],
+    [
+     "Yıllık gelir vergisi beyannamesi eki (ücret, GMSİ, MSİ, diğer)",
+     "Ek form",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/Yil_Gel_Ver_Bey_EkD.xls"
+    ],
+    [
+     "Yıllık gelir vergisi beyannamesi (yalnız kira geliri)",
+     "Geliri sadece GMSİ olanlar",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/Yil_Gel_Ver_Bey_1001B.xls"
+    ],
+    [
+     "Gayrimenkul sermaye iradına ilişkin ek föy",
+     "Kira geliri ek föyü",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/gmsi_ek_foy_1001_f1.xls"
+    ],
+    [
+     "Ticari kârdan mali kâra ulaşım tablosu",
+     "Bilanço esasına göre defter tutanlar",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/2035_l_ornek_Nolu_Bil_Esas_Gore_Def_Tut_Muk_Bil.xlsx"
+    ],
+    [
+     "Yıllık gelir vergisi beyannamesi (GVK geçici 67/11)",
+     "Geçici 67. madde kapsamı",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/Gec_67.xls"
+    ],
+    [
+     "Zirai kazançlara ait bildirim",
+     "Zirai kazanç",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/Zirai_Kazanclara_Ait_Bildirim.xls"
+    ],
+    [
+     "Geçici vergi beyannamesi (gelir vergisi)",
+     "Gelir vergisi mükellefleri",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/Gecici_Vergi_Bey_Gel_2006.xls"
+    ],
+    [
+     "Kurumlar vergisi beyannamesi",
+     "Yıllık",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/Kur_Ver_2025.xls"
+    ],
+    [
+     "Geçici vergi beyannamesi (kurumlar vergisi)",
+     "Kurumlar vergisi mükellefleri",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/Gecici_Vergi_Bey_Kur_2010.xls"
+    ],
+    [
+     "Kurum ortakları ve yönetim kurulu üyeleri bildirimi",
+     "Kurumlar vergisi eki",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/Kur_ortak2021.xls"
+    ],
+    [
+     "Yabancı para pozisyonuna ilişkin bilgi formu",
+     "Kurumlar vergisi eki",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/yabanci_para_bilgi_formu.doc"
+    ],
+    [
+     "Transfer fiyatlandırması, KYK ve örtülü sermaye formu",
+     "Kurumlar vergisi eki",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/2sernotransferbasbakanlik.doc"
+    ],
+    [
+     "KDV beyannamesi 1 (gerçek usul)",
+     "Aylık KDV",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/bey_kdv1_2023.xls"
+    ],
+    [
+     "KDV beyannamesi 1 (THK katılma payı sorumluları)",
+     "Türk Hava Kurumu payı",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/THK_bildirimi.xls"
+    ],
+    [
+     "1 No.lu KDV beyannamesi doldurma açıklamaları ve işlem kodları",
+     "PDF rehber",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/2047_c.pdf"
+    ],
+    [
+     "KDV beyannamesi 2 (vergi sorumluları)",
+     "Tevkifat, sorumlu sıfatıyla KDV",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/bey_kdv2_2006.xls"
+    ],
+    [
+     "Muhtasar beyanname",
+     "GVK 94, KVK 15-30, damga vergisi",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/muhtasarbeyanname.xls"
+    ],
+    [
+     "ÖTV beyannamesi 1 (I sayılı liste)",
+     "Petrol ürünleri ve doğal gaz",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/bey_otv_1.xls"
+    ],
+    [
+     "ÖTV beyannamesi 2A (kara taşıtları)",
+     "II sayılı liste, kayıt ve tescile tabi kara taşıtları",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/bey_otv_kara2a.xls"
+    ],
+    [
+     "ÖTV kara taşıtları bildirim formu",
+     "İthalatçılar ve imalatçılar",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/bey_otv_bildirimformu2a.doc"
+    ],
+    [
+     "ÖTV beyannamesi 2A (deniz taşıtları)",
+     "II sayılı liste",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/bey_otv_deniz2a.xls"
+    ],
+    [
+     "ÖTV beyannamesi 2A (hava taşıtları)",
+     "II sayılı liste",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/bey_otv_hava2a.xls"
+    ],
+    [
+     "ÖTV beyannamesi 2B",
+     "II sayılı liste",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/bey_otv_2b.xls"
+    ],
+    [
+     "ÖTV beyannamesi 4 (dayanıklı tüketim ve diğer mallar)",
+     "IV sayılı liste",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/bey_otv_4.xls"
+    ],
+    [
+     "Harç beyannamesi (1 No.lu)",
+     "Tapuda kayıtlı olmayan gayrimenkuller",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/1_nolu_Harc_Bey.xls"
+    ],
+    [
+     "Harç beyannamesi (4 No.lu)",
+     "492 sayılı Harçlar Kanunu",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/4_nolu_Harc_Bey.xls"
+    ],
+    [
+     "Damga vergisi beyannamesi (makbuz karşılığı)",
+     "Örnek No 1926-g ve kod cetveli",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/damga_1.xls"
+    ],
+    [
+     "Özel iletişim vergisi beyannamesi",
+     "ÖİV",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/OIVBeyannamesi.xls"
+    ],
+    [
+     "Şans oyunları vergisi beyannamesi",
+     "",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/bey_sans_oyun.xls"
+    ],
+    [
+     "Hizmet vergisi beyannamesi (sigorta muameleleri)",
+     "BSMV / SMV",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/Hizmet_Vergisi_Beyannamesi_Sigorta.xls"
+    ],
+    [
+     "Hizmet vergisi beyannamesi (banka muameleleri)",
+     "BSMV",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/Hizmet_Vergisi_Beyannamesi_Banka.xls"
+    ],
+    [
+     "Deniz araçlarında vergisiz yakıt devri beyannamesi",
+     "",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/deniz_araclarina_ait_bey.doc"
+    ],
+    [
+     "ÖTV beyannamesi 3A (alkollü içkiler)",
+     "III sayılı liste",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/bey_otv_3a.xls"
+    ],
+    [
+     "ÖTV beyannamesi 3B (tütün mamulleri)",
+     "III sayılı liste",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/bey_otv_3b.xls"
+    ],
+    [
+     "ÖTV beyannamesi 3C (kolalı gazoz)",
+     "III sayılı liste",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/bey_otv_3c.xls"
+    ],
+    [
+     "Veraset ve intikal vergisi beyannamesi",
+     "",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/veraset2006.xls"
+    ],
+    [
+     "Veraset ve intikal vergisi beyannamesi (sorumlular)",
+     "Vergi sorumluları için",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/veraset_sorumlu.xls"
+    ],
+    [
+     "Özel beyanname (dar mükellef kurumlar)",
+     "Dar mükellefiyet",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/Ozel_beyan_2008.xls"
+    ],
+    [
+     "Münferit beyanname (dar mükellefler)",
+     "Dar mükellefiyet",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/Munferit_beyan_2009.doc"
+    ],
+    [
+     "Bilirkişi, arabulucu ve uzlaştırmacı ödemeleri formu",
+     "",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/uygulamaicgen2008_6ek.doc"
+    ],
+    [
+     "Ekim ve sayım tutanağı",
+     "",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/tutanak7401c.doc"
+    ],
+    [
+     "Noterlerce makbuz karşılığı ödemelere ait beyanname",
+     "1512 sayılı Kanun",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/noter_beyannamesi.xls"
+    ],
+    [
+     "Mal bildirimi kâğıdı (amme borçluları)",
+     "6183 sayılı Kanun",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/Mal_Bildirimi_Kagidi.pdf"
+    ],
+    [
+     "Peşin fiyatlandırma anlaşması başvuru formu",
+     "Transfer fiyatlandırması",
+     "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv/yardim-kaynaklar/pdfs/ise-baslama-birakma/Pesin_Fiyatlandirma_Formu.docx"
+    ]
+   ]
+  },
   {
    "g": "Mali müşavir (SMMM) rapor örnekleri",
    "c": "#5B3FA8",
