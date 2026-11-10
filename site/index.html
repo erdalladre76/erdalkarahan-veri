@@ -4500,7 +4500,7 @@ var DZ={
     +'<table class="dz-mini">'+x.ceza.map(function(r){return '<tr><td>'+esc(r[0])+'</td><td>'+esc(r[1])+'</td></tr>';}).join('')+'</table>'
     +'<div class="dz-pay"><b>Ödeme:</b> '+esc(x.odeme)+'</div>'+(x.ornek?ornek(x.ornek):'')+'</div></article>';}
  function q(name,title,opts){return '<div class="dz-q"><b>'+title+'</b><div class="dz-opts">'+opts.map(function(o){return '<button type="button" class="dz-opt" data-q="'+name+'" data-v="'+o[0]+'" aria-pressed="'+(st[name]===o[0])+'"><b>'+esc(o[1])+'</b><small>'+esc(o[2])+'</small></button>';}).join('')+'</div></div>';}
- function drawW(){var h='<h3>Durumunuzu seçin</h3><p>Dört soruda hangi yolun izleneceğini, cezayı ve ödeme süresini gösterir.</p>'+q('b','1 · Hangi beyanname?',DZ.sorular.b)+q('d','2 · Ne oldu?',DZ.sorular.d);
+ function drawW(){var h='<h3>Ne yapmalıyım? Adım adım rehber</h3><p>Bu bölüm tutar hesaplamaz; hangi beyannamenin nasıl verileceğini, e-Beyan’da neyin seçileceğini ve son günleri anlatır. Ödenecek tutar için yukarıdaki <a href="#gecbeyan">Hesapla</a> düğmesini kullanın.</p>'+q('b','1 · Hangi beyanname?',DZ.sorular.b)+q('d','2 · Ne oldu?',DZ.sorular.d);
    if(st.d&&st.d!=='ode')h+=q('s','3 · Süre',DZ.sorular.s);
    if(st.d&&st.d!=='ode'&&st.s==='sonra'){var e=DZ.sorular.e[st.b];if(st.d==='yok')e=st.b==='kdv'?[['art','Ödenecek KDV var','Beyannamede ödenecek çıkıyor'],['dev','Ödenecek çıkmıyor','Devreden ya da iade']]:null;if(e)h+=q('e','4 · Etkisi',e);}
    var k=key(st);h+='<div class="dz-res">'+(k&&DZ.sen[k]?card(k):'')+'</div>';W.innerHTML=h;}
