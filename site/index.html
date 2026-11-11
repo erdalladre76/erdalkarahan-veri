@@ -3456,7 +3456,7 @@ KARARLAR.forEach(function(x){var F=[T('firma','Şirket unvanı',{val:x.g.indexOf
 var DOCSHELL=gshell($('#docs'),DOCS,renderDoc,null);
 /* ---------- Şirket işlemleri sihirbazı ---------- */
 (function(){var W=document.getElementById('ss-wiz');if(!W)return;
- var KEY='ek-sirketsih',st={},inp={};try{st=JSON.parse(sessionStorage.getItem(KEY)||'{}')||{};}catch(e){}
+ var KEY='ek-sirketsih',st={},inp={};try{sessionStorage.removeItem(KEY);}catch(e){}
  var KM={};(typeof KARARLAR!=='undefined'?KARARLAR:[]).forEach(function(x){KM[x.k]=x;});
  /* 2026 ücretleri */
  var HARC={deg:8598.80,temsil:8598.80,sube:35354.50,nakil:35354.50,sil:2707.50},HIZ={pay:3440,sermaye:3440},KELIME=5.53,REK=0.0004;
@@ -3578,7 +3578,8 @@ var DOCSHELL=gshell($('#docs'),DOCS,renderDoc,null);
   h+='</div></article>';W.innerHTML=h;save();
   ['kel','imz','bed','ser','sm','onay'].forEach(function(x){var e=document.getElementById('ss-'+x);if(e)e.addEventListener(e.tagName==='SELECT'?'change':'input',function(){inp[x]=e.value;document.getElementById('ss-out').innerHTML=ucretHtml(ucret(plan()));});});}
  function ucretHtml(U){var g='';return '<table class="dz-mini ss-tb"><tr><th>Kalem</th><th>Açıklama</th><th>Tutar</th></tr>'+U.R.map(function(r){var s=r[0]!==g;g=r[0];return '<tr><td>'+(s?'<b>'+esc2(r[0])+'</b>':'')+'</td><td>'+esc2(r[1])+'</td><td class="r">'+tl(r[2])+'</td></tr>';}).join('')+'<tr><td></td><td>Ticaret sicili toplamı</td><td class="r">'+tl(U.ts)+'</td></tr><tr><td></td><td>Noter toplamı</td><td class="r">'+tl(U.nt)+'</td></tr><tr><td></td><td>Mali müşavir (KDV dahil)</td><td class="r">'+tl(U.sm)+'</td></tr><tr class="ss-top"><td></td><td><b>Genel toplam (yaklaşık)</b></td><td class="r"><b>'+tl(U.top)+'</b></td></tr></table>';}
- function save(){try{sessionStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+ function save(){}
+ window.addEventListener('hashchange',function(){if(location.hash.replace('#','')!=='sirket'&&(Object.keys(st).length||Object.keys(inp).length)){st={};inp={};draw();}});
  W.addEventListener('click',function(ev){var b=ev.target.closest('.dz-opt');if(b){var k=b.dataset.q;st[k]=b.dataset.v;var L=steps();L.slice(L.indexOf(k)+1).forEach(function(x){delete st[x];});Object.keys(st).forEach(function(x){if(steps().indexOf(x)<0)delete st[x];});inp={};draw();W.scrollIntoView({behavior:'smooth',block:'start'});return;}
   var c=ev.target.closest('[data-back]');if(c){var L2=steps();L2.slice(L2.indexOf(c.dataset.back)).forEach(function(x){delete st[x];});inp={};draw();return;}
   if(ev.target.closest('.ak-reset')){st={};inp={};draw();}});
