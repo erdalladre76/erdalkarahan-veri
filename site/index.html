@@ -5330,7 +5330,7 @@ document.addEventListener('keydown',function(ev){if(ev.key!=='Tab'||ev.shiftKey|
    $('#es-prev',R).hidden=step===0&&!DN;if(step===0&&!DN)$('#es-prev',R).style.setProperty('display','none','important');else $('#es-prev',R).style.removeProperty('display');$('#es-prev',R).textContent=DN?'✎ Bilgileri düzenle':'← Önceki adım';$('#es-next',R).hidden=DN;$('#es-next',R).textContent=step===STEPS.length-1?'✓ Esas sözleşmeyi oluştur':'Sonraki adım →';
    prev();}
  function readyHtml(){var W=warns();return '<div class="es-ready"><div class="es-rh"><span aria-hidden="true">✓</span><div><h3>Esas sözleşmeniz hazır</h3><p>'+e((st.unvan?U(st.unvan)+' ':'')+(LTD()?'LİMİTED ŞİRKETİ':'ANONİM ŞİRKETİ'))+' · '+kurL().length+' ortak · '+(sermaye()?mny(sermaye())+' TL sermaye':'sermaye girilmedi')+' · '+amacL().length+' amaç bendi'+(W.length?' · <b>'+W.length+' uyarı</b>':'')+'</p></div></div>'
-   +'<div class="fb-act"><button type="button" class="btn btn-ink" data-a="dl">⬇ İndir (PDF · Word)</button><button type="button" class="btn btn-line" data-a="share">Paylaş</button><button type="button" class="btn btn-line" data-a="print">Yazdır</button><button type="button" class="btn btn-line" data-a="copy">Metni kopyala</button><button type="button" class="btn btn-line" data-a="blank">Boş tip sözleşme yazdır</button></div>'
+   +'<div class="fb-act"><button type="button" class="btn btn-ink" data-a="dl">⬇ İndir (PDF · Word)</button><button type="button" class="btn btn-line" data-a="share">Paylaş</button><button type="button" class="btn btn-line" data-a="print">Yazdır</button><button type="button" class="btn btn-line" data-a="copy">Metni kopyala</button><button type="button" class="btn btn-line" onclick="window.ekTaslakSave&&ekTaslakSave(\'amackonu\')" title="Sonra düzeltmek için bilgileri bilgisayarınıza kaydeder">💾 Taslağı kaydet</button><button type="button" class="btn btn-line" data-a="blank">Boş tip sözleşme yazdır</button></div>'
    +'<div class="es-links"><a href="https://mersis.ticaret.gov.tr" target="_blank" rel="noopener">MERSİS’te kuruluş başvurusu ↗</a><a href=\'https://www.ticaretsicil.gov.tr/view/hizlierisim/unvansorgulama.php\' target="_blank" rel="noopener">Unvan sorgula ↗</a><a href="https://www.ticaretsicil.gov.tr/view/hizlierisim/ilangoruntuleme.php" target="_blank" rel="noopener">Ticaret Sicili Gazetesi ilan görüntüleme ↗</a></div></div>';}
  function prev(){st.kur.forEach(function(k,i){var el=document.getElementById('es-pay'+i);if(el)el.innerHTML=payTxt(i);});var d=document.getElementById('es-doc');if(d){d.innerHTML=doc(false);fit(d);}
    var DN0=R.classList.contains('es-done'),W=warns().filter(function(x){var k=/unvan/i.test(x)?1:/amaç ve konu/i.test(x)?3:/müdür|yönetim kurulu üye/i.test(x)?4:2,eksik=/^Unvanı yazın|henüz bent yok/.test(x);return DN0||k<step||(k===step&&!eksik);}),w=document.getElementById('es-warn');if(w)w.hidden=!W.length&&!DN0;if(w)w.innerHTML=W.length?'<b>Kontrol edin:</b><ul>'+W.map(function(x){return '<li>'+e(x)+'</li>';}).join('')+'</ul>':'<b>✓ Zorunlu bilgiler tamam görünüyor.</b> Metni ticaret sicili müdürlüğünün güncel uygulamasına göre son kez kontrol edin.';
@@ -5460,7 +5460,7 @@ document.addEventListener('keydown',function(ev){if(ev.key!=='Tab'||ev.shiftKey|
      +'<label class="es-chk"><input type="checkbox" data-c="rekabet"'+(st.rekabet==='1'?' checked':'')+'> Rekabet yasağı maddesi ekle (ortaklar aynı işi ayrıca yapamaz)</label></div>'
      +'<div class="fb-sec"><h4>Ek maddeler (isteğe bağlı)</h4>'+st.ek.map(function(x,i){return '<div class="fb-line es-line">'+lf('ek',i,'b','Madde başlığı',{ph:'Araç kullanımı'})+lf('ek',i,'m','Madde metni',{area:1,w:1})+'<button type="button" class="fb-del" data-dl="ek" data-i="'+i+'" aria-label="Sil">×</button></div>';}).join('')+'<button type="button" class="fb-add" data-a="ek">+ Madde ekle</button></div>';}
  function readyHtml(){var W=warns(),ttl=IS()?'İş ortaklığı sözleşmeniz hazır':'Adi ortaklık sözleşmeniz hazır';return '<div class="es-ready"><div class="es-rh"><span aria-hidden="true">✓</span><div><h3>'+ttl+'</h3><p>'+e(oAd()||'')+' · '+kurL().length+' ortak'+(W.length?' · <b>'+W.length+' uyarı</b>':'')+'</p></div></div>'
-   +'<div class="fb-act"><button type="button" class="btn btn-ink" data-a="dl">⬇ İndir (PDF · Word)</button><button type="button" class="btn btn-line" data-a="share">Paylaş</button><button type="button" class="btn btn-line" data-a="print">Yazdır</button><button type="button" class="btn btn-line" data-a="copy">Metni kopyala</button></div>'
+   +'<div class="fb-act"><button type="button" class="btn btn-ink" data-a="dl">⬇ İndir (PDF · Word)</button><button type="button" class="btn btn-line" data-a="share">Paylaş</button><button type="button" class="btn btn-line" data-a="print">Yazdır</button><button type="button" class="btn btn-line" data-a="copy">Metni kopyala</button><button type="button" class="btn btn-line" onclick="window.ekTaslakSave&&ekTaslakSave(\'ortaklik\')" title="Sonra düzeltmek için bilgileri bilgisayarınıza kaydeder">💾 Taslağı kaydet</button></div>'
    +'<div class="es-links"><a href="https://dijital.gib.gov.tr" target="_blank" rel="noopener">Dijital Vergi Dairesi (mükellefiyet) ↗</a>'+(IS()?'<a href="https://ekap.kik.gov.tr" target="_blank" rel="noopener">EKAP ↗</a>':'')+'</div></div>';}
  function draw(){var f=document.getElementById('or-step');if(!f)return;if(step!==STEPS.length-1)bitti=false;var DN=bitti&&step===STEPS.length-1;R.classList.toggle('es-done',DN);
    $$('.es-steps button',R).forEach(function(b,i){b.classList.toggle('on',i===step);b.classList.toggle('done',i<step);});
@@ -6578,5 +6578,40 @@ document.addEventListener('keydown',function(e){if(e.key!=='Enter'||e.defaultPre
 :is(#sirket,#gecbeyan,#arackdv,#dvbeyan,#kirasozlesme,#amackonu,#esassozlesme,#ortaklik) .backbar{margin-bottom:8px}
 #sirket .ss-zone{margin-top:6px}
 </style>
+<script>/* Doldurulan belgeler (esas sözleşme, ortaklık, kira, damga vergisi, Excel tabloları): sayfaya dönünce eski bilgiler sorulur;
+   taslak bilgisayara kaydedilip sonra yeniden yüklenebilir. */
+(function(){
+ var CFG=[{v:'amackonu',k:['ek-esas','ek-ak-sel'],n:'esas sözleşme'},{v:'ortaklik',k:['ek-ortaklik'],n:'ortaklık sözleşmesi'},{v:'kirasozlesme',k:['ek-kira'],n:'kira sözleşmesi'},{v:'dvbeyan',k:['ek-dvb2'],n:'damga vergisi beyannamesi'},{v:'tablolar',p:'ek-xed2-',n:'Excel tablosu'}];
+ var DEF={'':1,'T.C.':1,gk:1,tk:1,ltd:1,as:1,adi:1,is:1,sonra:1,once:1,'24':1,'25':1,suresiz:1,tek:1,std:1,serbest:1,takvim:1,'1':1,'0':1,'3':1,sec:1,konut:1,isyeri:1,yuz:1,tut:1,mut:1,tufe:1,dis:1,k0:1,uye:1,yil:1};
+ function keys(c){if(c.k)return c.k;var r=[];try{for(var i=0;i<localStorage.length;i++){var x=localStorage.key(i);if(x&&x.indexOf(c.p)===0)r.push(x);}}catch(e){}return r;}
+ function rd(k){try{return localStorage.getItem(k);}catch(e){return null;}}
+ function has(c){var found=false;keys(c).forEach(function(k){var v=rd(k);if(!v)return;var j;try{j=JSON.parse(v);}catch(e){return;}
+   if(k==='ek-ak-sel'){if(Array.isArray(j)&&j.length)found=true;return;}
+   (function walk(o){if(found||o==null)return;if(typeof o==='string'){if(!DEF[o.trim()])found=true;return;}if(typeof o==='number'){return;}if(typeof o==='object')Object.keys(o).forEach(function(z){walk(o[z]);});})(j);});return found;}
+ function sec(c){return document.getElementById(c.v);}
+ function clear(c){keys(c).forEach(function(k){try{localStorage.removeItem(k);}catch(e){}});location.reload();}
+ function saveFile(c){var o={site:'erdalkarahan.com',tur:c.v,ad:c.n,tarih:new Date().toISOString(),veri:{}};keys(c).forEach(function(k){o.veri[k]=rd(k);});
+   var b=new Blob([JSON.stringify(o,null,1)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='erdalkarahan-taslak-'+c.v+'-'+new Date().toISOString().slice(0,10)+'.json';document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},800);
+   if(typeof window.toast==='function')toast('Taslak bilgisayarınıza kaydedildi; sonra “Kayıtlı taslağı aç” ile yükleyip düzeltebilirsiniz');}
+ function openFile(c){var i=document.createElement('input');i.type='file';i.accept='.json,application/json';i.onchange=function(){var f=i.files[0];if(!f)return;var r=new FileReader();r.onload=function(){try{var o=JSON.parse(r.result);if(!o||o.site!=='erdalkarahan.com'||!o.veri)throw 0;
+     if(o.tur!==c.v&&!confirm('Bu taslak '+(o.ad||o.tur)+' için kaydedilmiş. Yine de yüklensin mi?'))return;
+     keys(c).forEach(function(k){try{localStorage.removeItem(k);}catch(e){}});Object.keys(o.veri).forEach(function(k){if(/^ek-/.test(k)&&o.veri[k]!=null){try{localStorage.setItem(k,o.veri[k]);}catch(e){}}});
+     if(o.tur!==c.v)location.hash='#'+o.tur;location.reload();}catch(e){alert('Bu dosya bir erdalkarahan.com taslağı değil.');}};r.readAsText(f);};i.click();}
+ window.ekTaslakSave=function(v){CFG.forEach(function(c){if(c.v===v)saveFile(c);});};
+ function bar(c){var s=sec(c);if(!s||s.querySelector('.tsl-bar'))return;var h=s.querySelector('.sec-head');if(!h)return;var d=document.createElement('div');d.className='tsl-bar';
+   d.innerHTML='<div class="tsl-ask" hidden><b>Daha önce girdiğiniz bilgiler duruyor.</b><span>Kaldığınız yerden devam edebilir ya da temiz bir sayfayla başlayabilirsiniz.</span><button type="button" class="btn btn-ink btn-sm" data-ts="go">Kaldığım yerden devam</button><button type="button" class="btn btn-line btn-sm tsl-new" data-ts="clear">Temizle, yeni başla</button></div>'
+    +'<div class="tsl-tools"><span>Taslak:</span><button type="button" data-ts="save" title="Girdiğiniz bilgileri dosya olarak bilgisayarınıza kaydeder">💾 Bilgisayarıma kaydet</button><button type="button" data-ts="open" title="Daha önce kaydettiğiniz taslak dosyasını yükler">📂 Kayıtlı taslağı aç</button><button type="button" data-ts="clear" title="Bu sayfadaki tüm bilgileri siler">↺ Temizle</button></div>';
+   h.parentNode.insertBefore(d,h.nextSibling);
+   d.addEventListener('click',function(e){var b=e.target.closest('[data-ts]');if(!b)return;var a=b.dataset.ts;
+     if(a==='go'){d.querySelector('.tsl-ask').hidden=true;}
+     if(a==='clear'){if(b.closest('.tsl-ask')||confirm('Bu sayfadaki bilgileriniz silinsin mi?'))clear(c);}
+     if(a==='save')saveFile(c);if(a==='open')openFile(c);});}
+ function enter(v){CFG.forEach(function(c){if(c.v!==v)return;bar(c);var s=sec(c),ask=s&&s.querySelector('.tsl-ask');if(!ask)return;ask.hidden=!!window.__ekBack||!has(c);});}
+ document.addEventListener('viewchange',function(e){enter(e.detail);});
+ function init(){CFG.forEach(bar);var v=(location.hash||'').slice(1);if(/^ak-/.test(v))v='amackonu';enter(v);}
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();</script>
+<style>.tsl-bar{margin:0 0 12px}.tsl-ask{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:12px 16px;border-radius:14px;background:color-mix(in srgb,#F59E0B 14%,var(--paper));border:1px solid color-mix(in srgb,#F59E0B 45%,var(--rule));margin-bottom:8px}.tsl-ask[hidden]{display:none}.tsl-ask b{font-size:15.5px}.tsl-ask span{flex-basis:100%;font-size:14px;color:var(--ink-2);margin-top:-6px}.tsl-new{border-color:#E5484D!important;color:#B42318!important}
+.tsl-tools{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.tsl-tools span{font-size:13px;color:var(--ink-2);font-weight:600}.tsl-tools button{border:1px solid var(--rule);background:var(--paper);color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer}.tsl-tools button:hover{border-color:#5B3FA8;color:#5B3FA8}</style>
 
 </html>
