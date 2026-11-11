@@ -2292,7 +2292,7 @@ section[data-view] a{overflow-wrap:anywhere}
       <div class="ss-prow">      <a class="ak-promo" href="#amackonu"><span class="ak-pi" aria-hidden="true">§</span><span><b>Amaç ve konu maddesi hazırlayın</b><small>99 sektör için hazır bentler ve NACE kodları; seçin, birleşsin, kopyalayın.</small></span><span aria-hidden="true">→</span></a><a class="ak-promo" href="#dilekceler"><span class="ak-pi" aria-hidden="true">✎</span><span><b>Limited ve anonim şirket karar örnekleri</b><small>Müdür, pay devri, adres, sermaye, şube, tasfiye: doldurun, yazdırın, Word olarak indirin.</small></span><span aria-hidden="true">→</span></a></div>
       <div class="dz-part ss-px ss-c2"><span>Bağlantılar</span><h3>MERSİS, İTO ve sicil sorgulama</h3><p>Başvuru, randevu, ilan ve ortaklık sorgulama sayfaları yeni sekmede açılır.</p></div>
       <div class="sc-links" id="sc-links"></div>
-      <div class="dz-part ss-px ss-c3"><span>Evrak listesi</span><h3>İşleme göre ticaret sicilinin istediği belgeler</h3><p>İstanbul Ticaret Sicili Müdürlüğü’nün işlem bazında istediği evraklar. Yukarıdaki arama kutusu bu listeyi süzer.</p></div>
+      <div class="dz-part ss-px ss-c3"><span>Evrak listesi</span><h3>İşleme göre ticaret sicilinin istediği belgeler</h3><p>İstanbul Ticaret Sicili Müdürlüğü’nün işlem bazında istediği evraklar. Aşağıdaki arama kutusuyla listede arayabilirsiniz.</p></div>
       <div id="sicil-list"></div>
       <p class="pnote" style="margin-top:14px">Kaynak: İstanbul Ticaret Odası Ticaret Sicili Müdürlüğü sayfaları. Uygulama değişebilir; başvurudan önce İTO’nun güncel listesini kontrol edin.</p>
     </div>
@@ -4320,7 +4320,7 @@ function goTo(h){if(location.hash==='#'+h){window.dispatchEvent(new HashChangeEv
     pratik:{ph:'Ara: amortisman, kıdem, asgari ücret…',items:'#pratik-list .pcard',rows:'dl > div'},
     tablolar:{ph:'Ara: kasa, bordro, stok, fatura…',items:'#xls .xls',heads:'#xls .xgrp'},
     kurumlar:{ph:'Ara: KEP, e-Bildirge, MERSİS…',items:'#kurum-list .kcard',heads:'#kurum-list .kgrp'},
-    sirket:{ph:'Ara: hisse devri, tasfiye, müdür, sermaye…',items:'#sicil-list .sc-item'},
+    sirket:{ph:'Evrak listesinde ara: hisse devri, tasfiye, müdür, sermaye…',items:'#sicil-list .sc-item',at:'#sicil-list'},
     duzeltme:{ph:'Ara: KDV düzeltme, pişmanlık, ek belge, iptal…',items:'#dz-all .dz-card'},
     amackonu:{ph:'Ara: inşaat, e-ticaret, yazılım, restoran, 62.10…',items:'#ak-list .ak-s',heads:'#ak-list .ak-gh'},
     hesapplani:{ph:'Ara: 100, kasa, 191, indirilecek KDV, amortisman…',items:'#hp-list .hp-a',heads:'#hp-list .hp-g h4'},
@@ -4337,7 +4337,7 @@ function goTo(h){if(location.hash==='#'+h){window.dispatchEvent(new HashChangeEv
     var c=CONF[view],head=$('.sec-head',sec);if(!head)return;
     var w=document.createElement('div');w.className='vsrch';
     w.innerHTML='<svg aria-hidden="true"><use href="#i-search"/></svg><input type="search" placeholder="'+esc(c.ph)+'" aria-label="Bu sayfada ara" autocomplete="off"><button type="button" class="gsrch-x" aria-label="Temizle" hidden>×</button><div class="gsrch-r" hidden></div><p class="vs-info" hidden></p>';
-    head.parentNode.insertBefore(w,head.nextSibling);
+    var at0=c.at&&$(c.at,sec);if(at0)at0.parentNode.insertBefore(w,at0);else head.parentNode.insertBefore(w,head.nextSibling);
     var inp=$('input',w),x=$('.gsrch-x',w),box=$('.gsrch-r',w),info=$('.vs-info',w);
     function apply(){var q=inp.value.trim(),ws=nz(q).split(/\s+/).filter(Boolean),shown=0;x.hidden=!q;
       if(c.items){$$(c.items).forEach(function(el){
@@ -5455,7 +5455,7 @@ var DZ={
  function txt(){var L=['Geç beyan hesabı ('+trd(dParse(st.t))+' itibarıyla, '+DZ.usul[st.m||0][0]+')'];st.rows.forEach(function(e){var A=agg(e);L.push('- '+BT[e.tur][0]+', '+durLbl(e)+', '+perLbl(e)+': '+f2(sum(A.P))+' TL');});
    var TP=z0();st.rows.forEach(function(e){var A=agg(e);Object.keys(TP).forEach(function(k){TP[k]+=A.P[k];});});L.push('TOPLAM (pişmanlıkla): '+f2(sum(TP))+' TL');L.push('Hesaplayıcı: https://www.erdalkarahan.com/#gecbeyan');return L.join('\n');}
  function all(){drawStep();drawTot();var tb=$('#dzt-tool',R);if(tb){var has=st.rows.length||(st.cur&&st.cur.tur);tb.innerHTML=has?'<span>'+(st.loaded&&!st.cur?'Son hesaplamanız kayıtlı, aşağıda görüyorsunuz.':'')+'</span><button type="button" class="dzs-clr" data-act="clear">↺ Temizle, yeniden hesapla</button>':'';tb.hidden=!has;}var o=$('#dzt-set',R);if(o)o.hidden=!(!st.cur||st.step==='res');}
- function go(s){st.step=s;all();var W=$('#dz-toplu');var y=W.getBoundingClientRect().top;if(y<0||y>innerHeight*.6)W.scrollIntoView({behavior:'smooth',block:'start'});}
+ function go(s){st.step=s;all();var W=$('#dz-toplu');var y=W.getBoundingClientRect().top;if(y<parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop||0)||y>innerHeight*.6)W.scrollIntoView({behavior:'smooth',block:'start'});}
  function next(){var S=steps(st.cur),i=S.indexOf(st.step);go(S[Math.min(i+1,S.length-1)]);}
  function draw(){
    R.innerHTML='<div class="dzs-tool" id="dzt-tool" hidden></div><div class="dzt-set" id="dzt-set" hidden><span>Ödeme tarihi</span><input type="date" id="dzt-t" value="'+st.t+'"><label class="dz-chk"><input type="checkbox" id="dzt-p"'+(st.pesin?' checked':'')+'> SGK cezası 15 gün içinde peşin ödenecek</label></div><div id="dzt-wiz"></div><div id="dzt-sum"></div>';
@@ -6159,5 +6159,7 @@ document.addEventListener('keydown',function(e){if(e.key!=='Enter'||e.defaultPre
 })();
 </script>
 <script>(function(){function c(){var h=new Set([].map.call(document.querySelectorAll('#hesaplamalar [data-k]'),function(e){return e.dataset.k;})).size,d=new Set([].map.call(document.querySelectorAll('#dilekceler [data-k]'),function(e){return e.dataset.k;})).size;var a=document.querySelector('[data-cnt="h"]'),b=document.querySelector('[data-cnt="d"]');if(a&&h>5)a.textContent=h+' araç';if(b&&d>5)b.textContent=d+' belge';}setTimeout(c,1500);setTimeout(c,5000);})();</script>
+<script>/* Kaydırmalarda üst menünün altında kalmasın: tüm scrollIntoView ve #çapa geçişleri menü yüksekliği kadar boşluk bırakır */
+(function(){function sp(){var h=document.querySelector('header'),n=document.querySelector('.subnav'),t=(h?h.offsetHeight:0)+(n?n.offsetHeight:0);document.documentElement.style.scrollPaddingTop=(Math.min(t,220)+14)+'px';}sp();addEventListener('resize',sp);addEventListener('load',sp);})();</script>
 
 </html>
