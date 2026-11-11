@@ -1,0 +1,9 @@
+{
+  "aciklama": "Şirket işlemleri sihirbazında il seçilince gösterilen ticaret sicili müdürlüğü uygulama notları. Her il için: oda (müdürlüğün bağlı olduğu oda), metin (o ile özgü kurallar, 1-4 cümle), kaynak (resmî oda/müdürlük sayfası), tarih (okunduğu gün). Sadece resmî kaynakta okunan bilgi yazılır.",
+  "guncelleme": "2026-11-11",
+  "sira": ["Ankara","İzmir","Kocaeli","Antalya","Konya","Adana","Gaziantep","Kayseri","Mersin","Tekirdağ","Sakarya","Eskişehir","Denizli","Manisa","Samsun","Trabzon","Muğla","Aydın","Balıkesir","Hatay","Diyarbakır","Şanlıurfa","Malatya","Kahramanmaraş","Erzurum","Van","Elazığ","Sivas","Tokat","Ordu","Zonguldak","Çorum","Afyonkarahisar","Kütahya","Uşak","Isparta","Burdur","Düzce","Bolu","Yalova","Bilecik","Çanakkale","Edirne","Kırklareli","Karabük","Bartın","Kastamonu","Sinop","Amasya","Giresun","Rize","Artvin","Gümüşhane","Bayburt","Erzincan","Tunceli","Bingöl","Muş","Bitlis","Siirt","Batman","Mardin","Şırnak","Hakkari","Ağrı","Iğdır","Kars","Ardahan","Adıyaman","Kilis","Osmaniye","Niğde","Aksaray","Nevşehir","Kırşehir","Kırıkkale","Karaman","Yozgat","Çankırı"],
+  "iller": {
+    "İstanbul": {"oda": "İstanbul Ticaret Odası (İTO)", "metin": "", "kaynak": "https://www.ito.org.tr", "tarih": "2026-11-11"},
+    "Bursa": {"oda": "Bursa Ticaret ve Sanayi Odası (BTSO)", "metin": "Bursa Ticaret Sicili Müdürlüğü BTSO bünyesindedir. Başvuru MERSİS’ten oluşturulur, randevu da MERSİS’ten alınır; randevu saatinde gelinmezse yeni randevu gerekir. Müdürlüğe hitaben dilekçede tarih, ticaret sicil no, e-posta, vergi dairesi ve numarası ile ek belgeler listesi mutlaka yazılmalıdır. Belediyenin sokak adı ya da kapı numarası değişikliğinde dilekçe ve belediye yazısı yeterlidir.", "kaynak": "https://www.btso.org.tr/hizmetler/tum-hizmetler/hizmet-detay/104/ticaret-sicili-tescil-islemleri/limited-sirket/adres-degisikligi", "tarih": "2026-11-11"}
+  }
+}
