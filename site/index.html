@@ -4371,7 +4371,7 @@ function dynIndex(){var now=Date.now();if(DYN_IDX&&now-DYN_T<1500)return DYN_IDX
   $$('section[data-view]').forEach(function(sec){var v=sec.dataset.view.split(' ')[0],eb=txt($('.eyebrow',sec)),h2=txt($('h2',sec));
     var pg=eb||h2;if(v!=='home'&&pg)add({t:pg,g:'Sayfa',h:'#'+v,kw:h2+' '+txt($('.sec-head p',sec))});
     var grp='';
-    $$('h3.kgrp, a.kcard',sec).forEach(function(el){if(el.matches('h3'))grp=txt(el);else{var b=txt($('b',el));if(b)add({t:b,g:grp||pg||'Bağlantı',h:el.getAttribute('href'),ext:/^https?:/.test(el.getAttribute('href')||''),kw:txt($('.ktx span',el))+' '+grp+' '+pg});}});
+    $$('h3.kgrp, a.kcard',sec).forEach(function(el){if(el.matches('h3'))grp=txt(el);else{var b=txt($('b',el));if(b){var hr=el.getAttribute('href')||'',fl=/^https?:/.test(hr)&&/\.(xlsx?|docx?|pdf|zip|rar)(\?|$)|getFileResources/i.test(hr);if(fl){if(!el.id)el.id='kc-'+(window.__kcn=(window.__kcn||0)+1);add({t:b,g:(grp||pg||'Belge')+' · sayfada göster',h:'#'+el.id,kw:txt($('.ktx span',el))+' '+grp+' '+pg});}else add({t:b,g:grp||pg||'Bağlantı',h:hr,ext:/^https?:/.test(hr),kw:txt($('.ktx span',el))+' '+grp+' '+pg});}}});
     $$('[id]',sec).forEach(function(el){if(el===sec||el.closest('.kcard'))return;var id=el.id;if(/^(q|sres|g-|d-|h-|x-)/.test(id))return;
       var hd=el.matches('details')?$('summary',el):el.matches('h2,h3,h4,h5')?el:$(':scope > h2, :scope > h3, :scope > h4, :scope > .sec-head h2, :scope > summary',el);var t=txt(hd);if(!t||t.length>140)return;
       add({t:t,g:pg||'Sayfa',h:'#'+id,kw:txt(el).slice(0,400)});});
@@ -4381,10 +4381,10 @@ function dynIndex(){var now=Date.now();if(DYN_IDX&&now-DYN_T<1500)return DYN_IDX
   DYN_IDX=X;DYN_T=now;return X;}
 var SUF=['larinin','lerinin','larini','lerini','larin','lerin','lari','leri','lar','ler','nin','nun','sini','sunu','si','su','yi','yu','in','un','i','u','a','e'];
 function stemOf(w){if(w.length<4||/\d/.test(w))return w;for(var i=0;i<SUF.length;i++){var x=SUF[i];if(w.length-x.length>=3&&w.slice(-x.length)===x){var r=w.slice(0,-x.length),m={b:'p',d:'t',g:'k'}[r.slice(-1)];return m?r.slice(0,-1)+m:r;}}return w;}
-function siteSearch(q,n){q=norm(q.trim());if(!q)return [];var w=q.split(/\s+/).filter(Boolean),ALL=SEARCH_IDX.concat(dynIndex());
+function siteSearch(q,n){q=norm(q.trim());if(!q)return [];var w=q.split(/\s+/).filter(Boolean),FL=/^https?:/.test(''),ALL=SEARCH_IDX.filter(function(x){return !(/^https?:/.test(x.h||'')&&/\.(xlsx?|docx?|pdf|zip|rar)(\?|$)|getFileResources/i.test(x.h||''));}).concat(dynIndex());
   function score(x,need){var hay=norm(x.t+' '+x.g+' '+(x.kw||'')),tt=norm(x.t),sc=0,hit=0;for(var i=0;i<w.length;i++){var s1=w[i],s2=stemOf(s1),s3=s2.length>3?s2.slice(0,-1):s2;
       if(tt.indexOf(s1)===0)sc+=5;else if(tt.indexOf(s1)>-1)sc+=4;else if(tt.indexOf(s2)>-1)sc+=3;else if(hay.indexOf(s1)>-1)sc+=2;else if(hay.indexOf(s2)>-1)sc+=1;else if(tt.indexOf(s3)>-1)sc+=1;else{if(need)return null;continue;}hit++;}
-    if(!hit)return null;if(norm(x.t)===q)sc+=6;if(x.g==='Sayfa')sc+=0.5;return {x:x,s:sc+hit*2};}
+    if(!hit)return null;if(norm(x.t)===q)sc+=6;if(x.g==='Sayfa')sc+=0.5;if(/doldur/i.test(x.t))sc+=1.5;return {x:x,s:sc+hit*2};}
   var R=ALL.map(function(x){return score(x,true);}).filter(Boolean);
   if(!R.length&&w.length>1)R=ALL.map(function(x){return score(x,false);}).filter(Boolean);
   var seen={};return R.sort(function(a,b){return b.s-a.s;}).filter(function(r){var k=r.x.h+'|'+norm(r.x.t);if(seen[k])return false;seen[k]=1;return true;}).slice(0,n||8).map(function(r){return r.x;});}
@@ -6614,5 +6614,6 @@ document.addEventListener('keydown',function(e){if(e.key!=='Enter'||e.defaultPre
 })();</script>
 <style>.tsl-bar{margin:0 0 12px}.tsl-ask{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:12px 16px;border-radius:14px;background:color-mix(in srgb,#F59E0B 14%,var(--paper));border:1px solid color-mix(in srgb,#F59E0B 45%,var(--rule));margin-bottom:8px}.tsl-ask[hidden]{display:none}.tsl-ask b{font-size:15.5px}.tsl-ask span{flex-basis:100%;font-size:14px;color:var(--ink-2);margin-top:-6px}.tsl-new{border-color:#E5484D!important;color:#B42318!important}
 .tsl-tools{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.tsl-tools span{font-size:13px;color:var(--ink-2);font-weight:600}.tsl-tools button{border:1px solid var(--rule);background:var(--paper);color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer}.tsl-tools button:hover{border-color:#5B3FA8;color:#5B3FA8}</style>
+<style>a.kcard:target{outline:3px solid #F59E0B;outline-offset:3px;animation:kcfl 1.6s ease 2}@keyframes kcfl{50%{outline-color:transparent}}</style>
 
 </html>
