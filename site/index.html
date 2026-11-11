@@ -3678,7 +3678,7 @@ var DOCSHELL=gshell($('#docs'),DOCS,renderDoc,null);
   if(NW){if(P.uy.length)h+='<div class="ss-uy">'+P.uy.map(function(x){return '<p>⚠ '+esc2(x)+'</p>';}).join('')+'</div>';
    if(typeof P.nos==='string')h+='<p class="pnote" style="margin-top:0">'+esc2(P.nos)+'</p>';
    h+='<h5 class="ak-h">1. Karar</h5><div class="dz-links"><a class="btn-p" href="#d-karar">Serbest karar örneğini doldur →</a></div><p class="pnote">Bu tür için hazır şablon yerine serbest karar örneğini kullanın: karar organını, gündemi ve karar maddelerini kendiniz yazıp yazdırın ya da Word olarak indirin.</p>';
-   h+='<h5 class="ak-h">2. Adım adım yapılacaklar</h5><ol class="dz-steps">'+P.adim.map(function(x){return '<li><span>'+esc2(x)+'</span></li>';}).join('')+'</ol>';
+   h+='<h5 class="ak-h">2. Adım adım yapılacaklar</h5><ol class="dz-steps">'+P.adim.map(function(x){return '<li><span>'+esc2(x)+'</span></li>';}).join('')+'</ol>'+resLinks(P.adim.join(' ')+' '+(st.is||''));
    if(P.bel.length)h+='<h5 class="ak-h">3. Gerekli belgeler</h5><ul class="ak-ul">'+P.bel.map(function(b){return '<li>'+esc2(b)+'</li>';}).join('')+'</ul>';
    if(!P.nos){h+='<h5 class="ak-h">4. Yaklaşık maliyet ('+esc2(st.il||'İstanbul')+', 2026)</h5>'+ilNot()+'<div class="dz-grid ss-in">'
     +'<label>TTSG ilanı kelime sayısı<input id="ss-kel" inputmode="numeric" value="'+esc2(inp.kel!=null?inp.kel:P.kelime)+'"></label>'
@@ -3690,7 +3690,7 @@ var DOCSHELL=gshell($('#docs'),DOCS,renderDoc,null);
    ['kel','imz','sm','onay'].forEach(function(x){var e=document.getElementById('ss-'+x);if(e)e.addEventListener(e.tagName==='SELECT'?'change':'input',function(){inp[x]=e.value;document.getElementById('ss-out').innerHTML=ucretHtml(ucret(plan2()));});});return;}
   if(P.uy.length)h+='<div class="ss-uy">'+P.uy.map(function(x){return '<p>⚠ '+esc2(x)+'</p>';}).join('')+'</div>';
   h+='<h5 class="ak-h">1. Karar ve dilekçe</h5><div class="dz-links">'+P.k.map(function(x,j){var K=KM[x];return K?'<a class="'+(j?'btn-g':'btn-p')+'" href="#d-k-'+x+'">'+esc2(K.t.replace(/^[^:]*:\s*/,''))+' kararını doldur →</a>':'';}).join('')+'</div><p class="pnote">Karar şablonu açılır; şirket bilgilerini, kişileri ve tarihleri yazıp yazdırın ya da Word olarak indirin. Tescil başvuru dilekçesi MERSİS’te başvuru oluşturulurken kendiliğinden hazırlanır.</p>';
-  h+='<h5 class="ak-h">2. Adım adım yapılacaklar</h5><ol class="dz-steps">'+P.adim.map(function(x){return '<li><span>'+esc2(x)+'</span></li>';}).join('')+'</ol>';
+  h+='<h5 class="ak-h">2. Adım adım yapılacaklar</h5><ol class="dz-steps">'+P.adim.map(function(x){return '<li><span>'+esc2(x)+'</span></li>';}).join('')+'</ol>'+resLinks(P.adim.join(' ')+' '+(st.is||''));
   var bel=[];P.k.forEach(function(x){(KM[x]&&KM[x].e||[]).forEach(function(b){if(bel.indexOf(b)<0)bel.push(b);});});
   if(bel.length)h+='<h5 class="ak-h">3. Ticaret siciline verilecek belgeler</h5><ul class="ak-ul">'+bel.map(function(b){return '<li>'+esc2(b)+'</li>';}).join('')+'</ul>';
   h+='<h5 class="ak-h">4. Yaklaşık maliyet ('+esc2(st.il||'İstanbul')+', 2026)</h5>'+ilNot()+'<div class="dz-grid ss-in">'
@@ -3719,6 +3719,8 @@ var DOCSHELL=gshell($('#docs'),DOCS,renderDoc,null);
    if(k==='share'&&window.openShare)openShare(T,ssText(),SITE_URL+'#sirket',c);
    if(k==='print'&&window.printEl){var d=document.createElement('div');d.innerHTML=c.html;printEl(d,T,true);}
    if(k==='copy'&&window.copyText)copyText(ssText(),'Masraf dökümü kopyalandı');});
+ function resLinks(t){var L=[];if(/mersis|tescil|sicil/i.test(t))L.push(['MERSİS','https://mersis.ticaret.gov.tr']);if(/unvan/i.test(t))L.push(['🔎 Unvan sorgula (Ticaret Sicili Gazetesi)','https://www.ticaretsicil.gov.tr/view/hizlierisim/unvansorgulama.php']);if(/ilan|gazete/i.test(t))L.push(['Ticaret Sicili Gazetesi ilan görüntüleme','https://www.ticaretsicil.gov.tr/view/hizlierisim/ilangoruntuleme.php']);if(/e-defter|defter/i.test(t))L.push(['e-Defter','https://www.edefter.gov.tr']);if(/vergi dairesi|gib|dijital vergi/i.test(t))L.push(['Dijital Vergi Dairesi','https://dijital.gib.gov.tr']);
+   return L.length?'<div class="es-links">'+L.map(function(l){return '<a href="'+l[1]+'" target="_blank" rel="noopener">'+esc2(l[0])+' ↗</a>';}).join('')+'</div>':'';}
  function ucretHtml(U){LASTU=U;var G=[],M={};U.R.forEach(function(r){if(!M[r[0]]){M[r[0]]={n:r[0],rows:[],t:0};G.push(M[r[0]]);}M[r[0]].rows.push(r);M[r[0]].t+=r[2]||0;});
   var TT={'Ticaret sicili':U.ts,'Noter':U.nt,'Mali müşavir':U.sm},IC={'Ticaret sicili':['🏛','ss-k1','Ticaret Sicili Müdürlüğü'],'Noter':['✒','ss-k2','Noter'],'Mali müşavir':['🧮','ss-k3','Mali Müşavir']};
   return '<table class="dz-mini ss-tb ss-tb2"><tr><th>Açıklama</th><th class="r">Tutar</th></tr>'+G.map(function(g){var c=IC[g.n]||['•','ss-k0',g.n],t=TT[g.n]!=null?TT[g.n]:g.t;
