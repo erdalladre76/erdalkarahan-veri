@@ -5585,7 +5585,7 @@ document.addEventListener('focusout',function(ev){var el=ev.target;if(!el||el.ta
   gecbeyan:{t:'Beyanname vermeme cezası nasıl hesaplanır?',s:[['ceza','1. Beyannameyi ve tarihleri seçin','Beyanname türünü, son günü ve vereceğiniz günü girin.'],['steps','2. Soruları yanıtlayın','Pişmanlıkla mı veriyorsunuz, tahakkuk ne kadar gibi kısa sorular gelir.'],['bitti','3. Toplamı görün','Vergi, gecikme zammı, usulsüzlük cezası ve SGK idari para cezası tek toplamda gösterilir; birden fazla beyanname ekleyebilirsiniz.']]},
   arackdv:{t:'Araç KDV oranı nasıl bulunur?',s:[['arac','1. Aracı seçin','Binek, kamyonet, iş makinesi gibi aracın türünü seçin.'],['steps','2. Soruları yanıtlayın','İkinci el mi, satıcı galeri mi gibi sorular gelir.'],['bitti','3. Sonuç','KDV oranı, dayanağı, alıcının indirimi ve muhasebe kaydı açılır.']]}
  };
- var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611111709';
+ var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611111714';
  var MAP={sirket:'sirket',amackonu:'esas',ortaklik:'ortaklik',gecbeyan:'gecbeyan',arackdv:'arackdv'};
  function open(key){var h=H[key];if(!h)return;var m=document.getElementById('hlp-modal');if(!m){m=document.createElement('div');m.id='hlp-modal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');document.body.appendChild(m);
      m.addEventListener('click',function(e){if(e.target===m||e.target.closest('[data-hx]')){m.hidden=true;document.documentElement.style.overflow='';}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){m.hidden=true;document.documentElement.style.overflow='';}});}
@@ -6717,5 +6717,31 @@ document.addEventListener('keydown',function(e){if(e.key!=='Enter'||e.defaultPre
 <style>#by-list .hp-g>h4{font-family:inherit!important;font-size:clamp(19px,2vw,23px)!important;font-weight:800!important;letter-spacing:0!important;text-transform:none!important;color:var(--ink)!important;background:color-mix(in srgb,#5B3FA8 10%,var(--paper));border-left:6px solid #5B3FA8;border-radius:12px;padding:12px 16px!important;margin:22px 0 12px!important}</style>
 <style>.bsl{display:inline-flex;align-items:center;gap:8px;margin:4px 0 10px;padding:9px 18px;border-radius:999px;background:#0E9F8E;color:#fff;font-weight:800;font-size:16px;letter-spacing:.06em;box-shadow:0 8px 20px -10px #0E9F8E}.bsl span{font-weight:600;letter-spacing:0;font-size:14px;opacity:.95}.bsl i{font-style:normal;display:inline-block;animation:bslb 1.2s ease-in-out infinite}@keyframes bslb{50%{transform:translateY(4px)}}@media(max-width:560px){.bsl span{display:none}}
 .gb-btn{font-weight:800!important;letter-spacing:.06em;font-size:17px!important;animation:gbp 2s ease-in-out infinite}@keyframes gbp{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.6)}50%{box-shadow:0 0 0 8px rgba(255,255,255,0)}}@media(prefers-reduced-motion:reduce){.bsl i,.gb-btn{animation:none}}</style>
+<script>/* Üst menü: Hesaplamalar, Dilekçeler ve Excel de Rehberler gibi gruplu açılır menü (bilgisayarda) */
+(function(){
+ function E(x){return String(x==null?'':x).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+ var CFG={hesaplamalar:{p:'h-',all:'Tüm hesaplamalar'},dilekceler:{p:'d-',all:'Tüm dilekçe, karar ve formlar'},tablolar:{x:1,all:'Tüm Excel tabloları'}};
+ var m=document.createElement('div');m.className='sn-menu sn-mega sn-mega2';m.hidden=true;document.body.appendChild(m);var cur=null,btn=null;
+ function groups(v){var s=document.getElementById(v),G=[];if(!s)return G;var c=CFG[v];
+   if(c.x){var g=null;Array.prototype.forEach.call(s.querySelectorAll('#xls h3.xgrp, #xls article.xls'),function(el){if(el.matches('h3.xgrp')){g=[el.textContent.trim(),[]];G.push(g);}else if(g){var h=el.querySelector('h3');g[1].push([h?h.textContent.trim():'', '#'+el.id]);}});return G;}
+   var ix=s.querySelector('.gidx');if(!ix)return G;var g2=null;Array.prototype.forEach.call(ix.children,function(el){if(el.tagName==='H4'){g2=[el.textContent.trim(),[]];G.push(g2);}else if(g2&&el.classList.contains('gidx-g')){Array.prototype.forEach.call(el.querySelectorAll('button[data-k]'),function(b){var t=b.querySelector('b');g2[1].push([t?t.textContent.trim():b.textContent.trim(),'#'+c.p+b.dataset.k]);});}});return G;}
+ function open(v,a){var G=groups(v);if(!G.length){location.hash='#'+v;return;}
+   m.innerHTML='<a class="sn-all" href="#'+v+'"><b>'+E(CFG[v].all)+' →</b></a>'+G.map(function(g){return '<div class="sn-gr"><p class="sn-gh">'+E(g[0])+' <i>'+g[1].length+'</i></p>'+g[1].map(function(it){return '<a class="sn-it" href="'+E(it[1])+'">'+E(it[0])+'</a>';}).join('')+'</div>';}).join('');
+   var r=a.getBoundingClientRect(),w=Math.min(1100,innerWidth-24);m.style.width=w+'px';m.style.left=Math.max(12,Math.min(r.left+r.width/2-w/2,innerWidth-w-12))+'px';m.style.top=(r.bottom+6)+'px';m.style.maxHeight=(innerHeight-r.bottom-24)+'px';m.style.overflowY='auto';
+   m.hidden=false;cur=v;btn=a;a.setAttribute('aria-expanded','true');}
+ function close(){m.hidden=true;if(btn)btn.setAttribute('aria-expanded','false');cur=null;}
+ Object.keys(CFG).forEach(function(v){var a=document.querySelector('.subnav a[data-nav="'+v+'"]');if(!a)return;a.setAttribute('aria-haspopup','true');a.setAttribute('aria-expanded','false');a.insertAdjacentHTML('beforeend','<svg class="sn-chev" aria-hidden="true" viewBox="0 0 12 12"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>');
+   a.addEventListener('click',function(e){if(innerWidth<900)return;e.preventDefault();e.stopPropagation();if(cur===v){close();return;}var o=document.querySelector('.sn-menu:not(.sn-mega2)');if(o&&!o.hidden){o.hidden=true;}open(v,a);});});
+ m.addEventListener('click',function(e){if(e.target.closest('a'))close();});
+ document.addEventListener('click',function(e){if(!m.hidden&&!m.contains(e.target))close();});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+ addEventListener('resize',close);addEventListener('scroll',function(){if(!m.hidden&&Math.abs(scrollY-(m.__y||scrollY))>120)close();m.__y=m.__y||scrollY;},{passive:true});
+ var sb=document.querySelector('.subnav .sn-more');if(sb)sb.addEventListener('click',close);
+})();</script>
+<style>.sn-chev{width:12px;height:12px;margin-left:3px;vertical-align:-1px;opacity:.85}@media(max-width:899px){.sn-chev{display:none}}
+.sn-mega2{display:grid!important;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))!important;gap:4px 14px;padding:12px}.sn-mega2[hidden]{display:none!important}
+.sn-mega2 .sn-all{grid-column:1/-1;flex-direction:row!important;justify-content:flex-start;background:var(--stamp-soft);margin-bottom:4px}.sn-mega2 .sn-all b{color:var(--stamp)}
+.sn-mega2 .sn-gr+.sn-gr{border-left:0!important;padding-left:0!important}.sn-mega2 .sn-gr+.sn-gr .sn-gh{margin-top:6px!important}.sn-mega2 .sn-gr{display:flex;flex-direction:column;min-width:0;padding-bottom:6px}.sn-mega2 .sn-gh i{font-style:normal;opacity:.6;font-weight:600}
+.sn-mega2 a.sn-it{padding:5px 12px!important;font-size:13.5px;line-height:1.35;border-radius:8px}.sn-mega2 a.sn-it:hover{background:var(--stamp-soft);color:var(--stamp)}</style>
 
 </html>
