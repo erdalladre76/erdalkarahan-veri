@@ -1,6 +1,83 @@
 {
  "yazilar": [
   {
+   "slug": "sirket-araci-surucusuz-kiralama-trafik-denetimi-sgk-2026-22",
+   "baslik": "Kiraya Verdiğiniz Şirket Aracı Trafik Denetimine Takılırsa: Sürücüsüz Kiralamada SGK Yazısına Karşı Önceden Hazırlık",
+   "ozet": "Şirket adına kayıtlı bir aracı sürücüsüz olarak belediyeye ya da başka bir firmaya kiraladığınızı düşünelim. Aracı kiracının personeli kullanırken trafik denetimine takılırsa, kayıtlarda araç sizin şirketiniz adına görünür ve SGK, sürücünün sizin işyerinizde kayıt dışı çalışıp çalışmadığını araştırır. SGK’nın 2026/22 sayılı Genelgesine göre süreç nasıl işliyor, araçları teslim ederken hangi belgeleri almalısınız, yazı gelirse ne cevap vermelisiniz?",
+   "tarih": "2026-11-12",
+   "etiketler": [
+    "SGK",
+    "Kayıt Dışı İstihdam",
+    "Araç Kiralama",
+    "Denetim"
+   ],
+   "bolumler": [
+    {
+     "baslik": "SORUN NEREDEN ÇIKIYOR?",
+     "paragraflar": [
+      "Trafik denetiminde yüze karşı düzenlenen ceza tutanağına sürücünün kimlik bilgileri ile aracın plakası yazılır. Bu bilgiler Emniyetten Sosyal Güvenlik Kurumuna da gelir ve SGK, aracın ruhsat sahibi işyerinin kayıtlarıyla sürücüyü karşılaştırır. Sürücü, aracın kayıtlı olduğu şirketin sigortalısı olarak görünmüyorsa kayıt dışı çalışma ihtimali araştırılır.",
+      "Aracı kendi personelinizin kullandığı durumlarda bu kontrol yerindedir. Ancak araç sürücüsüz olarak kiraya verilmişse durum farklıdır: Örneğin şirketiniz araçlarını sürücüsüz olarak bir belediyeye kiralamış, aracı da belediyenin kendi personeli kullanıyor olsun. Ruhsatta araç hâlâ şirketiniz adına kayıtlı olduğu için kayıtlarda bu kişi, “şirketinizin aracını kullanan ama şirketinizde sigortalı görünmeyen” biri olarak çıkar. Önlem alınmazsa aylar sonra SGK’dan gelen bir yazıya ya da denetmenin ifade davetine cevap vermek zorunda kalırsınız."
+     ]
+    },
+    {
+     "baslik": "2026/22 SAYILI GENELGE NE DİYOR?",
+     "paragraflar": [
+      "SGK’nın 19.10.2026 tarihli 2026/22 sayılı Genelgesine göre yüze karşı tebliğ edilen trafik ceza tutanaklarına dayanan kayıtlar önce SGK il müdürlüklerindeki kayıt dışı istihdamla mücadele (KADİM) servislerince incelenir. İnceleme sonucunda aynı işyerinde çalıştığı tespit edilenler dışındaki kayıtlar sosyal güvenlik denetmenlerine gönderilir.",
+      "Yani yalnız trafik tutanağına bakılarak sürücü doğrudan şirketinizin sigortalısı yapılmaz; konu denetmen incelemesine gider. Denetmen, şirket yetkilisinin ve sürücünün ifadesini alabilir, sözleşme, fatura ve ödeme kayıtlarını isteyebilir. Bu incelemede sizi koruyacak olan şey, aracın neden başkası tarafından kullanıldığını gösteren düzenli belgelerdir.",
+      "Genelgenin trafik tutanakları dışındaki tespitlere (zabıta, kolluk gibi görevlilerin tutanakları) ilişkin “tespit edilen gün kadar hizmet” kuralını daha önce ayrıca ele almıştık: https://www.erdalkarahan.com/#yz-sgk-2026-22-genelgesi-trafik-tutanagi-fiili-calisma-tespiti"
+     ]
+    },
+    {
+     "baslik": "ARAÇLARI TESLİM EDERKEN NE YAPMALI?",
+     "paragraflar": [
+      "En kolay yol, sorunu daha araç teslim edilirken çözmektir. Sürücüsüz kiralamada şu belgeler hazır olursa, olası bir denetmen incelemesi birkaç belgeyle kapanır:"
+     ],
+     "liste": [
+      "Kira sözleşmesine açık bir madde koyun: araçlar yalnız kiracının kendi personeli tarafından ve kiracının işleri için kullanılacak; kullanıcıların sigortalılığı ve trafik cezaları kiracıya ait olacak; kullanıcılar değiştiğinde kiraya veren şirkete yazılı olarak bildirilecek.",
+      "Araç teslim tutanağı düzenleyin: plaka, kilometre, teslim tarihi ve teslim alan kişi açıkça yazsın.",
+      "Kiracıdan imzalı “araç kullanıcı beyanı” alın: kiraladığı plakaları ve bu araçları kullanacak personelin adını, TC kimlik numarasını ve görevini yazsın, bu kişilerin kendi çalışanı olduğunu beyan etsin. Doldurulabilir örneği: https://www.erdalkarahan.com/#d-aracbeyan",
+      "Beyanın bir örneğini araçta, bir örneğini şirkette saklayın; kullanıcı listesi değiştikçe yenisini isteyin.",
+      "Kira faturalarını düzenli kesin ve tahsilatı banka üzerinden alın; kira ilişkisinin sürdüğünü gösteren en güçlü belgeler bunlardır."
+     ]
+    },
+    {
+     "baslik": "SGK’DAN YAZI GELİRSE YA DA DENETMEN ÇAĞIRIRSA",
+     "paragraflar": [
+      "Yazıda verilen süreyi kaçırmadan, kısa ve belgeye dayanan bir açıklama verin. Açıklamada aracın sözleşme tarihi ve numarasıyla birlikte sürücüsüz kiraya verildiğini, sürücünün kiracının personeli olduğunu ve şirketinizle iş ilişkisi bulunmadığını yazın. Ekine sözleşmeyi, teslim tutanağını, kiracının kullanıcı beyanını, faturaları ve araç ruhsatının fotokopisini koyun. Hazır metni şuradan doldurabilirsiniz: https://www.erdalkarahan.com/#d-sgkarac",
+      "Kiracı bir belediye ya da başka bir işverense, sürücünün denetim tarihinde orada kadrolu ya da sigortalı çalıştığını gösteren bir yazıyı da kiracıdan isteyin. Aynı gün başka bir işverende tam gün çalıştığı görünen kişinin sizin işyerinizde kayıt dışı çalıştığını ileri sürmek zorlaşır. İfadeye çağrılırsanız şirket yetkilisi, sürücü ve kiracı yetkilisinin anlattıklarının birbiriyle uyumlu olmasına dikkat edin."
+     ]
+    },
+    {
+     "baslik": "BAŞKA DURUMLAR",
+     "liste": [
+      "Araç hizmet alınan bir firmaya verilmişse (ör. taşeron, nakliye, bakım firması), sürücünün o firmanın personeli olduğunu gösteren sözleşme ve firma yazısı hazır tutulmalı.",
+      "Aracı şirket ortağı ya da yöneticisi kullanıyorsa, kendi adına sigortalı olduğu (ör. 4/b) ve şirketten ücret almadığı belgelenmeli.",
+      "Araç akraba ya da arkadaşa kısa süreliğine emanet verildiyse Genelgede ayrıca bir hüküm yoktur; denetmen, kişinin şirkete iş görüp görmediğini ve ücret alıp almadığını araştırır. Şirket araçlarının şirket dışı kişilere verilmemesi en güvenli yoldur.",
+      "Sürücü gerçekten şirketin çalışanıysa ve işe giriş bildirgesi verilmemişse, beklemeden bildirim yapılması ve durumun düzeltilmesi gerekir; bu yazıdaki belgeler o durumu korumaz."
+     ]
+    },
+    {
+     "baslik": "CEZA RİSKİ",
+     "paragraflar": [
+      "Denetmen incelemesi sonunda kişinin şirkette çalıştığı tespit edilirse 5510 sayılı Kanunun 102. maddesine göre işe giriş bildirgesinin verilmemesi nedeniyle her sigortalı için asgari ücret tutarında idari para cezası uygulanır; tespit kamu idarelerinin denetim elemanlarınca yapıldığında bu tutar iki katına çıkar (2026 için kişi başı 66.060 TL). Buna eksik bildirilen prim ve gecikme zammı da eklenebilir. Sürücüsüz kiralamada doğru belgelerle böyle bir sonucun ortaya çıkmaması gerekir; ama belgesiz bir dosyada ispat yükü fiilen şirkete kalır."
+     ]
+    },
+    {
+     "baslik": "SONUÇ",
+     "paragraflar": [
+      "2026/22 sayılı Genelge, trafik tutanağına dayalı tespitlerde otomatik işlem yerine denetmen incelemesini öne çıkarıyor. Bu, haklı olan işveren için iyi bir haberdir; ancak haklı olduğunu belgeleyebilmesi şartıyla. Araçlarını sürücüsüz kiraya veren şirketlerin sözleşme, teslim tutanağı ve kiracının kullanıcı beyanını teslim sırasında tamamlaması, ileride gelecek bir SGK yazısını birkaç belgeyle kapatmayı sağlar.",
+      "Somut olayda güncel mevzuat ve SGK’nın uygulaması ayrıca değerlendirilmelidir."
+     ]
+    }
+   ],
+   "kaynaklar": [
+    "https://www.alomaliye.com/2026/10/22/sgk-genelgesi-2026-22/",
+    "https://www.memurlar.net/haber/1183566/sgk-dan-sirket-araclari-icin-yeni-duzenleme-ceza-uygulanmayacak.html",
+    "https://musavirlerkulubu.com.tr/makale/sgk-ticari-arac-suruculerinde-sigortalilik-denetimi-yeni-genelge"
+   ],
+   "dogrulanmadi": []
+  },
+  {
    "slug": "kdv-beyannamesi-511-vergiye-tabi-olmayan-islemler-kumulatif-bedel-ekim-2026",
    "baslik": "KDV Beyannamesinde İki Değişiklik: Yeni 511 Satırı ve Kaldırılan “Kümülatif Bedel” Alanı",
    "ozet": "GİB, 11 Kasım 2026 tarihli duyurusuyla 1 No.lu KDV Beyannamesinde Ekim/2026 döneminden geçerli iki değişiklik yaptı: “Diğer İşlemler” tablosuna 511 “Vergiye Tabi Olmayan İşlemler” satırı eklendi, “Sonuç Hesapları”ndaki kümülatif bedel alanı kaldırıldı. Satırın beyannameye etkisini, yasal dayanağını, örnek hesap ve muhasebe kaydını ve beyan öncesi kontrol listesini derledik.",
