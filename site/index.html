@@ -5791,7 +5791,7 @@ window.ekYuzMsg=function(K){var Y=K.map(function(k){return num(k.yuz);}),any=Y.s
   ozluk:{t:'Özlük dosyası sihirbazı nasıl kullanılır?',s:[['steps','Adım adım ilerleyin','Dört adım var; her ekranda kutuları doldurup “Sonraki adım”a basın. Numaralı adımlara basarak da geçebilirsiniz.'],['kimlik','1–2. İşyeri ve çalışan','İşyeri ile çalışanın bilgilerini bir kez yazın; seçtiğiniz bütün formlara kendiliğinden gelir.'],['tur','3. Formları seçin','“İşe giriş paketi” düğmesi en sık gerekenleri seçer; görevlendirme, değişiklik bildirimi gibi formları ayrıca işaretleyin.'],['bitti','4. Form bilgileri ve sonuç','Her formun kendine özel kutularını doldurun. Sonuçta formlar tek dosyada indirilir, yazdırılır ya da paylaşılır; istediğinizi tek tek de alabilirsiniz.']]},
   arackdv:{t:'Araç KDV oranı nasıl bulunur?',s:[['arac','1. Aracı seçin','Binek, kamyonet, iş makinesi gibi aracın türünü seçin.'],['steps','2. Soruları yanıtlayın','İkinci el mi, satıcı galeri mi gibi sorular gelir.'],['bitti','3. Sonuç','KDV oranı, dayanağı, alıcının indirimi ve muhasebe kaydı açılır.']]}
  };
- var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611121637';
+ var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611121642';
  var MAP={ozluk:'ozluk',sirket:'sirket',amackonu:'esas',ortaklik:'ortaklik',gecbeyan:'gecbeyan',arackdv:'arackdv'};
  function open(key){var h=H[key];if(!h)return;var m=document.getElementById('hlp-modal');if(!m){m=document.createElement('div');m.id='hlp-modal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');document.body.appendChild(m);
      m.addEventListener('click',function(e){if(e.target===m||e.target.closest('[data-hx]')){m.hidden=true;document.documentElement.style.overflow='';}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){m.hidden=true;document.documentElement.style.overflow='';}});}
@@ -7147,6 +7147,15 @@ document.addEventListener('keydown',function(e){if(e.key!=='Enter'||e.defaultPre
 .oz-pvl{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;margin:0 0 8px}.oz-pvl select{flex:1;min-width:0;padding:6px 8px;border-radius:8px;border:1px solid var(--rule);background:var(--sheet);color:var(--ink)}
 .doc-page .oz-kl td:first-child{width:46%}.doc-page .oz-kl td:last-child{white-space:nowrap;width:1%}.doc-page .oz-kl tr:first-child td{font-weight:700;background:var(--paper)}
 #print-root .oz-pb{break-before:page;page-break-before:always}
+/* Sihirbazlar: göze çarpsın ama abartısız */
+a.sn-sih{position:relative;color:#fff!important;font-weight:700;background:linear-gradient(90deg,rgba(14,159,142,.22),rgba(124,92,196,.22));border:1px solid rgba(94,234,212,.45);border-radius:999px;padding-left:12px!important;padding-right:12px!important}
+a.sn-sih::after{content:"✦";position:absolute;top:-6px;right:-4px;font-size:11px;color:#F5C451;text-shadow:0 0 6px rgba(245,196,81,.8);pointer-events:none}
+a.sn-sih:hover{border-color:#5EEAD4;background:linear-gradient(90deg,rgba(14,159,142,.32),rgba(124,92,196,.32))}
+.tb-sih{position:relative}.tb-sih::after{content:"✦";position:absolute;top:2px;right:calc(50% - 20px);font-size:10px;color:#F5C451;text-shadow:0 0 6px rgba(245,196,81,.8);pointer-events:none}
+.tb-sih span{font-weight:800!important;color:#5EEAD4!important}
+@keyframes sihIn{0%,100%{box-shadow:0 0 0 0 rgba(94,234,212,0)}50%{box-shadow:0 0 0 6px rgba(94,234,212,.28)}}
+a.sn-sih{animation:sihIn 1.6s ease-in-out .8s 2}
+@media (prefers-reduced-motion:reduce){a.sn-sih{animation:none}}
 </style>
 
 </html>
