@@ -1,0 +1,2 @@
+İl, ilçe ve mahalle listesi: turkey-neighbourhoods 4.0.3 (MIT lisansı), https://www.npmjs.com/package/turkey-neighbourhoods
+Dosya adı il plaka kodudur; içerik {ilçe: [mahalleler]}.
