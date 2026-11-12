@@ -77,9 +77,21 @@
      ]
     },
     {
+     "baslik": "SGK İÇİN ÇÖZÜM ÖNERİSİ",
+     "paragraflar": [
+      "Bugünkü sistemde kiralamayı ispat yükü, hiçbir çalışma ilişkisi olmayan şirkete kalıyor. Oysa gereken bilgilerin çoğu zaten devletin kayıtlarında var. Sorunun kaynağında çözülmesi için şu adımlar atılabilir:"
+     ],
+     "liste": [
+      "Sürücü, denetim günü başka bir işverende, özellikle bir belediyede ya da kamu kurumunda sigortalı veya memur olarak görünüyorsa, KADİM servisi dosyayı denetmene göndermeden önce bu kurumdan kısa bir teyit istesin; teyit gelirse dosya araç sahibi şirkete hiç yazı gönderilmeden kapansın.",
+      "Kamu kurumlarına yapılan araç kiralamalarının e-fatura, ihale ve sözleşme bilgileri devlet sistemlerinde mevcuttur. SGK, Emniyetten gelen plakayı bu kayıtlarla eşleştirip denetim tarihinde aracın kamu kurumunda kirada olduğunu kendisi görebilir.",
+      "Uzun süreli ve kurumsal kiralamalar için e-Devlet üzerinden “araç kiracısı ve kullanıcı bildirimi” yapılabilsin. Araç sahibi kiracıyı ve kiralama dönemini bir kez bildirsin; SGK ve Emniyet trafik tutanaklarında bu kayda baksın. Kiralık araç bildirim sisteminin (KABİS) kayıtları da SGK’nın erişimine açılabilir.",
+      "Emniyetin SGK’ya gönderdiği bilgilere aracın kiralık olup olmadığı ve varsa kiracının vergi numarası eklenebilir; böylece eşleştirme baştan araç sahibiyle değil, aracı fiilen kullanan kurumla yapılır."
+     ]
+    },
+    {
      "baslik": "SONUÇ",
      "paragraflar": [
-      "Araçlarını belediyelere sürücüsüz kiralayan şirketlerin sorunu, kiralamanın SGK’nın gördüğü kayıtlarda kendiliğinden yer almamasıdır. Emniyet yalnız plaka ve sürücüyü bildirir; kiralamayı ispat etmek şirkete kalır. 2026/22 sayılı Genelge doğrudan ceza yerine denetmen incelemesini getirdiği için, sözleşme, damga vergisi, düzenli fatura ve belediyenin kullanıcı beyanı hazır olan şirket bu incelemeden kolayca çıkar. Bu belgeleri araçlar teslim edilirken tamamlamak, aylar sonra gelecek bir yazıyla uğraşmaktan çok daha kolaydır.",
+      "Araçlarını belediyelere sürücüsüz kiralayan şirketlerin sorunu, kiralamanın SGK’nın gördüğü kayıtlarda kendiliğinden yer almamasıdır. Emniyet yalnız plaka ve sürücüyü bildirir; kiralamayı ispat etmek şirkete kalır. 2026/22 sayılı Genelge doğrudan ceza yerine denetmen incelemesini getirdiği için, sözleşme, damga vergisi, düzenli fatura ve belediyenin kullanıcı beyanı hazır olan şirket bu incelemeden kolayca çıkar. Bu belgeleri araçlar teslim edilirken tamamlamak, aylar sonra gelecek bir yazıyla uğraşmaktan çok daha kolaydır. Ama kalıcı çözüm, SGK’nın elindeki kayıtları birbiriyle eşleştirip gerçekte hiçbir çalışma ilişkisi olmayan şirketleri bu süreçten hiç geçirmemesidir.",
       "Somut olayda güncel mevzuat ve SGK’nın uygulaması ayrıca değerlendirilmelidir."
      ]
     }
