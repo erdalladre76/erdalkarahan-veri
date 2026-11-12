@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-09",
+ "guncelleme": "2026-11-12",
  "aciklama": "Resmî oran ve tutarlar değiştiğinde yalnızca bu dosyayı (ve gerekirse cezalar.json, beyan_vergi.json, sgk_formlar.json, yazilar.json) güncelleyin; site yeni değerleri otomatik kullanır.",
  "kidemTavan": [
   {
@@ -271,7 +271,7 @@
  },
  "gecbeyan": {
   "aciklama": "Geç beyan / beyanname vermeme cezası hesaplayıcısı (#gecbeyan) ve rapor parası (#h-raporparasi) için. gz: aylık gecikme ve pişmanlık zammı (%); asgari: brüt asgari ücret (SGK idari para cezası ve rapor parası hesabı); usul: VUK 352 genel usulsüzlük cezaları [ad, 1. derece, 2. derece] sırası sabit (sermaye şirketleri, 1. sınıf, 2. sınıf, diğer beyanname veren, basit usul, muaf esnaf); hol: son günü kaydıran resmî tatiller (YYYY-AA-GG; tam gün); ext: GİB süre uzatmaları {'tur|YYYY-AA':'YYYY-AA-GG'} tur: kdv, kdv2, mv (muhtasar vergi), ms (muhtasar SGK belge), dv, kon, tp, gek, gec, gv, kv.",
-  "guncelleme": "10.11.2026",
+  "guncelleme": "12.11.2026",
   "gz": 3.7,
   "asgari": 33030,
   "usul": [
@@ -306,7 +306,29 @@
     1700
    ]
   ],
-  "hol": [],
+  "hol": [
+   "2026-01-01",
+   "2026-03-20",
+   "2026-04-23",
+   "2026-05-01",
+   "2026-05-19",
+   "2026-05-27",
+   "2026-05-28",
+   "2026-05-29",
+   "2026-07-15",
+   "2026-10-29",
+   "2027-01-01",
+   "2027-03-09",
+   "2027-03-10",
+   "2027-03-11",
+   "2027-04-23",
+   "2027-05-17",
+   "2027-05-18",
+   "2027-05-19",
+   "2027-07-15",
+   "2027-08-30",
+   "2027-10-29"
+  ],
   "ext": {
    "kdv|2026-04": "2026-06-05",
    "kdv2|2026-04": "2026-06-05",

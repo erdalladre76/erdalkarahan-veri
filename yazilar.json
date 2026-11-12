@@ -1,6 +1,129 @@
 {
  "yazilar": [
   {
+   "slug": "kdv-beyannamesi-511-vergiye-tabi-olmayan-islemler-kumulatif-bedel-ekim-2026",
+   "baslik": "KDV Beyannamesinde İki Değişiklik: Yeni 511 Satırı ve Kaldırılan “Kümülatif Bedel” Alanı",
+   "ozet": "GİB, 11 Kasım 2026 tarihli duyurusuyla 1 No.lu KDV Beyannamesinde Ekim/2026 döneminden geçerli iki değişiklik yaptı: “Diğer İşlemler” tablosuna 511 “Vergiye Tabi Olmayan İşlemler” satırı eklendi, “Sonuç Hesapları”ndaki kümülatif bedel alanı kaldırıldı. Satırın beyannameye etkisini, yasal dayanağını, örnek hesap ve muhasebe kaydını ve beyan öncesi kontrol listesini derledik.",
+   "tarih": "2026-11-12",
+   "etiketler": [
+    "KDV",
+    "KDV-1",
+    "e-Beyan",
+    "Beyanname",
+    "Muhasebe kaydı"
+   ],
+   "bolumler": [
+    {
+     "baslik": "NE DEĞİŞTİ?",
+     "paragraflar": [
+      "Gelir İdaresi Başkanlığı Dijital Vergi Dairesi, 11.11.2026 tarihli “KDV Beyannamesinde Değişiklikler” duyurusuyla 1 No.lu Katma Değer Vergisi Beyannamesinde iki değişiklik yaptığını açıkladı. Değişiklikler Ekim/2026 vergilendirme döneminden itibaren geçerli; yani Kasım ayı sonunda verilecek ilk beyannameden itibaren ekranlar yeni hâliyle karşımıza çıkacak.",
+      "Aynı değişiklik Defter-Beyan Sistemi’ne de yansıtıldı: “Gelir Ekle” ekranında “Diğer İşlemler (KDV Beyannamesi)” satış alt türü altına “511 – Vergiye Tabi Olmayan İşlemler” kayıt türü eklendi; bu türle girilen kayıtlar KDV beyannamesinin ilgili tablosuna otomatik aktarılıyor."
+     ],
+     "liste": [
+      "Matrah sayfası → “Diğer İşlemler” tablosuna 511 “Vergiye Tabi Olmayan İşlemler” işlem türü eklendi.",
+      "Bu satıra yazılan matrah “Toplam Matrah”ı etkilemiyor; “Vergi” sütununa yazılan tutar ise doğrudan “Hesaplanan Katma Değer Vergisi”ne ekleniyor.",
+      "Sonuç Hesapları sayfası → “Diğer Bilgiler” başlığındaki “Teslim ve Hizmetlerin Karşılığını Teşkil Eden Bedel (Kümülatif)” alanı beyannameden ve beyanname PDF’inden kaldırıldı.",
+      "Satır bazında açıklamalar için e-Beyan uygulamasında sağ üstteki kullanıcı simgesi → Yardım → e-Beyanname Dokümanlar → Hemen Başla yolu gösterildi."
+     ]
+    },
+    {
+     "baslik": "511 SATIRI NE İŞE YARIYOR?",
+     "paragraflar": [
+      "Satırın beyannameye etkisi, KDV Kanunu’nun 8. maddesinin (2) numaralı fıkrasıyla örtüşüyor: “Vergiye tabi olmayan veya vergiden istisna edilmiş bir işlem için fatura veya benzeri vesikada katma değer vergisi gösterilmesi halinde, bu vergi vesikayı düzenleyen tarafından ödenir.” Yani KDV’nin konusuna girmeyen bir işlemde faturada KDV gösterilmişse, işlem vergiye tabi hâle gelmez ama gösterilen vergi beyan edilip ödenir. 511 satırı da tam olarak bunu yapıyor: bedeli toplam matraha katmadan vergiyi hesaplanan KDV’ye ekliyor.",
+      "Duyuruyu değerlendiren meslek kaynakları, satırın KDV’nin konusuna girmeyen (vergiye tabi olmayan) işlemler için kullanılacağını, tam veya kısmi istisnalar için kullanılmayacağını vurguluyor. GİB’in e-Beyan yardım dokümanları bu satır için henüz ayrıntılı örnek içermiyor; hangi işlemin bu satıra gireceği konusunda tereddüt olan durumlarda yardım dokümanının güncellenmesini ve GİB açıklamalarını izlemek gerekiyor.",
+      "Önceki dönemlerde benzer durumlar farklı yollarla (ör. hesaplanan KDV’yi artıran diğer satırlar) beyannameye taşınıyordu. Ekim/2026 döneminden itibaren, yeni satırın bulunduğu e-Beyan ekranında bu işlemlerin ayrı satırda gösterilmesi, beyanname ile defter kayıtları arasındaki mutabakatı da kolaylaştıracaktır."
+     ]
+    },
+    {
+     "baslik": "ÖRNEK HESAP",
+     "paragraflar": [
+      "Bir şirket, KDV’nin konusuna girmeyen bir işlem için düzenlediği faturada sehven %20 KDV göstermiş olsun: bedel 40.000,00 TL, KDV 8.000,00 TL, toplam 48.000,00 TL. Aynı ay şirketin vergiye tabi teslimleri 500.000,00 TL matrah ve 100.000,00 TL KDV, indirilecek KDV’si 70.000,00 TL.",
+      "Beyannamede: vergiye tabi teslimler matrah tablosunda (500.000,00 TL / 100.000,00 TL), fatura ise “Diğer İşlemler” tablosunda 511 koduyla matrah 40.000,00 TL, vergi 8.000,00 TL olarak gösterilir.",
+      "Sonuç: Toplam matrah 500.000,00 TL olarak kalır (511 satırındaki 40.000,00 TL eklenmez). Hesaplanan KDV 100.000,00 + 8.000,00 = 108.000,00 TL olur. İndirilecek KDV 70.000,00 TL düşüldüğünde ödenecek KDV 38.000,00 TL’dir."
+     ]
+    },
+    {
+     "baslik": "MUHASEBE KAYDI",
+     "paragraflar": [
+      "Faturanın kaydı (gelir hesabı işlemin niteliğine göre seçilir; örnekte 649 kullanılmıştır):"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "120 Alıcılar",
+       "48.000,00",
+       ""
+      ],
+      [
+       "649 Diğer Olağan Gelir ve Kârlar",
+       "",
+       "40.000,00"
+      ],
+      [
+       "391 Hesaplanan KDV",
+       "",
+       "8.000,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "AY SONU MAHSUP KAYDI",
+     "paragraflar": [
+      "Dönem sonunda hesaplanan KDV (vergiye tabi teslimler dahil toplam 108.000,00 TL) ile indirilecek KDV (70.000,00 TL) mahsup edilir:"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "391 Hesaplanan KDV",
+       "108.000,00",
+       ""
+      ],
+      [
+       "191 İndirilecek KDV",
+       "",
+       "70.000,00"
+      ],
+      [
+       "360 Ödenecek Vergi ve Fonlar",
+       "",
+       "38.000,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "KALDIRILAN KÜMÜLATİF BEDEL ALANI",
+     "paragraflar": [
+      "“Teslim ve Hizmetlerin Karşılığını Teşkil Eden Bedel (Kümülatif)” alanı, yıl başından itibaren yapılan teslim ve hizmetlerin toplamını gösteriyordu. Bazı bankalar, finans kuruluşları ve ihale makamları bu alanı işletmenin cirosunu görmek için kullanıyordu.",
+      "Ekim/2026 döneminden itibaren alan beyanname PDF’inde de yer almayacak. Bu bilgiyi isteyen kurumlara, alanın kaldırılmasının GİB’in beyanname şablonundaki değişiklikten kaynaklandığını belirtmek; ciro bilgisi gerekiyorsa geçici vergi beyannamesi, mizan veya gelir tablosu gibi diğer belgelerle desteklemek gerekir."
+     ]
+    },
+    {
+     "baslik": "BEYAN ÖNCESİ KONTROL LİSTESİ",
+     "liste": [
+      "Muhasebe programı ve BDP güncellemelerini Ekim/2026 KDV beyannamesini hazırlamadan önce yapın; e-Beyan’a web servisle aktarım yapılıyorsa programın yeni satırı tanıdığını kontrol edin.",
+      "Ekim ayı kayıtlarında KDV’nin konusuna girmeyen işlem için KDV gösterilmiş fatura olup olmadığını tarayın; varsa 511 satırına, istisna işlemlerini ise kendi istisna tablolarına yazın.",
+      "391 hesabının ay sonu bakiyesi ile beyannamedeki “Hesaplanan KDV” toplamının tuttuğunu kontrol edin; 511 satırındaki vergi bu toplamın içindedir.",
+      "İstanbul’daki mükelleflerin KDV beyannameleri Ekim/2026 döneminden itibaren yeni e-Beyan sisteminden alınıyor; önceki dönemlere ait ilk ve düzeltme beyannameleri BDP’den verilmeye devam ediyor.",
+      "Ekim/2026 dönemi KDV beyannamesinin son günü olan 28 Kasım hafta sonuna denk geldiğinden süre izleyen ilk iş günü olan 30 Kasım 2026 Pazartesi günü sona erer."
+     ]
+    }
+   ],
+   "kaynaklar": [
+    "https://www.muhasebetr.com/guncelmevzuat/mevzuat_oku.php?mevzuat_id=7258",
+    "https://www.bdturkey.com/defter-beyan-sistemi-kdv-beyannamesinde-degisiklik-hakkinda-duyuru",
+    "https://www.alomaliye.com/2026/11/02/kvd-beyannamelerine-iliskin-onemli-duyuru-kdv1-kdv2-kdv2b-kdv4-kdv9015/",
+    "https://dijital.gib.gov.tr/duyurular"
+   ]
+  },
+  {
    "slug": "sahibinden-ilan-faturasi-kdv-tevkifati-3-10-muhasebe-kaydi",
    "baslik": "Sahibinden İlan Faturalarında KDV Tevkifatı: “Yeni” mi, Kim Uygular, Kayıt Nasıl Yapılır?",
    "ozet": "Sosyal medyada “1 Kasım’dan itibaren sahibinden faturalarına yeni %30 tevkifat” paylaşımları dolaşıyor. Aslında yeni bir tebliğ yok; ilan ve doping bedelleri ticari reklam hizmeti sayıldığı için yıllardır yürürlükte olan 3/10 tevkifat uygulanıyor. Kimi etkilediğini, 12.000 TL sınırını, KDV-1/KDV-2 beyanını ve örnek muhasebe kayıtlarını anlattık.",
