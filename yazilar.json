@@ -55,7 +55,7 @@
      ],
      "liste": [
       "Kira sözleşmesine şu maddeyi koyun: araçlar yalnız kiracının (ya da adı yazılı hizmet alınan firmanın) personeli tarafından ve kiracının işleri için kullanılacak; kullanıcıların sigortalılığı ve trafik cezaları kiracıya ait olacak; kullanıcılar değiştiğinde şirkete yazılı bildirilecek.",
-      "Sözleşmenin damga vergisini süresinde beyan edip ödeyin. Belediyeler damga vergisinden muaf olduğu için vergi, şirketin payına düşen kısım üzerinden hesaplanır; beyanname ve tahakkuk fişini sözleşmeyle birlikte saklayın.",
+      "Sözleşmenin damga vergisini ödeyin ve ödendiğini gösteren belgeyi saklayın. Resmî dairelerle kişiler arasındaki kâğıtların damga vergisini Damga Vergisi Kanunu’nun 3. maddesine göre kişiler, yani şirket öder (2026’da sözleşme bedelinin binde 9,48’i; kiralama ihaleyle yapıldıysa ihale kararı için ayrıca binde 5,69). SGK vergi dairesine tam olarak bu kaydı sorar.",
       "Kira faturalarını her dönem düzenli kesin, tahsilatı banka üzerinden alın.",
       "Araçları teslim ederken plaka, kilometre, tarih ve teslim alan kişiyi gösteren teslim tutanağı düzenleyin.",
       "Belediyeden imzalı “araç kullanıcı beyanı” alın: kiralanan plakaları ve bu araçları kullanacak personelin adını, TC kimlik numarasını, görevini ve hangi işverenin personeli olduğunu yazsın. Bir örneği araçta, bir örneği şirkette dursun. Doldurulabilir örneği: https://www.erdalkarahan.com/#d-aracbeyan",
@@ -66,7 +66,7 @@
     {
      "baslik": "YAZI GELİRSE YA DA DENETMEN ÇAĞIRIRSA",
      "paragraflar": [
-      "Yazıda verilen süreyi kaçırmadan kısa ve belgeye dayanan bir açıklama verin: aracın hangi sözleşmeyle ve hangi dönem için belediyeye sürücüsüz kiralandığını, sürücünün belediyenin (ya da adı geçen firmanın) personeli olduğunu ve şirketinizle iş ilişkisi bulunmadığını yazın. Ekine sözleşmeyi, damga vergisi beyannamesi ve tahakkuk fişini, kira faturalarını, teslim tutanağını, belediyenin kullanıcı beyanını ve araç ruhsatı fotokopisini koyun. Hazır metin: https://www.erdalkarahan.com/#d-sgkarac",
+      "Yazıda verilen süreyi kaçırmadan kısa ve belgeye dayanan bir açıklama verin: aracın hangi sözleşmeyle ve hangi dönem için belediyeye sürücüsüz kiralandığını, sürücünün belediyenin (ya da adı geçen firmanın) personeli olduğunu ve şirketinizle iş ilişkisi bulunmadığını yazın. Ekine sözleşmeyi, damga vergisinin ödendiğini gösteren belgeyi, kira faturalarını, teslim tutanağını, belediyenin kullanıcı beyanını ve araç ruhsatı fotokopisini koyun. Hazır metin: https://www.erdalkarahan.com/#d-sgkarac",
       "Denetmen ifadeye çağırırsa şirket yetkilisi, sürücü ve belediye yetkilisinin anlattıklarının birbiriyle uyumlu olmasına dikkat edin. Buna rağmen idari para cezası tebliğ edilirse, tebliğden itibaren 15 gün içinde SGK’ya itiraz edilebilir; itiraz reddedilirse ret kararının tebliğinden itibaren 30 gün içinde idare mahkemesinde dava açılabilir. Mahkemeler de trafik tutanağının tek başına çalışma ilişkisini kanıtlamadığını, idarenin bu ilişkiyi somut olarak ortaya koyması gerektiğini kabul etmektedir."
      ]
     },
@@ -90,7 +90,8 @@
     "https://kpmgvergi.com/blog/trafik-idari-para-cezalari-sgk-acisindan-nasil-degerlendiriliyor/1377",
     "https://www.fatiharas.com/sirket-aracini-baskasinin-kullanmasi-cezasi/",
     "https://www.memurlar.net/haber/1183566/sgk-dan-sirket-araclari-icin-yeni-duzenleme-ceza-uygulanmayacak.html",
-    "https://tokkder.org/tokkder-dergi/4816"
+    "https://tokkder.org/tokkder-dergi/4816",
+    "https://www.hakedis.org/sozlesme-uygulamalarinda-damga-vergisi/"
    ],
    "dogrulanmadi": []
   },
