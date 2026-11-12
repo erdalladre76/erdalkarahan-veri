@@ -2,78 +2,95 @@
  "yazilar": [
   {
    "slug": "sirket-araci-surucusuz-kiralama-trafik-denetimi-sgk-2026-22",
-   "baslik": "Kiraya Verdiğiniz Şirket Aracı Trafik Denetimine Takılırsa: Sürücüsüz Kiralamada SGK Yazısına Karşı Önceden Hazırlık",
-   "ozet": "Şirket adına kayıtlı bir aracı sürücüsüz olarak belediyeye ya da başka bir firmaya kiraladığınızı düşünelim. Aracı kiracının personeli kullanırken trafik denetimine takılırsa, kayıtlarda araç sizin şirketiniz adına görünür ve SGK, sürücünün sizin işyerinizde kayıt dışı çalışıp çalışmadığını araştırır. SGK’nın 2026/22 sayılı Genelgesine göre süreç nasıl işliyor, araçları teslim ederken hangi belgeleri almalısınız, yazı gelirse ne cevap vermelisiniz?",
+   "baslik": "Araçlarını Belediyelere Sürücüsüz Kiralayan Şirketler ve SGK: Trafik Denetiminden Sonra Gelen Yazıya Karşı Ne Yapılmalı?",
+   "ozet": "Belediyeye sürücüsüz kiralanan aracı belediye personeli kullanırken trafik denetimine takılırsa, kayıtlarda araç sahibi şirket görünür ve SGK sürücünün o şirkette kayıt dışı çalışıp çalışmadığını araştırır. Emniyetten SGK’ya hangi bilgi gidiyor, 2026/22 sayılı Genelgeyle ne değişti, SGK kiralamayı hangi kayıtlardan kontrol ediyor ve şirket bu sorunu baştan nasıl önler?",
    "tarih": "2026-11-12",
    "etiketler": [
     "SGK",
-    "Kayıt Dışı İstihdam",
     "Araç Kiralama",
-    "Denetim"
+    "Belediye",
+    "Kayıt Dışı İstihdam"
    ],
    "bolumler": [
     {
-     "baslik": "SORUN NEREDEN ÇIKIYOR?",
+     "baslik": "SORUN NE?",
      "paragraflar": [
-      "Trafik denetiminde yüze karşı düzenlenen ceza tutanağına sürücünün kimlik bilgileri ile aracın plakası yazılır. Bu bilgiler Emniyetten Sosyal Güvenlik Kurumuna da gelir ve SGK, aracın ruhsat sahibi işyerinin kayıtlarıyla sürücüyü karşılaştırır. Sürücü, aracın kayıtlı olduğu şirketin sigortalısı olarak görünmüyorsa kayıt dışı çalışma ihtimali araştırılır.",
-      "Aracı kendi personelinizin kullandığı durumlarda bu kontrol yerindedir. Ancak araç sürücüsüz olarak kiraya verilmişse durum farklıdır: Örneğin şirketiniz araçlarını sürücüsüz olarak bir belediyeye kiralamış, aracı da belediyenin kendi personeli kullanıyor olsun. Ruhsatta araç hâlâ şirketiniz adına kayıtlı olduğu için kayıtlarda bu kişi, “şirketinizin aracını kullanan ama şirketinizde sigortalı görünmeyen” biri olarak çıkar. Önlem alınmazsa aylar sonra SGK’dan gelen bir yazıya ya da denetmenin ifade davetine cevap vermek zorunda kalırsınız."
+      "Pek çok şirket, filosundaki araçları sürücüsüz olarak belediyelere ve diğer kamu kurumlarına kiralıyor. Aracı belediyenin kendi personeli kullanıyor; şirketin sürücüyle hiçbir iş ilişkisi yok. Ancak aracın ruhsatı şirket adına kayıtlı olduğu için, bu araç trafik denetimine takıldığında SGK’nın önüne gelen tablo şudur: “Şirketin aracını, şirkette sigortalı görünmeyen biri kullanıyor.”",
+      "Emniyet denetimde sürücünün kimin çalışanı olduğunu sormaz, kira ilişkisini de kaydetmez. SGK’nın da kiralanan araçları önceden görebileceği ayrı bir kayıt yoktur. Bu yüzden sorun, şirket önlem almazsa aylar sonra SGK’dan gelen bir yazı ya da denetmen çağrısı olarak ortaya çıkar."
      ]
     },
     {
-     "baslik": "2026/22 SAYILI GENELGE NE DİYOR?",
+     "baslik": "BİLGİ SGK’YA NASIL GİDİYOR?",
      "paragraflar": [
-      "SGK’nın 19.10.2026 tarihli 2026/22 sayılı Genelgesine göre yüze karşı tebliğ edilen trafik ceza tutanaklarına dayanan kayıtlar önce SGK il müdürlüklerindeki kayıt dışı istihdamla mücadele (KADİM) servislerince incelenir. İnceleme sonucunda aynı işyerinde çalıştığı tespit edilenler dışındaki kayıtlar sosyal güvenlik denetmenlerine gönderilir.",
-      "Yani yalnız trafik tutanağına bakılarak sürücü doğrudan şirketinizin sigortalısı yapılmaz; konu denetmen incelemesine gider. Denetmen, şirket yetkilisinin ve sürücünün ifadesini alabilir, sözleşme, fatura ve ödeme kayıtlarını isteyebilir. Bu incelemede sizi koruyacak olan şey, aracın neden başkası tarafından kullanıldığını gösteren düzenli belgelerdir.",
-      "Genelgenin trafik tutanakları dışındaki tespitlere (zabıta, kolluk gibi görevlilerin tutanakları) ilişkin “tespit edilen gün kadar hizmet” kuralını daha önce ayrıca ele almıştık: https://www.erdalkarahan.com/#yz-sgk-2026-22-genelgesi-trafik-tutanagi-fiili-calisma-tespiti"
+      "İl emniyet müdürlükleri, kullanım amacı ticari olan araçlara yüze karşı düzenlenen trafik ceza tutanaklarındaki bilgileri elektronik ortamda SGK’ya gönderir: aracın plakası, sürücünün TC kimlik numarası ve adı soyadı, cezanın yeri ve tarihi. SGK plakadan aracın sahibini bulur ve sürücünün o tarihte araç sahibinin işyerinde sigortalı olup olmadığına bakar.",
+      "Eskiden sürücü araç sahibinin işyerinde kayıtlı değilse doğrudan sigortalı tescili ve idari para cezası yoluna gidilebiliyor, şirket sonradan itiraz etmek zorunda kalıyordu. SGK’nın 19.10.2026 tarihli 2026/22 sayılı Genelgesiyle bu kayıtlar önce kayıt dışı istihdamla mücadele (KADİM) servislerince inceleniyor; sürücünün aynı işyerinde çalıştığı tespit edilemeyen kayıtlar sosyal güvenlik denetmenlerine gönderiliyor. Yani belediyeye kiralanan araçta yazı ya da çağrı yine şirkete gelir; değişen, kararın artık denetmen incelemesiyle verilmesidir. Genelgenin diğer tutanaklara ilişkin kurallarını ayrıca anlatmıştık: https://www.erdalkarahan.com/#yz-sgk-2026-22-genelgesi-trafik-tutanagi-fiili-calisma-tespiti"
      ]
     },
     {
-     "baslik": "ARAÇLARI TESLİM EDERKEN NE YAPMALI?",
+     "baslik": "SGK KİRALAMAYI NEREDEN KONTROL EDİYOR?",
      "paragraflar": [
-      "En kolay yol, sorunu daha araç teslim edilirken çözmektir. Sürücüsüz kiralamada şu belgeler hazır olursa, olası bir denetmen incelemesi birkaç belgeyle kapanır:"
+      "SGK’nın 04.08.2021 tarihli trafik idari para cezaları genel yazısı, kiralama iddiasında nelere bakılacağını sayar. Bu ölçütler, belediyeye kiralama yapan şirketin hangi kayıtları düzgün tutması gerektiğini de gösterir:"
      ],
      "liste": [
-      "Kira sözleşmesine açık bir madde koyun: araçlar yalnız kiracının kendi personeli tarafından ve kiracının işleri için kullanılacak; kullanıcıların sigortalılığı ve trafik cezaları kiracıya ait olacak; kullanıcılar değiştiğinde kiraya veren şirkete yazılı olarak bildirilecek.",
-      "Araç teslim tutanağı düzenleyin: plaka, kilometre, teslim tarihi ve teslim alan kişi açıkça yazsın.",
-      "Kiracıdan imzalı “araç kullanıcı beyanı” alın: kiraladığı plakaları ve bu araçları kullanacak personelin adını, TC kimlik numarasını ve görevini yazsın, bu kişilerin kendi çalışanı olduğunu beyan etsin. Doldurulabilir örneği: https://www.erdalkarahan.com/#d-aracbeyan",
-      "Beyanın bir örneğini araçta, bir örneğini şirkette saklayın; kullanıcı listesi değiştikçe yenisini isteyin.",
-      "Kira faturalarını düzenli kesin ve tahsilatı banka üzerinden alın; kira ilişkisinin sürdüğünü gösteren en güçlü belgeler bunlardır."
+      "Yazılı ve tarafların imzaladığı bir kira sözleşmesi bulunmalıdır; noter onayı aranmaz.",
+      "Sürücünün kiracının işyerinde (bizim örneğimizde belediyede) sigortalı olup olmadığına ve meslek koduna bakılır.",
+      "Kira bedelinin gerçekten ödenip ödenmediği fatura ve ödeme belgeleriyle kontrol edilir.",
+      "Sözleşmenin damga vergisi ve kira geliri bilgileri vergi dairesinden sorulur.",
+      "Kiralama geçerliyse ve sürücü kiracının sigortalısıysa işlem yapılmaz; sürücü kiracıda da kayıtlı değilse kiracının çalışanı sayılarak işlem yapılır."
      ]
     },
     {
-     "baslik": "SGK’DAN YAZI GELİRSE YA DA DENETMEN ÇAĞIRIRSA",
-     "paragraflar": [
-      "Yazıda verilen süreyi kaçırmadan, kısa ve belgeye dayanan bir açıklama verin. Açıklamada aracın sözleşme tarihi ve numarasıyla birlikte sürücüsüz kiraya verildiğini, sürücünün kiracının personeli olduğunu ve şirketinizle iş ilişkisi bulunmadığını yazın. Ekine sözleşmeyi, teslim tutanağını, kiracının kullanıcı beyanını, faturaları ve araç ruhsatının fotokopisini koyun. Hazır metni şuradan doldurabilirsiniz: https://www.erdalkarahan.com/#d-sgkarac",
-      "Kiracı bir belediye ya da başka bir işverense, sürücünün denetim tarihinde orada kadrolu ya da sigortalı çalıştığını gösteren bir yazıyı da kiracıdan isteyin. Aynı gün başka bir işverende tam gün çalıştığı görünen kişinin sizin işyerinizde kayıt dışı çalıştığını ileri sürmek zorlaşır. İfadeye çağrılırsanız şirket yetkilisi, sürücü ve kiracı yetkilisinin anlattıklarının birbiriyle uyumlu olmasına dikkat edin."
-     ]
-    },
-    {
-     "baslik": "BAŞKA DURUMLAR",
+     "baslik": "BELEDİYEYE KİRALAMADA SORUN ÇIKARAN NOKTALAR",
      "liste": [
-      "Araç hizmet alınan bir firmaya verilmişse (ör. taşeron, nakliye, bakım firması), sürücünün o firmanın personeli olduğunu gösteren sözleşme ve firma yazısı hazır tutulmalı.",
-      "Aracı şirket ortağı ya da yöneticisi kullanıyorsa, kendi adına sigortalı olduğu (ör. 4/b) ve şirketten ücret almadığı belgelenmeli.",
-      "Araç akraba ya da arkadaşa kısa süreliğine emanet verildiyse Genelgede ayrıca bir hüküm yoktur; denetmen, kişinin şirkete iş görüp görmediğini ve ücret alıp almadığını araştırır. Şirket araçlarının şirket dışı kişilere verilmemesi en güvenli yoldur.",
-      "Sürücü gerçekten şirketin çalışanıysa ve işe giriş bildirgesi verilmemişse, beklemeden bildirim yapılması ve durumun düzeltilmesi gerekir; bu yazıdaki belgeler o durumu korumaz."
+      "Sürücü belediyenin değil, belediye şirketinin ya da belediyenin hizmet aldığı taşeron firmanın personeli olabilir. Bu durumda SGK kaydında sürücü “kiracının işyerinde” görünmez. Araç kullanıcı beyanında sürücünün hangi işverenin personeli olduğu açıkça yazılmalı; mümkünse araçları fiilen o şirket kullanıyorsa sözleşmede de bu belirtilmelidir.",
+      "Belediye personelinin bir kısmı memur, bir kısmı işçidir; ikisi de SGK kayıtlarında belediyeden görünür. Yine de sürücünün denetim tarihinde belediyede çalıştığını gösteren bir yazıyı belediyeden istemek işi hızlandırır.",
+      "Kira faturalarının aksatılması, ödemelerin geç ya da elden alınması, sözleşmenin damga vergisinin beyan edilmemesi SGK’nın kiralamanın gerçekliğinden şüphe etmesine yol açar.",
+      "Sözleşme süresi bitip araç iade edildikten sonra ya da yeni sözleşme yapılmadan araç belediyede kalmışsa, o dönem için kira ilişkisi belgelenemez."
+     ]
+    },
+    {
+     "baslik": "ŞİRKET BAŞTAN NE YAPMALI?",
+     "paragraflar": [
+      "SGK’nın kiralamayı önceden bilmesini sağlayan bir bildirim yolu yok; ama SGK’nın sonradan bakacağı kayıtların hepsi şirketin elindedir. Bunlar düzgün tutulursa olası bir yazı, birkaç belgeyle kapanır:"
+     ],
+     "liste": [
+      "Kira sözleşmesine şu maddeyi koyun: araçlar yalnız kiracının (ya da adı yazılı hizmet alınan firmanın) personeli tarafından ve kiracının işleri için kullanılacak; kullanıcıların sigortalılığı ve trafik cezaları kiracıya ait olacak; kullanıcılar değiştiğinde şirkete yazılı bildirilecek.",
+      "Sözleşmenin damga vergisini süresinde beyan edip ödeyin. Belediyeler damga vergisinden muaf olduğu için vergi, şirketin payına düşen kısım üzerinden hesaplanır; beyanname ve tahakkuk fişini sözleşmeyle birlikte saklayın.",
+      "Kira faturalarını her dönem düzenli kesin, tahsilatı banka üzerinden alın.",
+      "Araçları teslim ederken plaka, kilometre, tarih ve teslim alan kişiyi gösteren teslim tutanağı düzenleyin.",
+      "Belediyeden imzalı “araç kullanıcı beyanı” alın: kiralanan plakaları ve bu araçları kullanacak personelin adını, TC kimlik numarasını, görevini ve hangi işverenin personeli olduğunu yazsın. Bir örneği araçta, bir örneği şirkette dursun. Doldurulabilir örneği: https://www.erdalkarahan.com/#d-aracbeyan",
+      "Kiralık araçların ruhsatındaki kullanım amacını kontrol edin; Emniyetten SGK’ya bilgi ticari kullanım amaçlı araçlar için gönderilmektedir.",
+      "Şirket araç kiralama işletmesi olarak Kiralık Araç Bildirim Sistemine (KABİS) kiralama bildirimi yapıyorsa bu da kiralamanın kaydıdır; 27.02.2026’da yürürlüğe giren düzenlemeyle kiralık araçlara ait trafik cezaları kiracı adına düzenlenmektedir. Ancak KABİS kaydının Emniyetten SGK’ya giden bilgiyi durdurduğuna ilişkin bir düzenleme yoktur; SGK yazısına karşı asıl koruma yukarıdaki belgelerdir."
+     ]
+    },
+    {
+     "baslik": "YAZI GELİRSE YA DA DENETMEN ÇAĞIRIRSA",
+     "paragraflar": [
+      "Yazıda verilen süreyi kaçırmadan kısa ve belgeye dayanan bir açıklama verin: aracın hangi sözleşmeyle ve hangi dönem için belediyeye sürücüsüz kiralandığını, sürücünün belediyenin (ya da adı geçen firmanın) personeli olduğunu ve şirketinizle iş ilişkisi bulunmadığını yazın. Ekine sözleşmeyi, damga vergisi beyannamesi ve tahakkuk fişini, kira faturalarını, teslim tutanağını, belediyenin kullanıcı beyanını ve araç ruhsatı fotokopisini koyun. Hazır metin: https://www.erdalkarahan.com/#d-sgkarac",
+      "Denetmen ifadeye çağırırsa şirket yetkilisi, sürücü ve belediye yetkilisinin anlattıklarının birbiriyle uyumlu olmasına dikkat edin. Buna rağmen idari para cezası tebliğ edilirse, tebliğden itibaren 15 gün içinde SGK’ya itiraz edilebilir; itiraz reddedilirse ret kararının tebliğinden itibaren 30 gün içinde idare mahkemesinde dava açılabilir. Mahkemeler de trafik tutanağının tek başına çalışma ilişkisini kanıtlamadığını, idarenin bu ilişkiyi somut olarak ortaya koyması gerektiğini kabul etmektedir."
      ]
     },
     {
      "baslik": "CEZA RİSKİ",
      "paragraflar": [
-      "Denetmen incelemesi sonunda kişinin şirkette çalıştığı tespit edilirse 5510 sayılı Kanunun 102. maddesine göre işe giriş bildirgesinin verilmemesi nedeniyle her sigortalı için asgari ücret tutarında idari para cezası uygulanır; tespit kamu idarelerinin denetim elemanlarınca yapıldığında bu tutar iki katına çıkar (2026 için kişi başı 66.060 TL). Buna eksik bildirilen prim ve gecikme zammı da eklenebilir. Sürücüsüz kiralamada doğru belgelerle böyle bir sonucun ortaya çıkmaması gerekir; ama belgesiz bir dosyada ispat yükü fiilen şirkete kalır."
+      "Belgeler eksik kalır ve denetmen sürücünün şirkette çalıştığı sonucuna varırsa, 5510 sayılı Kanunun 102. maddesine göre işe giriş bildirgesi verilmediği için her sigortalı için asgari ücretin iki katı (2026’da kişi başı 66.060 TL) idari para cezası uygulanır; buna prim farkı, gecikme cezası ve zammı ile teşviklerin geri alınması eklenebilir. Belediyeye kiralanan araçlarda bu sonuç, gerçekte hiçbir çalışma ilişkisi yokken yalnız belge eksikliği yüzünden doğar."
      ]
     },
     {
      "baslik": "SONUÇ",
      "paragraflar": [
-      "2026/22 sayılı Genelge, trafik tutanağına dayalı tespitlerde otomatik işlem yerine denetmen incelemesini öne çıkarıyor. Bu, haklı olan işveren için iyi bir haberdir; ancak haklı olduğunu belgeleyebilmesi şartıyla. Araçlarını sürücüsüz kiraya veren şirketlerin sözleşme, teslim tutanağı ve kiracının kullanıcı beyanını teslim sırasında tamamlaması, ileride gelecek bir SGK yazısını birkaç belgeyle kapatmayı sağlar.",
+      "Araçlarını belediyelere sürücüsüz kiralayan şirketlerin sorunu, kiralamanın SGK’nın gördüğü kayıtlarda kendiliğinden yer almamasıdır. Emniyet yalnız plaka ve sürücüyü bildirir; kiralamayı ispat etmek şirkete kalır. 2026/22 sayılı Genelge doğrudan ceza yerine denetmen incelemesini getirdiği için, sözleşme, damga vergisi, düzenli fatura ve belediyenin kullanıcı beyanı hazır olan şirket bu incelemeden kolayca çıkar. Bu belgeleri araçlar teslim edilirken tamamlamak, aylar sonra gelecek bir yazıyla uğraşmaktan çok daha kolaydır.",
       "Somut olayda güncel mevzuat ve SGK’nın uygulaması ayrıca değerlendirilmelidir."
      ]
     }
    ],
    "kaynaklar": [
     "https://www.alomaliye.com/2026/10/22/sgk-genelgesi-2026-22/",
+    "https://www.consulta.com.tr/media/2021/08/1628666844556_trafik-cezalar-e-79961784-04599-28780188-genel-yaz.pdf",
+    "https://kpmgvergi.com/blog/trafik-idari-para-cezalari-sgk-acisindan-nasil-degerlendiriliyor/1377",
+    "https://www.fatiharas.com/sirket-aracini-baskasinin-kullanmasi-cezasi/",
     "https://www.memurlar.net/haber/1183566/sgk-dan-sirket-araclari-icin-yeni-duzenleme-ceza-uygulanmayacak.html",
-    "https://musavirlerkulubu.com.tr/makale/sgk-ticari-arac-suruculerinde-sigortalilik-denetimi-yeni-genelge"
+    "https://tokkder.org/tokkder-dergi/4816"
    ],
    "dogrulanmadi": []
   },
