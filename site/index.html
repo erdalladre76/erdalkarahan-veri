@@ -1121,6 +1121,12 @@ section[data-view],[id^="h-"],[id^="d-"],[id^="x-"],[id^="p-"]{scroll-margin-top
 .dzs-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
 .dzs-chips button{font:inherit;font-size:12.5px;border:1px solid var(--rule);background:var(--paper);color:var(--ink);border-radius:999px;padding:4px 10px;cursor:pointer}
 .dzs-chips span{opacity:.5;margin-left:2px}
+.dzs-chips{gap:8px 10px;align-items:flex-start}.dzs-chip{position:relative;display:flex;flex-direction:column;gap:2px}.dzs-chip small{font-size:11px;font-weight:700;color:var(--ink-2);padding-left:4px}
+.dzs-chips .dzs-chip button{font-weight:700;font-size:13px;padding:6px 12px;border-color:color-mix(in srgb,var(--stamp) 35%,var(--rule));background:color-mix(in srgb,var(--stamp) 6%,var(--paper))}.dzs-chips .dzs-chip button:hover{border-color:var(--stamp)}
+.dzs-pop{position:absolute;z-index:60;top:100%;left:0;margin-top:4px;min-width:260px;max-width:min(360px,90vw);max-height:340px;overflow:auto;background:var(--sheet,#fff);border:1px solid var(--rule);border-radius:12px;box-shadow:0 14px 34px -10px rgba(0,0,0,.35);padding:6px}
+.dzs-pop button{display:block;width:100%;text-align:left;font:inherit;border:0;background:none;border-radius:8px;padding:8px 10px;cursor:pointer;color:var(--ink)}.dzs-pop button:hover{background:var(--paper)}.dzs-pop button[aria-checked=true]{background:color-mix(in srgb,var(--stamp) 12%,transparent)}.dzs-pop button[aria-checked=true] b::after{content:" ✓";color:var(--stamp)}
+.dzs-pop b{display:block;font-size:14px}.dzs-pop small{display:block;font-size:12px;color:var(--ink-2)}
+@media (max-width:640px){.dzs-pop{position:fixed;left:12px;right:12px;top:auto;bottom:90px;max-width:none;max-height:55vh}}
 .dzs-q{font-size:21px;margin:4px 0 4px;text-transform:none;line-height:1.3}
 .dzs-h{font-size:14px;color:var(--ink-2);margin:0 0 12px;line-height:1.5}
 .dzs-opts{display:grid;gap:8px}
@@ -5701,7 +5707,7 @@ window.ekYuzMsg=function(K){var Y=K.map(function(k){return num(k.yuz);}),any=Y.s
   gecbeyan:{t:'Beyanname vermeme cezası nasıl hesaplanır?',s:[['ceza','1. Beyannameyi ve tarihleri seçin','Beyanname türünü, son günü ve vereceğiniz günü girin.'],['steps','2. Soruları yanıtlayın','Pişmanlıkla mı veriyorsunuz, tahakkuk ne kadar gibi kısa sorular gelir.'],['bitti','3. Toplamı görün','Vergi, gecikme zammı, usulsüzlük cezası ve SGK idari para cezası tek toplamda gösterilir; birden fazla beyanname ekleyebilirsiniz.']]},
   arackdv:{t:'Araç KDV oranı nasıl bulunur?',s:[['arac','1. Aracı seçin','Binek, kamyonet, iş makinesi gibi aracın türünü seçin.'],['steps','2. Soruları yanıtlayın','İkinci el mi, satıcı galeri mi gibi sorular gelir.'],['bitti','3. Sonuç','KDV oranı, dayanağı, alıcının indirimi ve muhasebe kaydı açılır.']]}
  };
- var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611121321';
+ var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611121351';
  var MAP={sirket:'sirket',amackonu:'esas',ortaklik:'ortaklik',gecbeyan:'gecbeyan',arackdv:'arackdv'};
  function open(key){var h=H[key];if(!h)return;var m=document.getElementById('hlp-modal');if(!m){m=document.createElement('div');m.id='hlp-modal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');document.body.appendChild(m);
      m.addEventListener('click',function(e){if(e.target===m||e.target.closest('[data-hx]')){m.hidden=true;document.documentElement.style.overflow='';}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){m.hidden=true;document.documentElement.style.overflow='';}});}
@@ -5969,6 +5975,7 @@ var DZ={
  var BD={kdv:[['yok','Hiç verilmedi','Bu dönemlerin beyannamesi gönderilmedi'],['duz','Eksik / hatalı verildi','Düzeltme beyannamesi verilecek']],
   muh:[['yok','Hiç verilmedi','Ne stopaj ne SGK bildirimi yapıldı'],['duz','Eksik verildi','Stopaj eksik ya da personel unutuldu (ek belge)']]};
  ['kdv2','gec','gv','kv','dv','kon','tp','gek'].forEach(function(x){BD[x]=BD.kdv;});
+ Object.keys(BT).forEach(function(k){BT[k][0]=TC(BT[k][0]);});Object.keys(BD).forEach(function(k){BD[k].forEach(function(d){d[1]=TC(d[1]);});});
  function PER(t){return (BT[t]||[0,0,0,1])[3];}
  function PLIST(t){var p=PER(t),o=[],cy=now.getFullYear(),cur=ymOf(U(cy,now.getMonth(),1));if(p===1)return MS.map(function(m){return [m,ymLabel(m)];});
    if(p===3){for(var y=cy;y>=cy-3;y--)for(var q=3;q>=1;q--){var ym=y+'-'+String(q*3).padStart(2,'0');if(ym<cur)o.push([ym,y+' / '+q+'. dönem ('+['Oca–Mar','Nis–Haz','Tem–Eyl'][q-1]+')']);}return o;}
@@ -6027,11 +6034,27 @@ var DZ={
  function steps(e){var s=[];if(st.m==null)s.push('m');s.push('tur');if(e&&e.tur)s.push('dur');if(e&&e.dur){s.push('don','tut');if(e.tur==='muh'&&e.dur!=='ode')s.push('gir');}s.push('res');return s;}
  function durLbl(e){var d=BD[e.tur].filter(function(x){return x[0]===e.dur;})[0];return d?d[1]:'';}
  function perLbl(e){var ms=mlist(e),un=PER(e.tur)===1?'ay':'dönem';return ms.length>1?plbl(e.tur,ms[0],1)+' – '+plbl(e.tur,ms[ms.length-1],1)+' ('+ms.length+' '+un+')':plbl(e.tur,ms[0]);}
- function chips(e){var c=[];if(st.m!=null)c.push(['m',DZ.usul[st.m][0]]);if(e.tur)c.push(['tur',BT[e.tur][0]]);if(e.dur)c.push(['dur',durLbl(e)]);if(e.dur&&st.step!=='don'&&steps(e).indexOf(st.step)>steps(e).indexOf('don'))c.push(['don',perLbl(e)]);
-   return c.length?'<div class="dzs-chips">'+c.map(function(x){return '<button type="button" data-go="'+x[0]+'" title="Değiştir">'+esc(x[1])+' <span aria-hidden="true">✎</span></button>';}).join('')+'</div>':'';}
+ function TC(x){var SMW={'ve':1,'ile':1,'veya':1,'ya':1,'da':1,'de':1,'ki':1,'mi':1};x=String(x||'');if(window.trTitle)return trTitle(x);var f=1;return x.split(/(\s+)/).map(function(w){if(!/\S/.test(w))return w;var r=(!f&&SMW[w.toLocaleLowerCase('tr-TR')])?w:w.replace(/^([^A-Za-zÇĞİÖŞÜçğıöşü]*)([a-zçğıöşü])/,function(m,a,b){return a+b.toLocaleUpperCase('tr-TR');});f=0;return r;}).join('');}
+ function chips(e){var c=[],past=function(k){return steps(e).indexOf(st.step)>steps(e).indexOf(k);};
+   if(st.m!=null)c.push(['m','Mükellef Türü',DZ.usul[st.m][0]]);if(e.tur)c.push(['tur','Beyanname',BT[e.tur][0]]);if(e.dur)c.push(['dur','Durum',durLbl(e)]);
+   if(e.dur&&past('don'))c.push(['don','Dönem',perLbl(e)]);if(e.dur&&past('tut')&&e.tur!=='muh'){var tv=num(e.v.t);c.push(['tut','Tutar',e.ayni?(tv?f2(tv)+' TL':'Yok'):'Dönem Dönem']);}
+   return c.length?'<div class="dzs-chips">'+c.map(function(x){return '<div class="dzs-chip"><small>'+x[1]+'</small><button type="button" data-pick="'+x[0]+'" aria-haspopup="true" title="Değiştir">'+esc(TC(x[2]))+' <span aria-hidden="true">▾</span></button></div>';}).join('')+'</div>':'';}
+ function pickList(k,e){if(k==='m')return DZ.usul.map(function(u,i){return [String(i),u[0],String(st.m)];});
+   if(k==='tur')return Object.keys(BT).map(function(t){return [t,BT[t][0],e.tur,BT[t][1]];});
+   if(k==='dur')return BD[e.tur].map(function(d){return [d[0],d[1],e.dur,d[2]];});return null;}
+ function openPick(btn,k){var old=$('.dzs-pop',R);if(old){var same=old.__k===k;old.remove();if(same)return;}var e=st.cur,L=pickList(k,e);if(!L){go(k);return;}
+   var p=document.createElement('div');p.className='dzs-pop';p.__k=k;p.setAttribute('role','menu');
+   p.innerHTML=L.map(function(o){return '<button type="button" role="menuitemradio" data-pv="'+o[0]+'" aria-checked="'+(o[0]===o[2])+'"><b>'+esc(TC(o[1]))+'</b>'+(o[3]?'<small>'+esc(o[3])+'</small>':'')+'</button>';}).join('');
+   btn.parentNode.appendChild(p);p.__go=function(v){p.remove();pickSet(k,v);};}
+ function pickSet(k,v){var e=st.cur;
+   if(k==='m'){st.m=+v;all();return;}
+   if(k==='dur'){if(e.dur!==v){e.dur=v;if(e.tur==='muh'){e.v={};e.d={};e.gir=null;}}var S=steps(e);if(S.indexOf(st.step)<0)st.step='res';all();return;}
+   if(k==='tur'){if(e.tur===v)return;var old=e.tur,keep=old!=='muh'&&v!=='muh'&&PER(old)===PER(v);e.tur=v;if(!BD[v].some(function(d){return d[0]===e.dur;}))e.dur=null;
+     if(!keep){e.v={};e.d={};e.gir=null;var df=DEF(v);e.a=df[0];e.b=df[1];}
+     if(!e.dur){go('dur');return;}if(!keep&&st.step==='res'){go('don');return;}all();return;}}
  function big(list,q,cur){return '<div class="dzs-opts">'+list.map(function(o){return '<button type="button" class="dzs-opt" data-q="'+q+'" data-v="'+o[0]+'" aria-pressed="'+(String(cur)===String(o[0]))+'"><b>'+esc(o[1])+'</b>'+(o[2]?'<small>'+esc(o[2])+'</small>':'')+'</button>';}).join('')+'</div>';}
  function nav(next){return '<div class="dzs-nav">'+(steps(st.cur).indexOf(st.step)>0||st.rows.length?'<button type="button" class="dzs-back" data-act="back">← Geri</button>':'<span></span>')+(next?'<button type="button" class="dzt-btn" data-act="next">'+next+' →</button>':'')+'</div>';}
- function simple(A){var P=A.P,K=A.K;return [['Vergi',P.v,K.v],[A.dur==='ode'?'Gecikme zammı':'Gecikme / pişmanlık zammı',P.z,K.z],['Vergi cezası',P.vz+P.us,K.vz+K.us],['SGK primi ve gecikmesi',P.pr+P.sg,K.pr+K.sg],['SGK cezası',P.ipc,K.ipc]].filter(function(r){return r[1]||r[2];});}
+ function simple(A){var P=A.P,K=A.K;return [['Vergi',P.v,K.v],[A.dur==='ode'?'Gecikme Zammı':'Gecikme / Pişmanlık Zammı',P.z,K.z],['Vergi Cezası',P.vz+P.us,K.vz+K.us],['SGK Primi ve Gecikmesi',P.pr+P.sg,K.pr+K.sg],['SGK Cezası',P.ipc,K.ipc]].filter(function(r){return r[1]||r[2];});}
  function drawStep(){var W=$('#dzt-wiz',R),e=st.cur;
    if(!e){W.innerHTML='';return;}
    var S=steps(e),i=S.indexOf(st.step);if(i<0){st.step=S[0];i=0;}var SC=steps(e.tur&&e.dur?e:{tur:e.tur||'muh',dur:e.dur||'yok'}),ic=SC.indexOf(st.step);if(ic<0)ic=i;
@@ -6055,7 +6078,7 @@ var DZ={
    else if(s==='res'){var A=agg(e),a=sum(A.P),b=sum(A.K),nb=A.nob&&!a&&!b;
      h+='<h4 class="dzs-q">'+esc(BT[e.tur][0])+' · '+esc(perLbl(e))+'</h4>'
       +(nb?'<div class="dzs-res dzs-nob"><small>Beyanname vermeniz gerekmiyor</small><b>0,00 TL</b><em>'+esc(A.nobL||'')+'</em></div>':'<div class="dzs-res"><small>'+(e.dur==='ode'?'Bugün öderseniz ödenecek':(a===b?'Şimdi verirseniz ödenecek':'Pişmanlıkla şimdi verirseniz ödenecek'))+'</small><b>'+f2(a)+' TL</b>'+(a!==b?'<em>Pişmanlık dilekçesi vermezseniz yaklaşık '+f2(b)+' TL</em>':'')+(e.dur==='ode'?'<em>Beyanname zamanında verildiği için ceza çıkmaz; ödenmeyen tutara son ödeme gününden bugüne gecikme zammı (aylık %3,7, gün hesabıyla) işler.</em>':'')+'</div>'+'<table class="dzs-t">'+simple(A).map(function(r){return '<tr><td>'+r[0]+'</td><td>'+f2(r[1])+'</td></tr>';}).join('')+'</table>')
-      +'<details class="dzs-det"><summary>Ay ay ayrıntı</summary>'+resHTML(A,true).replace(/^<div class="v">[\s\S]*?<\/div>/,'').replace('<details>','<div>').replace('</details>','</div>').replace(/<summary>.*?<\/summary>/,'')+'</details>'+(nb?'':INFO(e.dur,true))
+      +'<details class="dzs-det"><summary>Ay ay ayrıntı</summary>'+resHTML(A,true).replace(/^<div class="v">[\s\S]*?<\/div>/,'').replace('<details>','<div>').replace('</details>','</div>').replace(/<summary>.*?<\/summary>/,'')+'</details>'+(nb?'':GXB+INFO(e.dur,true))
       +'<div class="dzs-end"><button type="button" class="dzt-btn" data-act="more">+ Başka beyanname ekle</button><button type="button" class="dzt-btn alt" data-act="done">Bitti, toplamı göster</button></div>'+nav();}
    W.innerHTML='<div class="dzs">'+h+'</div>';}
 
@@ -6067,16 +6090,38 @@ var DZ={
    h+=L('Uzlaşma',['Ceza ihbarnamesinin tebliğinden itibaren 30 gün içinde Dijital Vergi Dairesi’nden ya da dilekçeyle tarhiyat sonrası uzlaşma istenebilir.','Kapsam: vergi ziyaı cezaları (geç verilen beyanname üzerine kesilenler dahil) ile 40.000 TL’yi aşan usulsüzlük cezaları. 40.000 TL ve altındaki usulsüzlük cezaları uzlaşmaya konu olmaz; onlarda %75 indirim vardır.','Uzlaşılan cezaya ayrıca 376 indirimi uygulanmaz. Hangisinin daha avantajlı olduğuna bakın; uzlaşma olmazsa vergi mahkemesinde dava açılabilir.']);}
    h+=L('Ödeyemiyorsanız',['Vergi dairesinden tecil ve taksitlendirme istenebilir (6183 s. Kanun m. 48). Taksit tutarını <a href="#h-tecil">Tecil Faizi Hesaplama</a>, dilekçeyi <a href="#d-tecilvd">Tecil Dilekçesi</a> ile hazırlayabilirsiniz.']);
    return '<details class="dzs-det dzs-info"'+(open?' open':'')+'><summary>Nasıl Ödenir? Pişmanlık, Cezada İndirim ve Uzlaşma</summary><div>'+h+'<p class="dzs-h">Genel bilgidir; tutar ve şartlar vergi dairesi tahakkukunda kesinleşir.</p></div></details>';}
+ var GXB='<div class="ss-dl dzs-gx" role="group" aria-label="Sonucu gönder"><label class="ss-fb"><input type="checkbox" id="dzt-fb"> Çıktıya Firma Bilgilerini Ekle</label><button type="button" class="btn btn-line btn-sm" data-gx="firma">🏢 Firma Bilgileri</button><span>Firmaya Gönderin:</span><button type="button" class="btn btn-ink btn-sm" data-gx="dl">⬇ İndir (PDF · Word · Excel)</button><button type="button" class="btn btn-line btn-sm" data-gx="share">Paylaş (WhatsApp · E-Posta)</button><button type="button" class="btn btn-line btn-sm" data-gx="print">Yazdır</button><button type="button" class="btn btn-line btn-sm" data-gx="copy">Kopyala</button></div>';
+ function gxRows(){var L=st.cur&&st.step==='res'?[st.cur]:st.rows;return L.filter(function(e){return e.tur&&e.dur;});}
+ function gxTitle(){var L=gxRows();return L.length===1?'Geç Beyan Hesabı – '+BT[L[0].tur][0]+' · '+perLbl(L[0]):'Geç Beyan Hesabı – Toplam Ödenecek';}
+ function gxFirma(){var cb=document.getElementById('dzt-fb');if(!(cb&&cb.checked&&window.ekProfil))return [];var f=ekProfil.get().f||{};return [['Firma',f.unvan],['Adres',f.adres],['Vergi Dairesi / VKN',[f.vd,f.vkn].filter(Boolean).join(' / ')],['Yetkili',f.yetkili]].filter(function(x){return x[1];});}
+ function gxCtx(){var L=gxRows();if(!L.length)return null;var R2=[],TP=z0(),i3=0,son=new Date(dParse(st.t).getTime()+15*864e5),H='';
+   var F=gxFirma();if(F.length){R2.push(['Firma Bilgileri','','h']);F.forEach(function(x){R2.push([x[0],x[1]]);});}
+   R2.push(['Hesap Bilgisi','','h']);R2.push(['Mükellef Türü',TC(DZ.usul[st.m||0][0])]);R2.push(['Ödeme Tarihi',trd(dParse(st.t))]);
+   L.forEach(function(e){var A=agg(e),a=sum(A.P),nb=A.nob&&!a&&!sum(A.K);Object.keys(TP).forEach(function(k){TP[k]+=A.P[k];});i3+=A.i376p;
+     R2.push([BT[e.tur][0]+' · '+durLbl(e)+' · '+perLbl(e),'','h']);
+     if(nb)R2.push(['Sonuç','Beyanname verilmesi gerekmiyor']);else{simple(A).forEach(function(r){R2.push([r[0],f2(r[1])+' TL']);});R2.push(['Ödenecek',f2(a)+' TL']);}});
+   var a=sum(TP);if(L.length>1){R2.push(['Genel Toplam','','h']);R2.push(['Pişmanlıkla Şimdi Verilirse Toplam',f2(a)+' TL']);}
+   if(a&&L.some(function(e){return e.dur!=='ode';})){R2.push(['Ödeme ve Pişmanlık','','h']);R2.push(['Vergi ve Zam İçin Son Ödeme (Pişmanlıkta 15 Gün)',trd(son)]);if(i3)R2.push(['Ceza İhbarnamesinden 30 Gün İçinde Ödenirse Cezada İndirim (VUK 376)',f2(i3)+' TL']);R2.push(['Ödeme Yeri','Dijital Vergi Dairesi, GİB Mobil, anlaşmalı bankalar veya vergi dairesi']);}
+   var tb='<table style="width:100%;border-collapse:collapse;font-size:12.5px">'+R2.map(function(r){return r[2]==='h'?'<tr><td colspan="2" style="padding:8px 6px 3px;font-weight:700;border-bottom:1.5px solid #333">'+esc(r[0])+'</td></tr>':'<tr><td style="padding:4px 6px;border-bottom:1px solid #ddd">'+esc(r[0])+'</td><td style="padding:4px 6px;border-bottom:1px solid #ddd;text-align:right;white-space:nowrap">'+esc(r[1])+'</td></tr>';}).join('')+'</table>';
+   H='<div class="pr-compact"><h2 style="margin:0 0 6px">'+esc(gxTitle())+'</h2>'+tb+'<p style="font-size:11px;color:#555;margin-top:8px">Pişmanlıkla verilen beyannamede vergi ve pişmanlık zammı 15 gün içinde ödenmezse vergi ziyaı cezası kesilir. Tutarlar yaklaşıktır; kesin tutar vergi dairesi ve SGK tahakkukunda çıkar. Hazırlayan: SMMM Erdal Karahan · erdalkarahan.com</p></div>';
+   return {html:H,rows:R2.map(function(r){return r[2]==='h'?[r[0],'','','h']:[r[0],r[1]];})};}
+ function gxText(){var c=gxCtx();if(!c)return '';return gxTitle()+'\n'+c.rows.map(function(r){return r[3]==='h'?'\n— '+r[0]+' —':r[0]+': '+r[1];}).join('\n')+'\n\nHesaplayıcı: https://www.erdalkarahan.com/#gecbeyan';}
+ function gx(b){var k=b.dataset.gx;if(k==='firma'){if(window.ekProfil)ekProfil.open(function(){var c0=document.getElementById('dzt-fb');if(c0&&ekProfil.has())c0.checked=true;},true);return;}
+   var c=gxCtx();if(!c)return;var T=gxTitle();
+   if(k==='dl'&&window.dlMenu)dlMenu(b,T,c);
+   if(k==='share'&&window.openShare)openShare(T,gxText(),'https://www.erdalkarahan.com/#gecbeyan',c);
+   if(k==='print'&&window.printEl){var d=document.createElement('div');d.innerHTML=c.html;printEl(d,T,true);}
+   if(k==='copy'&&window.copyText)copyText(gxText(),'Sonuç kopyalandı');}
  function drawTot(){var S=$('#dzt-sum',R);if(st.cur||!st.rows.length){S.innerHTML='';save();return;}
    var TP=z0(),TK=z0(),i376=0,i376p=0;st.rows.forEach(function(e){var A=agg(e);Object.keys(TP).forEach(function(k){TP[k]+=A.P[k];TK[k]+=A.K[k];});i376+=A.i376;i376p+=A.i376p;});
    var a=sum(TP),b=sum(TK),T={P:TP,K:TK};
-   S.innerHTML='<div class="dzs"><h4 class="dzs-q">Toplam ödenecek</h4><p class="dzs-h">'+esc(DZ.usul[st.m||0][0])+' · ödeme tarihi '+trd(dParse(st.t))+'</p>'
-    +'<div class="dzs-list">'+st.rows.map(function(e){var A=agg(e);return '<div class="dzs-li" style="--c:'+BT[e.tur][2]+'"><div><b>'+esc(BT[e.tur][0])+'</b><small>'+esc(durLbl(e))+' · '+esc(perLbl(e))+'</small></div><span>'+(A.nob&&!sum(A.P)?'Beyanname gerekmiyor':f2(sum(A.P))+' TL')+'</span><button type="button" class="dzt-lnk" data-ed="'+e.id+'">Düzenle</button><button type="button" class="dzt-x" data-del="'+e.id+'" aria-label="Sil">×</button></div>';}).join('')+'</div>'
+   S.innerHTML='<div class="dzs"><h4 class="dzs-q">Toplam Ödenecek</h4><p class="dzs-h">'+esc(TC(DZ.usul[st.m||0][0]))+' · Ödeme Tarihi '+trd(dParse(st.t))+'</p>'
+    +'<div class="dzs-list">'+st.rows.map(function(e){var A=agg(e);return '<div class="dzs-li" style="--c:'+BT[e.tur][2]+'"><div><b>'+esc(BT[e.tur][0])+'</b><small>'+esc(durLbl(e))+' · '+esc(perLbl(e))+'</small></div><span>'+(A.nob&&!sum(A.P)?'Beyanname Gerekmiyor':f2(sum(A.P))+' TL')+'</span><button type="button" class="dzt-lnk" data-ed="'+e.id+'">Düzenle</button><button type="button" class="dzt-x" data-del="'+e.id+'" aria-label="Sil">×</button></div>';}).join('')+'</div>'
     +'<button type="button" class="dzs-link" data-act="more">+ Başka beyanname ekle</button>'
     +'<div class="dzs-res"><small>Pişmanlıkla şimdi verirseniz toplam</small><b>'+f2(a)+' TL</b>'+(a!==b?'<em>Pişmanlık dilekçesi vermezseniz yaklaşık '+f2(b)+' TL</em>':'')+'</div>'
     +'<table class="dzs-t">'+simple(T).map(function(r){return '<tr><td>'+r[0]+'</td><td>'+f2(r[1])+'</td></tr>';}).join('')+'<tr class="tt"><td>Toplam</td><td>'+f2(a)+'</td></tr></table>'
-    +'<details class="dzs-det"><summary>Pişmanlıksız ve indirimli tutarlar</summary><table class="dzt-t"><thead><tr><th>Kalem</th><th>Pişmanlıkla</th><th>Pişmanlıksız</th></tr></thead><tbody>'+simple(T).map(function(r){return '<tr><td>'+r[0]+'</td><td>'+f2(r[1])+'</td><td>'+f2(r[2])+'</td></tr>';}).join('')+'<tr class="tt"><td>Toplam</td><td>'+f2(a)+'</td><td>'+f2(b)+'</td></tr>'+(i376||i376p?'<tr class="ind"><td>Ceza ihbarnamesi tebliğinden 30 gün içinde ödenirse (VUK 376 indirimi: vergi ziyaında %50, usulsüzlükte %50; 40.000 TL’ye kadar %75)</td><td>'+f2(a-i376p)+'</td><td>'+f2(b-i376)+'</td></tr>':'')+'</tbody></table></details>'+(a?INFO(st.rows.every(function(e){return e.dur==='ode';})?'ode':'',false):'')
-    +'<div class="dzs-end"><button type="button" class="dzt-btn" data-act="copy">Sonucu kopyala</button><button type="button" class="dzt-btn alt" data-act="clear">↺ Temizle, yeniden hesapla</button></div></div>';
+    +'<details class="dzs-det"><summary>Pişmanlıksız ve İndirimli Tutarlar</summary><table class="dzt-t"><thead><tr><th>Kalem</th><th>Pişmanlıkla</th><th>Pişmanlıksız</th></tr></thead><tbody>'+simple(T).map(function(r){return '<tr><td>'+r[0]+'</td><td>'+f2(r[1])+'</td><td>'+f2(r[2])+'</td></tr>';}).join('')+'<tr class="tt"><td>Toplam</td><td>'+f2(a)+'</td><td>'+f2(b)+'</td></tr>'+(i376||i376p?'<tr class="ind"><td>Ceza ihbarnamesi tebliğinden 30 gün içinde ödenirse (VUK 376 indirimi: vergi ziyaında %50, usulsüzlükte %50; 40.000 TL’ye kadar %75)</td><td>'+f2(a-i376p)+'</td><td>'+f2(b-i376)+'</td></tr>':'')+'</tbody></table></details>'+(a?GXB:'')+(a?INFO(st.rows.every(function(e){return e.dur==='ode';})?'ode':'',false):'')
+    +'<div class="dzs-end"><button type="button" class="dzt-btn alt" data-act="clear">↺ Temizle, yeniden hesapla</button></div></div>';
    save();}
  function txt(){var L=['Geç beyan hesabı ('+trd(dParse(st.t))+' itibarıyla, '+DZ.usul[st.m||0][0]+')'];st.rows.forEach(function(e){var A=agg(e);L.push('- '+BT[e.tur][0]+', '+durLbl(e)+', '+perLbl(e)+': '+f2(sum(A.P))+' TL');});
    var TP=z0();st.rows.forEach(function(e){var A=agg(e);Object.keys(TP).forEach(function(k){TP[k]+=A.P[k];});});L.push('TOPLAM (pişmanlıkla): '+f2(sum(TP))+' TL');L.push('Hesaplayıcı: https://www.erdalkarahan.com/#gecbeyan');return L.join('\n');}
@@ -6092,6 +6137,9 @@ var DZ={
      if(q==='tur'){if(e.tur!==v){e.tur=v;e.dur=null;e.v={};e.d={};e.gir=null;var df=DEF(v);e.a=df[0];e.b=df[1];}next();return;}
      if(q==='dur'){if(e.dur!==v){e.dur=v;e.v={};e.d={};e.gir=null;}next();return;}
      if(q==='gir'){e.gir=v==='1';if(e.gir&&!e.cik)next();else drawStep();return;}}
+   if(b=t.closest('.dzs-pop [data-pv]')){b.closest('.dzs-pop').__go(b.dataset.pv);return;}
+   if(b=t.closest('[data-pick]')){openPick(b,b.dataset.pick);return;}
+   if(b=t.closest('[data-gx]')){gx(b);return;}
    if(b=t.closest('[data-go]')){go(b.dataset.go);return;}
    if(b=t.closest('[data-act]')){var a=b.dataset.act,e2=st.cur;
      if(a==='next'){next();return;}
@@ -6114,6 +6162,7 @@ var DZ={
    if(t.dataset.m){(e.d[t.dataset.m]=e.d[t.dataset.m]||{})[f]=t.value;}else e.v[f]=t.value;}
  window.__dzApply=function(g){try{if(!g)return;if(g.gz)DZ.gz=+g.gz;if(g.asgari){DZ.asgari=+g.asgari;window.DZASG=+g.asgari;}if(g.usul&&g.usul.length===6)DZ.usul=g.usul;if(g.guncelleme)DZ.guncelleme=g.guncelleme;(g.hol||[]).forEach(function(x){HOL[x]=1;});if(g.ext)Object.keys(g.ext).forEach(function(k){EXT[k]=g.ext[k];});all();}catch(e){}};
  if(window.__ORAN&&window.__ORAN.gecbeyan)window.__dzApply(window.__ORAN.gecbeyan);
+ document.addEventListener('click',function(ev){var p=$('.dzs-pop',R);if(p&&!ev.target.closest('.dzs-pop,[data-pick]'))p.remove();});document.addEventListener('keydown',function(ev){if(ev.key==='Escape'){var p=$('.dzs-pop',R);if(p)p.remove();}});
  R.addEventListener('input',onInput);R.addEventListener('change',onInput);
  R.addEventListener('keydown',function(ev){if(ev.key==='Enter'&&ev.target.matches('input[data-f]')){ev.preventDefault();var n=$('[data-act="next"]',R);if(n)n.click();}});
  draw();
@@ -6295,7 +6344,7 @@ window.newsTicker=(function(){
 /* ---------- Türkçe başlık düzeni: her kelimenin ilk harfi büyük (bağlaçlar hariç) ---------- */
 (function(){
   var SMALL={'ve':1,'ile':1,'veya':1,'ya':1,'da':1,'de':1,'ki':1,'mi':1,'mı':1,'mu':1,'mü':1},ENS={'and':1,'or':1,'of':1,'the':1,'to':1,'for':1,'in':1,'on':1,'a':1,'an':1,'with':1,'by':1,'at':1,'from':1,'vs':1};
-  var SEL='.ak-yev > b,.ak-yev td:nth-child(2),.ak-big small,.yev-t b,.dtable th,.yev-tb td:nth-child(2),.pp-tbl th,.dz-q > b,.dz-opt b,.dz-badge,h5,.dz-mini td:first-child,.dz-mini th,.dz-links a,.pa-t b,.ak-chip,.ak-reset,summary,.prof-card h3,.qchip,.gb-tx b,.gb-tx small,.gb-li i,nav.links a,.subnav a,.eyebrow,.hero h1,.sec-head h2,h3,h4,.tab b,.tab small,.btn,.quick span,.chip,.biz-item b,.biz-item .when,.marquee-track span,.fx-row .nm,.rep b,.rep span,.sc strong,.sc span,.f label,.result .row span,.seg button,.tag,.float-card b,.float-card span,.ledger-head span,.ledger-head b,.ledger td.name,.c-row .k,.xls .cols span,.hub-card b,.pop-card b,.tgrp,.xgrp,.kgrp,.fcol > b,.pcard h3,.ptile span,.tb-btns span,.xls-top h3,.chip,.step .n,.brand-txt span,.mk-head .nmeta,h2,.mk-head .live,.mvz-head .live,.hfx-foot a,.mk-head a.more,.news-src a,.ptile b,.svc .codes,.hub-card em,option,optgroup,.ktx b,.fcol a,.g-link,.gn-b,.gcur b,.gcur span,.acts button,.mvz-chips .qchip,dt,.kband-txt b,.sc-links a,summary b,summary > span,.hp-classes .qchip,.hp-ex b,.hp-t,.gbtn,fieldset label,.mk-foot a,.duy-home h3,.res-h b,.fld-h b,#sirket li > a,.xed-tip b';
+  var SEL='.ak-yev > b,.ak-yev td:nth-child(2),.ak-big small,.yev-t b,.dtable th,.yev-tb td:nth-child(2),.pp-tbl th,.dz-q > b,.dz-opt b,.dz-badge,h5,.dz-mini td:first-child,.dz-mini th,.dz-links a,.pa-t b,.ak-chip,.ak-reset,summary,.prof-card h3,.qchip,.gb-tx b,.gb-tx small,.gb-li i,nav.links a,.subnav a,.eyebrow,.hero h1,.sec-head h2,h3,h4,.tab b,.tab small,.btn,.quick span,.chip,.biz-item b,.biz-item .when,.marquee-track span,.fx-row .nm,.rep b,.rep span,.sc strong,.sc span,.f label,.result .row span,.seg button,.tag,.float-card b,.float-card span,.ledger-head span,.ledger-head b,.ledger td.name,.c-row .k,.xls .cols span,.hub-card b,.pop-card b,.tgrp,.xgrp,.kgrp,.fcol > b,.pcard h3,.ptile span,.tb-btns span,.xls-top h3,.chip,.step .n,.brand-txt span,.mk-head .nmeta,h2,.mk-head .live,.mvz-head .live,.hfx-foot a,.mk-head a.more,.news-src a,.ptile b,.svc .codes,.hub-card em,option,optgroup,.ktx b,.fcol a,.g-link,.gn-b,.gcur b,.gcur span,.acts button,.mvz-chips .qchip,dt,.kband-txt b,.sc-links a,summary b,summary > span,.hp-classes .qchip,.hp-ex b,.hp-t,.gbtn,fieldset label,.mk-foot a,.duy-home h3,.res-h b,.fld-h b,#sirket li > a,.xed-tip b,.dzs-opt b,.dzs-li b,.dzs-li small,.dzs-t td:first-child,.dzt-t th,.dzt-t td:first-child,.dzs-res small,.dzt-set > span,.dzt-set .dz-chk,.dzs-row label,.dzt-tbl th,.dzs-chip small,.dzs-chip button,.dzs-pop b,.dzs-gx span,.dzs-gx label,.gidx-g button b,.es-tur button b,.ak-promo span b,td > b:only-child,.dz-tlm li b,.tsl-tools button,.fb-add,.ak-prev,.qr-tx b,.qr-dl,.qr-vcf,.map-big,.map-b,.fb-chk,.ak-gen,.f-mk,.fhead b,.lbl-sm,.xkdv label,.vd-h b,.g-ctl button,.dz-grid label,.dz-t th,.es-tbl th,.vt-t a,.ak-oc > b,.dzs-clr,.dzs-back,.dzs-link,.dzt-btn,.ss-fb,.ss-dl > span,.es-fix,.es-eks b,th,.gb-sub a,.fb-tip a';
   function word(w,first){if(!/\S/.test(w))return w;if(/^e-[a-zçğıöşü]/i.test(w)&&w.charAt(0)==='e')return w.slice(0,2)+w.charAt(2).toLocaleUpperCase('tr-TR')+w.slice(3);if(w.indexOf('-')>0&&!/^e-/i.test(w))return w.split('-').map(function(x,i){return word(x,first&&i===0);}).join('-');var low=w.toLocaleLowerCase('tr-TR'),lk=low.replace(/[?!.,;:)]+$/,'');if(!first&&(SMALL[lk]||(document.documentElement.lang==='en'&&ENS[low])))return low;if(/^[^A-Za-zÇĞİÖŞÜçğıöşü]*[0-9]/.test(w)&&/['’]/.test(w))return w;return w.replace(/^([^A-Za-zÇĞİÖŞÜçğıöşü]*)([A-Za-zÇĞİÖŞÜçğıöşü])/,function(m,a,b){return a+b.toLocaleUpperCase('tr-TR');});}
   function tc(s){var first=true;return s.split(/(\s+)/).map(function(w){var r=word(w,first);if(/\S/.test(w))first=false;return r;}).join('');}
   window.trTitle=tc;
