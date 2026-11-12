@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /xl/
+Disallow: /word/
+Sitemap: https://www.erdalkarahan.com/sitemap.xml
