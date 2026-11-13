@@ -1,6 +1,17 @@
 {
- "guncelleme": "2026-11-12",
+ "guncelleme": "2026-11-13",
  "hap": [
+  {
+   "id": "teklif-gss-kv-2026-kasim",
+   "tarih": "2026-11-12",
+   "etiket": "VERGİ · SGK",
+   "baslik": "Kanun teklifi: 2017 öncesi GSS borçları silinebilir",
+   "metin": "12 Kasım’da Meclis’e sunulan teklife göre 1 Ocak 2017 öncesi dönemlere ait ödenmemiş genel sağlık sigortası primleri, gecikme cezası ve zammıyla birlikte terkin edilecek; daha önce ödenenler iade edilmeyecek. Teklif ayrıca kıymetli maden ve petrol rafinerileri, tütün ve alkollü içki üreticileri ile elektrik üreticilerini sanayi siciline bağlı üretimde %12,5 indirimli kurumlar vergisi kapsamından çıkarıyor. Henüz yasalaşmadı; Meclis süreci izlenmeli.",
+   "kaynak": {
+    "ad": "Bloomberg HT – Vergi düzenlemesi de içeren kanun teklifi (12.11.2026)",
+    "url": "https://www.bloomberght.com/vergi-duzenlemesi-de-iceren-kanun-teklifi-meclis-e-sunuldu-3794428"
+   }
+  },
   {
    "id": "kdv1-511-kumulatif-2026-ekim",
    "tarih": "2026-11-12",
