@@ -2931,6 +2931,18 @@ var TOOLS=[
  {g:'Vergi',key:'smm',title:'Serbest meslek makbuzu',abbr:'SMM',lead:'Brüt, stopaj, KDV ve tahsil edilecek tutarı hesaplayın.',
   fields:[F('a','Tutar',{val:'20.000',sfx:'₺'}),F('m','Girilen tutar',{type:'seg',opts:[['brut','Brüt'],['net','Net ücret'],['tah','Ele geçen (KDV dahil)']],val:'brut',hint:'Net ücret: stopaj düşülmüş, KDV hariç tutar. Ele geçen: müşteriden tahsil edilen toplam (net ücret + KDV).'}),F('s','Stopaj (%20)',{type:'seg',opts:[['1','Var'],['0','Yok']],val:'1',hint:'Karşı taraf vergi kesintisi yapmakla sorumlu değilse stopaj uygulanmaz.'}),F('k','KDV (%20)',{type:'seg',opts:[['1','Var'],['0','Yok']],val:'1'})],
   calc:function(v){var a=num(v.a),s=v.s==='1'?.2:0,k=v.k==='1'?.2:0;if(isNaN(a))return null;var b=v.m==='brut'?a:v.m==='tah'?a/(1-s+k):a/(1-s),st=b*s,kd=b*k;return{rows:[['Brüt ücret',tl(b)],['Gelir vergisi stopajı',tl(st)],['Net ücret',tl(b-st)],['KDV',tl(kd)],['Tahsil edilecek tutar (ele geçen)',tl(b-st+kd),1]],note:'Tahsil edilecek tutar = net ücret + KDV. Stopajı müşteri kesip vergi dairesine yatırır; KDV’yi siz beyan edip ödersiniz.'+(s&&k?' Stopaj ve KDV aynı oranda (%20) olduğu için tahsil edilecek tutar brüt ücrete eşit çıkar.':'')};}},
+ {g:'Vergi',key:'mustahsil',title:'Müstahsil makbuzu (stopaj)',abbr:'MM',lead:'Çiftçiden ya da besiciden alımda stopajı, Bağ-Kur kesintisini, ödenecek net tutarı ve muhasebe kaydını bulun.',
+  fields:[F('a','Tutar',{val:'100.000',sfx:'₺'}),F('m','Girilen tutar',{type:'seg',opts:[['brut','Ürün bedeli (brüt)'],['net','Çiftçiye ödenecek net']],val:'brut'}),
+   F('t','Alınan ürün / hizmet',{type:'select',opts:[['h','Canlı hayvan ve hayvansal ürünler: süt, yumurta, yapağı, bal (%2)'],['z','Diğer zirai ürünler: tahıl, sebze, meyve, ot, saman (%4)'],['o','Orman idaresine yapılan orman hizmetleri (%2)'],['hz','Diğer zirai hizmetler: hasat, sürüm, ilaçlama (%4)']],val:'h'}),
+   F('b','Ticaret borsasında tescil',{type:'seg',opts:[['0','Yok'],['1','Var']],val:'0',hint:'Ürün alımı ticaret borsasında tescil ettirilirse stopaj yarı orana iner (hayvanda %1, diğer zirai üründe %2). Hizmet alımlarında uygulanmaz.'}),
+   F('k','Bağ-Kur prim kesintisi (%2)',{type:'seg',opts:[['0','Yok'],['1','Var']],val:'0',hint:'Satıcı tarım Bağ-Kur’una (4/b) kayıtlı ve prim borcu varsa yapılır; muafiyet belgesi gösterenden kesilmez. Kesinti, prim borcunu geçemez.'}),
+   F('h','Malın kaydı',{type:'select',opts:[['153','153 Ticari Mallar (satmak için)'],['150','150 İlk Madde ve Malzeme (işlemek için)'],['770','770 Genel Yönetim Giderleri (hizmet)'],['740','740 Hizmet Üretim Maliyeti (hizmet)']],val:'153'}),
+   F('p','Ödeme',{type:'seg',opts:[['102','Banka'],['100','Kasa'],['320','Sonra ödenecek']],val:'102'})],
+  calc:function(v){var a=num(v.a);if(isNaN(a)||a<=0)return null;var base={h:.02,z:.04,o:.02,hz:.04}[v.t]||.02,hiz=v.t==='o'||v.t==='hz',s=(v.b==='1'&&!hiz)?base/2:base,k=v.k==='1'?.02:0;
+   var b=v.m==='brut'?a:a/(1-s-k),st=b*s,bk=b*k,n=b-st-bk,HN={'153':'153 Ticari Mallar','150':'150 İlk Madde ve Malzeme','770':'770 Genel Yönetim Giderleri','740':'740 Hizmet Üretim Maliyeti'}[v.h],PN={'102':'102 Bankalar','100':'100 Kasa','320':'320 Satıcılar'}[v.p];
+   var rows=[['Ürün bedeli (brüt)',tl(b)],['Gelir vergisi stopajı (%'+NI.format(s*100)+')',tl(st)]];if(k)rows.push(['Bağ-Kur prim kesintisi (%2)',tl(bk)]);rows.push(['Çiftçiye ödenecek net tutar',tl(n),1]);
+   rows.push(['Muhasebe kaydı – Borç: '+HN,tl(b)],['Alacak: 360 Ödenecek Vergi ve Fonlar',tl(st)]);if(k)rows.push(['Alacak: 361 Ödenecek Sosyal Güvenlik Kesintileri',tl(bk)]);rows.push(['Alacak: '+PN,tl(n)]);
+   return{rows:rows,note:'Makbuzda KDV hesaplanmaz. e-Fatura mükellefiyseniz makbuzu e-Müstahsil olarak düzenlersiniz. Stopajı izleyen ayın 26’sına kadar muhtasar ve prim hizmet beyannamesiyle beyan edip ödersiniz (ödemede 360 borç, banka alacak). Bağ-Kur kesintisi SGK e-Kesinti sistemiyle izleyen ayın sonuna kadar bildirilip ödenir. Maliyet, brüt ürün bedelidir. Dayanak: VUK 235, GVK 94/11, 2009/14592 sayılı BKK.'};}},
  {g:'Vergi',key:'emlak',title:'Emlak vergisi',abbr:'EV',lead:'Vergi değerine ve taşınmaz türüne göre yıllık emlak vergisini bulun.',
   fields:[F('a','Emlak vergisi değeri',{val:'2.000.000',sfx:'₺'}),F('t','Taşınmaz türü',{type:'select',opts:[['1','Konut (binde 1)'],['2','İşyeri ve diğer binalar (binde 2)'],['3','Arsa (binde 3)'],['1a','Arazi (binde 1)']],val:'1'}),F('b','Büyükşehir sınırında mı?',{type:'seg',opts:[['1','Evet'],['0','Hayır']],val:'1',hint:'Büyükşehir belediye sınırlarında oranlar iki kat uygulanır.'})],
   calc:function(v){var a=num(v.a);if(isNaN(a))return null;var r=parseFloat(v.t)/1000*(v.b==='1'?2:1),t=a*r;return{rows:[['Uygulanan oran','Binde '+NI.format(r*1000)],['Yıllık emlak vergisi',tl(t),1],['Taksit (mayıs ve kasım)',tl(t/2)]]};}},
@@ -3737,6 +3749,64 @@ A.push({g:'Personel',key:'ibraname',title:'İbraname',abbr:'İB',fields:[T('firm
   return H(v,'İBRANAME')+(uy?'<p style="color:#b42318"><b>Uyarı:</b> İbraname, sözleşmenin sona ermesinden itibaren bir ay geçmeden düzenlenirse kesin olarak hükümsüzdür. Tarihi kontrol edin.</p>':'')+'<p>'+dt(v.giris)+' – '+dt(v.cikis)+' tarihleri arasında '+fl(v.firma)+' işyerinde çalıştım. İş sözleşmemin sona ermesi nedeniyle aşağıda türü ve tutarı yazılı alacaklarım '+fl(v.banka)+' aracılığıyla banka hesabıma ödenmiştir:</p><table><tr><th>Alacak kalemi</th><th>Tutar</th></tr>'+r.map(function(x){return '<tr><td>'+esc(x[0])+'</td><td>'+(x[1]?esc(x[1])+' ₺':'........')+'</td></tr>';}).join('')+'</table><p>Yukarıda yazılı alacak kalemleri yönünden işvereni ibra ederim.</p>'+'<div class="sig"><div>'+trDate(v.tarih)+'<br><br>'+fl(v.per)+'<br>TC: '+fl(v.tc)+'<br>İmza</div></div>';},
  tip:'6098 sayılı TBK md. 420 uyarınca ibraname: yazılı olmalı, sözleşmenin sona ermesinden itibaren en az bir ay geçtikten sonra düzenlenmeli, alacağın türü ve tutarı açıkça yazılmalı, ödeme tam ve banka aracılığıyla yapılmış olmalıdır; aksi hâlde kesin hükümsüzdür. Genel ifadeler (“hiçbir alacağım kalmamıştır”) kısmi ödemede makbuz hükmündedir. Ödemenin banka dekontunu dosyada saklayın.'});
 A.forEach(function(o){o.oz=1;var i=-1;DOCS.forEach(function(d,j){if(d.key===o.key)i=j;});if(i>=0)DOCS[i]=o;else DOCS.push(o);});
+})();
+/* ---------- Amaç ve konu değişikliği kararı: hazır bentlerden seçim + tadil metni; AŞ sürümü ---------- */
+(function(){
+function byKey(k){return DOCS.filter(function(d){return d.key===k;})[0];}
+var L=byKey('k-ltd-amac-konu'),AD=byKey('k-as-adres-il-disi');if(!L)return;
+var BF=T('bentler','Yeni amaç ve konu bentleri (her satıra bir bent)',{type:'area'}),EF=T('eski','Mevcut amaç ve konu maddesi (eski şekil; boş bırakılabilir)',{type:'area'});
+function addF(d){var i=-1;d.fields.forEach(function(f,j){if(f.id==='katilanlar')i=j;});if(i<0)i=d.fields.length;d.fields.splice(i,0,BF,EF);
+ d.fields.forEach(function(f){if(f.id==='ozet')f.label='Değişikliğin özeti (bent seçince kendiliğinden yazılır)';});}
+function tadil(v,no){var b=lines(v.bentler),e=lines(v.eski),ol=function(a){return a.length?'<ol type="a">'+a.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ol>':'<p>'+fl('')+'</p>';};
+ return '<div style="page-break-before:always;break-before:page"></div><div class="dh" style="margin-top:28px">'+up(v.firma)+'<br>ESAS SÖZLEŞME TADİL METNİ</div>'+
+  '<p><b>ESKİ ŞEKİL</b></p><p><b>Madde '+fl(no)+' – Amaç ve Konu</b></p>'+(e.length?'<p>Şirketin amaç ve konusu başlıca şunlardır:</p>'+ol(e):'<p>'+fl('')+'</p>')+
+  '<p style="margin-top:18px"><b>YENİ ŞEKİL</b></p><p><b>Madde '+fl(no)+' – Amaç ve Konu</b></p><p>Şirketin amaç ve konusu başlıca şunlardır:</p>'+ol(b)+
+  '<p>Yukarıda gösterilen işlerden başka ileride şirket için faydalı ve gerekli görülecek başka işlere girişilmek istenildiğinde, genel kurulun kararı ile esas sözleşme değişikliği yapılarak bu işler de şirket tarafından yapılabilecektir.</p>';}
+function wrap(d){var ob=d.body;d.body=function(v){return ob(v)+tadil(v,v.maddeno);};}
+addF(L);wrap(L);
+L.tip=(L.tip||'')+' “Hazır Bentlerden Seç” düğmesiyle sitemizdeki 99 sektörün amaç-konu bentlerinden seçebilirsiniz; karar metninin altına eski şekil / yeni şekil tadil metni de hazırlanır.';
+/* Anonim şirket: genel kurul kararı */
+var X={k:'as-amac-konu',g:'Anonim şirket kararları',t:'Genel kurul kararı: amaç ve konu değişikliği',o:'Genel kurul',
+ f:[['maddeno','Amaç ve konu maddesi no','int','3',null],['ozet','Değişikliğin özeti','area','',null]],
+ gu:['Açılış ve toplantı başkanlığının seçimi','Şirketin amaç ve konusunun değiştirilmesi ve esas sözleşmenin {maddeno}. maddesinin tadili'],
+ m:['Şirketin amaç ve konusunun {ozet} şeklinde değiştirilmesine,','Esas sözleşmenin “Amaç ve Konu” başlıklı {maddeno}. maddesinin ekli tadil metnindeki şekliyle değiştirilmesine,','Değişikliğin tescil ve ilanı ile vergi dairesi ve NACE kodu güncellemesi için yönetim kurulunun yetkili kılınmasına,']};
+var F=L.fields.map(function(f){if(f.id==='firma')return T('firma','Şirket unvanı',{val:'ÖRNEK ANONİM ŞİRKETİ'});if(f.id==='katilanlar'&&AD){return AD.fields.filter(function(q){return q.id==='katilanlar';})[0]||f;}return f;});
+var A={g:X.g,key:'k-'+X.k,title:X.t,abbr:'KR',fields:F,body:function(v){return kararBody(X,v)+tadil(v,v.maddeno);},
+ tip:'İşletme konusunun tamamen değiştirilmesi TTK 421/3 uyarınca sermayenin en az %75’ini temsil eden pay sahiplerinin bulunduğu genel kurulda, toplantıda bulunanların çoğunluğuyla alınır; kısmi değişikliklerde TTK 421/1 nisabı uygulanır. Bakanlık temsilcisinin gerekip gerekmediğini ve şirketin Bakanlık iznine tabi olup olmadığını kontrol edin. “Hazır Bentlerden Seç” düğmesiyle sitemizdeki amaç-konu bentlerinden seçebilirsiniz. Ticaret siciline tescil gerekir. Gerekli belgeler: genel kurul toplantı tutanağı, hazır bulunanlar listesi, eski şekil / yeni şekil tadil metni, faaliyet izne tabiyse ilgili kurum izni, MERSİS tescil başvurusu.'};
+var ins=-1;DOCS.forEach(function(d,j){if(d.key==='k-as-adres-il-disi')ins=j;});if(ins>=0)DOCS.splice(ins+1,0,A);else DOCS.push(A);
+/* Seçici */
+var AKD=null;function load(){return AKD?Promise.resolve(AKD):(window.remoteJSON?remoteJSON('amackonu.json',8000):Promise.reject(0)).catch(function(){return fetch('amackonu.json').then(function(r){return r.json();});}).then(function(j){AKD=j;return j;});}
+function trl(s){return (s||'').toLocaleLowerCase('tr-TR');}
+function fire(el){el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));}
+function apply(form,texts,names){var b=form.querySelector('[data-d="bentler"]'),o=form.querySelector('[data-d="ozet"]');if(!b)return;
+ var cur=lines(b.value);texts.forEach(function(t){if(cur.indexOf(t)<0)cur.push(t);});b.value=cur.join('\n');fire(b);
+ if(o&&!o.value.trim()&&names.length){var n=names.map(trl),s=n.length>1?n.slice(0,-1).join(', ')+' ve '+n[n.length-1]:n[0];o.value=s+' alanlarındaki faaliyetleri kapsayan ekli tadil metni';fire(o);}}
+function openPick(form){load().then(function(D){
+ var SEL={},G=true,ov=document.createElement('div');ov.className='akp-ov';
+ ov.innerHTML='<div class="akp" role="dialog" aria-label="Amaç ve konu bentleri"><div class="akp-h"><b>Amaç ve Konu Bentlerinden Seç</b><button type="button" class="akp-x" aria-label="Kapat">×</button></div>'+
+  '<input type="search" class="akp-q" placeholder="Sektör ya da faaliyet ara: inşaat, gıda, yazılım…"><div class="akp-b"></div>'+
+  '<div class="akp-f"><label class="akp-g"><input type="checkbox" checked> Genel bentleri de ekle ('+D.genel.length+' bent: taşınmaz edinme, ipotek, ithalat-ihracat…)</label><div class="akp-act"><span class="akp-n">0 bent seçili</span><button type="button" class="btn akp-ok">Seçilenleri Ekle</button></div></div></div>';
+ document.body.appendChild(ov);document.documentElement.style.overflow='hidden';
+ var body=ov.querySelector('.akp-b'),q=ov.querySelector('.akp-q'),cnt=ov.querySelector('.akp-n');
+ function n(){var c=0;Object.keys(SEL).forEach(function(k){c+=SEL[k].length;});cnt.textContent=c+' bent seçili';}
+ var prev=[];try{prev=JSON.parse(localStorage.getItem('ek-ak-sel')||'[]')||[];}catch(e){}
+ function draw(){var t=trl(q.value.trim()),h='';
+  if(!t&&prev.length)h+='<button type="button" class="akp-prev">Amaç ve Konu sayfasında seçtiğiniz '+prev.reduce(function(a,g){return a+g[1].length;},0)+' bendi getir</button>';
+  D.kategoriler.forEach(function(k){var S=D.sektorler.filter(function(s){return s.k===k[0]&&(!t||trl(s.ad).indexOf(t)>=0||s.m.some(function(m){return trl(m).indexOf(t)>=0;}));});if(!S.length)return;
+   h+='<div class="akp-k">'+esc(k[1])+'</div>'+S.map(function(s){var o=!!t||SEL[s.id];return '<details class="akp-s"'+(o?' open':'')+'><summary>'+esc(s.ad)+(SEL[s.id]&&SEL[s.id].length?' <em>'+SEL[s.id].length+'</em>':'')+'</summary>'+s.m.map(function(m,i){return '<label class="akp-m"><input type="checkbox" data-s="'+s.id+'" data-i="'+i+'"'+(SEL[s.id]&&SEL[s.id].indexOf(i)>=0?' checked':'')+'> <span>'+esc(m)+'</span></label>';}).join('')+(s.not?'<p class="akp-not">'+esc(s.not)+'</p>':'')+'</details>';}).join('');});
+  body.innerHTML=h||'<p>Sonuç bulunamadı.</p>';}
+ draw();q.oninput=draw;
+ function close(){ov.remove();document.documentElement.style.overflow='';}
+ ov.addEventListener('click',function(e){var x=e.target;if(x===ov||x.closest('.akp-x'))return close();
+  if(x.closest('.akp-prev')){prev.forEach(function(g){SEL[g[0]]=(SEL[g[0]]||[]).concat(g[1].filter(function(i){return (SEL[g[0]]||[]).indexOf(i)<0;}));});n();draw();return;}
+  if(x.closest('.akp-ok')){var T2=[],N=[];D.sektorler.forEach(function(s){var a=SEL[s.id];if(a&&a.length){N.push(s.ad);a.slice().sort(function(p,r){return p-r;}).forEach(function(i){T2.push(s.m[i]);});}});
+   if(ov.querySelector('.akp-g input').checked&&T2.length)T2=T2.concat(D.genel);apply(form,T2,N);close();}});
+ ov.addEventListener('change',function(e){var c=e.target;if(!c.dataset||!c.dataset.s)return;var a=SEL[c.dataset.s]=SEL[c.dataset.s]||[],i=+c.dataset.i;if(c.checked){if(a.indexOf(i)<0)a.push(i);}else SEL[c.dataset.s]=a.filter(function(z){return z!==i;});n();});
+ setTimeout(function(){q.focus();},50);
+}).catch(function(){alert('Amaç ve konu bentleri yüklenemedi; internet bağlantınızı kontrol edip tekrar deneyin.');});}
+function deco(){[].forEach.call(document.querySelectorAll('textarea[data-d="bentler"]'),function(t){var w=t.parentElement;if(w.querySelector('.akp-btn'))return;var b=document.createElement('button');b.type='button';b.className='btn btn-line btn-sm akp-btn';b.textContent='Hazır Bentlerden Seç';b.onclick=function(){openPick(t.closest('form,.doc-form,.docf,section')||document);};w.appendChild(b);});}
+new MutationObserver(function(){deco();}).observe(document.documentElement,{childList:true,subtree:true});
+if(typeof SEARCH_IDX!=='undefined')SEARCH_IDX.push({t:'Amaç ve konu değişikliği kararı (Ltd ve AŞ)',g:'Şirket kararları',h:'#d-k-ltd-amac-konu',kw:'amaç konu değişikliği faaliyet konusu değişikliği tadil metni nace kodu ortaklar kurulu genel kurul anonim limited'});
 })();
 
 /* ---------- Şirket aracını kullanan sürücü: SGK'ya açıklama ve kiracıdan kullanıcı beyanı (SGK Genelgesi 2026/22) ---------- */
@@ -5931,7 +6001,7 @@ window.ekYuzMsg=function(K){var Y=K.map(function(k){return num(k.yuz);}),any=Y.s
   ozluk:{t:'Özlük dosyası sihirbazı nasıl kullanılır?',s:[['steps','Adım adım ilerleyin','Dört adım var; her ekranda kutuları doldurup “Sonraki adım”a basın. Numaralı adımlara basarak da geçebilirsiniz.'],['kimlik','1–2. İşyeri ve çalışan','İşyeri ile çalışanın bilgilerini bir kez yazın; seçtiğiniz bütün formlara kendiliğinden gelir.'],['tur','3. Formları seçin','“İşe giriş paketi” düğmesi en sık gerekenleri seçer; görevlendirme, değişiklik bildirimi gibi formları ayrıca işaretleyin.'],['bitti','4. Form bilgileri ve sonuç','Her formun kendine özel kutularını doldurun. Sonuçta formlar tek dosyada indirilir, yazdırılır ya da paylaşılır; istediğinizi tek tek de alabilirsiniz.']]},
   arackdv:{t:'Araç KDV oranı nasıl bulunur?',s:[['arac','1. Aracı seçin','Binek, kamyonet, iş makinesi gibi aracın türünü seçin.'],['steps','2. Soruları yanıtlayın','İkinci el mi, satıcı galeri mi gibi sorular gelir.'],['bitti','3. Sonuç','KDV oranı, dayanağı, alıcının indirimi ve muhasebe kaydı açılır.']]}
  };
- var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611131135';
+ var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611131143';
  var MAP={ozluk:'ozluk',sirket:'sirket',amackonu:'esas',ortaklik:'ortaklik',gecbeyan:'gecbeyan',arackdv:'arackdv'};
  function open(key){var h=H[key];if(!h)return;var m=document.getElementById('hlp-modal');if(!m){m=document.createElement('div');m.id='hlp-modal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');document.body.appendChild(m);
      m.addEventListener('click',function(e){if(e.target===m||e.target.closest('[data-hx]')){m.hidden=true;document.documentElement.style.overflow='';}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){m.hidden=true;document.documentElement.style.overflow='';}});}
@@ -7309,6 +7379,26 @@ a.sn-sih{animation:sihIn 1.6s ease-in-out .8s 2}
 .yz-k td{overflow-wrap:anywhere}
 .yz-k td:nth-child(n+2){width:30%}
 @media (max-width:480px){.yz-k{font-size:12.5px}.yz-k td{padding:6px 6px}}
+.akp-btn{margin-top:8px}
+.akp-ok{background:var(--stamp,#5B3FA8)!important;color:#fff!important;border:0!important;border-radius:12px;padding:11px 18px;font-weight:700;cursor:pointer}
+.akp-ov{position:fixed;inset:0;z-index:9999;background:rgba(10,8,30,.55);display:flex;align-items:center;justify-content:center;padding:16px}
+.akp{background:var(--paper,#fff);color:var(--ink,#141226);border-radius:18px;width:min(760px,100%);max-height:calc(100vh - 32px);display:flex;flex-direction:column;box-shadow:0 30px 80px -20px rgba(0,0,0,.5);overflow:hidden}
+.akp-h{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--rule,#e3e0f0)}
+.akp-x{border:1px solid var(--rule,#ddd);background:none;border-radius:50%;width:36px;height:36px;font-size:22px;cursor:pointer;color:inherit}
+.akp-q{margin:12px 18px;padding:11px 14px;border:1px solid var(--rule,#ddd);border-radius:12px;font:inherit;background:var(--paper,#fff);color:inherit}
+.akp-b{overflow:auto;padding:0 18px 12px;flex:1}
+.akp-k{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--stamp,#5B3FA8);margin:14px 0 6px;font-weight:700}
+.akp-s{border:1px solid var(--rule,#e3e0f0);border-radius:12px;margin:6px 0;padding:0 12px}
+.akp-s summary{cursor:pointer;padding:10px 0;font-weight:600}
+.akp-s summary em{font-style:normal;background:var(--stamp,#5B3FA8);color:#fff;border-radius:10px;padding:1px 8px;font-size:12px;margin-left:6px}
+.akp-m{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-top:1px dashed var(--rule,#e3e0f0);line-height:1.45;font-size:14.5px;cursor:pointer}
+.akp-m input{margin-top:4px;width:18px;height:18px;flex:none}
+.akp-not{font-size:13px;color:#8a5a00;margin:6px 0 10px}
+.akp-prev{width:100%;margin:10px 0;padding:11px;border-radius:12px;border:1.5px dashed var(--stamp,#5B3FA8);background:var(--stamp-soft,#efeafd);color:var(--stamp,#5B3FA8);font:inherit;font-weight:600;cursor:pointer}
+.akp-f{border-top:1px solid var(--rule,#e3e0f0);padding:12px 18px;display:flex;flex-direction:column;gap:10px}
+.akp-g{font-size:14px;display:flex;gap:8px;align-items:center}
+.akp-act{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.akp-n{font-size:14px;opacity:.75}
 .tb-btns > .tb-cur:not(.tb-home){position:relative;background:rgba(182,163,247,.16)!important;color:#C9BBFF!important;border-radius:14px;box-shadow:inset 0 0 0 1.5px rgba(182,163,247,.6)!important}
 .tb-btns > .tb-cur:not(.tb-home) svg,.tb-btns > .tb-cur:not(.tb-home) span{color:#C9BBFF!important}
 </style>
