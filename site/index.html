@@ -5931,7 +5931,7 @@ window.ekYuzMsg=function(K){var Y=K.map(function(k){return num(k.yuz);}),any=Y.s
   ozluk:{t:'Özlük dosyası sihirbazı nasıl kullanılır?',s:[['steps','Adım adım ilerleyin','Dört adım var; her ekranda kutuları doldurup “Sonraki adım”a basın. Numaralı adımlara basarak da geçebilirsiniz.'],['kimlik','1–2. İşyeri ve çalışan','İşyeri ile çalışanın bilgilerini bir kez yazın; seçtiğiniz bütün formlara kendiliğinden gelir.'],['tur','3. Formları seçin','“İşe giriş paketi” düğmesi en sık gerekenleri seçer; görevlendirme, değişiklik bildirimi gibi formları ayrıca işaretleyin.'],['bitti','4. Form bilgileri ve sonuç','Her formun kendine özel kutularını doldurun. Sonuçta formlar tek dosyada indirilir, yazdırılır ya da paylaşılır; istediğinizi tek tek de alabilirsiniz.']]},
   arackdv:{t:'Araç KDV oranı nasıl bulunur?',s:[['arac','1. Aracı seçin','Binek, kamyonet, iş makinesi gibi aracın türünü seçin.'],['steps','2. Soruları yanıtlayın','İkinci el mi, satıcı galeri mi gibi sorular gelir.'],['bitti','3. Sonuç','KDV oranı, dayanağı, alıcının indirimi ve muhasebe kaydı açılır.']]}
  };
- var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611122233';
+ var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611131135';
  var MAP={ozluk:'ozluk',sirket:'sirket',amackonu:'esas',ortaklik:'ortaklik',gecbeyan:'gecbeyan',arackdv:'arackdv'};
  function open(key){var h=H[key];if(!h)return;var m=document.getElementById('hlp-modal');if(!m){m=document.createElement('div');m.id='hlp-modal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');document.body.appendChild(m);
      m.addEventListener('click',function(e){if(e.target===m||e.target.closest('[data-hx]')){m.hidden=true;document.documentElement.style.overflow='';}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){m.hidden=true;document.documentElement.style.overflow='';}});}
@@ -7304,6 +7304,11 @@ a.sn-sih{animation:sihIn 1.6s ease-in-out .8s 2}
 /* Alt araç çubuğu: bulunulan bölüm işaretli; Ana Sayfa yalnız ana sayfadayken dolu */
 .subnav a[aria-expanded="true"],.subnav a[aria-expanded="true"]:hover,.subnav a[aria-expanded="true"]:focus,.subnav .sn-more[aria-expanded="true"],.subnav .sn-more[aria-expanded="true"]:hover,.subnav .sn-more[aria-expanded="true"]:focus{background:linear-gradient(135deg,#c4b5fd 0%,#a78bfa 55%,#8b6cf0 100%)!important;color:#140C33!important;border-color:transparent!important;font-weight:650;box-shadow:0 6px 18px -6px rgba(167,139,250,.7),inset 0 1px 0 rgba(255,255,255,.35)!important}
 .subnav a[aria-expanded="true"] .sn-ic,.subnav a[aria-expanded="true"] svg,.subnav .sn-more[aria-expanded="true"] .sn-ic,.subnav .sn-more[aria-expanded="true"] svg{opacity:1;color:#140C33!important}
+.yz-k{min-width:0!important;table-layout:fixed}
+.yz-act{display:flex;flex-wrap:wrap;gap:8px}
+.yz-k td{overflow-wrap:anywhere}
+.yz-k td:nth-child(n+2){width:30%}
+@media (max-width:480px){.yz-k{font-size:12.5px}.yz-k td{padding:6px 6px}}
 .tb-btns > .tb-cur:not(.tb-home){position:relative;background:rgba(182,163,247,.16)!important;color:#C9BBFF!important;border-radius:14px;box-shadow:inset 0 0 0 1.5px rgba(182,163,247,.6)!important}
 .tb-btns > .tb-cur:not(.tb-home) svg,.tb-btns > .tb-cur:not(.tb-home) span{color:#C9BBFF!important}
 </style>
