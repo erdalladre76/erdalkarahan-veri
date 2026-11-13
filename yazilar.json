@@ -1,6 +1,134 @@
 {
  "yazilar": [
   {
+   "slug": "besiciden-hayvan-alimi-mustahsil-makbuzu-stopaj-muhasebe-kaydi",
+   "baslik": "Besiciden Hayvan Alımında Müstahsil Makbuzu: Stopaj, Kesim ve Muhasebe Kaydı",
+   "ozet": "Vergiden muaf ya da defter tutmayan besiciden canlı hayvan, süt, yumurta gibi ürün alındığında gider pusulası değil müstahsil makbuzu düzenlenir. Stopaj oranı %2’dir, ticaret borsasında tescil ettirilirse %1’e düşer. Makbuzun nasıl kesileceğini, örnek hesabı, muhasebe kaydını ve kısa mevzuatı derledik.",
+   "tarih": "2026-11-13",
+   "etiketler": [
+    "Müstahsil makbuzu",
+    "e-Müstahsil",
+    "Stopaj",
+    "Muhtasar",
+    "Muhasebe kaydı"
+   ],
+   "bolumler": [
+    {
+     "baslik": "HANGİ BELGE?",
+     "paragraflar": [
+      "Besici, vergi bakımından çiftçi sayılır. Defter tutmayan ya da kazancı gerçek usulde vergilendirilmeyen besiciden hayvan veya hayvansal ürün (süt, yumurta, yapağı, bal gibi) aldığınızda gider pusulası değil müstahsil makbuzu düzenlersiniz. Gider pusulası, vergiden muaf esnaftan alınan mal ve hizmet içindir.",
+      "e-Fatura mükellefiyseniz makbuzu kâğıt olarak değil, elektronik ortamda e-Müstahsil Makbuzu olarak düzenlemek zorundasınız."
+     ]
+    },
+    {
+     "baslik": "STOPAJ ORANLARI",
+     "liste": [
+      "Canlı hayvan ve hayvansal ürünler: %2",
+      "Ticaret borsasında tescil ettirilen hayvan ve hayvansal ürün alımları: %1",
+      "Diğer zirai ürünler (tahıl, sebze, meyve, saman, ot gibi): %4, borsada tescil ettirilirse %2"
+     ]
+    },
+    {
+     "baslik": "MAKBUZ NASIL KESİLİR?",
+     "liste": [
+      "Makbuzu alıcı, yani siz düzenlersiniz. Kâğıt makbuz iki nüsha olur: satıcının imzaladığı nüsha sizde kalır, diğeri satıcıya verilir.",
+      "Bedel ödendiği anda düzenlenir.",
+      "Satıcının adı soyadı, TC kimlik numarası ve adresi yazılır.",
+      "Ürünün cinsi, miktarı (adet ya da kilogram), birim fiyatı ve toplam bedeli yazılır.",
+      "Toplam bedel üzerinden stopaj hesaplanır, satıcıya net tutar ödenir.",
+      "Satıcı Bağ-Kur’a (4/b tarım) kayıtlı ve prim borcu varsa, ürün bedelinden ayrıca %2 prim kesintisi yapılır; muafiyet belgesi gösterenden kesilmez.",
+      "Müstahsil makbuzunda KDV hesaplanmaz; besici KDV mükellefi değildir.",
+      "e-Müstahsil Makbuzu, özel entegratör programınızdan ya da GİB e-Arşiv Portalı’ndaki e-Müstahsil bölümünden düzenlenir."
+     ]
+    },
+    {
+     "baslik": "ÖRNEK HESAP",
+     "paragraflar": [
+      "Besiciden 100.000 TL’ye canlı hayvan alındı, borsa tescili yok, satıcının Bağ-Kur prim borcu yok."
+     ],
+     "liste": [
+      "Ürün bedeli: 100.000,00 TL",
+      "Gelir vergisi stopajı (%2): 2.000,00 TL",
+      "Satıcıya ödenecek net tutar: 98.000,00 TL",
+      "Borsada tescil ettirilseydi stopaj 1.000 TL, net ödeme 99.000 TL olurdu."
+     ]
+    },
+    {
+     "baslik": "MUHASEBE KAYDI",
+     "paragraflar": [
+      "Alım ve ödeme (hayvan satış amaçlıysa 153, kesip işlenecekse 150 hesabı kullanılır; maliyet brüt tutardır):"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "153 Ticari Mallar",
+       "100.000,00",
+       ""
+      ],
+      [
+       "360 Ödenecek Vergi ve Fonlar",
+       "",
+       "2.000,00"
+      ],
+      [
+       "102 Bankalar",
+       "",
+       "98.000,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "STOPAJIN ÖDENMESİ",
+     "paragraflar": [
+      "Kesilen stopaj, izleyen ayın 26’sına kadar muhtasar ve prim hizmet beyannamesiyle beyan edilip ödenir. Ödeme kaydı:"
+     ],
+     "kayit": [
+      [
+       "Hesap kodu ve adı",
+       "Borç",
+       "Alacak"
+      ],
+      [
+       "360 Ödenecek Vergi ve Fonlar",
+       "2.000,00",
+       ""
+      ],
+      [
+       "102 Bankalar",
+       "",
+       "2.000,00"
+      ]
+     ]
+    },
+    {
+     "baslik": "BAĞ-KUR KESİNTİSİ VARSA",
+     "paragraflar": [
+      "Satıcının prim borcu varsa kesinti tutarı 361 Ödenecek Sosyal Güvenlik Kesintileri hesabına alacak yazılır, SGK’nın e-Kesinti sistemiyle izleyen ayın sonuna kadar bildirilip ödenir. Kesinti, satıcının prim borcunu geçemez."
+     ]
+    },
+    {
+     "baslik": "KISACA MEVZUAT",
+     "liste": [
+      "VUK md. 235: Müstahsil makbuzunu kimin, ne zaman ve kaç nüsha düzenleyeceği.",
+      "GVK md. 94/11: Zirai ürün bedellerinden stopaj yapılması.",
+      "2009/14592 sayılı Bakanlar Kurulu Kararı: Hayvan ve hayvansal ürünlerde %2, diğer zirai ürünlerde %4; borsada tescilde yarı oran.",
+      "509 Sıra No.lu VUK Genel Tebliği: e-Fatura mükelleflerinin e-Müstahsil Makbuzu düzenleme zorunluluğu.",
+      "GVK md. 98: Stopajın muhtasar beyannameyle beyanı.",
+      "5510 sayılı Kanun md. 4/1-b ve 01.03.2013 tarihli Tebliğ: Tarım Bağ-Kurlularının prim borcu için %2 kesinti."
+     ]
+    }
+   ],
+   "kaynaklar": [
+    "https://www.alomaliye.com/wp-content/uploads/2026/02/zirai-kazanc-rehb.pdf",
+    "https://www.alomaliye.com/2013/02/01/tarimsal-faaliyette-bulunanlarin-prim-borclarinin-sattiklari-tarimsal-urun-bedellerinden-kesinti-yapilmak-suretiyle-tahsil-edilmesine-dair-teblig/",
+    "https://www.muhasebenews.com/?p=104822"
+   ]
+  },
+  {
    "slug": "sirket-araci-surucusuz-kiralama-trafik-denetimi-sgk-2026-22",
    "baslik": "Belediyeye Sürücüsüz Araç Kiralayan Şirketlerin SGK Sorunu ve Çözümü",
    "ozet": "Belediyeye sürücüsüz kiralanan aracı belediye personeli kullanırken trafik denetimine takılırsa, kayıtlarda araç sahibi şirket görünür ve SGK sürücünün o şirkette kayıt dışı çalışıp çalışmadığını araştırır. Emniyetten SGK’ya hangi bilgi gidiyor, 2026/22 sayılı Genelgeyle ne değişti, SGK kiralamayı hangi kayıtlardan kontrol ediyor ve şirket bu sorunu baştan nasıl önler?",
