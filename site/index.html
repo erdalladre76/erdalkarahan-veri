@@ -562,7 +562,7 @@ a.chip:hover{border-color:var(--glow);color:var(--glow)}
 @media (max-width:900px){.gtabs{display:none}.tsel{display:block}}
 .rgrid{display:flex;flex-direction:column;gap:8px}
 .rrow{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-[data-rows="ort"] .rrow{grid-template-columns:1.3fr .6fr 1.5fr}[data-rows="ort"] select{width:100%}@media(max-width:560px){[data-rows="ort"] .rrow{grid-template-columns:1fr 1fr;padding-bottom:8px;border-bottom:1px dashed var(--rule)}[data-rows="ort"] .rrow>.inp:first-child{grid-column:1/-1}}
+[data-rows="ort"] .rrow{grid-template-columns:1.3fr .6fr 1.5fr}[data-rows="ort"] select{width:100%}#print-root .kdn-p{page-break-after:always;break-after:page;font:13px/1.55 Georgia,serif;color:#111;padding:6mm 4mm}#print-root .kdn-p:last-child{page-break-after:auto;break-after:auto}#print-root .kdn-u{font-weight:700;font-size:15px;border-bottom:2px solid #111;padding-bottom:6px;margin-bottom:14px}#print-root .kdn-t{font-size:18px;margin:0 0 14px}#print-root .kdn h2{font-size:14px;margin:18px 0 6px}#print-root .kdn-tb{width:100%;border-collapse:collapse;margin:8px 0}#print-root .kdn-tb td{border:1px solid #bbb;padding:6px 8px}#print-root .kdn-tb td:last-child{text-align:right;white-space:nowrap;width:38%}#print-root .kdn-b td{font-weight:700;background:#f2f2f2}#print-root .kdn ul{padding-left:18px;margin:6px 0}#print-root .kdn li{margin:4px 0}#print-root .kdn-f{font-size:11.5px;color:#444;margin-top:16px}#print-root .kdn-s{display:flex;justify-content:space-between;margin-top:30px}#print-root .kdn-s div:last-child{text-align:center;min-width:180px}@media(max-width:560px){[data-rows="ort"] .rrow{grid-template-columns:1fr 1fr;padding-bottom:8px;border-bottom:1px dashed var(--rule)}[data-rows="ort"] .rrow>.inp:first-child{grid-column:1/-1}}
 .ttable:empty{display:none}
 .tscroll{overflow:auto;max-height:420px;border:1px solid var(--rule);border-radius:12px}
 .dtable{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
@@ -2992,8 +2992,11 @@ var TOOLS=[
    F('serm','Ödenmiş sermaye',{val:'500.000',sfx:'₺'}),
    F('yed','Bugüne kadar ayrılmış genel kanuni yedek akçe (540, I. tertip)',{val:'0',sfx:'₺',hint:'I. tertip yedek akçe, ödenmiş sermayenin %20’sine ulaşınca artık ayrılmaz.'}),
    F('dag','Ortaklara dağıtılacak brüt kâr payı',{val:'',sfx:'₺',ph:'Boş bırakırsanız dağıtılabilecek en yüksek tutar',hint:'Boş bırakırsanız kârın tamamı (yedek akçeler ayrıldıktan sonra) dağıtılmış sayılır. Daha az dağıtırsanız kalan tutar 570 Geçmiş Yıllar Kârlarında kalır.'}),
+   F('unvan','Şirket unvanı (ortak bilgi notu için)',{type:'text',val:'',ph:'Boş bırakırsanız firma bilginiz kullanılır'}),
+   F('yil','Kârın ait olduğu yıl',{type:'text',val:'2025'}),
+   F('kt','Genel kurul (dağıtım) kararı tarihi',{type:'date',val:''}),
    F('ort','Ortaklar (ad, pay oranı, türü)',{type:'rows',cols:[['Ortak adı','text'],['Pay','num','%'],['Türü','sel','',[['g','Gerçek kişi'],['k','Şirket (Türkiye)'],['d','Yurt dışı ortak']]]],val:[['Ortak 1','60','g'],['Ortak 2','40','g'],['','','g'],['','','g']]})],
-  calc:function(v){var K=num(v.kar),Z=num(v.zar)||0,S=num(v.serm)||0,Y=num(v.yed)||0,X0=num(v.dag);if(isNaN(K))return null;
+  calc:function(v){window.KD_LAST=null;var K=num(v.kar),Z=num(v.zar)||0,S=num(v.serm)||0,Y=num(v.yed)||0,X0=num(v.dag);if(isNaN(K))return null;
    var p=function(x){return '%'+NI.format(x);};
    if(K<=0)return{rows:[['Dönem net kârı',tl(K)],['Sonuç','Dağıtılabilir kâr yok',1]],note:'Dönem zararla kapandığında kâr payı dağıtılamaz; zarar 580 Geçmiş Yıllar Zararları hesabına aktarılır.'};
    var zm=Math.min(Z,K),NK=K-zm;
@@ -3011,13 +3014,15 @@ var TOOLS=[
    rows.push(['Ortaklara dağıtılan brüt kâr payı',tl(X),1]);
    rows.push(['II. tertip yedek akçe (%10)',tl(Y2)]);
    rows.push(['Şirkette kalan (570 Geçmiş Yıllar Kârları)',tl(R)]);
-   var TST=0,TNET=0,TBR=0,beyan=[];
+   var TST=0,TNET=0,TBR=0,beyan=[],KDL=[];
    L.forEach(function(r,i){var ad=(r[0]||'').trim()||('Ortak '+(i+1)),pay=num(r[1])/top,br=X*pay,st=r[2]==='k'?0:br*0.15,nt=br-st;TBR+=br;TST+=st;TNET+=nt;
     var tr=r[2]==='k'?'şirket, stopaj yok':r[2]==='d'?'yurt dışı, %15 stopaj':'%15 stopaj';
+    KDL.push({ad:ad,pay:pay,tur:r[2],br:br,st:st,nt:nt});
     rows.push([ad+' ('+p(Math.round(pay*10000)/100)+', '+tr+')','Brüt '+tl(br)+' − stopaj '+tl(st)+' = net '+tl(nt)]);
     if(r[2]==='g'&&br/2>400000)beyan.push(ad);});
    rows.push(['Toplam kesilecek stopaj',tl(TST)]);
    rows.push(['Ortaklara ödenecek net toplam',tl(TNET),1]);
+   window.KD_LAST={unvan:(v.unvan||'').trim(),yil:(v.yil||'').trim(),kt:v.kt||'',tur:v.tur,K:K,zm:zm,Y1:Y1,Y2:Y2,X:X,R:R,S:S,L:KDL};
    var YV=[];
    if(zm>0)YV.push({t:'Geçmiş yıl zararına mahsup',d:'Kâr önce geçmiş yıl zararlarına mahsup edilir.',l:[['590','Dönem Net Kârı',zm,0],['580','Geçmiş Yıllar Zararları (−)',0,zm]]});
    var l=[['590','Dönem Net Kârı',NK,0]];
@@ -6095,7 +6100,7 @@ window.ekYuzMsg=function(K){var Y=K.map(function(k){return num(k.yuz);}),any=Y.s
   ozluk:{t:'Özlük dosyası sihirbazı nasıl kullanılır?',s:[['steps','Adım adım ilerleyin','Dört adım var; her ekranda kutuları doldurup “Sonraki adım”a basın. Numaralı adımlara basarak da geçebilirsiniz.'],['kimlik','1–2. İşyeri ve çalışan','İşyeri ile çalışanın bilgilerini bir kez yazın; seçtiğiniz bütün formlara kendiliğinden gelir.'],['tur','3. Formları seçin','“İşe giriş paketi” düğmesi en sık gerekenleri seçer; görevlendirme, değişiklik bildirimi gibi formları ayrıca işaretleyin.'],['bitti','4. Form bilgileri ve sonuç','Her formun kendine özel kutularını doldurun. Sonuçta formlar tek dosyada indirilir, yazdırılır ya da paylaşılır; istediğinizi tek tek de alabilirsiniz.']]},
   arackdv:{t:'Araç KDV oranı nasıl bulunur?',s:[['arac','1. Aracı seçin','Binek, kamyonet, iş makinesi gibi aracın türünü seçin.'],['steps','2. Soruları yanıtlayın','İkinci el mi, satıcı galeri mi gibi sorular gelir.'],['bitti','3. Sonuç','KDV oranı, dayanağı, alıcının indirimi ve muhasebe kaydı açılır.']]}
  };
- var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611141341';
+ var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611141348';
  var MAP={ozluk:'ozluk',sirket:'sirket',amackonu:'esas',ortaklik:'ortaklik',gecbeyan:'gecbeyan',arackdv:'arackdv'};
  function open(key){var h=H[key];if(!h)return;var m=document.getElementById('hlp-modal');if(!m){m=document.createElement('div');m.id='hlp-modal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');document.body.appendChild(m);
      m.addEventListener('click',function(e){if(e.target===m||e.target.closest('[data-hx]')){m.hidden=true;document.documentElement.style.overflow='';}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){m.hidden=true;document.documentElement.style.overflow='';}});}
@@ -7527,6 +7532,33 @@ function send(){if(ben())return;var k=(location.hash||'').replace(/^#/,'').repla
  var u='sayac.php?p='+encodeURIComponent(k);if(!refSent&&ref){u+='&r='+encodeURIComponent(ref);refSent=true;try{sessionStorage.setItem('ek-sayfa-ref','1');}catch(e){}}
  try{if(navigator.sendBeacon)navigator.sendBeacon(u);else fetch(u,{cache:'no-store',keepalive:true});}catch(e){}}
 setTimeout(send,1500);var t=null;window.addEventListener('hashchange',function(){clearTimeout(t);t=setTimeout(send,1200);});
+})();
+/* Kâr dağıtımı: ortaklara bilgi notu */
+(function(){
+ function e(x){return String(x==null?'':x).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+ function tl(n){return new Intl.NumberFormat('tr-TR',{minimumFractionDigits:2,maximumFractionDigits:2}).format(n)+' TL';}
+ function trd(d){if(!d)return '';var p=d.split('-');return p.length===3?p[2]+'.'+p[1]+'.'+p[0]:d;}
+ function unv(D){if(D.unvan)return D.unvan;try{return (window.ekProfil&&ekProfil.get().f.unvan)||'';}catch(x){return '';}}
+ function page(D,o,i){var U=unv(D),yil=D.yil||'',ky=D.kt?+D.kt.slice(0,4):new Date().getFullYear(),pct=new Intl.NumberFormat('tr-TR',{maximumFractionDigits:2}).format(o.pay*100);
+  var h='<div class="kdn-p"><div class="kdn-u">'+e(U||'……………………………… (şirket unvanı)')+'</div><h1 class="kdn-t">Ortak Bilgi Notu'+(yil?' · '+e(yil)+' Yılı Kâr Payı':'')+'</h1>';
+  h+='<p>Sayın <b>'+e(o.ad)+'</b>,</p><p>Şirketimizin '+(yil?e(yil)+' yılı ':'')+'kârının dağıtımına '+(D.kt?e(trd(D.kt))+' tarihli ':'')+'genel kurul kararıyla karar verilmiştir. Payınıza düşen kâr payı bilgileri aşağıdadır.</p>';
+  h+='<table class="kdn-tb"><tr><td>Şirketteki pay oranınız</td><td>%'+pct+'</td></tr><tr><td>Brüt kâr payınız</td><td>'+tl(o.br)+'</td></tr><tr><td>Kesilen gelir vergisi stopajı'+(o.st>0?' (%15)':'')+'</td><td>'+tl(o.st)+'</td></tr><tr class="kdn-b"><td>Size ödenecek net tutar</td><td>'+tl(o.nt)+'</td></tr></table>';
+  h+='<h2>Şirket Genelinde Dağıtım</h2><table class="kdn-tb"><tr><td>Dönem net kârı</td><td>'+tl(D.K)+'</td></tr>'+(D.zm>0?'<tr><td>Geçmiş yıl zararlarına mahsup</td><td>'+tl(D.zm)+'</td></tr>':'')+'<tr><td>Ayrılan yasal yedek akçe (I. ve II. tertip)</td><td>'+tl(D.Y1+D.Y2)+'</td></tr><tr><td>Ortaklara dağıtılan toplam brüt kâr payı</td><td>'+tl(D.X)+'</td></tr>'+(D.R>0.004?'<tr><td>Şirkette bırakılan kâr</td><td>'+tl(D.R)+'</td></tr>':'')+'</table>';
+  h+='<h2>Vergi Açısından Bilmeniz Gerekenler</h2><ul>';
+  if(o.tur==='g'){var lim=ky===2026?'400.000 TL':'ilgili yılın beyan sınırını';
+   h+='<li>Stopaj şirketimiz tarafından kesilip vergi dairesine beyan edilerek ödenir; bu kâr payı için ayrıca bir işlem yapmanız gerekmez, beyan sınırı aşılmadıkça vergileme bu stopajla tamamlanır.</li>';
+   h+='<li>Brüt kâr payının yarısı ('+tl(o.br/2)+') gelir vergisinden istisnadır (GVK 22/2). Kalan yarısı ('+tl(o.br/2)+'), aynı yıl elde ettiğiniz diğer stopajlı menkul sermaye iratlarıyla (örneğin başka şirketlerden aldığınız kâr payları) birlikte '+lim+(ky===2026?' (2026 gelirleri)':'')+' aşarsa izleyen yılın mart ayında yıllık gelir vergisi beyannamesiyle beyan edilir.</li>';
+   h+='<li>Beyan etmeniz gerekirse, kesilen stopajın tamamı ('+tl(o.st)+') beyannamede hesaplanan vergiden düşülür.</li>';
+   if(ky===2026&&o.br/2>400000)h+='<li><b>Bu kâr payı tek başına beyan sınırını aşmaktadır; yıllık beyanname vermeniz gerekecektir.</b></li>';}
+  else if(o.tur==='k')h+='<li>Tam mükellef bir şirket ortağa dağıtılan kâr payından stopaj yapılmaz (GVK 94/6-b).</li><li>Bu kâr payı şirketinizde iştirak kazancı istisnasından yararlanır (KVK 5/1-a); kurumlar vergisi beyannamesinde istisna olarak gösterilir.</li>';
+  else h+='<li>Türkiye’de yerleşik olmayan ortaklara dağıtılan kâr payından %15 stopaj yapılmıştır (GVK 94/6-b).</li><li>Türkiye ile yerleşik olduğunuz ülke arasında çifte vergilendirmeyi önleme anlaşması varsa daha düşük oran uygulanabilir; bunun için mukimlik belgenizi şirketimize iletmeniz gerekir. Türkiye’de ayrıca beyanname vermeniz gerekmez.</li>';
+  h+='</ul><p class="kdn-f">Bu not bilgi amaçlıdır. Tutarlar genel kurul kararı ve şirket kayıtlarına dayanır.</p><div class="kdn-s"><div>Tarih: '+e(trd(D.kt)||'…/…/……')+'</div><div>'+e(U||'Şirket')+'<br>Yetkili imza</div></div></div>';
+  return h;}
+ function prn(){var D=window.KD_LAST;if(!D||!D.L||!D.L.length)return;var pr=document.getElementById('print-root');if(!pr)return;
+  pr.innerHTML='<div class="kdn">'+D.L.map(function(o,i){return page(D,o,i);}).join('')+'</div>';document.body.classList.add('print-doc');
+  setTimeout(function(){window.print();setTimeout(function(){document.body.classList.remove('print-doc');pr.innerHTML='';},600);},60);}
+ function add(){if(location.hash!=='#h-kardagitim')return;document.querySelectorAll('.acts').forEach(function(a){if(!a.offsetParent||a.querySelector('.kdn-btn'))return;var b=document.createElement('button');b.type='button';b.className='kdn-btn';b.textContent='Ortaklara Bilgi Notu';b.title='Her ortak için ayrı sayfa: brüt, stopaj, net ve vergi bilgisi';b.onclick=prn;a.appendChild(b);});}
+ new MutationObserver(function(){add();}).observe(document.body,{childList:true,subtree:true});window.addEventListener('hashchange',function(){setTimeout(add,300);});setTimeout(add,800);
 })();
 </script>
 
