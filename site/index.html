@@ -3050,7 +3050,7 @@ var TOOLS=[
    F('gg','Gerçek gider toplamı (gerçek gider seçtiyseniz)',{val:'0',sfx:'₺',hint:'Bakım-onarım, sigorta, aidat (mülk sahibi ödüyorsa), emlak vergisi, amortisman, konut alımında 5 yıl boyunca alış bedelinin %5’i vb. Konut kredisi faizi 2025’ten itibaren gider yazılamaz.'}),
    F('u1','Ücret: birinci (en yüksek) işverenden yıllık gelir vergisi matrahı',{val:'0',sfx:'₺',hint:'Aralık bordrosundaki kümülatif gelir vergisi matrahı.'}),
    F('u2','Ücret: diğer işverenlerden yıllık gelir vergisi matrahı toplamı',{val:'0',sfx:'₺'}),
-   F('uv','Ücretlerden kesilen gelir vergisi toplamı',{val:'0',sfx:'₺',hint:'Bordrolardaki ödenen gelir vergisi (asgari ücret istisnası düşülmüş hali).'}),
+   F('uv','Ücretlerden kesilen gelir vergisi toplamı',{val:'0',sfx:'₺',hint:'Bordrolarınızda fiilen kesilen (asgari ücret istisnası düşüldükten sonra ödenen) gelir vergisinin yıllık toplamı. İstisna tutarı hesapta ayrıca dikkate alınır.'}),
    F('kp','Şirketlerden alınan brüt kâr payı (%15 stopajlı)',{val:'0',sfx:'₺',hint:'Türkiye’deki şirketlerden aldığınız brüt temettü. Yarısı istisnadır. Kâr dağıtımı hesaplamasından ortak bilgi notunu kullanabilirsiniz.'}),
    F('tk','Ticari, zirai ya da serbest meslek kazancı için de beyanname veriyor musunuz?',{type:'seg',opts:[['0','Hayır'],['1','Evet']],val:'0',hint:'Veriyorsanız konut kira istisnasından yararlanamazsınız; o kazançlar bu hesaba dahil değildir.'}),
    F('es','Eğitim ve sağlık harcamaları (belgeli)',{val:'0',sfx:'₺',hint:'Kendiniz, eşiniz ve küçük çocuklarınız için Türkiye’de yapılan, adınıza belgelendirilmiş harcamalar. Beyan edilen gelirin %10’unu aşamaz.'}),
@@ -3072,7 +3072,7 @@ var TOOLS=[
    var gBr=(kB?KK:0)+(ibB?IB:0)+(sB?IS:0),gNet0=gBr-ist,gid=0;
    if(gBr>0){if(v.gy==='r')gid=Math.min(GG*(gNet0/gBr),gNet0);else gid=gNet0*0.15;}
    var GMSI=Math.max(0,gNet0-gid);
-   var asgI=uB?Math.min(ASGM,U1>0?U1:U2):0,UCR=uB?Math.max(0,U1+U2-asgI):0,MSI=kpB?kpY:0;
+   var UCR=uB?U1+U2:0,MSI=kpB?kpY:0;
    var GEL=GMSI+UCR+MSI;
    rows.push(['Konut kirası',KK>0?(kB?'Beyan edilir'+(ist?' (58.000 TL istisna düşülür)':istYok?(TK?' (istisna yok: ticari/mesleki beyan var)':' (istisna yok: brüt gelirler toplamı 1.500.000 TL’yi aşıyor)'):''):'Beyan edilmez (58.000 TL istisna altında)'):'—']);
    if(IB>0||KP>0)rows.push(['Stopajlı işyeri kirası + kâr payının yarısı',tl(c)+(cB?' → 400.000 TL’yi aşıyor, beyan edilir':' → 400.000 TL’yi aşmıyor, beyan edilmez')]);
@@ -3082,27 +3082,30 @@ var TOOLS=[
     nt.push('Beyan sınırları 2026 gelirleri için: konut kirasında 58.000 TL istisna; stopajlı işyeri kirası ve kâr payının istisna dışı yarısı toplamı 400.000 TL; stopajsız kira ve faiz gibi gelirlerde 22.000 TL; birden fazla işverende ikinci işverenden alınan 400.000 TL, toplam ücret 5.300.000 TL (GVK 21, 22, 86). Beyan dışı kalan gelirlerde kesilen stopaj nihai vergidir.');
     return{rows:rows,note:nt.join(' ')};}
    if(GMSI>0||gBr>0){rows.push(['Kira geliri (brüt, beyan edilen)',tl(gBr)]);if(ist)rows.push(['Konut istisnası',tl(ist)]);rows.push([v.gy==='r'?'Gerçek gider (istisnaya isabet eden kısım hariç)':'Götürü gider (%15)',tl(gid)]);rows.push(['Safi kira geliri',tl(GMSI)]);}
-   if(uB){rows.push(['Ücret (gelir vergisi matrahı)',tl(U1+U2)]);rows.push(['Asgari ücret istisnası (yıllık matrah)',tl(asgI)]);}
+   if(uB)rows.push(['Ücret (gelir vergisi matrahı)',tl(U1+U2)]);
    if(MSI)rows.push(['Kâr payı (yarısı istisna)',tl(KP)+' → beyan edilen '+tl(MSI)]);
    rows.push(['Toplam gelir',tl(GEL)]);
    var esI=Math.min(ES,GEL*0.10),bgI=Math.min(BG,GEL*0.05),spI=Math.min(SP,GEL*0.15,ASG*12),IND=esI+bgI+spI;
    if(IND>0){if(esI)rows.push(['Eğitim ve sağlık harcamaları'+(ES>esI?' (%10 sınırı)':''),tl(esI)]);if(bgI)rows.push(['Bağışlar'+(BG>bgI?' (%5 sınırı)':''),tl(bgI)]);if(spI)rows.push(['Şahıs sigorta primleri'+(SP>spI?' (sınır)':''),tl(spI)]);}
-   var M=Math.max(0,GEL-IND),ucretT=uB&&UCR>=GEL-0.005;
-   var D=ucretT?[[190000,.15],[400000,.20],[1500000,.27],[5300000,.35],[Infinity,.40]]:[[190000,.15],[400000,.20],[1000000,.27],[5300000,.35],[Infinity,.40]];
-   var V=0,alt=0;D.forEach(function(d){if(M>alt){V+=(Math.min(M,d[0])-alt)*d[1];}alt=d[0];});
+   var M=Math.max(0,GEL-IND),DU=[[190000,.15],[400000,.20],[1500000,.27],[5300000,.35],[Infinity,.40]],DD=[[190000,.15],[400000,.20],[1000000,.27],[5300000,.35],[Infinity,.40]];
+   var trf=function(m,D){var V=0,alt=0;D.forEach(function(d){if(m>alt)V+=(Math.min(m,d[0])-alt)*d[1];alt=d[0];});return V;};
+   var uM=UCR>0?M*UCR/GEL:0,fark=UCR>0?Math.max(0,trf(uM,DD)-trf(uM,DU)):0,V=trf(M,DD)-fark;
    rows.push(['Vergi matrahı',tl(M)]);
-   rows.push(['Hesaplanan gelir vergisi ('+(ucretT?'ücret tarifesi':'ücret dışı tarife')+')',tl(V)]);
-   var mU=uB?UV:0,mI=ibB?IB*0.20:0,mK=kpB?KP*0.15:0,MAH=mU+mI+mK;
+   if(fark>0){rows.push(['Ücret dışı tarifeyle hesaplanan vergi',tl(V+fark)]);rows.push(['Ücrete isabet eden tarife farkı (−)',tl(fark)]);}
+   rows.push(['Hesaplanan gelir vergisi',tl(V)]);
+   var aV=uB?Math.min(trf(ASGM,DU),trf(U1>0?U1:U2,DU)):0;
+   var mU=uB?UV:0,mI=ibB?IB*0.20:0,mK=kpB?KP*0.15:0,MAH=mU+aV+mI+mK;
    if(mU)rows.push(['Mahsup: ücretten kesilen vergi',tl(mU)]);
+   if(aV)rows.push(['Mahsup: asgari ücret istisnası (istisna edilen vergi)',tl(aV)]);
    if(mI)rows.push(['Mahsup: işyeri kirası stopajı (%20)',tl(mI)]);
    if(mK)rows.push(['Mahsup: kâr payı stopajı (%15)',tl(mK)]);
    var OD=V-MAH;
    if(OD>=0){rows.push(['Ödenecek gelir vergisi',tl(OD),1]);rows.push(['Taksitler','Mart: '+tl(OD/2)+' · Temmuz: '+tl(OD/2)]);}
    else rows.push(['İade edilecek / mahsup edilecek vergi',tl(-OD),1]);
-   nt.push('Beyanname 1–31 Mart 2027 arasında verilir; vergi Mart ve Temmuz’da iki eşit taksitle ödenir. Beyanname için ayrıca damga vergisi ödenir. Konut kira geliri istisnası 58.000 TL’dir; ticari, zirai ya da mesleki kazanç beyan edenler ve ücret, kira, kâr payı gibi gelirlerinin brüt toplamı 1.500.000 TL’yi aşanlar (konut kirası 58.000 TL’yi aşıyorsa) yararlanamaz. İstisnadan yararlanmak için kiranın zamanında ve eksiksiz beyan edilmesi gerekir.');
+   nt.push('Beyanname 1–31 Mart 2027 arasında verilir; vergi Mart ve Temmuz’da iki eşit taksitle ödenir. Beyanname için ayrıca damga vergisi ödenir. Konut kira geliri istisnası 58.000 TL’dir; ticari, zirai ya da mesleki kazanç beyan edenler ve ücret, kira, kâr payı değer artışı gibi gelirlerinin (beyan edilsin edilmesin) brüt toplamı 1.500.000 TL’yi aşanlar (konut kirası 58.000 TL’yi aşıyorsa) yararlanamaz. İstisnadan yararlanmak için kiranın zamanında ve eksiksiz beyan edilmesi gerekir.');
    nt.push('Beyan zorunluluğu doğduğunda yalnızca sınırı aşan gelir beyan edilir; örneğin konut kirası beyan edilirken 400.000 TL’yi aşmayan stopajlı işyeri kirası beyana eklenmez. Kâr payının yarısı istisnadır, kesilen stopajın tamamı mahsup edilir (GVK 22/2). Hesaplanan vergiden mahsup edilemeyen stopaj iade talep edilebilir.');
-   if(uB)nt.push('Ücrette asgari ücret istisnası, en yüksek ücreti ödeyen işverenden alınan ücrete yıllık asgari ücret matrahı ('+tl(ASGM)+') kadar uygulanmıştır. Hazır Beyan sisteminde ücret bilgileri ve kesintiler otomatik gelir; kendi bordrolarınızla karşılaştırın.');
-   if(!ucretT&&uB)nt.push('Ücretle birlikte başka gelir de beyan edildiği için ücret dışı gelirler tarifesi uygulanmıştır.');
+   if(uB)nt.push('Ücretin tamamı beyan edilir. Asgari ücret istisnası yıl içinde bordroda uygulandığı için beyannamede yeniden uygulanmaz; istisna edilen vergi ('+tl(aV)+', yılın tamamında çalışıldığı varsayımıyla) kesilen vergiyle birlikte mahsup edilir. Yılın bir kısmında çalıştıysanız bu tutar daha düşük olur. Hazır Beyan sisteminde ücret bilgileri ve kesintiler otomatik gelir; kendi bordrolarınızla karşılaştırın.');
+   if(fark>0)nt.push('Ücretle birlikte başka gelir de beyan edildiğinde vergi ücret dışı tarifeyle hesaplanır; ücrete isabet eden matrah için iki tarife arasındaki fark düşülür (GVK 103, 75 No’lu GV Sirküleri).');
    nt.push('GMSİ’de zarar, faiz ve kur farkı ile vergi uyumlu mükellef indirimi bu hesapta yoktur. Hesap bilgi amaçlıdır; GİB Hazır Beyan sistemindeki tutarlarla karşılaştırın.');
    return{rows:rows,note:nt.join(' ')};}},
  {g:'Vergi',key:'emlak',title:'Emlak vergisi',abbr:'EV',lead:'Vergi değerine ve taşınmaz türüne göre yıllık emlak vergisini bulun.',
@@ -6163,7 +6166,7 @@ window.ekYuzMsg=function(K){var Y=K.map(function(k){return num(k.yuz);}),any=Y.s
   ozluk:{t:'Özlük dosyası sihirbazı nasıl kullanılır?',s:[['steps','Adım adım ilerleyin','Dört adım var; her ekranda kutuları doldurup “Sonraki adım”a basın. Numaralı adımlara basarak da geçebilirsiniz.'],['kimlik','1–2. İşyeri ve çalışan','İşyeri ile çalışanın bilgilerini bir kez yazın; seçtiğiniz bütün formlara kendiliğinden gelir.'],['tur','3. Formları seçin','“İşe giriş paketi” düğmesi en sık gerekenleri seçer; görevlendirme, değişiklik bildirimi gibi formları ayrıca işaretleyin.'],['bitti','4. Form bilgileri ve sonuç','Her formun kendine özel kutularını doldurun. Sonuçta formlar tek dosyada indirilir, yazdırılır ya da paylaşılır; istediğinizi tek tek de alabilirsiniz.']]},
   arackdv:{t:'Araç KDV oranı nasıl bulunur?',s:[['arac','1. Aracı seçin','Binek, kamyonet, iş makinesi gibi aracın türünü seçin.'],['steps','2. Soruları yanıtlayın','İkinci el mi, satıcı galeri mi gibi sorular gelir.'],['bitti','3. Sonuç','KDV oranı, dayanağı, alıcının indirimi ve muhasebe kaydı açılır.']]}
  };
- var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611141356';
+ var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611141507';
  var MAP={ozluk:'ozluk',sirket:'sirket',amackonu:'esas',ortaklik:'ortaklik',gecbeyan:'gecbeyan',arackdv:'arackdv'};
  function open(key){var h=H[key];if(!h)return;var m=document.getElementById('hlp-modal');if(!m){m=document.createElement('div');m.id='hlp-modal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');document.body.appendChild(m);
      m.addEventListener('click',function(e){if(e.target===m||e.target.closest('[data-hx]')){m.hidden=true;document.documentElement.style.overflow='';}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){m.hidden=true;document.documentElement.style.overflow='';}});}
