@@ -2947,6 +2947,43 @@ var TOOLS=[
    Y.push({t:'Stopajın ödenmesi (izleyen ayın 26’sı)',d:'Muhtasar ve prim hizmet beyannamesiyle beyan edilip ödenir.',l:[['360','Ödenecek Vergi ve Fonlar',st,0],['102','Bankalar',0,st]]});
    if(k)Y.push({t:'Bağ-Kur kesintisinin ödenmesi (izleyen ayın sonu)',d:'SGK e-Kesinti sistemiyle bildirilip ödenir.',l:[['361','Ödenecek Sosyal Güvenlik Kesintileri',bk,0],['102','Bankalar',0,bk]]});
    return{rows:rows,yev:Y,yevNot:'Kasadan ödemede 102 yerine 100 Kasa kullanılır. Hizmet alımında gider hesabı (770, 740 gibi) borçlandırılır.',note:'Makbuzda KDV hesaplanmaz. e-Fatura mükellefiyseniz makbuzu e-Müstahsil olarak düzenlersiniz. Stopajı izleyen ayın 26’sına kadar muhtasar ve prim hizmet beyannamesiyle beyan edip ödersiniz; Bağ-Kur kesintisi SGK e-Kesinti sistemiyle izleyen ayın sonuna kadar bildirilip ödenir. Yevmiye kayıtları aşağıdadır. Dayanak: VUK 235, GVK 94/11, 2009/14592 sayılı BKK.'};}},
+ {g:'Vergi',key:'kvoran',title:'Kurumlar vergisi oran sihirbazı (2026–2027)',abbr:'KV',lead:'Üretim (%12,5), ihracat, halka arz ve finans oranlarıyla kurumlar vergisini kazanç türlerine bölerek hesaplayın; %10 yurt içi asgari kurumlar vergisi testini de yapın.',
+  fields:[F('y','Hesap dönemi',{type:'seg',opts:[['2027','2027 ve sonrası'],['2026','2026']],val:'2027',hint:'Üretim kazancında %12,5 oranı 2027 hesap döneminin ilk geçici vergi döneminden itibaren uygulanır (7582 s.K.). 2026’da üretim indirimi 1 puandır (%24).'}),
+   F('s','Şirketin faaliyeti',{type:'select',opts:[['n','Diğer şirketler (genel oran %25)'],['f','Banka, sigorta, emeklilik, finansal kiralama, faktoring, finansman vb. (%30)']],val:'n'}),
+   F('h','Borsa İstanbul’da ilk halka arz (en az %20)',{type:'seg',opts:[['0','Yok'],['1','Var, ilk 5 hesap dönemi içinde']],val:'0',hint:'Paylarının en az %20’si Borsa İstanbul’da ilk kez halka arz edilen kurumlarda oran, halka arzın yapıldığı dönem dahil 5 hesap dönemi 2 puan indirimli uygulanır; diğer indirimler bundan sonra uygulanır.'}),
+   F('yk','İlk defa kurulup faaliyete geçtiği dönem dahil ilk 3 hesap dönemi içinde mi?',{type:'seg',opts:[['0','Hayır'],['1','Evet']],val:'0',hint:'Bu kurumlarda yurt içi asgari kurumlar vergisi uygulanmaz. Birleşme, devir, bölünme ya da tür değişikliğiyle kurulanlar bu kapsamda değildir.'}),
+   F('tbk','Ticari bilanço kârı',{val:'10.000.000',sfx:'₺'}),
+   F('kkeg','Kanunen kabul edilmeyen giderler',{val:'0',sfx:'₺'}),
+   F('ist','İndirim ve istisnalar toplamı (iştirak kazancı, Ar-Ge vb.)',{val:'0',sfx:'₺'}),
+   F('istA','Bunlardan asgari vergi matrahından da düşülebilenler',{val:'0',sfx:'₺',hint:'Örneğin iştirak kazançları istisnası, emisyon primi istisnası; KVK 32/C’de sayılanlar. Emin değilseniz 0 yazın.'}),
+   F('zar','Mahsup edilecek geçmiş yıl zararları',{val:'0',sfx:'₺',hint:'Asgari vergi matrahında geçmiş yıl zararı düşülmez.'}),
+   F('uk','Üretim faaliyetinden elde edilen kazanç (kendi ürettiğinin satışı ve ihracatı)',{val:'6.000.000',sfx:'₺',hint:'Yalnızca sanayi sicil belgesi olan ve fiilen üretim yapan (ya da Tarım Bakanlığı üretici belgesi olan ve fiilen zirai üretim yapan) kurumlar için. Belge yoksa 0 yazın. Kendi ürettiğinizi ihraç ettiğinizde de bu satıra yazın; ihracat indirimi ayrıca uygulanmaz.'}),
+   F('ik','Satın alınan malların (ticari mal) ihracatından kazanç',{val:'1.000.000',sfx:'₺',hint:'Ticari mal ihracatı 5 puan indirimle (%20) vergilenir; DTSŞ/SDTŞ aracılığıyla yapılan ihracat da dahildir.'})],
+  calc:function(v){var T=num(v.tbk),K=num(v.kkeg)||0,I=num(v.ist)||0,IA=num(v.istA)||0,Z=num(v.zar)||0,U=num(v.uk)||0,X=num(v.ik)||0;if(isNaN(T))return null;
+   var fin=v.s==='f',ha=v.h==='1'&&!fin,y27=v.y==='2027',M=Math.max(0,T+K-I-Z);
+   var rG=(fin?30:25)-(ha?2:0),rU=fin?rG:(y27?12.5:24)-(ha?2:0),rX=fin?rG:20-(ha?2:0);
+   var bU=0,bX=0;if(!fin&&T>0&&M>0){bU=Math.min(M*U/T,U,M);bU=Math.max(0,bU);bX=Math.min(M*X/T,X,M-bU);bX=Math.max(0,bX);}
+   var bG=Math.max(0,M-bU-bX),kU=bU*rU/100,kX=bX*rX/100,kG=bG*rG/100,KV=kU+kX+kG,duz=M*(fin?30:25)/100,alin=Math.max(0,duz-KV);
+   var aM=Math.max(0,T+K-IA),akv=v.yk==='1'?0:Math.max(0,aM*0.10-alin),fark=Math.max(0,akv-KV),ode=KV+fark;
+   var p=function(x){return '%'+NI.format(x);};
+   var rows=[['Kurumlar vergisi matrahı',tl(M)]];
+   if(bU>0)rows.push(['Üretim kazancı payı × '+p(rU),tl(bU)+' → '+tl(kU)]);
+   if(bX>0)rows.push(['Ticari mal ihracatı payı × '+p(rX),tl(bX)+' → '+tl(kX)]);
+   rows.push([(fin?'Finans kesimi':'Diğer kazanç')+' × '+p(rG),tl(bG)+' → '+tl(kG)]);
+   rows.push(['Hesaplanan kurumlar vergisi',tl(KV)]);
+   rows.push(['Yurt içi asgari kurumlar vergisi (%10)',v.yk==='1'?'Uygulanmaz (ilk 3 dönem)':tl(aM*0.10)+(alin>0?' − alınmayan vergi '+tl(alin)+' = '+tl(akv):'')]);
+   if(fark>0)rows.push(['Asgari vergi farkı (ek ödenecek)',tl(fark)]);
+   rows.push(['Ödenecek kurumlar vergisi',tl(ode),1]);
+   rows.push(['Efektif oran (matraha göre)',M>0?p(Math.round(ode/M*10000)/100):'—']);
+   rows.push(['Düz '+(fin?'%30':'%25')+' ile olsaydı',tl(duz)+(duz>ode?' (tasarruf '+tl(duz-ode)+')':'')]);
+   var nt=[];
+   if(!fin&&U>0)nt.push('Üretim kazancı, ticari bilanço kârı içindeki payı oranında matraha yansıtılır; bu tutar üretim kazancını ve matrahı aşamaz (KV Genel Tebliği Seri No: 26).');
+   if(!fin&&U>0&&!y27)nt.push('2026’da kendi ürettiğiniz malın ihracatında 1 puanlık üretim indirimi ile 5 puanlık ihracat indirimi aynı kazanca birlikte uygulanmaz; bu hesapta üretim indirimi alınmıştır, ihracata isabet eden kısmı varsa ayrıca değerlendirin.');
+   if(fin)nt.push('Finans kesimine (KVK 32/1) halka arz, üretim ve ihracat indirimleri uygulanmaz.');
+   nt.push('Asgari kurumlar vergisi: indirim ve istisnalar düşülmeden önceki kazancın (ticari kâr + KKEG − 32/C’de sayılan istisnalar) %10’udur; halka arz, ihracat ve üretim indirimleri nedeniyle alınmayan vergi bu tutardan düşülür (KVK 32/C). Geçmiş yıl zararı düşülmez.');
+   nt.push('Üretim kazancı, ticari faaliyet, faiz ve kur farkı gibi diğer gelirlerden ayrı izlenmeli; ortak giderler makul bir dağıtım anahtarıyla, ortak makine ve taşıtların amortismanı kullanım günüyle bölünür. Fason üretimde kendi üretiminizin fasondan fazla olması, hammaddeyi sizin vermeniz ve riski sizin taşımanız gerekir.');
+   nt.push('Yatırım teşvik belgesiyle indirimli kurumlar vergisi (KVK 32/A) ve büyük çok uluslu gruplar için %15 tamamlayıcı vergi bu hesaba dahil değildir.');
+   return{rows:rows,note:nt.join(' ')};}},
  {g:'Vergi',key:'emlak',title:'Emlak vergisi',abbr:'EV',lead:'Vergi değerine ve taşınmaz türüne göre yıllık emlak vergisini bulun.',
   fields:[F('a','Emlak vergisi değeri',{val:'2.000.000',sfx:'₺'}),F('t','Taşınmaz türü',{type:'select',opts:[['1','Konut (binde 1)'],['2','İşyeri ve diğer binalar (binde 2)'],['3','Arsa (binde 3)'],['1a','Arazi (binde 1)']],val:'1'}),F('b','Büyükşehir sınırında mı?',{type:'seg',opts:[['1','Evet'],['0','Hayır']],val:'1',hint:'Büyükşehir belediye sınırlarında oranlar iki kat uygulanır.'})],
   calc:function(v){var a=num(v.a);if(isNaN(a))return null;var r=parseFloat(v.t)/1000*(v.b==='1'?2:1),t=a*r;return{rows:[['Uygulanan oran','Binde '+NI.format(r*1000)],['Yıllık emlak vergisi',tl(t),1],['Taksit (mayıs ve kasım)',tl(t/2)]]};}},
@@ -6005,7 +6042,7 @@ window.ekYuzMsg=function(K){var Y=K.map(function(k){return num(k.yuz);}),any=Y.s
   ozluk:{t:'Özlük dosyası sihirbazı nasıl kullanılır?',s:[['steps','Adım adım ilerleyin','Dört adım var; her ekranda kutuları doldurup “Sonraki adım”a basın. Numaralı adımlara basarak da geçebilirsiniz.'],['kimlik','1–2. İşyeri ve çalışan','İşyeri ile çalışanın bilgilerini bir kez yazın; seçtiğiniz bütün formlara kendiliğinden gelir.'],['tur','3. Formları seçin','“İşe giriş paketi” düğmesi en sık gerekenleri seçer; görevlendirme, değişiklik bildirimi gibi formları ayrıca işaretleyin.'],['bitti','4. Form bilgileri ve sonuç','Her formun kendine özel kutularını doldurun. Sonuçta formlar tek dosyada indirilir, yazdırılır ya da paylaşılır; istediğinizi tek tek de alabilirsiniz.']]},
   arackdv:{t:'Araç KDV oranı nasıl bulunur?',s:[['arac','1. Aracı seçin','Binek, kamyonet, iş makinesi gibi aracın türünü seçin.'],['steps','2. Soruları yanıtlayın','İkinci el mi, satıcı galeri mi gibi sorular gelir.'],['bitti','3. Sonuç','KDV oranı, dayanağı, alıcının indirimi ve muhasebe kaydı açılır.']]}
  };
- var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611132311';
+ var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611141301';
  var MAP={ozluk:'ozluk',sirket:'sirket',amackonu:'esas',ortaklik:'ortaklik',gecbeyan:'gecbeyan',arackdv:'arackdv'};
  function open(key){var h=H[key];if(!h)return;var m=document.getElementById('hlp-modal');if(!m){m=document.createElement('div');m.id='hlp-modal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');document.body.appendChild(m);
      m.addEventListener('click',function(e){if(e.target===m||e.target.closest('[data-hx]')){m.hidden=true;document.documentElement.style.overflow='';}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){m.hidden=true;document.documentElement.style.overflow='';}});}
@@ -7316,7 +7353,7 @@ document.addEventListener('keydown',function(e){if(e.key!=='Enter'||e.defaultPre
 (function(){
  function T(x){return typeof window.trTitle==='function'?trTitle(String(x||'')):String(x||'');}
  function E(x){return String(x==null?'':x).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
- var SIH=[['Şirket',[['Şirket kuruluşu: esas sözleşme','#amackonu'],['Şirket işlemleri (müdür, hisse, adres, sermaye, tasfiye)','#sirket'],['Adi ortaklık ve iş ortaklığı sözleşmesi','#ortaklik']]],['Vergi',[['Beyanname vermeme cezası hesaplama','#gecbeyan'],['Düzeltme beyannamesi ve geç beyan','#duzeltme'],['Araç ve iş makinesi KDV oranı','#arackdv'],['Damga vergisi beyannamesi doldur','#dvbeyan']]],['Sözleşme ve belge',[['Kira sözleşmesi doldur','#kirasozlesme'],['Personel özlük dosyası','#ozluk'],['Dilekçe, karar ve formlar','#dilekceler']]]];
+ var SIH=[['Şirket',[['Şirket kuruluşu: esas sözleşme','#amackonu'],['Şirket işlemleri (müdür, hisse, adres, sermaye, tasfiye)','#sirket'],['Adi ortaklık ve iş ortaklığı sözleşmesi','#ortaklik']]],['Vergi',[['Beyanname vermeme cezası hesaplama','#gecbeyan'],['Düzeltme beyannamesi ve geç beyan','#duzeltme'],['Araç ve iş makinesi KDV oranı','#arackdv'],['Damga vergisi beyannamesi doldur','#dvbeyan']]],['Sözleşme ve belge',[['Kira sözleşmesi doldur','#kirasozlesme'],['Personel özlük dosyası','#ozluk'],['Kurumlar vergisi oran sihirbazı','#h-kvoran'],['Dilekçe, karar ve formlar','#dilekceler']]]];
  var CFG={sihirbazlar:{all:'Tüm sihirbazlar adım adım, soru sorarak',st:SIH},hesaplamalar:{p:'h-',all:'Tüm hesaplamalar'},dilekceler:{p:'d-',all:'Tüm dilekçe, karar ve formlar'},tablolar:{x:1,all:'Tüm Excel tabloları'},pratik:{pr:1,all:'Tüm pratik bilgiler'}};
  var m=document.createElement('div');m.className='sn-menu sn-mega sn-mega2';m.hidden=true;document.body.appendChild(m);var cur=null,btn=null;
  function N(x){return String(x||'').toLocaleLowerCase('tr-TR').replace(/ç/g,'c').replace(/ğ/g,'g').replace(/[ıî]/g,'i').replace(/ö/g,'o').replace(/ş/g,'s').replace(/[üû]/g,'u');}
