@@ -3042,6 +3042,69 @@ var TOOLS=[
    nt.push('Ortak gerçek kişinin beyanı: brüt kâr payının yarısı gelir vergisinden istisnadır (GVK 22/2). Kalan yarısı, diğer stopajlı menkul sermaye iratlarıyla birlikte 2026 gelirleri için 400.000 TL’yi aşarsa yıllık beyannameyle beyan edilir; kesilen stopajın tamamı hesaplanan vergiden mahsup edilir.'+(beyan.length?' Bu hesapta beyan sınırını aşan ortak: '+beyan.join(', ')+'.':''));
    nt.push('Kâr dağıtımı genel kurul kararıyla yapılır; karar örneği için Belgeler > Kararlar bölümündeki “Kâr dağıtımı” ve “Kâr payı avansı” kararlarına bakabilirsiniz.');
    return{rows:rows,yev:YV,yevNot:'Kâr dağıtılmayıp şirkette bırakılırsa 570 yerine 542 Olağanüstü Yedekler hesabı da kullanılabilir. Ortaklar kâr payını şirkette bırakırsa tutar 331’de alacak olarak kalır. Kasadan ödemede 102 yerine 100 Kasa kullanılır.',note:nt.join(' ')};}},
+ {g:'Vergi',key:'gvbeyan',title:'Yıllık gelir vergisi beyannamesi (2026 gelirleri, Mart 2027)',abbr:'YB',lead:'Kira, ücret ve kâr payı gelirlerinizi girin; hangisini beyan etmeniz gerektiğini, istisnaları, indirimleri, hesaplanan vergiyi, mahsup edilecek stopajı ve ödenecek tutarı görün.',
+  fields:[F('kk','Konut kira geliri (yıllık, tahsil edilen)',{val:'240.000',sfx:'₺',hint:'2026 yılında tahsil ettiğiniz konut kiralarının toplamı. Konut kirasında stopaj yoktur.'}),
+   F('ib','İşyeri kirası, kiracı stopaj yaptı (brüt)',{val:'0',sfx:'₺',hint:'Kiracı şirket ya da esnafsa %20 stopaj keser. Elinize net geçen tutarı 0,80’e bölerek brütü bulabilirsiniz.'}),
+   F('is','İşyeri kirası, stopaj yapılmadı',{val:'0',sfx:'₺',hint:'Kiracı şahıssa (ticari faaliyeti yoksa) stopaj yapılmaz.'}),
+   F('gy','Kira gelirinde gider yöntemi',{type:'seg',opts:[['g','Götürü gider (%15)'],['r','Gerçek gider']],val:'g',hint:'Götürü gideri seçen 2 yıl geçmeden gerçek gidere dönemez. Gerçek giderde belgeler 5 yıl saklanır.'}),
+   F('gg','Gerçek gider toplamı (gerçek gider seçtiyseniz)',{val:'0',sfx:'₺',hint:'Bakım-onarım, sigorta, aidat (mülk sahibi ödüyorsa), emlak vergisi, amortisman, konut alımında 5 yıl boyunca alış bedelinin %5’i vb. Konut kredisi faizi 2025’ten itibaren gider yazılamaz.'}),
+   F('u1','Ücret: birinci (en yüksek) işverenden yıllık gelir vergisi matrahı',{val:'0',sfx:'₺',hint:'Aralık bordrosundaki kümülatif gelir vergisi matrahı.'}),
+   F('u2','Ücret: diğer işverenlerden yıllık gelir vergisi matrahı toplamı',{val:'0',sfx:'₺'}),
+   F('uv','Ücretlerden kesilen gelir vergisi toplamı',{val:'0',sfx:'₺',hint:'Bordrolardaki ödenen gelir vergisi (asgari ücret istisnası düşülmüş hali).'}),
+   F('kp','Şirketlerden alınan brüt kâr payı (%15 stopajlı)',{val:'0',sfx:'₺',hint:'Türkiye’deki şirketlerden aldığınız brüt temettü. Yarısı istisnadır. Kâr dağıtımı hesaplamasından ortak bilgi notunu kullanabilirsiniz.'}),
+   F('tk','Ticari, zirai ya da serbest meslek kazancı için de beyanname veriyor musunuz?',{type:'seg',opts:[['0','Hayır'],['1','Evet']],val:'0',hint:'Veriyorsanız konut kira istisnasından yararlanamazsınız; o kazançlar bu hesaba dahil değildir.'}),
+   F('es','Eğitim ve sağlık harcamaları (belgeli)',{val:'0',sfx:'₺',hint:'Kendiniz, eşiniz ve küçük çocuklarınız için Türkiye’de yapılan, adınıza belgelendirilmiş harcamalar. Beyan edilen gelirin %10’unu aşamaz.'}),
+   F('bg','Bağış ve yardımlar',{val:'0',sfx:'₺',hint:'Kamu kurumlarına, kamu yararına derneklere, vergi muafiyeti tanınmış vakıflara yapılan belgeli bağışlar; beyan edilen gelirin %5’ine kadar indirilir. Tamamı indirilen özel bağışlar (eğitim, sağlık tesisi vb.) bu hesapta yoktur.'}),
+   F('sp','Şahıs sigorta primleri (hayat primlerinin %50’si, ölüm, kaza, sağlık, engellilik primleri)',{val:'0',sfx:'₺',hint:'Ücretinizden zaten indirilmişse buraya yazmayın. Beyan edilen gelirin %15’ini ve yıllık brüt asgari ücreti aşamaz.'})],
+  calc:function(v){var KK=num(v.kk)||0,IB=num(v.ib)||0,IS=num(v.is)||0,GG=num(v.gg)||0,U1=num(v.u1)||0,U2=num(v.u2)||0,UV=num(v.uv)||0,KP=num(v.kp)||0,ES=num(v.es)||0,BG=num(v.bg)||0,SP=num(v.sp)||0,TK=v.tk==='1';
+   var IST=58000,SNR=400000,SZ=22000,UST=5300000,ESIK=1500000,ASG=33030,ASGM=ASG*0.85*12;
+   var p=function(x){return '%'+NI.format(x);},rows=[],nt=[];
+   // ücret beyanı
+   var uB=false,uNeden='';
+   if(U1+U2>0){if(U2>0&&U2>SNR){uB=true;uNeden='ikinci ve sonraki işverenlerden alınan ücret 400.000 TL’yi aşıyor';}else if(U1+U2>UST){uB=true;uNeden='toplam ücret 5.300.000 TL’yi aşıyor';}else uNeden=U2>0?'ikinci işverenden alınan 400.000 TL’yi, toplam 5.300.000 TL’yi aşmıyor':'tek işverenden alınan ücret 5.300.000 TL’yi aşmıyor';}
+   // konut istisnası
+   var brTop=KK+IB+IS+U1+U2+KP,istYok=TK||brTop>ESIK,kB=false,ist=0;
+   if(KK>0){if(istYok){kB=true;}else if(KK>IST){kB=true;ist=IST;}}
+   // işyeri ve kâr payı (86/1-c)
+   var kpY=KP/2,c=IB+kpY,cB=c>SNR,sB=IS>SZ;
+   var ibB=cB&&IB>0,kpB=cB&&KP>0;
+   // GMSİ
+   var gBr=(kB?KK:0)+(ibB?IB:0)+(sB?IS:0),gNet0=gBr-ist,gid=0;
+   if(gBr>0){if(v.gy==='r')gid=Math.min(GG*(gNet0/gBr),gNet0);else gid=gNet0*0.15;}
+   var GMSI=Math.max(0,gNet0-gid);
+   var asgI=uB?Math.min(ASGM,U1>0?U1:U2):0,UCR=uB?Math.max(0,U1+U2-asgI):0,MSI=kpB?kpY:0;
+   var GEL=GMSI+UCR+MSI;
+   rows.push(['Konut kirası',KK>0?(kB?'Beyan edilir'+(ist?' (58.000 TL istisna düşülür)':istYok?(TK?' (istisna yok: ticari/mesleki beyan var)':' (istisna yok: brüt gelirler toplamı 1.500.000 TL’yi aşıyor)'):''):'Beyan edilmez (58.000 TL istisna altında)'):'—']);
+   if(IB>0||KP>0)rows.push(['Stopajlı işyeri kirası + kâr payının yarısı',tl(c)+(cB?' → 400.000 TL’yi aşıyor, beyan edilir':' → 400.000 TL’yi aşmıyor, beyan edilmez')]);
+   if(IS>0)rows.push(['Stopajsız işyeri kirası',sB?'Beyan edilir':'Beyan edilmez (22.000 TL altında)']);
+   if(U1+U2>0)rows.push(['Ücret',(uB?'Beyan edilir: ':'Beyan edilmez: ')+uNeden]);
+   if(!GEL){rows.push(['Sonuç','Beyanname vermeniz gerekmiyor',1]);
+    nt.push('Beyan sınırları 2026 gelirleri için: konut kirasında 58.000 TL istisna; stopajlı işyeri kirası ve kâr payının istisna dışı yarısı toplamı 400.000 TL; stopajsız kira ve faiz gibi gelirlerde 22.000 TL; birden fazla işverende ikinci işverenden alınan 400.000 TL, toplam ücret 5.300.000 TL (GVK 21, 22, 86). Beyan dışı kalan gelirlerde kesilen stopaj nihai vergidir.');
+    return{rows:rows,note:nt.join(' ')};}
+   if(GMSI>0||gBr>0){rows.push(['Kira geliri (brüt, beyan edilen)',tl(gBr)]);if(ist)rows.push(['Konut istisnası',tl(ist)]);rows.push([v.gy==='r'?'Gerçek gider (istisnaya isabet eden kısım hariç)':'Götürü gider (%15)',tl(gid)]);rows.push(['Safi kira geliri',tl(GMSI)]);}
+   if(uB){rows.push(['Ücret (gelir vergisi matrahı)',tl(U1+U2)]);rows.push(['Asgari ücret istisnası (yıllık matrah)',tl(asgI)]);}
+   if(MSI)rows.push(['Kâr payı (yarısı istisna)',tl(KP)+' → beyan edilen '+tl(MSI)]);
+   rows.push(['Toplam gelir',tl(GEL)]);
+   var esI=Math.min(ES,GEL*0.10),bgI=Math.min(BG,GEL*0.05),spI=Math.min(SP,GEL*0.15,ASG*12),IND=esI+bgI+spI;
+   if(IND>0){if(esI)rows.push(['Eğitim ve sağlık harcamaları'+(ES>esI?' (%10 sınırı)':''),tl(esI)]);if(bgI)rows.push(['Bağışlar'+(BG>bgI?' (%5 sınırı)':''),tl(bgI)]);if(spI)rows.push(['Şahıs sigorta primleri'+(SP>spI?' (sınır)':''),tl(spI)]);}
+   var M=Math.max(0,GEL-IND),ucretT=uB&&UCR>=GEL-0.005;
+   var D=ucretT?[[190000,.15],[400000,.20],[1500000,.27],[5300000,.35],[Infinity,.40]]:[[190000,.15],[400000,.20],[1000000,.27],[5300000,.35],[Infinity,.40]];
+   var V=0,alt=0;D.forEach(function(d){if(M>alt){V+=(Math.min(M,d[0])-alt)*d[1];}alt=d[0];});
+   rows.push(['Vergi matrahı',tl(M)]);
+   rows.push(['Hesaplanan gelir vergisi ('+(ucretT?'ücret tarifesi':'ücret dışı tarife')+')',tl(V)]);
+   var mU=uB?UV:0,mI=ibB?IB*0.20:0,mK=kpB?KP*0.15:0,MAH=mU+mI+mK;
+   if(mU)rows.push(['Mahsup: ücretten kesilen vergi',tl(mU)]);
+   if(mI)rows.push(['Mahsup: işyeri kirası stopajı (%20)',tl(mI)]);
+   if(mK)rows.push(['Mahsup: kâr payı stopajı (%15)',tl(mK)]);
+   var OD=V-MAH;
+   if(OD>=0){rows.push(['Ödenecek gelir vergisi',tl(OD),1]);rows.push(['Taksitler','Mart: '+tl(OD/2)+' · Temmuz: '+tl(OD/2)]);}
+   else rows.push(['İade edilecek / mahsup edilecek vergi',tl(-OD),1]);
+   nt.push('Beyanname 1–31 Mart 2027 arasında verilir; vergi Mart ve Temmuz’da iki eşit taksitle ödenir. Beyanname için ayrıca damga vergisi ödenir. Konut kira geliri istisnası 58.000 TL’dir; ticari, zirai ya da mesleki kazanç beyan edenler ve ücret, kira, kâr payı gibi gelirlerinin brüt toplamı 1.500.000 TL’yi aşanlar (konut kirası 58.000 TL’yi aşıyorsa) yararlanamaz. İstisnadan yararlanmak için kiranın zamanında ve eksiksiz beyan edilmesi gerekir.');
+   nt.push('Beyan zorunluluğu doğduğunda yalnızca sınırı aşan gelir beyan edilir; örneğin konut kirası beyan edilirken 400.000 TL’yi aşmayan stopajlı işyeri kirası beyana eklenmez. Kâr payının yarısı istisnadır, kesilen stopajın tamamı mahsup edilir (GVK 22/2). Hesaplanan vergiden mahsup edilemeyen stopaj iade talep edilebilir.');
+   if(uB)nt.push('Ücrette asgari ücret istisnası, en yüksek ücreti ödeyen işverenden alınan ücrete yıllık asgari ücret matrahı ('+tl(ASGM)+') kadar uygulanmıştır. Hazır Beyan sisteminde ücret bilgileri ve kesintiler otomatik gelir; kendi bordrolarınızla karşılaştırın.');
+   if(!ucretT&&uB)nt.push('Ücretle birlikte başka gelir de beyan edildiği için ücret dışı gelirler tarifesi uygulanmıştır.');
+   nt.push('GMSİ’de zarar, faiz ve kur farkı ile vergi uyumlu mükellef indirimi bu hesapta yoktur. Hesap bilgi amaçlıdır; GİB Hazır Beyan sistemindeki tutarlarla karşılaştırın.');
+   return{rows:rows,note:nt.join(' ')};}},
  {g:'Vergi',key:'emlak',title:'Emlak vergisi',abbr:'EV',lead:'Vergi değerine ve taşınmaz türüne göre yıllık emlak vergisini bulun.',
   fields:[F('a','Emlak vergisi değeri',{val:'2.000.000',sfx:'₺'}),F('t','Taşınmaz türü',{type:'select',opts:[['1','Konut (binde 1)'],['2','İşyeri ve diğer binalar (binde 2)'],['3','Arsa (binde 3)'],['1a','Arazi (binde 1)']],val:'1'}),F('b','Büyükşehir sınırında mı?',{type:'seg',opts:[['1','Evet'],['0','Hayır']],val:'1',hint:'Büyükşehir belediye sınırlarında oranlar iki kat uygulanır.'})],
   calc:function(v){var a=num(v.a);if(isNaN(a))return null;var r=parseFloat(v.t)/1000*(v.b==='1'?2:1),t=a*r;return{rows:[['Uygulanan oran','Binde '+NI.format(r*1000)],['Yıllık emlak vergisi',tl(t),1],['Taksit (mayıs ve kasım)',tl(t/2)]]};}},
@@ -6100,7 +6163,7 @@ window.ekYuzMsg=function(K){var Y=K.map(function(k){return num(k.yuz);}),any=Y.s
   ozluk:{t:'Özlük dosyası sihirbazı nasıl kullanılır?',s:[['steps','Adım adım ilerleyin','Dört adım var; her ekranda kutuları doldurup “Sonraki adım”a basın. Numaralı adımlara basarak da geçebilirsiniz.'],['kimlik','1–2. İşyeri ve çalışan','İşyeri ile çalışanın bilgilerini bir kez yazın; seçtiğiniz bütün formlara kendiliğinden gelir.'],['tur','3. Formları seçin','“İşe giriş paketi” düğmesi en sık gerekenleri seçer; görevlendirme, değişiklik bildirimi gibi formları ayrıca işaretleyin.'],['bitti','4. Form bilgileri ve sonuç','Her formun kendine özel kutularını doldurun. Sonuçta formlar tek dosyada indirilir, yazdırılır ya da paylaşılır; istediğinizi tek tek de alabilirsiniz.']]},
   arackdv:{t:'Araç KDV oranı nasıl bulunur?',s:[['arac','1. Aracı seçin','Binek, kamyonet, iş makinesi gibi aracın türünü seçin.'],['steps','2. Soruları yanıtlayın','İkinci el mi, satıcı galeri mi gibi sorular gelir.'],['bitti','3. Sonuç','KDV oranı, dayanağı, alıcının indirimi ve muhasebe kaydı açılır.']]}
  };
- var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611141348';
+ var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611141356';
  var MAP={ozluk:'ozluk',sirket:'sirket',amackonu:'esas',ortaklik:'ortaklik',gecbeyan:'gecbeyan',arackdv:'arackdv'};
  function open(key){var h=H[key];if(!h)return;var m=document.getElementById('hlp-modal');if(!m){m=document.createElement('div');m.id='hlp-modal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');document.body.appendChild(m);
      m.addEventListener('click',function(e){if(e.target===m||e.target.closest('[data-hx]')){m.hidden=true;document.documentElement.style.overflow='';}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){m.hidden=true;document.documentElement.style.overflow='';}});}
@@ -7548,7 +7611,7 @@ setTimeout(send,1500);var t=null;window.addEventListener('hashchange',function()
   if(o.tur==='g'){var lim=ky===2026?'400.000 TL':'ilgili yılın beyan sınırını';
    h+='<li>Stopaj şirketimiz tarafından kesilip vergi dairesine beyan edilerek ödenir; bu kâr payı için ayrıca bir işlem yapmanız gerekmez, beyan sınırı aşılmadıkça vergileme bu stopajla tamamlanır.</li>';
    h+='<li>Brüt kâr payının yarısı ('+tl(o.br/2)+') gelir vergisinden istisnadır (GVK 22/2). Kalan yarısı ('+tl(o.br/2)+'), aynı yıl elde ettiğiniz diğer stopajlı menkul sermaye iratlarıyla (örneğin başka şirketlerden aldığınız kâr payları) birlikte '+lim+(ky===2026?' (2026 gelirleri)':'')+' aşarsa izleyen yılın mart ayında yıllık gelir vergisi beyannamesiyle beyan edilir.</li>';
-   h+='<li>Beyan etmeniz gerekirse, kesilen stopajın tamamı ('+tl(o.st)+') beyannamede hesaplanan vergiden düşülür.</li>';
+   h+='<li>Beyan etmeniz gerekirse, kesilen stopajın tamamı ('+tl(o.st)+') beyannamede hesaplanan vergiden düşülür. Beyanname vermeniz gerekip gerekmediğini ve ödeyeceğiniz vergiyi erdalkarahan.com/#h-gvbeyan adresinden hesaplayabilirsiniz.</li>';
    if(ky===2026&&o.br/2>400000)h+='<li><b>Bu kâr payı tek başına beyan sınırını aşmaktadır; yıllık beyanname vermeniz gerekecektir.</b></li>';}
   else if(o.tur==='k')h+='<li>Tam mükellef bir şirket ortağa dağıtılan kâr payından stopaj yapılmaz (GVK 94/6-b).</li><li>Bu kâr payı şirketinizde iştirak kazancı istisnasından yararlanır (KVK 5/1-a); kurumlar vergisi beyannamesinde istisna olarak gösterilir.</li>';
   else h+='<li>Türkiye’de yerleşik olmayan ortaklara dağıtılan kâr payından %15 stopaj yapılmıştır (GVK 94/6-b).</li><li>Türkiye ile yerleşik olduğunuz ülke arasında çifte vergilendirmeyi önleme anlaşması varsa daha düşük oran uygulanabilir; bunun için mukimlik belgenizi şirketimize iletmeniz gerekir. Türkiye’de ayrıca beyanname vermeniz gerekmez.</li>';
