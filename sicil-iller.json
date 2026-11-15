@@ -1,7 +1,7 @@
 {
   "aciklama": "Şirket işlemleri sihirbazında il seçilince gösterilen ticaret sicili müdürlüğü uygulama notları. Her il için: oda (müdürlüğün bağlı olduğu oda), metin (o ile özgü kurallar, 1-4 cümle), kaynak (resmî oda/müdürlük sayfası), tarih (okunduğu gün). Sadece resmî kaynakta okunan bilgi yazılır.",
-  "guncelleme": "2026-11-14",
-  "sira": ["Diyarbakır","Şanlıurfa","Malatya","Kahramanmaraş","Erzurum","Van","Elazığ","Sivas","Tokat","Ordu","Zonguldak","Çorum","Afyonkarahisar","Kütahya","Uşak","Isparta","Burdur","Düzce","Bolu","Yalova","Bilecik","Çanakkale","Edirne","Kırklareli","Karabük","Bartın","Kastamonu","Sinop","Amasya","Giresun","Rize","Artvin","Gümüşhane","Bayburt","Erzincan","Tunceli","Bingöl","Muş","Bitlis","Siirt","Batman","Mardin","Şırnak","Hakkari","Ağrı","Iğdır","Kars","Ardahan","Adıyaman","Kilis","Osmaniye","Niğde","Aksaray","Nevşehir","Kırşehir","Kırıkkale","Karaman","Yozgat","Çankırı","İzmir","Kocaeli","Konya","Adana","Mersin","Tekirdağ","Sakarya","Samsun","Trabzon","Balıkesir"],
+  "guncelleme": "2026-11-15",
+  "sira": ["Elazığ","Sivas","Tokat","Ordu","Zonguldak","Çorum","Afyonkarahisar","Kütahya","Uşak","Isparta","Burdur","Düzce","Bolu","Yalova","Bilecik","Çanakkale","Edirne","Kırklareli","Karabük","Bartın","Kastamonu","Sinop","Amasya","Giresun","Rize","Artvin","Gümüşhane","Bayburt","Erzincan","Tunceli","Bingöl","Muş","Bitlis","Siirt","Batman","Mardin","Şırnak","Hakkari","Ağrı","Iğdır","Kars","Ardahan","Adıyaman","Kilis","Osmaniye","Niğde","Aksaray","Nevşehir","Kırşehir","Kırıkkale","Karaman","Yozgat","Çankırı","İzmir","Kocaeli","Konya","Adana","Mersin","Tekirdağ","Sakarya","Samsun","Trabzon","Balıkesir"],
   "iller": {
     "İstanbul": {
       "oda": "İstanbul Ticaret Odası (İTO)",
@@ -141,6 +141,42 @@
       "metin": "",
       "kaynak": "https://www.bato.org.tr/oda-islemleri/ticaret-sicil",
       "tarih": "2026-11-14"
+    },
+    "Diyarbakır": {
+      "oda": "Diyarbakır Ticaret ve Sanayi Odası (DTSO)",
+      "metin": "Diyarbakır Ticaret Sicili Müdürlüğü DTSO bünyesindedir; tüm tescil başvuruları MERSİS’ten, şirket müdürünün e-imzasıyla oluşturulur. Dilekçe odanın kendi dilekçe formuyla verilir; müdür, adres ve sermaye kararlarında noter onaylı tutanak/karar 2 asıl + 1 fotokopi istenir. Hisse devrinde yeni ortakların 2’şer fotoğrafı istenir; seçilen müdürün imza beyannamesi MERSİS talep numarasıyla müdürlükten alınır. Odanın sitesinde ayrıca “Ticaret Sicil Online Randevu” bağlantısı vardır.",
+      "kaynak": "https://dtso.org.tr/p/limited-sirket-tescil-islemleri",
+      "tarih": "2026-11-15"
+    },
+    "Şanlıurfa": {
+      "oda": "Şanlıurfa Ticaret ve Sanayi Odası (ŞUTSO)",
+      "metin": "Şanlıurfa’da 2 ayrı dilekçe verilir: biri Ticaret Sicili Müdürlüğüne, biri Ticaret ve Sanayi Odası Başkanlığına; ikisi de şirket kaşesiyle yetkilice imzalanır. Adres değişikliğinde karardaki adres MERSİS’teki adresle birebir aynı olmalıdır. Yeni kimlik kartı olanların imza örneği NVİ’den MERSİS’e elektronik geldiği için ayrıca fiziki imza beyanı istenmez; müdür için 2 kimlik fotokopisi verilir.",
+      "kaynak": "https://www.sutso.org.tr/birimler/sayfalar/mudur-atamasi-s37",
+      "tarih": "2026-11-15"
+    },
+    "Malatya": {
+      "oda": "Malatya Ticaret ve Sanayi Odası (MTSO)",
+      "metin": "Malatya Ticaret Sicili Müdürlüğü MTSO bünyesindedir; önce MERSİS’ten başvuru yapılır ve MERSİS talep numarası belgelerde ve müdürlükte istenir. Seçilen müdürün unvan altı imza beyannamesi bu talep numarasıyla en yakın sicil müdürlüğünden alınır. Odanın sayfasında dilekçe, görev kabul beyanı, hazır bulunanlar listesi, müdür atama kararı ve yabancı ortak beyanı örnekleri Word olarak indirilebilir.",
+      "kaynak": "https://www.malatyatso.org.tr/en/surec/limited-sirket-mudur-tayini",
+      "tarih": "2026-11-15"
+    },
+    "Kahramanmaraş": {
+      "oda": "Kahramanmaraş Ticaret ve Sanayi Odası (KMTSO)",
+      "metin": "Kahramanmaraş’ta müdür atamasında genel kurul kararı karar defterine yapıştırılıp onaylatılır; elektronik defter tutanlar EDTS’den karar ve defter onay sayfasının 2 barkodlu çıktısını verir. Tescil talepnamesi müdürlükçe 2 asıl hazırlanır; yetkililer nüfus cüzdanı aslıyla gelir. Ayrıca odaya özgü Bilgi Güncelleme Formu istenir; sicil harcı ve ilan bedeli ile oda aidatı/işlem ücreti oda veznesine yatırılıp makbuzları eklenir.",
+      "kaynak": "https://www.kmtso.org.tr/istenen-evraklar-limited-sti-mudur-atamasi-yetki-islemi",
+      "tarih": "2026-11-15"
+    },
+    "Erzurum": {
+      "oda": "Erzurum Ticaret ve Sanayi Odası (ETSO)",
+      "metin": "Erzurum’da MERSİS başvurusuna ek olarak 2 dilekçe verilir: Ticaret Sicili Müdürlüğüne ve Ticaret ve Sanayi Odası Başkanlığına. Dilekçe, müdürler kurulu kararı, hazır bulunanlar listesi, taahhütname ve belediye adres yazısı örnekleri odanın sayfasından indirilebilir. Adres yalnızca belediye numaratajı nedeniyle değiştiyse belediyeden alınan güncel adres yazısı yeterlidir.",
+      "kaynak": "https://www.etso.org.tr/en/limited-sirket",
+      "tarih": "2026-11-15"
+    },
+    "Van": {
+      "oda": "Van Ticaret ve Sanayi Odası (VANTSO)",
+      "metin": "Van’da tüm işlemler MERSİS’ten yapılır ve iki ayrı dilekçe formu kullanılır: Ticaret Sicili Müdürlüğü dilekçesi ve Oda Sicili Müdürlüğü dilekçesi (ikisi de odanın sitesinde). Numarataj kaynaklı adres değişikliğinde belediye yazısında eski adres yoksa işlem yapılmaz. Hisse devrinde yeni ortak için 1 fotoğraf istenir; ortak sayısı bire düşüyorsa bildirim ve tescil talebi 7 gün içinde yapılmalıdır.",
+      "kaynak": "https://www.vantso.org.tr/hizmetler/7123/tescil-ve-kayit-islemleri",
+      "tarih": "2026-11-15"
     }
   }
 }
