@@ -1,0 +1,91 @@
+{
+ "aciklama": "Günlük Resmî Gazete özeti. Yalnızca muhasebe, vergi, SGK, ticaret ve işletmeleri ilgilendiren başlıklar; metinler özet niteliğindedir, bağlayıcı olan Resmî Gazete metnidir.",
+ "guncelleme": "2026-11-15",
+ "gunler": [
+  {
+   "tarih": "2026-11-15",
+   "sayi": "33431",
+   "url": "https://www.resmigazete.gov.tr/15.11.2026",
+   "ozet": "Bugün vergi ve muhasebe açısından önemli bir düzenleme yok.",
+   "maddeler": [
+    {
+     "etiket": "ÇALIŞMA",
+     "baslik": "Ulusal meslek standartları tebliği (No: 2026/13)",
+     "metin": "Mesleki Yeterlilik Kurumu’nun yeni ve güncellenen ulusal meslek standartları yayımlandı. Mesleki yeterlilik belgesi zorunlu olan işlerde çalışan işyerleri kendi mesleklerinin listede olup olmadığına bakabilir.",
+     "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261115-6.htm"
+    }
+   ]
+  },
+  {
+   "tarih": "2026-11-14",
+   "sayi": "33430",
+   "url": "https://www.resmigazete.gov.tr/14.11.2026",
+   "ozet": "Vergi ve muhasebe açısından önemli bir düzenleme yok; sayıda ağırlıklı olarak kamulaştırma ve özelleştirme kararları var.",
+   "maddeler": []
+  },
+  {
+   "tarih": "2026-11-13",
+   "sayi": "33429",
+   "url": "https://www.resmigazete.gov.tr/13.11.2026",
+   "ozet": "Vergi ve muhasebe açısından önemli bir düzenleme yok.",
+   "maddeler": []
+  },
+  {
+   "tarih": "2026-11-12",
+   "sayi": "33428",
+   "url": "https://www.resmigazete.gov.tr/12.11.2026",
+   "ozet": "",
+   "maddeler": [
+    {
+     "etiket": "SİGORTA",
+     "baslik": "Bütünleşik sigortalar yönetmeliği yayımlandı",
+     "metin": "Bir malın ya da hizmetin satıldığı yerde (mağaza, internet sitesi, abonelik) o ürünle bağlantılı olarak sunulan sigortaların kuralları belirlendi. Ürünle birlikte sigorta satan ya da satışına aracılık eden işletmeleri ve e-ticaret sitelerini ilgilendiriyor.",
+     "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261112-2.htm"
+    },
+    {
+     "etiket": "SİGORTA",
+     "baslik": "Mesafeli sigorta sözleşmeleri yönetmeliğinde değişiklik",
+     "metin": "Sigortacılık kapsamında sayılan faaliyetler ile internet ve telefon gibi uzaktan kurulan sigorta sözleşmelerine ilişkin yönetmelikte değişiklik yapıldı.",
+     "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261112-3.htm"
+    }
+   ]
+  },
+  {
+   "tarih": "2026-11-11",
+   "sayi": "33427",
+   "url": "https://www.resmigazete.gov.tr/11.11.2026",
+   "ozet": "",
+   "maddeler": [
+    {
+     "etiket": "FİNANS",
+     "baslik": "İki ödeme ve elektronik para kuruluşunun faaliyet izni iptal edildi",
+     "metin": "A Ödeme ve Elektronik Para Hizmetleri A.Ş. ile Ozan Elektronik Para A.Ş.’nin faaliyet izinleri iptal edildi. Bu kuruluşlar üzerinden tahsilat yapan ya da bakiyesi bulunan işletmelerin hesaplarını kontrol etmesi yerinde olur.",
+     "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261111-5.pdf"
+    },
+    {
+     "etiket": "DIŞ TİCARET",
+     "baslik": "Diş implantı parçalarında dampinge karşı önlem tablosu değişti",
+     "metin": "İthalatta Haksız Rekabetin Önlenmesine İlişkin 2025/4 sayılı Tebliğ’de, Kore menşeli protez diş bağlantı parçalarına (GTİP 9021.29) uygulanan önlem tablosu firma bazında yeniden düzenlendi.",
+     "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261111-3.htm"
+    }
+   ]
+  },
+  {
+   "tarih": "2026-11-10",
+   "sayi": "33426",
+   "url": "https://www.resmigazete.gov.tr/10.11.2026",
+   "ozet": "",
+   "maddeler": [
+    {
+     "etiket": "VERGİ",
+     "onemli": true,
+     "baslik": "Vergi borçluları Aralık’ta açıklanacak (VUK Genel Tebliği 597)",
+     "metin": "Bir vergi dairesine 5.000.000 TL ve üzeri vergi borcu ya da kesinleşmiş vergi ve cezası olan mükellefler 1–15 Aralık 2026’da vergi dairelerinde, 16–30 Aralık’ta GİB’in internet sitesinde açıklanacak. Listeye, vadesi 31.12.2025’e kadar gelmiş olup 20 Kasım 2026 itibarıyla ödenmemiş borçlar ile 1.6.2025–31.5.2026 arasında kesinleşen tarhiyatlar giriyor.",
+     "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261110-6.htm",
+     "site": "#h-tecil",
+     "siteAd": "Vergi Borcu Taksitlendirme Hesaplama"
+    }
+   ]
+  }
+ ]
+}
