@@ -2417,6 +2417,7 @@ section[data-view] a{overflow-wrap:anywhere}
   <section class="block" id="dvbeyan" data-view="dvbeyan">
     <div class="wrap">
       <div class="sec-head"><div><span class="eyebrow">Beyanname ve SGK · Doldur ve yazdır</span><h2>Damga vergisi beyannamesi doldurma ve çıktı.</h2></div><p>GİB beyanname düzeninde doldurun; kâğıt türünü seçince 2026 oranı ya da maktu tutarı kendiliğinden hesaplanır. İsterseniz boş form yazdırın.</p></div>
+      <div class="bsl" aria-hidden="true">▶ BAŞLA <span>— aşağıdaki formu doldurun</span> <i>↓</i></div>
       <div id="dvb-app"></div>
     </div>
   </section>
@@ -2425,6 +2426,7 @@ section[data-view] a{overflow-wrap:anywhere}
   <section class="block tint" id="kirasozlesme" data-view="kirasozlesme">
     <div class="wrap">
       <div class="sec-head"><div><span class="eyebrow">Dilekçe ve formlar · Doldur ve yazdır</span><h2>Kira sözleşmesi doldurma ve çıktı.</h2></div><p>Konut ya da işyeri kira sözleşmesini doldurun; demirbaş, kefil ve özel madde ekleyin, yazdırın ya da boş sözleşme çıktısı alın. Damga vergisi kendiliğinden hesaplanır.</p></div>
+      <div class="bsl" aria-hidden="true">▶ BAŞLA <span>— aşağıdaki formu doldurun</span> <i>↓</i></div>
       <div id="kira-app"></div>
     </div>
   </section>
@@ -3109,9 +3111,10 @@ var TOOLS=[
    if(mI)rows.push(['Mahsup: işyeri kirası stopajı (%20)',tl(mI)]);
    if(mK)rows.push(['Mahsup: kâr payı stopajı (%15)',tl(mK)]);
    var OD=V-MAH;
-   if(OD>=0){rows.push(['Ödenecek gelir vergisi',tl(OD),1]);rows.push(['Taksitler','Mart: '+tl(OD/2)+' · Temmuz: '+tl(OD/2)]);}
-   else rows.push(['İade edilecek / mahsup edilecek vergi',tl(-OD),1]);
-   nt.push('Beyanname 1–31 Mart 2027 arasında verilir; vergi Mart ve Temmuz’da iki eşit taksitle ödenir. Beyanname için ayrıca damga vergisi ödenir. Konut kira geliri istisnası 58.000 TL’dir; ticari, zirai ya da mesleki kazanç beyan edenler ve ücret, kira, kâr payı değer artışı gibi gelirlerinin (beyan edilsin edilmesin) brüt toplamı 1.500.000 TL’yi aşanlar (konut kirası 58.000 TL’yi aşıyorsa) yararlanamaz. İstisnadan yararlanmak için kiranın zamanında ve eksiksiz beyan edilmesi gerekir.');
+   var DV=1189.50;
+   if(OD>=0){rows.push(['Ödenecek gelir vergisi',tl(OD),1]);rows.push(['Beyanname damga vergisi (ilk taksitle ödenir)',tl(DV)]);rows.push(['Mart 2027’de ödenecek (1. taksit + damga vergisi)',tl(OD/2+DV),1]);rows.push(['Temmuz 2027’de ödenecek (2. taksit)',tl(OD/2)]);}
+   else{rows.push(['İade edilecek / mahsup edilecek vergi',tl(-OD),1]);rows.push(['Beyanname damga vergisi (Mart 2027’de ödenir)',tl(DV)]);}
+   nt.push('Beyanname 1–31 Mart 2027 arasında verilir; vergi Mart ve Temmuz’da iki eşit taksitle ödenir. Beyanname damga vergisi ilk taksitle birlikte Mart sonuna kadar ödenir; hesapta 2026 tutarı (1.189,50 TL) kullanıldı, Mart 2027’de verilecek beyannamede 2027 için açıklanacak tutar geçerli olur. Konut kira geliri istisnası 58.000 TL’dir; ticari, zirai ya da mesleki kazanç beyan edenler ve ücret, kira, kâr payı değer artışı gibi gelirlerinin (beyan edilsin edilmesin) brüt toplamı 1.500.000 TL’yi aşanlar (konut kirası 58.000 TL’yi aşıyorsa) yararlanamaz. İstisnadan yararlanmak için kiranın zamanında ve eksiksiz beyan edilmesi gerekir.');
    nt.push('Beyan zorunluluğu doğduğunda yalnızca sınırı aşan gelir beyan edilir; örneğin konut kirası beyan edilirken 400.000 TL’yi aşmayan stopajlı işyeri kirası beyana eklenmez. Kâr payının yarısı istisnadır, kesilen stopajın tamamı mahsup edilir (GVK 22/2). Hesaplanan vergiden mahsup edilemeyen stopaj iade talep edilebilir.');
    if(uB)nt.push('Ücretin tamamı beyan edilir. Asgari ücret istisnası yıl içinde bordroda uygulandığı için beyannamede yeniden uygulanmaz; istisna edilen vergi ('+tl(aV)+', yılın tamamında çalışıldığı varsayımıyla) kesilen vergiyle birlikte mahsup edilir. Yılın bir kısmında çalıştıysanız bu tutar daha düşük olur. Hazır Beyan sisteminde ücret bilgileri ve kesintiler otomatik gelir; kendi bordrolarınızla karşılaştırın.');
    if(fark>0)nt.push('Ücretle birlikte başka gelir de beyan edildiğinde vergi ücret dışı tarifeyle hesaplanır; ücrete isabet eden matrah için iki tarife arasındaki fark düşülür (GVK 103, 75 No’lu GV Sirküleri).');
@@ -6225,7 +6228,7 @@ window.ekYuzMsg=function(K){var Y=K.map(function(k){return num(k.yuz);}),any=Y.s
   ozluk:{t:'Özlük dosyası sihirbazı nasıl kullanılır?',s:[['steps','Adım adım ilerleyin','Dört adım var; her ekranda kutuları doldurup “Sonraki adım”a basın. Numaralı adımlara basarak da geçebilirsiniz.'],['kimlik','1–2. İşyeri ve çalışan','İşyeri ile çalışanın bilgilerini bir kez yazın; seçtiğiniz bütün formlara kendiliğinden gelir.'],['tur','3. Formları seçin','“İşe giriş paketi” düğmesi en sık gerekenleri seçer; görevlendirme, değişiklik bildirimi gibi formları ayrıca işaretleyin.'],['bitti','4. Form bilgileri ve sonuç','Her formun kendine özel kutularını doldurun. Sonuçta formlar tek dosyada indirilir, yazdırılır ya da paylaşılır; istediğinizi tek tek de alabilirsiniz.']]},
   arackdv:{t:'Araç KDV oranı nasıl bulunur?',s:[['arac','1. Aracı seçin','Binek, kamyonet, iş makinesi gibi aracın türünü seçin.'],['steps','2. Soruları yanıtlayın','İkinci el mi, satıcı galeri mi gibi sorular gelir.'],['bitti','3. Sonuç','KDV oranı, dayanağı, alıcının indirimi ve muhasebe kaydı açılır.']]}
  };
- var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611150221';
+ var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611151017';
  var MAP={ozluk:'ozluk',sirket:'sirket',amackonu:'esas',ortaklik:'ortaklik',gecbeyan:'gecbeyan',arackdv:'arackdv'};
  function open(key){var h=H[key];if(!h)return;var m=document.getElementById('hlp-modal');if(!m){m=document.createElement('div');m.id='hlp-modal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');document.body.appendChild(m);
      m.addEventListener('click',function(e){if(e.target===m||e.target.closest('[data-hx]')){m.hidden=true;document.documentElement.style.overflow='';}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){m.hidden=true;document.documentElement.style.overflow='';}});}
@@ -7698,10 +7701,45 @@ setTimeout(send,1500);var t=null;window.addEventListener('hashchange',function()
    na:[['Parsel Ve Bağımsız Bölüm Sorgula (TKGM)','https://parselsorgu.tkgm.gov.tr/']],av:[['Arsa Birim Değeri Sorgula (e-Devlet, Belediyenizi Seçin)',ED+'arsa+rayi%C3%A7']]},
   kardagitim:{serm:[['Şirket Sermayesi Ve Ortaklar (MERSİS)','https://mersis.ticaret.gov.tr/'],['Ticaret Sicili Gazetesi','https://www.ticaretsicil.gov.tr/']]},
   mustahsil:{},kvoran:{}};
- var st=document.createElement('style');st.textContent='.flinks{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}.flinks a{font-size:12.5px;line-height:1.3;padding:5px 10px;border-radius:999px;border:1px solid var(--rule);text-decoration:none;color:inherit;background:rgba(91,63,168,.07)}.flinks a:hover{border-color:#5B3FA8}.flinks a:after{content:" ↗";opacity:.6}';document.head.appendChild(st);
- function add(){var k=(location.hash||'').replace(/^#h-/,'');var m=M[k];if(!m)return;Object.keys(m).forEach(function(fid){[].slice.call(document.querySelectorAll('[data-f="'+fid+'"],[data-rows="'+fid+'"],[data-seg="'+fid+'"]')).forEach(function(el){if(!el.offsetParent)return;var f=el.closest('.f');if(!f||f.querySelector('.flinks'))return;var p=document.createElement('p');p.className='flinks';m[fid].forEach(function(x){var a=document.createElement('a');a.href=x[1];a.target='_blank';a.rel='noopener';a.textContent=x[0];p.appendChild(a);});f.appendChild(p);});});}
+ var st=document.createElement('style');st.textContent='.flinks{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}.flinks a{font-size:12.5px;line-height:1.3;padding:5px 10px;border-radius:999px;border:1px solid var(--rule);text-decoration:none;color:inherit;background:rgba(91,63,168,.07)}.flinks a:hover{border-color:#5B3FA8}.flinks a:after{content:" ↗";opacity:.6}.result .flinks.rl{margin:14px 0 4px}.result .flinks.rl a{background:#7C5CE0;border-color:#7C5CE0;color:#fff;font-weight:700;font-size:13.5px;padding:8px 14px}';document.head.appendChild(st);
+ var DVD='https://dijital.gib.gov.tr/',RL={gvbeyan:[['Vergiyi Öde (GİB Dijital Vergi Dairesi)',DVD],['Beyannameyi Ver (GİB Hazır Beyan)',HB]],kardagitim:[['Stopajı Öde (GİB Dijital Vergi Dairesi)',DVD]],mustahsil:[['Stopajı Öde (GİB Dijital Vergi Dairesi)',DVD]],kvoran:[['Vergiyi Öde (GİB Dijital Vergi Dairesi)',DVD]],damga:[['Damga Vergisini Öde (GİB Dijital Vergi Dairesi)',DVD]],gecikme:[['Borcu Sorgula Ve Öde (GİB Dijital Vergi Dairesi)',DVD]],sgkgecikme:[['SGK Borcu Sorgula (e-Devlet)',ED+'sgk+bor%C3%A7']],emlak:[['Emlak Vergisi Borcu Sorgula Ve Öde (e-Devlet)',ED+'emlak+vergisi']]};
+ function addR(k){var L=RL[k];if(!L)return;[].slice.call(document.querySelectorAll('.tool>.result')).forEach(function(res){if(!res.offsetParent||res.querySelector('.flinks')||!res.querySelector(':scope>.row'))return;var p=document.createElement('p');p.className='flinks rl';L.forEach(function(x){var a=document.createElement('a');a.href=x[1];a.target='_blank';a.rel='noopener';a.textContent=x[0];p.appendChild(a);});var ac=res.querySelector(':scope>.acts')||res.querySelector(':scope>.prof-bar');if(ac)res.insertBefore(p,res.querySelector(':scope>.prof-bar')||ac);else res.appendChild(p);});}
+ function add(){var k=(location.hash||'').replace(/^#h-/,'');addR(k);var m=M[k];if(!m)return;Object.keys(m).forEach(function(fid){[].slice.call(document.querySelectorAll('[data-f="'+fid+'"],[data-rows="'+fid+'"],[data-seg="'+fid+'"]')).forEach(function(el){if(!el.offsetParent)return;var f=el.closest('.f');if(!f||f.querySelector('.flinks'))return;var p=document.createElement('p');p.className='flinks';m[fid].forEach(function(x){var a=document.createElement('a');a.href=x[1];a.target='_blank';a.rel='noopener';a.textContent=x[0];p.appendChild(a);});f.appendChild(p);});});}
  var t=0;new MutationObserver(function(){clearTimeout(t);t=setTimeout(add,150);}).observe(document.body,{childList:true,subtree:true});window.addEventListener('hashchange',function(){setTimeout(add,400);});setTimeout(add,900);
 })();
+/* Hesaplamalar: sonuç hep görünür (masaüstünde yapışkan, telefonda özet şeridi) + altta Hesapla düğmesi ve sonuç kutusu */
+(function(){
+ var st=document.createElement('style');st.textContent='@media(min-width:900px){.tool>.result{position:sticky;top:146px;align-self:start;max-height:calc(100vh - 250px);overflow-y:auto;overscroll-behavior:contain}}'
+ +'.hsp{margin-top:22px;padding-top:18px;border-top:2px solid var(--rule)}.hsp-btn{width:100%;padding:15px 18px;border:0;border-radius:14px;background:linear-gradient(135deg,#7C5CE0,#5B3FA8);color:#fff;font:inherit;font-weight:800;font-size:17px;cursor:pointer;box-shadow:0 6px 18px rgba(91,63,168,.28)}.hsp-btn:active{transform:translateY(1px)}'
+ +'.hsp-ok{margin:10px 0 0;font-size:13.5px;font-weight:600;min-height:20px}.hsp-ok.ok{color:#15803d}.hsp-ok.eski{color:#b45309}'
+ +'.hsp-box{margin-top:12px;border:1px solid var(--rule);border-radius:14px;padding:6px 14px;background:rgba(91,63,168,.05)}.hsp-box.eski{opacity:.55}.hsp-box .hr{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed var(--rule);font-size:14.5px}.hsp-box .hr:last-child{border-bottom:0}.hsp-box .hr span:last-child{font-weight:700;text-align:right}.hsp-box .hr.big span:last-child{font-size:17px;color:#5B3FA8}'
+ +'@keyframes hspfl{0%{box-shadow:0 0 0 0 rgba(124,92,224,.9)}100%{box-shadow:0 0 0 18px rgba(124,92,224,0)}}.result.hsp-fl{animation:hspfl .9s ease-out 1}'
+ +'.hsp-chip{position:fixed;left:84px;right:84px;bottom:92px;z-index:60;display:none;align-items:center;justify-content:space-between;gap:8px;padding:9px 14px;border-radius:14px;background:#141a33;color:#fff;font-size:13px;line-height:1.25;box-shadow:0 8px 24px rgba(0,0,0,.35);cursor:pointer;border:1px solid rgba(255,255,255,.15)}.hsp-chip b{font-size:14.5px;white-space:nowrap}.hsp-chip span{opacity:.8;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}@media(max-width:899px){.hsp-chip.on{display:flex}}';
+ document.head.appendChild(st);
+ var chip=document.createElement('div');chip.className='hsp-chip';chip.setAttribute('role','button');chip.setAttribute('aria-label','Hesaplama Sonucuna Git');document.body.appendChild(chip);
+ var cur=null,io=null,resVis=false;
+ function rowsOf(res){return [].slice.call(res.querySelectorAll(':scope>.row')).map(function(r){var c=r.cloneNode(true);[].slice.call(c.querySelectorAll('button')).forEach(function(b){b.remove();});var ch=[].slice.call(c.children).map(function(x){return x.textContent.trim();}).filter(Boolean);if(ch.length<2){var t=c.textContent.trim();ch=[t,''];}return{l:ch[0],v:ch.slice(1).join(' '),big:/\bbig\b/.test(r.className)};});}
+ function upChip(){if(!cur||!cur.offsetParent){chip.classList.remove('on');return;}var R=rowsOf(cur),b=R.filter(function(x){return x.big;}).pop()||R[R.length-1];if(!b||resVis){chip.classList.remove('on');return;}chip.innerHTML='';var s=document.createElement('span');s.textContent=b.l;var v=document.createElement('b');v.textContent=b.v.length>26?'Sonuca Git ↓':b.v;chip.appendChild(s);chip.appendChild(v);chip.classList.add('on');}
+ chip.onclick=function(){if(cur)cur.scrollIntoView({behavior:'smooth',block:'start'});};
+ function setup(){var tool=[].slice.call(document.querySelectorAll('.tool')).filter(function(t){return t.offsetParent;})[0];if(!tool){cur=null;chip.classList.remove('on');return;}
+  var F=tool.querySelector(':scope>.fields'),res=tool.querySelector(':scope>.result');if(!F||!res)return;
+  if(cur!==res){cur=res;if(io)io.disconnect();io=new IntersectionObserver(function(e){resVis=e[0].isIntersecting&&e[0].intersectionRatio>0.12;upChip();},{threshold:[0,0.12,0.5]});io.observe(res);new MutationObserver(function(){upChip();}).observe(res,{childList:true,subtree:true,characterData:true});}
+  if(F.querySelector('.hsp'))return;
+  var w=document.createElement('div');w.className='hsp';w.innerHTML='<button type="button" class="hsp-btn">Hesapla</button><p class="hsp-ok" aria-live="polite"></p><div class="hsp-box" hidden></div>';F.appendChild(w);
+  var btn=w.querySelector('.hsp-btn'),ok=w.querySelector('.hsp-ok'),box=w.querySelector('.hsp-box'),done=false;
+  btn.onclick=function(){var el=F.querySelector('input,select');if(el)el.dispatchEvent(new Event('input',{bubbles:true}));
+   setTimeout(function(){var R=rowsOf(res);box.innerHTML='';R.forEach(function(x){var d=document.createElement('div');d.className='hr'+(x.big?' big':'');var a=document.createElement('span');a.textContent=x.l;var b=document.createElement('span');b.textContent=x.v;d.appendChild(a);d.appendChild(b);box.appendChild(d);});
+    box.hidden=!R.length;box.classList.remove('eski');var t=new Date();ok.className='hsp-ok ok';ok.textContent=R.length?'✓ Hesaplandı · '+('0'+t.getHours()).slice(-2)+':'+('0'+t.getMinutes()).slice(-2):'Hesaplanacak bilgi eksik; tutarları kontrol edin.';if(!R.length)ok.className='hsp-ok eski';done=!!R.length;
+    res.classList.remove('hsp-fl');void res.offsetWidth;res.classList.add('hsp-fl');
+    if(window.innerWidth<900)res.scrollIntoView({behavior:'smooth',block:'start'});},120);};
+  var mark=function(e){if(!done||(e.target&&e.target.closest&&e.target.closest('.hsp')))return;done=false;box.classList.add('eski');ok.className='hsp-ok eski';ok.textContent='Bilgileri değiştirdiniz · Yeniden “Hesapla”ya basın';};
+  F.addEventListener('input',function(e){if(e.isTrusted)mark(e);},true);F.addEventListener('change',function(e){if(e.isTrusted)mark(e);},true);F.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('.seg button,.radd'))mark(e);},true);}
+ var t=0;new MutationObserver(function(){clearTimeout(t);t=setTimeout(setup,200);}).observe(document.body,{childList:true,subtree:true});window.addEventListener('hashchange',function(){setTimeout(setup,400);});setTimeout(setup,900);
+})();
+/* Sihirbaz olarak listelenen hesaplamalarda da en başta BAŞLA şeridi */
+(function(){var W={kvoran:1,kardagitim:1,gvbeyan:1,gmkdv:1};
+ function add(){var k=(location.hash||'').replace(/^#h-/,'');if(!W[k])return;var tool=[].slice.call(document.querySelectorAll('.tool')).filter(function(t){return t.offsetParent;})[0];if(!tool||!tool.parentNode||tool.parentNode.querySelector(':scope>.bsl'))return;var d=document.createElement('div');d.className='bsl';d.style.alignSelf='flex-start';d.setAttribute('aria-hidden','true');d.innerHTML='▶ BAŞLA <span>— bilgileri girin, sonuç yanda hesaplanır</span> <i>↓</i>';tool.parentNode.insertBefore(d,tool);}
+ var t=0;new MutationObserver(function(){clearTimeout(t);t=setTimeout(add,220);}).observe(document.body,{childList:true,subtree:true});window.addEventListener('hashchange',function(){setTimeout(add,450);});setTimeout(add,950);})();
 </script>
 
 </html>
