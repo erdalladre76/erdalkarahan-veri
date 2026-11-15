@@ -6228,7 +6228,7 @@ window.ekYuzMsg=function(K){var Y=K.map(function(k){return num(k.yuz);}),any=Y.s
   ozluk:{t:'Özlük dosyası sihirbazı nasıl kullanılır?',s:[['steps','Adım adım ilerleyin','Dört adım var; her ekranda kutuları doldurup “Sonraki adım”a basın. Numaralı adımlara basarak da geçebilirsiniz.'],['kimlik','1–2. İşyeri ve çalışan','İşyeri ile çalışanın bilgilerini bir kez yazın; seçtiğiniz bütün formlara kendiliğinden gelir.'],['tur','3. Formları seçin','“İşe giriş paketi” düğmesi en sık gerekenleri seçer; görevlendirme, değişiklik bildirimi gibi formları ayrıca işaretleyin.'],['bitti','4. Form bilgileri ve sonuç','Her formun kendine özel kutularını doldurun. Sonuçta formlar tek dosyada indirilir, yazdırılır ya da paylaşılır; istediğinizi tek tek de alabilirsiniz.']]},
   arackdv:{t:'Araç KDV oranı nasıl bulunur?',s:[['arac','1. Aracı seçin','Binek, kamyonet, iş makinesi gibi aracın türünü seçin.'],['steps','2. Soruları yanıtlayın','İkinci el mi, satıcı galeri mi gibi sorular gelir.'],['bitti','3. Sonuç','KDV oranı, dayanağı, alıcının indirimi ve muhasebe kaydı açılır.']]}
  };
- var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611151027';
+ var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611151039';
  var MAP={ozluk:'ozluk',sirket:'sirket',amackonu:'esas',ortaklik:'ortaklik',gecbeyan:'gecbeyan',arackdv:'arackdv'};
  function open(key){var h=H[key];if(!h)return;var m=document.getElementById('hlp-modal');if(!m){m=document.createElement('div');m.id='hlp-modal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');document.body.appendChild(m);
      m.addEventListener('click',function(e){if(e.target===m||e.target.closest('[data-hx]')){m.hidden=true;document.documentElement.style.overflow='';}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){m.hidden=true;document.documentElement.style.overflow='';}});}
@@ -7750,6 +7750,27 @@ setTimeout(send,1500);var t=null;window.addEventListener('hashchange',function()
 (function(){var W={kvoran:1,kardagitim:1,gvbeyan:1,gmkdv:1};
  function add(){var k=(location.hash||'').replace(/^#h-/,'');if(!W[k])return;var tool=[].slice.call(document.querySelectorAll('.tool')).filter(function(t){return t.offsetParent;})[0];if(!tool||!tool.parentNode||tool.parentNode.querySelector(':scope>.bsl'))return;var d=document.createElement('div');d.className='bsl';d.style.alignSelf='flex-start';d.setAttribute('aria-hidden','true');d.innerHTML='▶ BAŞLA <span>— bilgileri girin, sonuç yanda hesaplanır</span> <i>↓</i>';tool.parentNode.insertBefore(d,tool);}
  var t=0;new MutationObserver(function(){clearTimeout(t);t=setTimeout(add,220);}).observe(document.body,{childList:true,subtree:true});window.addEventListener('hashchange',function(){setTimeout(add,450);});setTimeout(add,950);})();
+/* BAŞLA şeridi tıklanabilir: ilk soruya / ilk kutuya götürür */
+(function(){var st=document.createElement('style');st.textContent='.bsl{cursor:pointer;user-select:none}.bsl:active{transform:translateY(1px)}@keyframes bslfl{0%{box-shadow:0 0 0 0 rgba(245,165,36,.95)}100%{box-shadow:0 0 0 16px rgba(245,165,36,0)}}.bsl-hit{animation:bslfl .9s ease-out 2;border-radius:12px}';document.head.appendChild(st);
+ var SEL='input:not([type=hidden]):not([type=file]),select,textarea,button,[role=button]';
+ var PRI='input:not([type=hidden]):not([type=file]):not([type=search]),select,textarea,.dz-opt,.dzs-opt,.seg button';
+ function vis(e){return e&&e.offsetParent&&!e.disabled&&!e.closest('.bsl')&&!(e.matches('.hlp-btn,[class*=reset],[class*=sifir]'))&&!/^\s*(\?|↺|⟲)?\s*(Yardım|Sıfırla|Temizle|Baştan|Yeniden Başla|Kapat|💾|📂|Bilgisayarıma|Kayıtlı Taslağı|Paylaş|\d+(\s|$))/i.test(e.innerText||'');}
+ document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('.bsl');if(!b)return;ev.preventDefault();
+  var base=b,t=null,lv=0;
+  while(!t&&base&&lv<4){var n=base.nextElementSibling;
+   while(n&&!t){if(n.offsetParent){if(n.matches&&n.matches('a.gb-cta')){n.click();return;}t=n.matches(SEL)&&vis(n)?n:([].slice.call(n.querySelectorAll(PRI)).filter(vis)[0]||[].slice.call(n.querySelectorAll(SEL)).filter(vis)[0]);}n=n.nextElementSibling;}
+   base=base.parentElement;lv++;if(base&&base.matches('section,.wrap,body'))break;}
+  if(!t)return;var box=t.closest('.f,.q,.ak-q,.rrow,.es-q,fieldset')||t;box.scrollIntoView({behavior:'smooth',block:'center'});
+  setTimeout(function(){try{t.focus({preventScroll:true});}catch(e){}box.classList.remove('bsl-hit');void box.offsetWidth;box.classList.add('bsl-hit');setTimeout(function(){box.classList.remove('bsl-hit');},2000);},350);});
+ function mark(){[].slice.call(document.querySelectorAll('.bsl:not([role])')).forEach(function(b){b.setAttribute('role','button');b.removeAttribute('aria-hidden');b.tabIndex=0;});}
+ document.addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('bsl')){e.preventDefault();e.target.click();}});
+ var t=0;new MutationObserver(function(){clearTimeout(t);t=setTimeout(mark,300);}).observe(document.body,{childList:true,subtree:true});setTimeout(mark,1000);})();
+/* Form önizlemeleri (damga vergisi beyannamesi, kira sözleşmesi vb.) her zaman panele sığsın */
+(function(){if(!window.ResizeObserver)return;
+ function fit(p){var d=p.querySelector(':scope>.fb-doc')||p.querySelector(':scope>#oz-pv');if(!d)return;var w=p.clientWidth;if(!w)return;var z=Math.min(1,(w-2)/780);if(d.style.width!=='780px')d.style.width='780px';if(Math.abs((+d.style.zoom||0)-z)>0.004)d.style.zoom=String(z);}
+ var ro=new ResizeObserver(function(es){es.forEach(function(e){fit(e.target);});});
+ function scan(){[].slice.call(document.querySelectorAll('.fb-prev')).forEach(function(p){if(!p.__fit){p.__fit=1;ro.observe(p);}fit(p);});var o=document.getElementById('oz-pv');if(o&&o.parentNode&&!o.parentNode.__fit){o.parentNode.__fit=1;ro.observe(o.parentNode);}}
+ var t=0;new MutationObserver(function(){clearTimeout(t);t=setTimeout(scan,250);}).observe(document.body,{childList:true,subtree:true});window.addEventListener('hashchange',function(){setTimeout(scan,300);setTimeout(scan,1200);});setTimeout(scan,1000);})();
 </script>
 
 </html>
