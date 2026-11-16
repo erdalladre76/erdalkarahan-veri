@@ -3179,6 +3179,51 @@ var TOOLS=[
    var L=[['120','Alıcılar',B+TK,0],['600','Yurtiçi Satışlar',0,B],['391','Hesaplanan KDV',0,TK]];
    nt.push('Oranlar 10 Temmuz 2023’ten beri %1, %10 ve %20’dir (7346 sayılı Karar). Hesap, KDV’ye tabi ve özel istisnası olmayan işlemler için genel bilgidir; somut işlemde ruhsat, proje ve sözleşme birlikte incelenmelidir.');
    return{rows:rows,yev:[{t:'Satıcının kaydı (fatura tarihinde)',d:'Teslim ya da hakediş faturası.',l:L}],yevNot:'Alıcı işletme ise: konut ya da işyeri 252 Binalar, arsa 250 Arazi ve Arsalar hesabına; KDV indirilebiliyorsa 191 İndirilecek KDV hesabına yazılır. İnşaat taahhüdünde müteahhit geliri hakediş faturasıyla kaydeder.',note:nt.join(' ')};}},
+ {g:'Vergi',key:'defterhad',title:'Defter sınıfı sihirbazı: bilanço mu, işletme mi?',abbr:'DS',lead:'Yıllık alış, satış ve hizmet hasılatınızı girin; gelecek yıl işletme defterine geçip geçemeyeceğinizi ya da bilançoya geçmek zorunda olup olmadığınızı (VUK 177, 179, 180) yıl yıl görün.',
+  fields:[F('k','Mükellef',{type:'select',val:'g',opts:[['g','Gerçek kişi (şahıs işletmesi) ya da adi ortaklık'],['s','Kollektif, komandit, limited, anonim şirket, kooperatif ve diğer kurumlar']],hint:'Şirketler, kooperatifler ve kurumlar vergisi mükellefleri iş hacmi ne olursa olsun bilanço esasına göre defter tutar (VUK 177). Hadler yalnızca şahıs işletmeleri ve adi ortaklıklar için önemlidir.'}),
+   F('d','Şu an tuttuğunuz defter',{type:'seg',val:'b',opts:[['b','Bilanço (1. sınıf)'],['i','İşletme (2. sınıf)']]}),
+   F('f','Faaliyet',{type:'select',val:'m',opts:[['m','Mal alım-satımı ya da imalat'],['h','Yalnız hizmet (tamir, taşımacılık, lokanta vb.)'],['k','Karma: mal satışı + hizmet birlikte']],hint:'Serbest meslek kazancı (avukat, doktor, mali müşavir) bu kapsamda değildir; serbest meslek kazanç defteri tutulur.'}),
+   F('y','Değerlendirilecek son yıl',{type:'select',val:'2026',opts:[['2026','2026 iş hacmi → 2027’de hangi defter?'],['2025','2025 iş hacmi → 2026’da hangi defter?'],['2024','2024 iş hacmi → 2025’te hangi defter?']],hint:'Bir yılın iş hacmi, izleyen yılın hadleriyle karşılaştırılır (ör. 2026 rakamları 2027 hadleriyle).'}),
+   F('r','2027 hadleri için 2026 yeniden değerleme oranı (açıklandıysa)',{val:'',sfx:'%',ph:'Örn. 25,49',hint:'2027 hadleri, 2026 hadlerinin yeniden değerleme oranıyla artırılmasıyla Aralık sonunda tebliğle ilan edilir. Boş bırakırsanız 2026 hadleri kullanılır; bu, işletmeye geçiş için temkinli, bilançoya geçiş için kesin olmayan bir sonuç verir.'}),
+   F('a0','Son yıl: yıllık mal alışı (KDV hariç)',{val:'1.300.000',sfx:'₺',hint:'Satılmak için alınan mallar ile imalatta ilk madde ve malzeme alışları. Demirbaş, taşıt, makine ve genel giderler dahil edilmez. Yıl bitmediyse yıl sonu tahminini yazın.'}),
+   F('s0','Son yıl: yıllık satış (KDV hariç)',{val:'900.000',sfx:'₺'}),
+   F('h0','Son yıl: yıllık hizmet hasılatı (KDV hariç)',{val:'',sfx:'₺',hint:'Hizmet ve karma faaliyette kullanılır.'}),
+   F('a1','Önceki yıl: alış',{val:'',sfx:'₺',hint:'Önceki yıllar yalnızca “arka arkaya iki/üç yıl” kuralı için gerekir; bilmiyorsanız boş bırakın.'}),
+   F('s1','Önceki yıl: satış',{val:'',sfx:'₺'}),
+   F('h1','Önceki yıl: hizmet hasılatı',{val:'',sfx:'₺'}),
+   F('a2','İki önceki yıl: alış',{val:'',sfx:'₺'}),
+   F('s2','İki önceki yıl: satış',{val:'',sfx:'₺'}),
+   F('h2','İki önceki yıl: hizmet hasılatı',{val:'',sfx:'₺'})],
+  calc:function(v){var H={2023:[890000,1270000,440000,890000],2024:[1400000,2000000,690000,1400000],2025:[2000000,2800000,990000,2000000],2026:[2500000,3500000,1200000,2500000]};
+   var rr=num(v.r),est=false,guess=false;if(isNaN(rr)){H[2027]=H[2026];guess=true;}else{H[2027]=H[2026].map(function(x){return Math.round(x*(1+rr/100)/1000)*1000;});est=true;}
+   var Y=+v.y||2026,f=v.f,P=function(x){return '%'+NI.format(Math.round(x*1000)/10);};
+   var yrs=[0,1,2].map(function(i){var a=num(v['a'+i]),s=num(v['s'+i]),h=num(v['h'+i]),has=!(isNaN(a)&&isNaN(s)&&isNaN(h));a=a||0;s=s||0;h=h||0;var yr=Y-i,hd=H[yr+1];
+     var parts,rat;if(f==='m'){parts=[['Alış',a,hd[0]],['Satış',s,hd[1]]];}else if(f==='h'){parts=[['Hizmet hasılatı',h,hd[2]]];}else{parts=[['Hasılat × 5 + satış',h*5+s,hd[3]]];}
+     var mx=Math.max.apply(null,parts.map(function(p){return p[1]/p[2];}));
+     return {yr:yr,has:has||i===0,parts:parts,mx:mx,over20:mx>1.2,over:mx>1,under20:mx<0.8,hd:yr+1};});
+   var c=yrs[0],p1=yrs[1],p2=yrs[2],rows=[],res='',det='';
+   if(v.k==='s'){rows.push(['Sonuç','Her durumda bilanço esası. Şirketler ve kurumlar iş hacmine bakılmaksızın 1. sınıftadır (VUK 177); işletme defterine geçemez.',1]);return{rows:rows,note:'Bilanço esasında e-Defter, e-Fatura gibi yükümlülükler ayrıca kendi hadlerine göre değerlendirilir.'};}
+   yrs.forEach(function(x){if(!x.has)return;var t=x.parts.map(function(p){return p[0]+' '+tl(p[1])+' / had '+tl(p[2])+' ('+P(p[1]/p[2])+')';}).join(' · ');
+     var lab=x.over20?'haddi %20’den fazla aşıyor':x.over?'haddi %20’ye kadar aşıyor':x.under20?'haddin %20’den fazla altında':'haddin altında (%20’ye kadar)';
+     rows.push([x.yr+' iş hacmi','('+x.hd+' hadleriyle'+(x.hd===2027?(est?', tahmini':'; ilan edilmediği için 2026 hadleri'):'')+') '+t+' → '+lab]);});
+   var N=Y+1;
+   if(v.d==='i'){
+     if(c.over20){res=N+' başından itibaren bilanço esasına geçmek ZORUNDASINIZ.';det='Tek yılda haddin %20’den fazla aşılması yeterli (VUK 180).';}
+     else if(c.over&&p1.has&&p1.over){res=N+' başından itibaren bilanço esasına geçmek ZORUNDASINIZ.';det='Arka arkaya iki yıl had aşıldı (VUK 180).';}
+     else if(c.over){res=N+' yılında işletme defterine devam edebilirsiniz.';det=Y+' haddi %20’ye kadar aştı. '+N+' yılında da had aşılırsa '+(N+1)+' başından itibaren bilanço zorunlu olur.'+(p1.has?'':' Önceki yılı girmediğiniz için iki yıl kuralı kontrol edilemedi; '+(Y-1)+' de haddi aştıysa bilanço zorunludur.');}
+     else{res=N+' yılında işletme defterine devam edebilirsiniz.';det='İsterseniz VUK 181’e göre bilanço esasını kendi tercihinizle de seçebilirsiniz.';}}
+   else{
+     if(c.under20){res=N+' başından itibaren isterseniz işletme defterine geçebilirsiniz.';det='Tek yılda iş hacmi haddin %20’den fazla altında kaldı (VUK 179). Geçiş zorunlu değil, bilançoda kalmaya devam edebilirsiniz.';}
+     else if(!c.over&&p1.has&&!p1.over&&p2.has&&!p2.over){res=N+' başından itibaren isterseniz işletme defterine geçebilirsiniz.';det='Arka arkaya üç yıl iş hacmi hadlerin altında kaldı (VUK 179). Geçiş zorunlu değil.';}
+     else if(!c.over){res=N+' yılında bilanço esasına devam etmeniz gerekir.';det='İş hacmi haddin altında ama %20’den fazla değil; geçiş için bu durumun arka arkaya üç yıl sürmesi gerekir.'+(p1.has&&p2.has?'':' Önceki iki yılı girerseniz üç yıl kuralı da kontrol edilir.');}
+     else{res=N+' yılında bilanço esasına devam etmeniz gerekir.';det='İş hacmi hadlerin üzerinde.';}}
+   rows.push(['Sonuç',res,1]);rows.push(['Neden?',det]);
+   if(guess&&Y===2026)rows.push(['Dikkat','2027 hadleri henüz ilan edilmedi; hesap 2026 hadleriyle yapıldı. 2027 hadleri daha yüksek olacağı için sınırda kalan durumlarda oran açıklanınca yeniden bakın.']);
+   var nt=[];
+   if(v.d==='b'&&/geçebilirsiniz/.test(res))nt.push('Yapılacaklar: '+Y+' yılını bilanço esasına göre normal kapatın, 31.12 envanterini ve kapanış bilançosunu çıkarın, yıllık gelir vergisi beyannamesini bilançoya göre verin. '+N+' başında Defter Beyan Sistemi’nde (DBS) işletme hesabı esasını seçip işletme defterini oradan tutmaya başlayın; e-Defter mükellefi olmanız buna engel değildir.');
+   if(v.d==='i'&&/ZORUNDASINIZ/.test(res))nt.push('Yapılacaklar: '+Y+' yılını işletme defterine göre kapatın, 31.12 itibarıyla envanter çıkarıp açılış bilançosunu hazırlayın, '+N+' başından itibaren yevmiye ve kebir tutun (e-Defter hadlerine de bakın).');
+   nt.push('Kurallar: İşletme defteri tutan, bir yılda haddi %20’den fazla ya da arka arkaya iki yıl %20’ye kadar aşarsa izleyen yıl bilançoya geçmek zorundadır (VUK 180). Bilanço tutan, bir yılda haddin %20’den fazla ya da arka arkaya üç yıl %20’ye kadar altında kalırsa izleyen yıl işletmeye geçebilir (VUK 179). Mal alım-satımında alış veya satıştan biri haddi aşarsa had aşılmış sayılır. Hadler: 2023 (VUK GT 544), 2024 (556), 2025 (577), 2026 (588). Bu sayfa genel bilgilendirme amaçlıdır.');
+   return{rows:rows,note:nt.join(' '),table:{head:['Hadlerin yılı','Yıllık alış','Yıllık satış','Hizmet hasılatı','Hasılat×5 + satış'],body:[2023,2024,2025,2026,2027].map(function(y){var h=H[y];return [y+(y===2027?(est?' (tahmini)':' (ilan edilmedi, 2026 ile aynı alındı)'):''),tl(h[0]),tl(h[1]),tl(h[2]),tl(h[3])];})}};}},
  {g:'Vergi',key:'emlak',title:'Emlak vergisi',abbr:'EV',lead:'Vergi değerine ve taşınmaz türüne göre yıllık emlak vergisini bulun.',
   fields:[F('a','Emlak vergisi değeri',{val:'2.000.000',sfx:'₺'}),F('t','Taşınmaz türü',{type:'select',opts:[['1','Konut (binde 1)'],['2','İşyeri ve diğer binalar (binde 2)'],['3','Arsa (binde 3)'],['1a','Arazi (binde 1)']],val:'1'}),F('b','Büyükşehir sınırında mı?',{type:'seg',opts:[['1','Evet'],['0','Hayır']],val:'1',hint:'Büyükşehir belediye sınırlarında oranlar iki kat uygulanır.'})],
   calc:function(v){var a=num(v.a);if(isNaN(a))return null;var r=parseFloat(v.t)/1000*(v.b==='1'?2:1),t=a*r;return{rows:[['Uygulanan oran','Binde '+NI.format(r*1000)],['Yıllık emlak vergisi',tl(t),1],['Taksit (mayıs ve kasım)',tl(t/2)]]};}},
@@ -6238,7 +6283,7 @@ window.ekYuzMsg=function(K){var Y=K.map(function(k){return num(k.yuz);}),any=Y.s
   ozluk:{t:'Özlük dosyası sihirbazı nasıl kullanılır?',s:[['steps','Adım adım ilerleyin','Dört adım var; her ekranda kutuları doldurup “Sonraki adım”a basın. Numaralı adımlara basarak da geçebilirsiniz.'],['kimlik','1–2. İşyeri ve çalışan','İşyeri ile çalışanın bilgilerini bir kez yazın; seçtiğiniz bütün formlara kendiliğinden gelir.'],['tur','3. Formları seçin','“İşe giriş paketi” düğmesi en sık gerekenleri seçer; görevlendirme, değişiklik bildirimi gibi formları ayrıca işaretleyin.'],['bitti','4. Form bilgileri ve sonuç','Her formun kendine özel kutularını doldurun. Sonuçta formlar tek dosyada indirilir, yazdırılır ya da paylaşılır; istediğinizi tek tek de alabilirsiniz.']]},
   arackdv:{t:'Araç KDV oranı nasıl bulunur?',s:[['arac','1. Aracı seçin','Binek, kamyonet, iş makinesi gibi aracın türünü seçin.'],['steps','2. Soruları yanıtlayın','İkinci el mi, satıcı galeri mi gibi sorular gelir.'],['bitti','3. Sonuç','KDV oranı, dayanağı, alıcının indirimi ve muhasebe kaydı açılır.']]}
  };
- var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611161116';
+ var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611161117';
  var MAP={ozluk:'ozluk',sirket:'sirket',amackonu:'esas',ortaklik:'ortaklik',gecbeyan:'gecbeyan',arackdv:'arackdv'};
  function open(key){var h=H[key];if(!h)return;var m=document.getElementById('hlp-modal');if(!m){m=document.createElement('div');m.id='hlp-modal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');document.body.appendChild(m);
      m.addEventListener('click',function(e){if(e.target===m||e.target.closest('[data-hx]')){m.hidden=true;document.documentElement.style.overflow='';}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){m.hidden=true;document.documentElement.style.overflow='';}});}
