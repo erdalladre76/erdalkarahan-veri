@@ -1,7 +1,7 @@
 {
   "aciklama": "Şirket işlemleri sihirbazında il seçilince gösterilen ticaret sicili müdürlüğü uygulama notları. Her il için: oda (müdürlüğün bağlı olduğu oda), metin (o ile özgü kurallar, 1-4 cümle), kaynak (resmî oda/müdürlük sayfası), tarih (okunduğu gün). Sadece resmî kaynakta okunan bilgi yazılır.",
-  "guncelleme": "2026-11-15",
-  "sira": ["Elazığ","Sivas","Tokat","Ordu","Zonguldak","Çorum","Afyonkarahisar","Kütahya","Uşak","Isparta","Burdur","Düzce","Bolu","Yalova","Bilecik","Çanakkale","Edirne","Kırklareli","Karabük","Bartın","Kastamonu","Sinop","Amasya","Giresun","Rize","Artvin","Gümüşhane","Bayburt","Erzincan","Tunceli","Bingöl","Muş","Bitlis","Siirt","Batman","Mardin","Şırnak","Hakkari","Ağrı","Iğdır","Kars","Ardahan","Adıyaman","Kilis","Osmaniye","Niğde","Aksaray","Nevşehir","Kırşehir","Kırıkkale","Karaman","Yozgat","Çankırı","İzmir","Kocaeli","Konya","Adana","Mersin","Tekirdağ","Sakarya","Samsun","Trabzon","Balıkesir"],
+  "guncelleme": "2026-11-16",
+  "sira": ["Afyonkarahisar","Kütahya","Uşak","Isparta","Burdur","Düzce","Bolu","Yalova","Bilecik","Çanakkale","Edirne","Kırklareli","Karabük","Bartın","Kastamonu","Sinop","Amasya","Giresun","Rize","Artvin","Gümüşhane","Bayburt","Erzincan","Tunceli","Bingöl","Muş","Bitlis","Siirt","Batman","Mardin","Şırnak","Hakkari","Ağrı","Iğdır","Kars","Ardahan","Adıyaman","Kilis","Osmaniye","Niğde","Aksaray","Nevşehir","Kırşehir","Kırıkkale","Karaman","Yozgat","Çankırı","İzmir","Kocaeli","Konya","Adana","Mersin","Tekirdağ","Sakarya","Samsun","Trabzon","Balıkesir","Elazığ"],
   "iller": {
     "İstanbul": {
       "oda": "İstanbul Ticaret Odası (İTO)",
@@ -177,6 +177,42 @@
       "metin": "Van’da tüm işlemler MERSİS’ten yapılır ve iki ayrı dilekçe formu kullanılır: Ticaret Sicili Müdürlüğü dilekçesi ve Oda Sicili Müdürlüğü dilekçesi (ikisi de odanın sitesinde). Numarataj kaynaklı adres değişikliğinde belediye yazısında eski adres yoksa işlem yapılmaz. Hisse devrinde yeni ortak için 1 fotoğraf istenir; ortak sayısı bire düşüyorsa bildirim ve tescil talebi 7 gün içinde yapılmalıdır.",
       "kaynak": "https://www.vantso.org.tr/hizmetler/7123/tescil-ve-kayit-islemleri",
       "tarih": "2026-11-15"
+    },
+    "Sivas": {
+      "oda": "Sivas Ticaret ve Sanayi Odası (Sivas TSO)",
+      "metin": "Sivas Ticaret Sicili Müdürlüğü Sivas TSO bünyesindedir; başvuru MERSİS’ten oluşturulur, odanın sitesinde randevu bağlantısı ile dilekçe ve karar şablonları bulunur. Müdür atamasında dilekçeye şirket unvanı, sermaye, açılış tarihi ve fiilî faaliyetin NACE koduyla yazılması istenir. Adres değişikliği kararındaki adres UAVT standardında ve MERSİS başvurusundakiyle aynı olmalıdır; adres belediyece (numarataj) değiştiyse genel kurul kararı gerekmez, eski adresi içeren belediye yazısının aslı ya da onaylı sureti yeterlidir.",
+      "kaynak": "https://www.sivastso.org.tr/tr/limited-sirket-adres-degisikligi-islemleri",
+      "tarih": "2026-11-16"
+    },
+    "Tokat": {
+      "oda": "Tokat Ticaret ve Sanayi Odası (Tokat TSO)",
+      "metin": "Tokat Ticaret Sicili Müdürlüğü Tokat TSO bünyesindedir. Adres değişikliği ve hisse devri kararları noter onaylı 2 nüsha istenir; hisse devrinde noter devir sözleşmesinin ıslak imzalı nüshası verilir, şirket tek ortaklıya düşüyorsa ayrıca bildirim gerekmez. Yetkililerce imzalanan oda kayıt beyannamesi (Excel formu) dosyaya eklenir; şube açılışı ve merkez naklinde ortakların fotoğrafı da istenir.",
+      "kaynak": "https://tokattso.org.tr/limited-sirketi/",
+      "tarih": "2026-11-16"
+    },
+    "Ordu": {
+      "oda": "Ordu Ticaret ve Sanayi Odası (OTSO)",
+      "metin": "Ordu Ticaret Sicili Müdürlüğü OTSO bünyesindedir. Her işlemde biri ticaret siciline, biri oda işlemlerine olmak üzere iki ayrı dilekçe verilir; vekâletle imzada vekâletnamenin aslı ve vekilin imza beyanı eklenir. Hisse devrinde noter devir sözleşmesi 2 asıl nüsha, alan ve devreden ortakların pay defteri sayfaları ikişer fotokopi istenir. Yeni müdür için 2 vesikalık fotoğraf ve 2 kimlik fotokopisi gerekir; müdür ilde değilse bulunduğu ildeki sicil müdürlüğünden MERSİS talep numarasıyla imza beyanı verir.",
+      "kaynak": "https://www.otso.org.tr/limited-sirketler/",
+      "tarih": "2026-11-16"
+    },
+    "Zonguldak": {
+      "oda": "Zonguldak Ticaret ve Sanayi Odası (ZTSO)",
+      "metin": "Zonguldak Ticaret Sicili Müdürlüğü ZTSO bünyesindedir; her işlemde başvuru önce MERSİS’ten oluşturulur. Odanın sitesinden genel dilekçe, müdür atama, hisse devri ve sermaye artırımı karar örnekleri ile oda kayıt beyannamesi ve taahhütname formları indirilebilir. Birden fazla müdür seçilirse kararda birinin müdürler kurulu başkanı olarak atanması istenir; hisse devrinde noter temlik sözleşmesinin ıslak imzalı nüshası ve pay defteri suretleri verilir.",
+      "kaynak": "https://www.ztso.org.tr/limited-sirket",
+      "tarih": "2026-11-16"
+    },
+    "Çorum": {
+      "oda": "Çorum Ticaret ve Sanayi Odası (ÇTSO)",
+      "metin": "Çorum Ticaret Sicili Müdürlüğü ÇTSO bünyesindedir ve işlemler MERSİS üzerinden yürür. Her firmanın hem sicil hem oda üyelik dosyası tutulduğundan evrak listelerinde belgeler çoğunlukla ikişer nüsha istenir. Odanın sitesinde müdür tayini, hisse devri, sermaye artırımı ve adres değişikliği için ayrı evrak listeleri ve karar örnekleri (Word) bulunur; başvurudan önce müdürlüğü telefon ya da e-postayla arayıp güncel listeyi teyit etmek önerilir.",
+      "kaynak": "https://www.ctso.org.tr/Sayfadetay.aspx?SayfaKodu=QR_TicaretSicil&ticaret-sicil-islemleri",
+      "tarih": "2026-11-16"
+    },
+    "Elazığ": {
+      "oda": "Elazığ Ticaret ve Sanayi Odası (ETSO)",
+      "metin": "",
+      "kaynak": "https://elazigtso.org.tr/tr/index.php/limited-sirket-islemleri/",
+      "tarih": "2026-11-16"
     }
   }
 }
