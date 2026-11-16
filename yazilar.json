@@ -1,6 +1,255 @@
 {
  "yazilar": [
   {
+   "slug": "apartman-yonetimi-rehberi-yonetici-karar-defteri-isletme-projesi-aidat",
+   "baslik": "Apartman Yönetimi A’dan Z’ye: Yönetici Seçimi, Karar Defteri, İşletme Projesi ve Aidat Takibi",
+   "ozet": "Apartman yöneticisi nasıl seçilir, toplantı nasıl yapılır, karar defteri nereden alınır ve notere ne zaman götürülür, aidat nasıl belirlenir, harcamalar nasıl kaydedilir ve hesap nasıl verilir? Kat Mülkiyeti Kanunu’na göre bir yıllık işleyişi adım adım, sade bir dille anlattık.",
+   "tarih": "2026-11-16",
+   "etiketler": [
+    "Apartman yönetimi",
+    "Karar defteri",
+    "İşletme projesi",
+    "Aidat",
+    "Kat Mülkiyeti Kanunu"
+   ],
+   "bolumler": [
+    {
+     "baslik": "KISACA: BİR YILDA NE YAPILIR?",
+     "paragraflar": [
+      "Apartman ve sitelerin yönetimi 634 sayılı Kat Mülkiyeti Kanunu’na (KMK) ve varsa binanın tapudaki yönetim planına göre yürür. Yönetim planı binanın “iç tüzüğü” gibidir; kanunda emredici olmayan konularda önce ona bakılır. Aşağıdaki sıra çoğu apartman için geçerlidir."
+     ],
+     "liste": [
+      "Ocak ayında kat malikleri toplanır (yönetim planında başka bir ay yazmıyorsa).",
+      "Eski yönetici hesap verir, yönetici ve denetçi seçilir.",
+      "Kararlar noter tasdikli karar defterine yazılır ve toplantıdakilere imzalatılır.",
+      "Yönetici bir yıllık gelir-gider tahminini (işletme projesini) hazırlar ve herkese bildirir; aidatlar buna göre toplanır.",
+      "Yıl boyunca gelir ve giderler belgesiyle deftere işlenir; para apartman adına açılmış banka hesabında tutulur.",
+      "Yıl bitince defter bir ay içinde notere kapattırılır ve yeni toplantıda hesap verilir."
+     ]
+    },
+    {
+     "baslik": "YÖNETİCİ ZORUNLU MU, NASIL SEÇİLİR?",
+     "paragraflar": [
+      "Binada sekiz ya da daha fazla bağımsız bölüm (daire, dükkân) varsa yönetici atanması zorunludur (KMK md. 34). Daha küçük binalarda malikler isterse içlerinden birini görevlendirir, isterse işleri birlikte yürütür.",
+      "Yöneticiyi kat malikleri kurulu, yani bütün daire ve dükkân sahiplerinin oluşturduğu kurul seçer. Seçim için hem malik sayısının hem arsa payının çoğunluğu gerekir. Yönetici maliklerden biri olabileceği gibi dışarıdan bir kişi ya da yönetim şirketi de olabilir. Görev süresi bir yıldır; her yılki olağan toplantıda yeniden seçim yapılır, aynı kişi tekrar seçilebilir.",
+      "Malikler anlaşamaz ya da toplanamazsa, maliklerden birinin başvurusu üzerine sulh hukuk mahkemesi yönetici atar. Seçilen yöneticinin adı, soyadı ve adresi binanın girişinde herkesin görebileceği bir yere asılır."
+     ]
+    },
+    {
+     "baslik": "TOPLANTI NASIL YAPILIR?",
+     "paragraflar": [
+      "Olağan toplantı yılda en az bir kez, yönetim planında yazan zamanda yapılır. Planda tarih yoksa her takvim yılının ilk ayında, yani Ocak’ta toplanılır (KMK md. 29). Toplu yapılarda (sitelerde) bu süre en geç iki yılda birdir.",
+      "Önemli bir sebep çıkarsa yönetici, denetçi ya da maliklerin üçte biri olağanüstü toplantı isteyebilir. Bunun için toplantıdan en az 15 gün önce, bütün maliklere imza karşılığı duyuru ya da taahhütlü mektupla çağrı yapılır; çağrıda toplantı sebebi ve gündem yazılır. Çağrıya, çoğunluk sağlanamazsa yapılacak ikinci toplantının yeri ve tarihi de yazılır. İki toplantı arasındaki süre 7 günden az olamaz, ikinci toplantı en geç 15 gün içinde yapılır.",
+      "Toplantının açılabilmesi için maliklerin hem sayı hem arsa payı bakımından yarısından fazlası hazır olmalıdır. Bu sağlanamazsa ikinci toplantıda katılan kim varsa onunla toplanılır ve kararlar katılanların salt çoğunluğuyla alınır (KMK md. 30).",
+      "Her malik, arsa payı ne olursa olsun bir oy sahibidir. Birden fazla dairesi olan her dairesi için ayrı oy kullanır, ama oyları toplam oyların üçte birini geçemez. Bir daire birkaç kişiye aitse içlerinden biri oy kullanır. Vekâletle oy kullanılabilir; bir kişi toplam oyların %5’inden fazlasını vekâleten kullanamaz, 40 ve daha az bağımsız bölümlü binalarda en fazla iki kişiye vekâlet edebilir (KMK md. 31). Kiracı, ancak ev sahibi yazılı vekâlet verirse oy kullanabilir."
+     ]
+    },
+    {
+     "baslik": "KARAR DEFTERİ: NEREDEN ALINIR, NASIL ONAYLATILIR?",
+     "paragraflar": [
+      "Karar defteri kırtasiyeden alınan, sayfaları 1’den başlayarak numaralı sıradan bir defterdir. Kullanılmaya başlamadan önce notere götürülür; noter her sayfasını mühürler ve ilk sayfaya tasdik şerhi yazar (KMK md. 32). Noter genelde yöneticinin kimliğini ve yönetici seçildiğini gösteren kararı ya da tutanağı ister. İlk kez defter alınıyorsa seçim tutanağını ayrı bir kâğıda yazıp imzalatmak, sonra deftere yapıştırmak ya da aynen geçirmek uygulamada kabul görüyor.",
+      "Her toplantıda alınan kararlar bu deftere tarih ve karar numarasıyla yazılır. Toplantıya katılan bütün malikler kararın altını imzalar. Karara karşı oy veren de imzalar, ama neden karşı olduğunu yazarak imzalar. Deftere yazılmamış ya da imzalanmamış kararın sonradan ispatı zorlaşır; aidat borcu için icra takibinde de karar defteri en önemli belgedir.",
+      "Yönetici ayrıca bütün gelir ve giderleri tarih sırasıyla bir deftere yazmak zorundadır (KMK md. 36). Küçük apartmanlarda kararlar ve gelir-gider aynı defterde tutulabiliyor; daire sayısı fazlaysa ayrı bir işletme (gelir-gider) defteri tutmak işi kolaylaştırır. Bu defter de noter tasdikli olmalıdır.",
+      "Kapanış: Defter, her takvim yılı bittikten sonra bir ay içinde, yani Ocak ayı sonuna kadar yönetici tarafından notere kapattırılır. Noter son kaydın altına kapanış şerhi yazar. Defterde boş sayfa varsa aynı defter yeni yılda da kullanılmaya devam eder; sayfalar bitince yeni defter alınıp yeniden tasdik ettirilir. Eski defterler, faturalar ve yazışmalar atılmaz, yeni yöneticiye imza karşılığı teslim edilir."
+     ],
+     "liste": [
+      "Defter alınır, sayfa numaraları kontrol edilir.",
+      "Kullanmadan önce notere tasdik ettirilir (her sayfa mühürlenir).",
+      "Her kararın altına tarih, karar numarası, katılanlar ve imzalar yazılır.",
+      "Karşı oy verenler gerekçesini yazarak imzalar.",
+      "Yıl bitince Ocak ayı içinde notere kapattırılır."
+     ]
+    },
+    {
+     "baslik": "HANGİ KARAR HANGİ ÇOĞUNLUKLA ALINIR?",
+     "paragraflar": [
+      "Kanunda özel bir oran yazmıyorsa kararlar toplantıya katılanların salt çoğunluğuyla alınır. Bazı kararlar için daha yüksek çoğunluk aranır. Yönetim planınızda farklı bir hüküm olabilir; karar almadan önce plana da bakın."
+     ],
+     "kayit": [
+      [
+       "Karar",
+       "Gereken çoğunluk",
+       ""
+      ],
+      [
+       "Olağan yönetim işleri, aidat, işletme projesinin onayı",
+       "Katılanların salt çoğunluğu",
+       ""
+      ],
+      [
+       "Yönetici ve denetçi seçimi",
+       "Bütün maliklerin sayı ve arsa payı çoğunluğu",
+       ""
+      ],
+      [
+       "Ortak yerlerde faydalı yenilik ve ilaveler",
+       "Bütün maliklerin sayı ve arsa payı çoğunluğu",
+       ""
+      ],
+      [
+       "Isı yalıtımı, yakıt dönüşümü, merkezî sistemden bireysel sisteme geçiş",
+       "Sayı ve arsa payı çoğunluğu",
+       ""
+      ],
+      [
+       "Yönetim planının değiştirilmesi",
+       "Bütün maliklerin beşte dördü",
+       ""
+      ],
+      [
+       "Ortak yerlerde inşaat, onarım, tesis, dış cephe boyası gibi değişiklikler",
+       "Bütün maliklerin beşte dördü",
+       ""
+      ],
+      [
+       "Meskenin işyerine çevrilmesi, kat ilavesi, ortak yerin satılması ya da üzerinde hak kurulması",
+       "Oybirliği",
+       ""
+      ]
+     ]
+    },
+    {
+     "baslik": "İŞLETME PROJESİ VE AİDAT",
+     "paragraflar": [
+      "Aidat kafadan belirlenmez; dayanağı işletme projesidir (KMK md. 37). İşletme projesi, bir yıllık tahmini gelir ve giderleri, bu giderlerden her daireye düşen payı ve aylık toplanacak avansı (aidatı) gösteren tablodur. Kat malikleri kurulu toplantıda bir proje kabul etmemişse yönetici gecikmeden kendisi hazırlar.",
+      "Hazırlanan proje bütün maliklere ya da dairede oturanlara imza karşılığı ya da taahhütlü mektupla bildirilir. Bildirimden sonra 7 gün içinde itiraz edilebilir; itiraz olursa konu kurulda görüşülüp karara bağlanır. Kesinleşen işletme projesi ve kurulun aidat kararı, borcunu ödemeyen hakkında icra takibinde belge olarak kullanılır.",
+      "Yıl içinde beklenmeyen bir gider çıkarsa (asansör revizyonu, çatı onarımı gibi) toplantı yapılıp ek ödeme kararı alınır ve bu da karar defterine yazılır."
+     ]
+    },
+    {
+     "baslik": "GİDERLER NASIL PAYLAŞILIR?",
+     "paragraflar": [
+      "Yönetim planında ya da kurul kararında başka türlü kararlaştırılmamışsa paylaşım kanundaki gibidir (KMK md. 20). “Ben asansörü kullanmıyorum”, “kombim var, kaloriferi istemiyorum” ya da “dairem boş” diyerek gidere katılmaktan kaçınılamaz."
+     ],
+     "kayit": [
+      [
+       "Gider",
+       "Nasıl paylaşılır",
+       ""
+      ],
+      [
+       "Kapıcı, kaloriferci, bahçıvan, bekçi giderleri",
+       "Eşit olarak",
+       ""
+      ],
+      [
+       "Sigorta primi",
+       "Arsa payı oranında",
+       ""
+      ],
+      [
+       "Ortak yerlerin bakım ve onarımı, yönetici aylığı",
+       "Arsa payı oranında",
+       ""
+      ],
+      [
+       "Ortak tesislerin işletme giderleri (asansör, hidrofor, ortak elektrik gibi)",
+       "Arsa payı oranında",
+       ""
+      ]
+     ]
+    },
+    {
+     "baslik": "HARCAMALAR NASIL TAKİP EDİLİR?",
+     "paragraflar": [
+      "Yönetici topladığı parayı kendi cebinde ya da kişisel hesabında tutmamalıdır. Kanun, paranın tanınmış bir bankada, yönetici sıfatı belirtilerek açılan bir hesapta tutulmasını ister (KMK md. 35). Aidatların bu hesaba yatırılması hem yöneticiyi hem malikleri korur; dekont makbuz yerine geçer.",
+      "Elden alınan her aidat için sıra numaralı tahsilat makbuzu kesilir, bir nüshası ödeyene verilir. Yapılan her harcama için apartman yönetimi adına fatura ya da fiş alınır; belgesi olmayan harcama hesap verirken sorun çıkarır.",
+      "Gelir ve giderler tarih sırasıyla deftere işlenir. Ayrıca her daire için kimin hangi ay ne ödediğini gösteren bir aidat çizelgesi tutmak ve aylık gelir-gider özetini panoya asmak iyi bir uygulamadır. Bunlar için sitedeki ücretsiz Excel tablolarını kullanabilirsiniz."
+     ],
+     "liste": [
+      "Gelirler: aidatlar, ek ödemeler, gecikme tazminatları, varsa ortak yer kira geliri ve banka faizi.",
+      "Giderler: kapıcı ücreti ve SGK primi, ortak elektrik ve su, asansör bakımı, yakıt, temizlik malzemesi, sigorta, onarımlar, yönetici ücreti.",
+      "Her ay sonunda: banka ekstresi ile defter karşılaştırılır, ödemeyen daireler listelenir."
+     ]
+    },
+    {
+     "baslik": "HESAP VERME VE DENETİM",
+     "paragraflar": [
+      "Yönetici, yönetim planında yazan zamanda, plan yoksa her takvim yılının ilk ayında kat malikleri kuruluna o tarihe kadar elde ettiği gelirlerin ve yaptığı giderlerin hesabını verir (KMK md. 39). Maliklerin yarısı isterse yıl içinde de hesap sorabilir. Hesap verilirken defter, banka ekstreleri, faturalar ve makbuzlar toplantıda hazır bulundurulur.",
+      "Kurul, hesapları denetlemek için içinden bir denetçi ya da üç kişilik denetim kurulu seçebilir (KMK md. 41). Denetçi hesapları en az üç ayda bir, gerekirse daha sık inceler ve yıl sonunda kurula rapor verir. Hesabın kabul edilmesi (ibra) karar defterine yazılır.",
+      "Yöneticiye ücret ödenip ödenmeyeceğine kurul karar verir. Malikler arasından seçilen yönetici, aksi kararlaştırılmamışsa görev süresince normal yönetim giderlerinin yarısına katılmaz (KMK md. 40)."
+     ]
+    },
+    {
+     "baslik": "AİDATINI ÖDEMEYEN OLURSA",
+     "paragraflar": [
+      "Aidatını ya da gider payını zamanında ödemeyen malik, geciktiği günler için aylık %5 gecikme tazminatı öder (KMK md. 20). Yönetici ya da diğer maliklerden biri, borçlu hakkında icra takibi başlatabilir ya da sulh hukuk mahkemesinde dava açabilir.",
+      "Kiracı da aidattan ev sahibiyle birlikte sorumludur; ancak sorumluluğu ödemekle yükümlü olduğu kira tutarıyla sınırlıdır ve ödediğini kirasından düşer. Uygulamada önce yazılı hatırlatma yapılıyor, sonuç alınmazsa avukat aracılığıyla takip başlatılıyor."
+     ]
+    },
+    {
+     "baslik": "KAPICI, SGK VE VERGİ TARAFI",
+     "paragraflar": [
+      "Apartman yönetimi şirket değildir, ticari defter tutmaz ve aidat topladığı için vergi mükellefi olmaz. Ancak kapıcı ya da başka bir personel çalıştırıyorsa işveren sayılır: SGK’da işyeri tescili yaptırılır, işe giriş bildirgesi verilir, primler her ay ödenir ve bordro düzenlenir. Kapıcıya en az asgari ücret ödenir; görevi nedeniyle oturduğu kapıcı dairesi için kira alınamaz.",
+      "Mesken olarak kullanılan apartmanlarda çalışan kapıcının ücreti gelir vergisinden istisnadır (GVK md. 23/6). Binanın tamamı işyeriyse bu istisna uygulanmıyor. Yöneticiye ücret ödenmesi, avukat ya da mali müşavir gibi serbest meslek sahiplerinden hizmet alınması hâlinde stopaj ve muhtasar beyanname konusu gündeme geliyor: Gelir İdaresi verdiği özelgelerde apartman yönetimlerinin bu ödemelerden stopaj yapması gerektiğini söylüyor, aksi yönde yargı kararları da var. Bu yüzden böyle bir ödeme başlamadan önce vergi dairesine ya da bir mali müşavire sorulması yerinde olur.",
+      "Ortak bir yer kiraya verilmişse (çatıya baz istasyonu, dış cepheye reklam, kapıcı dairesinin kiralanması gibi) elde edilen kira apartmanın değil, payları oranında kat maliklerinin geliri sayılır; her malik kendi payını diğer kira gelirleriyle birlikte değerlendirir."
+     ]
+    },
+    {
+     "baslik": "YIL İÇİ TAKVİM",
+     "kayit": [
+      [
+       "Ne zaman",
+       "Ne yapılır",
+       ""
+      ],
+      [
+       "Ocak",
+       "Olağan toplantı, hesap verme, yönetici ve denetçi seçimi; geçen yılın defterinin notere kapattırılması",
+       ""
+      ],
+      [
+       "Toplantıdan hemen sonra",
+       "İşletme projesinin hazırlanıp bildirilmesi; yönetici adının girişe asılması; banka hesabı imza yetkisinin güncellenmesi",
+       ""
+      ],
+      [
+       "Her ay",
+       "Aidat tahsilatı, giderlerin deftere işlenmesi, SGK bildirimi ve prim ödemesi, aylık özetin panoya asılması",
+       ""
+      ],
+      [
+       "Üç ayda bir",
+       "Denetçinin hesapları incelemesi",
+       ""
+      ],
+      [
+       "Gerektiğinde",
+       "Olağanüstü toplantı (en az 15 gün önce çağrı), ek ödeme kararı",
+       ""
+      ],
+      [
+       "Aralık",
+       "Yıl sonu hesap özetinin ve yeni yıl bütçe taslağının hazırlanması",
+       ""
+      ]
+     ]
+    },
+    {
+     "baslik": "SIK YAPILAN HATALAR",
+     "liste": [
+      "Karar defterini notere tasdik ettirmeden kullanmak ya da yıl sonunda kapattırmayı unutmak.",
+      "Kararı deftere yazmamak, katılanlara imzalatmamak.",
+      "Toplantı çağrısını süresinde ve imza karşılığı yapmamak; ikinci toplantı tarihini çağrıya yazmamak.",
+      "İşletme projesi hazırlamadan, sözlü anlaşmayla aidat toplamak.",
+      "Parayı yöneticinin kişisel hesabında tutmak, elden alınan aidata makbuz vermemek.",
+      "Faturasız ve belgesiz harcama yapmak.",
+      "Kapıcıyı sigortasız çalıştırmak.",
+      "Görevi devrederken defter, belge ve parayı tutanakla teslim etmemek."
+     ],
+     "paragraflar": [
+      "Bu yazı genel bilgi verir. Binanızın yönetim planında farklı hükümler olabilir; anlaşmazlık durumunda sulh hukuk mahkemesi yetkilidir."
+     ]
+    }
+   ],
+   "kaynaklar": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=634&MevzuatTur=1&MevzuatTertip=5",
+    "https://bilginhukukburosu.com/kat-mulkiyeti-kanunu-acisindan-apartman-yoneticisinin-tutmasi-gereken-defterler/",
+    "https://mihci.av.tr/kat-mulkiyetinde-oy-sayilari-ve-oy-kullanma/",
+    "https://www.muhasebenews.com/apartman-yonetiminde-ucret-ve-serbest-meslek-odemelerinde-gelir-vergisi-tevkifati/"
+   ]
+  },
+  {
    "slug": "besiciden-hayvan-alimi-mustahsil-makbuzu-stopaj-muhasebe-kaydi",
    "baslik": "Besiciden Hayvan Alımında Müstahsil Makbuzu: Stopaj, Kesim ve Muhasebe Kaydı",
    "ozet": "Vergiden muaf ya da defter tutmayan besiciden canlı hayvan, süt, yumurta gibi ürün alındığında gider pusulası değil müstahsil makbuzu düzenlenir. Stopaj oranı %2’dir, ticaret borsasında tescil ettirilirse %1’e düşer. Makbuzun nasıl kesileceğini, örnek hesabı, muhasebe kaydını ve kısa mevzuatı derledik.",
