@@ -1,7 +1,14 @@
 {
  "aciklama": "Günlük Resmî Gazete özeti. Yalnızca muhasebe, vergi, SGK, ticaret ve işletmeleri ilgilendiren başlıklar; metinler özet niteliğindedir, bağlayıcı olan Resmî Gazete metnidir.",
- "guncelleme": "2026-11-15",
+ "guncelleme": "2026-11-16",
  "gunler": [
+  {
+   "tarih": "2026-11-16",
+   "sayi": "33432",
+   "url": "https://www.resmigazete.gov.tr/16.11.2026",
+   "ozet": "Bugün vergi ve muhasebe açısından önemli bir düzenleme yok. Yalnızca iki üniversitenin eğitim-öğretim yönetmelikleri yayımlandı.",
+   "maddeler": []
+  },
   {
    "tarih": "2026-11-15",
    "sayi": "33431",
