@@ -1,6 +1,17 @@
 {
- "guncelleme": "2026-11-13",
+ "guncelleme": "2026-11-17",
  "hap": [
+  {
+   "id": "sgk-2026-23-ihale",
+   "tarih": "2026-11-13",
+   "etiket": "SGK",
+   "baslik": "İhalelerde SGK prim borcu sınırı 50.000 TL oldu",
+   "metin": "SGK 2026/23 Genelgesi ile kamu ihalelerinde dikkate alınan kesinleşmiş prim borcu sınırı 5.000 TL’den 50.000 TL’ye çıkarıldı. 15.11.2026 ve sonrasında ilan edilen ihalelerde yeni sınır uygulanıyor. Taksitleri düzenli ödenen yapılandırılmış borçlar sınır hesabına katılmıyor.",
+   "kaynak": {
+    "ad": "SGK Genelgesi 2026/23 (MuhasebeTR)",
+    "url": "https://www.muhasebetr.com/guncelmevzuat/mevzuat_oku.php?mevzuat_id=7261"
+   }
+  },
   {
    "id": "teklif-gss-kv-2026-kasim",
    "tarih": "2026-11-12",
