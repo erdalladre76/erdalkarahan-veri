@@ -1,13 +1,7 @@
 {
   "aciklama": "Şirket işlemleri sihirbazında il seçilince gösterilen ticaret sicili müdürlüğü uygulama notları. Her il için: oda (müdürlüğün bağlı olduğu oda), metin (o ile özgü kurallar, 1-4 cümle), kaynak (resmî oda/müdürlük sayfası), tarih (okunduğu gün). Sadece resmî kaynakta okunan bilgi yazılır.",
-  "guncelleme": "2026-11-17",
+  "guncelleme": "2026-11-18",
   "sira": [
-    "Yalova",
-    "Bilecik",
-    "Çanakkale",
-    "Edirne",
-    "Kırklareli",
-    "Karabük",
     "Bartın",
     "Kastamonu",
     "Sinop",
@@ -53,7 +47,8 @@
     "Trabzon",
     "Balıkesir",
     "Elazığ",
-    "Afyonkarahisar"
+    "Afyonkarahisar",
+    "Çanakkale"
   ],
   "iller": {
     "İstanbul": {
@@ -308,6 +303,42 @@
       "metin": "",
       "kaynak": "https://www.afyonkarahisartso.org.tr/index.asp?s=92&t=2&a=19",
       "tarih": "2026-11-17"
+    },
+    "Yalova": {
+      "oda": "Yalova Ticaret ve Sanayi Odası (YTSO)",
+      "metin": "Yalova Ticaret Sicili Müdürlüğü YTSO bünyesindedir; oda sayfasındaki matbu evraklar bilgisayarda doldurulup yetkililerce imzalanır. Genel kurul kararı noter onaylı 1 adet verilir, ETDS’den doğrulama kodu ve karekodla alınan kararlarda noter onayı aranmaz. Yeni müdür için tescil talepnamesi Müdürlük huzurunda düzenlenir; gelinemiyorsa bulunulan yerdeki sicil müdürlüğünde ya da konsoloslukta yapılır. Hisse devrinde pay defterinin ilgili sayfasıyla birlikte noter onayını gösteren ilk sayfasının fotokopisi de istenir.",
+      "kaynak": "https://www.ytso.org.tr/hizmetlerimiz/hukmi-sahis-limited-sirket",
+      "tarih": "2026-11-18"
+    },
+    "Bilecik": {
+      "oda": "Bilecik Ticaret ve Sanayi Odası (Bilecik TSO)",
+      "metin": "Bilecik Ticaret Sicili Müdürlüğü Bilecik TSO bünyesindedir; başvurular MERSİS’ten yapılır. İmza beyanları Müdürlükte alınır, noterden alınan imza beyanı kabul edilmez; gelinemiyorsa bulunulan yerdeki sicil müdürlüğüne MERSİS talep numarasıyla gidilir. Hisse devrinde odanın örnek genel kurul kararı kullanılır, ortakların T.C. kimlik numaraları karara yazılır; yeni ortaktan kimlik fotokopisi ve fotoğraf 2’şer adet, tüzel kişi ortaktan o yıl alınmış sicil tasdiknamesi istenir.",
+      "kaynak": "https://bileciktso.org.tr/B%C4%B0R%C4%B0MLER%C4%B0M%C4%B0Z/TicaretSiciliServisi/Limited%C5%9Eirket/H%C4%B0SSEDEVR%C4%B0%C4%B0%C5%9ELEMLER%C4%B0/tabid/9420/Default.aspx",
+      "tarih": "2026-11-18"
+    },
+    "Çanakkale": {
+      "oda": "Çanakkale Ticaret ve Sanayi Odası (ÇTSO)",
+      "metin": "",
+      "kaynak": "https://www.canakkaletso.org.tr/TicaretSicil/tabid/16867/Default.aspx",
+      "tarih": "2026-11-18"
+    },
+    "Edirne": {
+      "oda": "Edirne Ticaret ve Sanayi Odası (ETSO)",
+      "metin": "Edirne Ticaret Sicili Müdürlüğü ETSO bünyesindedir. MERSİS başvurusunun yanında iki ayrı dilekçe verilir: biri Ticaret Sicili Müdürlüğüne, biri Oda Başkanlığına. Genel kurul tutanağı 1 noter onaylı suret + 1 fotokopi, hazır bulunanlar listesi 1 asıl olarak istenir. Adres yalnızca belediyenin numarataj çalışmasıyla değiştiyse belediyeden alınan güncel adres yazısıyla başvuru yeterlidir.",
+      "kaynak": "https://www.etso.org.tr/en/limited-sirket",
+      "tarih": "2026-11-18"
+    },
+    "Kırklareli": {
+      "oda": "Kırklareli Ticaret ve Sanayi Odası (Kırklareli TSO)",
+      "metin": "Kırklareli Ticaret Sicili Müdürlüğü Kırklareli TSO bünyesindedir; dilekçe odanın genel şirket dilekçesiyle, kaşeli ve ekleri listelenerek verilir. Genel kurul kararının noter onaylı suretiyle birlikte karar defteri sureti de istenir. Belediye kaynaklı adres değişikliğinde belediye yazısı şirkete hitaben düzenlenmiş olmalı ve eski adres sicildeki son adresle aynı olmalıdır.",
+      "kaynak": "https://kirklarelitso.org.tr/en/limited-companies/",
+      "tarih": "2026-11-18"
+    },
+    "Karabük": {
+      "oda": "Karabük Ticaret ve Sanayi Odası (KARTSO)",
+      "metin": "Karabük Ticaret Sicili Müdürlüğü KARTSO bünyesindedir; başvurular MERSİS’ten yapılır. Müdür değişikliğinde odanın kendi formlarıyla (dilekçe, genel kurul toplantı tutanağı, hazır bulunanlar listesi, görev kabul beyanı, Üye Güncelleme Formu) başvurulur; tutanak noter onaylı 1 asıl + 1 fotokopi verilir. Yeni yetkilinin nüfus cüzdanı ve ikametgâh belgesinden 2’şer fotokopi ve 1 fotoğraf istenir.",
+      "kaynak": "https://karabuktso.org.tr/ticaret-sicil/tescil-islemleri/mudur-tayini-mudur-iptali",
+      "tarih": "2026-11-18"
     }
   }
 }
