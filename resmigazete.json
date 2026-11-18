@@ -1,7 +1,39 @@
 {
   "aciklama": "Günlük Resmî Gazete özeti. Yalnızca muhasebe, vergi, SGK, ticaret ve işletmeleri ilgilendiren başlıklar; metinler özet niteliğindedir, bağlayıcı olan Resmî Gazete metnidir.",
-  "guncelleme": "2026-11-17",
+  "guncelleme": "2026-11-18",
   "gunler": [
+    {
+      "tarih": "2026-11-18",
+      "sayi": "33434",
+      "url": "https://www.resmigazete.gov.tr/18.11.2026",
+      "ozet": "İplik ithalatındaki dampinge karşı önlemler uzatıldı, Türkiye–Ukrayna Serbest Ticaret Anlaşması'nın yürürlük tarihi tespit edildi, yabancı yatırımcılara ikamet izni şartları belirlendi ve bir katılım bankası TMSF'ye devredildi.",
+      "maddeler": [
+        {
+          "etiket": "GÜMRÜK",
+          "baslik": "Kesik elyaf ipliği ithalatında dampinge karşı önlemler sürüyor",
+          "metin": "Çin, Endonezya, Hindistan, Malezya, Pakistan, Tayland ve Vietnam menşeli sentetik veya suni devamsız liflerden ipliklerin (55.08, 55.09, 55.10 ve 55.11 pozisyonları, bazı alt pozisyonlar hariç) ithalatındaki dampinge karşı önlemlerin, nihai gözden geçirme soruşturması sonucunda aynı şekilde uygulanmasına karar verildi. Önlem tutarı ülkeye ve firmaya göre değişiyor; Tebliğ yayımı tarihinde yürürlüğe girdi.",
+          "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261118-5.htm"
+        },
+        {
+          "etiket": "GÜMRÜK",
+          "baslik": "Türkiye–Ukrayna Serbest Ticaret Anlaşması'nın yürürlük tarihi tespit edildi",
+          "metin": "3 Şubat 2022'de Kiev'de imzalanan Türkiye–Ukrayna Serbest Ticaret Anlaşması'nın 1 Ekim 2026'da yürürlüğe girdiği Cumhurbaşkanı Kararıyla tespit edildi. Aynı kararda dört başka anlaşmanın yürürlük tarihleri de yer alıyor.",
+          "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261118-1.pdf"
+        },
+        {
+          "etiket": "YATIRIM",
+          "baslik": "Yabancı yatırımcılara 3 ve 5 yıllık ikamet izni",
+          "metin": "Türkiye'de çalışmayan ancak belirlenen tutarda yatırım yapan yabancılara, eşlerine ve çocuklarına ikamet izni verilecek: en az 150.000 ABD doları ya da karşılığı döviz için 3 yıl, en az 200.000 ABD doları ya da karşılığı döviz için 5 yıl. Tutarın bankada mevduat, devlet borçlanma aracı, gayrimenkul ya da girişim sermayesi yatırım fonu payı veya bireysel emeklilik katkı payı olarak, izin süresinin yarısı boyunca tutulması gerekiyor.",
+          "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261118-3.pdf"
+        },
+        {
+          "etiket": "FİNANS",
+          "baslik": "Adil Katılım Bankası TMSF'ye devredildi",
+          "metin": "BDDK'nın 17/11/2026 tarihli ve 11601 sayılı kararıyla Adil Katılım Bankası A.Ş.'nin temettü hariç ortaklık hakları ile yönetim ve denetimi Tasarruf Mevduatı Sigorta Fonuna devredildi.",
+          "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261118-6.pdf"
+        }
+      ]
+    },
     {
       "tarih": "2026-11-17",
       "sayi": "33433",
