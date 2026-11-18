@@ -1,6 +1,18 @@
 {
- "guncelleme": "2026-11-17",
+ "guncelleme": "2026-11-18",
  "hap": [
+  {
+   "id": "taksi-mali-cihaz-25-aralik",
+   "tarih": "2026-11-13",
+   "etiket": "VERGİ",
+   "onemli": true,
+   "baslik": "Taksi mali cihazına geçişte son tarih 25 Aralık 2026 oldu",
+   "metin": "GİB, taksi işletmecilerinin onaylı taksi mali cihazını alıp kullanmaya başlaması için tanınan süreyi 16 Kasım’dan 25 Aralık 2026’ya uzattı. Basit usul dahil tüm taksi işletmecilerini kapsıyor; yalnızca sipariş vermek yeterli sayılmıyor, cihazın bu tarihe kadar kullanımda olması gerekiyor. Yükümlülük kaldırılmadı, yalnızca geçiş süresi değişti.",
+   "kaynak": {
+    "ad": "GİB · 591 Sıra No.lu VUK Genel Tebliğine İlişkin Süre Uzatım Duyurusu",
+    "url": "https://dijital.gib.gov.tr/duyurular"
+   }
+  },
   {
    "id": "sgk-2026-23-ihale",
    "tarih": "2026-11-13",
