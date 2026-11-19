@@ -1,6 +1,17 @@
 {
- "guncelleme": "2026-11-18",
+ "guncelleme": "2026-11-19",
  "hap": [
+  {
+   "id": "yd-2027-yillik",
+   "tarih": "2026-11-03",
+   "etiket": "VERGİ",
+   "baslik": "2027 için yeniden değerleme oranı %27,83 olarak hesaplandı",
+   "metin": "TÜİK’in Ekim 2026 Yİ-ÜFE verisine göre 2027 yılında uygulanacak yeniden değerleme oranı %27,83 çıktı (2026’da %25,49). Maktu vergi, harç ve cezalar ile vergi kanunlarındaki pek çok had ve tutar 1 Ocak 2027’den itibaren bu oranla güncellenecek. Oranı ilan eden VUK Genel Tebliği’nin Kasım sonunda Resmî Gazete’de yayımlanması bekleniyor.",
+   "kaynak": {
+    "ad": "TÜİK Yİ-ÜFE Ekim 2026 (Müşavirler Kulübü)",
+    "url": "https://musavirlerkulubu.com.tr/makale/2027-yeniden-degerleme-orani-yuzde-2783-olarak-aciklandi"
+   }
+  },
   {
    "id": "taksi-mali-cihaz-25-aralik",
    "tarih": "2026-11-13",
