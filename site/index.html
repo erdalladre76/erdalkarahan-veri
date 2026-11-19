@@ -3413,8 +3413,8 @@ var TOOLS=[
    F('gun','Ayda sizin yanınızda kaç gün çalışıyor?',{val:'4',sfx:'gün',hint:'Günde 7,5 saatten az çalışıyorsa saatleri toplayıp 7,5’e bölün. Örnek: haftada 1 gün gelen kişi ayda 4 ya da 5 gün çalışır. Aynı evde oturan üçüncü dereceye kadar akrabalar bu kapsamda değildir.'}),
    F('emekli','Çalışan kişi emekli mi?',{type:'seg',val:'h',opts:[['h','Hayır'],['e','Evet, emekli aylığı alıyor']],hint:'Emekli çalıştırılırsa 10 gün ve üzerinde sosyal güvenlik destek primi ödenir; tutar farklıdır.'}),
    F('ucret','Günlük ücreti (isteğe bağlı)',{val:'',sfx:'₺',ph:'boşsa asgari ücret',hint:'Prim, asgari ücretin altında olmamak üzere kazanç üzerinden hesaplanır. Boş bırakırsanız günlük asgari ücret esas alınır.'}),
-   F('ay','Çalışmanın yapıldığı ay',{type:'date',val:'',hint:'O aydan herhangi bir gün seçin; son ödeme günü hesaplanır. Boş bırakırsanız bu ay alınır.'})],
-  calc:function(v){var A=window.DZASG||33030,gA=A/30,G=Math.max(0,Math.round(num(v.gun)||0)),U=Math.max(gA,Math.min(num(v.ucret)||gA,gA*9)),em=v.emekli==='e',D=dParse(v.ay)||dParse(today());
+   F('ay','Çalışmanın yapıldığı ay',{type:'month',val:String(today()).slice(0,7),hint:'Çalışmanın yapıldığı ayı seçin; bildirim ve son ödeme günü buna göre hesaplanır.'})],
+  calc:function(v){var A=window.DZASG||33030,gA=A/30,G=Math.max(0,Math.round(num(v.gun)||0)),U=Math.max(gA,Math.min(num(v.ucret)||gA,gA*9)),em=v.emekli==='e',D=(/^\d{4}-\d{2}$/.test(v.ay||'')?dParse(v.ay+'-01'):dParse(v.ay))||dParse(today());
    function f(d){return String(d.getUTCDate()).padStart(2,'0')+'.'+String(d.getUTCMonth()+1).padStart(2,'0')+'.'+d.getUTCFullYear();}
    var son=new Date(Date.UTC(D.getUTCFullYear(),D.getUTCMonth()+2,0)),ays=new Date(Date.UTC(D.getUTCFullYear(),D.getUTCMonth()+1,0));
    if(!G)return{rows:[['Gün sayısını yazın','—',1]],note:'Ayda kaç gün çalıştığını yazınca hesap yapılır.'};
@@ -6762,7 +6762,7 @@ window.ekYuzMsg=function(K){var Y=K.map(function(k){return num(k.yuz);}),any=Y.s
   ozluk:{t:'Özlük dosyası sihirbazı nasıl kullanılır?',s:[['steps','Adım adım ilerleyin','Dört adım var; her ekranda kutuları doldurup “Sonraki adım”a basın. Numaralı adımlara basarak da geçebilirsiniz.'],['kimlik','1–2. İşyeri ve çalışan','İşyeri ile çalışanın bilgilerini bir kez yazın; seçtiğiniz bütün formlara kendiliğinden gelir.'],['tur','3. Formları seçin','“İşe giriş paketi” düğmesi en sık gerekenleri seçer; görevlendirme, değişiklik bildirimi gibi formları ayrıca işaretleyin.'],['bitti','4. Form bilgileri ve sonuç','Her formun kendine özel kutularını doldurun. Sonuçta formlar tek dosyada indirilir, yazdırılır ya da paylaşılır; istediğinizi tek tek de alabilirsiniz.']]},
   arackdv:{t:'Araç KDV oranı nasıl bulunur?',s:[['arac','1. Aracı seçin','Binek, kamyonet, iş makinesi gibi aracın türünü seçin.'],['steps','2. Soruları yanıtlayın','İkinci el mi, satıcı galeri mi gibi sorular gelir.'],['bitti','3. Sonuç','KDV oranı, dayanağı, alıcının indirimi ve muhasebe kaydı açılır.']]}
  };
- var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611191919';
+ var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611191934';
  var MAP={ozluk:'ozluk',sirket:'sirket',amackonu:'esas',ortaklik:'ortaklik',gecbeyan:'gecbeyan',arackdv:'arackdv'};
  function open(key){var h=H[key];if(!h)return;var m=document.getElementById('hlp-modal');if(!m){m=document.createElement('div');m.id='hlp-modal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');document.body.appendChild(m);
      m.addEventListener('click',function(e){if(e.target===m||e.target.closest('[data-hx]')){m.hidden=true;document.documentElement.style.overflow='';}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){m.hidden=true;document.documentElement.style.overflow='';}});}
@@ -8550,6 +8550,19 @@ setTimeout(send,1500);var t=null;window.addEventListener('hashchange',function()
  document.addEventListener('keydown',function(ev){var e=ev.target;if(!para(e))return;var c=e.selectionStart;if(c!==e.selectionEnd)return;if(ev.key==='Backspace'&&e.value.charAt(c-1)===','){ev.preventDefault();e.setSelectionRange(c-1,c-1);}else if(ev.key==='Delete'&&e.value.charAt(c)===','){ev.preventDefault();e.setSelectionRange(c+1,c+1);}},true);
  document.addEventListener('focusin',function(ev){var e=ev.target;if(!para(e)||!e.value)return;setTimeout(function(){try{if(document.activeElement===e)e.select();}catch(_){}},0);if(/^[\d.]+$/.test(e.value.trim())&&!/,\d\d$/.test(e.value)){var v=e.value;bic(e);if(e.value!==v)e.dispatchEvent(new Event('input',{bubbles:true}));}},true);})();
 
+
+/* Tutar hesaplamayan rehber sayfalarında "Hesapla / Hesaplama Sonucu" yerine "Sonucu Göster / Sonuç" */
+(function(){var NOH={isyeribildirge:1};var MAP=[[/^(\s*)Hesaplama Sonucu(\s*)$/,'$1Sonuç$2'],[/^(\s*)Hesapla(\s*)$/,'$1Sonucu Göster$2'],[/Hesaplandı/,'Hazır'],[/“Hesapla”ya basın/,'“Sonucu Göster”e basın']];
+ function fix(){var k=(location.hash||'').replace(/^#h-/,''),no=!!NOH[k]&&/^#h-/.test(location.hash||'');var sc=[];var t=[].slice.call(document.querySelectorAll('.tool')).filter(function(x){return x.offsetParent;})[0];if(t)sc.push(t.parentNode);[].forEach.call(document.querySelectorAll('.hsp-chip,.hsp'),function(x){sc.push(x);});
+  sc.forEach(function(root){if(!root)return;var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null),n,L=[];while((n=w.nextNode()))L.push(n);L.forEach(function(n){var el=n.parentNode;if(!el||/^(SCRIPT|STYLE|TEXTAREA)$/.test(el.tagName))return;
+   if(no){if(n.__ho!==undefined)return;var v=n.nodeValue,o=v;for(var i=0;i<MAP.length;i++){if(MAP[i][0].test(v)){v=v.replace(MAP[i][0],MAP[i][1]);break;}}if(v!==o){n.__ho=o;n.__hn=v;n.nodeValue=v;}}
+   else if(n.__ho!==undefined){if(n.nodeValue===n.__hn)n.nodeValue=n.__ho;n.__ho=undefined;}});});}
+ var tm=0;new MutationObserver(function(){clearTimeout(tm);tm=setTimeout(fix,120);}).observe(document.body,{childList:true,subtree:true,characterData:true});window.addEventListener('hashchange',function(){setTimeout(fix,250);});setTimeout(fix,900);})();
+
+/* Başlık, etiket, düğme ve menülerde "e-Tebligat, e-Devlet…" baş harfi büyük: "E-Tebligat" */
+(function(){var SEL='h1,h2,h3,h4,h5,label,button,summary,option,th,.sn-menu a,.sn-gh,.eyebrow,.tag,.btn,.pcard h3,.fsec,.kgrp,.gidx b,.gidx h4,legend,.tb-btns a,.subnav a';
+ function fix(){[].forEach.call(document.querySelectorAll(SEL),function(el){if(el.__eb===el.textContent.length)return;var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null),n;while((n=w.nextNode())){var v=n.nodeValue;if(v.indexOf('e-')<0)continue;var r=v.replace(/(^|[\s(“"·:\/,])e-(?=[A-ZÇĞİÖŞÜa-zçğıöşü])/g,'$1E-');if(r!==v)n.nodeValue=r;}el.__eb=el.textContent.length;});}
+ var tm=0;new MutationObserver(function(){clearTimeout(tm);tm=setTimeout(fix,200);}).observe(document.body,{childList:true,subtree:true});setTimeout(fix,700);})();
 </script>
 
 </html>
