@@ -1,0 +1,57 @@
+name: Siteyi yayına al
+# site/index.html değişince Natro'ya FTP ile yükler. FTP bilgileri depo "Secrets" bölümünde durur.
+on:
+  push:
+    branches: [main]
+    paths: ["site/index.html"]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: yayin
+  cancel-in-progress: false
+jobs:
+  yukle:
+    runs-on: ubuntu-latest
+    env:
+      FTP_HOST: ${{ secrets.FTP_HOST }}
+      FTP_USER: ${{ secrets.FTP_USER }}
+      FTP_PASS: ${{ secrets.FTP_PASS }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: FTP bilgileri var mı
+        id: k
+        run: |
+          if [ -z "$FTP_HOST" ] || [ -z "$FTP_USER" ] || [ -z "$FTP_PASS" ]; then
+            echo "FTP bilgileri girilmemiş; yükleme atlandı."
+            echo "var=0" >> "$GITHUB_OUTPUT"
+          else
+            echo "var=1" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Dosyayı kontrol et
+        if: steps.k.outputs.var == '1'
+        run: |
+          test "$(wc -c < site/index.html)" -gt 1000000
+          grep -q "VER='" site/index.html
+          grep -q '</html>' site/index.html
+      - name: Natro'ya yükle (şifreli FTP)
+        if: steps.k.outputs.var == '1'
+        run: |
+          printf 'machine %s login %s password %s\n' "$FTP_HOST" "$FTP_USER" "$FTP_PASS" > "$HOME/.netrc"
+          chmod 600 "$HOME/.netrc"
+          # Önce geçici adla yükle, sonra adını değiştir: yarım dosya yayına çıkmaz.
+          curl -sS --fail --netrc --ssl-reqd --connect-timeout 30 --max-time 300 \
+               -T site/index.html "ftp://$FTP_HOST/httpdocs/index.html.yeni" \
+               -Q "-RNFR httpdocs/index.html.yeni" -Q "-RNTO httpdocs/index.html"
+          rm -f "$HOME/.netrc"
+      - name: Canlı siteyi kontrol et
+        if: steps.k.outputs.var == '1'
+        run: |
+          BEK=$(grep -o "VER='[0-9]*'" site/index.html | head -1)
+          for i in 1 2 3 4 5 6; do
+            CAN=$(curl -sS -m 30 "https://www.erdalkarahan.com/index.html?x=$(date +%s)" | grep -o "VER='[0-9]*'" | head -1 || true)
+            echo "beklenen $BEK, canlı $CAN"
+            [ "$BEK" = "$CAN" ] && exit 0
+            sleep 10
+          done
+          echo "Canlı site beklenen sürümü göstermiyor"; exit 1
