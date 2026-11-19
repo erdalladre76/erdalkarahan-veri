@@ -1,13 +1,7 @@
 {
   "aciklama": "Şirket işlemleri sihirbazında il seçilince gösterilen ticaret sicili müdürlüğü uygulama notları. Her il için: oda (müdürlüğün bağlı olduğu oda), metin (o ile özgü kurallar, 1-4 cümle), kaynak (resmî oda/müdürlük sayfası), tarih (okunduğu gün). Sadece resmî kaynakta okunan bilgi yazılır.",
-  "guncelleme": "2026-11-18",
+  "guncelleme": "2026-11-19",
   "sira": [
-    "Bartın",
-    "Kastamonu",
-    "Sinop",
-    "Amasya",
-    "Giresun",
-    "Rize",
     "Artvin",
     "Gümüşhane",
     "Bayburt",
@@ -48,7 +42,8 @@
     "Balıkesir",
     "Elazığ",
     "Afyonkarahisar",
-    "Çanakkale"
+    "Çanakkale",
+    "Rize"
   ],
   "iller": {
     "İstanbul": {
@@ -339,6 +334,42 @@
       "metin": "Karabük Ticaret Sicili Müdürlüğü KARTSO bünyesindedir; başvurular MERSİS’ten yapılır. Müdür değişikliğinde odanın kendi formlarıyla (dilekçe, genel kurul toplantı tutanağı, hazır bulunanlar listesi, görev kabul beyanı, Üye Güncelleme Formu) başvurulur; tutanak noter onaylı 1 asıl + 1 fotokopi verilir. Yeni yetkilinin nüfus cüzdanı ve ikametgâh belgesinden 2’şer fotokopi ve 1 fotoğraf istenir.",
       "kaynak": "https://karabuktso.org.tr/ticaret-sicil/tescil-islemleri/mudur-tayini-mudur-iptali",
       "tarih": "2026-11-18"
+    },
+    "Bartın": {
+      "oda": "Bartın Ticaret ve Sanayi Odası (Bartın TSO)",
+      "metin": "Bartın Ticaret Sicili Müdürlüğü Bartın TSO bünyesindedir. Başvuru MERSİS’ten yapılır; yüz yüze işlem için odanın sitesindeki randevu formunda “Ticaret sicil işlemleri” seçilir, saat oda tarafından telefonla aranarak onaylanır. ETDS’den (elektronik defter) alınan organ kararlarında doğrulama kodu bulunmalıdır, bu kararlara ayrıca noter onayı aranmaz. Sermaye artırımında Rekabet Kurumu payı oda veznesine ya da odanın banka hesabına yatırılabilir.",
+      "kaynak": "https://www.bartintso.org.tr/limited-sermaye-arttirimi",
+      "tarih": "2026-11-19"
+    },
+    "Kastamonu": {
+      "oda": "Kastamonu Ticaret ve Sanayi Odası (Kastamonu TSO)",
+      "metin": "Kastamonu Ticaret Sicili Müdürlüğü Kastamonu TSO bünyesindedir. Tüm tescil talepleri MERSİS’ten yapılır ve MERSİS başvuru numarası talep dilekçesine mutlaka yazılır; yazılmazsa talep işleme alınmaz. Daha önce MERSİS’le kurulmuş şirketler de her yeni başvuruda önce MERSİS’ten takip numarası almalıdır. Odanın sitesinde oda ve sicil için ayrı tescil talep dilekçesi ile taahhütname örnekleri bulunur.",
+      "kaynak": "https://www.kastamonutso.org.tr/hizmetlerimiz/ticaret-sicil-islemleri/",
+      "tarih": "2026-11-19"
+    },
+    "Sinop": {
+      "oda": "Sinop Ticaret ve Sanayi Odası (Sinop TSO)",
+      "metin": "Sinop Ticaret Sicili Müdürlüğü Sinop TSO bünyesindedir. Başvuru MERSİS’ten yapılır; oda başvuruyu kontrol edip randevu verir. Adres değişikliği gibi işlemlerde odanın kendi “dilekçeli taahhütname” formu ve noter onaylı karar örnekleri kullanılır; hisse devrinde pay defteri fotokopisi ile noter onaylı devir sözleşmesi istenir. Birden fazla müdür varsa birinin müdürler kurulu başkanı olarak atanması gerekir.",
+      "kaynak": "https://www.sinoptso.org.tr/tescil-uyelik/",
+      "tarih": "2026-11-19"
+    },
+    "Amasya": {
+      "oda": "Amasya Ticaret ve Sanayi Odası (Amasya TSO)",
+      "metin": "Amasya Ticaret Sicili Müdürlüğü Amasya TSO bünyesindedir; başvurular MERSİS’ten yapılır ve kararlar çoğunlukla noter onaylı asıl + fotokopi olarak istenir. Müdür atamasında imza beyannamesi müdürlükte düzenlenir, ortak olmayan müdür için görevi kabul beyanı gerekir. Numarataj kaynaklı adres değişikliğinde dilekçe ve belediye yazısı yeterlidir, ancak belediye yazısında eski adres yoksa işlem yapılmaz. Hisse devrinde devreden ve devralanın pay defteri sayfaları da istenir.",
+      "kaynak": "https://amasyatso.org.tr/ticaret-sicil-mudurlugunde-istenen-belgeler/",
+      "tarih": "2026-11-19"
+    },
+    "Giresun": {
+      "oda": "Giresun Ticaret ve Sanayi Odası (Giresun TSO)",
+      "metin": "Giresun Ticaret Sicili Müdürlüğü Giresun TSO bünyesindedir. Odanın sitesinde limited şirket işlemleri için numaralı evrak listeleri ve karar örnekleri vardır: adres değişikliği 069, belediye numaratajı 071, hisse devri 076, tek ortağa düşme 075, müdür atama 078, sermaye artırımı 080. Sitede randevu ve MERSİS adımları anlatılmadığı için başvurudan önce odayla teyit etmek gerekir.",
+      "kaynak": "https://giresuntso.org.tr/ticaret-sicil/gerekli-evraklar/",
+      "tarih": "2026-11-19"
+    },
+    "Rize": {
+      "oda": "Rize Ticaret ve Sanayi Odası (Rize TSO)",
+      "metin": "",
+      "kaynak": "https://www.rizetso.org.tr/belgedetay/101/limited-sirket-pay-hisse-devri-islemi",
+      "tarih": "2026-11-19"
     }
   }
 }
