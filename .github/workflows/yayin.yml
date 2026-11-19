@@ -57,7 +57,7 @@ jobs:
           # Önce geçici adla yükle, sonra adını değiştir: yarım dosya yayına çıkmaz.
           curl -sS --fail --netrc --ssl-reqd --cacert "$RUNNER_TEMP/ca.pem" --connect-timeout 30 --max-time 300 \
                -T site/index.html "ftp://$FTP_HOST/httpdocs/index.html.yeni" \
-               -Q "-RNFR httpdocs/index.html.yeni" -Q "-RNTO httpdocs/index.html"
+               -Q "-RNFR index.html.yeni" -Q "-RNTO index.html"
           rm -f "$HOME/.netrc"
       - name: Canlı siteyi kontrol et
         if: steps.k.outputs.var == '1'
