@@ -1,7 +1,14 @@
 {
   "aciklama": "Günlük Resmî Gazete özeti. Yalnızca muhasebe, vergi, SGK, ticaret ve işletmeleri ilgilendiren başlıklar; metinler özet niteliğindedir, bağlayıcı olan Resmî Gazete metnidir.",
-  "guncelleme": "2026-11-18",
+  "guncelleme": "2026-11-19",
   "gunler": [
+    {
+      "tarih": "2026-11-19",
+      "sayi": "33435",
+      "url": "https://www.resmigazete.gov.tr/19.11.2026",
+      "ozet": "Bugün vergi ve muhasebe açısından önemli bir düzenleme yok. Yalnızca pilot lisanslarına ilişkin bir yönetmelik değişikliği ile iki üniversite yönetmeliği yayımlandı.",
+      "maddeler": []
+    },
     {
       "tarih": "2026-11-18",
       "sayi": "33434",
