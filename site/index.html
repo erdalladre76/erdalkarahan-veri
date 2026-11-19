@@ -6549,7 +6549,7 @@ window.ekYuzMsg=function(K){var Y=K.map(function(k){return num(k.yuz);}),any=Y.s
   ozluk:{t:'Özlük dosyası sihirbazı nasıl kullanılır?',s:[['steps','Adım adım ilerleyin','Dört adım var; her ekranda kutuları doldurup “Sonraki adım”a basın. Numaralı adımlara basarak da geçebilirsiniz.'],['kimlik','1–2. İşyeri ve çalışan','İşyeri ile çalışanın bilgilerini bir kez yazın; seçtiğiniz bütün formlara kendiliğinden gelir.'],['tur','3. Formları seçin','“İşe giriş paketi” düğmesi en sık gerekenleri seçer; görevlendirme, değişiklik bildirimi gibi formları ayrıca işaretleyin.'],['bitti','4. Form bilgileri ve sonuç','Her formun kendine özel kutularını doldurun. Sonuçta formlar tek dosyada indirilir, yazdırılır ya da paylaşılır; istediğinizi tek tek de alabilirsiniz.']]},
   arackdv:{t:'Araç KDV oranı nasıl bulunur?',s:[['arac','1. Aracı seçin','Binek, kamyonet, iş makinesi gibi aracın türünü seçin.'],['steps','2. Soruları yanıtlayın','İkinci el mi, satıcı galeri mi gibi sorular gelir.'],['bitti','3. Sonuç','KDV oranı, dayanağı, alıcının indirimi ve muhasebe kaydı açılır.']]}
  };
- var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611191050';
+ var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611191153';
  var MAP={ozluk:'ozluk',sirket:'sirket',amackonu:'esas',ortaklik:'ortaklik',gecbeyan:'gecbeyan',arackdv:'arackdv'};
  function open(key){var h=H[key];if(!h)return;var m=document.getElementById('hlp-modal');if(!m){m=document.createElement('div');m.id='hlp-modal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');document.body.appendChild(m);
      m.addEventListener('click',function(e){if(e.target===m||e.target.closest('[data-hx]')){m.hidden=true;document.documentElement.style.overflow='';}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){m.hidden=true;document.documentElement.style.overflow='';}});}
@@ -6873,6 +6873,9 @@ var DZ={
  },
  devreden:'Geçmiş bir dönemde indirilecek KDV azaldığında ya da hesaplanan KDV arttığında, o dönemden sonraki her beyannamenin “önceki dönemden devreden KDV” satırı değişir. Bu yüzden düzeltme yalnız hatalı ayla bitmez: hata ayından son verilen beyannameye kadar her ay sırayla düzeltilir. Devreden hatayı karşıladığı sürece ödenecek çıkmaz; devreden bittiği ay ödenecek KDV doğar ve o ay için süre sonrası (pişmanlık / kendiliğinden) kuralları uygulanır.',
  notlar:[
+  'e-Beyanname’de düzeltme gönderirken “Özel Onay” kutuları şöyle seçilir. DZT (Düzeltme): her düzeltmede işaretlenir; süresi içinde düzeltmede yalnız DZT yeter. KSS + DZT (Kanuni Süresinden Sonra): süre geçtikten sonra yapılan ve ödeme çıkarmayan düzeltmeler. PİŞ + DZT (Pişmanlık): süre geçtikten sonra yapılan ve ödenecek vergi çıkaran düzeltmeler; pişmanlık şartları varsa.',
+  'Düzeltme beyannamesi öncekini silmez, onun yerine geçer; önceki beyanname kayıtlarda durur ve her düzeltme ayrı bir kayıt (yeni sürüm) olarak görünür. Bu yüzden düzeltmede yalnız değişen satır değil, dönemin bütün bilgileri doğru haliyle yeniden girilir.',
+  'Damga vergisi: beyanname verme süresi içinde verilen düzeltme beyannamesinden beyanname damga vergisi alınmaz (488 sayılı Kanun, 1 sayılı tablo IV/2-b). Süre geçtikten sonra verilen düzeltmede beyanname damga vergisi yeniden tahakkuk edebilir; tahakkuk fişini kontrol edin.',
   'Vergi incelemesi başladıktan, takdire sevk edildikten ya da ihbar yapıldıktan sonra pişmanlıktan yararlanılamaz. Vergi dairesinin “izaha davet” yazısı geldiyse VUK 370’e göre 15 gün içinde açıklama yapma ve pişmanlık zammıyla ödeme imkânı ayrıca değerlendirilir.',
   'Pişmanlık zammı vadeden pişmanlık beyannamesinin verildiği tarihe kadar hesaplanır; ödeme 15 gün içinde yapılmalıdır. Mahsup talebi nakit ödeme yerine geçmez.',
   'Usulsüzlük cezası yalnız beyanname kanuni süresinde hiç verilmediğinde söz konusudur. Zamanında verilmiş beyannamenin düzeltilmesinde usulsüzlük cezası kesilmez.',
@@ -6880,6 +6883,8 @@ var DZ={
   'Ceza tutarları ve oranlar 2026 içindir: usulsüzlük cezaları 588 Sıra No.lu VUK Genel Tebliği, gecikme zammı/pişmanlık zammı aylık %3,7 (10556 sayılı CBK), SGK cezaları brüt asgari ücret 33.030 TL üzerinden.'
  ],
  kaynak:[
+  ['Beyannamelerde özel onay: DZT, KSS, PİŞ (KPMG Vergi)','https://kpmgvergi.com/blog/beyannamelerde-ozel-onay/81'],
+  ['Düzeltme beyannamesinde damga vergisi (Muhasebenews)','https://www.muhasebenews.com/?p=65303'],
   ['VUK 2026 ceza tutarları (PwC)','https://www.pwc.com.tr/tr/hizmetlerimiz/vergi/vergi-portali/pratik-bilgiler/vergi-usul-kanunu-ceza-tutarlari/vuk-ceza-tutarlari.html'],
   ['Pişmanlık ve ıslah, VUK 371 (M. Çoban)','https://muhammetcoban.com/vergi-hukuku/pismanlik-ve-islah/'],
   ['Kanuni süresinden sonra verilen beyannameler (TÜRMOB)','https://www.turmob.org.tr/BasinOdasi/BasinArsiv/Detay/6c841cfe-dd62-4771-8f1f-403de5372c84/idari-cozum-yollari-kanuni-suresinden-sonra-verilen-beyanname'],
