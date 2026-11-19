@@ -34,13 +34,28 @@ jobs:
           test "$(wc -c < site/index.html)" -gt 1000000
           grep -q "VER='" site/index.html
           grep -q '</html>' site/index.html
+      - name: Sunucu sertifikasını doğrula
+        if: steps.k.outputs.var == '1'
+        run: |
+          # Natro'nun FTP sunucusu ara sertifikayı göndermiyor; ara sertifikayı sertifikanın
+          # içinde yazan resmî adresten indirip zinciri sistemin güvendiği köklerle doğruluyoruz.
+          openssl s_client -starttls ftp -connect "$FTP_HOST:21" -servername "$FTP_HOST" </dev/null 2>/dev/null \
+            | sed -n '/-----BEGIN CERTIFICATE-----/,/-----END CERTIFICATE-----/p' > leaf.pem
+          test -s leaf.pem || { echo "Sunucu sertifikası alınamadı"; exit 1; }
+          openssl x509 -in leaf.pem -noout -subject -issuer -enddate
+          AIA=$(openssl x509 -in leaf.pem -noout -text | grep -o 'CA Issuers - URI:[^ ]*' | head -1 | sed 's/.*URI://')
+          test -n "$AIA" || { echo "Sertifikada ara sertifika adresi yok (kendinden imzalı olabilir)"; exit 1; }
+          curl -sS --fail -m 30 -o inter.bin "$AIA"
+          openssl x509 -inform DER -in inter.bin -out inter.pem 2>/dev/null || openssl x509 -inform PEM -in inter.bin -out inter.pem
+          openssl verify -untrusted inter.pem leaf.pem
+          cat /etc/ssl/certs/ca-certificates.crt inter.pem > "$RUNNER_TEMP/ca.pem"
       - name: Natro'ya yükle (şifreli FTP)
         if: steps.k.outputs.var == '1'
         run: |
           printf 'machine %s login %s password %s\n' "$FTP_HOST" "$FTP_USER" "$FTP_PASS" > "$HOME/.netrc"
           chmod 600 "$HOME/.netrc"
           # Önce geçici adla yükle, sonra adını değiştir: yarım dosya yayına çıkmaz.
-          curl -sS --fail --netrc --ssl-reqd --connect-timeout 30 --max-time 300 \
+          curl -sS --fail --netrc --ssl-reqd --cacert "$RUNNER_TEMP/ca.pem" --connect-timeout 30 --max-time 300 \
                -T site/index.html "ftp://$FTP_HOST/httpdocs/index.html.yeni" \
                -Q "-RNFR httpdocs/index.html.yeni" -Q "-RNTO httpdocs/index.html"
           rm -f "$HOME/.netrc"
