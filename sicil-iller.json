@@ -1,14 +1,7 @@
 {
   "aciklama": "Şirket işlemleri sihirbazında il seçilince gösterilen ticaret sicili müdürlüğü uygulama notları. Her il için: oda (müdürlüğün bağlı olduğu oda), metin (o ile özgü kurallar, 1-4 cümle), kaynak (resmî oda/müdürlük sayfası), tarih (okunduğu gün). Sadece resmî kaynakta okunan bilgi yazılır.",
-  "guncelleme": "2026-11-19",
+  "guncelleme": "2026-11-20",
   "sira": [
-    "Artvin",
-    "Gümüşhane",
-    "Bayburt",
-    "Erzincan",
-    "Tunceli",
-    "Bingöl",
-    "Muş",
     "Bitlis",
     "Siirt",
     "Batman",
@@ -43,7 +36,12 @@
     "Elazığ",
     "Afyonkarahisar",
     "Çanakkale",
-    "Rize"
+    "Rize",
+    "Gümüşhane",
+    "Bayburt",
+    "Tunceli",
+    "Bingöl",
+    "Muş"
   ],
   "iller": {
     "İstanbul": {
@@ -370,6 +368,53 @@
       "metin": "",
       "kaynak": "https://www.rizetso.org.tr/belgedetay/101/limited-sirket-pay-hisse-devri-islemi",
       "tarih": "2026-11-19"
+    },
+    "Artvin": {
+      "oda": "Artvin Ticaret ve Sanayi Odası (Artvin TSO)",
+      "metin": "Artvin Ticaret Sicili Müdürlüğü Artvin TSO bünyesindedir. Odanın sitesindeki limited şirket kuruluş listesi nüsha sayısı verir: kuruluş bildirim formu 3, ana sözleşme 4, noter ya da muhtar onaylı nüfus sureti ve imza beyannamesi 2’şer nüsha; dilekçede bağlı olunacak vergi dairesi yazılmalı, vekâletle başvuruda vekâletnamenin aslı ya da onaylı sureti eklenmelidir. Sayfada eski “Ticaret Sicili Memurluğu” ifadesi geçiyor; müdür, adres, hisse devri, sermaye artırımı ve randevu için ayrı sayfa olmadığından bu işlemlerde odayla teyit gerekir.",
+      "kaynak": "https://www.artvintso.org.tr/Limited-Sirket-YENI-KURULUS-TR.html",
+      "tarih": "2026-11-20"
+    },
+    "Erzincan": {
+      "oda": "Erzincan Ticaret ve Sanayi Odası (Erzincan TSO)",
+      "metin": "Erzincan Ticaret Sicili Müdürlüğü Erzincan TSO bünyesindedir. Odanın limited şirket sayfalarında başvurunun MERSİS’ten elektronik yapılacağı yazar; noter onaylı karar 1 asıl + 1 fotokopi istenir, elektronik ortamda alınan ya da ETDS doğrulama kodlu kararlarda noter tasdiki aranmaz. Müdür atamasında MERSİS “Yetki Kabul İşlemleri” ile elektronik kabul yapılmışsa fiziki belge istenmez; adres değişikliğinde belediye yazısında eski adres yoksa işlem yapılmaz. Merkez naklinde eski sicilden Yönetmelik 111. madde belgesi alınmadan başvuru yapılmaması istenir.",
+      "kaynak": "https://erzincantso.org.tr/ticaret-sicil/limited-sirketler/limited-sirket-mudur-tayini-mudur-iptali",
+      "tarih": "2026-11-20"
+    },
+    "Gümüşhane": {
+      "oda": "Gümüşhane Ticaret ve Sanayi Odası (Gümüşhane TSO)",
+      "metin": "",
+      "kaynak": "https://www.gumushanetso.org.tr/sk/148/adres-degisikligi-islemleri",
+      "tarih": "2026-11-20",
+      "deneme": 1
+    },
+    "Bayburt": {
+      "oda": "Bayburt Ticaret ve Sanayi Odası (Bayburt TSO)",
+      "metin": "",
+      "kaynak": "https://bayburttso.com/?page_id=621",
+      "tarih": "2026-11-20",
+      "deneme": 1
+    },
+    "Tunceli": {
+      "oda": "Tunceli Ticaret ve Sanayi Odası (Tunceli TSO)",
+      "metin": "",
+      "kaynak": "https://www.tuncelitso.org.tr/",
+      "tarih": "2026-11-20",
+      "deneme": 1
+    },
+    "Bingöl": {
+      "oda": "Bingöl Ticaret ve Sanayi Odası (Bingöl TSO)",
+      "metin": "",
+      "kaynak": "https://www.bintso.org.tr/Hizmetlerimiz/TicaretSicil/tabid/14765/Default.aspx",
+      "tarih": "2026-11-20",
+      "deneme": 1
+    },
+    "Muş": {
+      "oda": "Muş Ticaret ve Sanayi Odası (Muş TSO)",
+      "metin": "",
+      "kaynak": "https://www.mustso.org.tr/hizmetlerimiz/ticaret-sicili-islemleri/",
+      "tarih": "2026-11-20",
+      "deneme": 1
     }
   }
 }
