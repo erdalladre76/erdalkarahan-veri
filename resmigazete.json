@@ -1,7 +1,14 @@
 {
   "aciklama": "Günlük Resmî Gazete özeti. Yalnızca muhasebe, vergi, SGK, ticaret ve işletmeleri ilgilendiren başlıklar; metinler özet niteliğindedir, bağlayıcı olan Resmî Gazete metnidir.",
-  "guncelleme": "2026-11-19",
+  "guncelleme": "2026-11-20",
   "gunler": [
+    {
+      "tarih": "2026-11-20",
+      "sayi": "33436",
+      "url": "https://www.resmigazete.gov.tr/20.11.2026",
+      "ozet": "Bugün vergi ve muhasebe açısından önemli bir düzenleme yok. Yalnızca belediye meclislerinin çalışmasına ilişkin bir yönetmelik değişikliği, akaryakıt ve LPG piyasasına dönük iki EPDK kararı ile Nükleer Düzenleme Kurulu kararları yayımlandı.",
+      "maddeler": []
+    },
     {
       "tarih": "2026-11-19",
       "sayi": "33435",
