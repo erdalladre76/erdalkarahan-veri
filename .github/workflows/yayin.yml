@@ -39,8 +39,13 @@ jobs:
         run: |
           # Natro'nun FTP sunucusu ara sertifikayı göndermiyor; ara sertifikayı sertifikanın
           # içinde yazan resmî adresten indirip zinciri sistemin güvendiği köklerle doğruluyoruz.
-          openssl s_client -starttls ftp -connect "$FTP_HOST:21" -servername "$FTP_HOST" </dev/null 2>/dev/null \
-            | sed -n '/-----BEGIN CERTIFICATE-----/,/-----END CERTIFICATE-----/p' > leaf.pem
+          # Natro'nun FTP sunucusu bazen geç cevap veriyor: en çok 5 kez, her biri 25 saniye sınırla dene.
+          for i in 1 2 3 4 5; do
+            timeout 25 openssl s_client -starttls ftp -connect "$FTP_HOST:21" -servername "$FTP_HOST" </dev/null 2>/dev/null \
+              | sed -n '/-----BEGIN CERTIFICATE-----/,/-----END CERTIFICATE-----/p' > leaf.pem || true
+            test -s leaf.pem && break
+            echo "Sertifika alınamadı, deneme $i; 15 saniye sonra yeniden"; sleep 15
+          done
           test -s leaf.pem || { echo "Sunucu sertifikası alınamadı"; exit 1; }
           openssl x509 -in leaf.pem -noout -subject -issuer -enddate
           AIA=$(openssl x509 -in leaf.pem -noout -text | grep -o 'CA Issuers - URI:[^ ]*' | head -1 | sed 's/.*URI://')
@@ -55,10 +60,14 @@ jobs:
           printf 'machine %s login %s password %s\n' "$FTP_HOST" "$FTP_USER" "$FTP_PASS" > "$HOME/.netrc"
           chmod 600 "$HOME/.netrc"
           # Önce geçici adla yükle, sonra adını değiştir: yarım dosya yayına çıkmaz.
-          curl -sS --fail --netrc --ssl-reqd --cacert "$RUNNER_TEMP/ca.pem" --connect-timeout 30 --max-time 300 \
-               -T site/index.html "ftp://$FTP_HOST/httpdocs/index.html.yeni" \
-               -Q "-RNFR index.html.yeni" -Q "-RNTO index.html"
+          for i in 1 2 3; do
+            curl -sS --fail --netrc --ssl-reqd --cacert "$RUNNER_TEMP/ca.pem" --connect-timeout 30 --max-time 300 \
+                 -T site/index.html "ftp://$FTP_HOST/httpdocs/index.html.yeni" \
+                 -Q "-RNFR index.html.yeni" -Q "-RNTO index.html" && OK=1 && break
+            echo "Yükleme olmadı, deneme $i; 20 saniye sonra yeniden"; sleep 20
+          done
           rm -f "$HOME/.netrc"
+          test "${OK:-0}" = "1"
       - name: Canlı siteyi kontrol et
         if: steps.k.outputs.var == '1'
         run: |
