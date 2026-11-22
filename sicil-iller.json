@@ -1,13 +1,7 @@
 {
   "aciklama": "Şirket işlemleri sihirbazında il seçilince gösterilen ticaret sicili müdürlüğü uygulama notları. Her il için: oda (müdürlüğün bağlı olduğu oda), metin (o ile özgü kurallar, 1-4 cümle), kaynak (resmî oda/müdürlük sayfası), tarih (okunduğu gün). Sadece resmî kaynakta okunan bilgi yazılır.",
-  "guncelleme": "2026-11-20",
+  "guncelleme": "2026-11-22",
   "sira": [
-    "Bitlis",
-    "Siirt",
-    "Batman",
-    "Mardin",
-    "Şırnak",
-    "Hakkari",
     "Ağrı",
     "Iğdır",
     "Kars",
@@ -41,7 +35,9 @@
     "Bayburt",
     "Tunceli",
     "Bingöl",
-    "Muş"
+    "Muş",
+    "Şırnak",
+    "Hakkari"
   ],
   "iller": {
     "İstanbul": {
@@ -415,6 +411,42 @@
       "kaynak": "https://www.mustso.org.tr/hizmetlerimiz/ticaret-sicili-islemleri/",
       "tarih": "2026-11-20",
       "deneme": 1
+    },
+    "Bitlis": {
+      "oda": "Bitlis Ticaret ve Sanayi Odası (merkez); Tatvan Ticaret ve Sanayi Odası (TATSO)",
+      "metin": "İlde Tatvan TSO bünyesinde ayrı bir Tatvan Ticaret Sicili Müdürlüğü vardır. Tatvan’da başvuru MERSİS’ten yapılıp talep numarası alınır, belgeler müdürlüğe elden teslim edilir; oda kendi numaralı formlarını (ör. dilekçe TS FN:032, taahhütname TS FN:035) kullanır. Her işlemde her ortak ve her yetkili için ayrı ayrı KVKK Aydınlatma Metni ve Açık Rıza Beyanı formu (TS FN:140) doldurulur; oda, belge hazırlamadan önce müdürlüğün telefonla aranmasını önerir.",
+      "kaynak": "https://www.tatso.org.tr/sayfa/limited-sirket-islemleri.html",
+      "tarih": "2026-11-22"
+    },
+    "Siirt": {
+      "oda": "Siirt Ticaret ve Sanayi Odası (Siirt TSO)",
+      "metin": "Siirt Ticaret Sicili Müdürlüğü Siirt TSO bünyesindedir; başvuru MERSİS’ten başvuru onay numarası alınarak yapılır. Dilekçede şirket unvanı, sermaye, merkez açılış tarihi ve NACE kodu yer almalı, şirket kaşesiyle yetkili tarafından imzalanmalıdır. Genel kurul kararları noter onaylı 2 nüsha istenir; nüfus kaydı Siirt dışında olan kişiler için ikametgâh belgesi aranır. Adres değişikliğinde dilekçeye eski ve yeni adres sokak, numara, mahalle, ilçe ve il ile tam yazılmalıdır.",
+      "kaynak": "https://www.siirttso.org.tr/index.php/limited-sirketler",
+      "tarih": "2026-11-22"
+    },
+    "Batman": {
+      "oda": "Batman Ticaret ve Sanayi Odası (BATSO)",
+      "metin": "Batman Ticaret Sicili Müdürlüğü BATSO bünyesindedir. Oda, dilekçe, genel kurul kararı, gündem kararı, hazır bulunanlar listesi, SMMM sermaye raporu ve banka yazısı için kendi örnek belgelerini yayımlar; noter onaylı genel kurul kararları genelde 1 asıl + 1 fotokopi istenir. Belediye numarataj kaynaklı adres değişikliğinde belediye yazısında eski ve yeni adres birlikte yazmıyorsa işlem yapılmaz.",
+      "kaynak": "https://www.batso.org.tr/tr/tescil-kayit",
+      "tarih": "2026-11-22"
+    },
+    "Mardin": {
+      "oda": "Mardin Ticaret ve Sanayi Odası (Mardin TSO)",
+      "metin": "Mardin Ticaret Sicili Müdürlüğü Mardin TSO bünyesindedir (Artuklu); başvuru MERSİS’ten elektronik yapılır. Oda, genel dilekçeye ek olarak ayrı bir “madde tadil dilekçesi” ister ve bunun yanında gündem kararı, hazır bulunanlar listesi, tadil metni gibi kendi örnek formlarını yayımlar. Tadil metni tüm ortaklarca imzalı ve kaşeli olmalıdır; belediye kaynaklı adres değişikliğinde belediye yazısındaki eski adres sicildeki kayıtla aynı olmalıdır.",
+      "kaynak": "https://mardintso.org.tr/hizmet/ticaret-sicili-islemleri/limited-sirket/",
+      "tarih": "2026-11-22"
+    },
+    "Şırnak": {
+      "oda": "Şırnak Ticaret ve Sanayi Odası (Şırnak TSO)",
+      "metin": "",
+      "kaynak": "https://www.sirnaktso.org.tr/tr/menu/ticaret-sicil/51",
+      "tarih": "2026-11-22"
+    },
+    "Hakkari": {
+      "oda": "Hakkari Ticaret ve Sanayi Odası (HATSO)",
+      "metin": "",
+      "kaynak": "https://www.hatso.org.tr/",
+      "tarih": "2026-11-22"
     }
   }
 }
