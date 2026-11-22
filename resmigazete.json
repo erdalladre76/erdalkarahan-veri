@@ -1,7 +1,15 @@
 {
   "aciklama": "Günlük Resmî Gazete özeti. Yalnızca muhasebe, vergi, SGK, ticaret ve işletmeleri ilgilendiren başlıklar; metinler özet niteliğindedir, bağlayıcı olan Resmî Gazete metnidir.",
-  "guncelleme": "2026-11-20",
+  "guncelleme": "2026-11-22",
   "gunler": [
+    {
+      "tarih": "2026-11-22",
+      "sayi": "33438",
+      "url": "https://www.resmigazete.gov.tr/22.11.2026",
+      "ozet": "Bugün vergi ve muhasebe açısından önemli bir düzenleme yok. (Resmî metinden henüz doğrulanmadı.)",
+      "dogrulanmadi": true,
+      "maddeler": []
+    },
     {
       "tarih": "2026-11-20",
       "sayi": "33436",
