@@ -1,13 +1,26 @@
 {
   "aciklama": "Günlük Resmî Gazete özeti. Yalnızca muhasebe, vergi, SGK, ticaret ve işletmeleri ilgilendiren başlıklar; metinler özet niteliğindedir, bağlayıcı olan Resmî Gazete metnidir.",
-  "guncelleme": "2026-11-22",
+  "guncelleme": "2026-11-23",
   "gunler": [
+    {
+      "tarih": "2026-11-23",
+      "sayi": "33439",
+      "url": "https://www.resmigazete.gov.tr/23.11.2026",
+      "ozet": "Bugün vergi ve muhasebe açısından önemli bir düzenleme yok. Yalnızca bir üniversiteye ait iki yönetmelik değişikliği yayımlandı.",
+      "maddeler": []
+    },
     {
       "tarih": "2026-11-22",
       "sayi": "33438",
       "url": "https://www.resmigazete.gov.tr/22.11.2026",
-      "ozet": "Bugün vergi ve muhasebe açısından önemli bir düzenleme yok. (Resmî metinden henüz doğrulanmadı.)",
-      "dogrulanmadi": true,
+      "ozet": "Bugün vergi ve muhasebe açısından önemli bir düzenleme yok. Yalnızca iki üniversite yönetmeliği yayımlandı.",
+      "maddeler": []
+    },
+    {
+      "tarih": "2026-11-21",
+      "sayi": "33437",
+      "url": "https://www.resmigazete.gov.tr/21.11.2026",
+      "ozet": "Bugün vergi ve muhasebe açısından yeni bir mevzuat düzenlemesi yok. Milletlerarası anlaşmalara ilişkin onay kararları (aralarında kırsal kalkınma desteklerine dönük IPARD III anlaşması da var), atama kararları, ilaç tanıtımına ilişkin bir yönetmelik değişikliği ve Danıştay Dördüncü Dairesinin bir kararı yayımlandı.",
       "maddeler": []
     },
     {
