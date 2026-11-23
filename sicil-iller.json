@@ -1,13 +1,7 @@
 {
   "aciklama": "Şirket işlemleri sihirbazında il seçilince gösterilen ticaret sicili müdürlüğü uygulama notları. Her il için: oda (müdürlüğün bağlı olduğu oda), metin (o ile özgü kurallar, 1-4 cümle), kaynak (resmî oda/müdürlük sayfası), tarih (okunduğu gün). Sadece resmî kaynakta okunan bilgi yazılır.",
-  "guncelleme": "2026-11-22",
+  "guncelleme": "2026-11-23",
   "sira": [
-    "Ağrı",
-    "Iğdır",
-    "Kars",
-    "Ardahan",
-    "Adıyaman",
-    "Kilis",
     "Osmaniye",
     "Niğde",
     "Aksaray",
@@ -37,7 +31,10 @@
     "Bingöl",
     "Muş",
     "Şırnak",
-    "Hakkari"
+    "Hakkari",
+    "Ardahan",
+    "Kars",
+    "Kilis"
   ],
   "iller": {
     "İstanbul": {
@@ -447,6 +444,42 @@
       "metin": "",
       "kaynak": "https://www.hatso.org.tr/",
       "tarih": "2026-11-22"
+    },
+    "Ağrı": {
+      "oda": "Ağrı Ticaret ve Sanayi Odası (Ağrı TSO)",
+      "metin": "Ağrı TSO’da evrak Ticaret Sicili Müdürlüğü ve Oda Sicil Müdürlüğü için iki takım hâlinde istenir; Oda Sicil’e çoğu işlemde noter onaylı kararın fotokopisi yeter ve her işlemde ayrıca Kişisel Veri Paylaşımı Dilekçesi verilir. Karar MERSİS’te elektronik alınmışsa ya da ETDS ile doğrulanabiliyorsa noter onayı aranmaz. Adres değişikliğinde MERSİS’te onaya göndermeden “Değişiklik Ön İzleme” ile adresin kararla aynı olduğu kontrol edilmelidir; müdür atamasında her müdürün münferit mi müşterek mi yetkili olduğu açıkça yazılmalıdır.",
+      "kaynak": "https://agritso.org.tr/limited-sirket/",
+      "tarih": "2026-11-23"
+    },
+    "Iğdır": {
+      "oda": "Iğdır Ticaret ve Sanayi Odası (ITSO)",
+      "metin": "Iğdır Ticaret Sicili Müdürlüğü Iğdır TSO bünyesindedir ve kuruluşta odanın kendi “Yeni Kayıt Talep Dilekçesi” ile “Hükmi Şahıs Kayıt Beyannamesi” istenir; tüm ortakların ve ortak olmayan müdürlerin ikişer fotoğrafı da verilir. Rekabet Kurumu payı oda veznesine ya da odanın banka hesabına yatırılabilir. Limited şirket sermaye artırımında noter onaylı genel kurul kararı bir asıl ve bir fotokopi, tadil metni ile hazır bulunanlar listesi asıl olarak istenir; başvuru karardan itibaren 30 gün içinde yapılmalıdır.",
+      "kaynak": "https://igdirtso.org.tr/1-limited-sirket-yeni-kayit/",
+      "tarih": "2026-11-23"
+    },
+    "Adıyaman": {
+      "oda": "Adıyaman Ticaret ve Sanayi Odası (Adıyaman TSO)",
+      "metin": "Adıyaman Ticaret Sicili Müdürlüğü Adıyaman TSO bünyesindedir; başvuru MERSİS’ten yapılır. Limited şirkette adres değişikliği, müdür atama/istifası, hisse devri ve sermaye artırımında genel kurul kararı noter onaylı 2 adet, tadil metni 3 adet istenir. Hisse devrinde noter devir sözleşmesinin yanında müdür imzalı ve kaşeli pay defteri sureti verilir; devreden ortak müdürse görevine devam edip etmeyeceği karara yazılır. Belediye numaratajından doğan adres değişikliğinde belediyenin imzalı, mühürlü yazısı dilekçeye eklenir.",
+      "kaynak": "https://adiyamantso.org.tr/sayfa/limited-sirket",
+      "tarih": "2026-11-23"
+    },
+    "Ardahan": {
+      "oda": "Ardahan Ticaret ve Sanayi Odası",
+      "metin": "",
+      "kaynak": "https://ardahantso.org.tr/H%C4%B0ZMETLER/TicaretSicilM%C3%BCd%C3%BCrl%C3%BC%C4%9F%C3%BC/tabid/3172/Default.aspx",
+      "tarih": "2026-11-23"
+    },
+    "Kars": {
+      "oda": "Kars Ticaret ve Sanayi Odası",
+      "metin": "",
+      "kaynak": "https://karstso.org.tr/icerik/ticaret-sicil-islemleri",
+      "tarih": "2026-11-23"
+    },
+    "Kilis": {
+      "oda": "Kilis Ticaret ve Sanayi Odası",
+      "metin": "",
+      "kaynak": "https://www.kilistso.org.tr/",
+      "tarih": "2026-11-23"
     }
   }
 }
