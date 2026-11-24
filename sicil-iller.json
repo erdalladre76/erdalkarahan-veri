@@ -1,13 +1,7 @@
 {
   "aciklama": "Şirket işlemleri sihirbazında il seçilince gösterilen ticaret sicili müdürlüğü uygulama notları. Her il için: oda (müdürlüğün bağlı olduğu oda), metin (o ile özgü kurallar, 1-4 cümle), kaynak (resmî oda/müdürlük sayfası), tarih (okunduğu gün). Sadece resmî kaynakta okunan bilgi yazılır.",
-  "guncelleme": "2026-11-23",
+  "guncelleme": "2026-11-24",
   "sira": [
-    "Osmaniye",
-    "Niğde",
-    "Aksaray",
-    "Nevşehir",
-    "Kırşehir",
-    "Kırıkkale",
     "Karaman",
     "Yozgat",
     "Çankırı",
@@ -34,7 +28,9 @@
     "Hakkari",
     "Ardahan",
     "Kars",
-    "Kilis"
+    "Kilis",
+    "Nevşehir",
+    "Niğde"
   ],
   "iller": {
     "İstanbul": {
@@ -480,6 +476,44 @@
       "metin": "",
       "kaynak": "https://www.kilistso.org.tr/",
       "tarih": "2026-11-23"
+    },
+    "Osmaniye": {
+      "oda": "Osmaniye Ticaret ve Sanayi Odası (OTSO)",
+      "metin": "Osmaniye Ticaret Sicili Müdürlüğü OTSO bünyesindedir. Adres değişikliğinde yeni adres kararda Ulusal Adres Veri Tabanı standardına uygun olarak il, ilçe/mahalle, cadde/sokak ve dış/iç kapı no ile yazılmalıdır. Hisse devrinde noter onaylı Hisse Devri Kararı ve asıl devir sözleşmesinin yanında devreden ve devralanın pay defteri sayfası ile defterin noter tasdik sayfasının fotokopisi verilir. Sermaye artırımında tadil kararının Word dosyası ayrıca odanın e-posta adresine gönderilir.",
+      "kaynak": "https://www.osmaniyetso.org.tr/limited-sirket/",
+      "tarih": "2026-11-24"
+    },
+    "Aksaray": {
+      "oda": "Aksaray Ticaret ve Sanayi Odası (Aksaray TSO)",
+      "metin": "Aksaray Ticaret Sicili Müdürlüğü Aksaray TSO bünyesindedir; MERSİS başvurusu müdürlüğe yaptırılırsa ek ücret alınır ve ücretler oda veznesine yatırılır. Oda dilekçe, genel kurul kararı, adres taahhütnamesi, görev kabul beyanı, tadil metni ve müdürler beyanı için kendi örneklerini verir. Hisse devrinde noter onaylı devir sözleşmesi 1 asıl 1 fotokopi, pay defterinin devreden ve devralan sayfaları birer fotokopi istenir. Belediye numaratajından doğan adres değişikliğinde belediye yazısında eski adres de yazmalıdır, yoksa işlem yapılmaz.",
+      "kaynak": "https://aksaraytso.org.tr/hizmetler/ticaret-sicil-servisi/limited-sirket-islemleri",
+      "tarih": "2026-11-24"
+    },
+    "Kırşehir": {
+      "oda": "Kırşehir Ticaret ve Sanayi Odası (Kırşehir TSO)",
+      "metin": "Kırşehir Ticaret Sicili Müdürlüğü Kırşehir TSO bünyesindedir; başvurularda ticaret sicili dilekçesi ve taahhütname ile odanın Tüzel Kişi Oda Kayıt Beyannamesi istenir. Genel kurul kararları 2 adet noter tasdikli getirilir ve noter tasdikinden itibaren 30 gün içinde tescil ettirilmelidir. Müdür tüzel kişiyse onun adına hareket edecek gerçek kişiyi gösteren organ kararının noter onaylı örneği de verilir.",
+      "kaynak": "https://kirsehirtso.org.tr/ticaret-sicil-mudurlugunde-istenen-belgeler/",
+      "tarih": "2026-11-24"
+    },
+    "Kırıkkale": {
+      "oda": "Kırıkkale Ticaret ve Sanayi Odası (KTSO)",
+      "metin": "Kırıkkale Ticaret Sicili Müdürlüğü KTSO bünyesindedir. Oda, limited şirket müdür görev kabulü, adres değişikliği, hisse devri, ölüm hâlinde hisse devri ve sermaye artırımı için ayrı evrak listelerini sitesinde Word dosyası olarak yayımlar. Başvurularda odanın “Tüzel Kişiler İçin Oda Kayıt Beyannamesi” de istenir; ücretler sitedeki Ticaret Sicil İşlem Fiyat Listesi’ndedir.",
+      "kaynak": "https://www.kirikkaletso.org.tr/ktso/accordionmenu.asp?ac=3",
+      "tarih": "2026-11-24"
+    },
+    "Nevşehir": {
+      "oda": "Nevşehir Ticaret ve Sanayi Odası (NTSO)",
+      "kaynak": "https://www.ntso.org.tr/tr/tescil",
+      "metin": "",
+      "tarih": "2026-11-24",
+      "deneme": 1
+    },
+    "Niğde": {
+      "oda": "Niğde Ticaret ve Sanayi Odası (NİTSO)",
+      "kaynak": "https://www.nitso.org.tr/TicaretSicil/De%C4%9Fi%C5%9Fiklik%C4%B0%C5%9Flemleri/Limited%C5%9Eirket/tabid/20295/Default.aspx",
+      "metin": "",
+      "tarih": "2026-11-24",
+      "deneme": 1
     }
   }
 }
