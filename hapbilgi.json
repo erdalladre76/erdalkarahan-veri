@@ -1,6 +1,28 @@
 {
- "guncelleme": "2026-11-19",
+ "guncelleme": "2026-11-24",
  "hap": [
+  {
+   "id": "yd-2026-4",
+   "tarih": "2026-11-24",
+   "etiket": "VERGİ",
+   "baslik": "Yeniden değerleme oranı %27,83 resmîleşti; 4. dönemde de geçerli",
+   "metin": "599 Sıra No.lu VUK Genel Tebliği 24 Kasım 2026 Resmî Gazete’de yayımlandı ve 2026 yılı yeniden değerleme oranını %27,83 olarak ilan etti. Aynı oran, 2026’nın son (Ekim–Aralık) geçici vergi döneminde VUK mük. 298/Ç yeniden değerlemesinde de kullanılacak. Maktu vergi, harç ve cezalar ile kanunlardaki had ve tutarlar 2027’de bu oranla güncellenecek.",
+   "kaynak": {
+    "ad": "VUK Genel Tebliği Sıra No: 599 (RG 24.11.2026, 33440)",
+    "url": "https://www.bdturkey.com/vergi-usul-kanunu-genel-tebligi-sira-no-599"
+   }
+  },
+  {
+   "id": "vuk-598-bilgi-fisi-e-arsiv",
+   "tarih": "2026-11-24",
+   "etiket": "E-BELGE",
+   "baslik": "Bilgi fişi kalkıyor: yeni nesil ÖKC’den e-Arşiv fatura dönemi",
+   "metin": "598 Sıra No.lu VUK Genel Tebliği ile 509 sayılı tebliğdeki bilgi fişi tanımı ve ÖKC’den alınan fatura/e-Bilet bilgi fişi ibareleri kaldırıldı. e-Arşiv’e dahil olmayan mükellefler de faturalarını izinli yeni nesil ÖKC, taksi mali cihazı ya da güvenli mobil ödeme sistemi üzerinden e-Arşiv fatura olarak düzenleyebilecek. e-SMM düzenleyen yeni nesil ÖKC kullanan hekim, diş hekimi ve veteriner hekimlerin ayrıca POS bulundurma zorunluluğu kalkıyor. Değişiklikler 1 Ocak 2027’de yürürlüğe giriyor.",
+   "kaynak": {
+    "ad": "VUK Genel Tebliği Sıra No: 598 (RG 24.11.2026, 33440)",
+    "url": "https://www.muhasebetr.com/guncelmevzuat/mevzuat_oku.php?mevzuat_id=7264"
+   }
+  },
   {
    "id": "yd-2027-yillik",
    "tarih": "2026-11-03",
