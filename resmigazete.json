@@ -6,27 +6,28 @@
       "tarih": "2026-11-24",
       "sayi": "33440",
       "url": "https://www.resmigazete.gov.tr/24.11.2026",
-      "ozet": "2026 yılı yeniden değerleme oranı açıklandı; e-belge ve yeni nesil ödeme kaydedici cihaz uygulamasında değişiklik yapıldı. (Resmî metinden henüz doğrulanmadı.)",
-      "dogrulanmadi": true,
+      "ozet": "2026 yılı yeniden değerleme oranı %27,83 olarak ilan edildi; e-Belge tebliğinde 1 Ocak 2027'de yürürlüğe girecek değişiklikler yapıldı.",
       "maddeler": [
         {
           "etiket": "VERGİ",
           "onemli": true,
           "baslik": "2026 yılı yeniden değerleme oranı: %27,83 (VUK Genel Tebliği Sıra No: 599)",
-          "metin": "Hazine ve Maliye Bakanlığı 2026 yılı yeniden değerleme oranını %27,83 olarak ilan etti. Bu oran, yeni yılda maktu vergi, harç ve cezalardaki artışlara esas alınıyor.",
+          "metin": "Hazine ve Maliye Bakanlığı 2026 yılı için yeniden değerleme oranını %27,83 olarak ilan etti. Aynı oran 2026 yılının son geçici vergi döneminde de uygulanacak.",
           "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261124-3.htm"
         },
         {
           "etiket": "VERGİ",
           "onemli": true,
-          "baslik": "e-Belge ve yeni nesil ÖKC kurallarında değişiklik (VUK Genel Tebliği Sıra No: 598)",
-          "metin": "509 sıra numaralı Vergi Usul Kanunu Genel Tebliğinde değişiklik yapıldı. Düzenleme, e-Arşiv Fatura gibi elektronik belgelerin yeni nesil ödeme kaydedici cihazlar üzerinden düzenlenmesine ilişkin kuralları içeriyor; ayrıntılar için tebliğ metnine bakılmalı.",
-          "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261124-2.htm"
+          "baslik": "e-Belgede bilgi fişi kalkıyor, cihazdan e-Arşiv Fatura geliyor (VUK Genel Tebliği Sıra No: 598)",
+          "metin": "509 sıra numaralı tebliğde yapılan değişiklikle “bilgi fişi” uygulaması kaldırıldı; e-Arşiv Fatura uygulamasına dahil olmayan mükellefler 1 Ocak 2027'den itibaren faturalarını izin verilen yeni nesil ödeme kaydedici cihazlar, taksi mali cihazları veya mobil ödeme ve e-belge sistemi üzerinden e-Arşiv Fatura olarak düzenleyebilecek. Cihazın arızalanması ya da çalınması kâğıt belge düzenlenebilecek haller arasına alındı; e-Serbest Meslek Makbuzu düzenleyen cihazı iş yerinde bulunduran hekimlerin ayrıca POS cihazı kullanması gerekmeyecek. Tebliğ 1 Ocak 2027'de yürürlüğe giriyor.",
+          "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261124-2.htm",
+          "site": "#h-ebelge598",
+          "siteAd": "e-Belge 2027 Değişiklikleri (598 Tebliğ)"
         },
         {
           "etiket": "TEŞVİK",
           "baslik": "Hayvancılık desteklemeleri tebliğinde değişiklik (No: 2026/29)",
-          "metin": "Tarım ve Orman Bakanlığı, hayvancılık desteklemelerinin uygulama esaslarında değişiklik yaptı; bazı destek ölçütleri yeniden belirlendi.",
+          "metin": "Tarım ve Orman Bakanlığı, hayvancılık desteklemelerinin uygulama esaslarını güncelledi; buzağı, kuzu-oğlak, atık ve arıcılık desteklerinin şartlarında değişiklik yapıldı, bazı ilave destekler eklendi.",
           "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261124-4.htm"
         }
       ]
