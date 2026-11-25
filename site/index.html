@@ -2801,10 +2801,98 @@ function bordro(brut,ay,isvOran){
   return {brut:brut,sgk:sgk,iss:iss,mat:mat,gvH:gvH,ist:ist,gv:gv,dv:dv,net:net,isv:isv,isvI:isvI,maliyet:brut+isv+isvI,ay:ay,isvOran:isvOran||.2175,sm:sm,tav:tav,dvH:brut*P26.dv,dvIst:Math.min(brut*P26.dv,P26.asg*P26.dv)};
 }
 /* maaşa ek ödeme (izin ücreti, ihbar, fazla mesai) kesintileri: aynı ay maaşına eklenmenin doğurduğu fark */
+function b0net(u,mu,gvU){return u-mu.sgk-mu.iss-gvU-mu.dv;}
 function ekOdeme(u,ek,ay,sgkli){var tav=P26.asg*P26.tavanX;function f(b,eb){var sm=Math.min(b+(sgkli?eb:0),tav),sgk=sm*P26.sgkI,iss=sm*P26.issI;return{sgk:sgk,iss:iss,mat:b+eb-sgk-iss,dv:Math.max(0,(b+eb)*P26.dv-P26.asg*P26.dv)};}
   var mu=f(u,0),mt=f(u,ek),prev=mu.mat*(ay-1),am=P26.asg*(1-P26.sgkI-P26.issI),ist=gvT(am*ay)-gvT(am*(ay-1));
   var gvU=Math.max(0,gvT(prev+mu.mat)-gvT(prev)-ist),gvA=Math.max(0,gvT(prev+mt.mat)-gvT(prev)-ist);
-  var r={sgk:mt.sgk-mu.sgk,iss:mt.iss-mu.iss,gv:gvA-gvU,dv:mt.dv-mu.dv,tav:tav,emat:mt.mat-mu.mat,c0:prev+mu.mat,c1:prev+mt.mat};r.net=ek-r.sgk-r.iss-r.gv-r.dv;return r;}
+  var r={sgk:mt.sgk-mu.sgk,iss:mt.iss-mu.iss,gv:gvA-gvU,dv:mt.dv-mu.dv,tav:tav,emat:mt.mat-mu.mat,c0:prev+mu.mat,c1:prev+mt.mat};r.bnet=b0net(u,mu,gvU);r.net=ek-r.sgk-r.iss-r.gv-r.dv;return r;}
+/* Fazla mesai: soru soru sihirbaz */
+(function(){var st=document.createElement('style');st.textContent=
+'.tool.mw-on>.fields,.tool.mw-on>.result{display:none!important}.tool.mw-on{display:block!important}'+
+'.mw{border:1.5px solid var(--rule);border-radius:var(--r,14px);background:var(--sheet);padding:20px 22px;max-width:760px}'+
+'.mw-top{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}'+
+'.mw-st{font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--stamp)}'+
+'.mw-bar{height:6px;border-radius:6px;background:color-mix(in srgb,var(--stamp) 14%,transparent);overflow:hidden;margin:0 0 16px}.mw-bar i{display:block;height:100%;background:var(--stamp);border-radius:6px;transition:width .25s}'+
+'.mw h3{font-size:clamp(19px,2.4vw,24px);line-height:1.3;margin:0 0 8px}.mw-n{font-size:14.5px;line-height:1.55;opacity:.85;margin:0 0 14px;background:color-mix(in srgb,var(--stamp) 7%,transparent);border-radius:10px;padding:10px 12px}'+
+'.mw-in{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:0 0 14px}.mw-in label{display:flex;align-items:center;gap:8px;font-weight:600}'+
+'.mw-in input,.mw-in select{font:600 20px inherit;font-family:inherit;padding:10px 12px;border:1.5px solid var(--rule);border-radius:12px;background:var(--paper);color:var(--ink);width:min(100%,220px)}.mw-in input.sm{width:110px}'+
+'.mw-yn{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 14px}.mw-yn button{font:700 18px inherit;font-family:inherit;padding:14px;border-radius:12px;border:1.5px solid var(--rule);background:var(--paper);color:var(--ink);cursor:pointer}.mw-yn button:hover{border-color:var(--stamp)}'+
+'.mw-nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}.mw-nav button{font:700 16px inherit;font-family:inherit;padding:12px 18px;border-radius:12px;cursor:pointer;border:1.5px solid var(--rule);background:var(--paper);color:var(--ink)}.mw-nav .go{background:var(--stamp);border-color:var(--stamp);color:#fff}'+
+'.mw-err{color:#C2414A;font-weight:600;margin:-6px 0 10px;font-size:14px}'+
+'.mw-sw{background:none;border:0;color:var(--stamp);text-decoration:underline;cursor:pointer;font:inherit;font-size:13.5px;padding:0}'+
+'.mw-big{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px;margin:6px 0 16px}.mw-big div{border:1px solid var(--rule);border-radius:12px;padding:12px 14px;background:var(--paper)}.mw-big small{display:block;font-size:13px;opacity:.75}.mw-big b{display:block;font-size:22px;margin-top:2px}.mw-big .tot{border-color:var(--stamp);background:color-mix(in srgb,var(--stamp) 10%,var(--sheet))}.mw-big .tot b{color:var(--stamp);font-size:26px}'+
+'.mw-t{width:100%;border-collapse:collapse;font-size:14.5px;margin:0 0 14px}.mw-t td{padding:8px 4px;border-bottom:1px dashed var(--rule);vertical-align:top}.mw-t td:last-child{text-align:right;white-space:nowrap;font-weight:600}.mw-t tr.s td{font-weight:800;border-bottom:1.5px solid var(--rule)}.mw-t caption{text-align:left;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--stamp);padding:6px 0}'+
+'.mw-fine{font-size:13px;line-height:1.55;opacity:.8}.mw-back{margin:0 0 12px}';
+document.head.appendChild(st);
+var D={},ix=0,trail=[];
+function ay0(){return String(new Date().getMonth()+1);}
+var S=[
+ {id:'u',g:1,t:'money',q:'Çalışanın aylık brüt maaşı ne kadar?',n:'Bordroda “brüt ücret” diye yazan tutar. Örnek: 45.000'},
+ {id:'fmv',g:2,t:'yn',q:'Bu ay fazla mesai yaptı mı?',n:'Haftada 45 saati aşan çalışma fazla mesaidir. Örneğin mesai bittikten sonra işte kalması ya da cumartesi fazladan gelmesi.'},
+ {id:'fm',g:2,t:'hm',if:function(){return D.fmv===1;},q:'Bu ay toplam ne kadar fazla mesai yaptı?',n:'Saati ve dakikayı ayrı kutulara yazın. 1 saat 30 dakika için: saat 1, dakika 30. 45 dakika için: saat 0, dakika 45. Kanuna göre yarım saatten az kalan dakika yarım saate, yarım saati aşan dakika bir saate tamamlanır.'},
+ {id:'ubv',g:3,t:'yn',q:'Bu ay resmî tatil ya da bayram gününde çalıştı mı?',n:'Resmî tatiller: 1 Ocak, 23 Nisan, 1 Mayıs, 19 Mayıs, 15 Temmuz, 30 Ağustos, 29 Ekim ve Ramazan ile Kurban bayramı günleri. O gün yarım saat bile çalıştıysa “Evet” deyin.'},
+ {id:'ub',g:3,t:'num',u:'gün',d:1,if:function(){return D.ubv===1;},q:'Resmî tatil ya da bayramda kaç gün çalıştı?',n:'Kısa süre çalıştığı günü de 1 gün sayın. Örnek: 29 Ekim’de 2 saat çalıştıysa 1 yazın. Yargıtay’a göre tatil günü bir saat çalışmak da tam gün ek ücret doğurur.'},
+ {id:'ck',g:3,t:'num',u:'gün',d:0,if:function(){return D.ubv===1;},q:'Bu günlerden kaçı pazar gününe denk geliyordu?',n:'Bayram ya da resmî tatil pazar gününe denk geldiyse ücret daha yüksektir. Hiçbiri pazar değilse 0 yazın.',max:function(){return D.ub;}},
+ {id:'arv',g:4,t:'yn',q:'Arife günü ya da 28 Ekim’de saat 13.00’ten sonra çalıştı mı?',n:'Bayramdan önceki gün (arife) ve 28 Ekim, saat 13.00’ten sonra tatildir. Sabah çalışıp 13.00’te çıktıysa “Hayır” deyin.'},
+ {id:'ar',g:4,t:'num',u:'kez',d:1,if:function(){return D.arv===1;},q:'Kaç arife (ya da 28 Ekim) öğleden sonrası çalıştı?',n:'Çoğu zaman 1’dir. 13.00’ten sonra kısa süre çalıştıysa da sayılır.'},
+ {id:'htv',g:5,t:'yn',q:'Pazar günü (hafta tatilinde) tam gün çalıştı mı?',n:'Pazar günü yalnız birkaç saat çalıştıysa “Hayır” deyin; o saatleri fazla mesaiye eklemek için “Geri” ile dönebilirsiniz.'},
+ {id:'ht',g:5,t:'num',u:'gün',d:1,if:function(){return D.htv===1;},q:'Kaç pazar günü tam gün çalıştı?',n:'Her pazar için maaşına ek olarak 1,5 günlük ücret ödenir.'},
+ {id:'ay',g:6,t:'month',q:'Bu para hangi ayın maaşıyla birlikte ödenecek?',n:'Gelir vergisi yıl içinde arttığı için ödeme ayı netini etkiler.'}
+];
+function act(i){var s=S[i];return !s.if||s.if();}
+function T(x){return tl(Math.round(x*100)/100);}
+function yv(t){if(t<=0)return 0;var a=Math.floor(t+1e-9),f=t-a;return f<1e-9?a:(f<=0.5+1e-9?a+0.5:a+1);}
+function esc(x){return String(x).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function box(){return document.querySelector('.tool.mw-on .mw');}
+function render(){var b=box();if(!b)return;var n=6,pos=ix<S.length?S[ix].g:6;
+ if(ix>=S.length){return result(b);}
+ var s=S[ix],h='<div class="mw-top"><span class="mw-st">Adım '+pos+' / '+n+'</span><button type="button" class="mw-sw" data-a="exp">Tüm kutuları tek sayfada görmek istiyorum</button></div><div class="mw-bar"><i style="width:'+Math.round((pos-1)/n*100)+'%"></i></div><h3>'+esc(s.q)+'</h3><p class="mw-n">'+esc(s.n)+'</p>';
+ var v=D[s.id];
+ if(s.t==='yn')h+='<div class="mw-yn"><button type="button" data-yn="1"'+(v===1?' aria-pressed="true"':'')+'>Evet</button><button type="button" data-yn="0"'+(v===0?' aria-pressed="true"':'')+'>Hayır</button></div>';
+ else if(s.t==='money')h+='<div class="mw-in"><label><input id="mw-v" inputmode="decimal" autocomplete="off" placeholder="45.000" value="'+(v?esc(tl(v).replace(/\s*₺/,'')):'')+'"> ₺</label></div>';
+ else if(s.t==='num')h+='<div class="mw-in"><label><input id="mw-v" class="sm" inputmode="numeric" autocomplete="off" value="'+(v!=null?v:s.d)+'"> '+s.u+'</label></div>';
+ else if(s.t==='hm')h+='<div class="mw-in"><label><input id="mw-h" class="sm" inputmode="numeric" autocomplete="off" value="'+(v?v.h:'')+'" placeholder="0"> saat</label><label><input id="mw-m" class="sm" inputmode="numeric" autocomplete="off" value="'+(v?v.m:'')+'" placeholder="0"> dakika</label></div>';
+ else if(s.t==='month')h+='<div class="mw-in"><select id="mw-v">'+AY.map(function(a){return '<option value="'+a[0]+'"'+(String(v||ay0())===a[0]?' selected':'')+'>'+a[1]+'</option>';}).join('')+'</select></div>';
+ h+='<p class="mw-err" id="mw-e" hidden></p><div class="mw-nav">'+(trail.length?'<button type="button" data-a="back">← Geri</button>':'')+(s.t!=='yn'?'<button type="button" class="go" data-a="next">Devam →</button>':'')+'</div>';
+ b.innerHTML=h;var f=b.querySelector('input,select');if(f&&ix>0)f.focus({preventScroll:true});}
+function err(t){var e=document.getElementById('mw-e');if(e){e.textContent=t;e.hidden=false;}}
+function next(){var s=S[ix];
+ if(s.t==='money'){var u=num(document.getElementById('mw-v').value);if(!(u>0))return err('Lütfen brüt maaşı yazın. Örnek: 45.000');D.u=u;}
+ else if(s.t==='num'){var x=num(document.getElementById('mw-v').value);if(isNaN(x)||x<0)return err('Lütfen bir sayı yazın.');x=Math.ceil(x-1e-9);if(s.max&&x>s.max())return err('Bu sayı '+s.max()+'’den büyük olamaz.');if(s.id!=='ck'&&x===0)return err('0 yazacaksanız “Geri” ile dönüp “Hayır” deyin.');D[s.id]=x;}
+ else if(s.t==='hm'){var hh=num(document.getElementById('mw-h').value||'0'),mm=num(document.getElementById('mw-m').value||'0');if(isNaN(hh)||isNaN(mm)||hh<0||mm<0)return err('Saat ve dakikayı sayı olarak yazın.');if(hh+mm===0)return err('Fazla mesai süresini yazın ya da “Geri” ile dönüp “Hayır” deyin.');D.fm={h:hh,m:mm};}
+ else if(s.t==='month'){D.ay=document.getElementById('mw-v').value;}
+ go();}
+function go(){trail.push(ix);ix++;while(ix<S.length&&!act(ix))ix++;render();var b=box();if(b&&b.getBoundingClientRect().top<70)b.scrollIntoView({behavior:'smooth',block:'start'});}
+function calcAll(){var u=D.u,sa=u/225,gu=u/30,ay=+(D.ay||ay0());var fm0=D.fmv===1&&D.fm?D.fm.h+D.fm.m/60:0,s=yv(fm0);var ub=D.ubv===1?(D.ub||0):0,ck=D.ubv===1?Math.min(D.ck||0,ub):0,ar=D.arv===1?(D.ar||0):0,ht=D.htv===1?(D.ht||0):0;
+ var L=[];if(s)L.push(['Fazla mesai: '+String(s).replace('.',',')+' saat × '+T(sa*1.5)+(Math.abs(s-fm0)>1e-9?' (yazdığınız '+(D.fm.h?D.fm.h+' saat ':'')+(D.fm.m?D.fm.m+' dakika':'')+' kanuna göre '+String(s).replace('.',',')+' saate tamamlandı)':''),sa*1.5*s]);
+ if(ub-ck>0)L.push(['Resmî tatil / bayram çalışması: '+(ub-ck)+' gün × 1 günlük ücret ('+T(gu)+')',gu*(ub-ck)]);
+ if(ck)L.push(['Pazara denk gelen bayram çalışması: '+ck+' gün × 2,5 günlük ücret',gu*2.5*ck]);
+ if(ar)L.push(['Arife / 28 Ekim öğleden sonra: '+ar+' × yarım günlük ücret',gu*0.5*ar]);
+ if(ht)L.push(['Pazar (hafta tatili) çalışması: '+ht+' gün × 1,5 günlük ücret',gu*1.5*ht]);
+ var br=L.reduce(function(a,x){return a+x[1];},0),r=ekOdeme(u,br,ay,true);return {u:u,ay:ay,L:L,br:br,r:r};}
+function result(b){var c=calcAll(),r=c.r,an=AY[c.ay-1][1],bn=Math.round(r.bnet*100)/100,tn=bn+Math.round(r.net*100)/100;
+ var h='<div class="mw-top"><span class="mw-st">Sonuç</span><button type="button" class="mw-sw" data-a="exp">Ayrıntılı hesap tablosunu aç</button></div><h3>'+an+' ayında eline geçecek toplam tutar</h3>';
+ h+='<div class="mw-big"><div><small>Normal maaş (net)</small><b>'+T(bn)+'</b></div><div><small>Fazla mesai ve tatil ek ücreti (net)</small><b>'+T(r.net)+'</b></div><div class="tot"><small>Toplam ele geçen (net)</small><b>'+T(tn)+'</b></div></div>';
+ h+='<table class="mw-t"><caption>Brüt (kesintilerden önce)</caption><tr><td>Aylık brüt maaş</td><td>'+T(c.u)+'</td></tr>'+c.L.map(function(x){return '<tr><td>'+esc(x[0])+'</td><td>'+T(x[1])+'</td></tr>';}).join('')+(c.L.length?'':'<tr><td>Fazla mesai ya da tatil çalışması yok</td><td>'+T(0)+'</td></tr>')+'<tr class="s"><td>Toplam brüt</td><td>'+T(c.u+c.br)+'</td></tr></table>';
+ h+='<table class="mw-t"><caption>Ek ücretten yapılan kesintiler</caption><tr><td>SGK işçi payı (%14)</td><td>'+T(r.sgk)+'</td></tr><tr><td>İşsizlik işçi payı (%1)</td><td>'+T(r.iss)+'</td></tr><tr><td>Gelir vergisi</td><td>'+T(r.gv)+'</td></tr><tr><td>Damga vergisi</td><td>'+T(r.dv)+'</td></tr><tr class="s"><td>Ek ücretin neti</td><td>'+T(r.net)+'</td></tr></table>';
+ h+='<p class="mw-fine">'+(c.u<P26.asg?'<b>Dikkat:</b> yazdığınız brüt maaş 2026 asgari ücretinin ('+T(P26.asg)+') altında; tam süreli çalışana bundan az ödenemez. ':'')+'Hesap, çalışanın yılın her ayında aynı brüt maaşı aldığı ve başka ek ödeme olmadığı varsayımıyla yapılır; gerçek bordroda küçük farklar çıkabilir. Fazla mesai saat ücreti, brüt maaşın 225’e bölünüp 1,5 ile çarpılmasıyla bulunur. Tatil günü kısa süre çalışmak da tam gün ek ücret doğurur (Yargıtay). Arife öğleden sonrası için yarım günlük ek ücret yaygın uygulamadır; tam gün ödenmesi gerektiğini savunan görüşler de vardır. Sözleşmede daha yüksek bir oran varsa o uygulanır.</p>';
+ h+='<div class="mw-nav"><button type="button" data-a="back">← Geri</button><button type="button" data-a="reset">Baştan başla</button></div>';
+ b.innerHTML=h;}
+function toExpert(){var t=document.querySelector('.tool.mw-on');if(!t)return;var c=D.u?calcAll():null;t.classList.remove('mw-on');
+ function setv(id,v){var e=document.getElementById('f-mesai-'+id);if(!e)return;e.value=v;e.dispatchEvent(new Event('input',{bubbles:true}));e.dispatchEvent(new Event('change',{bubbles:true}));}
+ if(c){var bt=[].slice.call(t.querySelectorAll('[data-seg="k"] button')).filter(function(x){return x.getAttribute('data-v')==='hep';})[0];if(bt)bt.click();
+  setv('u',tl(c.u).replace(/\s*₺/,''));setv('s',D.fmv===1&&D.fm?D.fm.h+':'+('0'+D.fm.m).slice(-2):'');setv('ht',D.htv===1?D.ht:'');var ub=D.ubv===1?D.ub:0,ck=D.ubv===1?Math.min(D.ck||0,ub):0;setv('ub',ub-ck||'');setv('ck',ck||'');setv('ar',D.arv===1?D.ar:'');var sl=document.getElementById('f-mesai-ay');if(sl){sl.value=String(c.ay);sl.dispatchEvent(new Event('change',{bubbles:true}));}
+  setTimeout(function(){var hb=[].slice.call(t.querySelectorAll('button')).filter(function(x){return x.offsetParent&&/^Hesapla$/.test(x.textContent.trim());})[0];if(hb)hb.click();},150);}
+ t.scrollIntoView({behavior:'smooth',block:'start'});}
+function mount(){if(location.hash!=='#h-mesai')return;var t=[].slice.call(document.querySelectorAll('.tool')).filter(function(x){return x.offsetParent&&x.querySelector('#f-mesai-u');})[0];if(!t||t.querySelector(':scope>.mw'))return;
+ var b=document.createElement('div');b.className='mw';t.insertBefore(b,t.firstChild);t.classList.add('mw-on');
+ var f=t.querySelector(':scope>.fields');if(f&&!f.querySelector('.mw-back')){var a=document.createElement('p');a.className='mw-back';a.innerHTML='<button type="button" class="mw-sw">← Soru soru hesaplamaya dön</button>';a.firstChild.onclick=function(){t.classList.add('mw-on');render();b.scrollIntoView({behavior:'smooth',block:'start'});};f.insertBefore(a,f.firstChild);}
+ b.addEventListener('click',function(e){var y=e.target.closest('[data-yn]'),a=e.target.closest('[data-a]');if(y){D[S[ix].id]=+y.getAttribute('data-yn');go();return;}if(!a)return;var k=a.getAttribute('data-a');
+  if(k==='next')next();else if(k==='back'){if(trail.length){ix=trail.pop();render();}}else if(k==='reset'){D={};ix=0;trail=[];render();}else if(k==='exp')toExpert();});
+ b.addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.matches('input,select')){e.preventDefault();next();}});
+ render();}
+var tm=0;new MutationObserver(function(){clearTimeout(tm);tm=setTimeout(mount,250);}).observe(document.body,{childList:true,subtree:true});window.addEventListener('hashchange',function(){setTimeout(mount,500);});setTimeout(mount,1000);})();
+
 function ekRows(ek,r,sgkli,lbl){var a=[];if(sgkli){a.push(['SGK işçi payı (%14)',tl(r.sgk)]);a.push(['İşsizlik işçi payı (%1)',tl(r.iss)]);}a.push(['Gelir vergisine esas tutar',tl(r.emat),0,'d']);a.push(['Kümülatif matrah (ödeme öncesi → sonrası)',tl(r.c0)+' → '+tl(r.c1),0,'d']);a.push(['Uygulanan vergi dilimi',dilimTxt(r.c0,r.c1),0,'d']);a.push(['Gelir vergisi',tl(r.gv)]);a.push(['Damga vergisi (binde 7,59)',tl(r.dv)]);a.push([lbl,tl(r.net),1]);return a;}
 var AY=[['1','Ocak'],['2','Şubat'],['3','Mart'],['4','Nisan'],['5','Mayıs'],['6','Haziran'],['7','Temmuz'],['8','Ağustos'],['9','Eylül'],['10','Ekim'],['11','Kasım'],['12','Aralık']];
 var ISV=[['.2175','Genel, teşviksiz (%21,75)'],['.1975','2 puan indirimli – imalat dışı (%19,75)'],['.1675','5 puan indirimli – imalat (%16,75)']];
@@ -7155,7 +7243,7 @@ window.ekYuzMsg=function(K){var Y=K.map(function(k){return num(k.yuz);}),any=Y.s
   ozluk:{t:'Özlük dosyası sihirbazı nasıl kullanılır?',s:[['steps','Adım adım ilerleyin','Dört adım var; her ekranda kutuları doldurup “Sonraki adım”a basın. Numaralı adımlara basarak da geçebilirsiniz.'],['kimlik','1–2. İşyeri ve çalışan','İşyeri ile çalışanın bilgilerini bir kez yazın; seçtiğiniz bütün formlara kendiliğinden gelir.'],['tur','3. Formları seçin','“İşe giriş paketi” düğmesi en sık gerekenleri seçer; görevlendirme, değişiklik bildirimi gibi formları ayrıca işaretleyin.'],['bitti','4. Form bilgileri ve sonuç','Her formun kendine özel kutularını doldurun. Sonuçta formlar tek dosyada indirilir, yazdırılır ya da paylaşılır; istediğinizi tek tek de alabilirsiniz.']]},
   arackdv:{t:'Araç KDV oranı nasıl bulunur?',s:[['arac','1. Aracı seçin','Binek, kamyonet, iş makinesi gibi aracın türünü seçin.'],['steps','2. Soruları yanıtlayın','İkinci el mi, satıcı galeri mi gibi sorular gelir.'],['bitti','3. Sonuç','KDV oranı, dayanağı, alıcının indirimi ve muhasebe kaydı açılır.']]}
  };
- var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611250949';
+ var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611250959';
  var MAP={ozluk:'ozluk',sirket:'sirket',amackonu:'esas',ortaklik:'ortaklik',gecbeyan:'gecbeyan',arackdv:'arackdv'};
  function open(key){var h=H[key];if(!h)return;var m=document.getElementById('hlp-modal');if(!m){m=document.createElement('div');m.id='hlp-modal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');document.body.appendChild(m);
      m.addEventListener('click',function(e){if(e.target===m||e.target.closest('[data-hx]')){m.hidden=true;document.documentElement.style.overflow='';}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){m.hidden=true;document.documentElement.style.overflow='';}});}
