@@ -1,17 +1,9 @@
 {
   "aciklama": "Şirket işlemleri sihirbazında il seçilince gösterilen ticaret sicili müdürlüğü uygulama notları. Her il için: oda (müdürlüğün bağlı olduğu oda), metin (o ile özgü kurallar, 1-4 cümle), kaynak (resmî oda/müdürlük sayfası), tarih (okunduğu gün). Sadece resmî kaynakta okunan bilgi yazılır.",
-  "guncelleme": "2026-11-24",
+  "guncelleme": "2026-11-25",
   "sira": [
-    "Karaman",
-    "Yozgat",
-    "Çankırı",
-    "İzmir",
-    "Kocaeli",
-    "Konya",
     "Adana",
-    "Mersin",
     "Tekirdağ",
-    "Sakarya",
     "Samsun",
     "Trabzon",
     "Balıkesir",
@@ -30,7 +22,8 @@
     "Kars",
     "Kilis",
     "Nevşehir",
-    "Niğde"
+    "Niğde",
+    "Çankırı"
   ],
   "iller": {
     "İstanbul": {
@@ -72,10 +65,9 @@
     },
     "Kocaeli": {
       "oda": "Kocaeli Ticaret Odası (KOTO)",
-      "metin": "",
-      "kaynak": "https://koto.org.tr/limited-sirket-sd-5c53440225969",
-      "tarih": "2026-11-12",
-      "deneme": 1
+      "metin": "Kocaeli Ticaret Sicili Müdürlüğü KOTO bünyesindedir; tüm tescil başvuruları MERSİS’ten yapılır ve ücretler oda veznesine ödenir. Her işlemde biri sicil müdürlüğüne, biri oda başkanlığına hitaben iki ayrı dilekçe verilir. Adres değişikliğinde ortaklar kurulu kararı noter onaylı 2 asıl 2 suret istenir; İzmit, Kartepe ve Başiskele arasındaki adres geçişleri ana sözleşme değişikliği olarak yapılır. Hisse devrinde noter onaylı, ıslak imzalı devir sözleşmesi 1 asıl 1 suret ile hisse dağılım listesi verilir.",
+      "kaynak": "https://koto.org.tr/en/limited-company-sd-5c53440225969",
+      "tarih": "2026-11-25"
     },
     "Konya": {
       "oda": "Konya Ticaret Odası (KTO)",
@@ -125,10 +117,9 @@
     },
     "Sakarya": {
       "oda": "Sakarya Ticaret ve Sanayi Odası (SATSO)",
-      "metin": "",
+      "metin": "Sakarya Ticaret Sicili Müdürlüğü SATSO bünyesindedir. Oda, limited şirket hisse devri için duruma göre beş ayrı belge şablonu yayımlar: çok ortaklı, çok ortaklıdan tek ortaklıya, tek ortaklıdan çok ortaklıya, tek ortaklı şirkette ortağın değişmesi ve veraset. Adres değişikliği, sermaye artırımı, sermaye azaltımı ve eş zamanlı azaltım-artırım için de ayrı şablonlar vardır.",
       "kaynak": "https://www.satso.org.tr/hizmetler/12429/limited-sirketler.aspx",
-      "tarih": "2026-11-13",
-      "deneme": 1
+      "tarih": "2026-11-25"
     },
     "Manisa": {
       "oda": "Manisa Ticaret ve Sanayi Odası (MTSO)",
@@ -513,6 +504,25 @@
       "kaynak": "https://www.nitso.org.tr/TicaretSicil/De%C4%9Fi%C5%9Fiklik%C4%B0%C5%9Flemleri/Limited%C5%9Eirket/tabid/20295/Default.aspx",
       "metin": "",
       "tarih": "2026-11-24",
+      "deneme": 1
+    },
+    "Karaman": {
+      "oda": "Karaman Ticaret ve Sanayi Odası (KTSO)",
+      "metin": "Karaman Ticaret Sicili Müdürlüğü KTSO bünyesindedir. Oda, istenen bilgileri tam doldurulmamış ya da imzalanmamış dilekçeleri dikkate almadığını açıkça belirtir; tüm işlemler için ortak dilekçe örneği ile MERSİS Giriş İzin Dilekçesi örneği sitededir. Müdür ataması, adres değişikliği, hisse devri (tek ortağa düşme, tek ortaktan çok ortağa geçiş, vefat) ve yeni ortak girişli sermaye artırımı için ayrı evrak listeleri Word dosyası olarak yayımlanır.",
+      "kaynak": "https://ktso.org.tr/tr-TR/Dynamic/Page/limited-sirket-islemleri",
+      "tarih": "2026-11-25"
+    },
+    "Yozgat": {
+      "oda": "Yozgat Ticaret ve Sanayi Odası (Yozgat TSO)",
+      "metin": "Yozgat Ticaret Sicili Müdürlüğü Yozgat TSO bünyesindedir. Dilekçeler şirket kaşesiyle yetkilice imzalanmalı, ekindeki evrakın dökümü yazılmalı; vekâleten imzada vekâletnamenin aslı ya da onaylı sureti eklenir. Müdür ataması, adres değişikliği, hisse devri ve sermaye artırımında genel kurul kararı noter onaylı 2 nüsha, sermaye artırımı ve ana sözleşme değişikliğinde tadil metni 3 adet istenir. Hisse devrinde devir kararı noterdeki devir sözleşmesinin tarihinden sonra alınmalı ve devredip ayrılan ortak da kararı imzalamalıdır.",
+      "kaynak": "https://www.yozgattso.org.tr/services/ticaretsicil",
+      "tarih": "2026-11-25"
+    },
+    "Çankırı": {
+      "oda": "Çankırı Ticaret ve Sanayi Odası (ÇATSO)",
+      "metin": "",
+      "kaynak": "https://www.catso.org.tr/Hizmetler/TicaretSicil/tabid/15096/Default.aspx",
+      "tarih": "2026-11-25",
       "deneme": 1
     }
   }
