@@ -1,15 +1,7 @@
 {
   "aciklama": "Şirket işlemleri sihirbazında il seçilince gösterilen ticaret sicili müdürlüğü uygulama notları. Her il için: oda (müdürlüğün bağlı olduğu oda), metin (o ile özgü kurallar, 1-4 cümle), kaynak (resmî oda/müdürlük sayfası), tarih (okunduğu gün). Sadece resmî kaynakta okunan bilgi yazılır.",
-  "guncelleme": "2026-11-25",
+  "guncelleme": "2026-11-26",
   "sira": [
-    "Adana",
-    "Tekirdağ",
-    "Samsun",
-    "Trabzon",
-    "Balıkesir",
-    "Elazığ",
-    "Afyonkarahisar",
-    "Çanakkale",
     "Rize",
     "Gümüşhane",
     "Bayburt",
@@ -23,7 +15,12 @@
     "Kilis",
     "Nevşehir",
     "Niğde",
-    "Çankırı"
+    "Çankırı",
+    "Samsun",
+    "Trabzon",
+    "Balıkesir",
+    "Afyonkarahisar",
+    "Çanakkale"
   ],
   "iller": {
     "İstanbul": {
@@ -79,9 +76,9 @@
     "Adana": {
       "oda": "Adana Ticaret Odası (ATO)",
       "metin": "",
-      "kaynak": "https://www.adanato.org.tr",
-      "tarih": "2026-11-12",
-      "deneme": 1
+      "kaynak": "https://www.adanato.org.tr/",
+      "tarih": "2026-11-26",
+      "deneme": 2
     },
     "Kayseri": {
       "oda": "Kayseri Ticaret Odası (KTO)",
@@ -112,8 +109,8 @@
       "oda": "Tekirdağ Ticaret ve Sanayi Odası (TSO)",
       "metin": "",
       "kaynak": "https://tekirdagtso.org.tr/",
-      "tarih": "2026-11-13",
-      "deneme": 1
+      "tarih": "2026-11-26",
+      "deneme": 2
     },
     "Sakarya": {
       "oda": "Sakarya Ticaret ve Sanayi Odası (SATSO)",
@@ -149,19 +146,22 @@
       "oda": "Samsun Ticaret ve Sanayi Odası (STSO)",
       "metin": "",
       "kaynak": "https://www.samsuntso.org.tr/tescil/limited-sirketlerde-hisse-devri-400.htm",
-      "tarih": "2026-11-14"
+      "tarih": "2026-11-26",
+      "deneme": 1
     },
     "Trabzon": {
       "oda": "Trabzon Ticaret ve Sanayi Odası (TTSO)",
       "metin": "",
       "kaynak": "https://www.ttso.org.tr/sicil/20/limited-sirketlerin-yetki-tescili-islemleri/",
-      "tarih": "2026-11-14"
+      "tarih": "2026-11-26",
+      "deneme": 1
     },
     "Balıkesir": {
       "oda": "Balıkesir Ticaret Odası (BATO)",
       "metin": "",
       "kaynak": "https://www.bato.org.tr/oda-islemleri/ticaret-sicil",
-      "tarih": "2026-11-14"
+      "tarih": "2026-11-26",
+      "deneme": 1
     },
     "Diyarbakır": {
       "oda": "Diyarbakır Ticaret ve Sanayi Odası (DTSO)",
@@ -231,9 +231,9 @@
     },
     "Elazığ": {
       "oda": "Elazığ Ticaret ve Sanayi Odası (ETSO)",
-      "metin": "",
-      "kaynak": "https://elazigtso.org.tr/tr/index.php/limited-sirket-islemleri/",
-      "tarih": "2026-11-16"
+      "metin": "Elazığ Ticaret Sicili Müdürlüğü ETSO bünyesindedir ve tescil başvuruları MERSİS üzerinden yapılır. Oda, limited şirketlerde adres değişikliği, müdür ataması, hisse devri (vefat nedeniyle devir dahil) ve sermaye azaltımı için gerekli evrak listelerini sitesinde indirilebilir dosya olarak yayımlar. Ticaret sicil tasdiknamesi ve durum belgesi MERSİS’ten e-imzalı alınabilir; ihale için durum belgesi değil “İflas ve Konkordato Belgesi” istenmelidir.",
+      "kaynak": "https://elazigtso.org.tr/tr/limited-sirket-islemleri/",
+      "tarih": "2026-11-26"
     },
     "Kütahya": {
       "oda": "Kütahya Ticaret ve Sanayi Odası (KUTSO)",
@@ -275,7 +275,8 @@
       "oda": "Afyonkarahisar Ticaret ve Sanayi Odası (ATSO)",
       "metin": "",
       "kaynak": "https://www.afyonkarahisartso.org.tr/index.asp?s=92&t=2&a=19",
-      "tarih": "2026-11-17"
+      "tarih": "2026-11-26",
+      "deneme": 1
     },
     "Yalova": {
       "oda": "Yalova Ticaret ve Sanayi Odası (YTSO)",
@@ -293,7 +294,8 @@
       "oda": "Çanakkale Ticaret ve Sanayi Odası (ÇTSO)",
       "metin": "",
       "kaynak": "https://www.canakkaletso.org.tr/TicaretSicil/tabid/16867/Default.aspx",
-      "tarih": "2026-11-18"
+      "tarih": "2026-11-26",
+      "deneme": 1
     },
     "Edirne": {
       "oda": "Edirne Ticaret ve Sanayi Odası (ETSO)",
