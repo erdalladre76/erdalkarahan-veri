@@ -16,6 +16,14 @@ $ben = isset($_GET['ben']) && $_GET['ben'] === '1';
 if ($ben) { $hit = false; }
 date_default_timezone_set('Europe/Istanbul');
 
+/* 2 yıldan eski istatistik dosyalarını sil (KVKK aydınlatma metninde yazılı saklama süresi) */
+if (mt_rand(1, 50) === 1) {
+    $sinir = date('Y-m-d', strtotime('-730 day'));
+    foreach (array_merge((array) glob($dir . '/gun-*.txt'), (array) glob($dir . '/sayfa-*.txt')) as $eski) {
+        if (preg_match('/-(\d{4}-\d{2}-\d{2})\.txt$/', $eski, $m) && $m[1] < $sinir) { @unlink($eski); }
+    }
+}
+
 /* günlük kayıt: tekil ziyaretçi (IP+tarayıcı özetinin karması; IP saklanmaz) ve ziyaret sayısı */
 if ($hit) {
     $ip = !empty($_SERVER['HTTP_CF_CONNECTING_IP']) ? $_SERVER['HTTP_CF_CONNECTING_IP'] : (isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '');

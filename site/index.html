@@ -445,6 +445,9 @@ nav.links a[aria-current="page"]{box-shadow:inset 0 -2px 0 var(--glow)}
 .cform .wide{grid-column:1 / -1}
 .kvkk{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--ink-2)}
 .kvkk input{margin-top:3px;accent-color:var(--stamp)}
+.kvkk a{color:var(--stamp);text-decoration:underline}
+.g-riza{margin:12px 0 4px;text-align:left}
+.kvkk.need{outline:2px solid #C2414A;outline-offset:4px;border-radius:6px}
 .cf-foot{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .cf-status{font-size:14px;color:var(--ink-2)}
 .cf-status.ok{color:var(--ok)}.cf-status.err{color:#C2414A}
@@ -2242,7 +2245,7 @@ section[data-view] a{overflow-wrap:anywhere}
         <div class="f"><label for="cf-mail">E-posta</label><div class="inp"><input id="cf-mail" name="mail" type="email" required autocomplete="email"></div></div>
         <div class="f"><label for="cf-konu">Konu</label><div class="inp"><select id="cf-konu" name="konu"><option>Muhasebe hizmeti</option><option>Şirket kuruluşu</option><option>Bordro ve SGK</option><option>Vergi danışmanlığı</option><option>Diğer</option></select></div></div>
         <div class="f wide"><label for="cf-msg">Mesajınız</label><div class="inp"><textarea id="cf-msg" name="mesaj" rows="4" required></textarea></div></div>
-        <label class="kvkk wide"><input type="checkbox" id="cf-kvkk" required> Kişisel verilerimin, talebime dönüş yapılması amacıyla işlenmesini kabul ediyorum.</label>
+        <p class="kvkk wide">Gönderdiğiniz bilgiler yalnızca talebinize dönüş yapmak için kullanılır. Ayrıntılar: <a href="#kvkk">KVKK aydınlatma metni</a>.</p>
         <div class="wide cf-foot"><button type="submit" class="btn btn-ink"><svg><use href="#i-arrow"/></svg>Gönder</button><span id="cf-status" class="cf-status" role="status"></span></div>
       </form>
     </div>
@@ -2316,17 +2319,27 @@ section[data-view] a{overflow-wrap:anywhere}
     <div class="wrap legal">
       <span class="eyebrow">KVKK</span>
       <h2>Kişisel verilerin korunması aydınlatma metni</h2>
-      <p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu’nun 10. maddesi uyarınca, veri sorumlusu sıfatıyla SMMM Erdal Karahan tarafından hazırlanmıştır.</p>
-      <h3>Hangi verileri işliyoruz?</h3>
-      <p>İletişim ve üyelik formlarında paylaştığınız ad soyad, e-posta adresi, telefon numarası, işletme türü ve mesaj içeriği; Google ile giriş yaptığınızda Google hesabınızdaki ad ve e-posta bilgisi.</p>
-      <h3>Hangi amaçla işliyoruz?</h3>
-      <p>Talebinize dönüş yapmak, üyelerimize mevzuat duyurularını iletmek ve mali müşavirlik hizmetlerimize ilişkin sizinle iletişim kurmak amacıyla.</p>
-      <h3>Hukuki sebep ve aktarım</h3>
-      <p>Verileriniz açık rızanıza ve meşru menfaatimize dayanılarak işlenir. Form ve üyelik altyapısı için kullanılan hizmet sağlayıcılar (e-posta ve barındırma hizmetleri) dışında üçüncü kişilere aktarılmaz.</p>
-      <h3>Haklarınız</h3>
-      <p>Kanun’un 11. maddesi uyarınca verilerinizin işlenip işlenmediğini öğrenme, düzeltilmesini veya silinmesini isteme ve işlemeye itiraz etme haklarına sahipsiniz. Başvurularınızı info@erdalkarahan.com adresine iletebilirsiniz.</p>
+      <p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu’nun (KVKK) 10. maddesi ve Aydınlatma Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ uyarınca hazırlanmıştır. Son güncelleme: 26 Kasım 2026.</p>
+      <h3>Veri sorumlusu</h3>
+      <p>SMMM Erdal Karahan · Osmanağa Mah. General Asım Gündüz Cad. Ali Suavi Sk. Ziya Keleş İş Hanı No: 22/8, 34714 Kadıköy / İstanbul · info@erdalkarahan.com</p>
+      <h3>Hangi verileri, nasıl topluyoruz?</h3>
+      <p><b>İletişim formu:</b> ad soyad, e-posta, telefon (isteğe bağlı), konu ve mesajınız. <b>E-posta ile üyelik:</b> ad soyad, e-posta, telefon (isteğe bağlı), işletme türü ve seçtiğiniz duyuru konuları. <b>Google ile üyelik:</b> Google hesabınızdaki ad soyad, e-posta adresi ve profil fotoğrafı; fotoğraf yalnızca sizin tarayıcınızda gösterilir, bize kaydedilmez. Bu veriler, formu ya da Google düğmesini kullandığınızda elektronik ortamda sizden toplanır.</p>
+      <p><b>Ziyaret istatistiği:</b> Kaç kişinin hangi sayfalara baktığını saymak için, IP adresiniz ve tarayıcı bilgileriniz o güne özel bir anahtarla birleştirilip geri çevrilemeyen kısa bir koda dönüştürülür; bu kod, cihaz türü (telefon/bilgisayar), bakılan sayfanın adı ve siteye hangi siteden geldiğiniz (yalnızca alan adı) kaydedilir. IP adresiniz kaydedilmez ve kod ertesi gün değiştiği için günler arasında kimseyi izlemek mümkün değildir. <b>Sunucu kayıtları:</b> Sitenin barındırıldığı firmanın sunucusu, her bağlantıda IP adresi ve tarih-saat bilgisini güvenlik amacıyla ve 5651 sayılı Kanun gereği kendiliğinden kaydeder.</p>
+      <h3>Hangi amaçla ve hangi hukuki sebeple işliyoruz?</h3>
+      <p><b>İletişim formundaki bilgiler</b> yalnızca talebinize dönüş yapmak için kullanılır. Hukuki sebep: talebinizin karşılanması için gerekli olması ve meşru menfaatimiz (KVKK md. 5/2-c ve 5/2-f); bunun için ayrıca açık rıza istenmez.</p>
+      <p><b>Üyelik bilgileri</b> mevzuat duyurularını ve beyanname hatırlatmalarını e-posta ile göndermek için kullanılır. Hukuki sebep: üye olurken işaretlediğiniz kutuyla verdiğiniz açık rıza (KVKK md. 5/1). Bu e-postalar yalnızca bilgilendirme amaçlıdır; hizmet tanıtımı ya da reklam içermez.</p>
+      <p><b>Ziyaret istatistiği ve sunucu kayıtları</b> sitenin işleyişini ve güvenliğini sağlamak, hangi içeriklerin işe yaradığını görmek için tutulur. Hukuki sebep: meşru menfaatimiz ve kanuni yükümlülük (KVKK md. 5/2-ç ve 5/2-f).</p>
+      <h3>Kimlere aktarılıyor?</h3>
+      <p>Verileriniz satılmaz, reklam amacıyla kimseyle paylaşılmaz. Yalnızca sitenin barındırma ve e-posta hizmetini veren firmanın sunucularında tutulur; kanunen yetkili kamu kurumları usulüne uygun olarak isterse onlara verilebilir.</p>
+      <p><b>Yurt dışına aktarım:</b> Google ile üye olmayı seçerseniz, kimliğinizin doğrulanması için Google’ın verdiği giriş anahtarı Google LLC’nin (ABD) sunucularına gönderilir. ABD için Kurul’un verdiği bir yeterlilik kararı bulunmadığından bu aktarım, Google düğmesinin üstündeki kutuyu işaretleyerek vereceğiniz açık rızaya dayanır (KVKK md. 9/6-a). Bunu istemezseniz e-posta formuyla üye olabilirsiniz.</p>
+      <p><b>Dışarıdan yüklenen içerikler:</b> Sayfadaki yazı tipleri (Google Fonts), bazı program kütüphaneleri (cdnjs), harita (OpenStreetMap), döviz ve haber akışı gibi bölümler bu hizmetlerin kendi sunucularından yüklenir. Bu sırada tarayıcınız, her internet sitesinde olduğu gibi IP adresinizi ve tarayıcı bilgisini doğrudan bu hizmetlere iletir; bu bilgiler bize ulaşmaz, bizim tarafımızdan kaydedilmez. Bu hizmetler kendi gizlilik politikalarına tabidir ve sunucuları yurt dışında olabilir.</p>
+      <h3>Ne kadar süre saklıyoruz?</h3>
+      <p>Üyelik bilgileri üyeliğiniz sürdükçe saklanır; üyelikten ayrıldığınızda ya da rızanızı geri aldığınızda silinir. İletişim mesajları, talebiniz sonuçlandıktan sonra en fazla 2 yıl saklanır. Ziyaret istatistiği dosyaları 2 yıl sonra kendiliğinden silinir.</p>
+      <h3>Haklarınız ve başvuru</h3>
+      <p>KVKK’nın 11. maddesi uyarınca verilerinizin işlenip işlenmediğini ve hangi amaçla işlendiğini öğrenme, kimlere aktarıldığını bilme, eksik ya da yanlışsa düzeltilmesini, silinmesini isteme, bu işlemlerin aktarılan kişilere bildirilmesini isteme, otomatik analizle aleyhinize bir sonuç çıkmasına itiraz etme ve zarara uğradıysanız tazminat isteme haklarına sahipsiniz. Açık rızanızı dilediğiniz zaman geri alabilirsiniz; duyuru e-postalarını almak istemiyorsanız info@erdalkarahan.com adresine yazmanız yeterlidir.</p>
+      <p>Başvurunuzu kimliğinizi belirterek info@erdalkarahan.com adresine e-posta ile ya da yukarıdaki adrese yazılı olarak iletebilirsiniz. Başvurular en geç 30 gün içinde ücretsiz olarak cevaplanır.</p>
       <h3>Çerezler</h3>
-      <p>Sitemiz reklam ya da takip çerezi kullanmaz. Yalnızca dil, hesap makinesi rengi gibi tercihleriniz tarayıcınızda saklanır.</p>
+      <p>Sitemiz reklam, takip ya da analiz çerezi kullanmaz. Dil, hesap makinesi rengi, doldurduğunuz dilekçeler gibi tercihleriniz yalnızca sizin tarayıcınızda (yerel depolama) saklanır ve bize gönderilmez; tarayıcınızın ayarlarından dilediğiniz zaman silebilirsiniz. Google ile üye olmayı seçerseniz Google kendi çerezlerini kullanabilir.</p>
     </div>
   </section>
 
@@ -2569,7 +2582,8 @@ section[data-view] a{overflow-wrap:anywhere}
           <fieldset class="wide ilgi"><legend>Hangi konularda duyuru almak istersiniz?</legend>
             <label><input type="checkbox" id="uf-i1" checked> Vergi</label><label><input type="checkbox" id="uf-i2" checked> SGK ve bordro</label><label><input type="checkbox" id="uf-i3"> Şirket işlemleri</label><label><input type="checkbox" id="uf-i4"> Teşvik ve destekler</label>
           </fieldset>
-          <label class="kvkk wide"><input type="checkbox" id="uf-kvkk"> Kişisel verilerimin üyelik ve bilgilendirme amacıyla işlenmesini ve tarafıma e-posta gönderilmesini kabul ediyorum.</label>
+          <p class="kvkk wide">Kişisel verilerinizin nasıl işlendiğini <a href="#kvkk">KVKK aydınlatma metninde</a> okuyabilirsiniz.</p>
+          <label class="kvkk wide"><input type="checkbox" id="uf-kvkk"> Mevzuat duyurularının ve beyanname hatırlatmalarının e-posta adresime gönderilmesi için ad, e-posta ve isteğe bağlı telefon bilgilerimin işlenmesine açık rıza veriyorum. Rızamı istediğim zaman geri alabilirim.</label>
           <div class="wide cf-foot"><button type="submit" class="btn btn-ink"><svg><use href="#i-user"/></svg>Üye ol</button><span id="uf-status" class="cf-status" role="status"></span></div>
         </form>
       </div>
@@ -2629,7 +2643,8 @@ section[data-view] a{overflow-wrap:anywhere}
       <p>Google hesabınızla tek tıkla üye olun. Üyelerimiz:</p>
       <ul class="m-list"><li><svg><use href="#i-check"/></svg>Duyurulardan e-posta ile haberdar olur</li><li><svg><use href="#i-check"/></svg>Doldurduğu dilekçeleri kaydeder</li><li><svg><use href="#i-check"/></svg>İletişim bilgilerine kolayca ulaşır</li></ul>
       <div id="g-gis" class="g-gis"></div><p class="m-note" id="g-gis-wait" hidden>Google düğmesi yükleniyor…</p><button type="button" class="gbtn" id="g-signin"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.3 0-9.7-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>Google ile giriş yap</button>
-      <p class="m-note" id="m-note">Giriş yaparak kişisel verilerinizin üyelik amacıyla işlenmesini kabul edersiniz.</p>
+      <label class="kvkk g-riza"><input type="checkbox" id="g-riza"> Mevzuat duyurularının e-posta adresime gönderilmesine ve kimliğimin doğrulanması için Google giriş bilgisinin Google LLC’nin (ABD) sunucularına aktarılmasına açık rıza veriyorum.</label>
+      <p class="m-note" id="m-note">Ayrıntılar: <a href="#kvkk" data-m-close>KVKK aydınlatma metni</a>. İstemezseniz <a href="#uye-ol" data-m-close>e-posta ile üye olabilirsiniz</a>.</p>
     </div>
   </div>
 </div>
@@ -7266,7 +7281,7 @@ window.ekYuzMsg=function(K){var Y=K.map(function(k){return num(k.yuz);}),any=Y.s
   ozluk:{t:'Özlük dosyası sihirbazı nasıl kullanılır?',s:[['steps','Adım adım ilerleyin','Dört adım var; her ekranda kutuları doldurup “Sonraki adım”a basın. Numaralı adımlara basarak da geçebilirsiniz.'],['kimlik','1–2. İşyeri ve çalışan','İşyeri ile çalışanın bilgilerini bir kez yazın; seçtiğiniz bütün formlara kendiliğinden gelir.'],['tur','3. Formları seçin','“İşe giriş paketi” düğmesi en sık gerekenleri seçer; görevlendirme, değişiklik bildirimi gibi formları ayrıca işaretleyin.'],['bitti','4. Form bilgileri ve sonuç','Her formun kendine özel kutularını doldurun. Sonuçta formlar tek dosyada indirilir, yazdırılır ya da paylaşılır; istediğinizi tek tek de alabilirsiniz.']]},
   arackdv:{t:'Araç KDV oranı nasıl bulunur?',s:[['arac','1. Aracı seçin','Binek, kamyonet, iş makinesi gibi aracın türünü seçin.'],['steps','2. Soruları yanıtlayın','İkinci el mi, satıcı galeri mi gibi sorular gelir.'],['bitti','3. Sonuç','KDV oranı, dayanağı, alıcının indirimi ve muhasebe kaydı açılır.']]}
  };
- var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611261356';
+ var SH={esas:['esas-0','esas-0','esas-1','esas-2','esas-2',null,'esas-3','esas-4','esas-6',null],ortaklik:['or-0','or-0','or-1',null,'or-2','or-4',null],sirket:['sk-0','sk-1','sk-2','sk-3',null],gecbeyan:['gb-0','gb-1',null],arackdv:['ak-0','ak-1',null]},VER='202611261659';
  var MAP={ozluk:'ozluk',sirket:'sirket',amackonu:'esas',ortaklik:'ortaklik',gecbeyan:'gecbeyan',arackdv:'arackdv'};
  function open(key){var h=H[key];if(!h)return;var m=document.getElementById('hlp-modal');if(!m){m=document.createElement('div');m.id='hlp-modal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');document.body.appendChild(m);
      m.addEventListener('click',function(e){if(e.target===m||e.target.closest('[data-hx]')){m.hidden=true;document.documentElement.style.overflow='';}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){m.hidden=true;document.documentElement.style.overflow='';}});}
@@ -8328,7 +8343,7 @@ if(!FIREBASE_CONFIG&&!GOOGLE_CLIENT_ID)document.documentElement.classList.add('n
   function parse(t){try{var p=t.split('.')[1].replace(/-/g,'+').replace(/_/g,'/');return JSON.parse(decodeURIComponent(escape(atob(p))));}catch(e){return {};}}
   function renderUser(u){out.innerHTML='<div class="m-user">'+(u.pic?'<img src="'+esc(u.pic)+'" alt="" referrerpolicy="no-referrer">':'')+'<div><b>'+esc(u.ad||'')+'</b><br><span style="font-size:13px;color:var(--ink-2)">'+esc(u.mail||'')+'</span></div></div><p>Üyeliğiniz aktif. Duyurularımız e-posta adresinize gönderilecek.</p><button type="button" class="btn btn-line" id="m-out-btn">Çıkış yap</button>';
     $('#m-out-btn').onclick=function(){setU(null);try{google.accounts.id.disableAutoSelect();}catch(e){}label();out.innerHTML=orig;modal.hidden=true;toast('Çıkış yapıldı');};}
-  function onCred(r){var c=r&&r.credential;if(!c)return;var p=parse(c);toast('Üyeliğiniz kaydediliyor…');
+  function onCred(r){var c=r&&r.credential;if(!c)return;var rz=$('#g-riza');if(rz&&!rz.checked){toast('Önce açık rıza kutusunu işaretleyin');rz.focus();var lb=rz.closest('label');if(lb){lb.classList.add('need');setTimeout(function(){lb.classList.remove('need');},2500);}return;}var p=parse(c);toast('Üyeliğiniz kaydediliyor…');
     phpForm({tip:'uye',google:c,ad:p.name||'',mail:p.email||'',tur:'Google ile üyelik',ilgi:''}).then(function(){var u={ad:p.name||'',mail:p.email||'',pic:p.picture||''};setU(u);label();
       try{var ad=(u.ad||'').trim().split(/\s+/)[0];if(ad){ad=ad.charAt(0).toLocaleUpperCase('tr-TR')+ad.slice(1).toLocaleLowerCase('tr-TR');localStorage.setItem('ek-uye-ad',ad);}}catch(e){}
       modal.hidden=false;renderUser(u);toast('Hoş geldiniz, üyeliğiniz aktif');}).catch(function(){toast('Google ile üyelik şu an tamamlanamadı, e-posta ile üye olabilirsiniz');});}
@@ -8338,6 +8353,7 @@ if(!FIREBASE_CONFIG&&!GOOGLE_CLIENT_ID)document.documentElement.classList.add('n
     .catch(function(){if(w){w.hidden=false;w.textContent='Google bağlantısı kurulamadı; e-posta ile üye olabilirsiniz.';}});}
   function open(kayit){$('#m-title').textContent=kayit?'Google ile üye olun':'Üye girişi';var u=get();modal.hidden=false;if(u){renderUser(u);return;}if(!$('#g-gis')){out.innerHTML=orig;}mount();}
   $$('[data-open-login]').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();e.stopImmediatePropagation();open(b.dataset.openLogin==='kayit');},true);});
+  $$('[data-m-close]').forEach(function(a){a.addEventListener('click',function(){modal.hidden=true;});});
   var gs=$('#g-signin');if(gs)gs.addEventListener('click',function(e){e.stopImmediatePropagation();mount();},true);
 })();
 
@@ -8350,7 +8366,7 @@ if(!FIREBASE_CONFIG&&!GOOGLE_CLIENT_ID)document.documentElement.classList.add('n
     st.className='cf-status';
     if(!d.ad||!d.mail||!d.mesaj){st.textContent='Ad soyad, e-posta ve mesaj alanlarını doldurun.';st.classList.add('err');return;}
     if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.mail)){st.textContent='E-posta adresini kontrol edin.';st.classList.add('err');return;}
-    if(!$('#cf-kvkk').checked){st.textContent='Devam etmek için onay kutusunu işaretleyin.';st.classList.add('err');return;}
+    
     var body='Ad soyad: '+d.ad+'\nTelefon: '+d.tel+'\nE-posta: '+d.mail+'\nKonu: '+d.konu+'\n\n'+d.mesaj;
     if(!FORM_KEY){
       st.textContent='Gönderiliyor…';var sb=f.querySelector('[type=submit]');if(sb)sb.disabled=true;
@@ -8539,7 +8555,7 @@ document.addEventListener('keydown',function(e){if(e.key!=='Enter'||e.defaultPre
     var d={ad:$('#uf-ad').value.trim(),mail:$('#uf-mail').value.trim(),tel:$('#uf-tel').value.trim(),tur:$('#uf-tur').value,ilgi:['Vergi','SGK ve bordro','Şirket işlemleri','Teşvik ve destekler'].filter(function(x,i){return $('#uf-i'+(i+1)).checked;})};
     if(!d.ad||!d.mail){st.textContent='Ad soyad ve e-posta alanlarını doldurun.';st.classList.add('err');return;}
     if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.mail)){st.textContent='E-posta adresini kontrol edin.';st.classList.add('err');return;}
-    if(!$('#uf-kvkk').checked){st.textContent='Üye olmak için onay kutusunu işaretleyin.';st.classList.add('err');return;}
+    if(!$('#uf-kvkk').checked){st.textContent='Üye olmak için açık rıza kutusunu işaretleyin.';st.classList.add('err');return;}
     var body='Ad soyad: '+d.ad+'\nE-posta: '+d.mail+'\nTelefon: '+d.tel+'\nİşletme türü: '+d.tur+'\nİlgi alanları: '+d.ilgi.join(', ');
     function ok(){f.reset();st.textContent='Üyeliğiniz alındı, teşekkürler. Duyurularımız e-postanıza gelecek.';st.classList.add('ok');toast('Üyeliğiniz alındı');}
     if(FIREBASE_CONFIG&&window.firebase&&firebase.apps&&firebase.apps.length){st.textContent='Kaydediliyor…';firebase.firestore().collection('uyeler').add({ad:d.ad,eposta:d.mail,telefon:d.tel,isletme:d.tur,ilgi:d.ilgi,kaynak:'form',tarih:firebase.firestore.FieldValue.serverTimestamp()}).then(ok).catch(function(){st.textContent='Kaydedilemedi, lütfen tekrar deneyin.';st.classList.add('err');});return;}

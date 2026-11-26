@@ -70,8 +70,9 @@ $now = date('d.m.Y H:i');
 if ($tip === 'uye') {
     $tur = v($d, 'tur', 60);
     $ilgi = v($d, 'ilgi', 200);
-    $row = [$now, $ad, $mail, $tel, $tur, $ilgi];
-    $head = ['Tarih', 'Ad soyad', 'E-posta', 'Telefon', 'İşletme türü', 'İlgi alanları'];
+    $riza = $gcred !== '' ? 'Evet (Google ile, yurt dışı aktarım dahil)' : 'Evet (e-posta formu)';
+    $row = [$now, $ad, $mail, $tel, $tur, $ilgi, $riza];
+    $head = ['Tarih', 'Ad soyad', 'E-posta', 'Telefon', 'İşletme türü', 'İlgi alanları', 'Açık rıza'];
     $file = $dir . '/uyeler.csv';
     $subject = 'Yeni üye: ' . $ad;
     $body = "Siteden yeni üyelik başvurusu\n\nAd soyad: $ad\nE-posta: $mail\nTelefon: $tel\nİşletme türü: $tur\nİlgi alanları: $ilgi\nTarih: $now\n";
