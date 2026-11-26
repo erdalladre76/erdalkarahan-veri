@@ -1,7 +1,22 @@
 {
   "aciklama": "Günlük Resmî Gazete özeti. Yalnızca muhasebe, vergi, SGK, ticaret ve işletmeleri ilgilendiren başlıklar; metinler özet niteliğindedir, bağlayıcı olan Resmî Gazete metnidir.",
-  "guncelleme": "2026-11-25",
+  "guncelleme": "2026-11-26",
   "gunler": [
+    {
+      "tarih": "2026-11-26",
+      "sayi": "33442",
+      "url": "https://www.resmigazete.gov.tr/26.11.2026",
+      "ozet": "Ticaret Bakanlığı ithalatta haksız rekabetin önlenmesine ilişkin yeni bir tebliğ yayımladı; vergi ve SGK tarafında düzenleme yok. (Resmî metinden henüz doğrulanmadı.)",
+      "dogrulanmadi": true,
+      "maddeler": [
+        {
+          "etiket": "TİCARET",
+          "baslik": "İthalatta Haksız Rekabetin Önlenmesine İlişkin Tebliğ (No: 2026/33)",
+          "metin": "Ticaret Bakanlığı, ithalatta haksız rekabetin önlenmesi (damping/sübvansiyon) mevzuatı kapsamında yeni bir tebliğ yayımladı. Hangi ürün ve ülkeleri kapsadığı ile önlemin ayrıntıları için tebliğ metnine bakılmalı; ilgili ürünleri ithal eden firmaların incelemesi yerinde olur.",
+          "url": "https://www.resmigazete.gov.tr/26.11.2026"
+        }
+      ]
+    },
     {
       "tarih": "2026-11-25",
       "sayi": "33441",
