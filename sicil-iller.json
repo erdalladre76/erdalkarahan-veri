@@ -1,17 +1,7 @@
 {
   "aciklama": "Şirket işlemleri sihirbazında il seçilince gösterilen ticaret sicili müdürlüğü uygulama notları. Her il için: oda (müdürlüğün bağlı olduğu oda), metin (o ile özgü kurallar, 1-4 cümle), kaynak (resmî oda/müdürlük sayfası), tarih (okunduğu gün). Sadece resmî kaynakta okunan bilgi yazılır.",
-  "guncelleme": "2026-11-26",
+  "guncelleme": "2026-11-27",
   "sira": [
-    "Rize",
-    "Gümüşhane",
-    "Bayburt",
-    "Tunceli",
-    "Bingöl",
-    "Muş",
-    "Şırnak",
-    "Hakkari",
-    "Ardahan",
-    "Kars",
     "Kilis",
     "Nevşehir",
     "Niğde",
@@ -349,7 +339,8 @@
       "oda": "Rize Ticaret ve Sanayi Odası (Rize TSO)",
       "metin": "",
       "kaynak": "https://www.rizetso.org.tr/belgedetay/101/limited-sirket-pay-hisse-devri-islemi",
-      "tarih": "2026-11-19"
+      "tarih": "2026-11-27",
+      "deneme": 2
     },
     "Artvin": {
       "oda": "Artvin Ticaret ve Sanayi Odası (Artvin TSO)",
@@ -367,36 +358,35 @@
       "oda": "Gümüşhane Ticaret ve Sanayi Odası (Gümüşhane TSO)",
       "metin": "",
       "kaynak": "https://www.gumushanetso.org.tr/sk/148/adres-degisikligi-islemleri",
-      "tarih": "2026-11-20",
-      "deneme": 1
+      "tarih": "2026-11-27",
+      "deneme": 2
     },
     "Bayburt": {
       "oda": "Bayburt Ticaret ve Sanayi Odası (Bayburt TSO)",
       "metin": "",
       "kaynak": "https://bayburttso.com/?page_id=621",
-      "tarih": "2026-11-20",
-      "deneme": 1
+      "tarih": "2026-11-27",
+      "deneme": 2
     },
     "Tunceli": {
       "oda": "Tunceli Ticaret ve Sanayi Odası (Tunceli TSO)",
       "metin": "",
       "kaynak": "https://www.tuncelitso.org.tr/",
-      "tarih": "2026-11-20",
-      "deneme": 1
+      "tarih": "2026-11-27",
+      "deneme": 2
     },
     "Bingöl": {
       "oda": "Bingöl Ticaret ve Sanayi Odası (Bingöl TSO)",
       "metin": "",
       "kaynak": "https://www.bintso.org.tr/Hizmetlerimiz/TicaretSicil/tabid/14765/Default.aspx",
-      "tarih": "2026-11-20",
-      "deneme": 1
+      "tarih": "2026-11-27",
+      "deneme": 2
     },
     "Muş": {
       "oda": "Muş Ticaret ve Sanayi Odası (Muş TSO)",
-      "metin": "",
+      "metin": "Muş Ticaret Sicili Müdürlüğü Muş TSO bünyesindedir; her değişiklik başvurusunda MERSİS başvuru talep numarası istenir ve her işlemin odaya ait matbu dilekçesi sitede yer alır. Kararlar noter onaylı ve çoğunlukla 2 adet istenir; temsil ve ilzam kararında 3 adet noter onaylı karar, ortak olmayan yetkili için kimlik fotokopisi, yerleşim yeri belgesi ve 2 fotoğraf aranır. Hisse devrinde noter onaylı devir senedi ile pay defteri kaydının noter onaylı sureti 2’şer adet, yeni ortaktan yerleşim yeri belgesi, imza beyannamesi ve 2 fotoğraf istenir. Sermaye artırımında yeni tarihli SMMM raporu ile faaliyet belgesi 1 asıl 1 fotokopi verilir; adres değişikliğinde kira sözleşmesi ya da tapu fotokopisi eklenir.",
       "kaynak": "https://www.mustso.org.tr/hizmetlerimiz/ticaret-sicili-islemleri/",
-      "tarih": "2026-11-20",
-      "deneme": 1
+      "tarih": "2026-11-27"
     },
     "Bitlis": {
       "oda": "Bitlis Ticaret ve Sanayi Odası (merkez); Tatvan Ticaret ve Sanayi Odası (TATSO)",
@@ -426,13 +416,15 @@
       "oda": "Şırnak Ticaret ve Sanayi Odası (Şırnak TSO)",
       "metin": "",
       "kaynak": "https://www.sirnaktso.org.tr/tr/menu/ticaret-sicil/51",
-      "tarih": "2026-11-22"
+      "tarih": "2026-11-27",
+      "deneme": 2
     },
     "Hakkari": {
       "oda": "Hakkari Ticaret ve Sanayi Odası (HATSO)",
       "metin": "",
-      "kaynak": "https://www.hatso.org.tr/",
-      "tarih": "2026-11-22"
+      "kaynak": "",
+      "tarih": "2026-11-27",
+      "deneme": 2
     },
     "Ağrı": {
       "oda": "Ağrı Ticaret ve Sanayi Odası (Ağrı TSO)",
@@ -456,13 +448,15 @@
       "oda": "Ardahan Ticaret ve Sanayi Odası",
       "metin": "",
       "kaynak": "https://ardahantso.org.tr/H%C4%B0ZMETLER/TicaretSicilM%C3%BCd%C3%BCrl%C3%BC%C4%9F%C3%BC/tabid/3172/Default.aspx",
-      "tarih": "2026-11-23"
+      "tarih": "2026-11-27",
+      "deneme": 2
     },
     "Kars": {
       "oda": "Kars Ticaret ve Sanayi Odası",
       "metin": "",
       "kaynak": "https://karstso.org.tr/icerik/ticaret-sicil-islemleri",
-      "tarih": "2026-11-23"
+      "tarih": "2026-11-27",
+      "deneme": 2
     },
     "Kilis": {
       "oda": "Kilis Ticaret ve Sanayi Odası",
