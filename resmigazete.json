@@ -1,7 +1,42 @@
 {
   "aciklama": "Günlük Resmî Gazete özeti. Yalnızca muhasebe, vergi, SGK, ticaret ve işletmeleri ilgilendiren başlıklar; metinler özet niteliğindedir, bağlayıcı olan Resmî Gazete metnidir.",
-  "guncelleme": "2026-11-26",
+  "guncelleme": "2026-11-27",
   "gunler": [
+    {
+      "tarih": "2026-11-27",
+      "sayi": "33443",
+      "url": "https://www.resmigazete.gov.tr/27.11.2026",
+      "ozet": "Gecikme zammı aylık %3,2'ye, tecil faizi yıllık %29'a indirildi; ayrıca Asya Altyapı Yatırım Bankası kredilerinde KKDF kesintisi sıfırlandı. (Resmî metinden henüz doğrulanmadı.)",
+      "dogrulanmadi": true,
+      "maddeler": [
+        {
+          "etiket": "VERGİ",
+          "onemli": true,
+          "baslik": "Gecikme zammı aylık %3,7'den %3,2'ye indi (Karar Sayısı: 12028)",
+          "metin": "6183 sayılı Kanunun 51. maddesi uyarınca vadesinde ödenmeyen vergi ve diğer amme alacaklarına uygulanan gecikme zammı oranı aylık %3,2 olarak belirlendi. Yürürlük ayrıntısı resmî metinden doğrulanınca eklenecek.",
+          "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261127-15.pdf"
+        },
+        {
+          "etiket": "VERGİ",
+          "onemli": true,
+          "baslik": "Tecil faizi yıllık %39'dan %29'a indirildi (Tahsilat Genel Tebliği Seri: C Sıra No: 10)",
+          "metin": "27 Kasım 2026'dan itibaren yapılacak tecil ve taksitlendirme başvurularında yıllık %29 tecil faizi uygulanacak. Daha önce tecil edilmiş ve şartlarına uygun ödenen borçlarda bu tarihten sonra ödenecek taksitlere de yeni oran uygulanacak; sonuçlanmamış başvurularda 27 Kasım'a kadarki süre için eski oran geçerli.",
+          "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261127-22.htm"
+        },
+        {
+          "etiket": "FİNANS",
+          "baslik": "Asya Altyapı Yatırım Bankası kredilerinde KKDF kesintisi sıfırlandı (Karar Sayısı: 12027)",
+          "metin": "Kaynak Kullanımını Destekleme Fonu kesintisine ilişkin kararla, Asya Altyapı Yatırım Bankasından sağlanan kredilerde KKDF kesintisi oranı sıfır olarak belirlendi.",
+          "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261127-14.pdf"
+        },
+        {
+          "etiket": "GÜMRÜK",
+          "baslik": "AB ile Türkiye'nin yetkilendirilmiş yükümlü programlarının karşılıklı tanınması kararı onaylandı (Karar Sayısı: 12025)",
+          "metin": "AB-Türkiye Gümrük İşbirliği Komitesinin, iki tarafın Yetkilendirilmiş Yükümlü Statüsü programlarının karşılıklı tanınmasına ilişkin kararı onaylanarak yayımlandı. Uygulama ayrıntıları resmî metinden doğrulanınca eklenecek.",
+          "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261127-12.pdf"
+        }
+      ]
+    },
     {
       "tarih": "2026-11-26",
       "sayi": "33442",
