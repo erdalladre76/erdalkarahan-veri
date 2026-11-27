@@ -1,17 +1,7 @@
 {
   "aciklama": "Şirket işlemleri sihirbazında il seçilince gösterilen ticaret sicili müdürlüğü uygulama notları. Her il için: oda (müdürlüğün bağlı olduğu oda), metin (o ile özgü kurallar, 1-4 cümle), kaynak (resmî oda/müdürlük sayfası), tarih (okunduğu gün). Sadece resmî kaynakta okunan bilgi yazılır.",
   "guncelleme": "2026-11-27",
-  "sira": [
-    "Kilis",
-    "Nevşehir",
-    "Niğde",
-    "Çankırı",
-    "Samsun",
-    "Trabzon",
-    "Balıkesir",
-    "Afyonkarahisar",
-    "Çanakkale"
-  ],
+  "sira": [],
   "iller": {
     "İstanbul": {
       "oda": "İstanbul Ticaret Odası (İTO)",
@@ -136,22 +126,22 @@
       "oda": "Samsun Ticaret ve Sanayi Odası (STSO)",
       "metin": "",
       "kaynak": "https://www.samsuntso.org.tr/tescil/limited-sirketlerde-hisse-devri-400.htm",
-      "tarih": "2026-11-26",
-      "deneme": 1
+      "tarih": "2026-11-27",
+      "deneme": 2
     },
     "Trabzon": {
       "oda": "Trabzon Ticaret ve Sanayi Odası (TTSO)",
       "metin": "",
       "kaynak": "https://www.ttso.org.tr/sicil/20/limited-sirketlerin-yetki-tescili-islemleri/",
-      "tarih": "2026-11-26",
-      "deneme": 1
+      "tarih": "2026-11-27",
+      "deneme": 2
     },
     "Balıkesir": {
       "oda": "Balıkesir Ticaret Odası (BATO)",
       "metin": "",
       "kaynak": "https://www.bato.org.tr/oda-islemleri/ticaret-sicil",
-      "tarih": "2026-11-26",
-      "deneme": 1
+      "tarih": "2026-11-27",
+      "deneme": 2
     },
     "Diyarbakır": {
       "oda": "Diyarbakır Ticaret ve Sanayi Odası (DTSO)",
@@ -265,8 +255,8 @@
       "oda": "Afyonkarahisar Ticaret ve Sanayi Odası (ATSO)",
       "metin": "",
       "kaynak": "https://www.afyonkarahisartso.org.tr/index.asp?s=92&t=2&a=19",
-      "tarih": "2026-11-26",
-      "deneme": 1
+      "tarih": "2026-11-27",
+      "deneme": 2
     },
     "Yalova": {
       "oda": "Yalova Ticaret ve Sanayi Odası (YTSO)",
@@ -284,8 +274,8 @@
       "oda": "Çanakkale Ticaret ve Sanayi Odası (ÇTSO)",
       "metin": "",
       "kaynak": "https://www.canakkaletso.org.tr/TicaretSicil/tabid/16867/Default.aspx",
-      "tarih": "2026-11-26",
-      "deneme": 1
+      "tarih": "2026-11-27",
+      "deneme": 2
     },
     "Edirne": {
       "oda": "Edirne Ticaret ve Sanayi Odası (ETSO)",
@@ -462,7 +452,8 @@
       "oda": "Kilis Ticaret ve Sanayi Odası",
       "metin": "",
       "kaynak": "https://www.kilistso.org.tr/",
-      "tarih": "2026-11-23"
+      "tarih": "2026-11-27",
+      "deneme": 2
     },
     "Osmaniye": {
       "oda": "Osmaniye Ticaret ve Sanayi Odası (OTSO)",
@@ -492,15 +483,15 @@
       "oda": "Nevşehir Ticaret ve Sanayi Odası (NTSO)",
       "kaynak": "https://www.ntso.org.tr/tr/tescil",
       "metin": "",
-      "tarih": "2026-11-24",
-      "deneme": 1
+      "tarih": "2026-11-27",
+      "deneme": 2
     },
     "Niğde": {
       "oda": "Niğde Ticaret ve Sanayi Odası (NİTSO)",
       "kaynak": "https://www.nitso.org.tr/TicaretSicil/De%C4%9Fi%C5%9Fiklik%C4%B0%C5%9Flemleri/Limited%C5%9Eirket/tabid/20295/Default.aspx",
       "metin": "",
-      "tarih": "2026-11-24",
-      "deneme": 1
+      "tarih": "2026-11-27",
+      "deneme": 2
     },
     "Karaman": {
       "oda": "Karaman Ticaret ve Sanayi Odası (KTSO)",
@@ -518,8 +509,8 @@
       "oda": "Çankırı Ticaret ve Sanayi Odası (ÇATSO)",
       "metin": "",
       "kaynak": "https://www.catso.org.tr/Hizmetler/TicaretSicil/tabid/15096/Default.aspx",
-      "tarih": "2026-11-25",
-      "deneme": 1
+      "tarih": "2026-11-27",
+      "deneme": 2
     }
   }
 }
