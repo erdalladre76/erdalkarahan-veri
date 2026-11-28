@@ -1,7 +1,35 @@
 {
   "aciklama": "Günlük Resmî Gazete özeti. Yalnızca muhasebe, vergi, SGK, ticaret ve işletmeleri ilgilendiren başlıklar; metinler özet niteliğindedir, bağlayıcı olan Resmî Gazete metnidir.",
-  "guncelleme": "2026-11-27",
+  "guncelleme": "2026-11-28",
   "gunler": [
+    {
+      "tarih": "2026-11-28",
+      "sayi": "33444",
+      "url": "https://www.resmigazete.gov.tr/28.11.2026",
+      "ozet": "Gider Vergileri Kanunu'nun 34. maddesindeki vergi oranına ilişkin Cumhurbaşkanı Kararının eki değiştirildi; ayrıca bir elektronik para kuruluşunun faaliyet izni iptal edildi ve iki teknoloji geliştirme bölgesine ek alan tanımlandı. (Resmî metinden henüz doğrulanmadı.)",
+      "dogrulanmadi": true,
+      "maddeler": [
+        {
+          "etiket": "VERGİ",
+          "onemli": true,
+          "baslik": "Gider Vergileri Kanunu md. 34/5 oran kararında değişiklik (Karar 12059)",
+          "metin": "6802 sayılı Gider Vergileri Kanunu'nun 34. maddesinin beşinci fıkrasındaki vergi oranını yeniden belirleyen 30/4/2026 tarihli ve 11263 sayılı Cumhurbaşkanı Kararının eki değiştirildi. Değişikliğin ayrıntısı için karar metnine bakılmalıdır.",
+          "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261128-5.pdf"
+        },
+        {
+          "etiket": "FİNANS",
+          "baslik": "Fintlix Elektronik Para ve Ödeme Hizmetleri A.Ş.'nin faaliyet izni iptal edildi",
+          "metin": "Fintlix Elektronik Para ve Ödeme Hizmetleri A.Ş.'nin faaliyet izninin iptaline ilişkin karar yayımlandı. Bu kuruluşla çalışan işletmelerin ödeme ve tahsilat düzenlerini gözden geçirmesi yerinde olur.",
+          "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261128-19.pdf"
+        },
+        {
+          "etiket": "TEŞVİK",
+          "baslik": "İki teknoloji geliştirme bölgesine ek alan (Karar 12057, 12058)",
+          "metin": "Bandırma Onyedi Eylül Üniversitesi Teknoloji Geliştirme Bölgesi için Doğanpınar Ek Alanı, Bursa Teknik Üniversitesi Teknoloji Geliştirme Bölgesi için Bursa INNOHUB Ek Alanı belirlendi.",
+          "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261128-3.pdf"
+        }
+      ]
+    },
     {
       "tarih": "2026-11-27",
       "sayi": "33443",
